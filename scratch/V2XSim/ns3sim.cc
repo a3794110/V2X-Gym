@@ -145,7 +145,7 @@ bool MyExecuteActions(Ptr<OpenGymDataContainer> action)  // set the contention w
   {
     Ptr<Node> node = NodeList::GetNode(i);
 
-    Simulator::Schedule (Seconds (0), &SetMobility, node ,Vector ( actionVector[i*3], actionVector[i*3+1], actionVector[i*3+2])); 
+    Simulator::Schedule (Seconds (0), &SetMobility, node ,Vector ( actionVector[i*3+1], actionVector[i*3+2], 0)); 
     NS_LOG_UNCOND (index<<" MyExecuteActions: Node" << i <<" "<<actionVector[i*3]<<", "<< actionVector[i*3+1]<<", "<<  actionVector[i*3+2] );
   }
 index = index + 1;

@@ -24,6 +24,9 @@
 
 #include "ns3/object.h"
 #include <zmq.hpp>
+#include "ns3/mobility-module.h"
+#include "ns3/node-list.h"
+#include "ns3/core-module.h"
 
 namespace ns3 {
 
@@ -54,6 +57,11 @@ public:
   bool IsGameOver();
   std::string GetExtraInfo();
   bool ExecuteActions(Ptr<OpenGymDataContainer> action);
+  
+  //hank
+  void ExecuteSetMobility (Ptr<Node> node, Vector vel);
+  void SyncMobility(Ptr<OpenGymDataContainer> trajectory);
+
 
   void SetGetActionSpaceCb(Callback< Ptr<OpenGymSpace> > cb);
   void SetGetObservationSpaceCb(Callback< Ptr<OpenGymSpace> > cb);

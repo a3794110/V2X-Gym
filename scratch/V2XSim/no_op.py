@@ -10,14 +10,7 @@ from ns3gym import ns3env
 
 
 
-from function import Vehicle_Enter_Network
-from function import Create_Vehicle
-from function import Vehicle_Information
-from function import Threshold_Of_Vehicle_Charging
-from function import Vehicle_Charging
-from function import Charging_Station_Parameter
-from function import get_options
-from function import Vehicle_Position_List
+import function
 
 try:
     sys.path.append(os.path.join(os.path.dirname(
@@ -50,7 +43,7 @@ iterationNum = int(args.iterations)
 
 nodeNum = 20
 port = 5551
-simTime = 10 # seconds
+simTime = 5 # seconds
 stepTime = 0.1  # seconds
 seed = 0
 simArgs = {"--simTime": simTime,
@@ -70,34 +63,17 @@ print("Action space: ", ac_space, ac_space.dtype)
 stepIdx = 0
 currIt = 0
 allRxPkts = 0
+
+
     
 
 
-def get_action(obs, stepIdx):
-    # cwValue 0 is not applied, so no_op
-    traci.simulationStep()
-    print("#############################################################")
-    getCurrentTime = traci.simulation.getCurrentTime()
-    print("getCurrentTime = ",getCurrentTime)
-    
-    if (msTimer % 1000) == 0: # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
-        Create_Vehicle(Vehicle, VehilceDensity)
-    DepartVeh = traci.simulation.getDepartedIDList()
 
-    # enter vehicle to network
-    if len(DepartVeh) > 0: 
-           Vehicle_Enter_Network(DepartVeh, Vehicle)
-
-    
-    action = Vehicle_Position_List(Vehicle, PositionList)
-    
-    #action = np.arange(stepIdx, stepIdx+30)
-    return action
 
 #-------------------------------------------------------------------------------#
 #                Include SUMO Map
 #===============================================================================#    
-options = get_options()                                                             
+options = function.get_options()                                                             
 if options.nogui:
     sumoBinary = checkBinary('sumo')
 else:
@@ -106,12 +82,10 @@ traci.start([sumoBinary, '-c', os.path.join('data/Simulation', 'map.sumocfg'), '
 ChargingStation = {}
 Vehicle = {}
 VehilceDensity = 1
-PositionList = np.zeros(shape= 60, dtype=int)
-global Vehicle
-global CS
-global PositionList
-Charging_Station_Parameter(ChargingStation)
+
 msTimer = traci.simulation.getCurrentTime()
+
+Vehicle_Mobility = function.Vehicle_Mobility()
 #================================================================================#
 try:
     while True:
@@ -125,8 +99,8 @@ try:
             stepIdx += 1
 
             allRxPkts += reward
-            action = get_action(obs, stepIdx)
-            print("---action: ", action)
+            action = Vehicle_Mobility.Sync_Mobility( ac_space)
+            #print("---action: ", action)
 
             obs, reward, done, info = env.step(action)
             print("Step: ", stepIdx)

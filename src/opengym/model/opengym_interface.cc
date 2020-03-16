@@ -30,6 +30,9 @@
 #include "spaces.h"
 #include "messages.pb.h"
 
+
+
+
 namespace ns3 {
 
 NS_LOG_COMPONENT_DEFINE ("OpenGymInterface");
@@ -254,10 +257,26 @@ OpenGymInterface::NotifyCurrentState()
   envStateMsg.set_info(extraInfo);
 
   // send env state msg to python
-  zmq::message_t request(envStateMsg.ByteSize());;
+  zmq::message_t request(envStateMsg.ByteSize());
   envStateMsg.SerializeToArray(request.data(), envStateMsg.ByteSize());
   m_zmq_socket.send (request);
 
+  
+  //receive trajectory file from python "hank"
+  ns3opengym::EnvActMsg trajectory_msg;
+  zmq::message_t trajectory;
+  m_zmq_socket.recv(&trajectory);
+  trajectory_msg.ParseFromArray(trajectory.data(), trajectory.size());
+  ns3opengym::DataContainer TrajectoryDataContainerPbMsg = trajectory_msg.actdata();
+  Ptr<OpenGymDataContainer> TrajectoryDataContainer = OpenGymDataContainer::CreateFromDataContainerPbMsg(TrajectoryDataContainerPbMsg); 
+  SyncMobility(TrajectoryDataContainer);
+
+  //send back trajectory ack "hank"
+  ns3opengym::EnvActMsg trajectory_ack;
+  zmq::message_t trajectory_ack_msg;(trajectory_ack.ByteSize());
+  trajectory_ack.SerializeToArray(trajectory_ack_msg.data(), trajectory_ack.ByteSize());
+  m_zmq_socket.send (trajectory_ack_msg);
+  
   // receive act msg form python
   ns3opengym::EnvActMsg envActMsg;
   zmq::message_t reply;
@@ -386,6 +405,36 @@ OpenGymInterface::ExecuteActions(Ptr<OpenGymDataContainer> action)
   }
   return reply;
 }
+
+
+//hank
+void 
+OpenGymInterface::ExecuteSetMobility (Ptr<Node> node, Vector vel){
+  static double index_time;
+  Ptr<WaypointMobilityModel> ueWaypointMobility =  node->GetObject<WaypointMobilityModel > ();  
+  ueWaypointMobility->AddWaypoint(Waypoint(Seconds(index_time), vel));
+  index_time+=0.1;
+}
+
+//hank
+void
+OpenGymInterface::SyncMobility(Ptr<OpenGymDataContainer> trajectory)
+{
+  NS_LOG_FUNCTION (this);
+  static int index = 0;
+  Ptr<OpenGymBoxContainer<int> > box = DynamicCast<OpenGymBoxContainer<int> >(trajectory);
+  std::vector<int> actionVector = box->GetData();
+
+  uint32_t nodeNum = NodeList::GetNNodes ();
+  for (uint32_t i=0; i<nodeNum; i++)
+  {
+    Ptr<Node> node = NodeList::GetNode(i);
+    Simulator::Schedule (Seconds (0), &OpenGymInterface::ExecuteSetMobility, this, node ,Vector ( actionVector[i*3+1], actionVector[i*3+2], 0)); 
+    NS_LOG_UNCOND (index<<" SyncMobility: Node" << i <<" "<<actionVector[i*3]<<", "<< actionVector[i*3+1]<<", "<<  actionVector[i*3+2] );
+  }
+  index = index + 1;
+}
+
 
 void
 OpenGymInterface::Notify(Ptr<OpenGymEnv> entity)

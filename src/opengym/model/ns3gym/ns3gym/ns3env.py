@@ -21,10 +21,77 @@ __copyright__ = "Copyright (c) 2018, Technische Universität Berlin"
 __version__ = "0.1.0"
 __email__ = "gawlowicz@tkn.tu-berlin.de"
 
+################################################################################################################################################################
+try:
+    sys.path.append(os.path.join(os.path.dirname(
+        __file__), '..', '..', '..', '..', "tools"))  # tutorial in tests
+    sys.path.append(os.path.join(os.environ.get("SUMO_HOME", os.path.join(
+        os.path.dirname(__file__), "..", "..", "..")), "tools"))  # tutorial in docs
+    from sumolib import checkBinary  # noqa
+    import traci
+
+except ImportError:
+    sys.exit(
+        "please declare environment variable 'SUMO_HOME' as the root directory of your sumo installation (it should contain folders 'bin', 'tools' and 'docs')")
+
+class CV_Mobility_Control(object):
+    def __init__(self, CV_Num = 0):
+        self.CV_Num = CV_Num
+        self.VehIDList = set()
+        self.VehinNet = set()
+        self.addID = 0
+    
+
+    def CreateCV(self, i=0, routeid='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
+        IDList = traci.vehicle.getIDList()
+        if str(i) in IDList:
+            print ("The created ID already in network!!")
+        traci.vehicle.addFull(str(i),routeid, typeID, depart, departLane, departPos, departSpeed, arrivalLane, arrivalPos, arrivalSpeed, fromTaz, toTaz, line, personCapacity, personNumber)
+        #print(type(self.VehIDList) )
+        self.VehIDList.add( str(i) )
+        self.addID += 1
+        #print("IDList = ", self.VehIDList)
+
+    
+    def Vehicle_Position_List(self):
+        PositionList = np.zeros( (self.CV_Num)*3, dtype=int)
+        IDList = traci.vehicle.getIDList()
+
+        self.VehinNet = self.VehIDList & set(IDList)
+
+        #print("getIDList = ",IDList)
+        #print("IDList = ", self.VehIDList)
+        
+
+        for i in self.VehinNet:  
+            PositionList[int(i)*3] = i
+            PositionList[int(i)*3+1] = traci.vehicle.getPosition(i)[0]
+            PositionList[int(i)*3+2] = traci.vehicle.getPosition(i)[1]
+
+        return PositionList
+    
+    def MobilitySyncSpace(self):
+
+        traci.simulationStep()
+        print("#############################################################")
+        getCurrentTime = traci.simulation.getCurrentTime()
+        print("getCurrentTime = ",getCurrentTime)
+        
+
+        #if (msTimer % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
+        self.CreateCV(self.addID)
+
+        Mobility_Sync_Space = self.Vehicle_Position_List()
+        
+        return Mobility_Sync_Space
+
+########################################################################################################################################################################
+
+
 
 class Ns3ZmqBridge(object):
     """docstring for Ns3ZmqBridge"""
-    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False):
+    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0):
         super(Ns3ZmqBridge, self).__init__()
         port = int(port)
         self.port = port
@@ -35,6 +102,11 @@ class Ns3ZmqBridge(object):
         self.simPid = None
         self.wafPid = None
         self.ns3Process = None
+
+        #############################hank
+        self.CV_Num = CV_Num 
+        self.MobilityControl = CV_Mobility_Control(CV_Num)
+        ############################
 
         context = zmq.Context()
         self.socket = context.socket(zmq.REP)
@@ -119,7 +191,6 @@ class Ns3ZmqBridge(object):
                 mtype = np.float
             else:
                 mtype = np.float
-
             space = spaces.Box(low=low, high=high, shape=shape, dtype=mtype)
 
         elif (spaceDesc.type == pb.Tuple):
@@ -151,6 +222,18 @@ class Ns3ZmqBridge(object):
         request = self.socket.recv()
         simInitMsg = pb.SimInitMsg()
         simInitMsg.ParseFromString(request)
+
+#######################################################hank
+        self.box_space = pb.BoxSpace()
+        self.box_space.low = 0
+        self.box_space.high = 0
+        self.box_space.dtype = pb.INT
+        self.box_space.shape.extend([(self.CV_Num*3), 0])
+        self.mobility_space = pb.SpaceDescription()
+        self.mobility_space.type = pb.Box
+        self.mobility_space.space.Pack(self.box_space)
+        self.trajectory_space = self._create_space( self.mobility_space)
+#######################################################
 
         self.simPid = int(simInitMsg.simProcessId)
         self.wafPid = int(simInitMsg.wafShellProcessId)
@@ -223,9 +306,29 @@ class Ns3ZmqBridge(object):
         self.socket.send(replyMsg)
         self.newStateRx = False
         return True
+##############################################################################
+    def send_trajectory(self): #hank
+        reply = pb.EnvActMsg()
+        trajectory = self.MobilityControl.MobilitySyncSpace()
+        trajectoryMsg = self._pack_data(trajectory, self.trajectory_space)
+        
+        reply.actData.CopyFrom(trajectoryMsg)
+        reply.stopSimReq = False
+        if self.forceEnvStop:
+            reply.stopSimReq = True
+
+        replyMsg = reply.SerializeToString()
+        self.socket.send(replyMsg)
+        self.newStateRx = False
+
+        replyMsg = self.socket.recv()
+        
+        return True
+##############################################################################
 
     def step(self, actions):
         # exec actions for current state
+        self.send_trajectory()
         self.send_actions(actions)
         # get result of above actions
         self.rx_env_state()
@@ -360,7 +463,7 @@ class Ns3ZmqBridge(object):
 
 
 class Ns3Env(gym.Env):
-    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False):
+    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num = 0):
         self.stepTime = stepTime
         self.port = port
         self.startSim = startSim
@@ -377,7 +480,11 @@ class Ns3Env(gym.Env):
         self.state = None
         self.steps_beyond_done = None
 
-        self.ns3ZmqBridge = Ns3ZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug)
+        ################################# hank
+        self.CV_Num = CV_Num
+        ################################# hank
+
+        self.ns3ZmqBridge = Ns3ZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, self.CV_Num)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()
@@ -385,6 +492,8 @@ class Ns3Env(gym.Env):
         self.ns3ZmqBridge.rx_env_state()
         self.envDirty = False
         self.seed()
+
+
 
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
