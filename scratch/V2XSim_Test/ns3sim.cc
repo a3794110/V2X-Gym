@@ -194,7 +194,7 @@ main (int argc, char *argv[])
 
   // Configuration of the scenario
   // Create Nodes
-  uint32_t nodeNum = 30;
+  uint32_t nodeNum = 100;
   NodeContainer nodes;
   nodes.Create (nodeNum);
   
@@ -229,6 +229,9 @@ main (int argc, char *argv[])
 
   NS_LOG_UNCOND ("Simulation start");
   Simulator::Stop (Seconds (simulationTime));
+
+  AnimationInterface anim("ns3gym-mobility.xml"); 
+
   Simulator::Run ();
   NS_LOG_UNCOND ("Simulation stop");
 

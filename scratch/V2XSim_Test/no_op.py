@@ -41,7 +41,7 @@ args = parser.parse_args()
 startSim = bool(args.start)
 iterationNum = int(args.iterations)
 
-nodeNum = 20
+nodeNum = 100
 port = 5551
 simTime = 100 # seconds
 stepTime = 0.1  # seconds
@@ -52,7 +52,7 @@ simArgs = {"--simTime": simTime,
            "--distance": 500}
 debug = False
 
-env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, CV_Num = 30)
+env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, CV_Num = nodeNum)
 env.reset()
 
 ob_space = env.observation_space
@@ -89,11 +89,13 @@ Vehicle = {}
 VehilceDensity = 1
 
 msTimer = traci.simulation.getCurrentTime()
-
+mobilitycontrol = env.ns3ZmqBridge.MobilityControl
 
 def get_no_op_action(obs, stepIdx):
-        # cwValue 0 is not applied, so no_op
-        #self.Vehicle_Create(self.addID)
+        
+        if (traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
+            mobilitycontrol.CreateCV(mobilitycontrol.addID, "routedist1", "typedist1")
+        
         action = np.arange(stepIdx)
         return action
 #================================================================================#

@@ -78,8 +78,8 @@ class CV_Mobility_Control(object):
         print("getCurrentTime = ",getCurrentTime)
         
 
-        #if (msTimer % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
-        self.CreateCV(self.addID)
+        #if (traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
+        #    self.CreateCV(self.addID, "routedist1")
 
         Mobility_Sync_Space = self.Vehicle_Position_List()
         
