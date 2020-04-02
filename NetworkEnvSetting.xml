@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<NetworkEnvSetting>
+    <lteHelper::SetAttribute >
+        <arg1>Scheduler</arg1>
+        <arg2>ns3::PfFfMacScheduler</arg2> 
+    </lteHelper::SetAttribute>
+    <lteHelper::EnableUlRxPhyTraces >
+        <arg1>void</arg1>
+    </lteHelper::EnableUlRxPhyTraces>
+    <simTime >
+        <arg1>10</arg1>
+    </simTime>
+    <ns3::LteHelper::EnbComponentCarrierManager >
+        <arg1>ns3::RrComponentCarrierManager</arg1>
+    </ns3::LteHelper::EnbComponentCarrierManager>
+</NetworkEnvSetting>

@@ -72,6 +72,7 @@ SetDefault(Arg1, DoubleValue, NetworkSetting);
   RegisterParameters(simTime, double, NetSet);
   RegisterParameters(abc, string, NetSet);
   SetDeaultConfig("ns3::LteHelper::NumberOfComponentCarriers",UintegerValue,  NetSet);
+  
   Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
   RegisterMethod_twoarg(lteHelper, SetAttribute, BooleanValue, NetSet);
   RegisterMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);

@@ -34,6 +34,7 @@
 
 #include <map>
 #include <vector>
+#include "ns3/TinyXML-module.h"
 using namespace std;
 //#include "ns3/gtk-config-store.h"
 
@@ -217,14 +218,42 @@ class NetworkSetting: public Object{
         NetworkSetting(){
         }
         void IncludeConfig(std::string Dir){
-            Config["lteHelper::SetAttribute"].push_back("Scheduler");
+            /*Config["lteHelper::SetAttribute"].push_back("Scheduler");
             Config["lteHelper::SetAttribute"].push_back("ns3::PfFfMacScheduler");
             Config["lteHelper::EnableUlRxPhyTraces"].push_back("void");
             Config["lteHelper::SetFadingModel"].push_back("ns3::TraceFadingLossModel");
             Config["simTime"].push_back("10");
             Config["abc"].push_back("haha");
-            Config["ns3::LteHelper::NumberOfComponentCarriers"].push_back("2");
-
+            Config["ns3::LteHelper::EnbComponentCarrierManager"].push_back("ns3::RrComponentCarrierManager");*/
+            
+            TiXmlDocument mydoc(Dir.c_str());
+            //xml文档对象
+            mydoc.LoadFile() ;
+                
+          
+            TiXmlElement *RootElement=mydoc.RootElement();	//根元素, Info
+            //cout<< "[root name]" << RootElement->Value() <<"\n";
+            
+            TiXmlElement *pEle=RootElement;
+          
+            //遍历该结点
+            for(TiXmlElement *StuElement = pEle->FirstChildElement();//第一个子元素
+              StuElement != NULL;
+              StuElement = StuElement->NextSiblingElement())//下一个兄弟元素
+            {
+                // StuElement->Value() 节点名称
+                string parameter = string( StuElement->Value() );
+                //NS_LOG_UNCOND(parameter<<endl);
+                //输出子元素的值
+                for(TiXmlElement *sonElement=StuElement->FirstChildElement();
+                sonElement !=NULL;
+                sonElement=sonElement->NextSiblingElement())
+                {
+                  //cout<<sonElement->FirstChild()->Value()<<endl;
+                  Config[parameter].push_back( string( sonElement->FirstChild()->Value()) );
+                  //NS_LOG_UNCOND(parameter<<" "<<string( sonElement->FirstChild()->Value())<<endl);
+              }
+            }
         }
         bool Search(std::string helper, std::string submethod){ //whether arguments in the config file
             
@@ -320,15 +349,15 @@ main (int argc, char *argv[])
   double simTime = 1.1;
   double distance = 60.0;
   double interPacketInterval = 100;
-  bool useCa = true;
+  bool useCa = false;
   string abc;
 
   //NetworkSetting* NetSet = new NetworkSetting;
   Ptr<NetworkSetting> NetSet = CreateObject<NetworkSetting>();
-  NetSet->IncludeConfig("./NetworkEnvSetting.xml");
+  NetSet->IncludeConfig("NetworkEnvSetting.xml");
   RegisterParameters(simTime, double, NetSet);
-  RegisterParameters(abc, string, NetSet);
-  NS_LOG_UNCOND( simTime<<" "<<abc<<std::endl);
+  //RegisterParameters(abc, string, NetSet);
+  NS_LOG_UNCOND( simTime<<std::endl);
 
   // Command line arguments
   CommandLine cmd;
@@ -342,14 +371,14 @@ main (int argc, char *argv[])
   if (useCa)
    {
      Config::SetDefault ("ns3::LteHelper::UseCa", BooleanValue (useCa));
-     Config::SetDefault ("ns3::LteHelper::NumberOfComponentCarriers", UintegerValue (2));
-     SetDeaultConfig("ns3::LteHelper::NumberOfComponentCarriers",UintegerValue,  NetSet);
+     //Config::SetDefault ("ns3::LteHelper::NumberOfComponentCarriers", UintegerValue (2));
+     //SetDeaultConfig("ns3::LteHelper::NumberOfComponentCarriers",UintegerValue,  NetSet);
      Config::SetDefault ("ns3::LteHelper::EnbComponentCarrierManager", StringValue ("ns3::RrComponentCarrierManager"));
    }
-
+  //SetDeaultConfig("ns3::LteHelper::EnbComponentCarrierManager", StringValue,  NetSet);
   Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
   RegisterMethod_twoarg(lteHelper, SetAttribute, string, StringValue , NetSet);
-  //RegisterMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
+  RegisterMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
   //RegisterMethod_onearg(lteHelper, SetFadingModel, string, NetSet);
 
   Ptr<PointToPointEpcHelper>  epcHelper = CreateObject<PointToPointEpcHelper> ();

@@ -1,0 +1,30 @@
+import os
+import sys
+import subprocess
+
+from waflib import Options
+from waflib.Errors import WafError
+
+def build(bld):
+    # Don't do anything for this module if click should not be built.
+    if 'tinyxml' in bld.env['MODULES_NOT_BUILT']:
+        return
+
+    module = bld.create_ns3_module('TinyXML', ['core'])
+    module.source = [
+        'tinyxml.cpp',
+        'tinystr.cpp',
+        'tinyxmlparser.cpp',
+        'tinyxmlerror.cpp',
+        ]
+
+  
+
+    headers = bld(features='ns3header')
+    headers.module = 'TinyXML'
+    headers.source = [
+        'tinyxml.h',
+        'tinystr.h',
+        ]
+
+    

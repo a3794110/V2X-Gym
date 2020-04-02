@@ -1,7 +1,7 @@
 <NetworkEnvSetting>
     <ltehelper::SetAttribute>
-        <arg1>UseSameUlDlPropagationCondition</arg1>
-        <arg2>BooleanValue(true)</arg2> <!--no empty space-->>
+        <arg1>Scheduler</arg1>
+        <arg2>ns3::PfFfMacSchedulerue</arg2> <!--no empty space-->>
     </ltehelper::SetAttribute>
 
     <ltehelper::EnableUlRxPhyTraces>
