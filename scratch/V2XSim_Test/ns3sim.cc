@@ -210,8 +210,6 @@ main (int argc, char *argv[])
   {
     Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());   
     ueWaypointMobility->AddWaypoint(Waypoint(Seconds(0),Vector(0, 0 ,0)));
-    //Ptr<ConstantPositionMobilityModel> ueWaypointMobility = DynamicCast<ConstantPositionMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());
-    //ueWaypointMobility->SetPosition(Vector(0, 0, 0));
   }
 
 

@@ -1,0 +1,13 @@
+<Aggregation>
+    <pgw eq="epcHelper" assign="GetPgwNode" AssignArgs="NULL">
+    </pgw>
+
+    <NetDeviceContainer name= "enbDevs">
+        <InstallEnbDevice>enbnodes</InstallEnbDevice>
+    </NetDeviceContainer>
+
+
+    <NetDeviceContainer name="internetDevices" assign="p2ph" SubAssign="Install" SubAssignArgs="pgw, remoteHost"> 
+            <!--NetDeviceContainer internetDevices = p2ph.Install (pgw, remoteHost);-->
+    </NetDeviceContainer>
+<Aggregation>

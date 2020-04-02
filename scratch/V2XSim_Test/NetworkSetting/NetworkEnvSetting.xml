@@ -1,0 +1,20 @@
+<NetworkEnvSetting>
+    <ltehelper::SetAttribute>
+        <arg1>UseSameUlDlPropagationCondition</arg1>
+        <arg2>BooleanValue(true)</arg2> <!--no empty space-->>
+    </ltehelper::SetAttribute>
+
+    <ltehelper::EnableUlRxPhyTraces>
+        <arg1>void</arg1>
+    </ltehelper::EnableUlRxPhyTraces>
+
+    <simtime>
+        <arg1>10</arg1>
+    <simetime>
+
+    <ns3::LteHelper::NumberOfComponentCarriers>
+        <arg1>2</arg1>
+    </ns3::LteHelper::NumberOfComponentCarriers>
+
+</NetworkEnvSetting>
+
