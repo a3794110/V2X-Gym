@@ -77,6 +77,9 @@ main (int argc, char *argv[])
   cmd.AddValue("interPacketInterval", "Inter packet interval [ms])", interPacketInterval);
   cmd.AddValue("useCa", "Whether to use carrier aggregation.", useCa);
   cmd.Parse(argc, argv);
+  
+  //RegisterParameters(simTime, double, NetSet);
+
 
   if (useCa)
    {
@@ -87,8 +90,8 @@ main (int argc, char *argv[])
    }
   //SetDeaultConfig("ns3::LteHelper::EnbComponentCarrierManager", StringValue,  NetSet);
   Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
-  RegisterMethod_twoarg(lteHelper, SetAttribute, string, StringValue , NetSet);
-  RegisterMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
+  RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, StringValue , NetSet);
+  RegisterPtrMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
   //RegisterMethod_onearg(lteHelper, SetFadingModel, string, NetSet);
 
   Ptr<PointToPointEpcHelper>  epcHelper = CreateObject<PointToPointEpcHelper> ();
@@ -104,7 +107,9 @@ main (int argc, char *argv[])
 
    // Create a single RemoteHost
   NodeContainer remoteHostContainer;
-  remoteHostContainer.Create (1);
+  //remoteHostContainer.Create (1);
+  RegisterMethod_onearg(remoteHostContainer, Create, int, NetSet);
+
   Ptr<Node> remoteHost = remoteHostContainer.Get (0);
   InternetStackHelper internet;
   internet.Install (remoteHostContainer);

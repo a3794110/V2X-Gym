@@ -13,4 +13,7 @@
     <ns3::LteHelper::EnbComponentCarrierManager >
         <arg1>ns3::RrComponentCarrierManager</arg1>
     </ns3::LteHelper::EnbComponentCarrierManager>
+    <remoteHostContainer::Create >
+        <arg1>1</arg1>
+    </remoteHostContainer::Create>
 </NetworkEnvSetting>

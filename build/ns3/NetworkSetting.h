@@ -125,13 +125,54 @@ namespace ns3{
         StringValue PStringValue;
     };
 
-    #define CallSubMethod_twoArg(Helper, SubMethod, Arg1, Arg2) Helper->SubMethod( (Arg1), (Arg2) )
-    #define CallSubMethod_oneArg(Helper, SubMethod, Arg1) Helper->SubMethod(Arg1 )
-    #define CallSubMethod_noArg(Helper, SubMethod) Helper->SubMethod()
+    #define CallPtrSubMethod_twoArg(Helper, SubMethod, Arg1, Arg2) Helper->SubMethod( (Arg1), (Arg2) )
+    #define CallPtrSubMethod_oneArg(Helper, SubMethod, Arg1) Helper->SubMethod(Arg1 )
+    #define CallPtrSubMethod_noArg(Helper, SubMethod) Helper->SubMethod()
+    #define CallSubMethod_twoArg(Helper, SubMethod, Arg1, Arg2) Helper.SubMethod( (Arg1), (Arg2) )
+    #define CallSubMethod_oneArg(Helper, SubMethod, Arg1) Helper.SubMethod(Arg1 )
+    #define CallSubMethod_noArg(Helper, SubMethod) Helper.SubMethod()
     #define Stringize(name) #name
 
     extern ReturnNS3_CType RegisterMethodResult1, RegisterMethodResult2;
     extern int MethodArgSelection;
+    #define RegisterPtrMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
+        do{ \
+            if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
+                \
+                MethodArgSelection = NetworkSettingInstance->GetMethodCounter( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)) );\
+                RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type1>( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)), 2*MethodArgSelection);\
+                RegisterMethodResult2 = NetworkSettingInstance->GetArg<Type2>( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)), 2*MethodArgSelection+1);\
+                CallPtrSubMethod_twoArg(Helper, SubMethod, RegisterMethodResult1.P##Type1,  RegisterMethodResult2.P##Type2 );\
+                NetworkSettingInstance->Increment( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)) );\
+            }\
+            else{\
+                NS_LOG_UNCOND("No Such SubMethod Setting in Config files"<<std::endl);\
+                exit(1);\
+            }\
+        } while (0)
+
+    #define RegisterPtrMethod_onearg(Helper, SubMethod, Type, NetworkSettingInstance)\
+        do{ \
+            if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
+                RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)), 0);\
+                CallPtrSubMethod_oneArg(Helper, SubMethod, RegisterMethodResult1.P##Type );\
+            }\
+            else{\
+                NS_LOG_UNCOND("No Such SubMethod Setting in Config files"<<std::endl);\
+                exit(1);\
+            }\
+        } while (0)
+
+    #define RegisterPtrMethod_noarg(Helper, SubMethod, NetworkSettingInstance)\
+        do{ \
+            if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
+                CallPtrSubMethod_noArg(Helper, SubMethod);\
+            }\
+            else{\
+                NS_LOG_UNCOND("No Such SubMethod Setting in Config files"<<std::endl);\
+                exit(1);\
+            }\
+        } while (0)
     #define RegisterMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
@@ -178,6 +219,20 @@ namespace ns3{
             RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( Stringize(Parameter), 0);\
             Parameter = RegisterMethodResult1.P##Type;\
         } while(0)  
+    
+    #define InitialCmd() \
+            CommandLine Cmd\
+
+    #define ConfigCmd() \
+            Cmd.Parse(argc, argv)\
+
+    #define RegisterCmdParameters(Parameter, Type, NetworkSettingInstance, Comment)\
+        do{\
+            /*ReturnCType Parameter##Result;*/\
+            Cmd.AddValue(Comment, Parameter);\
+            RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( Stringize(Parameter), 0);\
+            Parameter = RegisterMethodResult1.P##Type;\
+        } while(0)
 
     //ReturnNS3Type result;
     #define SetDeaultConfig(Arg1, Type, NetworkSettingInstance) \

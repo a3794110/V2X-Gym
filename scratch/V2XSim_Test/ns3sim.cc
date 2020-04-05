@@ -169,12 +169,13 @@ main (int argc, char *argv[])
   double envStepTime = 0.1; //seconds, ns3gym env step time interval
   uint32_t openGymPort = 5551;
   uint32_t testArg = 0;
+  uint32_t nodeNum = 100;
 
   CommandLine cmd;
   // required parameters for OpenGym interface
   cmd.AddValue ("openGymPort", "Port number for OpenGym env. Default: 5555", openGymPort);
   cmd.AddValue ("simSeed", "Seed for random generator. Default: 1", simSeed);
-  // optional parameters
+  cmd.AddValue ("nodeNum","Number of Connected Car. Default: 100",nodeNum  );
   cmd.AddValue ("simTime", "Simulation time in seconds. Default: 10s", simulationTime);
   cmd.AddValue ("testArg", "Extra simulation argument. Default: 0", testArg);
   cmd.Parse (argc, argv);
@@ -194,7 +195,6 @@ main (int argc, char *argv[])
 
   // Configuration of the scenario
   // Create Nodes
-  uint32_t nodeNum = 100;
   NodeContainer nodes;
   nodes.Create (nodeNum);
   
@@ -203,9 +203,6 @@ main (int argc, char *argv[])
   ueMobility.SetMobilityModel ("ns3::WaypointMobilityModel");
   //ueMobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
   ueMobility.Install (nodes);
-
-
-
   for (uint32_t i=0; i<nodeNum; i++)
   {
     Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());   

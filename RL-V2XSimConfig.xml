@@ -1,0 +1,17 @@
+<Configuration>
+    <TrafficConfig >
+        <dir>scratch/V2XSim_Test/data/Simulation/map.sumocfg</dir>
+        <gui>true</gui>
+    </TrafficConfig>
+
+    <NetworkConfig >
+        <dir>NetworkEnvSetting.xml</dir>
+        <scenario>scratch/first.cc</scenario>
+    </NetworkConfig>
+
+    <RLSpace >
+        <dir>RLSpace.xml</dir>
+    </RLSpace>
+</Configuration>
+
+
