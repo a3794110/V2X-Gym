@@ -2696,17 +2696,17 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_GetDelay(PyNs3PointToPointChannel *self);
-    inline ns3::Time GetDelay__parent_caller()
-    { return ns3::PointToPointChannel::GetDelay(); }
-
-    static PyObject * _wrap_GetSource(PyNs3PointToPointChannel *self, PyObject *args, PyObject *kwargs);
-    inline ns3::Ptr< ns3::PointToPointNetDevice > GetSource__parent_caller(uint32_t i)
-    { return ns3::PointToPointChannel::GetSource(i); }
-
     static PyObject * _wrap_DoDispose(PyNs3PointToPointChannel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_IsInitialized(PyNs3PointToPointChannel *self);
+    inline bool IsInitialized__parent_caller()
+    { return ns3::PointToPointChannel::IsInitialized(); }
+
+    static PyObject * _wrap_GetDestination(PyNs3PointToPointChannel *self, PyObject *args, PyObject *kwargs);
+    inline ns3::Ptr< ns3::PointToPointNetDevice > GetDestination__parent_caller(uint32_t i)
+    { return ns3::PointToPointChannel::GetDestination(i); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3PointToPointChannel *self);
     inline void NotifyConstructionCompleted__parent_caller()
@@ -2716,13 +2716,13 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_GetDestination(PyNs3PointToPointChannel *self, PyObject *args, PyObject *kwargs);
-    inline ns3::Ptr< ns3::PointToPointNetDevice > GetDestination__parent_caller(uint32_t i)
-    { return ns3::PointToPointChannel::GetDestination(i); }
+    static PyObject * _wrap_GetSource(PyNs3PointToPointChannel *self, PyObject *args, PyObject *kwargs);
+    inline ns3::Ptr< ns3::PointToPointNetDevice > GetSource__parent_caller(uint32_t i)
+    { return ns3::PointToPointChannel::GetSource(i); }
 
-    static PyObject * _wrap_IsInitialized(PyNs3PointToPointChannel *self);
-    inline bool IsInitialized__parent_caller()
-    { return ns3::PointToPointChannel::IsInitialized(); }
+    static PyObject * _wrap_GetDelay(PyNs3PointToPointChannel *self);
+    inline ns3::Time GetDelay__parent_caller()
+    { return ns3::PointToPointChannel::GetDelay(); }
 
     virtual ns3::Ptr< ns3::NetDevice > GetDevice(std::size_t i) const;
 
@@ -2784,21 +2784,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3PointToPointNetDevice *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_DoMpiReceive(PyNs3PointToPointNetDevice *self, PyObject *args, PyObject *kwargs);
     inline void DoMpiReceive__parent_caller(ns3::Ptr< ns3::Packet > p)
     { ns3::PointToPointNetDevice::DoMpiReceive(p); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3PointToPointNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3PointToPointNetDevice *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3PointToPointNetDevice *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3PointToPointNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void SetIfIndex(uint32_t const index);
 
@@ -2904,10 +2904,6 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3PointToPointRemoteChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3PointToPointRemoteChannel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
@@ -2915,6 +2911,10 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3PointToPointRemoteChannel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3PointToPointRemoteChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual bool TransmitStart(ns3::Ptr< ns3::Packet const > p, ns3::Ptr< ns3::PointToPointNetDevice > src, ns3::Time txTime);
 

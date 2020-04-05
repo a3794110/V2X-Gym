@@ -78,6 +78,7 @@ def build(bld):
         'model/spaces.cc',
         'model/opengym_env.cc',
         'helper/opengym-helper.cc',
+        'model/NetworkSetting.cc',
         ]
 
     module_test = bld.create_ns3_module_test_library('opengym')
@@ -94,6 +95,7 @@ def build(bld):
         'model/spaces.h',
         'model/opengym_env.h',
         'helper/opengym-helper.h',
+        'model/NetworkSetting.h',
         ]
 
     if bld.env['ENABLE_ZMQ']:

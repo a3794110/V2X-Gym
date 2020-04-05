@@ -2323,7 +2323,7 @@ PyTypeObject PyNs3AodvRerrHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RerrHeader(arg0)\nRerrHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AodvRerrHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvRerrHeader__tp_clear,             /* tp_clear */
@@ -2980,7 +2980,7 @@ PyTypeObject PyNs3AodvRoutingProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RoutingProtocol(arg0)\nRoutingProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3AodvRoutingProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvRoutingProtocol__tp_clear,             /* tp_clear */
@@ -4546,7 +4546,7 @@ PyTypeObject PyNs3AodvRrepAckHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RrepAckHeader(arg0)\nRrepAckHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AodvRrepAckHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvRrepAckHeader__tp_clear,             /* tp_clear */
@@ -5138,7 +5138,7 @@ PyTypeObject PyNs3AodvRrepHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RrepHeader(prefixSize, hopCount, dst, dstSeqNo, origin, lifetime)\nRrepHeader(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3AodvRrepHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvRrepHeader__tp_clear,             /* tp_clear */
@@ -5780,7 +5780,7 @@ PyTypeObject PyNs3AodvRreqHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RreqHeader(flags, reserved, hopCount, requestID, dst, dstSeqNo, origin, originSeqNo)\nRreqHeader(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3AodvRreqHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvRreqHeader__tp_clear,             /* tp_clear */
@@ -6114,7 +6114,7 @@ PyTypeObject PyNs3AodvTypeHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TypeHeader(arg0)\nTypeHeader(t)",                        /* Documentation string */
     (traverseproc)PyNs3AodvTypeHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvTypeHeader__tp_clear,             /* tp_clear */
@@ -7605,7 +7605,7 @@ PyTypeObject PyNs3AodvHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AodvHelper(arg0)\nAodvHelper()",                        /* Documentation string */
     (traverseproc)PyNs3AodvHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AodvHelper__tp_clear,             /* tp_clear */

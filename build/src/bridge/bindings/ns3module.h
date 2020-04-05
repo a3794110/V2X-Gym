@@ -1368,21 +1368,21 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3BridgeChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoDispose(PyNs3BridgeChannel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BridgeChannel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3BridgeChannel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3BridgeChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BridgeChannel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual std::size_t GetNDevices() const;
 

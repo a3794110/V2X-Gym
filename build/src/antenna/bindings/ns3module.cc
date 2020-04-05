@@ -674,16 +674,16 @@ PyTypeObject PyNs3Angles_Type = {
 
 
 PyObject *
-PyNs3AntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self)
+PyNs3AntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3AntennaModel__PythonHelper *helper = dynamic_cast< PyNs3AntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -722,16 +722,16 @@ PyNs3AntennaModel__PythonHelper::_wrap_DoInitialize(PyNs3AntennaModel *self)
 }
 
 PyObject *
-PyNs3AntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AntennaModel *self)
+PyNs3AntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3AntennaModel__PythonHelper *helper = dynamic_cast< PyNs3AntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1144,10 +1144,10 @@ _wrap_PyNs3AntennaModel_GetTypeId(void)
 static PyMethodDef PyNs3AntennaModel_methods[] = {
     {(char *) "GetGainDb", (PyCFunction) _wrap_PyNs3AntennaModel_GetGainDb, METH_KEYWORDS|METH_VARARGS, "GetGainDb(a)\n\ntype: a: ns3::Angles" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3AntennaModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1213,7 +1213,7 @@ PyTypeObject PyNs3AntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "AntennaModel(arg0)\nAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3AntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AntennaModel__tp_clear,             /* tp_clear */
@@ -1246,16 +1246,16 @@ PyTypeObject PyNs3AntennaModel_Type = {
 
 
 PyObject *
-PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self)
+PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3CosineAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3CosineAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3CosineAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1294,16 +1294,16 @@ PyNs3CosineAntennaModel__PythonHelper::_wrap_DoInitialize(PyNs3CosineAntennaMode
 }
 
 PyObject *
-PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3CosineAntennaModel *self)
+PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3CosineAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3CosineAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1790,10 +1790,10 @@ static PyMethodDef PyNs3CosineAntennaModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3CosineAntennaModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetBeamwidth", (PyCFunction) _wrap_PyNs3CosineAntennaModel_SetBeamwidth, METH_KEYWORDS|METH_VARARGS, "SetBeamwidth(beamwidthDegrees)\n\ntype: beamwidthDegrees: double" },
     {(char *) "SetOrientation", (PyCFunction) _wrap_PyNs3CosineAntennaModel_SetOrientation, METH_KEYWORDS|METH_VARARGS, "SetOrientation(orientationDegrees)\n\ntype: orientationDegrees: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3CosineAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CosineAntennaModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1860,7 +1860,7 @@ PyTypeObject PyNs3CosineAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CosineAntennaModel(arg0)\nCosineAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3CosineAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CosineAntennaModel__tp_clear,             /* tp_clear */
@@ -1893,16 +1893,16 @@ PyTypeObject PyNs3CosineAntennaModel_Type = {
 
 
 PyObject *
-PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self)
+PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3IsotropicAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3IsotropicAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3IsotropicAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1941,16 +1941,16 @@ PyNs3IsotropicAntennaModel__PythonHelper::_wrap_DoInitialize(PyNs3IsotropicAnten
 }
 
 PyObject *
-PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3IsotropicAntennaModel *self)
+PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3IsotropicAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3IsotropicAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2375,10 +2375,10 @@ _wrap_PyNs3IsotropicAntennaModel__copy__(PyNs3IsotropicAntennaModel *self)
 static PyMethodDef PyNs3IsotropicAntennaModel_methods[] = {
     {(char *) "GetGainDb", (PyCFunction) _wrap_PyNs3IsotropicAntennaModel_GetGainDb, METH_KEYWORDS|METH_VARARGS, "GetGainDb(a)\n\ntype: a: ns3::Angles" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3IsotropicAntennaModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3IsotropicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3IsotropicAntennaModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2445,7 +2445,7 @@ PyTypeObject PyNs3IsotropicAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "IsotropicAntennaModel(arg0)\nIsotropicAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3IsotropicAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3IsotropicAntennaModel__tp_clear,             /* tp_clear */
@@ -2478,16 +2478,16 @@ PyTypeObject PyNs3IsotropicAntennaModel_Type = {
 
 
 PyObject *
-PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self)
+PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ParabolicAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3ParabolicAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3ParabolicAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2526,16 +2526,16 @@ PyNs3ParabolicAntennaModel__PythonHelper::_wrap_DoInitialize(PyNs3ParabolicAnten
 }
 
 PyObject *
-PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ParabolicAntennaModel *self)
+PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self)
 {
     PyObject *py_retval;
     PyNs3ParabolicAntennaModel__PythonHelper *helper = dynamic_cast< PyNs3ParabolicAntennaModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3022,10 +3022,10 @@ static PyMethodDef PyNs3ParabolicAntennaModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ParabolicAntennaModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetBeamwidth", (PyCFunction) _wrap_PyNs3ParabolicAntennaModel_SetBeamwidth, METH_KEYWORDS|METH_VARARGS, "SetBeamwidth(beamwidthDegrees)\n\ntype: beamwidthDegrees: double" },
     {(char *) "SetOrientation", (PyCFunction) _wrap_PyNs3ParabolicAntennaModel_SetOrientation, METH_KEYWORDS|METH_VARARGS, "SetOrientation(orientationDegrees)\n\ntype: orientationDegrees: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ParabolicAntennaModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ParabolicAntennaModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3092,7 +3092,7 @@ PyTypeObject PyNs3ParabolicAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ParabolicAntennaModel(arg0)\nParabolicAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3ParabolicAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ParabolicAntennaModel__tp_clear,             /* tp_clear */

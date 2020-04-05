@@ -768,9 +768,9 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3AntennaModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_DoDispose(PyNs3AntennaModel *self);
     inline void DoDispose__parent_caller()
@@ -780,9 +780,9 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3AntennaModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -844,9 +844,9 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3CosineAntennaModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_DoDispose(PyNs3CosineAntennaModel *self);
     inline void DoDispose__parent_caller()
@@ -856,9 +856,9 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3CosineAntennaModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -920,9 +920,9 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3IsotropicAntennaModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_DoDispose(PyNs3IsotropicAntennaModel *self);
     inline void DoDispose__parent_caller()
@@ -932,9 +932,9 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3IsotropicAntennaModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -996,9 +996,9 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ParabolicAntennaModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_DoDispose(PyNs3ParabolicAntennaModel *self);
     inline void DoDispose__parent_caller()
@@ -1008,9 +1008,9 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ParabolicAntennaModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual double GetGainDb(ns3::Angles a);
 

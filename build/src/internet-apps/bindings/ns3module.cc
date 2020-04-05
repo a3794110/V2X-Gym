@@ -1311,11 +1311,11 @@ _wrap_PyNs3DhcpHelper__copy__(PyNs3DhcpHelper *self)
 }
 
 static PyMethodDef PyNs3DhcpHelper_methods[] = {
-    {(char *) "InstallDhcpClient", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallDhcpClient, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "InstallDhcpServer", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallDhcpServer, METH_KEYWORDS|METH_VARARGS, "InstallDhcpServer(netDevice, serverAddr, poolAddr, poolMask, minAddr, maxAddr, gateway)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >\ntype: serverAddr: ns3::Ipv4Address\ntype: poolAddr: ns3::Ipv4Address\ntype: poolMask: ns3::Ipv4Mask\ntype: minAddr: ns3::Ipv4Address\ntype: maxAddr: ns3::Ipv4Address\ntype: gateway: ns3::Ipv4Address" },
-    {(char *) "InstallFixedAddress", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallFixedAddress, METH_KEYWORDS|METH_VARARGS, "InstallFixedAddress(netDevice, addr, mask)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >\ntype: addr: ns3::Ipv4Address\ntype: mask: ns3::Ipv4Mask" },
-    {(char *) "SetClientAttribute", (PyCFunction) _wrap_PyNs3DhcpHelper_SetClientAttribute, METH_KEYWORDS|METH_VARARGS, "SetClientAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetServerAttribute", (PyCFunction) _wrap_PyNs3DhcpHelper_SetServerAttribute, METH_KEYWORDS|METH_VARARGS, "SetServerAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "InstallDhcpClient", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallDhcpClient, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "InstallDhcpServer", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallDhcpServer, METH_VARARGS|METH_KEYWORDS, "InstallDhcpServer(netDevice, serverAddr, poolAddr, poolMask, minAddr, maxAddr, gateway)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >\ntype: serverAddr: ns3::Ipv4Address\ntype: poolAddr: ns3::Ipv4Address\ntype: poolMask: ns3::Ipv4Mask\ntype: minAddr: ns3::Ipv4Address\ntype: maxAddr: ns3::Ipv4Address\ntype: gateway: ns3::Ipv4Address" },
+    {(char *) "InstallFixedAddress", (PyCFunction) _wrap_PyNs3DhcpHelper_InstallFixedAddress, METH_VARARGS|METH_KEYWORDS, "InstallFixedAddress(netDevice, addr, mask)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >\ntype: addr: ns3::Ipv4Address\ntype: mask: ns3::Ipv4Mask" },
+    {(char *) "SetClientAttribute", (PyCFunction) _wrap_PyNs3DhcpHelper_SetClientAttribute, METH_VARARGS|METH_KEYWORDS, "SetClientAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetServerAttribute", (PyCFunction) _wrap_PyNs3DhcpHelper_SetServerAttribute, METH_VARARGS|METH_KEYWORDS, "SetServerAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1581,12 +1581,12 @@ _wrap_PyNs3Ping6Helper__copy__(PyNs3Ping6Helper *self)
 }
 
 static PyMethodDef PyNs3Ping6Helper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3Ping6Helper_Install, METH_KEYWORDS|METH_VARARGS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3Ping6Helper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3Ping6Helper_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(ifIndex)\n\ntype: ifIndex: uint32_t" },
-    {(char *) "SetLocal", (PyCFunction) _wrap_PyNs3Ping6Helper_SetLocal, METH_KEYWORDS|METH_VARARGS, "SetLocal(ip)\n\ntype: ip: ns3::Ipv6Address" },
-    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3Ping6Helper_SetRemote, METH_KEYWORDS|METH_VARARGS, "SetRemote(ip)\n\ntype: ip: ns3::Ipv6Address" },
-    {(char *) "SetRoutersAddress", (PyCFunction) _wrap_PyNs3Ping6Helper_SetRoutersAddress, METH_KEYWORDS|METH_VARARGS, "SetRoutersAddress(routers)\n\ntype: routers: std::vector< ns3::Ipv6Address >" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3Ping6Helper_Install, METH_VARARGS|METH_KEYWORDS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3Ping6Helper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3Ping6Helper_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(ifIndex)\n\ntype: ifIndex: uint32_t" },
+    {(char *) "SetLocal", (PyCFunction) _wrap_PyNs3Ping6Helper_SetLocal, METH_VARARGS|METH_KEYWORDS, "SetLocal(ip)\n\ntype: ip: ns3::Ipv6Address" },
+    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3Ping6Helper_SetRemote, METH_VARARGS|METH_KEYWORDS, "SetRemote(ip)\n\ntype: ip: ns3::Ipv6Address" },
+    {(char *) "SetRoutersAddress", (PyCFunction) _wrap_PyNs3Ping6Helper_SetRoutersAddress, METH_VARARGS|METH_KEYWORDS, "SetRoutersAddress(routers)\n\ntype: routers: std::vector< ns3::Ipv6Address >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ping6Helper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1892,13 +1892,13 @@ _wrap_PyNs3RadvdHelper__copy__(PyNs3RadvdHelper *self)
 }
 
 static PyMethodDef PyNs3RadvdHelper_methods[] = {
-    {(char *) "AddAnnouncedPrefix", (PyCFunction) _wrap_PyNs3RadvdHelper_AddAnnouncedPrefix, METH_KEYWORDS|METH_VARARGS, "AddAnnouncedPrefix(interface, prefix, prefixLength)\n\ntype: interface: uint32_t\ntype: prefix: ns3::Ipv6Address\ntype: prefixLength: uint32_t" },
+    {(char *) "AddAnnouncedPrefix", (PyCFunction) _wrap_PyNs3RadvdHelper_AddAnnouncedPrefix, METH_VARARGS|METH_KEYWORDS, "AddAnnouncedPrefix(interface, prefix, prefixLength)\n\ntype: interface: uint32_t\ntype: prefix: ns3::Ipv6Address\ntype: prefixLength: uint32_t" },
     {(char *) "ClearPrefixes", (PyCFunction) _wrap_PyNs3RadvdHelper_ClearPrefixes, METH_NOARGS, "ClearPrefixes()\n\n" },
-    {(char *) "DisableDefaultRouterForInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_DisableDefaultRouterForInterface, METH_KEYWORDS|METH_VARARGS, "DisableDefaultRouterForInterface(interface)\n\ntype: interface: uint32_t" },
-    {(char *) "EnableDefaultRouterForInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_EnableDefaultRouterForInterface, METH_KEYWORDS|METH_VARARGS, "EnableDefaultRouterForInterface(interface)\n\ntype: interface: uint32_t" },
-    {(char *) "GetRadvdInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_GetRadvdInterface, METH_KEYWORDS|METH_VARARGS, "GetRadvdInterface(interface)\n\ntype: interface: uint32_t" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3RadvdHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3RadvdHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "DisableDefaultRouterForInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_DisableDefaultRouterForInterface, METH_VARARGS|METH_KEYWORDS, "DisableDefaultRouterForInterface(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "EnableDefaultRouterForInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_EnableDefaultRouterForInterface, METH_VARARGS|METH_KEYWORDS, "EnableDefaultRouterForInterface(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "GetRadvdInterface", (PyCFunction) _wrap_PyNs3RadvdHelper_GetRadvdInterface, METH_VARARGS|METH_KEYWORDS, "GetRadvdInterface(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3RadvdHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3RadvdHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RadvdHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2191,8 +2191,8 @@ _wrap_PyNs3V4PingHelper__copy__(PyNs3V4PingHelper *self)
 }
 
 static PyMethodDef PyNs3V4PingHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3V4PingHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3V4PingHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3V4PingHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3V4PingHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3V4PingHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2608,16 +2608,16 @@ PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpClient *self)
 }
 
 PyObject *
-PyNs3DhcpClient__PythonHelper::_wrap_DoDispose(PyNs3DhcpClient *self)
+PyNs3DhcpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpClient *self)
 {
     PyObject *py_retval;
     PyNs3DhcpClient__PythonHelper *helper = dynamic_cast< PyNs3DhcpClient__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DhcpClient is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2640,16 +2640,16 @@ PyNs3DhcpClient__PythonHelper::_wrap_DoInitialize(PyNs3DhcpClient *self)
 }
 
 PyObject *
-PyNs3DhcpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpClient *self)
+PyNs3DhcpClient__PythonHelper::_wrap_DoDispose(PyNs3DhcpClient *self)
 {
     PyObject *py_retval;
     PyNs3DhcpClient__PythonHelper *helper = dynamic_cast< PyNs3DhcpClient__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DhcpClient is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3223,15 +3223,15 @@ _wrap_PyNs3DhcpClient__copy__(PyNs3DhcpClient *self)
 }
 
 static PyMethodDef PyNs3DhcpClient_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3DhcpClient_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3DhcpClient_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetDhcpClientNetDevice", (PyCFunction) _wrap_PyNs3DhcpClient_GetDhcpClientNetDevice, METH_NOARGS, "GetDhcpClientNetDevice()\n\n" },
     {(char *) "GetDhcpServer", (PyCFunction) _wrap_PyNs3DhcpClient_GetDhcpServer, METH_NOARGS, "GetDhcpServer()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DhcpClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetDhcpClientNetDevice", (PyCFunction) _wrap_PyNs3DhcpClient_SetDhcpClientNetDevice, METH_KEYWORDS|METH_VARARGS, "SetDhcpClientNetDevice(netDevice)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetDhcpClientNetDevice", (PyCFunction) _wrap_PyNs3DhcpClient_SetDhcpClientNetDevice, METH_VARARGS|METH_KEYWORDS, "SetDhcpClientNetDevice(netDevice)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3852,19 +3852,19 @@ static PyMethodDef PyNs3DhcpHeader_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DhcpHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetYiaddr", (PyCFunction) _wrap_PyNs3DhcpHeader_GetYiaddr, METH_NOARGS, "GetYiaddr()\n\n" },
     {(char *) "ResetOpt", (PyCFunction) _wrap_PyNs3DhcpHeader_ResetOpt, METH_NOARGS, "ResetOpt()\n\n" },
-    {(char *) "SetChaddr", (PyCFunction) _wrap_PyNs3DhcpHeader_SetChaddr, METH_KEYWORDS|METH_VARARGS, "SetChaddr(addr)\n\ntype: addr: ns3::Address" },
-    {(char *) "SetDhcps", (PyCFunction) _wrap_PyNs3DhcpHeader_SetDhcps, METH_KEYWORDS|METH_VARARGS, "SetDhcps(addr)\n\ntype: addr: ns3::Ipv4Address" },
-    {(char *) "SetHWType", (PyCFunction) _wrap_PyNs3DhcpHeader_SetHWType, METH_KEYWORDS|METH_VARARGS, "SetHWType(htype, hlen)\n\ntype: htype: uint8_t\ntype: hlen: uint8_t" },
-    {(char *) "SetLease", (PyCFunction) _wrap_PyNs3DhcpHeader_SetLease, METH_KEYWORDS|METH_VARARGS, "SetLease(time)\n\ntype: time: uint32_t" },
-    {(char *) "SetMask", (PyCFunction) _wrap_PyNs3DhcpHeader_SetMask, METH_KEYWORDS|METH_VARARGS, "SetMask(addr)\n\ntype: addr: uint32_t" },
-    {(char *) "SetRebind", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRebind, METH_KEYWORDS|METH_VARARGS, "SetRebind(time)\n\ntype: time: uint32_t" },
-    {(char *) "SetRenew", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRenew, METH_KEYWORDS|METH_VARARGS, "SetRenew(time)\n\ntype: time: uint32_t" },
-    {(char *) "SetReq", (PyCFunction) _wrap_PyNs3DhcpHeader_SetReq, METH_KEYWORDS|METH_VARARGS, "SetReq(addr)\n\ntype: addr: ns3::Ipv4Address" },
-    {(char *) "SetRouter", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRouter, METH_KEYWORDS|METH_VARARGS, "SetRouter(addr)\n\ntype: addr: ns3::Ipv4Address" },
+    {(char *) "SetChaddr", (PyCFunction) _wrap_PyNs3DhcpHeader_SetChaddr, METH_VARARGS|METH_KEYWORDS, "SetChaddr(addr)\n\ntype: addr: ns3::Address" },
+    {(char *) "SetDhcps", (PyCFunction) _wrap_PyNs3DhcpHeader_SetDhcps, METH_VARARGS|METH_KEYWORDS, "SetDhcps(addr)\n\ntype: addr: ns3::Ipv4Address" },
+    {(char *) "SetHWType", (PyCFunction) _wrap_PyNs3DhcpHeader_SetHWType, METH_VARARGS|METH_KEYWORDS, "SetHWType(htype, hlen)\n\ntype: htype: uint8_t\ntype: hlen: uint8_t" },
+    {(char *) "SetLease", (PyCFunction) _wrap_PyNs3DhcpHeader_SetLease, METH_VARARGS|METH_KEYWORDS, "SetLease(time)\n\ntype: time: uint32_t" },
+    {(char *) "SetMask", (PyCFunction) _wrap_PyNs3DhcpHeader_SetMask, METH_VARARGS|METH_KEYWORDS, "SetMask(addr)\n\ntype: addr: uint32_t" },
+    {(char *) "SetRebind", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRebind, METH_VARARGS|METH_KEYWORDS, "SetRebind(time)\n\ntype: time: uint32_t" },
+    {(char *) "SetRenew", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRenew, METH_VARARGS|METH_KEYWORDS, "SetRenew(time)\n\ntype: time: uint32_t" },
+    {(char *) "SetReq", (PyCFunction) _wrap_PyNs3DhcpHeader_SetReq, METH_VARARGS|METH_KEYWORDS, "SetReq(addr)\n\ntype: addr: ns3::Ipv4Address" },
+    {(char *) "SetRouter", (PyCFunction) _wrap_PyNs3DhcpHeader_SetRouter, METH_VARARGS|METH_KEYWORDS, "SetRouter(addr)\n\ntype: addr: ns3::Ipv4Address" },
     {(char *) "SetTime", (PyCFunction) _wrap_PyNs3DhcpHeader_SetTime, METH_NOARGS, "SetTime()\n\n" },
-    {(char *) "SetTran", (PyCFunction) _wrap_PyNs3DhcpHeader_SetTran, METH_KEYWORDS|METH_VARARGS, "SetTran(tran)\n\ntype: tran: uint32_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3DhcpHeader_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
-    {(char *) "SetYiaddr", (PyCFunction) _wrap_PyNs3DhcpHeader_SetYiaddr, METH_KEYWORDS|METH_VARARGS, "SetYiaddr(addr)\n\ntype: addr: ns3::Ipv4Address" },
+    {(char *) "SetTran", (PyCFunction) _wrap_PyNs3DhcpHeader_SetTran, METH_VARARGS|METH_KEYWORDS, "SetTran(tran)\n\ntype: tran: uint32_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3DhcpHeader_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "SetYiaddr", (PyCFunction) _wrap_PyNs3DhcpHeader_SetYiaddr, METH_VARARGS|METH_KEYWORDS, "SetYiaddr(addr)\n\ntype: addr: ns3::Ipv4Address" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3977,16 +3977,16 @@ PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpServer *self)
 }
 
 PyObject *
-PyNs3DhcpServer__PythonHelper::_wrap_DoDispose(PyNs3DhcpServer *self)
+PyNs3DhcpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpServer *self)
 {
     PyObject *py_retval;
     PyNs3DhcpServer__PythonHelper *helper = dynamic_cast< PyNs3DhcpServer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DhcpServer is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4009,16 +4009,16 @@ PyNs3DhcpServer__PythonHelper::_wrap_DoInitialize(PyNs3DhcpServer *self)
 }
 
 PyObject *
-PyNs3DhcpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpServer *self)
+PyNs3DhcpServer__PythonHelper::_wrap_DoDispose(PyNs3DhcpServer *self)
 {
     PyObject *py_retval;
     PyNs3DhcpServer__PythonHelper *helper = dynamic_cast< PyNs3DhcpServer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DhcpServer is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4498,12 +4498,12 @@ _wrap_PyNs3DhcpServer__copy__(PyNs3DhcpServer *self)
 }
 
 static PyMethodDef PyNs3DhcpServer_methods[] = {
-    {(char *) "AddStaticDhcpEntry", (PyCFunction) _wrap_PyNs3DhcpServer_AddStaticDhcpEntry, METH_KEYWORDS|METH_VARARGS, "AddStaticDhcpEntry(chaddr, addr)\n\ntype: chaddr: ns3::Address\ntype: addr: ns3::Ipv4Address" },
+    {(char *) "AddStaticDhcpEntry", (PyCFunction) _wrap_PyNs3DhcpServer_AddStaticDhcpEntry, METH_VARARGS|METH_KEYWORDS, "AddStaticDhcpEntry(chaddr, addr)\n\ntype: chaddr: ns3::Address\ntype: addr: ns3::Ipv4Address" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DhcpServer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpServer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4619,16 +4619,16 @@ PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ping6 *self)
 }
 
 PyObject *
-PyNs3Ping6__PythonHelper::_wrap_DoDispose(PyNs3Ping6 *self)
+PyNs3Ping6__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ping6 *self)
 {
     PyObject *py_retval;
     PyNs3Ping6__PythonHelper *helper = dynamic_cast< PyNs3Ping6__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Ping6 is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4651,16 +4651,16 @@ PyNs3Ping6__PythonHelper::_wrap_DoInitialize(PyNs3Ping6 *self)
 }
 
 PyObject *
-PyNs3Ping6__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ping6 *self)
+PyNs3Ping6__PythonHelper::_wrap_DoDispose(PyNs3Ping6 *self)
 {
     PyObject *py_retval;
     PyNs3Ping6__PythonHelper *helper = dynamic_cast< PyNs3Ping6__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Ping6 is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5171,14 +5171,14 @@ _wrap_PyNs3Ping6__copy__(PyNs3Ping6 *self)
 
 static PyMethodDef PyNs3Ping6_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Ping6_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3Ping6_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(ifIndex)\n\ntype: ifIndex: uint32_t" },
-    {(char *) "SetLocal", (PyCFunction) _wrap_PyNs3Ping6_SetLocal, METH_KEYWORDS|METH_VARARGS, "SetLocal(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
-    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3Ping6_SetRemote, METH_KEYWORDS|METH_VARARGS, "SetRemote(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
-    {(char *) "SetRouters", (PyCFunction) _wrap_PyNs3Ping6_SetRouters, METH_KEYWORDS|METH_VARARGS, "SetRouters(routers)\n\ntype: routers: std::vector< ns3::Ipv6Address >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3Ping6_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(ifIndex)\n\ntype: ifIndex: uint32_t" },
+    {(char *) "SetLocal", (PyCFunction) _wrap_PyNs3Ping6_SetLocal, METH_VARARGS|METH_KEYWORDS, "SetLocal(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
+    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3Ping6_SetRemote, METH_VARARGS|METH_KEYWORDS, "SetRemote(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
+    {(char *) "SetRouters", (PyCFunction) _wrap_PyNs3Ping6_SetRouters, METH_VARARGS|METH_KEYWORDS, "SetRouters(routers)\n\ntype: routers: std::vector< ns3::Ipv6Address >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ping6__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5294,16 +5294,16 @@ PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Radvd *self)
 }
 
 PyObject *
-PyNs3Radvd__PythonHelper::_wrap_DoDispose(PyNs3Radvd *self)
+PyNs3Radvd__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Radvd *self)
 {
     PyObject *py_retval;
     PyNs3Radvd__PythonHelper *helper = dynamic_cast< PyNs3Radvd__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Radvd is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5326,16 +5326,16 @@ PyNs3Radvd__PythonHelper::_wrap_DoInitialize(PyNs3Radvd *self)
 }
 
 PyObject *
-PyNs3Radvd__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Radvd *self)
+PyNs3Radvd__PythonHelper::_wrap_DoDispose(PyNs3Radvd *self)
 {
     PyObject *py_retval;
     PyNs3Radvd__PythonHelper *helper = dynamic_cast< PyNs3Radvd__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Radvd is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5922,13 +5922,13 @@ _wrap_PyNs3Radvd__copy__(PyNs3Radvd *self)
 }
 
 static PyMethodDef PyNs3Radvd_methods[] = {
-    {(char *) "AddConfiguration", (PyCFunction) _wrap_PyNs3Radvd_AddConfiguration, METH_KEYWORDS|METH_VARARGS, "AddConfiguration(routerInterface)\n\ntype: routerInterface: ns3::Ptr< ns3::RadvdInterface >" },
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Radvd_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AddConfiguration", (PyCFunction) _wrap_PyNs3Radvd_AddConfiguration, METH_VARARGS|METH_KEYWORDS, "AddConfiguration(routerInterface)\n\ntype: routerInterface: ns3::Ptr< ns3::RadvdInterface >" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Radvd_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Radvd_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Radvd__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6803,7 +6803,7 @@ _wrap_PyNs3RadvdInterface__copy__(PyNs3RadvdInterface *self)
 }
 
 static PyMethodDef PyNs3RadvdInterface_methods[] = {
-    {(char *) "AddPrefix", (PyCFunction) _wrap_PyNs3RadvdInterface_AddPrefix, METH_KEYWORDS|METH_VARARGS, "AddPrefix(routerPrefix)\n\ntype: routerPrefix: ns3::Ptr< ns3::RadvdPrefix >" },
+    {(char *) "AddPrefix", (PyCFunction) _wrap_PyNs3RadvdInterface_AddPrefix, METH_VARARGS|METH_KEYWORDS, "AddPrefix(routerPrefix)\n\ntype: routerPrefix: ns3::Ptr< ns3::RadvdPrefix >" },
     {(char *) "GetCurHopLimit", (PyCFunction) _wrap_PyNs3RadvdInterface_GetCurHopLimit, METH_NOARGS, "GetCurHopLimit()\n\n" },
     {(char *) "GetDefaultLifeTime", (PyCFunction) _wrap_PyNs3RadvdInterface_GetDefaultLifeTime, METH_NOARGS, "GetDefaultLifeTime()\n\n" },
     {(char *) "GetDefaultPreference", (PyCFunction) _wrap_PyNs3RadvdInterface_GetDefaultPreference, METH_NOARGS, "GetDefaultPreference()\n\n" },
@@ -6827,26 +6827,26 @@ static PyMethodDef PyNs3RadvdInterface_methods[] = {
     {(char *) "IsOtherConfigFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_IsOtherConfigFlag, METH_NOARGS, "IsOtherConfigFlag()\n\n" },
     {(char *) "IsSendAdvert", (PyCFunction) _wrap_PyNs3RadvdInterface_IsSendAdvert, METH_NOARGS, "IsSendAdvert()\n\n" },
     {(char *) "IsSourceLLAddress", (PyCFunction) _wrap_PyNs3RadvdInterface_IsSourceLLAddress, METH_NOARGS, "IsSourceLLAddress()\n\n" },
-    {(char *) "SetCurHopLimit", (PyCFunction) _wrap_PyNs3RadvdInterface_SetCurHopLimit, METH_KEYWORDS|METH_VARARGS, "SetCurHopLimit(curHopLimit)\n\ntype: curHopLimit: uint8_t" },
-    {(char *) "SetDefaultLifeTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetDefaultLifeTime, METH_KEYWORDS|METH_VARARGS, "SetDefaultLifeTime(defaultLifeTime)\n\ntype: defaultLifeTime: uint32_t" },
-    {(char *) "SetDefaultPreference", (PyCFunction) _wrap_PyNs3RadvdInterface_SetDefaultPreference, METH_KEYWORDS|METH_VARARGS, "SetDefaultPreference(defaultPreference)\n\ntype: defaultPreference: uint8_t" },
-    {(char *) "SetHomeAgentFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentFlag, METH_KEYWORDS|METH_VARARGS, "SetHomeAgentFlag(homeAgentFlag)\n\ntype: homeAgentFlag: bool" },
-    {(char *) "SetHomeAgentInfo", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentInfo, METH_KEYWORDS|METH_VARARGS, "SetHomeAgentInfo(homeAgentFlag)\n\ntype: homeAgentFlag: bool" },
-    {(char *) "SetHomeAgentLifeTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentLifeTime, METH_KEYWORDS|METH_VARARGS, "SetHomeAgentLifeTime(homeAgentLifeTime)\n\ntype: homeAgentLifeTime: uint32_t" },
-    {(char *) "SetHomeAgentPreference", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentPreference, METH_KEYWORDS|METH_VARARGS, "SetHomeAgentPreference(homeAgentPreference)\n\ntype: homeAgentPreference: uint32_t" },
-    {(char *) "SetIntervalOpt", (PyCFunction) _wrap_PyNs3RadvdInterface_SetIntervalOpt, METH_KEYWORDS|METH_VARARGS, "SetIntervalOpt(intervalOpt)\n\ntype: intervalOpt: bool" },
-    {(char *) "SetLastRaTxTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetLastRaTxTime, METH_KEYWORDS|METH_VARARGS, "SetLastRaTxTime(now)\n\ntype: now: ns3::Time" },
-    {(char *) "SetLinkMtu", (PyCFunction) _wrap_PyNs3RadvdInterface_SetLinkMtu, METH_KEYWORDS|METH_VARARGS, "SetLinkMtu(linkMtu)\n\ntype: linkMtu: uint32_t" },
-    {(char *) "SetManagedFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetManagedFlag, METH_KEYWORDS|METH_VARARGS, "SetManagedFlag(managedFlag)\n\ntype: managedFlag: bool" },
-    {(char *) "SetMaxRtrAdvInterval", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMaxRtrAdvInterval, METH_KEYWORDS|METH_VARARGS, "SetMaxRtrAdvInterval(maxRtrAdvInterval)\n\ntype: maxRtrAdvInterval: uint32_t" },
-    {(char *) "SetMinDelayBetweenRAs", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMinDelayBetweenRAs, METH_KEYWORDS|METH_VARARGS, "SetMinDelayBetweenRAs(minDelayBetweenRAs)\n\ntype: minDelayBetweenRAs: uint32_t" },
-    {(char *) "SetMinRtrAdvInterval", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMinRtrAdvInterval, METH_KEYWORDS|METH_VARARGS, "SetMinRtrAdvInterval(minRtrAdvInterval)\n\ntype: minRtrAdvInterval: uint32_t" },
-    {(char *) "SetMobRtrSupportFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMobRtrSupportFlag, METH_KEYWORDS|METH_VARARGS, "SetMobRtrSupportFlag(mobRtrSupportFlag)\n\ntype: mobRtrSupportFlag: bool" },
-    {(char *) "SetOtherConfigFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetOtherConfigFlag, METH_KEYWORDS|METH_VARARGS, "SetOtherConfigFlag(otherConfigFlag)\n\ntype: otherConfigFlag: bool" },
-    {(char *) "SetReachableTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetReachableTime, METH_KEYWORDS|METH_VARARGS, "SetReachableTime(reachableTime)\n\ntype: reachableTime: uint32_t" },
-    {(char *) "SetRetransTimer", (PyCFunction) _wrap_PyNs3RadvdInterface_SetRetransTimer, METH_KEYWORDS|METH_VARARGS, "SetRetransTimer(retransTimer)\n\ntype: retransTimer: uint32_t" },
-    {(char *) "SetSendAdvert", (PyCFunction) _wrap_PyNs3RadvdInterface_SetSendAdvert, METH_KEYWORDS|METH_VARARGS, "SetSendAdvert(sendAdvert)\n\ntype: sendAdvert: bool" },
-    {(char *) "SetSourceLLAddress", (PyCFunction) _wrap_PyNs3RadvdInterface_SetSourceLLAddress, METH_KEYWORDS|METH_VARARGS, "SetSourceLLAddress(sourceLLAddress)\n\ntype: sourceLLAddress: bool" },
+    {(char *) "SetCurHopLimit", (PyCFunction) _wrap_PyNs3RadvdInterface_SetCurHopLimit, METH_VARARGS|METH_KEYWORDS, "SetCurHopLimit(curHopLimit)\n\ntype: curHopLimit: uint8_t" },
+    {(char *) "SetDefaultLifeTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetDefaultLifeTime, METH_VARARGS|METH_KEYWORDS, "SetDefaultLifeTime(defaultLifeTime)\n\ntype: defaultLifeTime: uint32_t" },
+    {(char *) "SetDefaultPreference", (PyCFunction) _wrap_PyNs3RadvdInterface_SetDefaultPreference, METH_VARARGS|METH_KEYWORDS, "SetDefaultPreference(defaultPreference)\n\ntype: defaultPreference: uint8_t" },
+    {(char *) "SetHomeAgentFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentFlag, METH_VARARGS|METH_KEYWORDS, "SetHomeAgentFlag(homeAgentFlag)\n\ntype: homeAgentFlag: bool" },
+    {(char *) "SetHomeAgentInfo", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentInfo, METH_VARARGS|METH_KEYWORDS, "SetHomeAgentInfo(homeAgentFlag)\n\ntype: homeAgentFlag: bool" },
+    {(char *) "SetHomeAgentLifeTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentLifeTime, METH_VARARGS|METH_KEYWORDS, "SetHomeAgentLifeTime(homeAgentLifeTime)\n\ntype: homeAgentLifeTime: uint32_t" },
+    {(char *) "SetHomeAgentPreference", (PyCFunction) _wrap_PyNs3RadvdInterface_SetHomeAgentPreference, METH_VARARGS|METH_KEYWORDS, "SetHomeAgentPreference(homeAgentPreference)\n\ntype: homeAgentPreference: uint32_t" },
+    {(char *) "SetIntervalOpt", (PyCFunction) _wrap_PyNs3RadvdInterface_SetIntervalOpt, METH_VARARGS|METH_KEYWORDS, "SetIntervalOpt(intervalOpt)\n\ntype: intervalOpt: bool" },
+    {(char *) "SetLastRaTxTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetLastRaTxTime, METH_VARARGS|METH_KEYWORDS, "SetLastRaTxTime(now)\n\ntype: now: ns3::Time" },
+    {(char *) "SetLinkMtu", (PyCFunction) _wrap_PyNs3RadvdInterface_SetLinkMtu, METH_VARARGS|METH_KEYWORDS, "SetLinkMtu(linkMtu)\n\ntype: linkMtu: uint32_t" },
+    {(char *) "SetManagedFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetManagedFlag, METH_VARARGS|METH_KEYWORDS, "SetManagedFlag(managedFlag)\n\ntype: managedFlag: bool" },
+    {(char *) "SetMaxRtrAdvInterval", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMaxRtrAdvInterval, METH_VARARGS|METH_KEYWORDS, "SetMaxRtrAdvInterval(maxRtrAdvInterval)\n\ntype: maxRtrAdvInterval: uint32_t" },
+    {(char *) "SetMinDelayBetweenRAs", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMinDelayBetweenRAs, METH_VARARGS|METH_KEYWORDS, "SetMinDelayBetweenRAs(minDelayBetweenRAs)\n\ntype: minDelayBetweenRAs: uint32_t" },
+    {(char *) "SetMinRtrAdvInterval", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMinRtrAdvInterval, METH_VARARGS|METH_KEYWORDS, "SetMinRtrAdvInterval(minRtrAdvInterval)\n\ntype: minRtrAdvInterval: uint32_t" },
+    {(char *) "SetMobRtrSupportFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetMobRtrSupportFlag, METH_VARARGS|METH_KEYWORDS, "SetMobRtrSupportFlag(mobRtrSupportFlag)\n\ntype: mobRtrSupportFlag: bool" },
+    {(char *) "SetOtherConfigFlag", (PyCFunction) _wrap_PyNs3RadvdInterface_SetOtherConfigFlag, METH_VARARGS|METH_KEYWORDS, "SetOtherConfigFlag(otherConfigFlag)\n\ntype: otherConfigFlag: bool" },
+    {(char *) "SetReachableTime", (PyCFunction) _wrap_PyNs3RadvdInterface_SetReachableTime, METH_VARARGS|METH_KEYWORDS, "SetReachableTime(reachableTime)\n\ntype: reachableTime: uint32_t" },
+    {(char *) "SetRetransTimer", (PyCFunction) _wrap_PyNs3RadvdInterface_SetRetransTimer, METH_VARARGS|METH_KEYWORDS, "SetRetransTimer(retransTimer)\n\ntype: retransTimer: uint32_t" },
+    {(char *) "SetSendAdvert", (PyCFunction) _wrap_PyNs3RadvdInterface_SetSendAdvert, METH_VARARGS|METH_KEYWORDS, "SetSendAdvert(sendAdvert)\n\ntype: sendAdvert: bool" },
+    {(char *) "SetSourceLLAddress", (PyCFunction) _wrap_PyNs3RadvdInterface_SetSourceLLAddress, METH_VARARGS|METH_KEYWORDS, "SetSourceLLAddress(sourceLLAddress)\n\ntype: sourceLLAddress: bool" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RadvdInterface__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7251,13 +7251,13 @@ static PyMethodDef PyNs3RadvdPrefix_methods[] = {
     {(char *) "IsAutonomousFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_IsAutonomousFlag, METH_NOARGS, "IsAutonomousFlag()\n\n" },
     {(char *) "IsOnLinkFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_IsOnLinkFlag, METH_NOARGS, "IsOnLinkFlag()\n\n" },
     {(char *) "IsRouterAddrFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_IsRouterAddrFlag, METH_NOARGS, "IsRouterAddrFlag()\n\n" },
-    {(char *) "SetAutonomousFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetAutonomousFlag, METH_KEYWORDS|METH_VARARGS, "SetAutonomousFlag(autonomousFlag)\n\ntype: autonomousFlag: bool" },
-    {(char *) "SetNetwork", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetNetwork, METH_KEYWORDS|METH_VARARGS, "SetNetwork(network)\n\ntype: network: ns3::Ipv6Address" },
-    {(char *) "SetOnLinkFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetOnLinkFlag, METH_KEYWORDS|METH_VARARGS, "SetOnLinkFlag(onLinkFlag)\n\ntype: onLinkFlag: bool" },
-    {(char *) "SetPreferredLifeTime", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetPreferredLifeTime, METH_KEYWORDS|METH_VARARGS, "SetPreferredLifeTime(preferredLifeTime)\n\ntype: preferredLifeTime: uint32_t" },
-    {(char *) "SetPrefixLength", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetPrefixLength, METH_KEYWORDS|METH_VARARGS, "SetPrefixLength(prefixLength)\n\ntype: prefixLength: uint8_t" },
-    {(char *) "SetRouterAddrFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetRouterAddrFlag, METH_KEYWORDS|METH_VARARGS, "SetRouterAddrFlag(routerAddrFlag)\n\ntype: routerAddrFlag: bool" },
-    {(char *) "SetValidLifeTime", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetValidLifeTime, METH_KEYWORDS|METH_VARARGS, "SetValidLifeTime(validLifeTime)\n\ntype: validLifeTime: uint32_t" },
+    {(char *) "SetAutonomousFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetAutonomousFlag, METH_VARARGS|METH_KEYWORDS, "SetAutonomousFlag(autonomousFlag)\n\ntype: autonomousFlag: bool" },
+    {(char *) "SetNetwork", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetNetwork, METH_VARARGS|METH_KEYWORDS, "SetNetwork(network)\n\ntype: network: ns3::Ipv6Address" },
+    {(char *) "SetOnLinkFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetOnLinkFlag, METH_VARARGS|METH_KEYWORDS, "SetOnLinkFlag(onLinkFlag)\n\ntype: onLinkFlag: bool" },
+    {(char *) "SetPreferredLifeTime", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetPreferredLifeTime, METH_VARARGS|METH_KEYWORDS, "SetPreferredLifeTime(preferredLifeTime)\n\ntype: preferredLifeTime: uint32_t" },
+    {(char *) "SetPrefixLength", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetPrefixLength, METH_VARARGS|METH_KEYWORDS, "SetPrefixLength(prefixLength)\n\ntype: prefixLength: uint8_t" },
+    {(char *) "SetRouterAddrFlag", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetRouterAddrFlag, METH_VARARGS|METH_KEYWORDS, "SetRouterAddrFlag(routerAddrFlag)\n\ntype: routerAddrFlag: bool" },
+    {(char *) "SetValidLifeTime", (PyCFunction) _wrap_PyNs3RadvdPrefix_SetValidLifeTime, METH_VARARGS|METH_KEYWORDS, "SetValidLifeTime(validLifeTime)\n\ntype: validLifeTime: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RadvdPrefix__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };

@@ -663,7 +663,7 @@ PyTypeObject PyNs3FileConfig_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FileConfig(arg0)\nFileConfig()",                        /* Documentation string */
     (traverseproc)PyNs3FileConfig__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FileConfig__tp_clear,             /* tp_clear */
@@ -1103,7 +1103,7 @@ PyTypeObject PyNs3NoneFileConfig_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "NoneFileConfig(arg0)\nNoneFileConfig()",                        /* Documentation string */
     (traverseproc)PyNs3NoneFileConfig__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NoneFileConfig__tp_clear,             /* tp_clear */
@@ -1522,7 +1522,7 @@ PyTypeObject PyNs3ConfigStore_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConfigStore(arg0)\nConfigStore()",                        /* Documentation string */
     (traverseproc)PyNs3ConfigStore__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConfigStore__tp_clear,             /* tp_clear */

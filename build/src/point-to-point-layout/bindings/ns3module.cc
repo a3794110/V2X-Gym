@@ -1263,16 +1263,16 @@ _wrap_PyNs3PointToPointDumbbellHelper__copy__(PyNs3PointToPointDumbbellHelper *s
 }
 
 static PyMethodDef PyNs3PointToPointDumbbellHelper_methods[] = {
-    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_AssignIpv4Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv4Addresses(leftIp, rightIp, routerIp)\n\ntype: leftIp: ns3::Ipv4AddressHelper\ntype: rightIp: ns3::Ipv4AddressHelper\ntype: routerIp: ns3::Ipv4AddressHelper" },
-    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_AssignIpv6Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
-    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_BoundingBox, METH_VARARGS|METH_KEYWORDS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
-    {(char *) "GetLeft", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeft, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "GetLeftIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeftIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetLeftIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetLeftIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeftIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetLeftIpv6Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetRight", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRight, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "GetRightIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRightIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetRightIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetRightIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRightIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetRightIpv6Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
+    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_AssignIpv4Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv4Addresses(leftIp, rightIp, routerIp)\n\ntype: leftIp: ns3::Ipv4AddressHelper\ntype: rightIp: ns3::Ipv4AddressHelper\ntype: routerIp: ns3::Ipv4AddressHelper" },
+    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_AssignIpv6Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
+    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_BoundingBox, METH_KEYWORDS|METH_VARARGS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
+    {(char *) "GetLeft", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeft, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetLeftIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeftIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetLeftIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetLeftIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetLeftIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetLeftIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetRight", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRight, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetRightIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRightIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetRightIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetRightIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_GetRightIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetRightIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
     {(char *) "LeftCount", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_LeftCount, METH_NOARGS, "LeftCount()\n\n" },
     {(char *) "RightCount", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper_RightCount, METH_NOARGS, "RightCount()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointDumbbellHelper__copy__, METH_NOARGS, NULL},
@@ -1603,13 +1603,13 @@ _wrap_PyNs3PointToPointGridHelper__copy__(PyNs3PointToPointGridHelper *self)
 }
 
 static PyMethodDef PyNs3PointToPointGridHelper_methods[] = {
-    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_AssignIpv4Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv4Addresses(rowIp, colIp)\n\ntype: rowIp: ns3::Ipv4AddressHelper\ntype: colIp: ns3::Ipv4AddressHelper" },
-    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_AssignIpv6Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
-    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_BoundingBox, METH_VARARGS|METH_KEYWORDS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
-    {(char *) "GetIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetIpv4Address(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
-    {(char *) "GetIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetIpv6Address(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
-    {(char *) "GetNode", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetNode, METH_VARARGS|METH_KEYWORDS, "GetNode(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
+    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_AssignIpv4Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv4Addresses(rowIp, colIp)\n\ntype: rowIp: ns3::Ipv4AddressHelper\ntype: colIp: ns3::Ipv4AddressHelper" },
+    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_AssignIpv6Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
+    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_BoundingBox, METH_KEYWORDS|METH_VARARGS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
+    {(char *) "GetIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetIpv4Address(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
+    {(char *) "GetIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetIpv6Address(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
+    {(char *) "GetNode", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_GetNode, METH_KEYWORDS|METH_VARARGS, "GetNode(row, col)\n\ntype: row: uint32_t\ntype: col: uint32_t" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointGridHelper_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointGridHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2032,16 +2032,16 @@ _wrap_PyNs3PointToPointStarHelper__copy__(PyNs3PointToPointStarHelper *self)
 }
 
 static PyMethodDef PyNs3PointToPointStarHelper_methods[] = {
-    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_AssignIpv4Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv4Addresses(address)\n\ntype: address: ns3::Ipv4AddressHelper" },
-    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_AssignIpv6Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
-    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_BoundingBox, METH_VARARGS|METH_KEYWORDS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
+    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_AssignIpv4Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv4Addresses(address)\n\ntype: address: ns3::Ipv4AddressHelper" },
+    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_AssignIpv6Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
+    {(char *) "BoundingBox", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_BoundingBox, METH_KEYWORDS|METH_VARARGS, "BoundingBox(ulx, uly, lrx, lry)\n\ntype: ulx: double\ntype: uly: double\ntype: lrx: double\ntype: lry: double" },
     {(char *) "GetHub", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetHub, METH_NOARGS, "GetHub()\n\n" },
-    {(char *) "GetHubIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetHubIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetHubIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetHubIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetHubIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetHubIpv6Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetSpokeIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetSpokeIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetSpokeIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetSpokeIpv6Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetSpokeNode", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeNode, METH_VARARGS|METH_KEYWORDS, "GetSpokeNode(i)\n\ntype: i: uint32_t" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
+    {(char *) "GetHubIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetHubIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetHubIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetHubIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetHubIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetHubIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetSpokeIpv4Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetSpokeIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetSpokeIpv6Address", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetSpokeIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetSpokeNode", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_GetSpokeNode, METH_KEYWORDS|METH_VARARGS, "GetSpokeNode(i)\n\ntype: i: uint32_t" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
     {(char *) "SpokeCount", (PyCFunction) _wrap_PyNs3PointToPointStarHelper_SpokeCount, METH_NOARGS, "SpokeCount()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointStarHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}

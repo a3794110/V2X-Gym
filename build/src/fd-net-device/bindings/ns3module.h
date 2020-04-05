@@ -1873,17 +1873,17 @@ public:
     }
 
 
-    static PyObject * _wrap_CreateFileDescriptor(PyNs3EmuFdNetDeviceHelper *self);
-    inline int CreateFileDescriptor__parent_caller()
-    { return ns3::EmuFdNetDeviceHelper::CreateFileDescriptor(); }
+    static PyObject * _wrap_SetFileDescriptor(PyNs3EmuFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
+    inline void SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice > device)
+    { ns3::EmuFdNetDeviceHelper::SetFileDescriptor(device); }
 
     static PyObject * _wrap_InstallPriv(PyNs3EmuFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
     inline ns3::Ptr< ns3::NetDevice > InstallPriv__parent_caller(ns3::Ptr< ns3::Node > node)
     { return ns3::EmuFdNetDeviceHelper::InstallPriv(node); }
 
-    static PyObject * _wrap_SetFileDescriptor(PyNs3EmuFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
-    inline void SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice > device)
-    { ns3::EmuFdNetDeviceHelper::SetFileDescriptor(device); }
+    static PyObject * _wrap_CreateFileDescriptor(PyNs3EmuFdNetDeviceHelper *self);
+    inline int CreateFileDescriptor__parent_caller()
+    { return ns3::EmuFdNetDeviceHelper::CreateFileDescriptor(); }
 
     virtual int CreateFileDescriptor() const;
 
@@ -1939,17 +1939,17 @@ public:
     }
 
 
-    static PyObject * _wrap_CreateFileDescriptor(PyNs3TapFdNetDeviceHelper *self);
-    inline int CreateFileDescriptor__parent_caller()
-    { return ns3::TapFdNetDeviceHelper::CreateFileDescriptor(); }
+    static PyObject * _wrap_SetFileDescriptor(PyNs3TapFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
+    inline void SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice > device)
+    { ns3::TapFdNetDeviceHelper::SetFileDescriptor(device); }
 
     static PyObject * _wrap_InstallPriv(PyNs3TapFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
     inline ns3::Ptr< ns3::NetDevice > InstallPriv__parent_caller(ns3::Ptr< ns3::Node > node)
     { return ns3::TapFdNetDeviceHelper::InstallPriv(node); }
 
-    static PyObject * _wrap_SetFileDescriptor(PyNs3TapFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs);
-    inline void SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice > device)
-    { ns3::TapFdNetDeviceHelper::SetFileDescriptor(device); }
+    static PyObject * _wrap_CreateFileDescriptor(PyNs3TapFdNetDeviceHelper *self);
+    inline int CreateFileDescriptor__parent_caller()
+    { return ns3::TapFdNetDeviceHelper::CreateFileDescriptor(); }
 
     virtual int CreateFileDescriptor() const;
 

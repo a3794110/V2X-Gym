@@ -1373,8 +1373,8 @@ _wrap_PyNs3BulkSendHelper__copy__(PyNs3BulkSendHelper *self)
 }
 
 static PyMethodDef PyNs3BulkSendHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3BulkSendHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3BulkSendHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3BulkSendHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3BulkSendHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BulkSendHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1894,10 +1894,10 @@ _wrap_PyNs3OnOffHelper__copy__(PyNs3OnOffHelper *self)
 }
 
 static PyMethodDef PyNs3OnOffHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OnOffHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(c, stream)\n\ntype: c: ns3::NodeContainer\ntype: stream: int64_t" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3OnOffHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3OnOffHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetConstantRate", (PyCFunction) _wrap_PyNs3OnOffHelper_SetConstantRate, METH_VARARGS|METH_KEYWORDS, "SetConstantRate(dataRate, packetSize)\n\ntype: dataRate: ns3::DataRate\ntype: packetSize: uint32_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OnOffHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(c, stream)\n\ntype: c: ns3::NodeContainer\ntype: stream: int64_t" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3OnOffHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3OnOffHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetConstantRate", (PyCFunction) _wrap_PyNs3OnOffHelper_SetConstantRate, METH_KEYWORDS|METH_VARARGS, "SetConstantRate(dataRate, packetSize)\n\ntype: dataRate: ns3::DataRate\ntype: packetSize: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OnOffHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2130,8 +2130,8 @@ _wrap_PyNs3PacketLossCounter__copy__(PyNs3PacketLossCounter *self)
 static PyMethodDef PyNs3PacketLossCounter_methods[] = {
     {(char *) "GetBitMapSize", (PyCFunction) _wrap_PyNs3PacketLossCounter_GetBitMapSize, METH_NOARGS, "GetBitMapSize()\n\n" },
     {(char *) "GetLost", (PyCFunction) _wrap_PyNs3PacketLossCounter_GetLost, METH_NOARGS, "GetLost()\n\n" },
-    {(char *) "NotifyReceived", (PyCFunction) _wrap_PyNs3PacketLossCounter_NotifyReceived, METH_VARARGS|METH_KEYWORDS, "NotifyReceived(seq)\n\ntype: seq: uint32_t" },
-    {(char *) "SetBitMapSize", (PyCFunction) _wrap_PyNs3PacketLossCounter_SetBitMapSize, METH_VARARGS|METH_KEYWORDS, "SetBitMapSize(size)\n\ntype: size: uint16_t" },
+    {(char *) "NotifyReceived", (PyCFunction) _wrap_PyNs3PacketLossCounter_NotifyReceived, METH_KEYWORDS|METH_VARARGS, "NotifyReceived(seq)\n\ntype: seq: uint32_t" },
+    {(char *) "SetBitMapSize", (PyCFunction) _wrap_PyNs3PacketLossCounter_SetBitMapSize, METH_KEYWORDS|METH_VARARGS, "SetBitMapSize(size)\n\ntype: size: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PacketLossCounter__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2458,8 +2458,8 @@ _wrap_PyNs3PacketSinkHelper__copy__(PyNs3PacketSinkHelper *self)
 }
 
 static PyMethodDef PyNs3PacketSinkHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3PacketSinkHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3PacketSinkHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3PacketSinkHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3PacketSinkHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PacketSinkHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2788,8 +2788,8 @@ _wrap_PyNs3ThreeGppHttpClientHelper__copy__(PyNs3ThreeGppHttpClientHelper *self)
 }
 
 static PyMethodDef PyNs3ThreeGppHttpClientHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3ThreeGppHttpClientHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ThreeGppHttpClientHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3ThreeGppHttpClientHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ThreeGppHttpClientHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpClientHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3118,8 +3118,8 @@ _wrap_PyNs3ThreeGppHttpServerHelper__copy__(PyNs3ThreeGppHttpServerHelper *self)
 }
 
 static PyMethodDef PyNs3ThreeGppHttpServerHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3449,8 +3449,8 @@ _wrap_PyNs3UdpClientHelper__copy__(PyNs3UdpClientHelper *self)
 }
 
 static PyMethodDef PyNs3UdpClientHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpClientHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpClientHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpClientHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpClientHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpClientHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3934,9 +3934,9 @@ _wrap_PyNs3UdpEchoClientHelper__copy__(PyNs3UdpEchoClientHelper *self)
 }
 
 static PyMethodDef PyNs3UdpEchoClientHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetFill", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_SetFill, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetFill", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper_SetFill, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpEchoClientHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4239,8 +4239,8 @@ _wrap_PyNs3UdpEchoServerHelper__copy__(PyNs3UdpEchoServerHelper *self)
 }
 
 static PyMethodDef PyNs3UdpEchoServerHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpEchoServerHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpEchoServerHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpEchoServerHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpEchoServerHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpEchoServerHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4522,8 +4522,8 @@ _wrap_PyNs3UdpServerHelper__copy__(PyNs3UdpServerHelper *self)
 
 static PyMethodDef PyNs3UdpServerHelper_methods[] = {
     {(char *) "GetServer", (PyCFunction) _wrap_PyNs3UdpServerHelper_GetServer, METH_NOARGS, "GetServer()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpServerHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpServerHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpServerHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpServerHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpServerHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4857,8 +4857,8 @@ _wrap_PyNs3UdpTraceClientHelper__copy__(PyNs3UdpTraceClientHelper *self)
 }
 
 static PyMethodDef PyNs3UdpTraceClientHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpTraceClientHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpTraceClientHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3UdpTraceClientHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(c)\n\ntype: c: ns3::NodeContainer" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3UdpTraceClientHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpTraceClientHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5140,14 +5140,14 @@ _wrap_PyNs3SeqTsHeader__copy__(PyNs3SeqTsHeader *self)
 }
 
 static PyMethodDef PyNs3SeqTsHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SeqTsHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SeqTsHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3SeqTsHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSeq", (PyCFunction) _wrap_PyNs3SeqTsHeader_GetSeq, METH_NOARGS, "GetSeq()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SeqTsHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTs", (PyCFunction) _wrap_PyNs3SeqTsHeader_GetTs, METH_NOARGS, "GetTs()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SeqTsHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SeqTsHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetSeq", (PyCFunction) _wrap_PyNs3SeqTsHeader_SetSeq, METH_VARARGS|METH_KEYWORDS, "SetSeq(seq)\n\ntype: seq: uint32_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SeqTsHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetSeq", (PyCFunction) _wrap_PyNs3SeqTsHeader_SetSeq, METH_KEYWORDS|METH_VARARGS, "SetSeq(seq)\n\ntype: seq: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SeqTsHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5211,7 +5211,7 @@ PyTypeObject PyNs3SeqTsHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SeqTsHeader(arg0)\nSeqTsHeader()",                        /* Documentation string */
     (traverseproc)PyNs3SeqTsHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SeqTsHeader__tp_clear,             /* tp_clear */
@@ -5697,7 +5697,7 @@ _wrap_PyNs3ThreeGppHttpHeader__copy__(PyNs3ThreeGppHttpHeader *self)
 }
 
 static PyMethodDef PyNs3ThreeGppHttpHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetClientTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetClientTs, METH_NOARGS, "GetClientTs()\n\n" },
     {(char *) "GetContentLength", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetContentLength, METH_NOARGS, "GetContentLength()\n\n" },
     {(char *) "GetContentType", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetContentType, METH_NOARGS, "GetContentType()\n\n" },
@@ -5705,11 +5705,11 @@ static PyMethodDef PyNs3ThreeGppHttpHeader_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetServerTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetServerTs, METH_NOARGS, "GetServerTs()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetClientTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetClientTs, METH_VARARGS|METH_KEYWORDS, "SetClientTs(clientTs)\n\ntype: clientTs: ns3::Time" },
-    {(char *) "SetContentLength", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetContentLength, METH_VARARGS|METH_KEYWORDS, "SetContentLength(contentLength)\n\ntype: contentLength: uint32_t" },
-    {(char *) "SetContentType", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetContentType, METH_VARARGS|METH_KEYWORDS, "SetContentType(contentType)\n\ntype: contentType: ns3::ThreeGppHttpHeader::ContentType_t" },
-    {(char *) "SetServerTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetServerTs, METH_VARARGS|METH_KEYWORDS, "SetServerTs(serverTs)\n\ntype: serverTs: ns3::Time" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetClientTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetClientTs, METH_KEYWORDS|METH_VARARGS, "SetClientTs(clientTs)\n\ntype: clientTs: ns3::Time" },
+    {(char *) "SetContentLength", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetContentLength, METH_KEYWORDS|METH_VARARGS, "SetContentLength(contentLength)\n\ntype: contentLength: uint32_t" },
+    {(char *) "SetContentType", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetContentType, METH_KEYWORDS|METH_VARARGS, "SetContentType(contentType)\n\ntype: contentType: ns3::ThreeGppHttpHeader::ContentType_t" },
+    {(char *) "SetServerTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_SetServerTs, METH_KEYWORDS|METH_VARARGS, "SetServerTs(serverTs)\n\ntype: serverTs: ns3::Time" },
     {(char *) "ToString", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader_ToString, METH_NOARGS, "ToString()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -5774,7 +5774,7 @@ PyTypeObject PyNs3ThreeGppHttpHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ThreeGppHttpHeader(arg0)\nThreeGppHttpHeader()",                        /* Documentation string */
     (traverseproc)PyNs3ThreeGppHttpHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ThreeGppHttpHeader__tp_clear,             /* tp_clear */
@@ -6153,20 +6153,20 @@ _wrap_PyNs3ThreeGppHttpServerTxBuffer__copy__(PyNs3ThreeGppHttpServerTxBuffer *s
 }
 
 static PyMethodDef PyNs3ThreeGppHttpServerTxBuffer_methods[] = {
-    {(char *) "AddSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_AddSocket, METH_VARARGS|METH_KEYWORDS, "AddSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "AddSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_AddSocket, METH_KEYWORDS|METH_VARARGS, "AddSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
     {(char *) "CloseAllSockets", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_CloseAllSockets, METH_NOARGS, "CloseAllSockets()\n\n" },
-    {(char *) "CloseSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_CloseSocket, METH_VARARGS|METH_KEYWORDS, "CloseSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "DepleteBufferSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_DepleteBufferSize, METH_VARARGS|METH_KEYWORDS, "DepleteBufferSize(socket, amount)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: amount: uint32_t" },
-    {(char *) "GetBufferContentType", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetBufferContentType, METH_VARARGS|METH_KEYWORDS, "GetBufferContentType(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "GetBufferSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetBufferSize, METH_VARARGS|METH_KEYWORDS, "GetBufferSize(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "GetClientTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetClientTs, METH_VARARGS|METH_KEYWORDS, "GetClientTs(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "HasTxedPartOfObject", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_HasTxedPartOfObject, METH_VARARGS|METH_KEYWORDS, "HasTxedPartOfObject(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "IsBufferEmpty", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_IsBufferEmpty, METH_VARARGS|METH_KEYWORDS, "IsBufferEmpty(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "IsSocketAvailable", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_IsSocketAvailable, METH_VARARGS|METH_KEYWORDS, "IsSocketAvailable(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "PrepareClose", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_PrepareClose, METH_VARARGS|METH_KEYWORDS, "PrepareClose(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "RecordNextServe", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_RecordNextServe, METH_VARARGS|METH_KEYWORDS, "RecordNextServe(socket, eventId, clientTs)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: eventId: ns3::EventId const &\ntype: clientTs: ns3::Time const &" },
-    {(char *) "RemoveSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_RemoveSocket, METH_VARARGS|METH_KEYWORDS, "RemoveSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
-    {(char *) "WriteNewObject", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_WriteNewObject, METH_VARARGS|METH_KEYWORDS, "WriteNewObject(socket, contentType, objectSize)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: contentType: ns3::ThreeGppHttpHeader::ContentType_t\ntype: objectSize: uint32_t" },
+    {(char *) "CloseSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_CloseSocket, METH_KEYWORDS|METH_VARARGS, "CloseSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "DepleteBufferSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_DepleteBufferSize, METH_KEYWORDS|METH_VARARGS, "DepleteBufferSize(socket, amount)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: amount: uint32_t" },
+    {(char *) "GetBufferContentType", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetBufferContentType, METH_KEYWORDS|METH_VARARGS, "GetBufferContentType(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "GetBufferSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetBufferSize, METH_KEYWORDS|METH_VARARGS, "GetBufferSize(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "GetClientTs", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_GetClientTs, METH_KEYWORDS|METH_VARARGS, "GetClientTs(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "HasTxedPartOfObject", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_HasTxedPartOfObject, METH_KEYWORDS|METH_VARARGS, "HasTxedPartOfObject(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "IsBufferEmpty", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_IsBufferEmpty, METH_KEYWORDS|METH_VARARGS, "IsBufferEmpty(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "IsSocketAvailable", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_IsSocketAvailable, METH_KEYWORDS|METH_VARARGS, "IsSocketAvailable(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "PrepareClose", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_PrepareClose, METH_KEYWORDS|METH_VARARGS, "PrepareClose(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "RecordNextServe", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_RecordNextServe, METH_KEYWORDS|METH_VARARGS, "RecordNextServe(socket, eventId, clientTs)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: eventId: ns3::EventId const &\ntype: clientTs: ns3::Time const &" },
+    {(char *) "RemoveSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_RemoveSocket, METH_KEYWORDS|METH_VARARGS, "RemoveSocket(socket)\n\ntype: socket: ns3::Ptr< ns3::Socket >" },
+    {(char *) "WriteNewObject", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer_WriteNewObject, METH_KEYWORDS|METH_VARARGS, "WriteNewObject(socket, contentType, objectSize)\n\ntype: socket: ns3::Ptr< ns3::Socket >\ntype: contentType: ns3::ThreeGppHttpHeader::ContentType_t\ntype: objectSize: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpServerTxBuffer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6246,6 +6246,22 @@ PyTypeObject PyNs3ThreeGppHttpServerTxBuffer_Type = {
 
 
 PyObject *
+PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpVariables *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeGppHttpVariables__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpVariables__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ThreeGppHttpVariables *self)
 {
     PyObject *py_retval;
@@ -6272,22 +6288,6 @@ PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_DoDispose(PyNs3ThreeGppHttpVaria
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpVariables *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeGppHttpVariables__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpVariables__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6985,7 +6985,7 @@ _wrap_PyNs3ThreeGppHttpVariables__copy__(PyNs3ThreeGppHttpVariables *self)
 }
 
 static PyMethodDef PyNs3ThreeGppHttpVariables_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetEmbeddedObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetEmbeddedObjectGenerationDelay, METH_NOARGS, "GetEmbeddedObjectGenerationDelay()\n\n" },
     {(char *) "GetEmbeddedObjectSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetEmbeddedObjectSize, METH_NOARGS, "GetEmbeddedObjectSize()\n\n" },
     {(char *) "GetMainObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetMainObjectGenerationDelay, METH_NOARGS, "GetMainObjectGenerationDelay()\n\n" },
@@ -6996,21 +6996,21 @@ static PyMethodDef PyNs3ThreeGppHttpVariables_methods[] = {
     {(char *) "GetReadingTime", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetReadingTime, METH_NOARGS, "GetReadingTime()\n\n" },
     {(char *) "GetRequestSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetRequestSize, METH_NOARGS, "GetRequestSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetEmbeddedObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectGenerationDelay, METH_VARARGS|METH_KEYWORDS, "SetEmbeddedObjectGenerationDelay(constant)\n\ntype: constant: ns3::Time" },
-    {(char *) "SetEmbeddedObjectSizeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectSizeMean, METH_VARARGS|METH_KEYWORDS, "SetEmbeddedObjectSizeMean(mean)\n\ntype: mean: uint32_t" },
-    {(char *) "SetEmbeddedObjectSizeStdDev", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectSizeStdDev, METH_VARARGS|METH_KEYWORDS, "SetEmbeddedObjectSizeStdDev(stdDev)\n\ntype: stdDev: uint32_t" },
-    {(char *) "SetMainObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectGenerationDelay, METH_VARARGS|METH_KEYWORDS, "SetMainObjectGenerationDelay(constant)\n\ntype: constant: ns3::Time" },
-    {(char *) "SetMainObjectSizeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectSizeMean, METH_VARARGS|METH_KEYWORDS, "SetMainObjectSizeMean(mean)\n\ntype: mean: uint32_t" },
-    {(char *) "SetMainObjectSizeStdDev", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectSizeStdDev, METH_VARARGS|METH_KEYWORDS, "SetMainObjectSizeStdDev(stdDev)\n\ntype: stdDev: uint32_t" },
-    {(char *) "SetNumOfEmbeddedObjectsMax", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsMax, METH_VARARGS|METH_KEYWORDS, "SetNumOfEmbeddedObjectsMax(max)\n\ntype: max: uint32_t" },
-    {(char *) "SetNumOfEmbeddedObjectsScale", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsScale, METH_VARARGS|METH_KEYWORDS, "SetNumOfEmbeddedObjectsScale(scale)\n\ntype: scale: uint32_t" },
-    {(char *) "SetNumOfEmbeddedObjectsShape", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsShape, METH_VARARGS|METH_KEYWORDS, "SetNumOfEmbeddedObjectsShape(shape)\n\ntype: shape: double" },
-    {(char *) "SetParsingTimeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetParsingTimeMean, METH_VARARGS|METH_KEYWORDS, "SetParsingTimeMean(mean)\n\ntype: mean: ns3::Time" },
-    {(char *) "SetReadingTimeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetReadingTimeMean, METH_VARARGS|METH_KEYWORDS, "SetReadingTimeMean(mean)\n\ntype: mean: ns3::Time" },
-    {(char *) "SetRequestSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetRequestSize, METH_VARARGS|METH_KEYWORDS, "SetRequestSize(constant)\n\ntype: constant: uint32_t" },
+    {(char *) "SetEmbeddedObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectGenerationDelay, METH_KEYWORDS|METH_VARARGS, "SetEmbeddedObjectGenerationDelay(constant)\n\ntype: constant: ns3::Time" },
+    {(char *) "SetEmbeddedObjectSizeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectSizeMean, METH_KEYWORDS|METH_VARARGS, "SetEmbeddedObjectSizeMean(mean)\n\ntype: mean: uint32_t" },
+    {(char *) "SetEmbeddedObjectSizeStdDev", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetEmbeddedObjectSizeStdDev, METH_KEYWORDS|METH_VARARGS, "SetEmbeddedObjectSizeStdDev(stdDev)\n\ntype: stdDev: uint32_t" },
+    {(char *) "SetMainObjectGenerationDelay", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectGenerationDelay, METH_KEYWORDS|METH_VARARGS, "SetMainObjectGenerationDelay(constant)\n\ntype: constant: ns3::Time" },
+    {(char *) "SetMainObjectSizeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectSizeMean, METH_KEYWORDS|METH_VARARGS, "SetMainObjectSizeMean(mean)\n\ntype: mean: uint32_t" },
+    {(char *) "SetMainObjectSizeStdDev", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetMainObjectSizeStdDev, METH_KEYWORDS|METH_VARARGS, "SetMainObjectSizeStdDev(stdDev)\n\ntype: stdDev: uint32_t" },
+    {(char *) "SetNumOfEmbeddedObjectsMax", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsMax, METH_KEYWORDS|METH_VARARGS, "SetNumOfEmbeddedObjectsMax(max)\n\ntype: max: uint32_t" },
+    {(char *) "SetNumOfEmbeddedObjectsScale", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsScale, METH_KEYWORDS|METH_VARARGS, "SetNumOfEmbeddedObjectsScale(scale)\n\ntype: scale: uint32_t" },
+    {(char *) "SetNumOfEmbeddedObjectsShape", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetNumOfEmbeddedObjectsShape, METH_KEYWORDS|METH_VARARGS, "SetNumOfEmbeddedObjectsShape(shape)\n\ntype: shape: double" },
+    {(char *) "SetParsingTimeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetParsingTimeMean, METH_KEYWORDS|METH_VARARGS, "SetParsingTimeMean(mean)\n\ntype: mean: ns3::Time" },
+    {(char *) "SetReadingTimeMean", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetReadingTimeMean, METH_KEYWORDS|METH_VARARGS, "SetReadingTimeMean(mean)\n\ntype: mean: ns3::Time" },
+    {(char *) "SetRequestSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables_SetRequestSize, METH_KEYWORDS|METH_VARARGS, "SetRequestSize(constant)\n\ntype: constant: uint32_t" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpVariables__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpVariables__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7077,7 +7077,7 @@ PyTypeObject PyNs3ThreeGppHttpVariables_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ThreeGppHttpVariables(arg0)\nThreeGppHttpVariables()",                        /* Documentation string */
     (traverseproc)PyNs3ThreeGppHttpVariables__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ThreeGppHttpVariables__tp_clear,             /* tp_clear */
@@ -7110,38 +7110,6 @@ PyTypeObject PyNs3ThreeGppHttpVariables_Type = {
 
 
 PyObject *
-PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BulkSendApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3BulkSendApplication__PythonHelper *helper = dynamic_cast< PyNs3BulkSendApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3BulkSendApplication__PythonHelper::_wrap_DoDispose(PyNs3BulkSendApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3BulkSendApplication__PythonHelper *helper = dynamic_cast< PyNs3BulkSendApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class BulkSendApplication is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BulkSendApplication *self)
 {
     PyObject *py_retval;
@@ -7158,6 +7126,22 @@ PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BulkSendAp
 }
 
 PyObject *
+PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BulkSendApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3BulkSendApplication__PythonHelper *helper = dynamic_cast< PyNs3BulkSendApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3BulkSendApplication__PythonHelper::_wrap_DoInitialize(PyNs3BulkSendApplication *self)
 {
     PyObject *py_retval;
@@ -7168,6 +7152,22 @@ PyNs3BulkSendApplication__PythonHelper::_wrap_DoInitialize(PyNs3BulkSendApplicat
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3BulkSendApplication__PythonHelper::_wrap_DoDispose(PyNs3BulkSendApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3BulkSendApplication__PythonHelper *helper = dynamic_cast< PyNs3BulkSendApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class BulkSendApplication is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7673,11 +7673,11 @@ _wrap_PyNs3BulkSendApplication__copy__(PyNs3BulkSendApplication *self)
 static PyMethodDef PyNs3BulkSendApplication_methods[] = {
     {(char *) "GetSocket", (PyCFunction) _wrap_PyNs3BulkSendApplication_GetSocket, METH_NOARGS, "GetSocket()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BulkSendApplication_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetMaxBytes", (PyCFunction) _wrap_PyNs3BulkSendApplication_SetMaxBytes, METH_VARARGS|METH_KEYWORDS, "SetMaxBytes(maxBytes)\n\ntype: maxBytes: uint64_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetMaxBytes", (PyCFunction) _wrap_PyNs3BulkSendApplication_SetMaxBytes, METH_KEYWORDS|METH_VARARGS, "SetMaxBytes(maxBytes)\n\ntype: maxBytes: uint64_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3BulkSendApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BulkSendApplication__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7744,7 +7744,7 @@ PyTypeObject PyNs3BulkSendApplication_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BulkSendApplication(arg0)\nBulkSendApplication()",                        /* Documentation string */
     (traverseproc)PyNs3BulkSendApplication__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BulkSendApplication__tp_clear,             /* tp_clear */
@@ -7777,38 +7777,6 @@ PyTypeObject PyNs3BulkSendApplication_Type = {
 
 
 PyObject *
-PyNs3OnOffApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OnOffApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3OnOffApplication__PythonHelper *helper = dynamic_cast< PyNs3OnOffApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OnOffApplication__PythonHelper::_wrap_DoDispose(PyNs3OnOffApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3OnOffApplication__PythonHelper *helper = dynamic_cast< PyNs3OnOffApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OnOffApplication is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3OnOffApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OnOffApplication *self)
 {
     PyObject *py_retval;
@@ -7825,6 +7793,22 @@ PyNs3OnOffApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OnOffApplicat
 }
 
 PyObject *
+PyNs3OnOffApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OnOffApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3OnOffApplication__PythonHelper *helper = dynamic_cast< PyNs3OnOffApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3OnOffApplication__PythonHelper::_wrap_DoInitialize(PyNs3OnOffApplication *self)
 {
     PyObject *py_retval;
@@ -7835,6 +7819,22 @@ PyNs3OnOffApplication__PythonHelper::_wrap_DoInitialize(PyNs3OnOffApplication *s
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OnOffApplication__PythonHelper::_wrap_DoDispose(PyNs3OnOffApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3OnOffApplication__PythonHelper *helper = dynamic_cast< PyNs3OnOffApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OnOffApplication is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8355,14 +8355,14 @@ _wrap_PyNs3OnOffApplication__copy__(PyNs3OnOffApplication *self)
 }
 
 static PyMethodDef PyNs3OnOffApplication_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OnOffApplication_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OnOffApplication_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetSocket", (PyCFunction) _wrap_PyNs3OnOffApplication_GetSocket, METH_NOARGS, "GetSocket()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OnOffApplication_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetMaxBytes", (PyCFunction) _wrap_PyNs3OnOffApplication_SetMaxBytes, METH_VARARGS|METH_KEYWORDS, "SetMaxBytes(maxBytes)\n\ntype: maxBytes: uint64_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetMaxBytes", (PyCFunction) _wrap_PyNs3OnOffApplication_SetMaxBytes, METH_KEYWORDS|METH_VARARGS, "SetMaxBytes(maxBytes)\n\ntype: maxBytes: uint64_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3OnOffApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OnOffApplication__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8429,7 +8429,7 @@ PyTypeObject PyNs3OnOffApplication_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OnOffApplication(arg0)\nOnOffApplication()",                        /* Documentation string */
     (traverseproc)PyNs3OnOffApplication__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OnOffApplication__tp_clear,             /* tp_clear */
@@ -8462,38 +8462,6 @@ PyTypeObject PyNs3OnOffApplication_Type = {
 
 
 PyObject *
-PyNs3PacketSink__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PacketSink *self)
-{
-    PyObject *py_retval;
-    PyNs3PacketSink__PythonHelper *helper = dynamic_cast< PyNs3PacketSink__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PacketSink__PythonHelper::_wrap_DoDispose(PyNs3PacketSink *self)
-{
-    PyObject *py_retval;
-    PyNs3PacketSink__PythonHelper *helper = dynamic_cast< PyNs3PacketSink__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class PacketSink is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PacketSink__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PacketSink *self)
 {
     PyObject *py_retval;
@@ -8510,6 +8478,22 @@ PyNs3PacketSink__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PacketSink *self)
 }
 
 PyObject *
+PyNs3PacketSink__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PacketSink *self)
+{
+    PyObject *py_retval;
+    PyNs3PacketSink__PythonHelper *helper = dynamic_cast< PyNs3PacketSink__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PacketSink__PythonHelper::_wrap_DoInitialize(PyNs3PacketSink *self)
 {
     PyObject *py_retval;
@@ -8520,6 +8504,22 @@ PyNs3PacketSink__PythonHelper::_wrap_DoInitialize(PyNs3PacketSink *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PacketSink__PythonHelper::_wrap_DoDispose(PyNs3PacketSink *self)
+{
+    PyObject *py_retval;
+    PyNs3PacketSink__PythonHelper *helper = dynamic_cast< PyNs3PacketSink__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class PacketSink is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9037,10 +9037,10 @@ static PyMethodDef PyNs3PacketSink_methods[] = {
     {(char *) "GetListeningSocket", (PyCFunction) _wrap_PyNs3PacketSink_GetListeningSocket, METH_NOARGS, "GetListeningSocket()\n\n" },
     {(char *) "GetTotalRx", (PyCFunction) _wrap_PyNs3PacketSink_GetTotalRx, METH_NOARGS, "GetTotalRx()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PacketSink_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3PacketSink__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PacketSink__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9107,7 +9107,7 @@ PyTypeObject PyNs3PacketSink_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PacketSink(arg0)\nPacketSink()",                        /* Documentation string */
     (traverseproc)PyNs3PacketSink__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PacketSink__tp_clear,             /* tp_clear */
@@ -9138,6 +9138,38 @@ PyTypeObject PyNs3PacketSink_Type = {
 
 
 
+
+PyObject *
+PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpClient *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeGppHttpClient__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StartApplication(PyNs3ThreeGppHttpClient *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeGppHttpClient__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method StartApplication of class ThreeGppHttpClient is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->StartApplication__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
 
 PyObject *
 PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ThreeGppHttpClient *self)
@@ -9172,22 +9204,6 @@ PyNs3ThreeGppHttpClient__PythonHelper::_wrap_DoDispose(PyNs3ThreeGppHttpClient *
 }
 
 PyObject *
-PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StartApplication(PyNs3ThreeGppHttpClient *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeGppHttpClient__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method StartApplication of class ThreeGppHttpClient is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->StartApplication__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ThreeGppHttpClient__PythonHelper::_wrap_DoInitialize(PyNs3ThreeGppHttpClient *self)
 {
     PyObject *py_retval;
@@ -9214,22 +9230,6 @@ PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StopApplication(PyNs3ThreeGppHttpCl
         return NULL;
     }
     helper->StopApplication__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpClient *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeGppHttpClient__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9748,14 +9748,14 @@ _wrap_PyNs3ThreeGppHttpClient__copy__(PyNs3ThreeGppHttpClient *self)
 static PyMethodDef PyNs3ThreeGppHttpClient_methods[] = {
     {(char *) "GetSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient_GetSocket, METH_NOARGS, "GetSocket()\n\n" },
     {(char *) "GetState", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient_GetState, METH_NOARGS, "GetState()\n\n" },
-    {(char *) "GetStateString", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient_GetStateString, METH_VARARGS|METH_KEYWORDS, "GetStateString()\n\n" },
+    {(char *) "GetStateString", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient_GetStateString, METH_KEYWORDS|METH_VARARGS, "GetStateString()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "StartApplication", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StartApplication, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "StartApplication", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StartApplication, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "StopApplication", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_StopApplication, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9822,7 +9822,7 @@ PyTypeObject PyNs3ThreeGppHttpClient_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ThreeGppHttpClient(arg0)\nThreeGppHttpClient()",                        /* Documentation string */
     (traverseproc)PyNs3ThreeGppHttpClient__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ThreeGppHttpClient__tp_clear,             /* tp_clear */
@@ -9853,6 +9853,38 @@ PyTypeObject PyNs3ThreeGppHttpClient_Type = {
 
 
 
+
+PyObject *
+PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpServer *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeGppHttpServer__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StartApplication(PyNs3ThreeGppHttpServer *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeGppHttpServer__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method StartApplication of class ThreeGppHttpServer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->StartApplication__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
 
 PyObject *
 PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ThreeGppHttpServer *self)
@@ -9887,22 +9919,6 @@ PyNs3ThreeGppHttpServer__PythonHelper::_wrap_DoDispose(PyNs3ThreeGppHttpServer *
 }
 
 PyObject *
-PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StartApplication(PyNs3ThreeGppHttpServer *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeGppHttpServer__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method StartApplication of class ThreeGppHttpServer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->StartApplication__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ThreeGppHttpServer__PythonHelper::_wrap_DoInitialize(PyNs3ThreeGppHttpServer *self)
 {
     PyObject *py_retval;
@@ -9929,22 +9945,6 @@ PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StopApplication(PyNs3ThreeGppHttpSe
         return NULL;
     }
     helper->StopApplication__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeGppHttpServer *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeGppHttpServer__PythonHelper *helper = dynamic_cast< PyNs3ThreeGppHttpServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10480,15 +10480,15 @@ _wrap_PyNs3ThreeGppHttpServer__copy__(PyNs3ThreeGppHttpServer *self)
 static PyMethodDef PyNs3ThreeGppHttpServer_methods[] = {
     {(char *) "GetSocket", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_GetSocket, METH_NOARGS, "GetSocket()\n\n" },
     {(char *) "GetState", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_GetState, METH_NOARGS, "GetState()\n\n" },
-    {(char *) "GetStateString", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_GetStateString, METH_VARARGS|METH_KEYWORDS, "GetStateString()\n\n" },
+    {(char *) "GetStateString", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_GetStateString, METH_KEYWORDS|METH_VARARGS, "GetStateString()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetMtuSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_SetMtuSize, METH_VARARGS|METH_KEYWORDS, "SetMtuSize(mtuSize)\n\ntype: mtuSize: uint32_t" },
+    {(char *) "SetMtuSize", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer_SetMtuSize, METH_KEYWORDS|METH_VARARGS, "SetMtuSize(mtuSize)\n\ntype: mtuSize: uint32_t" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "StartApplication", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StartApplication, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "StartApplication", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StartApplication, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "StopApplication", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_StopApplication, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeGppHttpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ThreeGppHttpServer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -10555,7 +10555,7 @@ PyTypeObject PyNs3ThreeGppHttpServer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ThreeGppHttpServer(arg0)\nThreeGppHttpServer()",                        /* Documentation string */
     (traverseproc)PyNs3ThreeGppHttpServer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ThreeGppHttpServer__tp_clear,             /* tp_clear */
@@ -10588,38 +10588,6 @@ PyTypeObject PyNs3ThreeGppHttpServer_Type = {
 
 
 PyObject *
-PyNs3UdpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpClient__PythonHelper *helper = dynamic_cast< PyNs3UdpClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UdpClient__PythonHelper::_wrap_DoDispose(PyNs3UdpClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpClient__PythonHelper *helper = dynamic_cast< PyNs3UdpClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpClient is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UdpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpClient *self)
 {
     PyObject *py_retval;
@@ -10636,6 +10604,22 @@ PyNs3UdpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpClient *self)
 }
 
 PyObject *
+PyNs3UdpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpClient__PythonHelper *helper = dynamic_cast< PyNs3UdpClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UdpClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpClient *self)
 {
     PyObject *py_retval;
@@ -10646,6 +10630,22 @@ PyNs3UdpClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpClient *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UdpClient__PythonHelper::_wrap_DoDispose(PyNs3UdpClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpClient__PythonHelper *helper = dynamic_cast< PyNs3UdpClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpClient is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11233,11 +11233,11 @@ _wrap_PyNs3UdpClient__copy__(PyNs3UdpClient *self)
 
 static PyMethodDef PyNs3UdpClient_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UdpClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpClient_SetRemote, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpClient_SetRemote, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3UdpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -11304,7 +11304,7 @@ PyTypeObject PyNs3UdpClient_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UdpClient(arg0)\nUdpClient()",                        /* Documentation string */
     (traverseproc)PyNs3UdpClient__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UdpClient__tp_clear,             /* tp_clear */
@@ -11337,38 +11337,6 @@ PyTypeObject PyNs3UdpClient_Type = {
 
 
 PyObject *
-PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpEchoClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpEchoClient__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UdpEchoClient__PythonHelper::_wrap_DoDispose(PyNs3UdpEchoClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpEchoClient__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpEchoClient is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpEchoClient *self)
 {
     PyObject *py_retval;
@@ -11385,6 +11353,22 @@ PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpEchoClient *s
 }
 
 PyObject *
+PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpEchoClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpEchoClient__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UdpEchoClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpEchoClient *self)
 {
     PyObject *py_retval;
@@ -11395,6 +11379,22 @@ PyNs3UdpEchoClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpEchoClient *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UdpEchoClient__PythonHelper::_wrap_DoDispose(PyNs3UdpEchoClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpEchoClient__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpEchoClient is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12094,13 +12094,13 @@ _wrap_PyNs3UdpEchoClient__copy__(PyNs3UdpEchoClient *self)
 static PyMethodDef PyNs3UdpEchoClient_methods[] = {
     {(char *) "GetDataSize", (PyCFunction) _wrap_PyNs3UdpEchoClient_GetDataSize, METH_NOARGS, "GetDataSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UdpEchoClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetDataSize", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetDataSize, METH_VARARGS|METH_KEYWORDS, "SetDataSize(dataSize)\n\ntype: dataSize: uint32_t" },
-    {(char *) "SetFill", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetFill, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetRemote, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetDataSize", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetDataSize, METH_KEYWORDS|METH_VARARGS, "SetDataSize(dataSize)\n\ntype: dataSize: uint32_t" },
+    {(char *) "SetFill", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetFill, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpEchoClient_SetRemote, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3UdpEchoClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpEchoClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12167,7 +12167,7 @@ PyTypeObject PyNs3UdpEchoClient_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UdpEchoClient(arg0)\nUdpEchoClient()",                        /* Documentation string */
     (traverseproc)PyNs3UdpEchoClient__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UdpEchoClient__tp_clear,             /* tp_clear */
@@ -12200,38 +12200,6 @@ PyTypeObject PyNs3UdpEchoClient_Type = {
 
 
 PyObject *
-PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpEchoServer *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpEchoServer__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UdpEchoServer__PythonHelper::_wrap_DoDispose(PyNs3UdpEchoServer *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpEchoServer__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpEchoServer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpEchoServer *self)
 {
     PyObject *py_retval;
@@ -12248,6 +12216,22 @@ PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpEchoServer *s
 }
 
 PyObject *
+PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpEchoServer *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpEchoServer__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UdpEchoServer__PythonHelper::_wrap_DoInitialize(PyNs3UdpEchoServer *self)
 {
     PyObject *py_retval;
@@ -12258,6 +12242,22 @@ PyNs3UdpEchoServer__PythonHelper::_wrap_DoInitialize(PyNs3UdpEchoServer *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UdpEchoServer__PythonHelper::_wrap_DoDispose(PyNs3UdpEchoServer *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpEchoServer__PythonHelper *helper = dynamic_cast< PyNs3UdpEchoServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpEchoServer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12700,10 +12700,10 @@ _wrap_PyNs3UdpEchoServer__copy__(PyNs3UdpEchoServer *self)
 
 static PyMethodDef PyNs3UdpEchoServer_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UdpEchoServer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3UdpEchoServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpEchoServer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12770,7 +12770,7 @@ PyTypeObject PyNs3UdpEchoServer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UdpEchoServer(arg0)\nUdpEchoServer()",                        /* Documentation string */
     (traverseproc)PyNs3UdpEchoServer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UdpEchoServer__tp_clear,             /* tp_clear */
@@ -12803,38 +12803,6 @@ PyTypeObject PyNs3UdpEchoServer_Type = {
 
 
 PyObject *
-PyNs3UdpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpServer *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpServer__PythonHelper *helper = dynamic_cast< PyNs3UdpServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UdpServer__PythonHelper::_wrap_DoDispose(PyNs3UdpServer *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpServer__PythonHelper *helper = dynamic_cast< PyNs3UdpServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpServer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UdpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpServer *self)
 {
     PyObject *py_retval;
@@ -12851,6 +12819,22 @@ PyNs3UdpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpServer *self)
 }
 
 PyObject *
+PyNs3UdpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpServer *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpServer__PythonHelper *helper = dynamic_cast< PyNs3UdpServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UdpServer__PythonHelper::_wrap_DoInitialize(PyNs3UdpServer *self)
 {
     PyObject *py_retval;
@@ -12861,6 +12845,22 @@ PyNs3UdpServer__PythonHelper::_wrap_DoInitialize(PyNs3UdpServer *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UdpServer__PythonHelper::_wrap_DoDispose(PyNs3UdpServer *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpServer__PythonHelper *helper = dynamic_cast< PyNs3UdpServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpServer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13363,11 +13363,11 @@ static PyMethodDef PyNs3UdpServer_methods[] = {
     {(char *) "GetPacketWindowSize", (PyCFunction) _wrap_PyNs3UdpServer_GetPacketWindowSize, METH_NOARGS, "GetPacketWindowSize()\n\n" },
     {(char *) "GetReceived", (PyCFunction) _wrap_PyNs3UdpServer_GetReceived, METH_NOARGS, "GetReceived()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UdpServer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetPacketWindowSize", (PyCFunction) _wrap_PyNs3UdpServer_SetPacketWindowSize, METH_VARARGS|METH_KEYWORDS, "SetPacketWindowSize(size)\n\ntype: size: uint16_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetPacketWindowSize", (PyCFunction) _wrap_PyNs3UdpServer_SetPacketWindowSize, METH_KEYWORDS|METH_VARARGS, "SetPacketWindowSize(size)\n\ntype: size: uint16_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3UdpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpServer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13434,7 +13434,7 @@ PyTypeObject PyNs3UdpServer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UdpServer(arg0)\nUdpServer()",                        /* Documentation string */
     (traverseproc)PyNs3UdpServer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UdpServer__tp_clear,             /* tp_clear */
@@ -13467,38 +13467,6 @@ PyTypeObject PyNs3UdpServer_Type = {
 
 
 PyObject *
-PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpTraceClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpTraceClient__PythonHelper *helper = dynamic_cast< PyNs3UdpTraceClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UdpTraceClient__PythonHelper::_wrap_DoDispose(PyNs3UdpTraceClient *self)
-{
-    PyObject *py_retval;
-    PyNs3UdpTraceClient__PythonHelper *helper = dynamic_cast< PyNs3UdpTraceClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpTraceClient is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpTraceClient *self)
 {
     PyObject *py_retval;
@@ -13515,6 +13483,22 @@ PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UdpTraceClient 
 }
 
 PyObject *
+PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3UdpTraceClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpTraceClient__PythonHelper *helper = dynamic_cast< PyNs3UdpTraceClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UdpTraceClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpTraceClient *self)
 {
     PyObject *py_retval;
@@ -13525,6 +13509,22 @@ PyNs3UdpTraceClient__PythonHelper::_wrap_DoInitialize(PyNs3UdpTraceClient *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UdpTraceClient__PythonHelper::_wrap_DoDispose(PyNs3UdpTraceClient *self)
+{
+    PyObject *py_retval;
+    PyNs3UdpTraceClient__PythonHelper *helper = dynamic_cast< PyNs3UdpTraceClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class UdpTraceClient is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14235,14 +14235,14 @@ _wrap_PyNs3UdpTraceClient__copy__(PyNs3UdpTraceClient *self)
 static PyMethodDef PyNs3UdpTraceClient_methods[] = {
     {(char *) "GetMaxPacketSize", (PyCFunction) _wrap_PyNs3UdpTraceClient_GetMaxPacketSize, METH_NOARGS, "GetMaxPacketSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UdpTraceClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetMaxPacketSize", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetMaxPacketSize, METH_VARARGS|METH_KEYWORDS, "SetMaxPacketSize(maxPacketSize)\n\ntype: maxPacketSize: uint16_t" },
-    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetRemote, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetTraceFile", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetTraceFile, METH_VARARGS|METH_KEYWORDS, "SetTraceFile(filename)\n\ntype: filename: std::string" },
-    {(char *) "SetTraceLoop", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetTraceLoop, METH_VARARGS|METH_KEYWORDS, "SetTraceLoop(traceLoop)\n\ntype: traceLoop: bool" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetMaxPacketSize", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetMaxPacketSize, METH_KEYWORDS|METH_VARARGS, "SetMaxPacketSize(maxPacketSize)\n\ntype: maxPacketSize: uint16_t" },
+    {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetRemote, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetTraceFile", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetTraceFile, METH_KEYWORDS|METH_VARARGS, "SetTraceFile(filename)\n\ntype: filename: std::string" },
+    {(char *) "SetTraceLoop", (PyCFunction) _wrap_PyNs3UdpTraceClient_SetTraceLoop, METH_KEYWORDS|METH_VARARGS, "SetTraceLoop(traceLoop)\n\ntype: traceLoop: bool" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3UdpTraceClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UdpTraceClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14309,7 +14309,7 @@ PyTypeObject PyNs3UdpTraceClient_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UdpTraceClient(ip, port, traceFile)\nUdpTraceClient(arg0)\nUdpTraceClient()",                        /* Documentation string */
     (traverseproc)PyNs3UdpTraceClient__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UdpTraceClient__tp_clear,             /* tp_clear */
@@ -14342,38 +14342,6 @@ PyTypeObject PyNs3UdpTraceClient_Type = {
 
 
 PyObject *
-PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ApplicationPacketProbe *self)
-{
-    PyObject *py_retval;
-    PyNs3ApplicationPacketProbe__PythonHelper *helper = dynamic_cast< PyNs3ApplicationPacketProbe__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoDispose(PyNs3ApplicationPacketProbe *self)
-{
-    PyObject *py_retval;
-    PyNs3ApplicationPacketProbe__PythonHelper *helper = dynamic_cast< PyNs3ApplicationPacketProbe__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ApplicationPacketProbe *self)
 {
     PyObject *py_retval;
@@ -14390,6 +14358,22 @@ PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Applica
 }
 
 PyObject *
+PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ApplicationPacketProbe *self)
+{
+    PyObject *py_retval;
+    PyNs3ApplicationPacketProbe__PythonHelper *helper = dynamic_cast< PyNs3ApplicationPacketProbe__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoInitialize(PyNs3ApplicationPacketProbe *self)
 {
     PyObject *py_retval;
@@ -14400,6 +14384,22 @@ PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoInitialize(PyNs3ApplicationPa
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoDispose(PyNs3ApplicationPacketProbe *self)
+{
+    PyObject *py_retval;
+    PyNs3ApplicationPacketProbe__PythonHelper *helper = dynamic_cast< PyNs3ApplicationPacketProbe__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15066,15 +15066,15 @@ _wrap_PyNs3ApplicationPacketProbe__copy__(PyNs3ApplicationPacketProbe *self)
 }
 
 static PyMethodDef PyNs3ApplicationPacketProbe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(packet, address)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: address: ns3::Address const &" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, packet, address)\n\ntype: path: std::string\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: address: ns3::Address const &" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(packet, address)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: address: ns3::Address const &" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, packet, address)\n\ntype: path: std::string\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: address: ns3::Address const &" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3ApplicationPacketProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ApplicationPacketProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15141,7 +15141,7 @@ PyTypeObject PyNs3ApplicationPacketProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ApplicationPacketProbe(arg0)\nApplicationPacketProbe()",                        /* Documentation string */
     (traverseproc)PyNs3ApplicationPacketProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ApplicationPacketProbe__tp_clear,             /* tp_clear */

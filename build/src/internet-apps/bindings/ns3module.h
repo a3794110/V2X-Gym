@@ -2632,17 +2632,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3DhcpClient *self);
-    inline void DoDispose__parent_caller()
-    { ns3::DhcpClient::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DhcpClient *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DhcpClient *self);
     inline void DoInitialize__parent_caller()
     { ns3::Application::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DhcpClient *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3DhcpClient *self);
+    inline void DoDispose__parent_caller()
+    { ns3::DhcpClient::DoDispose(); }
 
     virtual void DoDispose();
 
@@ -2721,17 +2721,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3DhcpServer *self);
-    inline void DoDispose__parent_caller()
-    { ns3::DhcpServer::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DhcpServer *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DhcpServer *self);
     inline void DoInitialize__parent_caller()
     { ns3::Application::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DhcpServer *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3DhcpServer *self);
+    inline void DoDispose__parent_caller()
+    { ns3::DhcpServer::DoDispose(); }
 
     virtual void DoDispose();
 
@@ -2799,17 +2799,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3Ping6 *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Ping6::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Ping6 *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3Ping6 *self);
     inline void DoInitialize__parent_caller()
     { ns3::Application::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Ping6 *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3Ping6 *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Ping6::DoDispose(); }
 
     virtual void DoDispose();
 
@@ -2878,17 +2878,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3Radvd *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Radvd::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Radvd *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3Radvd *self);
     inline void DoInitialize__parent_caller()
     { ns3::Application::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Radvd *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3Radvd *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Radvd::DoDispose(); }
 
     virtual void DoDispose();
 

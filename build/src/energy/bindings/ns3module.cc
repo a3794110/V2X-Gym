@@ -1003,9 +1003,9 @@ _wrap_PyNs3DeviceEnergyModelContainer__copy__(PyNs3DeviceEnergyModelContainer *s
 }
 
 static PyMethodDef PyNs3DeviceEnergyModelContainer_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_Add, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_Add, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "Clear", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_Clear, METH_NOARGS, "Clear()\n\n" },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: uint32_t" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: uint32_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DeviceEnergyModelContainer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1197,8 +1197,8 @@ _wrap_PyNs3DeviceEnergyModelHelper_Set(PyNs3DeviceEnergyModelHelper *self, PyObj
 }
 
 static PyMethodDef PyNs3DeviceEnergyModelHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3DeviceEnergyModelHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3DeviceEnergyModelHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3DeviceEnergyModelHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3DeviceEnergyModelHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1261,7 +1261,7 @@ PyTypeObject PyNs3DeviceEnergyModelHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DeviceEnergyModelHelper(arg0)\nDeviceEnergyModelHelper()",                        /* Documentation string */
     (traverseproc)PyNs3DeviceEnergyModelHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DeviceEnergyModelHelper__tp_clear,             /* tp_clear */
@@ -1451,8 +1451,8 @@ _wrap_PyNs3EnergyHarvesterHelper_Set(PyNs3EnergyHarvesterHelper *self, PyObject 
 }
 
 static PyMethodDef PyNs3EnergyHarvesterHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3EnergyHarvesterHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnergyHarvesterHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3EnergyHarvesterHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnergyHarvesterHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1515,7 +1515,7 @@ PyTypeObject PyNs3EnergyHarvesterHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergyHarvesterHelper(arg0)\nEnergyHarvesterHelper()",                        /* Documentation string */
     (traverseproc)PyNs3EnergyHarvesterHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergyHarvesterHelper__tp_clear,             /* tp_clear */
@@ -1726,9 +1726,9 @@ _wrap_PyNs3EnergySourceHelper_Set(PyNs3EnergySourceHelper *self, PyObject *args,
 }
 
 static PyMethodDef PyNs3EnergySourceHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3EnergySourceHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3EnergySourceHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "InstallAll", (PyCFunction) _wrap_PyNs3EnergySourceHelper_InstallAll, METH_NOARGS, "InstallAll()\n\n" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnergySourceHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnergySourceHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1791,7 +1791,7 @@ PyTypeObject PyNs3EnergySourceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergySourceHelper(arg0)\nEnergySourceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3EnergySourceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergySourceHelper__tp_clear,             /* tp_clear */
@@ -2027,7 +2027,7 @@ _wrap_PyNs3LiIonEnergySourceHelper__copy__(PyNs3LiIonEnergySourceHelper *self)
 }
 
 static PyMethodDef PyNs3LiIonEnergySourceHelper_methods[] = {
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3LiIonEnergySourceHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3LiIonEnergySourceHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3LiIonEnergySourceHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2094,7 +2094,7 @@ PyTypeObject PyNs3LiIonEnergySourceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "LiIonEnergySourceHelper(arg0)\nLiIonEnergySourceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3LiIonEnergySourceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LiIonEnergySourceHelper__tp_clear,             /* tp_clear */
@@ -2330,7 +2330,7 @@ _wrap_PyNs3RvBatteryModelHelper__copy__(PyNs3RvBatteryModelHelper *self)
 }
 
 static PyMethodDef PyNs3RvBatteryModelHelper_methods[] = {
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3RvBatteryModelHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3RvBatteryModelHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RvBatteryModelHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2397,7 +2397,7 @@ PyTypeObject PyNs3RvBatteryModelHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RvBatteryModelHelper(arg0)\nRvBatteryModelHelper()",                        /* Documentation string */
     (traverseproc)PyNs3RvBatteryModelHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RvBatteryModelHelper__tp_clear,             /* tp_clear */
@@ -2633,7 +2633,7 @@ _wrap_PyNs3BasicEnergyHarvesterHelper__copy__(PyNs3BasicEnergyHarvesterHelper *s
 }
 
 static PyMethodDef PyNs3BasicEnergyHarvesterHelper_methods[] = {
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3BasicEnergyHarvesterHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3BasicEnergyHarvesterHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BasicEnergyHarvesterHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2700,7 +2700,7 @@ PyTypeObject PyNs3BasicEnergyHarvesterHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BasicEnergyHarvesterHelper(arg0)\nBasicEnergyHarvesterHelper()",                        /* Documentation string */
     (traverseproc)PyNs3BasicEnergyHarvesterHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BasicEnergyHarvesterHelper__tp_clear,             /* tp_clear */
@@ -2936,7 +2936,7 @@ _wrap_PyNs3BasicEnergySourceHelper__copy__(PyNs3BasicEnergySourceHelper *self)
 }
 
 static PyMethodDef PyNs3BasicEnergySourceHelper_methods[] = {
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3BasicEnergySourceHelper_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3BasicEnergySourceHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BasicEnergySourceHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3003,7 +3003,7 @@ PyTypeObject PyNs3BasicEnergySourceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BasicEnergySourceHelper(arg0)\nBasicEnergySourceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3BasicEnergySourceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BasicEnergySourceHelper__tp_clear,             /* tp_clear */
@@ -3036,16 +3036,16 @@ PyTypeObject PyNs3BasicEnergySourceHelper_Type = {
 
 
 PyObject *
-PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoDispose(PyNs3DeviceEnergyModel *self)
+PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoInitialize(PyNs3DeviceEnergyModel *self)
 {
     PyObject *py_retval;
     PyNs3DeviceEnergyModel__PythonHelper *helper = dynamic_cast< PyNs3DeviceEnergyModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3068,22 +3068,6 @@ PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DeviceEnergy
 }
 
 PyObject *
-PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoInitialize(PyNs3DeviceEnergyModel *self)
-{
-    PyObject *py_retval;
-    PyNs3DeviceEnergyModel__PythonHelper *helper = dynamic_cast< PyNs3DeviceEnergyModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DeviceEnergyModel *self)
 {
     PyObject *py_retval;
@@ -3094,6 +3078,22 @@ PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Dev
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoDispose(PyNs3DeviceEnergyModel *self)
+{
+    PyObject *py_retval;
+    PyNs3DeviceEnergyModel__PythonHelper *helper = dynamic_cast< PyNs3DeviceEnergyModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3882,18 +3882,18 @@ _wrap_PyNs3DeviceEnergyModel_SetEnergySource(PyNs3DeviceEnergyModel *self, PyObj
 }
 
 static PyMethodDef PyNs3DeviceEnergyModel_methods[] = {
-    {(char *) "ChangeState", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_ChangeState, METH_VARARGS|METH_KEYWORDS, "ChangeState(newState)\n\ntype: newState: int" },
+    {(char *) "ChangeState", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_ChangeState, METH_KEYWORDS|METH_VARARGS, "ChangeState(newState)\n\ntype: newState: int" },
     {(char *) "GetCurrentA", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_GetCurrentA, METH_NOARGS, "GetCurrentA()\n\n" },
     {(char *) "GetTotalEnergyConsumption", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_GetTotalEnergyConsumption, METH_NOARGS, "GetTotalEnergyConsumption()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "HandleEnergyChanged", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_HandleEnergyChanged, METH_NOARGS, "HandleEnergyChanged()\n\n" },
     {(char *) "HandleEnergyDepletion", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_HandleEnergyDepletion, METH_NOARGS, "HandleEnergyDepletion()\n\n" },
     {(char *) "HandleEnergyRecharged", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_HandleEnergyRecharged, METH_NOARGS, "HandleEnergyRecharged()\n\n" },
-    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_SetEnergySource, METH_VARARGS|METH_KEYWORDS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3DeviceEnergyModel_SetEnergySource, METH_KEYWORDS|METH_VARARGS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DeviceEnergyModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -3959,7 +3959,7 @@ PyTypeObject PyNs3DeviceEnergyModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DeviceEnergyModel(arg0)\nDeviceEnergyModel()",                        /* Documentation string */
     (traverseproc)PyNs3DeviceEnergyModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DeviceEnergyModel__tp_clear,             /* tp_clear */
@@ -4585,8 +4585,8 @@ static PyMethodDef PyNs3EnergyHarvester_methods[] = {
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3EnergyHarvester_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetPower", (PyCFunction) _wrap_PyNs3EnergyHarvester_GetPower, METH_NOARGS, "GetPower()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EnergyHarvester_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3EnergyHarvester_SetEnergySource, METH_VARARGS|METH_KEYWORDS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3EnergyHarvester_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3EnergyHarvester_SetEnergySource, METH_KEYWORDS|METH_VARARGS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3EnergyHarvester_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3EnergyHarvester__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3EnergyHarvester__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3EnergyHarvester__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -4656,7 +4656,7 @@ PyTypeObject PyNs3EnergyHarvester_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergyHarvester(arg0)\nEnergyHarvester()",                        /* Documentation string */
     (traverseproc)PyNs3EnergyHarvester__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergyHarvester__tp_clear,             /* tp_clear */
@@ -5370,9 +5370,9 @@ _wrap_PyNs3EnergyHarvesterContainer__copy__(PyNs3EnergyHarvesterContainer *self)
 }
 
 static PyMethodDef PyNs3EnergyHarvesterContainer_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_Add, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_Add, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "Clear", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_Clear, METH_NOARGS, "Clear()\n\n" },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: uint32_t" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: uint32_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EnergyHarvesterContainer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3EnergyHarvesterContainer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -5443,7 +5443,7 @@ PyTypeObject PyNs3EnergyHarvesterContainer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergyHarvesterContainer(harvesterName)\nEnergyHarvesterContainer(harvester)\nEnergyHarvesterContainer(arg0)\nEnergyHarvesterContainer(a, b)\nEnergyHarvesterContainer()",                        /* Documentation string */
     (traverseproc)PyNs3EnergyHarvesterContainer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergyHarvesterContainer__tp_clear,             /* tp_clear */
@@ -5476,80 +5476,16 @@ PyTypeObject PyNs3EnergyHarvesterContainer_Type = {
 
 
 PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyDrained(PyNs3EnergySource *self)
+PyNs3EnergySource__PythonHelper::_wrap_NotifyNewAggregate(PyNs3EnergySource *self)
 {
     PyObject *py_retval;
     PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyDrained of class EnergySource is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyEnergyDrained__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_DoInitialize(PyNs3EnergySource *self)
-{
-    PyObject *py_retval;
-    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyChanged(PyNs3EnergySource *self)
-{
-    PyObject *py_retval;
-    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyChanged of class EnergySource is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyEnergyChanged__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3EnergySource *self)
-{
-    PyObject *py_retval;
-    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyRecharged(PyNs3EnergySource *self)
-{
-    PyObject *py_retval;
-    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyRecharged of class EnergySource is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyEnergyRecharged__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5572,16 +5508,16 @@ PyNs3EnergySource__PythonHelper::_wrap_CalculateTotalCurrent(PyNs3EnergySource *
 }
 
 PyObject *
-PyNs3EnergySource__PythonHelper::_wrap_NotifyNewAggregate(PyNs3EnergySource *self)
+PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyChanged(PyNs3EnergySource *self)
 {
     PyObject *py_retval;
     PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyChanged of class EnergySource is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyEnergyChanged__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5598,6 +5534,70 @@ PyNs3EnergySource__PythonHelper::_wrap_BreakDeviceEnergyModelRefCycle(PyNs3Energ
         return NULL;
     }
     helper->BreakDeviceEnergyModelRefCycle__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyRecharged(PyNs3EnergySource *self)
+{
+    PyObject *py_retval;
+    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyRecharged of class EnergySource is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyEnergyRecharged__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyDrained(PyNs3EnergySource *self)
+{
+    PyObject *py_retval;
+    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyEnergyDrained of class EnergySource is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyEnergyDrained__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3EnergySource__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3EnergySource *self)
+{
+    PyObject *py_retval;
+    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3EnergySource__PythonHelper::_wrap_DoInitialize(PyNs3EnergySource *self)
+{
+    PyObject *py_retval;
+    PyNs3EnergySource__PythonHelper *helper = dynamic_cast< PyNs3EnergySource__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6459,10 +6459,10 @@ _wrap_PyNs3EnergySource_UpdateEnergySource(PyNs3EnergySource *self)
 }
 
 static PyMethodDef PyNs3EnergySource_methods[] = {
-    {(char *) "AppendDeviceEnergyModel", (PyCFunction) _wrap_PyNs3EnergySource_AppendDeviceEnergyModel, METH_VARARGS|METH_KEYWORDS, "AppendDeviceEnergyModel(deviceEnergyModelPtr)\n\ntype: deviceEnergyModelPtr: ns3::Ptr< ns3::DeviceEnergyModel >" },
-    {(char *) "ConnectEnergyHarvester", (PyCFunction) _wrap_PyNs3EnergySource_ConnectEnergyHarvester, METH_VARARGS|METH_KEYWORDS, "ConnectEnergyHarvester(energyHarvesterPtr)\n\ntype: energyHarvesterPtr: ns3::Ptr< ns3::EnergyHarvester >" },
+    {(char *) "AppendDeviceEnergyModel", (PyCFunction) _wrap_PyNs3EnergySource_AppendDeviceEnergyModel, METH_KEYWORDS|METH_VARARGS, "AppendDeviceEnergyModel(deviceEnergyModelPtr)\n\ntype: deviceEnergyModelPtr: ns3::Ptr< ns3::DeviceEnergyModel >" },
+    {(char *) "ConnectEnergyHarvester", (PyCFunction) _wrap_PyNs3EnergySource_ConnectEnergyHarvester, METH_KEYWORDS|METH_VARARGS, "ConnectEnergyHarvester(energyHarvesterPtr)\n\ntype: energyHarvesterPtr: ns3::Ptr< ns3::EnergyHarvester >" },
     {(char *) "DisposeDeviceModels", (PyCFunction) _wrap_PyNs3EnergySource_DisposeDeviceModels, METH_NOARGS, "DisposeDeviceModels()\n\n" },
-    {(char *) "FindDeviceEnergyModels", (PyCFunction) _wrap_PyNs3EnergySource_FindDeviceEnergyModels, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "FindDeviceEnergyModels", (PyCFunction) _wrap_PyNs3EnergySource_FindDeviceEnergyModels, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetEnergyFraction", (PyCFunction) _wrap_PyNs3EnergySource_GetEnergyFraction, METH_NOARGS, "GetEnergyFraction()\n\n" },
     {(char *) "GetInitialEnergy", (PyCFunction) _wrap_PyNs3EnergySource_GetInitialEnergy, METH_NOARGS, "GetInitialEnergy()\n\n" },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3EnergySource_GetNode, METH_NOARGS, "GetNode()\n\n" },
@@ -6470,16 +6470,16 @@ static PyMethodDef PyNs3EnergySource_methods[] = {
     {(char *) "GetSupplyVoltage", (PyCFunction) _wrap_PyNs3EnergySource_GetSupplyVoltage, METH_NOARGS, "GetSupplyVoltage()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EnergySource_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "InitializeDeviceModels", (PyCFunction) _wrap_PyNs3EnergySource_InitializeDeviceModels, METH_NOARGS, "InitializeDeviceModels()\n\n" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3EnergySource_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3EnergySource_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "UpdateEnergySource", (PyCFunction) _wrap_PyNs3EnergySource_UpdateEnergySource, METH_NOARGS, "UpdateEnergySource()\n\n" },
-    {(char *) "NotifyEnergyDrained", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyDrained, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyEnergyChanged", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyChanged, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyEnergyRecharged", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyRecharged, METH_NOARGS, NULL },
-    {(char *) "CalculateTotalCurrent", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_CalculateTotalCurrent, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "CalculateTotalCurrent", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_CalculateTotalCurrent, METH_NOARGS, NULL },
+    {(char *) "NotifyEnergyChanged", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyChanged, METH_NOARGS, NULL },
     {(char *) "BreakDeviceEnergyModelRefCycle", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_BreakDeviceEnergyModelRefCycle, METH_NOARGS, NULL },
+    {(char *) "NotifyEnergyRecharged", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyRecharged, METH_NOARGS, NULL },
+    {(char *) "NotifyEnergyDrained", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyEnergyDrained, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3EnergySource__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -6545,7 +6545,7 @@ PyTypeObject PyNs3EnergySource_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergySource(arg0)\nEnergySource()",                        /* Documentation string */
     (traverseproc)PyNs3EnergySource__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergySource__tp_clear,             /* tp_clear */
@@ -7247,8 +7247,8 @@ _wrap_PyNs3EnergySourceContainer__copy__(PyNs3EnergySourceContainer *self)
 }
 
 static PyMethodDef PyNs3EnergySourceContainer_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnergySourceContainer_Add, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3EnergySourceContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: uint32_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnergySourceContainer_Add, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3EnergySourceContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: uint32_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3EnergySourceContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EnergySourceContainer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3EnergySourceContainer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -7319,7 +7319,7 @@ PyTypeObject PyNs3EnergySourceContainer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EnergySourceContainer(sourceName)\nEnergySourceContainer(source)\nEnergySourceContainer(arg0)\nEnergySourceContainer(a, b)\nEnergySourceContainer()",                        /* Documentation string */
     (traverseproc)PyNs3EnergySourceContainer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EnergySourceContainer__tp_clear,             /* tp_clear */
@@ -8226,17 +8226,17 @@ _wrap_PyNs3LiIonEnergySource__copy__(PyNs3LiIonEnergySource *self)
 }
 
 static PyMethodDef PyNs3LiIonEnergySource_methods[] = {
-    {(char *) "DecreaseRemainingEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_DecreaseRemainingEnergy, METH_VARARGS|METH_KEYWORDS, "DecreaseRemainingEnergy(energyJ)\n\ntype: energyJ: double" },
+    {(char *) "DecreaseRemainingEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_DecreaseRemainingEnergy, METH_KEYWORDS|METH_VARARGS, "DecreaseRemainingEnergy(energyJ)\n\ntype: energyJ: double" },
     {(char *) "GetEnergyFraction", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetEnergyFraction, METH_NOARGS, "GetEnergyFraction()\n\n" },
     {(char *) "GetEnergyUpdateInterval", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetEnergyUpdateInterval, METH_NOARGS, "GetEnergyUpdateInterval()\n\n" },
     {(char *) "GetInitialEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetInitialEnergy, METH_NOARGS, "GetInitialEnergy()\n\n" },
     {(char *) "GetRemainingEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetRemainingEnergy, METH_NOARGS, "GetRemainingEnergy()\n\n" },
     {(char *) "GetSupplyVoltage", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetSupplyVoltage, METH_NOARGS, "GetSupplyVoltage()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3LiIonEnergySource_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IncreaseRemainingEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_IncreaseRemainingEnergy, METH_VARARGS|METH_KEYWORDS, "IncreaseRemainingEnergy(energyJ)\n\ntype: energyJ: double" },
-    {(char *) "SetEnergyUpdateInterval", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetEnergyUpdateInterval, METH_VARARGS|METH_KEYWORDS, "SetEnergyUpdateInterval(interval)\n\ntype: interval: ns3::Time" },
-    {(char *) "SetInitialEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetInitialEnergy, METH_VARARGS|METH_KEYWORDS, "SetInitialEnergy(initialEnergyJ)\n\ntype: initialEnergyJ: double" },
-    {(char *) "SetInitialSupplyVoltage", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetInitialSupplyVoltage, METH_VARARGS|METH_KEYWORDS, "SetInitialSupplyVoltage(supplyVoltageV)\n\ntype: supplyVoltageV: double" },
+    {(char *) "IncreaseRemainingEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_IncreaseRemainingEnergy, METH_KEYWORDS|METH_VARARGS, "IncreaseRemainingEnergy(energyJ)\n\ntype: energyJ: double" },
+    {(char *) "SetEnergyUpdateInterval", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetEnergyUpdateInterval, METH_KEYWORDS|METH_VARARGS, "SetEnergyUpdateInterval(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "SetInitialEnergy", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetInitialEnergy, METH_KEYWORDS|METH_VARARGS, "SetInitialEnergy(initialEnergyJ)\n\ntype: initialEnergyJ: double" },
+    {(char *) "SetInitialSupplyVoltage", (PyCFunction) _wrap_PyNs3LiIonEnergySource_SetInitialSupplyVoltage, METH_KEYWORDS|METH_VARARGS, "SetInitialSupplyVoltage(supplyVoltageV)\n\ntype: supplyVoltageV: double" },
     {(char *) "UpdateEnergySource", (PyCFunction) _wrap_PyNs3LiIonEnergySource_UpdateEnergySource, METH_NOARGS, "UpdateEnergySource()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LiIonEnergySource__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LiIonEnergySource__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -8306,7 +8306,7 @@ PyTypeObject PyNs3LiIonEnergySource_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "LiIonEnergySource(arg0)\nLiIonEnergySource()",                        /* Documentation string */
     (traverseproc)PyNs3LiIonEnergySource__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LiIonEnergySource__tp_clear,             /* tp_clear */
@@ -9239,12 +9239,12 @@ static PyMethodDef PyNs3RvBatteryModel_methods[] = {
     {(char *) "GetSamplingInterval", (PyCFunction) _wrap_PyNs3RvBatteryModel_GetSamplingInterval, METH_NOARGS, "GetSamplingInterval()\n\n" },
     {(char *) "GetSupplyVoltage", (PyCFunction) _wrap_PyNs3RvBatteryModel_GetSupplyVoltage, METH_NOARGS, "GetSupplyVoltage()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RvBatteryModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetAlpha", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetAlpha, METH_VARARGS|METH_KEYWORDS, "SetAlpha(alpha)\n\ntype: alpha: double" },
-    {(char *) "SetBeta", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetBeta, METH_VARARGS|METH_KEYWORDS, "SetBeta(beta)\n\ntype: beta: double" },
-    {(char *) "SetCutoffVoltage", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetCutoffVoltage, METH_VARARGS|METH_KEYWORDS, "SetCutoffVoltage(voltage)\n\ntype: voltage: double" },
-    {(char *) "SetNumOfTerms", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetNumOfTerms, METH_VARARGS|METH_KEYWORDS, "SetNumOfTerms(num)\n\ntype: num: int" },
-    {(char *) "SetOpenCircuitVoltage", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetOpenCircuitVoltage, METH_VARARGS|METH_KEYWORDS, "SetOpenCircuitVoltage(voltage)\n\ntype: voltage: double" },
-    {(char *) "SetSamplingInterval", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetSamplingInterval, METH_VARARGS|METH_KEYWORDS, "SetSamplingInterval(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "SetAlpha", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetAlpha, METH_KEYWORDS|METH_VARARGS, "SetAlpha(alpha)\n\ntype: alpha: double" },
+    {(char *) "SetBeta", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetBeta, METH_KEYWORDS|METH_VARARGS, "SetBeta(beta)\n\ntype: beta: double" },
+    {(char *) "SetCutoffVoltage", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetCutoffVoltage, METH_KEYWORDS|METH_VARARGS, "SetCutoffVoltage(voltage)\n\ntype: voltage: double" },
+    {(char *) "SetNumOfTerms", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetNumOfTerms, METH_KEYWORDS|METH_VARARGS, "SetNumOfTerms(num)\n\ntype: num: int" },
+    {(char *) "SetOpenCircuitVoltage", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetOpenCircuitVoltage, METH_KEYWORDS|METH_VARARGS, "SetOpenCircuitVoltage(voltage)\n\ntype: voltage: double" },
+    {(char *) "SetSamplingInterval", (PyCFunction) _wrap_PyNs3RvBatteryModel_SetSamplingInterval, METH_KEYWORDS|METH_VARARGS, "SetSamplingInterval(interval)\n\ntype: interval: ns3::Time" },
     {(char *) "UpdateEnergySource", (PyCFunction) _wrap_PyNs3RvBatteryModel_UpdateEnergySource, METH_NOARGS, "UpdateEnergySource()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RvBatteryModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RvBatteryModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -9314,7 +9314,7 @@ PyTypeObject PyNs3RvBatteryModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RvBatteryModel(arg0)\nRvBatteryModel()",                        /* Documentation string */
     (traverseproc)PyNs3RvBatteryModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RvBatteryModel__tp_clear,             /* tp_clear */
@@ -10392,16 +10392,16 @@ _wrap_PyNs3SimpleDeviceEnergyModel__copy__(PyNs3SimpleDeviceEnergyModel *self)
 }
 
 static PyMethodDef PyNs3SimpleDeviceEnergyModel_methods[] = {
-    {(char *) "ChangeState", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_ChangeState, METH_VARARGS|METH_KEYWORDS, "ChangeState(newState)\n\ntype: newState: int" },
+    {(char *) "ChangeState", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_ChangeState, METH_KEYWORDS|METH_VARARGS, "ChangeState(newState)\n\ntype: newState: int" },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetTotalEnergyConsumption", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_GetTotalEnergyConsumption, METH_NOARGS, "GetTotalEnergyConsumption()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "HandleEnergyChanged", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_HandleEnergyChanged, METH_NOARGS, "HandleEnergyChanged()\n\n" },
     {(char *) "HandleEnergyDepletion", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_HandleEnergyDepletion, METH_NOARGS, "HandleEnergyDepletion()\n\n" },
     {(char *) "HandleEnergyRecharged", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_HandleEnergyRecharged, METH_NOARGS, "HandleEnergyRecharged()\n\n" },
-    {(char *) "SetCurrentA", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetCurrentA, METH_VARARGS|METH_KEYWORDS, "SetCurrentA(current)\n\ntype: current: double" },
-    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetEnergySource, METH_VARARGS|METH_KEYWORDS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetCurrentA", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetCurrentA, METH_KEYWORDS|METH_VARARGS, "SetCurrentA(current)\n\ntype: current: double" },
+    {(char *) "SetEnergySource", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetEnergySource, METH_KEYWORDS|METH_VARARGS, "SetEnergySource(source)\n\ntype: source: ns3::Ptr< ns3::EnergySource >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3SimpleDeviceEnergyModel_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleDeviceEnergyModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleDeviceEnergyModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleDeviceEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -10471,7 +10471,7 @@ PyTypeObject PyNs3SimpleDeviceEnergyModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SimpleDeviceEnergyModel(arg0)\nSimpleDeviceEnergyModel()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleDeviceEnergyModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleDeviceEnergyModel__tp_clear,             /* tp_clear */
@@ -11052,10 +11052,10 @@ _wrap_PyNs3BasicEnergyHarvester__copy__(PyNs3BasicEnergyHarvester *self)
 }
 
 static PyMethodDef PyNs3BasicEnergyHarvester_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetHarvestedPowerUpdateInterval", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_GetHarvestedPowerUpdateInterval, METH_NOARGS, "GetHarvestedPowerUpdateInterval()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetHarvestedPowerUpdateInterval", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_SetHarvestedPowerUpdateInterval, METH_VARARGS|METH_KEYWORDS, "SetHarvestedPowerUpdateInterval(updateInterval)\n\ntype: updateInterval: ns3::Time" },
+    {(char *) "SetHarvestedPowerUpdateInterval", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester_SetHarvestedPowerUpdateInterval, METH_KEYWORDS|METH_VARARGS, "SetHarvestedPowerUpdateInterval(updateInterval)\n\ntype: updateInterval: ns3::Time" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BasicEnergyHarvester__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BasicEnergyHarvester__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BasicEnergyHarvester__copy__, METH_NOARGS, NULL},
@@ -11124,7 +11124,7 @@ PyTypeObject PyNs3BasicEnergyHarvester_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BasicEnergyHarvester(updateInterval)\nBasicEnergyHarvester(arg0)\nBasicEnergyHarvester()",                        /* Documentation string */
     (traverseproc)PyNs3BasicEnergyHarvester__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BasicEnergyHarvester__tp_clear,             /* tp_clear */
@@ -11911,9 +11911,9 @@ static PyMethodDef PyNs3BasicEnergySource_methods[] = {
     {(char *) "GetRemainingEnergy", (PyCFunction) _wrap_PyNs3BasicEnergySource_GetRemainingEnergy, METH_NOARGS, "GetRemainingEnergy()\n\n" },
     {(char *) "GetSupplyVoltage", (PyCFunction) _wrap_PyNs3BasicEnergySource_GetSupplyVoltage, METH_NOARGS, "GetSupplyVoltage()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BasicEnergySource_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetEnergyUpdateInterval", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetEnergyUpdateInterval, METH_VARARGS|METH_KEYWORDS, "SetEnergyUpdateInterval(interval)\n\ntype: interval: ns3::Time" },
-    {(char *) "SetInitialEnergy", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetInitialEnergy, METH_VARARGS|METH_KEYWORDS, "SetInitialEnergy(initialEnergyJ)\n\ntype: initialEnergyJ: double" },
-    {(char *) "SetSupplyVoltage", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetSupplyVoltage, METH_VARARGS|METH_KEYWORDS, "SetSupplyVoltage(supplyVoltageV)\n\ntype: supplyVoltageV: double" },
+    {(char *) "SetEnergyUpdateInterval", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetEnergyUpdateInterval, METH_KEYWORDS|METH_VARARGS, "SetEnergyUpdateInterval(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "SetInitialEnergy", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetInitialEnergy, METH_KEYWORDS|METH_VARARGS, "SetInitialEnergy(initialEnergyJ)\n\ntype: initialEnergyJ: double" },
+    {(char *) "SetSupplyVoltage", (PyCFunction) _wrap_PyNs3BasicEnergySource_SetSupplyVoltage, METH_KEYWORDS|METH_VARARGS, "SetSupplyVoltage(supplyVoltageV)\n\ntype: supplyVoltageV: double" },
     {(char *) "UpdateEnergySource", (PyCFunction) _wrap_PyNs3BasicEnergySource_UpdateEnergySource, METH_NOARGS, "UpdateEnergySource()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BasicEnergySource__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BasicEnergySource__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -11983,7 +11983,7 @@ PyTypeObject PyNs3BasicEnergySource_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BasicEnergySource(arg0)\nBasicEnergySource()",                        /* Documentation string */
     (traverseproc)PyNs3BasicEnergySource__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BasicEnergySource__tp_clear,             /* tp_clear */

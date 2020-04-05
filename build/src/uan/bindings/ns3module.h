@@ -2817,21 +2817,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacAloha *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanMacAloha *self);
     inline void DoDispose__parent_caller()
     { ns3::UanMacAloha::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanMacAloha *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanMacAloha *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacAloha *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanMacAloha *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2905,21 +2905,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacCw *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanMacCw *self);
     inline void DoDispose__parent_caller()
     { ns3::UanMacCw::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanMacCw *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanMacCw *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacCw *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanMacCw *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -3013,21 +3013,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacRc *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanMacRc *self);
     inline void DoDispose__parent_caller()
     { ns3::UanMacRc::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanMacRc *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanMacRc *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacRc *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanMacRc *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -3101,21 +3101,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacRcGw *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanMacRcGw *self);
     inline void DoDispose__parent_caller()
     { ns3::UanMacRcGw::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanMacRcGw *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanMacRcGw *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanMacRcGw *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanMacRcGw *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -3189,6 +3189,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanNoiseModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UanNoiseModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3196,10 +3200,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3UanNoiseModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanNoiseModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual void Clear();
 
@@ -3263,6 +3263,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanNoiseModelDefault *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UanNoiseModelDefault *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3270,10 +3274,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3UanNoiseModelDefault *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanNoiseModelDefault *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual double GetNoiseDbHz(double fKhz) const;
 
@@ -3348,21 +3348,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinr *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyCalcSinr *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyCalcSinr::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinr *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyCalcSinr *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinr *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinr *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcSinrDb(ns3::Ptr< ns3::Packet > pkt, ns3::Time arrTime, double rxPowerDb, double ambNoiseDb, ns3::UanTxMode mode, ns3::UanPdp pdp, ns3::UanTransducer::ArrivalList const & arrivalList) const;
 
@@ -3426,21 +3426,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrDefault *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyCalcSinrDefault *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyCalcSinr::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrDefault *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyCalcSinrDefault *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrDefault *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrDefault *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcSinrDb(ns3::Ptr< ns3::Packet > pkt, ns3::Time arrTime, double rxPowerDb, double ambNoiseDb, ns3::UanTxMode mode, ns3::UanPdp pdp, ns3::UanTransducer::ArrivalList const & arrivalList) const;
 
@@ -3504,21 +3504,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrDual *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyCalcSinrDual *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyCalcSinr::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrDual *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyCalcSinrDual *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrDual *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrDual *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcSinrDb(ns3::Ptr< ns3::Packet > pkt, ns3::Time arrTime, double rxPowerDb, double ambNoiseDb, ns3::UanTxMode mode, ns3::UanPdp pdp, ns3::UanTransducer::ArrivalList const & arrivalList) const;
 
@@ -3582,21 +3582,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrFhFsk *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyCalcSinrFhFsk *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyCalcSinr::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrFhFsk *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyCalcSinrFhFsk *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyCalcSinrFhFsk *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyCalcSinrFhFsk *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcSinrDb(ns3::Ptr< ns3::Packet > pkt, ns3::Time arrTime, double rxPowerDb, double ambNoiseDb, ns3::UanTxMode mode, ns3::UanPdp pdp, ns3::UanTransducer::ArrivalList const & arrivalList) const;
 
@@ -3682,21 +3682,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPer *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyPer *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyPer::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPer *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyPer *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPer *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPer *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcPer(ns3::Ptr< ns3::Packet > pkt, double sinrDb, ns3::UanTxMode mode);
 
@@ -3760,21 +3760,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerCommonModes *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyPerCommonModes *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyPer::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerCommonModes *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyPerCommonModes *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerCommonModes *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerCommonModes *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcPer(ns3::Ptr< ns3::Packet > pkt, double sinrDb, ns3::UanTxMode mode);
 
@@ -3838,21 +3838,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerGenDefault *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyPerGenDefault *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyPer::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerGenDefault *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyPerGenDefault *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerGenDefault *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerGenDefault *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcPer(ns3::Ptr< ns3::Packet > pkt, double sinrDb, ns3::UanTxMode mode);
 
@@ -3916,21 +3916,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerUmodem *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanPhyPerUmodem *self);
     inline void DoDispose__parent_caller()
     { ns3::UanPhyPer::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerUmodem *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPhyPerUmodem *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPhyPerUmodem *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanPhyPerUmodem *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual double CalcPer(ns3::Ptr< ns3::Packet > pkt, double sinrDb, ns3::UanTxMode mode);
 
@@ -3994,6 +3994,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPropModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4001,10 +4005,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3UanPropModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual void Clear();
 
@@ -4072,6 +4072,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModelIdeal *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPropModelIdeal *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4079,10 +4083,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3UanPropModelIdeal *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModelIdeal *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual ns3::Time GetDelay(ns3::Ptr< ns3::MobilityModel > a, ns3::Ptr< ns3::MobilityModel > b, ns3::UanTxMode mode);
 
@@ -4150,6 +4150,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModelThorp *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UanPropModelThorp *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4157,10 +4161,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3UanPropModelThorp *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanPropModelThorp *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual ns3::Time GetDelay(ns3::Ptr< ns3::MobilityModel > a, ns3::Ptr< ns3::MobilityModel > b, ns3::UanTxMode mode);
 
@@ -4239,21 +4239,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanTransducerHd *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanTransducerHd *self);
     inline void DoDispose__parent_caller()
     { ns3::UanTransducerHd::DoDispose(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3UanTransducerHd *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanTransducerHd *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanTransducerHd *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3UanTransducerHd *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void AddPhy(ns3::Ptr< ns3::UanPhy > arg0);
 
@@ -4337,13 +4337,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoDispose(PyNs3UanChannel *self);
     inline void DoDispose__parent_caller()
     { ns3::UanChannel::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanChannel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UanChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3UanChannel *self);
     inline void DoInitialize__parent_caller()
@@ -4352,10 +4356,6 @@ public:
     static PyObject * _wrap_SendUp(PyNs3UanChannel *self, PyObject *args, PyObject *kwargs);
     inline void SendUp__parent_caller(uint32_t i, ns3::Ptr< ns3::Packet > packet, double rxPowerDb, ns3::UanTxMode txMode, ns3::UanPdp pdp)
     { ns3::UanChannel::SendUp(i, packet, rxPowerDb, txMode, pdp); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UanChannel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual ns3::Ptr< ns3::NetDevice > GetDevice(std::size_t i) const;
 
@@ -4452,6 +4452,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AcousticModemEnergyModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3AcousticModemEnergyModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4459,10 +4463,6 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3AcousticModemEnergyModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AcousticModemEnergyModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual void ChangeState(int newState);
 

@@ -2639,7 +2639,7 @@ PyTypeObject PyNs3OlsrMessageHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MessageHeader(arg0)\nMessageHeader()",                        /* Documentation string */
     (traverseproc)PyNs3OlsrMessageHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OlsrMessageHeader__tp_clear,             /* tp_clear */
@@ -6166,7 +6166,7 @@ PyTypeObject PyNs3OlsrPacketHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PacketHeader(arg0)\nPacketHeader()",                        /* Documentation string */
     (traverseproc)PyNs3OlsrPacketHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OlsrPacketHeader__tp_clear,             /* tp_clear */
@@ -6559,7 +6559,7 @@ PyTypeObject PyNs3OlsrRoutingProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RoutingProtocol(arg0)\nRoutingProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3OlsrRoutingProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OlsrRoutingProtocol__tp_clear,             /* tp_clear */
@@ -12114,7 +12114,7 @@ PyTypeObject PyNs3OlsrHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OlsrHelper(arg0)\nOlsrHelper()",                        /* Documentation string */
     (traverseproc)PyNs3OlsrHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OlsrHelper__tp_clear,             /* tp_clear */

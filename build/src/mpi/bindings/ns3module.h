@@ -1317,17 +1317,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3MpiReceiver *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MpiReceiver *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3MpiReceiver *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MpiReceiver *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3MpiReceiver *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 

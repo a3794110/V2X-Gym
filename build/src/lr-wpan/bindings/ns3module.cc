@@ -3537,6 +3537,98 @@ _wrap_PyNs3LrWpanHelper_AssignStreams(PyNs3LrWpanHelper *self, PyObject *args, P
 
 
 PyObject *
+_wrap_PyNs3LrWpanHelper_EnableAsciiAll__0(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3LrWpanHelper_EnableAsciiAll__1(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3LrWpanHelper_EnableAsciiAll(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3LrWpanHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3LrWpanHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+PyObject *
+_wrap_PyNs3LrWpanHelper_EnablePcapAll(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+
+PyObject *
 _wrap_PyNs3LrWpanHelper_EnablePcap__0(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -3727,98 +3819,6 @@ PyObject * _wrap_PyNs3LrWpanHelper_EnablePcap(PyNs3LrWpanHelper *self, PyObject 
     Py_DECREF(exceptions[3]);
     PyList_SET_ITEM(error_list, 4, PyObject_Str(exceptions[4]));
     Py_DECREF(exceptions[4]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-PyObject *
-_wrap_PyNs3LrWpanHelper_EnablePcapAll(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-
-PyObject *
-_wrap_PyNs3LrWpanHelper_EnableAsciiAll__0(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3LrWpanHelper_EnableAsciiAll__1(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3LrWpanHelper_EnableAsciiAll(PyNs3LrWpanHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3LrWpanHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3LrWpanHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
     PyErr_SetObject(PyExc_TypeError, error_list);
     Py_DECREF(error_list);
     return NULL;
@@ -4211,9 +4211,9 @@ static PyMethodDef PyNs3LrWpanHelper_methods[] = {
     {(char *) "LrWpanPhyEnumerationPrinter", (PyCFunction) _wrap_PyNs3LrWpanHelper_LrWpanPhyEnumerationPrinter, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "LrWpanPhyEnumerationPrinter(e)\n\ntype: e: ns3::LrWpanPhyEnumeration" },
     {(char *) "LrWpanMacStatePrinter", (PyCFunction) _wrap_PyNs3LrWpanHelper_LrWpanMacStatePrinter, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "LrWpanMacStatePrinter(e)\n\ntype: e: ns3::LrWpanMacState" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3LrWpanHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(c, stream)\n\ntype: c: ns3::NetDeviceContainer\ntype: stream: int64_t" },
-    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
     {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
+    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3LrWpanHelper_EnableAscii, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -4280,7 +4280,7 @@ PyTypeObject PyNs3LrWpanHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanHelper(useMultiModelSpectrumChannel)\nLrWpanHelper()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanHelper__tp_clear,             /* tp_clear */
@@ -4611,7 +4611,7 @@ PyTypeObject PyNs3LrWpanLqiTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanLqiTag(arg0)\nLrWpanLqiTag(lqi)\nLrWpanLqiTag()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanLqiTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanLqiTag__tp_clear,             /* tp_clear */
@@ -5980,7 +5980,7 @@ PyTypeObject PyNs3LrWpanMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanMacHeader(wpanMacType, seqNum)\nLrWpanMacHeader(arg0)\nLrWpanMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanMacHeader__tp_clear,             /* tp_clear */
@@ -6966,7 +6966,7 @@ PyTypeObject PyNs3LrWpanCsmaCa_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanCsmaCa()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanCsmaCa__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanCsmaCa__tp_clear,             /* tp_clear */
@@ -7182,7 +7182,7 @@ PyTypeObject PyNs3LrWpanErrorModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanErrorModel(arg0)\nLrWpanErrorModel()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanErrorModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanErrorModel__tp_clear,             /* tp_clear */
@@ -7313,22 +7313,6 @@ PyTypeObject PyNs3LrWpanInterferenceHelper_Type = {
 
 
 PyObject *
-PyNs3LrWpanMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LrWpanMac *self)
-{
-    PyObject *py_retval;
-    PyNs3LrWpanMac__PythonHelper *helper = dynamic_cast< PyNs3LrWpanMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3LrWpanMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3LrWpanMac *self)
 {
     PyObject *py_retval;
@@ -7355,6 +7339,22 @@ PyNs3LrWpanMac__PythonHelper::_wrap_DoInitialize(PyNs3LrWpanMac *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3LrWpanMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LrWpanMac *self)
+{
+    PyObject *py_retval;
+    PyNs3LrWpanMac__PythonHelper *helper = dynamic_cast< PyNs3LrWpanMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8637,9 +8637,9 @@ static PyMethodDef PyNs3LrWpanMac_methods[] = {
     {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3LrWpanMac_SetPhy, METH_KEYWORDS|METH_VARARGS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::LrWpanPhy >" },
     {(char *) "SetRxOnWhenIdle", (PyCFunction) _wrap_PyNs3LrWpanMac_SetRxOnWhenIdle, METH_KEYWORDS|METH_VARARGS, "SetRxOnWhenIdle(rxOnWhenIdle)\n\ntype: rxOnWhenIdle: bool" },
     {(char *) "SetShortAddress", (PyCFunction) _wrap_PyNs3LrWpanMac_SetShortAddress, METH_KEYWORDS|METH_VARARGS, "SetShortAddress(address)\n\ntype: address: ns3::Mac16Address" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LrWpanMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LrWpanMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3LrWpanMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LrWpanMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3LrWpanMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3LrWpanMac__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -8707,7 +8707,7 @@ PyTypeObject PyNs3LrWpanMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanMac(arg0)\nLrWpanMac()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanMac__tp_clear,             /* tp_clear */
@@ -9118,7 +9118,7 @@ PyTypeObject PyNs3LrWpanMacTrailer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanMacTrailer(arg0)\nLrWpanMacTrailer()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanMacTrailer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanMacTrailer__tp_clear,             /* tp_clear */
@@ -9756,7 +9756,7 @@ PyTypeObject PyNs3LrWpanPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanPhy()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanPhy__tp_clear,             /* tp_clear */
@@ -11171,7 +11171,7 @@ PyTypeObject PyNs3LrWpanNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LrWpanNetDevice(arg0)\nLrWpanNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3LrWpanNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LrWpanNetDevice__tp_clear,             /* tp_clear */

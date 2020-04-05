@@ -1,6 +1,6 @@
 <Configuration>
     <Scenario dir="./C-V2X-mode-4.cc">
-    <NetworkEnv dir="./NetworkConfig.xml">
+    <NetworkEnv dir="./NetworkEnvSetting.xml">
     <RLSpace dir="./RLSetting.xml">
 </Configuration>
 

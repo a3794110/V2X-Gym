@@ -1,8 +1,12 @@
 <ActionSpace>
-<ActionSpace>
+    <low></low>
+    <high></high>
+    <shape></shape>
+    <dtype></dtype>
+</ActionSpace>
 
 <RewardSpace>
-<RewardSpace>
+</RewardSpace>
 
 <ObservationSpace>
-<ObservationSpace>
+</ObservationSpace>

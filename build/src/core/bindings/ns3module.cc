@@ -6399,7 +6399,7 @@ PyTypeObject PyNs3CommandLine_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "CommandLine(cmd)\nCommandLine()",                        /* Documentation string */
     (traverseproc)PyNs3CommandLine__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CommandLine__tp_clear,             /* tp_clear */
@@ -10925,22 +10925,6 @@ PyTypeObject PyNs3NonCopyable_Type = {
 std::map<void*, PyObject*> PyNs3ObjectBase_wrapper_registry;
 
 PyObject *
-PyNs3ObjectBase__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ObjectBase *self)
-{
-    PyObject *py_retval;
-    PyNs3ObjectBase__PythonHelper *helper = dynamic_cast< PyNs3ObjectBase__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ObjectBase__PythonHelper::_wrap_ConstructSelf(PyNs3ObjectBase *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -10956,6 +10940,22 @@ PyNs3ObjectBase__PythonHelper::_wrap_ConstructSelf(PyNs3ObjectBase *self, PyObje
         return NULL;
     }
     helper->ConstructSelf__parent_caller(*((PyNs3AttributeConstructionList *) attributes)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ObjectBase__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ObjectBase *self)
+{
+    PyObject *py_retval;
+    PyNs3ObjectBase__PythonHelper *helper = dynamic_cast< PyNs3ObjectBase__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11332,8 +11332,8 @@ static PyMethodDef PyNs3ObjectBase_methods[] = {
     {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnect, METH_KEYWORDS|METH_VARARGS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "ConstructSelf", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_ConstructSelf, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11399,7 +11399,7 @@ PyTypeObject PyNs3ObjectBase_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ObjectBase(arg0)\nObjectBase()",                        /* Documentation string */
     (traverseproc)PyNs3ObjectBase__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ObjectBase__tp_clear,             /* tp_clear */
@@ -12783,7 +12783,7 @@ PyTypeObject PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter_Type 
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter(o)\nSimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__tp_clear,             /* tp_clear */
@@ -13244,11 +13244,11 @@ _wrap_PyNs3Simulator__copy__(PyNs3Simulator *self)
 }
 
 static PyMethodDef PyNs3Simulator_methods[] = {
-    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Simulator_Schedule, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
-    {(char *) "ScheduleNow", (PyCFunction) _wrap_PyNs3Simulator_ScheduleNow, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
-    {(char *) "ScheduleWithContext", (PyCFunction) _wrap_PyNs3Simulator_ScheduleWithContext, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
-    {(char *) "ScheduleDestroy", (PyCFunction) _wrap_PyNs3Simulator_ScheduleDestroy, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
-    {(char *) "Run", (PyCFunction) _wrap_PyNs3Simulator_Run, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
+    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Simulator_Schedule, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "ScheduleNow", (PyCFunction) _wrap_PyNs3Simulator_ScheduleNow, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "ScheduleWithContext", (PyCFunction) _wrap_PyNs3Simulator_ScheduleWithContext, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "ScheduleDestroy", (PyCFunction) _wrap_PyNs3Simulator_ScheduleDestroy, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Run", (PyCFunction) _wrap_PyNs3Simulator_Run, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "Cancel", (PyCFunction) _wrap_PyNs3Simulator_Cancel, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Destroy", (PyCFunction) _wrap_PyNs3Simulator_Destroy, METH_NOARGS|METH_STATIC, "Destroy()\n\n" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3Simulator_GetContext, METH_NOARGS|METH_STATIC, "GetContext()\n\n" },
@@ -14940,7 +14940,7 @@ PyTypeObject PyNs3TimerImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TimerImpl(arg0)\nTimerImpl()",                        /* Documentation string */
     (traverseproc)PyNs3TimerImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimerImpl__tp_clear,             /* tp_clear */
@@ -15800,7 +15800,7 @@ _wrap_PyNs3TypeId__copy__(PyNs3TypeId *self)
 }
 
 static PyMethodDef PyNs3TypeId_methods[] = {
-    {(char *) "LookupByNameFailSafe", (PyCFunction) _wrap_PyNs3TypeId_LookupByNameFailSafe, METH_KEYWORDS|METH_STATIC|METH_VARARGS, NULL },
+    {(char *) "LookupByNameFailSafe", (PyCFunction) _wrap_PyNs3TypeId_LookupByNameFailSafe, METH_STATIC|METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "AddAttribute", (PyCFunction) _wrap_PyNs3TypeId_AddAttribute, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "AddTraceSource", (PyCFunction) _wrap_PyNs3TypeId_AddTraceSource, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3TypeId_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(i)\n\ntype: i: std::size_t" },
@@ -19178,6 +19178,22 @@ PyNs3Object__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Object *self)
 }
 
 PyObject *
+PyNs3Object__PythonHelper::_wrap_DoInitialize(PyNs3Object *self)
+{
+    PyObject *py_retval;
+    PyNs3Object__PythonHelper *helper = dynamic_cast< PyNs3Object__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Object__PythonHelper::_wrap_DoDispose(PyNs3Object *self)
 {
     PyObject *py_retval;
@@ -19204,22 +19220,6 @@ PyNs3Object__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Object *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Object__PythonHelper::_wrap_DoInitialize(PyNs3Object *self)
-{
-    PyObject *py_retval;
-    PyNs3Object__PythonHelper *helper = dynamic_cast< PyNs3Object__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -19702,9 +19702,9 @@ static PyMethodDef PyNs3Object_methods[] = {
     {(char *) "Initialize", (PyCFunction) _wrap_PyNs3Object_Initialize, METH_NOARGS, "Initialize()\n\n" },
     {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3Object_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Object__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Object__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Object__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Object__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Object__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -19770,7 +19770,7 @@ PyTypeObject PyNs3Object_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Object(o)\nObject()",                        /* Documentation string */
     (traverseproc)PyNs3Object__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Object__tp_clear,             /* tp_clear */
@@ -20035,6 +20035,22 @@ PyNs3RandomVariableStream__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
+PyNs3RandomVariableStream__PythonHelper::_wrap_DoInitialize(PyNs3RandomVariableStream *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomVariableStream__PythonHelper *helper = dynamic_cast< PyNs3RandomVariableStream__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3RandomVariableStream__PythonHelper::_wrap_DoDispose(PyNs3RandomVariableStream *self)
 {
     PyObject *py_retval;
@@ -20061,22 +20077,6 @@ PyNs3RandomVariableStream__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RandomVar
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RandomVariableStream__PythonHelper::_wrap_DoInitialize(PyNs3RandomVariableStream *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomVariableStream__PythonHelper *helper = dynamic_cast< PyNs3RandomVariableStream__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20551,9 +20551,9 @@ static PyMethodDef PyNs3RandomVariableStream_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomVariableStream__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomVariableStream__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomVariableStream__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomVariableStream__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomVariableStream__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -20619,7 +20619,7 @@ PyTypeObject PyNs3RandomVariableStream_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RandomVariableStream()",                        /* Documentation string */
     (traverseproc)PyNs3RandomVariableStream__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomVariableStream__tp_clear,             /* tp_clear */
@@ -20668,6 +20668,22 @@ PyNs3Scheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Scheduler *
 }
 
 PyObject *
+PyNs3Scheduler__PythonHelper::_wrap_DoInitialize(PyNs3Scheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3Scheduler__PythonHelper *helper = dynamic_cast< PyNs3Scheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Scheduler__PythonHelper::_wrap_DoDispose(PyNs3Scheduler *self)
 {
     PyObject *py_retval;
@@ -20694,22 +20710,6 @@ PyNs3Scheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Scheduler *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Scheduler__PythonHelper::_wrap_DoInitialize(PyNs3Scheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3Scheduler__PythonHelper *helper = dynamic_cast< PyNs3Scheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21377,9 +21377,9 @@ static PyMethodDef PyNs3Scheduler_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3Scheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3Scheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -21445,7 +21445,7 @@ PyTypeObject PyNs3Scheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Scheduler(arg0)\nScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3Scheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Scheduler__tp_clear,             /* tp_clear */
@@ -22011,6 +22011,22 @@ PyNs3SequentialRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(P
 }
 
 PyObject *
+PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3SequentialRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3SequentialRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3SequentialRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3SequentialRandomVariable *self)
 {
     PyObject *py_retval;
@@ -22037,22 +22053,6 @@ PyNs3SequentialRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Seque
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3SequentialRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3SequentialRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3SequentialRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22534,9 +22534,9 @@ static PyMethodDef PyNs3SequentialRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3SequentialRandomVariable_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3SequentialRandomVariable_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SequentialRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SequentialRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SequentialRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -22602,7 +22602,7 @@ PyTypeObject PyNs3SequentialRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SequentialRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3SequentialRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SequentialRandomVariable__tp_clear,             /* tp_clear */
@@ -24584,7 +24584,7 @@ PyTypeObject PyNs3SimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SimulatorImpl(arg0)\nSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3SimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimulatorImpl__tp_clear,             /* tp_clear */
@@ -24633,6 +24633,22 @@ PyNs3Synchronizer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Synchron
 }
 
 PyObject *
+PyNs3Synchronizer__PythonHelper::_wrap_DoInitialize(PyNs3Synchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3Synchronizer__PythonHelper *helper = dynamic_cast< PyNs3Synchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Synchronizer__PythonHelper::_wrap_DoDispose(PyNs3Synchronizer *self)
 {
     PyObject *py_retval;
@@ -24659,22 +24675,6 @@ PyNs3Synchronizer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Synchronizer *sel
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Synchronizer__PythonHelper::_wrap_DoInitialize(PyNs3Synchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3Synchronizer__PythonHelper *helper = dynamic_cast< PyNs3Synchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25618,9 +25618,9 @@ static PyMethodDef PyNs3Synchronizer_methods[] = {
     {(char *) "Signal", (PyCFunction) _wrap_PyNs3Synchronizer_Signal, METH_NOARGS, "Signal()\n\n" },
     {(char *) "Synchronize", (PyCFunction) _wrap_PyNs3Synchronizer_Synchronize, METH_KEYWORDS|METH_VARARGS, "Synchronize(tsCurrent, tsDelay)\n\ntype: tsCurrent: uint64_t\ntype: tsDelay: uint64_t" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -25686,7 +25686,7 @@ PyTypeObject PyNs3Synchronizer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Synchronizer(arg0)\nSynchronizer()",                        /* Documentation string */
     (traverseproc)PyNs3Synchronizer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Synchronizer__tp_clear,             /* tp_clear */
@@ -27435,6 +27435,22 @@ PyNs3TriangularRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(P
 }
 
 PyObject *
+PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3TriangularRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3TriangularRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3TriangularRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3TriangularRandomVariable *self)
 {
     PyObject *py_retval;
@@ -27461,22 +27477,6 @@ PyNs3TriangularRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Trian
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3TriangularRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3TriangularRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3TriangularRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28030,9 +28030,9 @@ static PyMethodDef PyNs3TriangularRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -28098,7 +28098,7 @@ PyTypeObject PyNs3TriangularRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TriangularRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3TriangularRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TriangularRandomVariable__tp_clear,             /* tp_clear */
@@ -28147,6 +28147,22 @@ PyNs3UniformRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
 }
 
 PyObject *
+PyNs3UniformRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3UniformRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3UniformRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3UniformRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3UniformRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3UniformRandomVariable *self)
 {
     PyObject *py_retval;
@@ -28173,22 +28189,6 @@ PyNs3UniformRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3UniformR
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3UniformRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3UniformRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3UniformRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3UniformRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28727,9 +28727,9 @@ static PyMethodDef PyNs3UniformRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -28795,7 +28795,7 @@ PyTypeObject PyNs3UniformRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "UniformRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3UniformRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UniformRandomVariable__tp_clear,             /* tp_clear */
@@ -28828,71 +28828,18 @@ PyTypeObject PyNs3UniformRandomVariable_Type = {
 
 
 PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSignal(PyNs3WallClockSynchronizer *self)
 {
     PyObject *py_retval;
-    uint64_t ns;
     PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    const char *keywords[] = {"ns", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "K", (char **) keywords, &ns)) {
-        return NULL;
-    }
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoSetOrigin of class WallClockSynchronizer is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoSignal of class WallClockSynchronizer is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoSetOrigin__parent_caller(ns);
+    helper->DoSignal__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetRealtime(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    uint64_t retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetRealtime__parent_caller();
-    py_retval = Py_BuildValue((char *) "K", retval);
     return py_retval;
 }
 
@@ -28918,22 +28865,6 @@ PyNs3WallClockSynchronizer__PythonHelper::_wrap_SleepWait(PyNs3WallClockSynchron
 }
 
 PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetNormalizedRealtime(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    uint64_t retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetNormalizedRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetNormalizedRealtime__parent_caller();
-    py_retval = Py_BuildValue((char *) "K", retval);
-    return py_retval;
-}
-
-PyObject *
 PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -28952,6 +28883,230 @@ PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize(PyNs3WallClockSync
     }
     retval = helper->DoSynchronize__parent_caller(nsCurrent, nsDelay);
     py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetNormalizedRealtime(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    uint64_t retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetNormalizedRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetNormalizedRealtime__parent_caller();
+    py_retval = Py_BuildValue((char *) "K", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetCurrentRealtime(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    uint64_t retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoGetCurrentRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->DoGetCurrentRealtime__parent_caller();
+    py_retval = Py_BuildValue((char *) "K", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    int64_t retval;
+    uint64_t ns;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    const char *keywords[] = {"ns", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "K", (char **) keywords, &ns)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoGetDrift of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->DoGetDrift__parent_caller(ns);
+    py_retval = Py_BuildValue((char *) "L", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoRealtime(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->DoRealtime__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetRealtime(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    uint64_t retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetRealtime__parent_caller();
+    py_retval = Py_BuildValue((char *) "K", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventStart(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoEventStart of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoEventStart__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DriftCorrect(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    uint64_t retval;
+    uint64_t nsNow;
+    uint64_t nsDelay;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    const char *keywords[] = {"nsNow", "nsDelay", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "KK", (char **) keywords, &nsNow, &nsDelay)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DriftCorrect of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->DriftCorrect__parent_caller(nsNow, nsDelay);
+    py_retval = Py_BuildValue((char *) "K", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoInitialize(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoDispose(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventEnd(PyNs3WallClockSynchronizer *self)
+{
+    PyObject *py_retval;
+    uint64_t retval;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoEventEnd of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->DoEventEnd__parent_caller();
+    py_retval = Py_BuildValue((char *) "K", retval);
+    return py_retval;
+}
+
+PyObject *
+PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    uint64_t ns;
+    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
+    const char *keywords[] = {"ns", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "K", (char **) keywords, &ns)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoSetOrigin of class WallClockSynchronizer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoSetOrigin__parent_caller(ns);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -28994,161 +29149,6 @@ PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetCondition(PyNs3WallClockSyn
         return NULL;
     }
     helper->DoSetCondition__parent_caller(cond);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoDispose(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventStart(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoEventStart of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoEventStart__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoRealtime(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->DoRealtime__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    int64_t retval;
-    uint64_t ns;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    const char *keywords[] = {"ns", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "K", (char **) keywords, &ns)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoGetDrift of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->DoGetDrift__parent_caller(ns);
-    py_retval = Py_BuildValue((char *) "L", retval);
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventEnd(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    uint64_t retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoEventEnd of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->DoEventEnd__parent_caller();
-    py_retval = Py_BuildValue((char *) "K", retval);
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetCurrentRealtime(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    uint64_t retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoGetCurrentRealtime of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->DoGetCurrentRealtime__parent_caller();
-    py_retval = Py_BuildValue((char *) "K", retval);
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSignal(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoSignal of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoSignal__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DriftCorrect(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    uint64_t retval;
-    uint64_t nsNow;
-    uint64_t nsDelay;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    const char *keywords[] = {"nsNow", "nsDelay", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "KK", (char **) keywords, &nsNow, &nsDelay)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DriftCorrect of class WallClockSynchronizer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->DriftCorrect__parent_caller(nsNow, nsDelay);
-    py_retval = Py_BuildValue((char *) "K", retval);
-    return py_retval;
-}
-
-PyObject *
-PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoInitialize(PyNs3WallClockSynchronizer *self)
-{
-    PyObject *py_retval;
-    PyNs3WallClockSynchronizer__PythonHelper *helper = dynamic_cast< PyNs3WallClockSynchronizer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -30012,24 +30012,24 @@ _wrap_PyNs3WallClockSynchronizer__copy__(PyNs3WallClockSynchronizer *self)
 
 static PyMethodDef PyNs3WallClockSynchronizer_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WallClockSynchronizer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoSetOrigin", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "GetRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetRealtime, METH_NOARGS, NULL },
-    {(char *) "SleepWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SleepWait, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetNormalizedRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetNormalizedRealtime, METH_NOARGS, NULL },
-    {(char *) "DoSynchronize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SpinWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SpinWait, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoSetCondition", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetCondition, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoEventStart", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventStart, METH_NOARGS, NULL },
-    {(char *) "DoRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoRealtime, METH_NOARGS, NULL },
-    {(char *) "DoGetDrift", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoEventEnd", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventEnd, METH_NOARGS, NULL },
-    {(char *) "DoGetCurrentRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetCurrentRealtime, METH_NOARGS, NULL },
     {(char *) "DoSignal", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSignal, METH_NOARGS, NULL },
+    {(char *) "SleepWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SleepWait, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoSynchronize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetNormalizedRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetNormalizedRealtime, METH_NOARGS, NULL },
+    {(char *) "DoGetCurrentRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetCurrentRealtime, METH_NOARGS, NULL },
+    {(char *) "DoGetDrift", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoRealtime, METH_NOARGS, NULL },
+    {(char *) "GetRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetRealtime, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoEventStart", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventStart, METH_NOARGS, NULL },
     {(char *) "DriftCorrect", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DriftCorrect, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoEventEnd", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventEnd, METH_NOARGS, NULL },
+    {(char *) "DoSetOrigin", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SpinWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SpinWait, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoSetCondition", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetCondition, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WallClockSynchronizer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -30096,7 +30096,7 @@ PyTypeObject PyNs3WallClockSynchronizer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WallClockSynchronizer(arg0)\nWallClockSynchronizer()",                        /* Documentation string */
     (traverseproc)PyNs3WallClockSynchronizer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WallClockSynchronizer__tp_clear,             /* tp_clear */
@@ -30145,6 +30145,22 @@ PyNs3WeibullRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
 }
 
 PyObject *
+PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3WeibullRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3WeibullRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3WeibullRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3WeibullRandomVariable *self)
 {
     PyObject *py_retval;
@@ -30171,22 +30187,6 @@ PyNs3WeibullRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WeibullR
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3WeibullRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3WeibullRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3WeibullRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -30740,9 +30740,9 @@ static PyMethodDef PyNs3WeibullRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -30808,7 +30808,7 @@ PyTypeObject PyNs3WeibullRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WeibullRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3WeibullRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WeibullRandomVariable__tp_clear,             /* tp_clear */
@@ -30857,6 +30857,22 @@ PyNs3ZetaRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ze
 }
 
 PyObject *
+PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ZetaRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ZetaRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ZetaRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ZetaRandomVariable *self)
 {
     PyObject *py_retval;
@@ -30883,22 +30899,6 @@ PyNs3ZetaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ZetaRandomV
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ZetaRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ZetaRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ZetaRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -31422,9 +31422,9 @@ static PyMethodDef PyNs3ZetaRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -31490,7 +31490,7 @@ PyTypeObject PyNs3ZetaRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ZetaRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ZetaRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ZetaRandomVariable__tp_clear,             /* tp_clear */
@@ -31539,6 +31539,22 @@ PyNs3ZipfRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Zi
 }
 
 PyObject *
+PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ZipfRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ZipfRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ZipfRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ZipfRandomVariable *self)
 {
     PyObject *py_retval;
@@ -31565,22 +31581,6 @@ PyNs3ZipfRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ZipfRandomV
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ZipfRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ZipfRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ZipfRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -32119,9 +32119,9 @@ static PyMethodDef PyNs3ZipfRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -32187,7 +32187,7 @@ PyTypeObject PyNs3ZipfRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ZipfRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ZipfRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ZipfRandomVariable__tp_clear,             /* tp_clear */
@@ -33188,6 +33188,22 @@ PyNs3CalendarScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Cal
 }
 
 PyObject *
+PyNs3CalendarScheduler__PythonHelper::_wrap_DoInitialize(PyNs3CalendarScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3CalendarScheduler__PythonHelper *helper = dynamic_cast< PyNs3CalendarScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3CalendarScheduler__PythonHelper::_wrap_DoDispose(PyNs3CalendarScheduler *self)
 {
     PyObject *py_retval;
@@ -33214,22 +33230,6 @@ PyNs3CalendarScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3CalendarSche
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3CalendarScheduler__PythonHelper::_wrap_DoInitialize(PyNs3CalendarScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3CalendarScheduler__PythonHelper *helper = dynamic_cast< PyNs3CalendarScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -33915,9 +33915,9 @@ static PyMethodDef PyNs3CalendarScheduler_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3CalendarScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3CalendarScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CalendarScheduler__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -33984,7 +33984,7 @@ PyTypeObject PyNs3CalendarScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "CalendarScheduler(arg0)\nCalendarScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3CalendarScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CalendarScheduler__tp_clear,             /* tp_clear */
@@ -34518,6 +34518,22 @@ PyNs3ConstantRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyN
 }
 
 PyObject *
+PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ConstantRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ConstantRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ConstantRandomVariable *self)
 {
     PyObject *py_retval;
@@ -34544,22 +34560,6 @@ PyNs3ConstantRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Constan
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ConstantRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ConstantRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -35083,9 +35083,9 @@ static PyMethodDef PyNs3ConstantRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -35151,7 +35151,7 @@ PyTypeObject PyNs3ConstantRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ConstantRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantRandomVariable__tp_clear,             /* tp_clear */
@@ -35611,7 +35611,7 @@ PyTypeObject PyNs3DefaultSimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DefaultSimulatorImpl(arg0)\nDefaultSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3DefaultSimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DefaultSimulatorImpl__tp_clear,             /* tp_clear */
@@ -35660,6 +35660,22 @@ PyNs3DeterministicRandomVariable__PythonHelper::_wrap_NotifyConstructionComplete
 }
 
 PyObject *
+PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3DeterministicRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3DeterministicRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3DeterministicRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3DeterministicRandomVariable *self)
 {
     PyObject *py_retval;
@@ -35686,22 +35702,6 @@ PyNs3DeterministicRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3De
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3DeterministicRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3DeterministicRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3DeterministicRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -36117,9 +36117,9 @@ static PyMethodDef PyNs3DeterministicRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -36185,7 +36185,7 @@ PyTypeObject PyNs3DeterministicRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DeterministicRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3DeterministicRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DeterministicRandomVariable__tp_clear,             /* tp_clear */
@@ -36529,6 +36529,22 @@ PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(Py
 }
 
 PyObject *
+PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3EmpiricalRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3EmpiricalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3EmpiricalRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3EmpiricalRandomVariable *self)
 {
     PyObject *py_retval;
@@ -36555,22 +36571,6 @@ PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Empiri
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3EmpiricalRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3EmpiricalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3EmpiricalRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -37085,9 +37085,9 @@ static PyMethodDef PyNs3EmpiricalRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3EmpiricalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -37153,7 +37153,7 @@ PyTypeObject PyNs3EmpiricalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "EmpiricalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3EmpiricalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EmpiricalRandomVariable__tp_clear,             /* tp_clear */
@@ -38438,6 +38438,22 @@ PyNs3ErlangRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
+PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ErlangRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ErlangRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ErlangRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ErlangRandomVariable *self)
 {
     PyObject *py_retval;
@@ -38464,22 +38480,6 @@ PyNs3ErlangRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ErlangRan
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ErlangRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ErlangRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ErlangRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -39018,9 +39018,9 @@ static PyMethodDef PyNs3ErlangRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -39086,7 +39086,7 @@ PyTypeObject PyNs3ErlangRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ErlangRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ErlangRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ErlangRandomVariable__tp_clear,             /* tp_clear */
@@ -39259,6 +39259,22 @@ PyNs3ExponentialRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
+PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ExponentialRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ExponentialRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ExponentialRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ExponentialRandomVariable *self)
 {
     PyObject *py_retval;
@@ -39285,22 +39301,6 @@ PyNs3ExponentialRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Expo
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ExponentialRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ExponentialRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ExponentialRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -39839,9 +39839,9 @@ static PyMethodDef PyNs3ExponentialRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -39907,7 +39907,7 @@ PyTypeObject PyNs3ExponentialRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ExponentialRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ExponentialRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ExponentialRandomVariable__tp_clear,             /* tp_clear */
@@ -40055,6 +40055,22 @@ PyNs3GammaRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3G
 }
 
 PyObject *
+PyNs3GammaRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3GammaRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3GammaRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3GammaRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3GammaRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3GammaRandomVariable *self)
 {
     PyObject *py_retval;
@@ -40081,22 +40097,6 @@ PyNs3GammaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3GammaRando
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3GammaRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3GammaRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3GammaRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3GammaRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -40635,9 +40635,9 @@ static PyMethodDef PyNs3GammaRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -40703,7 +40703,7 @@ PyTypeObject PyNs3GammaRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "GammaRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3GammaRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GammaRandomVariable__tp_clear,             /* tp_clear */
@@ -40752,6 +40752,22 @@ PyNs3HeapScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3HeapSch
 }
 
 PyObject *
+PyNs3HeapScheduler__PythonHelper::_wrap_DoInitialize(PyNs3HeapScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3HeapScheduler__PythonHelper *helper = dynamic_cast< PyNs3HeapScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3HeapScheduler__PythonHelper::_wrap_DoDispose(PyNs3HeapScheduler *self)
 {
     PyObject *py_retval;
@@ -40778,22 +40794,6 @@ PyNs3HeapScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3HeapScheduler *s
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3HeapScheduler__PythonHelper::_wrap_DoInitialize(PyNs3HeapScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3HeapScheduler__PythonHelper *helper = dynamic_cast< PyNs3HeapScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -41479,9 +41479,9 @@ static PyMethodDef PyNs3HeapScheduler_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3HeapScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3HeapScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HeapScheduler__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -41548,7 +41548,7 @@ PyTypeObject PyNs3HeapScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "HeapScheduler(arg0)\nHeapScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3HeapScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HeapScheduler__tp_clear,             /* tp_clear */
@@ -41892,6 +41892,22 @@ PyNs3ListScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ListSch
 }
 
 PyObject *
+PyNs3ListScheduler__PythonHelper::_wrap_DoInitialize(PyNs3ListScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3ListScheduler__PythonHelper *helper = dynamic_cast< PyNs3ListScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ListScheduler__PythonHelper::_wrap_DoDispose(PyNs3ListScheduler *self)
 {
     PyObject *py_retval;
@@ -41918,22 +41934,6 @@ PyNs3ListScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ListScheduler *s
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ListScheduler__PythonHelper::_wrap_DoInitialize(PyNs3ListScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3ListScheduler__PythonHelper *helper = dynamic_cast< PyNs3ListScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -42619,9 +42619,9 @@ static PyMethodDef PyNs3ListScheduler_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3ListScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3ListScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ListScheduler__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -42688,7 +42688,7 @@ PyTypeObject PyNs3ListScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ListScheduler(arg0)\nListScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3ListScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ListScheduler__tp_clear,             /* tp_clear */
@@ -42737,6 +42737,22 @@ PyNs3LogNormalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(Py
 }
 
 PyObject *
+PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3LogNormalRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3LogNormalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3LogNormalRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3LogNormalRandomVariable *self)
 {
     PyObject *py_retval;
@@ -42763,22 +42779,6 @@ PyNs3LogNormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3LogNor
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3LogNormalRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3LogNormalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3LogNormalRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -43317,9 +43317,9 @@ static PyMethodDef PyNs3LogNormalRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -43385,7 +43385,7 @@ PyTypeObject PyNs3LogNormalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "LogNormalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3LogNormalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LogNormalRandomVariable__tp_clear,             /* tp_clear */
@@ -43434,6 +43434,22 @@ PyNs3MapScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MapSched
 }
 
 PyObject *
+PyNs3MapScheduler__PythonHelper::_wrap_DoInitialize(PyNs3MapScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3MapScheduler__PythonHelper *helper = dynamic_cast< PyNs3MapScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3MapScheduler__PythonHelper::_wrap_DoDispose(PyNs3MapScheduler *self)
 {
     PyObject *py_retval;
@@ -43460,22 +43476,6 @@ PyNs3MapScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MapScheduler *sel
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MapScheduler__PythonHelper::_wrap_DoInitialize(PyNs3MapScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3MapScheduler__PythonHelper *helper = dynamic_cast< PyNs3MapScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -44161,9 +44161,9 @@ static PyMethodDef PyNs3MapScheduler_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3MapScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3MapScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MapScheduler__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -44230,7 +44230,7 @@ PyTypeObject PyNs3MapScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "MapScheduler(arg0)\nMapScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3MapScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MapScheduler__tp_clear,             /* tp_clear */
@@ -44279,6 +44279,22 @@ PyNs3NormalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
+PyNs3NormalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3NormalRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3NormalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3NormalRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3NormalRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3NormalRandomVariable *self)
 {
     PyObject *py_retval;
@@ -44305,22 +44321,6 @@ PyNs3NormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NormalRan
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3NormalRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3NormalRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3NormalRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3NormalRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -44941,9 +44941,9 @@ static PyMethodDef PyNs3NormalRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -45009,7 +45009,7 @@ PyTypeObject PyNs3NormalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "NormalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3NormalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NormalRandomVariable__tp_clear,             /* tp_clear */
@@ -45976,6 +45976,22 @@ PyNs3ParetoRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
+PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ParetoRandomVariable *self)
+{
+    PyObject *py_retval;
+    PyNs3ParetoRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ParetoRandomVariable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoDispose(PyNs3ParetoRandomVariable *self)
 {
     PyObject *py_retval;
@@ -46002,22 +46018,6 @@ PyNs3ParetoRandomVariable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ParetoRan
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoInitialize(PyNs3ParetoRandomVariable *self)
-{
-    PyObject *py_retval;
-    PyNs3ParetoRandomVariable__PythonHelper *helper = dynamic_cast< PyNs3ParetoRandomVariable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -46587,9 +46587,9 @@ static PyMethodDef PyNs3ParetoRandomVariable_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -46655,7 +46655,7 @@ PyTypeObject PyNs3ParetoRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ParetoRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ParetoRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ParetoRandomVariable__tp_clear,             /* tp_clear */
@@ -47632,7 +47632,7 @@ PyTypeObject PyNs3RealtimeSimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RealtimeSimulatorImpl(arg0)\nRealtimeSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3RealtimeSimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RealtimeSimulatorImpl__tp_clear,             /* tp_clear */

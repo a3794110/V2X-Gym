@@ -1722,6 +1722,78 @@ PyObject * _wrap_PyNs3FdNetDeviceHelper_EnableAscii(PyNs3FdNetDeviceHelper *self
 
 
 PyObject *
+_wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__0(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__1(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+
+PyObject *
 _wrap_PyNs3FdNetDeviceHelper_EnablePcap__0(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -1918,78 +1990,6 @@ PyObject * _wrap_PyNs3FdNetDeviceHelper_EnablePcap(PyNs3FdNetDeviceHelper *self,
 }
 
 
-PyObject *
-_wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__0(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__1(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll(PyNs3FdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-
 static PyObject*
 _wrap_PyNs3FdNetDeviceHelper__copy__(PyNs3FdNetDeviceHelper *self)
 {
@@ -2005,13 +2005,13 @@ _wrap_PyNs3FdNetDeviceHelper__copy__(PyNs3FdNetDeviceHelper *self)
 }
 
 static PyMethodDef PyNs3FdNetDeviceHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
-    {(char *) "InstallPriv", (PyCFunction) PyNs3FdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
-    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnableAscii, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "InstallPriv", (PyCFunction) PyNs3FdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnablePcapAll, METH_VARARGS|METH_KEYWORDS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
+    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper_EnablePcap, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FdNetDeviceHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2078,7 +2078,7 @@ PyTypeObject PyNs3FdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FdNetDeviceHelper(arg0)\nFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3FdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -2111,18 +2111,25 @@ PyTypeObject PyNs3FdNetDeviceHelper_Type = {
 
 
 PyObject *
-PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor(PyNs3EmuFdNetDeviceHelper *self)
+PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor(PyNs3EmuFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    int retval;
+    PyNs3FdNetDevice *device;
+    ns3::FdNetDevice *device_ptr;
     PyNs3EmuFdNetDeviceHelper__PythonHelper *helper = dynamic_cast< PyNs3EmuFdNetDeviceHelper__PythonHelper* >(self->obj);
+    const char *keywords[] = {"device", NULL};
     
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method CreateFileDescriptor of class EmuFdNetDeviceHelper is protected and can only be called by a subclass");
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3FdNetDevice_Type, &device)) {
         return NULL;
     }
-    retval = helper->CreateFileDescriptor__parent_caller();
-    py_retval = Py_BuildValue((char *) "i", retval);
+    device_ptr = (device ? device->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetFileDescriptor of class EmuFdNetDeviceHelper is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice  > (device_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -2176,25 +2183,18 @@ PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv(PyNs3EmuFdNetDeviceHe
 }
 
 PyObject *
-PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor(PyNs3EmuFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
+PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor(PyNs3EmuFdNetDeviceHelper *self)
 {
     PyObject *py_retval;
-    PyNs3FdNetDevice *device;
-    ns3::FdNetDevice *device_ptr;
+    int retval;
     PyNs3EmuFdNetDeviceHelper__PythonHelper *helper = dynamic_cast< PyNs3EmuFdNetDeviceHelper__PythonHelper* >(self->obj);
-    const char *keywords[] = {"device", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3FdNetDevice_Type, &device)) {
-        return NULL;
-    }
-    device_ptr = (device ? device->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetFileDescriptor of class EmuFdNetDeviceHelper is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method CreateFileDescriptor of class EmuFdNetDeviceHelper is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice  > (device_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
+    retval = helper->CreateFileDescriptor__parent_caller();
+    py_retval = Py_BuildValue((char *) "i", retval);
     return py_retval;
 }
 
@@ -2856,10 +2856,10 @@ _wrap_PyNs3EmuFdNetDeviceHelper__copy__(PyNs3EmuFdNetDeviceHelper *self)
 
 static PyMethodDef PyNs3EmuFdNetDeviceHelper_methods[] = {
     {(char *) "GetDeviceName", (PyCFunction) _wrap_PyNs3EmuFdNetDeviceHelper_GetDeviceName, METH_NOARGS, "GetDeviceName()\n\n" },
-    {(char *) "SetDeviceName", (PyCFunction) _wrap_PyNs3EmuFdNetDeviceHelper_SetDeviceName, METH_KEYWORDS|METH_VARARGS, "SetDeviceName(deviceName)\n\ntype: deviceName: std::string" },
+    {(char *) "SetDeviceName", (PyCFunction) _wrap_PyNs3EmuFdNetDeviceHelper_SetDeviceName, METH_VARARGS|METH_KEYWORDS, "SetDeviceName(deviceName)\n\ntype: deviceName: std::string" },
+    {(char *) "SetFileDescriptor", (PyCFunction) PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "InstallPriv", (PyCFunction) PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "CreateFileDescriptor", (PyCFunction) PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor, METH_NOARGS, NULL },
-    {(char *) "InstallPriv", (PyCFunction) PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetFileDescriptor", (PyCFunction) PyNs3EmuFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3EmuFdNetDeviceHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2926,7 +2926,7 @@ PyTypeObject PyNs3EmuFdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "EmuFdNetDeviceHelper(arg0)\nEmuFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3EmuFdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EmuFdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -2959,18 +2959,25 @@ PyTypeObject PyNs3EmuFdNetDeviceHelper_Type = {
 
 
 PyObject *
-PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor(PyNs3TapFdNetDeviceHelper *self)
+PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor(PyNs3TapFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    int retval;
+    PyNs3FdNetDevice *device;
+    ns3::FdNetDevice *device_ptr;
     PyNs3TapFdNetDeviceHelper__PythonHelper *helper = dynamic_cast< PyNs3TapFdNetDeviceHelper__PythonHelper* >(self->obj);
+    const char *keywords[] = {"device", NULL};
     
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method CreateFileDescriptor of class TapFdNetDeviceHelper is protected and can only be called by a subclass");
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3FdNetDevice_Type, &device)) {
         return NULL;
     }
-    retval = helper->CreateFileDescriptor__parent_caller();
-    py_retval = Py_BuildValue((char *) "i", retval);
+    device_ptr = (device ? device->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetFileDescriptor of class TapFdNetDeviceHelper is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice  > (device_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -3024,25 +3031,18 @@ PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv(PyNs3TapFdNetDeviceHe
 }
 
 PyObject *
-PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor(PyNs3TapFdNetDeviceHelper *self, PyObject *args, PyObject *kwargs)
+PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor(PyNs3TapFdNetDeviceHelper *self)
 {
     PyObject *py_retval;
-    PyNs3FdNetDevice *device;
-    ns3::FdNetDevice *device_ptr;
+    int retval;
     PyNs3TapFdNetDeviceHelper__PythonHelper *helper = dynamic_cast< PyNs3TapFdNetDeviceHelper__PythonHelper* >(self->obj);
-    const char *keywords[] = {"device", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3FdNetDevice_Type, &device)) {
-        return NULL;
-    }
-    device_ptr = (device ? device->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetFileDescriptor of class TapFdNetDeviceHelper is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method CreateFileDescriptor of class TapFdNetDeviceHelper is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->SetFileDescriptor__parent_caller(ns3::Ptr< ns3::FdNetDevice  > (device_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
+    retval = helper->CreateFileDescriptor__parent_caller();
+    py_retval = Py_BuildValue((char *) "i", retval);
     return py_retval;
 }
 
@@ -3777,15 +3777,15 @@ _wrap_PyNs3TapFdNetDeviceHelper__copy__(PyNs3TapFdNetDeviceHelper *self)
 }
 
 static PyMethodDef PyNs3TapFdNetDeviceHelper_methods[] = {
-    {(char *) "SetModePi", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetModePi, METH_KEYWORDS|METH_VARARGS, "SetModePi(pi)\n\ntype: pi: bool" },
-    {(char *) "SetTapIpv4Address", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv4Address, METH_KEYWORDS|METH_VARARGS, "SetTapIpv4Address(address)\n\ntype: address: ns3::Ipv4Address" },
-    {(char *) "SetTapIpv4Mask", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv4Mask, METH_KEYWORDS|METH_VARARGS, "SetTapIpv4Mask(mask)\n\ntype: mask: ns3::Ipv4Mask" },
-    {(char *) "SetTapIpv6Address", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv6Address, METH_KEYWORDS|METH_VARARGS, "SetTapIpv6Address(address)\n\ntype: address: ns3::Ipv6Address" },
-    {(char *) "SetTapIpv6Prefix", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv6Prefix, METH_KEYWORDS|METH_VARARGS, "SetTapIpv6Prefix(prefix)\n\ntype: prefix: int" },
-    {(char *) "SetTapMacAddress", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapMacAddress, METH_KEYWORDS|METH_VARARGS, "SetTapMacAddress(mac)\n\ntype: mac: ns3::Mac48Address" },
+    {(char *) "SetModePi", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetModePi, METH_VARARGS|METH_KEYWORDS, "SetModePi(pi)\n\ntype: pi: bool" },
+    {(char *) "SetTapIpv4Address", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv4Address, METH_VARARGS|METH_KEYWORDS, "SetTapIpv4Address(address)\n\ntype: address: ns3::Ipv4Address" },
+    {(char *) "SetTapIpv4Mask", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv4Mask, METH_VARARGS|METH_KEYWORDS, "SetTapIpv4Mask(mask)\n\ntype: mask: ns3::Ipv4Mask" },
+    {(char *) "SetTapIpv6Address", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv6Address, METH_VARARGS|METH_KEYWORDS, "SetTapIpv6Address(address)\n\ntype: address: ns3::Ipv6Address" },
+    {(char *) "SetTapIpv6Prefix", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapIpv6Prefix, METH_VARARGS|METH_KEYWORDS, "SetTapIpv6Prefix(prefix)\n\ntype: prefix: int" },
+    {(char *) "SetTapMacAddress", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper_SetTapMacAddress, METH_VARARGS|METH_KEYWORDS, "SetTapMacAddress(mac)\n\ntype: mac: ns3::Mac48Address" },
+    {(char *) "SetFileDescriptor", (PyCFunction) PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "InstallPriv", (PyCFunction) PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "CreateFileDescriptor", (PyCFunction) PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_CreateFileDescriptor, METH_NOARGS, NULL },
-    {(char *) "InstallPriv", (PyCFunction) PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_InstallPriv, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetFileDescriptor", (PyCFunction) PyNs3TapFdNetDeviceHelper__PythonHelper::_wrap_SetFileDescriptor, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TapFdNetDeviceHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3852,7 +3852,7 @@ PyTypeObject PyNs3TapFdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TapFdNetDeviceHelper(arg0)\nTapFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3TapFdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TapFdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -4555,13 +4555,13 @@ _wrap_PyNs3FdNetDevice_SupportsSendFrom(PyNs3FdNetDevice *self)
 }
 
 static PyMethodDef PyNs3FdNetDevice_methods[] = {
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3FdNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3FdNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetEncapsulationMode", (PyCFunction) _wrap_PyNs3FdNetDevice_GetEncapsulationMode, METH_NOARGS, "GetEncapsulationMode()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3FdNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3FdNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3FdNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3FdNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3FdNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FdNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3FdNetDevice_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
@@ -4570,20 +4570,20 @@ static PyMethodDef PyNs3FdNetDevice_methods[] = {
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3FdNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3FdNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3FdNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3FdNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3FdNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3FdNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetEncapsulationMode", (PyCFunction) _wrap_PyNs3FdNetDevice_SetEncapsulationMode, METH_KEYWORDS|METH_VARARGS, "SetEncapsulationMode(mode)\n\ntype: mode: ns3::FdNetDevice::EncapsulationMode" },
-    {(char *) "SetFileDescriptor", (PyCFunction) _wrap_PyNs3FdNetDevice_SetFileDescriptor, METH_KEYWORDS|METH_VARARGS, "SetFileDescriptor(fd)\n\ntype: fd: int" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetIsBroadcast", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIsBroadcast, METH_KEYWORDS|METH_VARARGS, "SetIsBroadcast(broadcast)\n\ntype: broadcast: bool" },
-    {(char *) "SetIsMulticast", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIsMulticast, METH_KEYWORDS|METH_VARARGS, "SetIsMulticast(multicast)\n\ntype: multicast: bool" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3FdNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3FdNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3FdNetDevice_Start, METH_KEYWORDS|METH_VARARGS, "Start(tStart)\n\ntype: tStart: ns3::Time" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3FdNetDevice_Stop, METH_KEYWORDS|METH_VARARGS, "Stop(tStop)\n\ntype: tStop: ns3::Time" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3FdNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3FdNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3FdNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetEncapsulationMode", (PyCFunction) _wrap_PyNs3FdNetDevice_SetEncapsulationMode, METH_VARARGS|METH_KEYWORDS, "SetEncapsulationMode(mode)\n\ntype: mode: ns3::FdNetDevice::EncapsulationMode" },
+    {(char *) "SetFileDescriptor", (PyCFunction) _wrap_PyNs3FdNetDevice_SetFileDescriptor, METH_VARARGS|METH_KEYWORDS, "SetFileDescriptor(fd)\n\ntype: fd: int" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetIsBroadcast", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIsBroadcast, METH_VARARGS|METH_KEYWORDS, "SetIsBroadcast(broadcast)\n\ntype: broadcast: bool" },
+    {(char *) "SetIsMulticast", (PyCFunction) _wrap_PyNs3FdNetDevice_SetIsMulticast, METH_VARARGS|METH_KEYWORDS, "SetIsMulticast(multicast)\n\ntype: multicast: bool" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3FdNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3FdNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3FdNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3FdNetDevice_Start, METH_VARARGS|METH_KEYWORDS, "Start(tStart)\n\ntype: tStart: ns3::Time" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3FdNetDevice_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(tStop)\n\ntype: tStop: ns3::Time" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3FdNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
     {NULL, NULL, 0, NULL}
 };
@@ -4647,7 +4647,7 @@ PyTypeObject PyNs3FdNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FdNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3FdNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FdNetDevice__tp_clear,             /* tp_clear */
@@ -4775,7 +4775,7 @@ _wrap_PyNs3FdNetDeviceFdReader__copy__(PyNs3FdNetDeviceFdReader *self)
 }
 
 static PyMethodDef PyNs3FdNetDeviceFdReader_methods[] = {
-    {(char *) "SetBufferSize", (PyCFunction) _wrap_PyNs3FdNetDeviceFdReader_SetBufferSize, METH_KEYWORDS|METH_VARARGS, "SetBufferSize(bufferSize)\n\ntype: bufferSize: uint32_t" },
+    {(char *) "SetBufferSize", (PyCFunction) _wrap_PyNs3FdNetDeviceFdReader_SetBufferSize, METH_VARARGS|METH_KEYWORDS, "SetBufferSize(bufferSize)\n\ntype: bufferSize: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FdNetDeviceFdReader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };

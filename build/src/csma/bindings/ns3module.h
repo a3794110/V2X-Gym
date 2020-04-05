@@ -2692,10 +2692,6 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3CsmaChannel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_DoDispose(PyNs3CsmaChannel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
@@ -2703,6 +2699,10 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3CsmaChannel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3CsmaChannel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual std::size_t GetNDevices() const;
 
@@ -2766,21 +2766,21 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3CsmaNetDevice *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_DoDispose(PyNs3CsmaNetDevice *self);
     inline void DoDispose__parent_caller()
     { ns3::CsmaNetDevice::DoDispose(); }
 
-    static PyObject * _wrap_AddHeader(PyNs3CsmaNetDevice *self, PyObject *args, PyObject *kwargs);
-    inline void AddHeader__parent_caller(ns3::Ptr< ns3::Packet > p, ns3::Mac48Address source, ns3::Mac48Address dest, uint16_t protocolNumber)
-    { ns3::CsmaNetDevice::AddHeader(p, source, dest, protocolNumber); }
-
     static PyObject * _wrap_NotifyNewAggregate(PyNs3CsmaNetDevice *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3CsmaNetDevice *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
+    static PyObject * _wrap_AddHeader(PyNs3CsmaNetDevice *self, PyObject *args, PyObject *kwargs);
+    inline void AddHeader__parent_caller(ns3::Ptr< ns3::Packet > p, ns3::Mac48Address source, ns3::Mac48Address dest, uint16_t protocolNumber)
+    { ns3::CsmaNetDevice::AddHeader(p, source, dest, protocolNumber); }
 
     virtual void SetIfIndex(uint32_t const index);
 

@@ -2130,6 +2130,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3PositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3PositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2141,10 +2145,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3PositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3PositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2208,6 +2208,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomBoxPositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3RandomBoxPositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2219,10 +2223,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomBoxPositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomBoxPositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2286,6 +2286,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomDiscPositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3RandomDiscPositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2297,10 +2301,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomDiscPositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomDiscPositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2364,6 +2364,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomRectanglePositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3RandomRectanglePositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2375,10 +2379,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomRectanglePositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomRectanglePositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2442,6 +2442,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3UniformDiscPositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3UniformDiscPositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2453,10 +2457,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UniformDiscPositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3UniformDiscPositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2540,6 +2540,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3GridPositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3GridPositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2551,10 +2555,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3GridPositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3GridPositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2618,6 +2618,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ListPositionAllocator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3ListPositionAllocator *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2629,10 +2633,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ListPositionAllocator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ListPositionAllocator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -2700,6 +2700,10 @@ public:
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
+    static PyObject * _wrap_NotifyCourseChange(PyNs3MobilityModel *self);
+    inline void NotifyCourseChange__parent_caller()
+    { ns3::MobilityModel::NotifyCourseChange(); }
+
     static PyObject * _wrap_DoDispose(PyNs3MobilityModel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
@@ -2707,10 +2711,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3MobilityModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_NotifyCourseChange(PyNs3MobilityModel *self);
-    inline void NotifyCourseChange__parent_caller()
-    { ns3::MobilityModel::NotifyCourseChange(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
@@ -2782,13 +2782,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomDirection2dMobilityModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomDirection2dMobilityModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomDirection2dMobilityModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual int64_t DoAssignStreams(int64_t arg0);
 
@@ -2856,13 +2856,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomWalk2dMobilityModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomWalk2dMobilityModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomWalk2dMobilityModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual int64_t DoAssignStreams(int64_t arg0);
 
@@ -2930,6 +2930,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomWaypointMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoDispose(PyNs3RandomWaypointMobilityModel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
@@ -2941,10 +2945,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomWaypointMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomWaypointMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoInitialize();
 
@@ -3032,6 +3032,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SteadyStateRandomWaypointMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoDispose(PyNs3SteadyStateRandomWaypointMobilityModel *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
@@ -3043,10 +3047,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SteadyStateRandomWaypointMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SteadyStateRandomWaypointMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoInitialize();
 
@@ -3124,6 +3124,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaypointMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3WaypointMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3131,10 +3135,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WaypointMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaypointMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3214,6 +3214,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantAccelerationMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3ConstantAccelerationMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3225,10 +3229,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantAccelerationMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantAccelerationMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual ns3::Vector DoGetPosition() const;
 
@@ -3296,6 +3296,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantPositionMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3ConstantPositionMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3307,10 +3311,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantPositionMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantPositionMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual ns3::Vector DoGetPosition() const;
 
@@ -3378,6 +3378,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantVelocityMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3ConstantVelocityMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3389,10 +3393,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantVelocityMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantVelocityMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual ns3::Vector DoGetPosition() const;
 
@@ -3460,6 +3460,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3GaussMarkovMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3GaussMarkovMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3467,10 +3471,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3GaussMarkovMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3GaussMarkovMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual int64_t DoAssignStreams(int64_t arg0);
 
@@ -3538,6 +3538,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3HierarchicalMobilityModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3HierarchicalMobilityModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3549,10 +3553,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3HierarchicalMobilityModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3HierarchicalMobilityModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
 
     virtual ns3::Vector DoGetPosition() const;
 

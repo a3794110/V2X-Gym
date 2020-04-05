@@ -719,6 +719,22 @@ PyTypeObject PyNs3BridgeHelper_Type = {
 
 
 PyObject *
+PyNs3BridgeChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BridgeChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3BridgeChannel__PythonHelper *helper = dynamic_cast< PyNs3BridgeChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose(PyNs3BridgeChannel *self)
 {
     PyObject *py_retval;
@@ -729,22 +745,6 @@ PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose(PyNs3BridgeChannel *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BridgeChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3BridgeChannel__PythonHelper *helper = dynamic_cast< PyNs3BridgeChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -767,16 +767,16 @@ PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize(PyNs3BridgeChannel *self)
 }
 
 PyObject *
-PyNs3BridgeChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BridgeChannel *self)
+PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BridgeChannel *self)
 {
     PyObject *py_retval;
     PyNs3BridgeChannel__PythonHelper *helper = dynamic_cast< PyNs3BridgeChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1228,10 +1228,10 @@ static PyMethodDef PyNs3BridgeChannel_methods[] = {
     {(char *) "AddChannel", (PyCFunction) _wrap_PyNs3BridgeChannel_AddChannel, METH_VARARGS|METH_KEYWORDS, "AddChannel(bridgedChannel)\n\ntype: bridgedChannel: ns3::Ptr< ns3::Channel >" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3BridgeChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3BridgeChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 

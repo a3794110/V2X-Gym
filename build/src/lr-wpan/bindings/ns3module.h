@@ -2222,10 +2222,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3LrWpanMac *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_NotifyNewAggregate(PyNs3LrWpanMac *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -2233,6 +2229,10 @@ public:
     static PyObject * _wrap_DoInitialize(PyNs3LrWpanMac *self);
     inline void DoInitialize__parent_caller()
     { ns3::LrWpanMac::DoInitialize(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3LrWpanMac *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoDispose(PyNs3LrWpanMac *self);
     inline void DoDispose__parent_caller()

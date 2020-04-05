@@ -2117,7 +2117,7 @@ PyTypeObject PyNs3DcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DcdChannelEncodings(arg0)\nDcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3DcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -3578,7 +3578,7 @@ PyTypeObject PyNs3OfdmDcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OfdmDcdChannelEncodings(arg0)\nOfdmDcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmDcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmDcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -9231,7 +9231,7 @@ PyTypeObject PyNs3TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TlvValue(arg0)\nTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TlvValue__tp_clear,             /* tp_clear */
@@ -9555,7 +9555,7 @@ PyTypeObject PyNs3TosTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TosTlvValue(low, high, mask)\nTosTlvValue(arg0)\nTosTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3TosTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TosTlvValue__tp_clear,             /* tp_clear */
@@ -9884,7 +9884,7 @@ PyTypeObject PyNs3U16TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "U16TlvValue(value)\nU16TlvValue(arg0)\nU16TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U16TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U16TlvValue__tp_clear,             /* tp_clear */
@@ -10203,7 +10203,7 @@ PyTypeObject PyNs3U32TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "U32TlvValue(value)\nU32TlvValue(arg0)\nU32TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U32TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U32TlvValue__tp_clear,             /* tp_clear */
@@ -10532,7 +10532,7 @@ PyTypeObject PyNs3U8TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "U8TlvValue(value)\nU8TlvValue(arg0)\nU8TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U8TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U8TlvValue__tp_clear,             /* tp_clear */
@@ -10973,7 +10973,7 @@ PyTypeObject PyNs3UcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UcdChannelEncodings(arg0)\nUcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3UcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -11143,7 +11143,7 @@ PyTypeObject PyNs3VectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "VectorTlvValue(arg0)\nVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3VectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3VectorTlvValue__tp_clear,             /* tp_clear */
@@ -12113,295 +12113,6 @@ _wrap_PyNs3WimaxHelper_SetPropagationLossModel(PyNs3WimaxHelper *self, PyObject 
 
 
 PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcap__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    PyNs3NetDevice *nd;
-    ns3::NetDevice *nd_ptr;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    bool explicitFilename;
-    PyObject *py_explicitFilename = NULL;
-    const char *keywords[] = {"prefix", "nd", "promiscuous", "explicitFilename", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|OO", (char **) keywords, &prefix, &prefix_len, &PyNs3NetDevice_Type, &nd, &py_promiscuous, &py_explicitFilename)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    nd_ptr = (nd ? nd->obj : NULL);
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    explicitFilename = py_explicitFilename? (bool) PyObject_IsTrue(py_explicitFilename) : false;
-    self->obj->EnablePcap(std::string(prefix, prefix_len), ns3::Ptr< ns3::NetDevice  > (nd_ptr), promiscuous, explicitFilename);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcap__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *ndName;
-    Py_ssize_t ndName_len;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    bool explicitFilename;
-    PyObject *py_explicitFilename = NULL;
-    const char *keywords[] = {"prefix", "ndName", "promiscuous", "explicitFilename", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#|OO", (char **) keywords, &prefix, &prefix_len, &ndName, &ndName_len, &py_promiscuous, &py_explicitFilename)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    explicitFilename = py_explicitFilename? (bool) PyObject_IsTrue(py_explicitFilename) : false;
-    self->obj->EnablePcap(std::string(prefix, prefix_len), std::string(ndName, ndName_len), promiscuous, explicitFilename);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcap__2(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    PyNs3NetDeviceContainer *d;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "d", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|O", (char **) keywords, &prefix, &prefix_len, &PyNs3NetDeviceContainer_Type, &d, &py_promiscuous)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcap(std::string(prefix, prefix_len), *((PyNs3NetDeviceContainer *) d)->obj, promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcap__3(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    PyNs3NodeContainer *n;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "n", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|O", (char **) keywords, &prefix, &prefix_len, &PyNs3NodeContainer_Type, &n, &py_promiscuous)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcap(std::string(prefix, prefix_len), *((PyNs3NodeContainer *) n)->obj, promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcap__4(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    unsigned int nodeid;
-    unsigned int deviceid;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "nodeid", "deviceid", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#II|O", (char **) keywords, &prefix, &prefix_len, &nodeid, &deviceid, &py_promiscuous)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcap(std::string(prefix, prefix_len), nodeid, deviceid, promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3WimaxHelper_EnablePcap(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[5] = {0,};
-    retval = _wrap_PyNs3WimaxHelper_EnablePcap__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnablePcap__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnablePcap__2(self, args, kwargs, &exceptions[2]);
-    if (!exceptions[2]) {
-        Py_DECREF(exceptions[0]);
-        Py_DECREF(exceptions[1]);
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnablePcap__3(self, args, kwargs, &exceptions[3]);
-    if (!exceptions[3]) {
-        Py_DECREF(exceptions[0]);
-        Py_DECREF(exceptions[1]);
-        Py_DECREF(exceptions[2]);
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnablePcap__4(self, args, kwargs, &exceptions[4]);
-    if (!exceptions[4]) {
-        Py_DECREF(exceptions[0]);
-        Py_DECREF(exceptions[1]);
-        Py_DECREF(exceptions[2]);
-        Py_DECREF(exceptions[3]);
-        return retval;
-    }
-    error_list = PyList_New(5);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyList_SET_ITEM(error_list, 2, PyObject_Str(exceptions[2]));
-    Py_DECREF(exceptions[2]);
-    PyList_SET_ITEM(error_list, 3, PyObject_Str(exceptions[3]));
-    Py_DECREF(exceptions[3]);
-    PyList_SET_ITEM(error_list, 4, PyObject_Str(exceptions[4]));
-    Py_DECREF(exceptions[4]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcapAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnableAsciiAll__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnableAsciiAll__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3WimaxHelper_EnableAsciiAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-
-PyObject *
 _wrap_PyNs3WimaxHelper_EnableAscii__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -12780,6 +12491,295 @@ PyObject * _wrap_PyNs3WimaxHelper_EnableAscii(PyNs3WimaxHelper *self, PyObject *
 }
 
 
+PyObject *
+_wrap_PyNs3WimaxHelper_EnableAsciiAll__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnableAsciiAll__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3WimaxHelper_EnableAsciiAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcap__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    PyNs3NetDevice *nd;
+    ns3::NetDevice *nd_ptr;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    bool explicitFilename;
+    PyObject *py_explicitFilename = NULL;
+    const char *keywords[] = {"prefix", "nd", "promiscuous", "explicitFilename", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|OO", (char **) keywords, &prefix, &prefix_len, &PyNs3NetDevice_Type, &nd, &py_promiscuous, &py_explicitFilename)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    nd_ptr = (nd ? nd->obj : NULL);
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    explicitFilename = py_explicitFilename? (bool) PyObject_IsTrue(py_explicitFilename) : false;
+    self->obj->EnablePcap(std::string(prefix, prefix_len), ns3::Ptr< ns3::NetDevice  > (nd_ptr), promiscuous, explicitFilename);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcap__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *ndName;
+    Py_ssize_t ndName_len;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    bool explicitFilename;
+    PyObject *py_explicitFilename = NULL;
+    const char *keywords[] = {"prefix", "ndName", "promiscuous", "explicitFilename", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#|OO", (char **) keywords, &prefix, &prefix_len, &ndName, &ndName_len, &py_promiscuous, &py_explicitFilename)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    explicitFilename = py_explicitFilename? (bool) PyObject_IsTrue(py_explicitFilename) : false;
+    self->obj->EnablePcap(std::string(prefix, prefix_len), std::string(ndName, ndName_len), promiscuous, explicitFilename);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcap__2(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    PyNs3NetDeviceContainer *d;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "d", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|O", (char **) keywords, &prefix, &prefix_len, &PyNs3NetDeviceContainer_Type, &d, &py_promiscuous)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcap(std::string(prefix, prefix_len), *((PyNs3NetDeviceContainer *) d)->obj, promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcap__3(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    PyNs3NodeContainer *n;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "n", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!|O", (char **) keywords, &prefix, &prefix_len, &PyNs3NodeContainer_Type, &n, &py_promiscuous)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcap(std::string(prefix, prefix_len), *((PyNs3NodeContainer *) n)->obj, promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcap__4(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    unsigned int nodeid;
+    unsigned int deviceid;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "nodeid", "deviceid", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#II|O", (char **) keywords, &prefix, &prefix_len, &nodeid, &deviceid, &py_promiscuous)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcap(std::string(prefix, prefix_len), nodeid, deviceid, promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3WimaxHelper_EnablePcap(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[5] = {0,};
+    retval = _wrap_PyNs3WimaxHelper_EnablePcap__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnablePcap__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnablePcap__2(self, args, kwargs, &exceptions[2]);
+    if (!exceptions[2]) {
+        Py_DECREF(exceptions[0]);
+        Py_DECREF(exceptions[1]);
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnablePcap__3(self, args, kwargs, &exceptions[3]);
+    if (!exceptions[3]) {
+        Py_DECREF(exceptions[0]);
+        Py_DECREF(exceptions[1]);
+        Py_DECREF(exceptions[2]);
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnablePcap__4(self, args, kwargs, &exceptions[4]);
+    if (!exceptions[4]) {
+        Py_DECREF(exceptions[0]);
+        Py_DECREF(exceptions[1]);
+        Py_DECREF(exceptions[2]);
+        Py_DECREF(exceptions[3]);
+        return retval;
+    }
+    error_list = PyList_New(5);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyList_SET_ITEM(error_list, 2, PyObject_Str(exceptions[2]));
+    Py_DECREF(exceptions[2]);
+    PyList_SET_ITEM(error_list, 3, PyObject_Str(exceptions[3]));
+    Py_DECREF(exceptions[3]);
+    PyList_SET_ITEM(error_list, 4, PyObject_Str(exceptions[4]));
+    Py_DECREF(exceptions[4]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcapAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+
 static PyObject*
 _wrap_PyNs3WimaxHelper__copy__(PyNs3WimaxHelper *self)
 {
@@ -12805,10 +12805,10 @@ static PyMethodDef PyNs3WimaxHelper_methods[] = {
     {(char *) "EnableLogComponents", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableLogComponents, METH_NOARGS|METH_STATIC, "EnableLogComponents()\n\n" },
     {(char *) "Install", (PyCFunction) _wrap_PyNs3WimaxHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "SetPropagationLossModel", (PyCFunction) _wrap_PyNs3WimaxHelper_SetPropagationLossModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationLossModel(propagationModel)\n\ntype: propagationModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
+    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcap, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcapAll, METH_VARARGS|METH_KEYWORDS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12875,7 +12875,7 @@ PyTypeObject PyNs3WimaxHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxHelper(arg0)\nWimaxHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxHelper__tp_clear,             /* tp_clear */
@@ -13593,7 +13593,7 @@ PyTypeObject PyNs3ClassificationRuleVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ClassificationRuleVectorTlvValue(arg0)\nClassificationRuleVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3ClassificationRuleVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ClassificationRuleVectorTlvValue__tp_clear,             /* tp_clear */
@@ -13787,7 +13787,7 @@ PyTypeObject PyNs3CsParamVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CsParamVectorTlvValue(arg0)\nCsParamVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3CsParamVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CsParamVectorTlvValue__tp_clear,             /* tp_clear */
@@ -14031,7 +14031,7 @@ PyTypeObject PyNs3Ipv4AddressTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4AddressTlvValue(arg0)\nIpv4AddressTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4AddressTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4AddressTlvValue__tp_clear,             /* tp_clear */
@@ -14601,7 +14601,7 @@ PyTypeObject PyNs3MacHeaderType_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MacHeaderType(arg0)\nMacHeaderType(type)\nMacHeaderType()",                        /* Documentation string */
     (traverseproc)PyNs3MacHeaderType__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MacHeaderType__tp_clear,             /* tp_clear */
@@ -14945,7 +14945,7 @@ PyTypeObject PyNs3ManagementMessageType_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ManagementMessageType(arg0)\nManagementMessageType(type)\nManagementMessageType()",                        /* Documentation string */
     (traverseproc)PyNs3ManagementMessageType__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ManagementMessageType__tp_clear,             /* tp_clear */
@@ -15296,7 +15296,7 @@ PyTypeObject PyNs3OfdmDownlinkFramePrefix_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OfdmDownlinkFramePrefix(arg0)\nOfdmDownlinkFramePrefix()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmDownlinkFramePrefix__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmDownlinkFramePrefix__tp_clear,             /* tp_clear */
@@ -15930,7 +15930,7 @@ PyTypeObject PyNs3OfdmUcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OfdmUcdChannelEncodings(arg0)\nOfdmUcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmUcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmUcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -16182,7 +16182,7 @@ PyTypeObject PyNs3PortRangeTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PortRangeTlvValue(arg0)\nPortRangeTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3PortRangeTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PortRangeTlvValue__tp_clear,             /* tp_clear */
@@ -16678,7 +16678,7 @@ PyTypeObject PyNs3PriorityUlJob_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PriorityUlJob(arg0)\nPriorityUlJob()",                        /* Documentation string */
     (traverseproc)PyNs3PriorityUlJob__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PriorityUlJob__tp_clear,             /* tp_clear */
@@ -16925,7 +16925,7 @@ PyTypeObject PyNs3ProtocolTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ProtocolTlvValue(arg0)\nProtocolTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3ProtocolTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ProtocolTlvValue__tp_clear,             /* tp_clear */
@@ -17314,7 +17314,7 @@ PyTypeObject PyNs3RngReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RngReq(arg0)\nRngReq()",                        /* Documentation string */
     (traverseproc)PyNs3RngReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RngReq__tp_clear,             /* tp_clear */
@@ -18059,7 +18059,7 @@ PyTypeObject PyNs3RngRsp_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RngRsp(arg0)\nRngRsp()",                        /* Documentation string */
     (traverseproc)PyNs3RngRsp__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RngRsp__tp_clear,             /* tp_clear */
@@ -18358,7 +18358,7 @@ PyTypeObject PyNs3SSManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SSManager(arg0)\nSSManager()",                        /* Documentation string */
     (traverseproc)PyNs3SSManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SSManager__tp_clear,             /* tp_clear */
@@ -18391,22 +18391,6 @@ PyTypeObject PyNs3SSManager_Type = {
 
 
 PyObject *
-PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3ServiceFlowManager *self)
-{
-    PyObject *py_retval;
-    PyNs3ServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3ServiceFlowManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ServiceFlowManager *self)
 {
     PyObject *py_retval;
@@ -18417,6 +18401,22 @@ PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ServiceFlow
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3ServiceFlowManager *self)
+{
+    PyObject *py_retval;
+    PyNs3ServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3ServiceFlowManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18827,8 +18827,8 @@ static PyMethodDef PyNs3ServiceFlowManager_methods[] = {
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3ServiceFlowManager_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetNrServiceFlows", (PyCFunction) _wrap_PyNs3ServiceFlowManager_GetNrServiceFlows, METH_NOARGS, "GetNrServiceFlows()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ServiceFlowManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -18896,7 +18896,7 @@ PyTypeObject PyNs3ServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ServiceFlowManager(arg0)\nServiceFlowManager()",                        /* Documentation string */
     (traverseproc)PyNs3ServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ServiceFlowManager__tp_clear,             /* tp_clear */
@@ -19090,7 +19090,7 @@ PyTypeObject PyNs3SfVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SfVectorTlvValue(arg0)\nSfVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3SfVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SfVectorTlvValue__tp_clear,             /* tp_clear */
@@ -19123,22 +19123,6 @@ PyTypeObject PyNs3SfVectorTlvValue_Type = {
 
 
 PyObject *
-PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3SsServiceFlowManager *self)
-{
-    PyObject *py_retval;
-    PyNs3SsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3SsServiceFlowManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SsServiceFlowManager *self)
 {
     PyObject *py_retval;
@@ -19149,6 +19133,22 @@ PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SsService
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3SsServiceFlowManager *self)
+{
+    PyObject *py_retval;
+    PyNs3SsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3SsServiceFlowManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -19737,8 +19737,8 @@ static PyMethodDef PyNs3SsServiceFlowManager_methods[] = {
     {(char *) "ProcessDsaRsp", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ProcessDsaRsp, METH_VARARGS|METH_KEYWORDS, "ProcessDsaRsp(dsaRsp)\n\ntype: dsaRsp: ns3::DsaRsp const &" },
     {(char *) "ScheduleDsaReq", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ScheduleDsaReq, METH_VARARGS|METH_KEYWORDS, "ScheduleDsaReq(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow const *" },
     {(char *) "SetMaxDsaReqRetries", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_SetMaxDsaReqRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxDsaReqRetries(maxDsaReqRetries)\n\ntype: maxDsaReqRetries: uint8_t" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SsServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -19806,7 +19806,7 @@ PyTypeObject PyNs3SsServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SsServiceFlowManager(device)\nSsServiceFlowManager(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3SsServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SsServiceFlowManager__tp_clear,             /* tp_clear */
@@ -20143,7 +20143,7 @@ PyTypeObject PyNs3Tlv_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Tlv(type, length, value)\nTlv(tlv)\nTlv()",                        /* Documentation string */
     (traverseproc)PyNs3Tlv__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Tlv__tp_clear,             /* tp_clear */
@@ -20695,7 +20695,7 @@ PyTypeObject PyNs3Ucd_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ucd(arg0)\nUcd()",                        /* Documentation string */
     (traverseproc)PyNs3Ucd__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ucd__tp_clear,             /* tp_clear */
@@ -21111,7 +21111,7 @@ PyTypeObject PyNs3UlJob_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UlJob(arg0)\nUlJob()",                        /* Documentation string */
     (traverseproc)PyNs3UlJob__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UlJob__tp_clear,             /* tp_clear */
@@ -21482,7 +21482,7 @@ PyTypeObject PyNs3UlMap_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UlMap(arg0)\nUlMap()",                        /* Documentation string */
     (traverseproc)PyNs3UlMap__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UlMap__tp_clear,             /* tp_clear */
@@ -21975,7 +21975,7 @@ PyTypeObject PyNs3UplinkScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UplinkScheduler(arg0)\nUplinkScheduler(bs)\nUplinkScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkScheduler__tp_clear,             /* tp_clear */
@@ -22420,7 +22420,7 @@ PyTypeObject PyNs3UplinkSchedulerMBQoS_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UplinkSchedulerMBQoS(arg0)\nUplinkSchedulerMBQoS(time)\nUplinkSchedulerMBQoS()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerMBQoS__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerMBQoS__tp_clear,             /* tp_clear */
@@ -22751,7 +22751,7 @@ PyTypeObject PyNs3UplinkSchedulerRtps_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UplinkSchedulerRtps(arg0)\nUplinkSchedulerRtps(bs)\nUplinkSchedulerRtps()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerRtps__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerRtps__tp_clear,             /* tp_clear */
@@ -23082,7 +23082,7 @@ PyTypeObject PyNs3UplinkSchedulerSimple_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UplinkSchedulerSimple(arg0)\nUplinkSchedulerSimple(bs)\nUplinkSchedulerSimple()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerSimple__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerSimple__tp_clear,             /* tp_clear */
@@ -23115,22 +23115,6 @@ PyTypeObject PyNs3UplinkSchedulerSimple_Type = {
 
 
 PyObject *
-PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize(PyNs3WimaxConnection *self)
-{
-    PyObject *py_retval;
-    PyNs3WimaxConnection__PythonHelper *helper = dynamic_cast< PyNs3WimaxConnection__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxConnection *self)
 {
     PyObject *py_retval;
@@ -23141,6 +23125,22 @@ PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxConnectio
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize(PyNs3WimaxConnection *self)
+{
+    PyObject *py_retval;
+    PyNs3WimaxConnection__PythonHelper *helper = dynamic_cast< PyNs3WimaxConnection__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23868,8 +23868,8 @@ static PyMethodDef PyNs3WimaxConnection_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxConnection_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetTypeStr", (PyCFunction) _wrap_PyNs3WimaxConnection_GetTypeStr, METH_NOARGS, "GetTypeStr()\n\n" },
     {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3WimaxConnection_HasPackets, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxConnection__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -23937,7 +23937,7 @@ PyTypeObject PyNs3WimaxConnection_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxConnection(cid, type)\nWimaxConnection(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3WimaxConnection__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxConnection__tp_clear,             /* tp_clear */
@@ -24803,7 +24803,7 @@ PyTypeObject PyNs3WimaxMacQueue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxMacQueue(maxSize)\nWimaxMacQueue(arg0)\nWimaxMacQueue()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxMacQueue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxMacQueue__tp_clear,             /* tp_clear */
@@ -25588,7 +25588,7 @@ PyTypeObject PyNs3WimaxMacToMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxMacToMacHeader(arg0)\nWimaxMacToMacHeader(len)\nWimaxMacToMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxMacToMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxMacToMacHeader__tp_clear,             /* tp_clear */
@@ -26736,7 +26736,7 @@ PyTypeObject PyNs3WimaxPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxPhy(arg0)\nWimaxPhy()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxPhy__tp_clear,             /* tp_clear */
@@ -26985,7 +26985,7 @@ PyTypeObject PyNs3BSScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BSScheduler(arg0)\nBSScheduler(bs)\nBSScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3BSScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSScheduler__tp_clear,             /* tp_clear */
@@ -27256,7 +27256,7 @@ PyTypeObject PyNs3BSSchedulerRtps_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BSSchedulerRtps(arg0)\nBSSchedulerRtps(bs)\nBSSchedulerRtps()",                        /* Documentation string */
     (traverseproc)PyNs3BSSchedulerRtps__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSSchedulerRtps__tp_clear,             /* tp_clear */
@@ -27527,7 +27527,7 @@ PyTypeObject PyNs3BSSchedulerSimple_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BSSchedulerSimple(arg0)\nBSSchedulerSimple(bs)\nBSSchedulerSimple()",                        /* Documentation string */
     (traverseproc)PyNs3BSSchedulerSimple__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSSchedulerSimple__tp_clear,             /* tp_clear */
@@ -28017,7 +28017,7 @@ PyTypeObject PyNs3BandwidthRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BandwidthRequestHeader(arg0)\nBandwidthRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3BandwidthRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BandwidthRequestHeader__tp_clear,             /* tp_clear */
@@ -28050,22 +28050,6 @@ PyTypeObject PyNs3BandwidthRequestHeader_Type = {
 
 
 PyObject *
-PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3BsServiceFlowManager *self)
-{
-    PyObject *py_retval;
-    PyNs3BsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3BsServiceFlowManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsServiceFlowManager *self)
 {
     PyObject *py_retval;
@@ -28076,6 +28060,22 @@ PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsService
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3BsServiceFlowManager *self)
+{
+    PyObject *py_retval;
+    PyNs3BsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3BsServiceFlowManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28559,8 +28559,8 @@ static PyMethodDef PyNs3BsServiceFlowManager_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "ProcessDsaAck", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_ProcessDsaAck, METH_VARARGS|METH_KEYWORDS, "ProcessDsaAck(dsaAck, cid)\n\ntype: dsaAck: ns3::DsaAck const &\ntype: cid: ns3::Cid" },
     {(char *) "SetMaxDsaRspRetries", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_SetMaxDsaRspRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxDsaRspRetries(maxDsaRspRetries)\n\ntype: maxDsaRspRetries: uint8_t" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BsServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -28628,7 +28628,7 @@ PyTypeObject PyNs3BsServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BsServiceFlowManager(device)\nBsServiceFlowManager(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3BsServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BsServiceFlowManager__tp_clear,             /* tp_clear */
@@ -28661,22 +28661,6 @@ PyTypeObject PyNs3BsServiceFlowManager_Type = {
 
 
 PyObject *
-PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize(PyNs3ConnectionManager *self)
-{
-    PyObject *py_retval;
-    PyNs3ConnectionManager__PythonHelper *helper = dynamic_cast< PyNs3ConnectionManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConnectionManager *self)
 {
     PyObject *py_retval;
@@ -28687,6 +28671,22 @@ PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConnectionMa
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize(PyNs3ConnectionManager *self)
+{
+    PyObject *py_retval;
+    PyNs3ConnectionManager__PythonHelper *helper = dynamic_cast< PyNs3ConnectionManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -29247,8 +29247,8 @@ static PyMethodDef PyNs3ConnectionManager_methods[] = {
     {(char *) "GetNPackets", (PyCFunction) _wrap_PyNs3ConnectionManager_GetNPackets, METH_VARARGS|METH_KEYWORDS, "GetNPackets(type, schedulingType)\n\ntype: type: ns3::Cid::Type\ntype: schedulingType: ns3::ServiceFlow::SchedulingType" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConnectionManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3ConnectionManager_HasPackets, METH_NOARGS, "HasPackets()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConnectionManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -29316,7 +29316,7 @@ PyTypeObject PyNs3ConnectionManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConnectionManager(arg0)\nConnectionManager()",                        /* Documentation string */
     (traverseproc)PyNs3ConnectionManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConnectionManager__tp_clear,             /* tp_clear */
@@ -29728,7 +29728,7 @@ PyTypeObject PyNs3Dcd_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Dcd(arg0)\nDcd()",                        /* Documentation string */
     (traverseproc)PyNs3Dcd__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dcd__tp_clear,             /* tp_clear */
@@ -30103,7 +30103,7 @@ PyTypeObject PyNs3DlMap_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DlMap(arg0)\nDlMap()",                        /* Documentation string */
     (traverseproc)PyNs3DlMap__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DlMap__tp_clear,             /* tp_clear */
@@ -30444,7 +30444,7 @@ PyTypeObject PyNs3DsaAck_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsaAck(arg0)\nDsaAck()",                        /* Documentation string */
     (traverseproc)PyNs3DsaAck__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaAck__tp_clear,             /* tp_clear */
@@ -30879,7 +30879,7 @@ PyTypeObject PyNs3DsaReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsaReq(arg0)\nDsaReq(sf)\nDsaReq()",                        /* Documentation string */
     (traverseproc)PyNs3DsaReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaReq__tp_clear,             /* tp_clear */
@@ -31321,7 +31321,7 @@ PyTypeObject PyNs3DsaRsp_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsaRsp(arg0)\nDsaRsp()",                        /* Documentation string */
     (traverseproc)PyNs3DsaRsp__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaRsp__tp_clear,             /* tp_clear */
@@ -31662,7 +31662,7 @@ PyTypeObject PyNs3FragmentationSubheader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FragmentationSubheader(arg0)\nFragmentationSubheader()",                        /* Documentation string */
     (traverseproc)PyNs3FragmentationSubheader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FragmentationSubheader__tp_clear,             /* tp_clear */
@@ -32226,7 +32226,7 @@ PyTypeObject PyNs3GenericMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GenericMacHeader(arg0)\nGenericMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3GenericMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GenericMacHeader__tp_clear,             /* tp_clear */
@@ -32602,7 +32602,7 @@ PyTypeObject PyNs3GrantManagementSubheader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GrantManagementSubheader(arg0)\nGrantManagementSubheader()",                        /* Documentation string */
     (traverseproc)PyNs3GrantManagementSubheader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GrantManagementSubheader__tp_clear,             /* tp_clear */
@@ -32799,7 +32799,7 @@ PyTypeObject PyNs3IpcsClassifier_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "IpcsClassifier(arg0)\nIpcsClassifier()",                        /* Documentation string */
     (traverseproc)PyNs3IpcsClassifier__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3IpcsClassifier__tp_clear,             /* tp_clear */
@@ -33386,7 +33386,7 @@ PyTypeObject PyNs3SimpleOfdmWimaxPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SimpleOfdmWimaxPhy(tracesPath)\nSimpleOfdmWimaxPhy(arg0)\nSimpleOfdmWimaxPhy()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleOfdmWimaxPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleOfdmWimaxPhy__tp_clear,             /* tp_clear */
@@ -33419,22 +33419,6 @@ PyTypeObject PyNs3SimpleOfdmWimaxPhy_Type = {
 
 
 PyObject *
-PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3WimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3WimaxChannel *self)
 {
     PyObject *py_retval;
@@ -33451,22 +33435,6 @@ PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3WimaxChannel *self)
 }
 
 PyObject *
-PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxChannel *self)
 {
     PyObject *py_retval;
@@ -33477,6 +33445,38 @@ PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxChannel *sel
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3WimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -34248,10 +34248,10 @@ static PyMethodDef PyNs3WimaxChannel_methods[] = {
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3WimaxChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3WimaxChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -34317,7 +34317,7 @@ PyTypeObject PyNs3WimaxChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxChannel(arg0)\nWimaxChannel()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxChannel__tp_clear,             /* tp_clear */
@@ -34350,22 +34350,6 @@ PyTypeObject PyNs3WimaxChannel_Type = {
 
 
 PyObject *
-PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3WimaxNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3WimaxNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WimaxNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxNetDevice *self)
 {
     PyObject *py_retval;
@@ -34376,6 +34360,22 @@ PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxNetDevice 
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3WimaxNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3WimaxNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WimaxNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -38183,8 +38183,8 @@ static PyMethodDef PyNs3WimaxNetDevice_methods[] = {
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
     {(char *) "IsPromisc", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsPromisc, METH_NOARGS, "IsPromisc()\n\n" },
     {(char *) "NotifyPromiscTrace", (PyCFunction) _wrap_PyNs3WimaxNetDevice_NotifyPromiscTrace, METH_VARARGS|METH_KEYWORDS, "NotifyPromiscTrace(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -38251,7 +38251,7 @@ PyTypeObject PyNs3WimaxNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WimaxNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxNetDevice__tp_clear,             /* tp_clear */
@@ -38284,22 +38284,6 @@ PyTypeObject PyNs3WimaxNetDevice_Type = {
 
 
 PyObject *
-PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3BaseStationNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3BaseStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3BaseStationNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BaseStationNetDevice *self)
 {
     PyObject *py_retval;
@@ -38310,6 +38294,22 @@ PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BaseStati
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3BaseStationNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3BaseStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3BaseStationNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -41453,8 +41453,8 @@ static PyMethodDef PyNs3BaseStationNetDevice_methods[] = {
     {(char *) "MarkRangingOppStart", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_MarkRangingOppStart, METH_VARARGS|METH_KEYWORDS, "MarkRangingOppStart(rangingOppStartTime)\n\ntype: rangingOppStartTime: ns3::Time" },
     {(char *) "GetServiceFlowManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetServiceFlowManager, METH_NOARGS, "GetServiceFlowManager()\n\n" },
     {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetServiceFlowManager, METH_VARARGS|METH_KEYWORDS, "SetServiceFlowManager(arg0)\n\ntype: arg0: ns3::Ptr< ns3::BsServiceFlowManager >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -41521,7 +41521,7 @@ PyTypeObject PyNs3BaseStationNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BaseStationNetDevice(node, phy, uplinkScheduler, bsScheduler)\nBaseStationNetDevice(node, phy)\nBaseStationNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3BaseStationNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BaseStationNetDevice__tp_clear,             /* tp_clear */
@@ -41686,22 +41686,6 @@ PyTypeObject PyNs3CallbackImpl__Void_Ns3Ptr__lt__const_ns3Packet__gt___Ns3Mac48A
 
 
 PyObject *
-PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3SimpleOfdmWimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3SimpleOfdmWimaxChannel *self)
 {
     PyObject *py_retval;
@@ -41718,22 +41702,6 @@ PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3SimpleOfdmWimaxC
 }
 
 PyObject *
-PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SimpleOfdmWimaxChannel *self)
 {
     PyObject *py_retval;
@@ -41744,6 +41712,38 @@ PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SimpleO
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3SimpleOfdmWimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -42538,10 +42538,10 @@ static PyMethodDef PyNs3SimpleOfdmWimaxChannel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Send", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_Send, METH_VARARGS|METH_KEYWORDS, "Send(BlockTime, burstSize, phy, isFirstBlock, isLastBlock, frequency, modulationType, direction, txPowerDbm, burst)\n\ntype: BlockTime: ns3::Time\ntype: burstSize: uint32_t\ntype: phy: ns3::Ptr< ns3::WimaxPhy >\ntype: isFirstBlock: bool\ntype: isLastBlock: bool\ntype: frequency: uint64_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t\ntype: txPowerDbm: double\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
     {(char *) "SetPropagationModel", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_SetPropagationModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationModel(propModel)\n\ntype: propModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -42608,7 +42608,7 @@ PyTypeObject PyNs3SimpleOfdmWimaxChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SimpleOfdmWimaxChannel(propModel)\nSimpleOfdmWimaxChannel(arg0)\nSimpleOfdmWimaxChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleOfdmWimaxChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleOfdmWimaxChannel__tp_clear,             /* tp_clear */
@@ -42641,22 +42641,6 @@ PyTypeObject PyNs3SimpleOfdmWimaxChannel_Type = {
 
 
 PyObject *
-PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3SubscriberStationNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3SubscriberStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3SubscriberStationNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SubscriberStationNetDevice *self)
 {
     PyObject *py_retval;
@@ -42667,6 +42651,22 @@ PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Sub
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3SubscriberStationNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3SubscriberStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3SubscriberStationNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -45850,8 +45850,8 @@ static PyMethodDef PyNs3SubscriberStationNetDevice_methods[] = {
     {(char *) "SetIpcsPacketClassifier", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIpcsPacketClassifier, METH_VARARGS|METH_KEYWORDS, "SetIpcsPacketClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::IpcsClassifier >" },
     {(char *) "GetServiceFlowManager", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetServiceFlowManager, METH_NOARGS, "GetServiceFlowManager()\n\n" },
     {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetServiceFlowManager, METH_VARARGS|METH_KEYWORDS, "SetServiceFlowManager(sfm)\n\ntype: sfm: ns3::Ptr< ns3::SsServiceFlowManager >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -45918,7 +45918,7 @@ PyTypeObject PyNs3SubscriberStationNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SubscriberStationNetDevice(node, phy)\nSubscriberStationNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3SubscriberStationNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SubscriberStationNetDevice__tp_clear,             /* tp_clear */

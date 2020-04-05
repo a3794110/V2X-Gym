@@ -4369,7 +4369,7 @@ PyTypeObject PyNs3WaveHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WaveHelper(arg0)\nWaveHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WaveHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveHelper__tp_clear,             /* tp_clear */
@@ -4688,7 +4688,7 @@ PyTypeObject PyNs3HigherLayerTxVectorTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "HigherLayerTxVectorTag(txVector, adaptable)\nHigherLayerTxVectorTag(arg0)\nHigherLayerTxVectorTag()",                        /* Documentation string */
     (traverseproc)PyNs3HigherLayerTxVectorTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HigherLayerTxVectorTag__tp_clear,             /* tp_clear */
@@ -5015,7 +5015,7 @@ PyTypeObject PyNs3NqosWaveMacHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "NqosWaveMacHelper(arg0)\nNqosWaveMacHelper()",                        /* Documentation string */
     (traverseproc)PyNs3NqosWaveMacHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NqosWaveMacHelper__tp_clear,             /* tp_clear */
@@ -5342,7 +5342,7 @@ PyTypeObject PyNs3QosWaveMacHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "QosWaveMacHelper(arg0)\nQosWaveMacHelper()",                        /* Documentation string */
     (traverseproc)PyNs3QosWaveMacHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QosWaveMacHelper__tp_clear,             /* tp_clear */
@@ -5808,7 +5808,7 @@ PyTypeObject PyNs3VendorSpecificActionHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "VendorSpecificActionHeader(arg0)\nVendorSpecificActionHeader()",                        /* Documentation string */
     (traverseproc)PyNs3VendorSpecificActionHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3VendorSpecificActionHeader__tp_clear,             /* tp_clear */
@@ -6398,7 +6398,7 @@ PyTypeObject PyNs3VsaManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "VsaManager(arg0)\nVsaManager()",                        /* Documentation string */
     (traverseproc)PyNs3VsaManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3VsaManager__tp_clear,             /* tp_clear */
@@ -6909,7 +6909,7 @@ PyTypeObject PyNs3WaveBsmStats_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WaveBsmStats(arg0)\nWaveBsmStats()",                        /* Documentation string */
     (traverseproc)PyNs3WaveBsmStats__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveBsmStats__tp_clear,             /* tp_clear */
@@ -7227,7 +7227,7 @@ PyTypeObject PyNs3Wifi80211pHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Wifi80211pHelper(arg0)\nWifi80211pHelper()",                        /* Documentation string */
     (traverseproc)PyNs3Wifi80211pHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Wifi80211pHelper__tp_clear,             /* tp_clear */
@@ -7731,7 +7731,7 @@ PyTypeObject PyNs3YansWavePhyHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "YansWavePhyHelper(arg0)\nYansWavePhyHelper()",                        /* Documentation string */
     (traverseproc)PyNs3YansWavePhyHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3YansWavePhyHelper__tp_clear,             /* tp_clear */
@@ -7780,6 +7780,22 @@ PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BsmApp
 }
 
 PyObject *
+PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize(PyNs3BsmApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3BsmApplication__PythonHelper *helper = dynamic_cast< PyNs3BsmApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Application is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3BsmApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsmApplication *self)
 {
     PyObject *py_retval;
@@ -7806,22 +7822,6 @@ PyNs3BsmApplication__PythonHelper::_wrap_DoDispose(PyNs3BsmApplication *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize(PyNs3BsmApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3BsmApplication__PythonHelper *helper = dynamic_cast< PyNs3BsmApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Application is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8362,9 +8362,9 @@ static PyMethodDef PyNs3BsmApplication_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3BsmApplication_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(streamIndex)\n\ntype: streamIndex: int64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BsmApplication_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BsmApplication__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8431,7 +8431,7 @@ PyTypeObject PyNs3BsmApplication_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "BsmApplication(arg0)\nBsmApplication()",                        /* Documentation string */
     (traverseproc)PyNs3BsmApplication__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BsmApplication__tp_clear,             /* tp_clear */
@@ -9472,7 +9472,7 @@ PyTypeObject PyNs3ChannelCoordinator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ChannelCoordinator(arg0)\nChannelCoordinator()",                        /* Documentation string */
     (traverseproc)PyNs3ChannelCoordinator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ChannelCoordinator__tp_clear,             /* tp_clear */
@@ -9875,7 +9875,7 @@ PyTypeObject PyNs3ChannelManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ChannelManager(arg0)\nChannelManager()",                        /* Documentation string */
     (traverseproc)PyNs3ChannelManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ChannelManager__tp_clear,             /* tp_clear */
@@ -9924,6 +9924,22 @@ PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Chan
 }
 
 PyObject *
+PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize(PyNs3ChannelScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3ChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3ChannelScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class ChannelScheduler is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelScheduler *self)
 {
     PyObject *py_retval;
@@ -9950,22 +9966,6 @@ PyNs3ChannelScheduler__PythonHelper::_wrap_DoDispose(PyNs3ChannelScheduler *self
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize(PyNs3ChannelScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3ChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3ChannelScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class ChannelScheduler is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10901,9 +10901,9 @@ static PyMethodDef PyNs3ChannelScheduler_methods[] = {
     {(char *) "StartSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StartSch, METH_VARARGS|METH_KEYWORDS, "StartSch(schInfo)\n\ntype: schInfo: ns3::SchInfo const &" },
     {(char *) "StopSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StopSch, METH_VARARGS|METH_KEYWORDS, "StopSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10969,7 +10969,7 @@ PyTypeObject PyNs3ChannelScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ChannelScheduler(arg0)\nChannelScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3ChannelScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ChannelScheduler__tp_clear,             /* tp_clear */
@@ -11950,7 +11950,7 @@ PyTypeObject PyNs3DefaultChannelScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DefaultChannelScheduler(arg0)\nDefaultChannelScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3DefaultChannelScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DefaultChannelScheduler__tp_clear,             /* tp_clear */
@@ -12383,22 +12383,6 @@ PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveMacLow
 }
 
 PyObject *
-PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveMacLow *self)
-{
-    PyObject *py_retval;
-    PyNs3WaveMacLow__PythonHelper *helper = dynamic_cast< PyNs3WaveMacLow__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize(PyNs3WaveMacLow *self)
 {
     PyObject *py_retval;
@@ -12409,6 +12393,22 @@ PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize(PyNs3WaveMacLow *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveMacLow *self)
+{
+    PyObject *py_retval;
+    PyNs3WaveMacLow__PythonHelper *helper = dynamic_cast< PyNs3WaveMacLow__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13063,8 +13063,8 @@ static PyMethodDef PyNs3WaveMacLow_methods[] = {
     {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3WaveMacLow_SetWaveNetDevice, METH_VARARGS|METH_KEYWORDS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
     {(char *) "StartTransmission", (PyCFunction) _wrap_PyNs3WaveMacLow_StartTransmission, METH_VARARGS|METH_KEYWORDS, "StartTransmission(packet, hdr, parameters, txop)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: hdr: ns3::WifiMacHeader const *\ntype: parameters: ns3::MacLowTransmissionParameters\ntype: txop: ns3::Ptr< ns3::Txop >" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveMacLow__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13131,7 +13131,7 @@ PyTypeObject PyNs3WaveMacLow_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WaveMacLow(arg0)\nWaveMacLow()",                        /* Documentation string */
     (traverseproc)PyNs3WaveMacLow__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveMacLow__tp_clear,             /* tp_clear */
@@ -16011,7 +16011,7 @@ PyTypeObject PyNs3WaveNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "WaveNetDevice(arg0)\nWaveNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3WaveNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveNetDevice__tp_clear,             /* tp_clear */
@@ -16044,48 +16044,6 @@ PyTypeObject PyNs3WaveNetDevice_Type = {
 
 
 PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3OcbWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Packet *aggregatedPacket;
-    ns3::Packet *aggregatedPacket_ptr;
-    PyNs3WifiMacHeader *hdr;
-    ns3::WifiMacHeader *hdr_ptr;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
-    hdr_ptr = (hdr ? hdr->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -16101,22 +16059,6 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk(PyNs3OcbWifiMac *self, PyObject *args,
         return NULL;
     }
     helper->TxOk__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose(PyNs3OcbWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16162,6 +16104,59 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OcbWifiMac
 }
 
 PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3OcbWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacHeader *hdr;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method TxFailed of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->TxFailed__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose(PyNs3OcbWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OcbWifiMac *self)
 {
     PyObject *py_retval;
@@ -16199,21 +16194,26 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3OcbWifiMac *se
 }
 
 PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
+    PyNs3Packet *aggregatedPacket;
+    ns3::Packet *aggregatedPacket_ptr;
     PyNs3WifiMacHeader *hdr;
+    ns3::WifiMacHeader *hdr_ptr;
     PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"hdr", NULL};
+    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
         return NULL;
     }
+    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
+    hdr_ptr = (hdr ? hdr->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method TxFailed of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->TxFailed__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
+    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -19007,15 +19007,15 @@ static PyMethodDef PyNs3OcbWifiMac_methods[] = {
     {(char *) "MakeVirtualBusy", (PyCFunction) _wrap_PyNs3OcbWifiMac_MakeVirtualBusy, METH_VARARGS|METH_KEYWORDS, "MakeVirtualBusy(duration)\n\ntype: duration: ns3::Time" },
     {(char *) "CancleTx", (PyCFunction) _wrap_PyNs3OcbWifiMac_CancleTx, METH_VARARGS|METH_KEYWORDS, "CancleTx(ac)\n\ntype: ac: ns3::AcIndex" },
     {(char *) "Reset", (PyCFunction) _wrap_PyNs3OcbWifiMac_Reset, METH_NOARGS, "Reset()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "TxOk", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "SetQosSupported", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_SetQosSupported, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "TxFailed", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "TxFailed", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_VARARGS|METH_KEYWORDS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -19081,7 +19081,7 @@ PyTypeObject PyNs3OcbWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "OcbWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3OcbWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OcbWifiMac__tp_clear,             /* tp_clear */

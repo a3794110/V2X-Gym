@@ -2212,6 +2212,38 @@ PyTypeObject PyNs3TrafficControlHelper_Type = {
 
 
 PyObject *
+PyNs3PacketFilter__PythonHelper::_wrap_DoInitialize(PyNs3PacketFilter *self)
+{
+    PyObject *py_retval;
+    PyNs3PacketFilter__PythonHelper *helper = dynamic_cast< PyNs3PacketFilter__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PacketFilter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PacketFilter *self)
+{
+    PyObject *py_retval;
+    PyNs3PacketFilter__PythonHelper *helper = dynamic_cast< PyNs3PacketFilter__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PacketFilter__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PacketFilter *self)
 {
     PyObject *py_retval;
@@ -2238,38 +2270,6 @@ PyNs3PacketFilter__PythonHelper::_wrap_DoDispose(PyNs3PacketFilter *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PacketFilter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PacketFilter *self)
-{
-    PyObject *py_retval;
-    PyNs3PacketFilter__PythonHelper *helper = dynamic_cast< PyNs3PacketFilter__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PacketFilter__PythonHelper::_wrap_DoInitialize(PyNs3PacketFilter *self)
-{
-    PyObject *py_retval;
-    PyNs3PacketFilter__PythonHelper *helper = dynamic_cast< PyNs3PacketFilter__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2845,10 +2845,10 @@ _wrap_PyNs3PacketFilter_GetTypeId(void)
 static PyMethodDef PyNs3PacketFilter_methods[] = {
     {(char *) "Classify", (PyCFunction) _wrap_PyNs3PacketFilter_Classify, METH_VARARGS|METH_KEYWORDS, "Classify(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PacketFilter_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -2914,7 +2914,7 @@ PyTypeObject PyNs3PacketFilter_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PacketFilter(arg0)\nPacketFilter()",                        /* Documentation string */
     (traverseproc)PyNs3PacketFilter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PacketFilter__tp_clear,             /* tp_clear */
@@ -2945,6 +2945,102 @@ PyTypeObject PyNs3PacketFilter_Type = {
 
 
 
+
+PyObject *
+PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue(PyNs3QueueDisc *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3QueueDiscItem *item;
+    ns3::QueueDiscItem *item_ptr;
+    char const *reason;
+    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
+    const char *keywords[] = {"item", "reason", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!s", (char **) keywords, &PyNs3QueueDiscItem_Type, &item, &reason)) {
+        return NULL;
+    }
+    item_ptr = (item ? item->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DropAfterDequeue of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DropAfterDequeue__parent_caller(ns3::Ptr< ns3::QueueDiscItem  > (item_ptr), reason);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue(PyNs3QueueDisc *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3QueueDiscItem *item;
+    ns3::QueueDiscItem *item_ptr;
+    char const *reason;
+    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
+    const char *keywords[] = {"item", "reason", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!s", (char **) keywords, &PyNs3QueueDiscItem_Type, &item, &reason)) {
+        return NULL;
+    }
+    item_ptr = (item ? item->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DropBeforeEnqueue of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DropBeforeEnqueue__parent_caller(ns3::Ptr< ns3::QueueDiscItem  > (item_ptr), reason);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3QueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3QueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3QueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3QueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3QueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
 
 PyObject *
 PyNs3QueueDisc__PythonHelper::_wrap_Mark(PyNs3QueueDisc *self, PyObject *args, PyObject *kwargs)
@@ -2981,102 +3077,6 @@ PyNs3QueueDisc__PythonHelper::_wrap_DoDispose(PyNs3QueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3QueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue(PyNs3QueueDisc *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3QueueDiscItem *item;
-    ns3::QueueDiscItem *item_ptr;
-    char const *reason;
-    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
-    const char *keywords[] = {"item", "reason", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!s", (char **) keywords, &PyNs3QueueDiscItem_Type, &item, &reason)) {
-        return NULL;
-    }
-    item_ptr = (item ? item->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DropBeforeEnqueue of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DropBeforeEnqueue__parent_caller(ns3::Ptr< ns3::QueueDiscItem  > (item_ptr), reason);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue(PyNs3QueueDisc *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3QueueDiscItem *item;
-    ns3::QueueDiscItem *item_ptr;
-    char const *reason;
-    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
-    const char *keywords[] = {"item", "reason", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!s", (char **) keywords, &PyNs3QueueDiscItem_Type, &item, &reason)) {
-        return NULL;
-    }
-    item_ptr = (item ? item->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DropAfterDequeue of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DropAfterDequeue__parent_caller(ns3::Ptr< ns3::QueueDiscItem  > (item_ptr), reason);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3QueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3QueueDisc__PythonHelper *helper = dynamic_cast< PyNs3QueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4376,13 +4376,13 @@ static PyMethodDef PyNs3QueueDisc_methods[] = {
     {(char *) "Run", (PyCFunction) _wrap_PyNs3QueueDisc_Run, METH_NOARGS, "Run()\n\n" },
     {(char *) "SetMaxSize", (PyCFunction) _wrap_PyNs3QueueDisc_SetMaxSize, METH_VARARGS|METH_KEYWORDS, "SetMaxSize(size)\n\ntype: size: ns3::QueueSize" },
     {(char *) "SetQuota", (PyCFunction) _wrap_PyNs3QueueDisc_SetQuota, METH_VARARGS|METH_KEYWORDS, "SetQuota(quota)\n\ntype: quota: uint32_t const" },
+    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DropBeforeEnqueue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "Mark", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_Mark, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DropBeforeEnqueue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -4448,7 +4448,7 @@ PyTypeObject PyNs3QueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "QueueDisc(policy, unit)\nQueueDisc(policy)",                        /* Documentation string */
     (traverseproc)PyNs3QueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QueueDisc__tp_clear,             /* tp_clear */
@@ -5382,6 +5382,38 @@ PyTypeObject PyNs3QueueDiscStats_Type = {
 
 
 PyObject *
+PyNs3QueueDiscClass__PythonHelper::_wrap_DoInitialize(PyNs3QueueDiscClass *self)
+{
+    PyObject *py_retval;
+    PyNs3QueueDiscClass__PythonHelper *helper = dynamic_cast< PyNs3QueueDiscClass__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QueueDiscClass *self)
+{
+    PyObject *py_retval;
+    PyNs3QueueDiscClass__PythonHelper *helper = dynamic_cast< PyNs3QueueDiscClass__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3QueueDiscClass *self)
 {
     PyObject *py_retval;
@@ -5408,38 +5440,6 @@ PyNs3QueueDiscClass__PythonHelper::_wrap_DoDispose(PyNs3QueueDiscClass *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QueueDiscClass *self)
-{
-    PyObject *py_retval;
-    PyNs3QueueDiscClass__PythonHelper *helper = dynamic_cast< PyNs3QueueDiscClass__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3QueueDiscClass__PythonHelper::_wrap_DoInitialize(PyNs3QueueDiscClass *self)
-{
-    PyObject *py_retval;
-    PyNs3QueueDiscClass__PythonHelper *helper = dynamic_cast< PyNs3QueueDiscClass__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5860,10 +5860,10 @@ static PyMethodDef PyNs3QueueDiscClass_methods[] = {
     {(char *) "GetQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscClass_GetQueueDisc, METH_NOARGS, "GetQueueDisc()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3QueueDiscClass_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscClass_SetQueueDisc, METH_VARARGS|METH_KEYWORDS, "SetQueueDisc(qd)\n\ntype: qd: ns3::Ptr< ns3::QueueDisc >" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QueueDiscClass__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5930,7 +5930,7 @@ PyTypeObject PyNs3QueueDiscClass_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "QueueDiscClass(arg0)\nQueueDiscClass()",                        /* Documentation string */
     (traverseproc)PyNs3QueueDiscClass__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QueueDiscClass__tp_clear,             /* tp_clear */
@@ -5963,6 +5963,38 @@ PyTypeObject PyNs3QueueDiscClass_Type = {
 
 
 PyObject *
+PyNs3RedQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3RedQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3RedQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3RedQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RedQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3RedQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3RedQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RedQueueDisc *self)
 {
     PyObject *py_retval;
@@ -5989,38 +6021,6 @@ PyNs3RedQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3RedQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RedQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3RedQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3RedQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RedQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3RedQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3RedQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3RedQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6998,10 +6998,10 @@ static PyMethodDef PyNs3RedQueueDisc_methods[] = {
     {(char *) "GetFengAdaptiveB", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetFengAdaptiveB, METH_NOARGS, "GetFengAdaptiveB()\n\n" },
     {(char *) "SetTh", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetTh, METH_VARARGS|METH_KEYWORDS, "SetTh(minTh, maxTh)\n\ntype: minTh: double\ntype: maxTh: double" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RedQueueDisc_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -7067,7 +7067,7 @@ PyTypeObject PyNs3RedQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RedQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3RedQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RedQueueDisc__tp_clear,             /* tp_clear */
@@ -7100,6 +7100,38 @@ PyTypeObject PyNs3RedQueueDisc_Type = {
 
 
 PyObject *
+PyNs3TbfQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3TbfQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3TbfQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3TbfQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TbfQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3TbfQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3TbfQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TbfQueueDisc *self)
 {
     PyObject *py_retval;
@@ -7126,38 +7158,6 @@ PyNs3TbfQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3TbfQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TbfQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3TbfQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3TbfQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TbfQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3TbfQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3TbfQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3TbfQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8023,10 +8023,10 @@ static PyMethodDef PyNs3TbfQueueDisc_methods[] = {
     {(char *) "GetPeakRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetPeakRate, METH_NOARGS, "GetPeakRate()\n\n" },
     {(char *) "GetFirstBucketTokens", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetFirstBucketTokens, METH_NOARGS, "GetFirstBucketTokens()\n\n" },
     {(char *) "GetSecondBucketTokens", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetSecondBucketTokens, METH_NOARGS, "GetSecondBucketTokens()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3TbfQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -8092,7 +8092,7 @@ PyTypeObject PyNs3TbfQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TbfQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3TbfQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TbfQueueDisc__tp_clear,             /* tp_clear */
@@ -8125,6 +8125,38 @@ PyTypeObject PyNs3TbfQueueDisc_Type = {
 
 
 PyObject *
+PyNs3TrafficControlLayer__PythonHelper::_wrap_DoInitialize(PyNs3TrafficControlLayer *self)
+{
+    PyObject *py_retval;
+    PyNs3TrafficControlLayer__PythonHelper *helper = dynamic_cast< PyNs3TrafficControlLayer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class TrafficControlLayer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TrafficControlLayer *self)
+{
+    PyObject *py_retval;
+    PyNs3TrafficControlLayer__PythonHelper *helper = dynamic_cast< PyNs3TrafficControlLayer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class TrafficControlLayer is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TrafficControlLayer *self)
 {
     PyObject *py_retval;
@@ -8151,38 +8183,6 @@ PyNs3TrafficControlLayer__PythonHelper::_wrap_DoDispose(PyNs3TrafficControlLayer
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TrafficControlLayer *self)
-{
-    PyObject *py_retval;
-    PyNs3TrafficControlLayer__PythonHelper *helper = dynamic_cast< PyNs3TrafficControlLayer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class TrafficControlLayer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TrafficControlLayer__PythonHelper::_wrap_DoInitialize(PyNs3TrafficControlLayer *self)
-{
-    PyObject *py_retval;
-    PyNs3TrafficControlLayer__PythonHelper *helper = dynamic_cast< PyNs3TrafficControlLayer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class TrafficControlLayer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9194,10 +9194,10 @@ static PyMethodDef PyNs3TrafficControlLayer_methods[] = {
     {(char *) "Send", (PyCFunction) _wrap_PyNs3TrafficControlLayer_Send, METH_VARARGS|METH_KEYWORDS, "Send(device, item)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
     {(char *) "SetNode", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "SetRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetRootQueueDiscOnDevice, METH_VARARGS|METH_KEYWORDS, "SetRootQueueDiscOnDevice(device, qDisc)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: qDisc: ns3::Ptr< ns3::QueueDisc >" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9263,7 +9263,7 @@ PyTypeObject PyNs3TrafficControlLayer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TrafficControlLayer()",                        /* Documentation string */
     (traverseproc)PyNs3TrafficControlLayer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TrafficControlLayer__tp_clear,             /* tp_clear */
@@ -9296,6 +9296,38 @@ PyTypeObject PyNs3TrafficControlLayer_Type = {
 
 
 PyObject *
+PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3CoDelQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3CoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3CoDelQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3CoDelQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3CoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3CoDelQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3CoDelQueueDisc *self)
 {
     PyObject *py_retval;
@@ -9322,38 +9354,6 @@ PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3CoDelQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3CoDelQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3CoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3CoDelQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3CoDelQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3CoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3CoDelQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10189,10 +10189,10 @@ static PyMethodDef PyNs3CoDelQueueDisc_methods[] = {
     {(char *) "GetTarget", (PyCFunction) _wrap_PyNs3CoDelQueueDisc_GetTarget, METH_NOARGS, "GetTarget()\n\n" },
     {(char *) "GetInterval", (PyCFunction) _wrap_PyNs3CoDelQueueDisc_GetInterval, METH_NOARGS, "GetInterval()\n\n" },
     {(char *) "GetDropNext", (PyCFunction) _wrap_PyNs3CoDelQueueDisc_GetDropNext, METH_NOARGS, "GetDropNext()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3CoDelQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10258,7 +10258,7 @@ PyTypeObject PyNs3CoDelQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "CoDelQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3CoDelQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CoDelQueueDisc__tp_clear,             /* tp_clear */
@@ -10291,6 +10291,38 @@ PyTypeObject PyNs3CoDelQueueDisc_Type = {
 
 
 PyObject *
+PyNs3FifoQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3FifoQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3FifoQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FifoQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FifoQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3FifoQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FifoQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FifoQueueDisc *self)
 {
     PyObject *py_retval;
@@ -10317,38 +10349,6 @@ PyNs3FifoQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3FifoQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FifoQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3FifoQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FifoQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FifoQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3FifoQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3FifoQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FifoQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11123,10 +11123,10 @@ _wrap_PyNs3FifoQueueDisc_GetTypeId(void)
 
 static PyMethodDef PyNs3FifoQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FifoQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3FifoQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11192,7 +11192,7 @@ PyTypeObject PyNs3FifoQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FifoQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3FifoQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FifoQueueDisc__tp_clear,             /* tp_clear */
@@ -11469,7 +11469,7 @@ PyTypeObject PyNs3FqCoDelFlow_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FqCoDelFlow(arg0)\nFqCoDelFlow()",                        /* Documentation string */
     (traverseproc)PyNs3FqCoDelFlow__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FqCoDelFlow__tp_clear,             /* tp_clear */
@@ -11502,6 +11502,38 @@ PyTypeObject PyNs3FqCoDelFlow_Type = {
 
 
 PyObject *
+PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3FqCoDelQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3FqCoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FqCoDelQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FqCoDelQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3FqCoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FqCoDelQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FqCoDelQueueDisc *self)
 {
     PyObject *py_retval;
@@ -11528,38 +11560,6 @@ PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3FqCoDelQueueDisc *self
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FqCoDelQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3FqCoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FqCoDelQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3FqCoDelQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3FqCoDelQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3FqCoDelQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12379,10 +12379,10 @@ static PyMethodDef PyNs3FqCoDelQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetQuantum", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_SetQuantum, METH_VARARGS|METH_KEYWORDS, "SetQuantum(quantum)\n\ntype: quantum: uint32_t" },
     {(char *) "GetQuantum", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_GetQuantum, METH_NOARGS, "GetQuantum()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -12448,7 +12448,7 @@ PyTypeObject PyNs3FqCoDelQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FqCoDelQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3FqCoDelQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FqCoDelQueueDisc__tp_clear,             /* tp_clear */
@@ -12481,6 +12481,38 @@ PyTypeObject PyNs3FqCoDelQueueDisc_Type = {
 
 
 PyObject *
+PyNs3MqQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3MqQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3MqQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3MqQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MqQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3MqQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3MqQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MqQueueDisc *self)
 {
     PyObject *py_retval;
@@ -12507,38 +12539,6 @@ PyNs3MqQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3MqQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MqQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3MqQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3MqQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MqQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3MqQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3MqQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3MqQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13260,10 +13260,10 @@ _wrap_PyNs3MqQueueDisc_GetWakeMode(PyNs3MqQueueDisc *self)
 static PyMethodDef PyNs3MqQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MqQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetWakeMode", (PyCFunction) _wrap_PyNs3MqQueueDisc_GetWakeMode, METH_NOARGS, "GetWakeMode()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3MqQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -13329,7 +13329,7 @@ PyTypeObject PyNs3MqQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MqQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3MqQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MqQueueDisc__tp_clear,             /* tp_clear */
@@ -13362,6 +13362,38 @@ PyTypeObject PyNs3MqQueueDisc_Type = {
 
 
 PyObject *
+PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PfifoFastQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PfifoFastQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PfifoFastQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PfifoFastQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PfifoFastQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PfifoFastQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PfifoFastQueueDisc *self)
 {
     PyObject *py_retval;
@@ -13388,38 +13420,6 @@ PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3PfifoFastQueueDisc *
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PfifoFastQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PfifoFastQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PfifoFastQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PfifoFastQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PfifoFastQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PfifoFastQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14194,10 +14194,10 @@ _wrap_PyNs3PfifoFastQueueDisc_GetTypeId(void)
 
 static PyMethodDef PyNs3PfifoFastQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PfifoFastQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PfifoFastQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -14263,7 +14263,7 @@ PyTypeObject PyNs3PfifoFastQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PfifoFastQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PfifoFastQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PfifoFastQueueDisc__tp_clear,             /* tp_clear */
@@ -14296,6 +14296,38 @@ PyTypeObject PyNs3PfifoFastQueueDisc_Type = {
 
 
 PyObject *
+PyNs3PieQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PieQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PieQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PieQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PieQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PieQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PieQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PieQueueDisc *self)
 {
     PyObject *py_retval;
@@ -14322,38 +14354,6 @@ PyNs3PieQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3PieQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PieQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PieQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PieQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PieQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PieQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PieQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PieQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15177,10 +15177,10 @@ static PyMethodDef PyNs3PieQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PieQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetQueueDelay", (PyCFunction) _wrap_PyNs3PieQueueDisc_GetQueueDelay, METH_NOARGS, "GetQueueDelay()\n\n" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3PieQueueDisc_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -15246,7 +15246,7 @@ PyTypeObject PyNs3PieQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PieQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PieQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PieQueueDisc__tp_clear,             /* tp_clear */
@@ -15279,6 +15279,38 @@ PyTypeObject PyNs3PieQueueDisc_Type = {
 
 
 PyObject *
+PyNs3PrioQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PrioQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PrioQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PrioQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PrioQueueDisc *self)
+{
+    PyObject *py_retval;
+    PyNs3PrioQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PrioQueueDisc__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PrioQueueDisc *self)
 {
     PyObject *py_retval;
@@ -15305,38 +15337,6 @@ PyNs3PrioQueueDisc__PythonHelper::_wrap_DoDispose(PyNs3PrioQueueDisc *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PrioQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PrioQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PrioQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PrioQueueDisc__PythonHelper::_wrap_DoInitialize(PyNs3PrioQueueDisc *self)
-{
-    PyObject *py_retval;
-    PyNs3PrioQueueDisc__PythonHelper *helper = dynamic_cast< PyNs3PrioQueueDisc__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class QueueDisc is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16093,10 +16093,10 @@ static PyMethodDef PyNs3PrioQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PrioQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_SetBandForPriority, METH_VARARGS|METH_KEYWORDS, "SetBandForPriority(prio, band)\n\ntype: prio: uint8_t\ntype: band: uint16_t" },
     {(char *) "GetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_GetBandForPriority, METH_VARARGS|METH_KEYWORDS, "GetBandForPriority(prio)\n\ntype: prio: uint8_t" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -16162,7 +16162,7 @@ PyTypeObject PyNs3PrioQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PrioQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PrioQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PrioQueueDisc__tp_clear,             /* tp_clear */

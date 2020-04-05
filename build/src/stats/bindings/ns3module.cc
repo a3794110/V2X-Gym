@@ -789,7 +789,7 @@ PyTypeObject PyNs3DataOutputCallback_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DataOutputCallback(arg0)\nDataOutputCallback()",                        /* Documentation string */
     (traverseproc)PyNs3DataOutputCallback__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataOutputCallback__tp_clear,             /* tp_clear */
@@ -3317,7 +3317,7 @@ PyTypeObject PyNs3StatisticalSummary_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "StatisticalSummary(arg0)\nStatisticalSummary()",                        /* Documentation string */
     (traverseproc)PyNs3StatisticalSummary__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3StatisticalSummary__tp_clear,             /* tp_clear */
@@ -4568,7 +4568,7 @@ PyTypeObject PyNs3DataCalculator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DataCalculator(arg0)\nDataCalculator()",                        /* Documentation string */
     (traverseproc)PyNs3DataCalculator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCalculator__tp_clear,             /* tp_clear */
@@ -4601,16 +4601,16 @@ PyTypeObject PyNs3DataCalculator_Type = {
 
 
 PyObject *
-PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataCollectionObject *self)
+PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose(PyNs3DataCollectionObject *self)
 {
     PyObject *py_retval;
     PyNs3DataCollectionObject__PythonHelper *helper = dynamic_cast< PyNs3DataCollectionObject__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4649,16 +4649,16 @@ PyNs3DataCollectionObject__PythonHelper::_wrap_DoInitialize(PyNs3DataCollectionO
 }
 
 PyObject *
-PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose(PyNs3DataCollectionObject *self)
+PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataCollectionObject *self)
 {
     PyObject *py_retval;
     PyNs3DataCollectionObject__PythonHelper *helper = dynamic_cast< PyNs3DataCollectionObject__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5133,10 +5133,10 @@ static PyMethodDef PyNs3DataCollectionObject_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataCollectionObject_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3DataCollectionObject_IsEnabled, METH_NOARGS, "IsEnabled()\n\n" },
     {(char *) "SetName", (PyCFunction) _wrap_PyNs3DataCollectionObject_SetName, METH_VARARGS|METH_KEYWORDS, "SetName(name)\n\ntype: name: std::string" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DataCollectionObject__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5203,7 +5203,7 @@ PyTypeObject PyNs3DataCollectionObject_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DataCollectionObject(arg0)\nDataCollectionObject()",                        /* Documentation string */
     (traverseproc)PyNs3DataCollectionObject__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCollectionObject__tp_clear,             /* tp_clear */
@@ -5236,16 +5236,16 @@ PyTypeObject PyNs3DataCollectionObject_Type = {
 
 
 PyObject *
-PyNs3DataCollector__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataCollector *self)
+PyNs3DataCollector__PythonHelper::_wrap_DoDispose(PyNs3DataCollector *self)
 {
     PyObject *py_retval;
     PyNs3DataCollector__PythonHelper *helper = dynamic_cast< PyNs3DataCollector__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataCollector is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5284,16 +5284,16 @@ PyNs3DataCollector__PythonHelper::_wrap_DoInitialize(PyNs3DataCollector *self)
 }
 
 PyObject *
-PyNs3DataCollector__PythonHelper::_wrap_DoDispose(PyNs3DataCollector *self)
+PyNs3DataCollector__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataCollector *self)
 {
     PyObject *py_retval;
     PyNs3DataCollector__PythonHelper *helper = dynamic_cast< PyNs3DataCollector__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataCollector is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5868,10 +5868,10 @@ static PyMethodDef PyNs3DataCollector_methods[] = {
     {(char *) "GetRunLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetRunLabel, METH_NOARGS, "GetRunLabel()\n\n" },
     {(char *) "GetStrategyLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetStrategyLabel, METH_NOARGS, "GetStrategyLabel()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataCollector_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DataCollector__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5938,7 +5938,7 @@ PyTypeObject PyNs3DataCollector_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DataCollector(arg0)\nDataCollector()",                        /* Documentation string */
     (traverseproc)PyNs3DataCollector__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCollector__tp_clear,             /* tp_clear */
@@ -5971,16 +5971,16 @@ PyTypeObject PyNs3DataCollector_Type = {
 
 
 PyObject *
-PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataOutputInterface *self)
+PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose(PyNs3DataOutputInterface *self)
 {
     PyObject *py_retval;
     PyNs3DataOutputInterface__PythonHelper *helper = dynamic_cast< PyNs3DataOutputInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataOutputInterface is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6019,16 +6019,16 @@ PyNs3DataOutputInterface__PythonHelper::_wrap_DoInitialize(PyNs3DataOutputInterf
 }
 
 PyObject *
-PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose(PyNs3DataOutputInterface *self)
+PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DataOutputInterface *self)
 {
     PyObject *py_retval;
     PyNs3DataOutputInterface__PythonHelper *helper = dynamic_cast< PyNs3DataOutputInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataOutputInterface is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6467,10 +6467,10 @@ static PyMethodDef PyNs3DataOutputInterface_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataOutputInterface_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Output", (PyCFunction) _wrap_PyNs3DataOutputInterface_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
     {(char *) "SetFilePrefix", (PyCFunction) _wrap_PyNs3DataOutputInterface_SetFilePrefix, METH_VARARGS|METH_KEYWORDS, "SetFilePrefix(prefix)\n\ntype: prefix: std::string const" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -6536,7 +6536,7 @@ PyTypeObject PyNs3DataOutputInterface_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DataOutputInterface(arg0)\nDataOutputInterface()",                        /* Documentation string */
     (traverseproc)PyNs3DataOutputInterface__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataOutputInterface__tp_clear,             /* tp_clear */
@@ -7162,7 +7162,7 @@ PyTypeObject PyNs3FileAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FileAggregator(outputFileName, fileType)",                        /* Documentation string */
     (traverseproc)PyNs3FileAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FileAggregator__tp_clear,             /* tp_clear */
@@ -7750,7 +7750,7 @@ PyTypeObject PyNs3GnuplotAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "GnuplotAggregator(outputFileNameWithoutExtension)\nGnuplotAggregator(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3GnuplotAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GnuplotAggregator__tp_clear,             /* tp_clear */
@@ -7783,16 +7783,16 @@ PyTypeObject PyNs3GnuplotAggregator_Type = {
 
 
 PyObject *
-PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MinMaxAvgTotalCalculator__Double *self)
+PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper = dynamic_cast< PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MinMaxAvgTotalCalculator is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7831,16 +7831,16 @@ PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoInitialize(PyNs3Min
 }
 
 PyObject *
-PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
+PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper = dynamic_cast< PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MinMaxAvgTotalCalculator is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8798,11 +8798,210 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getVariance(PyNs3MinMaxAvgTotalCalcu
 }
 
 PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceDisconnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Initialize(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    
+    self->obj->Initialize();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    
+    self->obj->Enable();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    const char *context;
+    Py_ssize_t context_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "context", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *context;
+    Py_ssize_t context_len;
+    const char *keywords[] = {"context", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &context, &context_len)) {
+        return NULL;
+    }
+    self->obj->SetContext(std::string(context, context_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     
     self->obj->Dispose();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceConnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    PyNs3ObjectAggregateIterator *py_AggregateIterator;
+    
+    ns3::Object::AggregateIterator retval = self->obj->GetAggregateIterator();
+    py_AggregateIterator = PyObject_New(PyNs3ObjectAggregateIterator, &PyNs3ObjectAggregateIterator_Type);
+    py_AggregateIterator->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+    py_AggregateIterator->obj = new ns3::Object::AggregateIterator(retval);
+    PyNs3ObjectAggregateIterator_wrapper_registry[(void *) py_AggregateIterator->obj] = (PyObject *) py_AggregateIterator;
+    py_retval = Py_BuildValue((char *) "N", py_AggregateIterator);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Object *other;
+    ns3::Object *other_ptr;
+    const char *keywords[] = {"other", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Object_Type, &other)) {
+        return NULL;
+    }
+    other_ptr = (other ? other->obj : NULL);
+    self->obj->AggregateObject(ns3::Ptr< ns3::Object  > (other_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Time *startTime;
+    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
+    const char *keywords[] = {"startTime", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &startTime)) {
+        return NULL;
+    }
+    (helper_class == NULL)? (self->obj->Start(*((PyNs3Time *) startTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Start(*((PyNs3Time *) startTime)->obj));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8827,137 +9026,6 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey(PyNs3MinMaxAvgTotalCalculator
     
     retval = self->obj->GetKey();
     py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *key;
-    Py_ssize_t key_len;
-    const char *keywords[] = {"key", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &key, &key_len)) {
-        return NULL;
-    }
-    self->obj->SetKey(std::string(key, key_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Object *other;
-    ns3::Object *other_ptr;
-    const char *keywords[] = {"other", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Object_Type, &other)) {
-        return NULL;
-    }
-    other_ptr = (other ? other->obj : NULL);
-    self->obj->AggregateObject(ns3::Ptr< ns3::Object  > (other_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    PyNs3ObjectAggregateIterator *py_AggregateIterator;
-    
-    ns3::Object::AggregateIterator retval = self->obj->GetAggregateIterator();
-    py_AggregateIterator = PyObject_New(PyNs3ObjectAggregateIterator, &PyNs3ObjectAggregateIterator_Type);
-    py_AggregateIterator->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-    py_AggregateIterator->obj = new ns3::Object::AggregateIterator(retval);
-    PyNs3ObjectAggregateIterator_wrapper_registry[(void *) py_AggregateIterator->obj] = (PyObject *) py_AggregateIterator;
-    py_retval = Py_BuildValue((char *) "N", py_AggregateIterator);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Time *startTime;
-    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
-    const char *keywords[] = {"startTime", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &startTime)) {
-        return NULL;
-    }
-    (helper_class == NULL)? (self->obj->Start(*((PyNs3Time *) startTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Start(*((PyNs3Time *) startTime)->obj));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Initialize(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    
-    self->obj->Initialize();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *context;
-    Py_ssize_t context_len;
-    const char *keywords[] = {"context", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &context, &context_len)) {
-        return NULL;
-    }
-    self->obj->SetContext(std::string(context, context_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -8997,66 +9065,6 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute(PyNs3MinMaxAvgTotalCalc
 }
 
 PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    
-    self->obj->Enable();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    
-    retval = self->obj->IsInitialized();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    const char *context;
-    Py_ssize_t context_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "context", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
 _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -9077,6 +9085,23 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect(PyNs3MinMaxAvgTotalCalc
 }
 
 PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *key;
+    Py_ssize_t key_len;
+    const char *keywords[] = {"key", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &key, &key_len)) {
+        return NULL;
+    }
+    self->obj->SetKey(std::string(key, key_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
@@ -9084,24 +9109,6 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext(PyNs3MinMaxAvgTotalCalcul
     
     retval = self->obj->GetContext();
     py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceConnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -9117,19 +9124,12 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable(PyNs3MinMaxAvgTotalCalculato
 }
 
 PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "cb", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceDisconnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    retval = self->obj->IsInitialized();
     py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
@@ -9163,32 +9163,32 @@ static PyMethodDef PyNs3MinMaxAvgTotalCalculator__Double_methods[] = {
     {(char *) "getStddev", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getStddev, METH_NOARGS, "getStddev()\n\n" },
     {(char *) "getSum", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getSum, METH_NOARGS, "getSum()\n\n" },
     {(char *) "getVariance", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getVariance, METH_NOARGS, "getVariance()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Initialize", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Initialize, METH_NOARGS, "Initialize()\n\n" },
+    {(char *) "Enable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable, METH_NOARGS, "Enable()\n\n" },
+    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect, METH_VARARGS|METH_KEYWORDS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext, METH_VARARGS|METH_KEYWORDS, "SetContext(context)\n\ntype: context: std::string const" },
     {(char *) "Dispose", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose, METH_NOARGS, "Dispose()\n\n" },
+    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "GetAggregateIterator", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator, METH_NOARGS, "GetAggregateIterator()\n\n" },
+    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject, METH_VARARGS|METH_KEYWORDS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
+    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start, METH_VARARGS|METH_KEYWORDS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "GetEnabled", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetEnabled, METH_NOARGS, "GetEnabled()\n\n" },
     {(char *) "GetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey, METH_NOARGS, "GetKey()\n\n" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey, METH_VARARGS|METH_KEYWORDS, "SetKey(key)\n\ntype: key: std::string const" },
-    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject, METH_VARARGS|METH_KEYWORDS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
-    {(char *) "GetAggregateIterator", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator, METH_NOARGS, "GetAggregateIterator()\n\n" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start, METH_VARARGS|METH_KEYWORDS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
-    {(char *) "Initialize", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Initialize, METH_NOARGS, "Initialize()\n\n" },
-    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext, METH_VARARGS|METH_KEYWORDS, "SetContext(context)\n\ntype: context: std::string const" },
-    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(stopTime)\n\ntype: stopTime: ns3::Time const &" },
     {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute, METH_VARARGS|METH_KEYWORDS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "Enable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable, METH_NOARGS, "Enable()\n\n" },
-    {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
-    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect, METH_VARARGS|METH_KEYWORDS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect, METH_VARARGS|METH_KEYWORDS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey, METH_VARARGS|METH_KEYWORDS, "SetKey(key)\n\ntype: key: std::string const" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext, METH_NOARGS, "GetContext()\n\n" },
-    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "Disable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable, METH_NOARGS, "Disable()\n\n" },
-    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9255,7 +9255,7 @@ PyTypeObject PyNs3MinMaxAvgTotalCalculator__Double_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MinMaxAvgTotalCalculator__Double(arg0)\nMinMaxAvgTotalCalculator__Double()",                        /* Documentation string */
     (traverseproc)PyNs3MinMaxAvgTotalCalculator__Double__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MinMaxAvgTotalCalculator__Double__tp_clear,             /* tp_clear */
@@ -9288,16 +9288,16 @@ PyTypeObject PyNs3MinMaxAvgTotalCalculator__Double_Type = {
 
 
 PyObject *
-PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OmnetDataOutput *self)
+PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose(PyNs3OmnetDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3OmnetDataOutput__PythonHelper *helper = dynamic_cast< PyNs3OmnetDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OmnetDataOutput is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9336,16 +9336,16 @@ PyNs3OmnetDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3OmnetDataOutput *sel
 }
 
 PyObject *
-PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose(PyNs3OmnetDataOutput *self)
+PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OmnetDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3OmnetDataOutput__PythonHelper *helper = dynamic_cast< PyNs3OmnetDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OmnetDataOutput is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9774,10 +9774,10 @@ _wrap_PyNs3OmnetDataOutput__copy__(PyNs3OmnetDataOutput *self)
 static PyMethodDef PyNs3OmnetDataOutput_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OmnetDataOutput_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Output", (PyCFunction) _wrap_PyNs3OmnetDataOutput_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OmnetDataOutput__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9844,7 +9844,7 @@ PyTypeObject PyNs3OmnetDataOutput_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OmnetDataOutput(arg0)\nOmnetDataOutput()",                        /* Documentation string */
     (traverseproc)PyNs3OmnetDataOutput__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OmnetDataOutput__tp_clear,             /* tp_clear */
@@ -9877,16 +9877,16 @@ PyTypeObject PyNs3OmnetDataOutput_Type = {
 
 
 PyObject *
-PyNs3Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Probe *self)
+PyNs3Probe__PythonHelper::_wrap_DoDispose(PyNs3Probe *self)
 {
     PyObject *py_retval;
     PyNs3Probe__PythonHelper *helper = dynamic_cast< PyNs3Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9925,16 +9925,16 @@ PyNs3Probe__PythonHelper::_wrap_DoInitialize(PyNs3Probe *self)
 }
 
 PyObject *
-PyNs3Probe__PythonHelper::_wrap_DoDispose(PyNs3Probe *self)
+PyNs3Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Probe *self)
 {
     PyObject *py_retval;
     PyNs3Probe__PythonHelper *helper = dynamic_cast< PyNs3Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10510,10 +10510,10 @@ static PyMethodDef PyNs3Probe_methods[] = {
     {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Probe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Probe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3Probe_IsEnabled, METH_NOARGS, "IsEnabled()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10579,7 +10579,7 @@ PyTypeObject PyNs3Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Probe(arg0)\nProbe()",                        /* Documentation string */
     (traverseproc)PyNs3Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Probe__tp_clear,             /* tp_clear */
@@ -10612,16 +10612,16 @@ PyTypeObject PyNs3Probe_Type = {
 
 
 PyObject *
-PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SqliteDataOutput *self)
+PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose(PyNs3SqliteDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3SqliteDataOutput__PythonHelper *helper = dynamic_cast< PyNs3SqliteDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SqliteDataOutput is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10660,16 +10660,16 @@ PyNs3SqliteDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3SqliteDataOutput *s
 }
 
 PyObject *
-PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose(PyNs3SqliteDataOutput *self)
+PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SqliteDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3SqliteDataOutput__PythonHelper *helper = dynamic_cast< PyNs3SqliteDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SqliteDataOutput is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11098,10 +11098,10 @@ _wrap_PyNs3SqliteDataOutput__copy__(PyNs3SqliteDataOutput *self)
 static PyMethodDef PyNs3SqliteDataOutput_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SqliteDataOutput_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Output", (PyCFunction) _wrap_PyNs3SqliteDataOutput_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SqliteDataOutput__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -11168,7 +11168,7 @@ PyTypeObject PyNs3SqliteDataOutput_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SqliteDataOutput(arg0)\nSqliteDataOutput()",                        /* Documentation string */
     (traverseproc)PyNs3SqliteDataOutput__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SqliteDataOutput__tp_clear,             /* tp_clear */
@@ -11201,16 +11201,16 @@ PyTypeObject PyNs3SqliteDataOutput_Type = {
 
 
 PyObject *
-PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TimeMinMaxAvgTotalCalculator *self)
+PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose(PyNs3TimeMinMaxAvgTotalCalculator *self)
 {
     PyObject *py_retval;
     PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper *helper = dynamic_cast< PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class TimeMinMaxAvgTotalCalculator is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11249,16 +11249,16 @@ PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoInitialize(PyNs3TimeMin
 }
 
 PyObject *
-PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose(PyNs3TimeMinMaxAvgTotalCalculator *self)
+PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TimeMinMaxAvgTotalCalculator *self)
 {
     PyObject *py_retval;
     PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper *helper = dynamic_cast< PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class TimeMinMaxAvgTotalCalculator is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11751,10 +11751,10 @@ static PyMethodDef PyNs3TimeMinMaxAvgTotalCalculator_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Output", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Output, METH_VARARGS|METH_KEYWORDS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
     {(char *) "Update", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Update, METH_VARARGS|METH_KEYWORDS, "Update(i)\n\ntype: i: ns3::Time const" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -11821,7 +11821,7 @@ PyTypeObject PyNs3TimeMinMaxAvgTotalCalculator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TimeMinMaxAvgTotalCalculator(arg0)\nTimeMinMaxAvgTotalCalculator()",                        /* Documentation string */
     (traverseproc)PyNs3TimeMinMaxAvgTotalCalculator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeMinMaxAvgTotalCalculator__tp_clear,             /* tp_clear */
@@ -11854,16 +11854,16 @@ PyTypeObject PyNs3TimeMinMaxAvgTotalCalculator_Type = {
 
 
 PyObject *
-PyNs3TimeProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TimeProbe *self)
+PyNs3TimeProbe__PythonHelper::_wrap_DoDispose(PyNs3TimeProbe *self)
 {
     PyObject *py_retval;
     PyNs3TimeProbe__PythonHelper *helper = dynamic_cast< PyNs3TimeProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11902,16 +11902,16 @@ PyNs3TimeProbe__PythonHelper::_wrap_DoInitialize(PyNs3TimeProbe *self)
 }
 
 PyObject *
-PyNs3TimeProbe__PythonHelper::_wrap_DoDispose(PyNs3TimeProbe *self)
+PyNs3TimeProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TimeProbe *self)
 {
     PyObject *py_retval;
     PyNs3TimeProbe__PythonHelper *helper = dynamic_cast< PyNs3TimeProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12538,10 +12538,10 @@ static PyMethodDef PyNs3TimeProbe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3TimeProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3TimeProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: ns3::Time" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3TimeProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: ns3::Time" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12608,7 +12608,7 @@ PyTypeObject PyNs3TimeProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TimeProbe(arg0)\nTimeProbe()",                        /* Documentation string */
     (traverseproc)PyNs3TimeProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeProbe__tp_clear,             /* tp_clear */
@@ -12920,7 +12920,7 @@ PyTypeObject PyNs3TimeSeriesAdaptor_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TimeSeriesAdaptor(arg0)\nTimeSeriesAdaptor()",                        /* Documentation string */
     (traverseproc)PyNs3TimeSeriesAdaptor__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeSeriesAdaptor__tp_clear,             /* tp_clear */
@@ -12953,16 +12953,16 @@ PyTypeObject PyNs3TimeSeriesAdaptor_Type = {
 
 
 PyObject *
-PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger16Probe *self)
+PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger16Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger16Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger16Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13001,16 +13001,16 @@ PyNs3Uinteger16Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger16Probe *sel
 }
 
 PyObject *
-PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger16Probe *self)
+PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger16Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger16Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger16Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13645,10 +13645,10 @@ static PyMethodDef PyNs3Uinteger16Probe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger16Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint16_t" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint16_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger16Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13715,7 +13715,7 @@ PyTypeObject PyNs3Uinteger16Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Uinteger16Probe(arg0)\nUinteger16Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger16Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger16Probe__tp_clear,             /* tp_clear */
@@ -13748,16 +13748,16 @@ PyTypeObject PyNs3Uinteger16Probe_Type = {
 
 
 PyObject *
-PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger32Probe *self)
+PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger32Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger32Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger32Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13796,16 +13796,16 @@ PyNs3Uinteger32Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger32Probe *sel
 }
 
 PyObject *
-PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger32Probe *self)
+PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger32Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger32Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger32Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14432,10 +14432,10 @@ static PyMethodDef PyNs3Uinteger32Probe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger32Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint32_t" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint32_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger32Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14502,7 +14502,7 @@ PyTypeObject PyNs3Uinteger32Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Uinteger32Probe(arg0)\nUinteger32Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger32Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger32Probe__tp_clear,             /* tp_clear */
@@ -14535,16 +14535,16 @@ PyTypeObject PyNs3Uinteger32Probe_Type = {
 
 
 PyObject *
-PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger8Probe *self)
+PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger8Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger8Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger8Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14583,16 +14583,16 @@ PyNs3Uinteger8Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger8Probe *self)
 }
 
 PyObject *
-PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger8Probe *self)
+PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Uinteger8Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger8Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger8Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15227,10 +15227,10 @@ static PyMethodDef PyNs3Uinteger8Probe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger8Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint8_t" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint8_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger8Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15297,7 +15297,7 @@ PyTypeObject PyNs3Uinteger8Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Uinteger8Probe(arg0)\nUinteger8Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger8Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger8Probe__tp_clear,             /* tp_clear */
@@ -15330,16 +15330,16 @@ PyTypeObject PyNs3Uinteger8Probe_Type = {
 
 
 PyObject *
-PyNs3BooleanProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BooleanProbe *self)
+PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose(PyNs3BooleanProbe *self)
 {
     PyObject *py_retval;
     PyNs3BooleanProbe__PythonHelper *helper = dynamic_cast< PyNs3BooleanProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15378,16 +15378,16 @@ PyNs3BooleanProbe__PythonHelper::_wrap_DoInitialize(PyNs3BooleanProbe *self)
 }
 
 PyObject *
-PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose(PyNs3BooleanProbe *self)
+PyNs3BooleanProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BooleanProbe *self)
 {
     PyObject *py_retval;
     PyNs3BooleanProbe__PythonHelper *helper = dynamic_cast< PyNs3BooleanProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16018,10 +16018,10 @@ static PyMethodDef PyNs3BooleanProbe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3BooleanProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: bool" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: bool" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BooleanProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16088,7 +16088,7 @@ PyTypeObject PyNs3BooleanProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BooleanProbe(arg0)\nBooleanProbe()",                        /* Documentation string */
     (traverseproc)PyNs3BooleanProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BooleanProbe__tp_clear,             /* tp_clear */
@@ -16121,16 +16121,16 @@ PyTypeObject PyNs3BooleanProbe_Type = {
 
 
 PyObject *
-PyNs3DoubleProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DoubleProbe *self)
+PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose(PyNs3DoubleProbe *self)
 {
     PyObject *py_retval;
     PyNs3DoubleProbe__PythonHelper *helper = dynamic_cast< PyNs3DoubleProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16169,16 +16169,16 @@ PyNs3DoubleProbe__PythonHelper::_wrap_DoInitialize(PyNs3DoubleProbe *self)
 }
 
 PyObject *
-PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose(PyNs3DoubleProbe *self)
+PyNs3DoubleProbe__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DoubleProbe *self)
 {
     PyObject *py_retval;
     PyNs3DoubleProbe__PythonHelper *helper = dynamic_cast< PyNs3DoubleProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16805,10 +16805,10 @@ static PyMethodDef PyNs3DoubleProbe_methods[] = {
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3DoubleProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "SetValue", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: double" },
     {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DoubleProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16875,7 +16875,7 @@ PyTypeObject PyNs3DoubleProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DoubleProbe(arg0)\nDoubleProbe()",                        /* Documentation string */
     (traverseproc)PyNs3DoubleProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DoubleProbe__tp_clear,             /* tp_clear */

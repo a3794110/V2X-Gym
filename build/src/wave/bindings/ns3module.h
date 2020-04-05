@@ -4681,6 +4681,10 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
+    static PyObject * _wrap_DoInitialize(PyNs3BsmApplication *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Application::DoInitialize(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3BsmApplication *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4688,10 +4692,6 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3BsmApplication *self);
     inline void DoDispose__parent_caller()
     { ns3::BsmApplication::DoDispose(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3BsmApplication *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Application::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -4846,6 +4846,10 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
+    static PyObject * _wrap_DoInitialize(PyNs3ChannelScheduler *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::ChannelScheduler::DoInitialize(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ChannelScheduler *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4853,10 +4857,6 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ChannelScheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3ChannelScheduler *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::ChannelScheduler::DoInitialize(); }
 
     virtual ns3::ChannelAccess GetAssignedAccessType(uint32_t channelNumber) const;
 
@@ -5034,13 +5034,13 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaveMacLow *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3WaveMacLow *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaveMacLow *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void StartTransmission(ns3::Ptr< ns3::Packet const > packet, ns3::WifiMacHeader const *hdr, ns3::MacLowTransmissionParameters parameters, ns3::Ptr< ns3::Txop > txop);
 
@@ -5210,21 +5210,9 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3OcbWifiMac *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::RegularWifiMac::DoInitialize(); }
-
-    static PyObject * _wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
-    inline void DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet > aggregatedPacket, ns3::WifiMacHeader const *hdr)
-    { ns3::RegularWifiMac::DeaggregateAmsduAndForward(aggregatedPacket, hdr); }
-
     static PyObject * _wrap_TxOk(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
     inline void TxOk__parent_caller(ns3::WifiMacHeader const & hdr)
     { ns3::RegularWifiMac::TxOk(hdr); }
-
-    static PyObject * _wrap_DoDispose(PyNs3OcbWifiMac *self);
-    inline void DoDispose__parent_caller()
-    { ns3::RegularWifiMac::DoDispose(); }
 
     static PyObject * _wrap_SetQosSupported(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
     inline void SetQosSupported__parent_caller(bool enable)
@@ -5234,6 +5222,18 @@ public:
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
+    static PyObject * _wrap_DoInitialize(PyNs3OcbWifiMac *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::RegularWifiMac::DoInitialize(); }
+
+    static PyObject * _wrap_TxFailed(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
+    inline void TxFailed__parent_caller(ns3::WifiMacHeader const & hdr)
+    { ns3::RegularWifiMac::TxFailed(hdr); }
+
+    static PyObject * _wrap_DoDispose(PyNs3OcbWifiMac *self);
+    inline void DoDispose__parent_caller()
+    { ns3::RegularWifiMac::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3OcbWifiMac *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -5242,9 +5242,9 @@ public:
     inline void FinishConfigureStandard__parent_caller(ns3::WifiPhyStandard standard)
     { ns3::OcbWifiMac::FinishConfigureStandard(standard); }
 
-    static PyObject * _wrap_TxFailed(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
-    inline void TxFailed__parent_caller(ns3::WifiMacHeader const & hdr)
-    { ns3::RegularWifiMac::TxFailed(hdr); }
+    static PyObject * _wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs);
+    inline void DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet > aggregatedPacket, ns3::WifiMacHeader const *hdr)
+    { ns3::RegularWifiMac::DeaggregateAmsduAndForward(aggregatedPacket, hdr); }
 
     virtual ns3::Ssid GetSsid() const;
 

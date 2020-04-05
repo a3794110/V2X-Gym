@@ -491,14 +491,14 @@ _wrap_spectrum_Sum(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject 
 PyObject * _wrap_spectrum_Sum(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef spectrum_functions[] = {
-    {(char *) "Integral", (PyCFunction) _wrap_spectrum_Integral, METH_VARARGS|METH_KEYWORDS, "Integral(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
-    {(char *) "Log", (PyCFunction) _wrap_spectrum_Log, METH_VARARGS|METH_KEYWORDS, "Log(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
-    {(char *) "Log10", (PyCFunction) _wrap_spectrum_Log10, METH_VARARGS|METH_KEYWORDS, "Log10(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
-    {(char *) "Log2", (PyCFunction) _wrap_spectrum_Log2, METH_VARARGS|METH_KEYWORDS, "Log2(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
-    {(char *) "Norm", (PyCFunction) _wrap_spectrum_Norm, METH_VARARGS|METH_KEYWORDS, "Norm(x)\n\ntype: x: ns3::SpectrumValue const &" },
-    {(char *) "Pow", (PyCFunction) _wrap_spectrum_Pow, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Prod", (PyCFunction) _wrap_spectrum_Prod, METH_VARARGS|METH_KEYWORDS, "Prod(x)\n\ntype: x: ns3::SpectrumValue const &" },
-    {(char *) "Sum", (PyCFunction) _wrap_spectrum_Sum, METH_VARARGS|METH_KEYWORDS, "Sum(x)\n\ntype: x: ns3::SpectrumValue const &" },
+    {(char *) "Integral", (PyCFunction) _wrap_spectrum_Integral, METH_KEYWORDS|METH_VARARGS, "Integral(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
+    {(char *) "Log", (PyCFunction) _wrap_spectrum_Log, METH_KEYWORDS|METH_VARARGS, "Log(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
+    {(char *) "Log10", (PyCFunction) _wrap_spectrum_Log10, METH_KEYWORDS|METH_VARARGS, "Log10(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
+    {(char *) "Log2", (PyCFunction) _wrap_spectrum_Log2, METH_KEYWORDS|METH_VARARGS, "Log2(arg)\n\ntype: arg: ns3::SpectrumValue const &" },
+    {(char *) "Norm", (PyCFunction) _wrap_spectrum_Norm, METH_KEYWORDS|METH_VARARGS, "Norm(x)\n\ntype: x: ns3::SpectrumValue const &" },
+    {(char *) "Pow", (PyCFunction) _wrap_spectrum_Pow, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Prod", (PyCFunction) _wrap_spectrum_Prod, METH_KEYWORDS|METH_VARARGS, "Prod(x)\n\ntype: x: ns3::SpectrumValue const &" },
+    {(char *) "Sum", (PyCFunction) _wrap_spectrum_Sum, METH_KEYWORDS|METH_VARARGS, "Sum(x)\n\ntype: x: ns3::SpectrumValue const &" },
     {NULL, NULL, 0, NULL}
 };
 /* --- classes --- */
@@ -1494,13 +1494,13 @@ _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper__copy__(PyNs3AdhocAlohaNoackIdealPhyHel
 }
 
 static PyMethodDef PyNs3AdhocAlohaNoackIdealPhyHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
-    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetNoisePowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue >" },
-    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetPhyAttribute, METH_VARARGS|METH_KEYWORDS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
-    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetDeviceAttribute, METH_KEYWORDS|METH_VARARGS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetNoisePowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue >" },
+    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetPhyAttribute, METH_KEYWORDS|METH_VARARGS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper_SetTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3AdhocAlohaNoackIdealPhyHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3158,13 +3158,13 @@ _wrap_PyNs3SpectrumAnalyzerHelper__copy__(PyNs3SpectrumAnalyzerHelper *self)
 }
 
 static PyMethodDef PyNs3SpectrumAnalyzerHelper_methods[] = {
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, "EnableAsciiAll(prefix)\n\ntype: prefix: std::string" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
-    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetPhyAttribute, METH_VARARGS|METH_KEYWORDS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
-    {(char *) "SetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetRxSpectrumModel, METH_VARARGS|METH_KEYWORDS, "SetRxSpectrumModel(m)\n\ntype: m: ns3::Ptr< ns3::SpectrumModel >" },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, "EnableAsciiAll(prefix)\n\ntype: prefix: std::string" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetDeviceAttribute, METH_KEYWORDS|METH_VARARGS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetPhyAttribute, METH_KEYWORDS|METH_VARARGS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "SetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper_SetRxSpectrumModel, METH_KEYWORDS|METH_VARARGS, "SetRxSpectrumModel(m)\n\ntype: m: ns3::Ptr< ns3::SpectrumModel >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumAnalyzerHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3693,12 +3693,12 @@ _wrap_PyNs3SpectrumChannelHelper__copy__(PyNs3SpectrumChannelHelper *self)
 }
 
 static PyMethodDef PyNs3SpectrumChannelHelper_methods[] = {
-    {(char *) "AddPropagationLoss", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_AddPropagationLoss, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "AddSpectrumPropagationLoss", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_AddSpectrumPropagationLoss, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "AddPropagationLoss", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_AddPropagationLoss, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "AddSpectrumPropagationLoss", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_AddSpectrumPropagationLoss, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "Create", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_Create, METH_NOARGS, "Create()\n\n" },
     {(char *) "Default", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetPropagationDelay", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_SetPropagationDelay, METH_VARARGS|METH_KEYWORDS, "SetPropagationDelay(name, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: name: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetPropagationDelay", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper_SetPropagationDelay, METH_KEYWORDS|METH_VARARGS, "SetPropagationDelay(name, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: name: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumChannelHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4053,10 +4053,10 @@ _wrap_PyNs3SpectrumPhyHelper__copy__(PyNs3SpectrumPhyHelper *self)
 }
 
 static PyMethodDef PyNs3SpectrumPhyHelper_methods[] = {
-    {(char *) "Create", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_Create, METH_VARARGS|METH_KEYWORDS, "Create(node, device)\n\ntype: node: ns3::Ptr< ns3::Node >\ntype: device: ns3::Ptr< ns3::NetDevice >" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetPhy, METH_VARARGS|METH_KEYWORDS, "SetPhy(name, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: name: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetPhyAttribute, METH_VARARGS|METH_KEYWORDS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "Create", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_Create, METH_KEYWORDS|METH_VARARGS, "Create(node, device)\n\ntype: node: ns3::Ptr< ns3::Node >\ntype: device: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetPhy, METH_KEYWORDS|METH_VARARGS, "SetPhy(name, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: name: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper_SetPhyAttribute, METH_KEYWORDS|METH_VARARGS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumPhyHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4471,12 +4471,12 @@ _wrap_PyNs3TvSpectrumTransmitterHelper__copy__(PyNs3TvSpectrumTransmitterHelper 
 }
 
 static PyMethodDef PyNs3TvSpectrumTransmitterHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(streamNum)\n\ntype: streamNum: int64_t" },
-    {(char *) "CreateRegionalTvTransmitters", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_CreateRegionalTvTransmitters, METH_VARARGS|METH_KEYWORDS, "CreateRegionalTvTransmitters(region, density, originLatitude, originLongitude, maxAltitude, maxRadius)\n\ntype: region: ns3::TvSpectrumTransmitterHelper::Region\ntype: density: ns3::TvSpectrumTransmitterHelper::Density\ntype: originLatitude: double\ntype: originLongitude: double\ntype: maxAltitude: double\ntype: maxRadius: double" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "InstallAdjacent", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_InstallAdjacent, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, val)\n\ntype: name: std::string\ntype: val: ns3::AttributeValue const &" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(streamNum)\n\ntype: streamNum: int64_t" },
+    {(char *) "CreateRegionalTvTransmitters", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_CreateRegionalTvTransmitters, METH_KEYWORDS|METH_VARARGS, "CreateRegionalTvTransmitters(region, density, originLatitude, originLongitude, maxAltitude, maxRadius)\n\ntype: region: ns3::TvSpectrumTransmitterHelper::Region\ntype: density: ns3::TvSpectrumTransmitterHelper::Density\ntype: originLatitude: double\ntype: originLongitude: double\ntype: maxAltitude: double\ntype: maxRadius: double" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "InstallAdjacent", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_InstallAdjacent, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, val)\n\ntype: name: std::string\ntype: val: ns3::AttributeValue const &" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitterHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5176,12 +5176,12 @@ _wrap_PyNs3WaveformGeneratorHelper__copy__(PyNs3WaveformGeneratorHelper *self)
 }
 
 static PyMethodDef PyNs3WaveformGeneratorHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
-    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetPhyAttribute, METH_VARARGS|METH_KEYWORDS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
-    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetDeviceAttribute, METH_KEYWORDS|METH_VARARGS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "SetPhyAttribute", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetPhyAttribute, METH_KEYWORDS|METH_VARARGS, "SetPhyAttribute(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper_SetTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveformGeneratorHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5639,9 +5639,9 @@ _wrap_PyNs3WifiSpectrumValue5MhzFactory__copy__(PyNs3WifiSpectrumValue5MhzFactor
 }
 
 static PyMethodDef PyNs3WifiSpectrumValue5MhzFactory_methods[] = {
-    {(char *) "CreateConstant", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateConstant, METH_VARARGS|METH_KEYWORDS, "CreateConstant(psd)\n\ntype: psd: double" },
-    {(char *) "CreateRfFilter", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateRfFilter, METH_VARARGS|METH_KEYWORDS, "CreateRfFilter(channel)\n\ntype: channel: uint8_t" },
-    {(char *) "CreateTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "CreateTxPowerSpectralDensity(txPower, channel)\n\ntype: txPower: double\ntype: channel: uint8_t" },
+    {(char *) "CreateConstant", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateConstant, METH_KEYWORDS|METH_VARARGS, "CreateConstant(psd)\n\ntype: psd: double" },
+    {(char *) "CreateRfFilter", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateRfFilter, METH_KEYWORDS|METH_VARARGS, "CreateRfFilter(channel)\n\ntype: channel: uint8_t" },
+    {(char *) "CreateTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory_CreateTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "CreateTxPowerSpectralDensity(txPower, channel)\n\ntype: txPower: double\ntype: channel: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WifiSpectrumValue5MhzFactory__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5708,7 +5708,7 @@ PyTypeObject PyNs3WifiSpectrumValue5MhzFactory_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiSpectrumValue5MhzFactory(arg0)\nWifiSpectrumValue5MhzFactory()",                        /* Documentation string */
     (traverseproc)PyNs3WifiSpectrumValue5MhzFactory__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiSpectrumValue5MhzFactory__tp_clear,             /* tp_clear */
@@ -6308,15 +6308,15 @@ _wrap_PyNs3WifiSpectrumValueHelper__copy__(PyNs3WifiSpectrumValueHelper *self)
 }
 
 static PyMethodDef PyNs3WifiSpectrumValueHelper_methods[] = {
-    {(char *) "CreateDsssTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateDsssTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "CreateDsssTxPowerSpectralDensity(centerFrequency, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "CreateHeOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateHeOfdmTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "CreateHeOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "CreateHtOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateHtOfdmTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "CreateHtOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "CreateNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateNoisePowerSpectralDensity, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
-    {(char *) "CreateOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateOfdmTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "CreateOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "CreateRfFilter", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateRfFilter, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "CreateRfFilter(centerFrequency, channelWidth, bandBandwidth, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: bandBandwidth: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "DbmToW", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_DbmToW, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "DbmToW(dbm)\n\ntype: dbm: double" },
-    {(char *) "GetSpectrumModel", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_GetSpectrumModel, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetSpectrumModel(centerFrequency, channelWidth, bandBandwidth, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: bandBandwidth: double\ntype: guardBandwidth: uint16_t" },
-    {(char *) "NormalizeSpectrumMask", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_NormalizeSpectrumMask, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "NormalizeSpectrumMask(c, txPowerW)\n\ntype: c: ns3::Ptr< ns3::SpectrumValue >\ntype: txPowerW: double" },
+    {(char *) "CreateDsssTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateDsssTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "CreateDsssTxPowerSpectralDensity(centerFrequency, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "CreateHeOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateHeOfdmTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "CreateHeOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "CreateHtOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateHtOfdmTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "CreateHtOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "CreateNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateNoisePowerSpectralDensity, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
+    {(char *) "CreateOfdmTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateOfdmTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "CreateOfdmTxPowerSpectralDensity(centerFrequency, channelWidth, txPowerW, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: txPowerW: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "CreateRfFilter", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_CreateRfFilter, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "CreateRfFilter(centerFrequency, channelWidth, bandBandwidth, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: bandBandwidth: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "DbmToW", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_DbmToW, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "DbmToW(dbm)\n\ntype: dbm: double" },
+    {(char *) "GetSpectrumModel", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_GetSpectrumModel, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetSpectrumModel(centerFrequency, channelWidth, bandBandwidth, guardBandwidth)\n\ntype: centerFrequency: uint32_t\ntype: channelWidth: uint16_t\ntype: bandBandwidth: double\ntype: guardBandwidth: uint16_t" },
+    {(char *) "NormalizeSpectrumMask", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper_NormalizeSpectrumMask, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "NormalizeSpectrumMask(c, txPowerW)\n\ntype: c: ns3::Ptr< ns3::SpectrumValue >\ntype: txPowerW: double" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WifiSpectrumValueHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7190,7 +7190,7 @@ _wrap_PyNs3SpectrumConverter__copy__(PyNs3SpectrumConverter *self)
 }
 
 static PyMethodDef PyNs3SpectrumConverter_methods[] = {
-    {(char *) "Convert", (PyCFunction) _wrap_PyNs3SpectrumConverter_Convert, METH_VARARGS|METH_KEYWORDS, "Convert(vvf)\n\ntype: vvf: ns3::Ptr< ns3::SpectrumValue const >" },
+    {(char *) "Convert", (PyCFunction) _wrap_PyNs3SpectrumConverter_Convert, METH_KEYWORDS|METH_VARARGS, "Convert(vvf)\n\ntype: vvf: ns3::Ptr< ns3::SpectrumValue const >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumConverter__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7286,16 +7286,16 @@ PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumErrorMode
 }
 
 PyObject *
-PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self)
+PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7318,16 +7318,16 @@ PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Sp
 }
 
 PyObject *
-PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumErrorModel *self)
+PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7887,14 +7887,14 @@ _wrap_PyNs3SpectrumErrorModel_StartRx(PyNs3SpectrumErrorModel *self, PyObject *a
 }
 
 static PyMethodDef PyNs3SpectrumErrorModel_methods[] = {
-    {(char *) "EvaluateChunk", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_EvaluateChunk, METH_VARARGS|METH_KEYWORDS, "EvaluateChunk(sinr, duration)\n\ntype: sinr: ns3::SpectrumValue const &\ntype: duration: ns3::Time" },
+    {(char *) "EvaluateChunk", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_EvaluateChunk, METH_KEYWORDS|METH_VARARGS, "EvaluateChunk(sinr, duration)\n\ntype: sinr: ns3::SpectrumValue const &\ntype: duration: ns3::Time" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsRxCorrect", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_IsRxCorrect, METH_NOARGS, "IsRxCorrect()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -7960,7 +7960,7 @@ PyTypeObject PyNs3SpectrumErrorModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumErrorModel(arg0)\nSpectrumErrorModel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumErrorModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumErrorModel__tp_clear,             /* tp_clear */
@@ -8009,16 +8009,16 @@ PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumInterfe
 }
 
 PyObject *
-PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self)
+PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose(PyNs3SpectrumInterference *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumInterference is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8041,16 +8041,16 @@ PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
-PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose(PyNs3SpectrumInterference *self)
+PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumInterference is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8509,16 +8509,16 @@ _wrap_PyNs3SpectrumInterference__copy__(PyNs3SpectrumInterference *self)
 
 static PyMethodDef PyNs3SpectrumInterference_methods[] = {
     {(char *) "AbortRx", (PyCFunction) _wrap_PyNs3SpectrumInterference_AbortRx, METH_NOARGS, "AbortRx()\n\n" },
-    {(char *) "AddSignal", (PyCFunction) _wrap_PyNs3SpectrumInterference_AddSignal, METH_VARARGS|METH_KEYWORDS, "AddSignal(spd, duration)\n\ntype: spd: ns3::Ptr< ns3::SpectrumValue const >\ntype: duration: ns3::Time const" },
+    {(char *) "AddSignal", (PyCFunction) _wrap_PyNs3SpectrumInterference_AddSignal, METH_KEYWORDS|METH_VARARGS, "AddSignal(spd, duration)\n\ntype: spd: ns3::Ptr< ns3::SpectrumValue const >\ntype: duration: ns3::Time const" },
     {(char *) "EndRx", (PyCFunction) _wrap_PyNs3SpectrumInterference_EndRx, METH_NOARGS, "EndRx()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumInterference_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetErrorModel", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetErrorModel, METH_VARARGS|METH_KEYWORDS, "SetErrorModel(e)\n\ntype: e: ns3::Ptr< ns3::SpectrumErrorModel >" },
-    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetNoisePowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue const >" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumInterference_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(p, rxPsd)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: rxPsd: ns3::Ptr< ns3::SpectrumValue const >" },
+    {(char *) "SetErrorModel", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetErrorModel, METH_KEYWORDS|METH_VARARGS, "SetErrorModel(e)\n\ntype: e: ns3::Ptr< ns3::SpectrumErrorModel >" },
+    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetNoisePowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue const >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumInterference_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p, rxPsd)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: rxPsd: ns3::Ptr< ns3::SpectrumValue const >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumInterference__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8585,7 +8585,7 @@ PyTypeObject PyNs3SpectrumInterference_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumInterference(arg0)\nSpectrumInterference()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumInterference__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumInterference__tp_clear,             /* tp_clear */
@@ -8768,7 +8768,7 @@ _wrap_PyNs3SpectrumModel__copy__(PyNs3SpectrumModel *self)
 static PyMethodDef PyNs3SpectrumModel_methods[] = {
     {(char *) "GetNumBands", (PyCFunction) _wrap_PyNs3SpectrumModel_GetNumBands, METH_NOARGS, "GetNumBands()\n\n" },
     {(char *) "GetUid", (PyCFunction) _wrap_PyNs3SpectrumModel_GetUid, METH_NOARGS, "GetUid()\n\n" },
-    {(char *) "IsOrthogonal", (PyCFunction) _wrap_PyNs3SpectrumModel_IsOrthogonal, METH_VARARGS|METH_KEYWORDS, "IsOrthogonal(other)\n\ntype: other: ns3::SpectrumModel const &" },
+    {(char *) "IsOrthogonal", (PyCFunction) _wrap_PyNs3SpectrumModel_IsOrthogonal, METH_KEYWORDS|METH_VARARGS, "IsOrthogonal(other)\n\ntype: other: ns3::SpectrumModel const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8902,16 +8902,16 @@ PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumPhy *self)
 }
 
 PyObject *
-PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self)
+PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPhy *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8934,16 +8934,16 @@ PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SpectrumP
 }
 
 PyObject *
-PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPhy *self)
+PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9980,18 +9980,18 @@ _wrap_PyNs3SpectrumPhy_StartRx(PyNs3SpectrumPhy *self, PyObject *args, PyObject 
 
 static PyMethodDef PyNs3SpectrumPhy_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumPhy_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumPhy_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumPhy_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10057,7 +10057,7 @@ PyTypeObject PyNs3SpectrumPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumPhy()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumPhy__tp_clear,             /* tp_clear */
@@ -10106,16 +10106,16 @@ PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Spectru
 }
 
 PyObject *
-PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self)
+PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10138,16 +10138,16 @@ PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionComplet
 }
 
 PyObject *
-PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self)
+PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10686,13 +10686,13 @@ _wrap_PyNs3SpectrumPropagationLossModel_SetNext(PyNs3SpectrumPropagationLossMode
 }
 
 static PyMethodDef PyNs3SpectrumPropagationLossModel_methods[] = {
-    {(char *) "CalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_CalcRxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "CalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
+    {(char *) "CalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_CalcRxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "CalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetNext", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_SetNext, METH_VARARGS|METH_KEYWORDS, "SetNext(next)\n\ntype: next: ns3::Ptr< ns3::SpectrumPropagationLossModel >" },
+    {(char *) "SetNext", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_SetNext, METH_KEYWORDS|METH_VARARGS, "SetNext(next)\n\ntype: next: ns3::Ptr< ns3::SpectrumPropagationLossModel >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10758,7 +10758,7 @@ PyTypeObject PyNs3SpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumPropagationLossModel(arg0)\nSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -11841,16 +11841,16 @@ PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize(PyNs3TvSpectrumTran
 }
 
 PyObject *
-PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self)
+PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose(PyNs3TvSpectrumTransmitter *self)
 {
     PyObject *py_retval;
     PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11873,16 +11873,16 @@ PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
 }
 
 PyObject *
-PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose(PyNs3TvSpectrumTransmitter *self)
+PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self)
 {
     PyObject *py_retval;
     PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13196,23 +13196,23 @@ _wrap_PyNs3TvSpectrumTransmitter_Stop(PyNs3TvSpectrumTransmitter *self)
 
 static PyMethodDef PyNs3TvSpectrumTransmitter_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "CreateTvPsd", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_CreateTvPsd, METH_NOARGS, "CreateTvPsd()\n\n" },
     {(char *) "GetTxPsd", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetTxPsd, METH_NOARGS, "GetTxPsd()\n\n" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_Stop, METH_NOARGS, "Stop()\n\n" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -13278,7 +13278,7 @@ PyTypeObject PyNs3TvSpectrumTransmitter_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TvSpectrumTransmitter()",                        /* Documentation string */
     (traverseproc)PyNs3TvSpectrumTransmitter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TvSpectrumTransmitter__tp_clear,             /* tp_clear */
@@ -13311,6 +13311,22 @@ PyTypeObject PyNs3TvSpectrumTransmitter_Type = {
 
 
 PyObject *
+PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize(PyNs3WaveformGenerator *self)
+{
+    PyObject *py_retval;
+    PyNs3WaveformGenerator__PythonHelper *helper = dynamic_cast< PyNs3WaveformGenerator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveformGenerator *self)
 {
     PyObject *py_retval;
@@ -13337,22 +13353,6 @@ PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveformGene
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize(PyNs3WaveformGenerator *self)
-{
-    PyObject *py_retval;
-    PyNs3WaveformGenerator__PythonHelper *helper = dynamic_cast< PyNs3WaveformGenerator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14626,25 +14626,25 @@ _wrap_PyNs3WaveformGenerator_Stop(PyNs3WaveformGenerator *self)
 
 static PyMethodDef PyNs3WaveformGenerator_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3WaveformGenerator_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetTxPowerSpectralDensity(txs)\n\ntype: txs: ns3::Ptr< ns3::SpectrumValue >" },
-    {(char *) "SetPeriod", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetPeriod, METH_VARARGS|METH_KEYWORDS, "SetPeriod(period)\n\ntype: period: ns3::Time" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3WaveformGenerator_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetTxPowerSpectralDensity(txs)\n\ntype: txs: ns3::Ptr< ns3::SpectrumValue >" },
+    {(char *) "SetPeriod", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetPeriod, METH_KEYWORDS|METH_VARARGS, "SetPeriod(period)\n\ntype: period: ns3::Time" },
     {(char *) "GetPeriod", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetPeriod, METH_NOARGS, "GetPeriod()\n\n" },
-    {(char *) "SetDutyCycle", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetDutyCycle, METH_VARARGS|METH_KEYWORDS, "SetDutyCycle(value)\n\ntype: value: double" },
+    {(char *) "SetDutyCycle", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetDutyCycle, METH_KEYWORDS|METH_VARARGS, "SetDutyCycle(value)\n\ntype: value: double" },
     {(char *) "GetDutyCycle", (PyCFunction) _wrap_PyNs3WaveformGenerator_GetDutyCycle, METH_NOARGS, "GetDutyCycle()\n\n" },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3WaveformGenerator_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3WaveformGenerator_Stop, METH_NOARGS, "Stop()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -14710,7 +14710,7 @@ PyTypeObject PyNs3WaveformGenerator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WaveformGenerator()",                        /* Documentation string */
     (traverseproc)PyNs3WaveformGenerator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveformGenerator__tp_clear,             /* tp_clear */
@@ -14966,15 +14966,15 @@ _wrap_PyNs3AlohaNoackMacHeader__copy__(PyNs3AlohaNoackMacHeader *self)
 }
 
 static PyMethodDef PyNs3AlohaNoackMacHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetDestination", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_GetDestination, METH_NOARGS, "GetDestination()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetSource", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_GetSource, METH_NOARGS, "GetSource()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDestination", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_SetDestination, METH_VARARGS|METH_KEYWORDS, "SetDestination(destination)\n\ntype: destination: ns3::Mac48Address" },
-    {(char *) "SetSource", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_SetSource, METH_VARARGS|METH_KEYWORDS, "SetSource(source)\n\ntype: source: ns3::Mac48Address" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDestination", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_SetDestination, METH_KEYWORDS|METH_VARARGS, "SetDestination(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "SetSource", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader_SetSource, METH_KEYWORDS|METH_VARARGS, "SetSource(source)\n\ntype: source: ns3::Mac48Address" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3AlohaNoackMacHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15038,7 +15038,7 @@ PyTypeObject PyNs3AlohaNoackMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AlohaNoackMacHeader(arg0)\nAlohaNoackMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AlohaNoackMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AlohaNoackMacHeader__tp_clear,             /* tp_clear */
@@ -15087,16 +15087,16 @@ PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs
 }
 
 PyObject *
-PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self)
+PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15119,16 +15119,16 @@ PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructio
 }
 
 PyObject *
-PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self)
+PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15689,14 +15689,14 @@ _wrap_PyNs3ConstantSpectrumPropagationLossModel__copy__(PyNs3ConstantSpectrumPro
 }
 
 static PyMethodDef PyNs3ConstantSpectrumPropagationLossModel_methods[] = {
-    {(char *) "DoCalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_DoCalcRxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "DoCalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
+    {(char *) "DoCalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_DoCalcRxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "DoCalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
     {(char *) "GetLossDb", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_GetLossDb, METH_NOARGS, "GetLossDb()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetLossDb", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_SetLossDb, METH_VARARGS|METH_KEYWORDS, "SetLossDb(lossDb)\n\ntype: lossDb: double" },
+    {(char *) "SetLossDb", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_SetLossDb, METH_KEYWORDS|METH_VARARGS, "SetLossDb(lossDb)\n\ntype: lossDb: double" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15763,7 +15763,7 @@ PyTypeObject PyNs3ConstantSpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConstantSpectrumPropagationLossModel(arg0)\nConstantSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantSpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantSpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -15812,16 +15812,16 @@ PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Fr
 }
 
 PyObject *
-PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self)
+PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15844,16 +15844,16 @@ PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCo
 }
 
 PyObject *
-PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self)
+PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16403,13 +16403,13 @@ _wrap_PyNs3FriisSpectrumPropagationLossModel__copy__(PyNs3FriisSpectrumPropagati
 }
 
 static PyMethodDef PyNs3FriisSpectrumPropagationLossModel_methods[] = {
-    {(char *) "CalculateLoss", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_CalculateLoss, METH_VARARGS|METH_KEYWORDS, "CalculateLoss(f, d)\n\ntype: f: double\ntype: d: double" },
-    {(char *) "DoCalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_DoCalcRxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "DoCalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
+    {(char *) "CalculateLoss", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_CalculateLoss, METH_KEYWORDS|METH_VARARGS, "CalculateLoss(f, d)\n\ntype: f: double\ntype: d: double" },
+    {(char *) "DoCalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_DoCalcRxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "DoCalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16476,7 +16476,7 @@ PyTypeObject PyNs3FriisSpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FriisSpectrumPropagationLossModel(arg0)\nFriisSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3FriisSpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FriisSpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -16509,6 +16509,22 @@ PyTypeObject PyNs3FriisSpectrumPropagationLossModel_Type = {
 
 
 PyObject *
+PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3HalfDuplexIdealPhy__PythonHelper *helper = dynamic_cast< PyNs3HalfDuplexIdealPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3HalfDuplexIdealPhy *self)
 {
     PyObject *py_retval;
@@ -16535,22 +16551,6 @@ PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3HalfDuplexI
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3HalfDuplexIdealPhy__PythonHelper *helper = dynamic_cast< PyNs3HalfDuplexIdealPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -17765,27 +17765,27 @@ _wrap_PyNs3HalfDuplexIdealPhy_SetAntenna(PyNs3HalfDuplexIdealPhy *self, PyObject
 
 static PyMethodDef PyNs3HalfDuplexIdealPhy_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetTxPowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
-    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetNoisePowerSpectralDensity, METH_VARARGS|METH_KEYWORDS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue const >" },
-    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_StartTx, METH_VARARGS|METH_KEYWORDS, "StartTx(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
-    {(char *) "SetRate", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetRate, METH_VARARGS|METH_KEYWORDS, "SetRate(rate)\n\ntype: rate: ns3::DataRate" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "SetTxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetTxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetTxPowerSpectralDensity(txPsd)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue >" },
+    {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetNoisePowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue const >" },
+    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
+    {(char *) "SetRate", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetRate, METH_KEYWORDS|METH_VARARGS, "SetRate(rate)\n\ntype: rate: ns3::DataRate" },
     {(char *) "GetRate", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_GetRate, METH_NOARGS, "GetRate()\n\n" },
-    {(char *) "SetGenericPhyTxEndCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyTxEndCallback, METH_VARARGS|METH_KEYWORDS, "SetGenericPhyTxEndCallback(c)\n\ntype: c: ns3::Callback< void, ns3::Ptr< ns3::Packet const >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetGenericPhyRxStartCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxStartCallback, METH_VARARGS|METH_KEYWORDS, "SetGenericPhyRxStartCallback(c)\n\ntype: c: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetGenericPhyRxEndErrorCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndErrorCallback, METH_VARARGS|METH_KEYWORDS, "SetGenericPhyRxEndErrorCallback(c)\n\ntype: c: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetGenericPhyRxEndOkCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndOkCallback, METH_VARARGS|METH_KEYWORDS, "SetGenericPhyRxEndOkCallback(c)\n\ntype: c: ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
+    {(char *) "SetGenericPhyTxEndCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyTxEndCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyTxEndCallback(c)\n\ntype: c: ns3::Callback< void, ns3::Ptr< ns3::Packet const >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetGenericPhyRxStartCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxStartCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyRxStartCallback(c)\n\ntype: c: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetGenericPhyRxEndErrorCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndErrorCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyRxEndErrorCallback(c)\n\ntype: c: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetGenericPhyRxEndOkCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndOkCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyRxEndOkCallback(c)\n\ntype: c: ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -17851,7 +17851,7 @@ PyTypeObject PyNs3HalfDuplexIdealPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "HalfDuplexIdealPhy()",                        /* Documentation string */
     (traverseproc)PyNs3HalfDuplexIdealPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HalfDuplexIdealPhy__tp_clear,             /* tp_clear */
@@ -18134,6 +18134,22 @@ PyTypeObject PyNs3HalfDuplexIdealPhySignalParameters_Type = {
 
 
 PyObject *
+PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3NonCommunicatingNetDevice__PythonHelper *helper = dynamic_cast< PyNs3NonCommunicatingNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3NonCommunicatingNetDevice *self)
 {
     PyObject *py_retval;
@@ -18160,22 +18176,6 @@ PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NonC
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3NonCommunicatingNetDevice__PythonHelper *helper = dynamic_cast< PyNs3NonCommunicatingNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20325,13 +20325,13 @@ _wrap_PyNs3NonCommunicatingNetDevice__copy__(PyNs3NonCommunicatingNetDevice *sel
 }
 
 static PyMethodDef PyNs3NonCommunicatingNetDevice_methods[] = {
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetPhy", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetPhy, METH_NOARGS, "GetPhy()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
@@ -20341,20 +20341,20 @@ static PyMethodDef PyNs3NonCommunicatingNetDevice_methods[] = {
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::Channel >" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetPhy, METH_VARARGS|METH_KEYWORDS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::Object >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::Channel >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetPhy, METH_KEYWORDS|METH_VARARGS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::Object >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20421,7 +20421,7 @@ PyTypeObject PyNs3NonCommunicatingNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "NonCommunicatingNetDevice(arg0)\nNonCommunicatingNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3NonCommunicatingNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NonCommunicatingNetDevice__tp_clear,             /* tp_clear */
@@ -20470,16 +20470,16 @@ PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3ShannonSpe
 }
 
 PyObject *
-PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self)
+PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class ShannonSpectrumErrorModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20502,16 +20502,16 @@ PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
-PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self)
+PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class ShannonSpectrumErrorModel is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21087,14 +21087,14 @@ _wrap_PyNs3ShannonSpectrumErrorModel__copy__(PyNs3ShannonSpectrumErrorModel *sel
 }
 
 static PyMethodDef PyNs3ShannonSpectrumErrorModel_methods[] = {
-    {(char *) "EvaluateChunk", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_EvaluateChunk, METH_VARARGS|METH_KEYWORDS, "EvaluateChunk(sinr, duration)\n\ntype: sinr: ns3::SpectrumValue const &\ntype: duration: ns3::Time" },
+    {(char *) "EvaluateChunk", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_EvaluateChunk, METH_KEYWORDS|METH_VARARGS, "EvaluateChunk(sinr, duration)\n\ntype: sinr: ns3::SpectrumValue const &\ntype: duration: ns3::Time" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsRxCorrect", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_IsRxCorrect, METH_NOARGS, "IsRxCorrect()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -21161,7 +21161,7 @@ PyTypeObject PyNs3ShannonSpectrumErrorModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ShannonSpectrumErrorModel(arg0)\nShannonSpectrumErrorModel()",                        /* Documentation string */
     (traverseproc)PyNs3ShannonSpectrumErrorModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ShannonSpectrumErrorModel__tp_clear,             /* tp_clear */
@@ -21210,16 +21210,16 @@ PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumAnalyzer *s
 }
 
 PyObject *
-PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self)
+PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose(PyNs3SpectrumAnalyzer *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumAnalyzer is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21242,16 +21242,16 @@ PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Spec
 }
 
 PyObject *
-PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose(PyNs3SpectrumAnalyzer *self)
+PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumAnalyzer is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22464,22 +22464,22 @@ _wrap_PyNs3SpectrumAnalyzer_Stop(PyNs3SpectrumAnalyzer *self)
 
 static PyMethodDef PyNs3SpectrumAnalyzer_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::SpectrumChannel >" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(m)\n\ntype: m: ns3::Ptr< ns3::MobilityModel >" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(d)\n\ntype: d: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
-    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_StartRx, METH_VARARGS|METH_KEYWORDS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "SetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetRxSpectrumModel, METH_VARARGS|METH_KEYWORDS, "SetRxSpectrumModel(m)\n\ntype: m: ns3::Ptr< ns3::SpectrumModel >" },
-    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetAntenna, METH_VARARGS|METH_KEYWORDS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
+    {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "SetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetRxSpectrumModel, METH_KEYWORDS|METH_VARARGS, "SetRxSpectrumModel(m)\n\ntype: m: ns3::Ptr< ns3::SpectrumModel >" },
+    {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_Stop, METH_NOARGS, "Stop()\n\n" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -22545,7 +22545,7 @@ PyTypeObject PyNs3SpectrumAnalyzer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumAnalyzer()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumAnalyzer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumAnalyzer__tp_clear,             /* tp_clear */
@@ -22578,6 +22578,22 @@ PyTypeObject PyNs3SpectrumAnalyzer_Type = {
 
 
 PyObject *
+PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SpectrumChannel *self)
 {
     PyObject *py_retval;
@@ -22604,22 +22620,6 @@ PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumChanne
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23359,17 +23359,17 @@ _wrap_PyNs3SpectrumChannel_StartTx(PyNs3SpectrumChannel *self, PyObject *args, P
 }
 
 static PyMethodDef PyNs3SpectrumChannel_methods[] = {
-    {(char *) "AddPropagationLossModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddPropagationLossModel, METH_VARARGS|METH_KEYWORDS, "AddPropagationLossModel(loss)\n\ntype: loss: ns3::Ptr< ns3::PropagationLossModel >" },
-    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddRx, METH_VARARGS|METH_KEYWORDS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
-    {(char *) "AddSpectrumPropagationLossModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddSpectrumPropagationLossModel, METH_VARARGS|METH_KEYWORDS, "AddSpectrumPropagationLossModel(loss)\n\ntype: loss: ns3::Ptr< ns3::SpectrumPropagationLossModel >" },
+    {(char *) "AddPropagationLossModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddPropagationLossModel, METH_KEYWORDS|METH_VARARGS, "AddPropagationLossModel(loss)\n\ntype: loss: ns3::Ptr< ns3::PropagationLossModel >" },
+    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddRx, METH_KEYWORDS|METH_VARARGS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
+    {(char *) "AddSpectrumPropagationLossModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_AddSpectrumPropagationLossModel, METH_KEYWORDS|METH_VARARGS, "AddSpectrumPropagationLossModel(loss)\n\ntype: loss: ns3::Ptr< ns3::SpectrumPropagationLossModel >" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3SpectrumChannel_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetSpectrumPropagationLossModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_GetSpectrumPropagationLossModel, METH_NOARGS, "GetSpectrumPropagationLossModel()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetPropagationDelayModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_SetPropagationDelayModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationDelayModel(delay)\n\ntype: delay: ns3::Ptr< ns3::PropagationDelayModel >" },
-    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SpectrumChannel_StartTx, METH_VARARGS|METH_KEYWORDS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "SetPropagationDelayModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_SetPropagationDelayModel, METH_KEYWORDS|METH_VARARGS, "SetPropagationDelayModel(delay)\n\ntype: delay: ns3::Ptr< ns3::PropagationDelayModel >" },
+    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -23435,7 +23435,7 @@ PyTypeObject PyNs3SpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumChannel(arg0)\nSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumChannel__tp_clear,             /* tp_clear */
@@ -23468,6 +23468,22 @@ PyTypeObject PyNs3SpectrumChannel_Type = {
 
 
 PyObject *
+PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3AlohaNoackNetDevice__PythonHelper *helper = dynamic_cast< PyNs3AlohaNoackNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3AlohaNoackNetDevice *self)
 {
     PyObject *py_retval;
@@ -23494,22 +23510,6 @@ PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AlohaNoack
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3AlohaNoackNetDevice__PythonHelper *helper = dynamic_cast< PyNs3AlohaNoackNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25744,13 +25744,13 @@ _wrap_PyNs3AlohaNoackNetDevice__copy__(PyNs3AlohaNoackNetDevice *self)
 }
 
 static PyMethodDef PyNs3AlohaNoackNetDevice_methods[] = {
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetPhy", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetPhy, METH_NOARGS, "GetPhy()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
@@ -25761,24 +25761,24 @@ static PyMethodDef PyNs3AlohaNoackNetDevice_methods[] = {
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
     {(char *) "NotifyReceptionEndError", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyReceptionEndError, METH_NOARGS, "NotifyReceptionEndError()\n\n" },
-    {(char *) "NotifyReceptionEndOk", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyReceptionEndOk, METH_VARARGS|METH_KEYWORDS, "NotifyReceptionEndOk(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
+    {(char *) "NotifyReceptionEndOk", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyReceptionEndOk, METH_KEYWORDS|METH_VARARGS, "NotifyReceptionEndOk(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
     {(char *) "NotifyReceptionStart", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyReceptionStart, METH_NOARGS, "NotifyReceptionStart()\n\n" },
-    {(char *) "NotifyTransmissionEnd", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyTransmissionEnd, METH_VARARGS|METH_KEYWORDS, "NotifyTransmissionEnd(arg0)\n\ntype: arg0: ns3::Ptr< ns3::Packet const >" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::Channel >" },
-    {(char *) "SetGenericPhyTxStartCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetGenericPhyTxStartCallback, METH_VARARGS|METH_KEYWORDS, "SetGenericPhyTxStartCallback(c)\n\ntype: c: ns3::Callback< bool, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetPhy, METH_VARARGS|METH_KEYWORDS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::Object >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "NotifyTransmissionEnd", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_NotifyTransmissionEnd, METH_KEYWORDS|METH_VARARGS, "NotifyTransmissionEnd(arg0)\n\ntype: arg0: ns3::Ptr< ns3::Packet const >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(c)\n\ntype: c: ns3::Ptr< ns3::Channel >" },
+    {(char *) "SetGenericPhyTxStartCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetGenericPhyTxStartCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyTxStartCallback(c)\n\ntype: c: ns3::Callback< bool, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetPhy, METH_KEYWORDS|METH_VARARGS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::Object >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -25845,7 +25845,7 @@ PyTypeObject PyNs3AlohaNoackNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AlohaNoackNetDevice(arg0)\nAlohaNoackNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3AlohaNoackNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AlohaNoackNetDevice__tp_clear,             /* tp_clear */
@@ -25894,16 +25894,16 @@ PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3MultiModel
 }
 
 PyObject *
-PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self)
+PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MultiModelSpectrumChannel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25926,16 +25926,16 @@ PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
-PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self)
+PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MultiModelSpectrumChannel is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -26724,15 +26724,15 @@ _wrap_PyNs3MultiModelSpectrumChannel__copy__(PyNs3MultiModelSpectrumChannel *sel
 }
 
 static PyMethodDef PyNs3MultiModelSpectrumChannel_methods[] = {
-    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_AddRx, METH_VARARGS|METH_KEYWORDS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
-    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
+    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_AddRx, METH_KEYWORDS|METH_VARARGS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
+    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetDevice, METH_KEYWORDS|METH_VARARGS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_StartTx, METH_VARARGS|METH_KEYWORDS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -26799,7 +26799,7 @@ PyTypeObject PyNs3MultiModelSpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MultiModelSpectrumChannel(arg0)\nMultiModelSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3MultiModelSpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MultiModelSpectrumChannel__tp_clear,             /* tp_clear */
@@ -26832,6 +26832,22 @@ PyTypeObject PyNs3MultiModelSpectrumChannel_Type = {
 
 
 PyObject *
+PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3SingleModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SingleModelSpectrumChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SingleModelSpectrumChannel *self)
 {
     PyObject *py_retval;
@@ -26858,22 +26874,6 @@ PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Sin
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3SingleModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SingleModelSpectrumChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -27567,14 +27567,14 @@ _wrap_PyNs3SingleModelSpectrumChannel__copy__(PyNs3SingleModelSpectrumChannel *s
 }
 
 static PyMethodDef PyNs3SingleModelSpectrumChannel_methods[] = {
-    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_AddRx, METH_VARARGS|METH_KEYWORDS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
-    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
+    {(char *) "AddRx", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_AddRx, METH_KEYWORDS|METH_VARARGS, "AddRx(phy)\n\ntype: phy: ns3::Ptr< ns3::SpectrumPhy >" },
+    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetDevice, METH_KEYWORDS|METH_VARARGS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_StartTx, METH_VARARGS|METH_KEYWORDS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -27641,7 +27641,7 @@ PyTypeObject PyNs3SingleModelSpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SingleModelSpectrumChannel(arg0)\nSingleModelSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SingleModelSpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SingleModelSpectrumChannel__tp_clear,             /* tp_clear */

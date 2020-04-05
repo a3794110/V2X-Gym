@@ -7,6 +7,7 @@
     
 
 // Module headers:
+#include "NetworkSetting.h"
 #include "container.h"
 #include "messages.pb.h"
 #include "opengym-helper.h"
