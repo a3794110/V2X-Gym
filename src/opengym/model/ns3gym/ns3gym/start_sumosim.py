@@ -15,12 +15,14 @@ except ImportError:
         "please declare environment variable 'SUMO_HOME' as the root directory of your sumo installation (it should contain folders 'bin', 'tools' and 'docs')")
     
 class SUMOSim(object):
-    def __init__(self, SUMOConfigDir="data/Simulation/map.sumocfg", stepTime=0.1):
+    def __init__(self, SUMOConfigDir="data/Simulation/map.sumocfg", GUI=True, stepTime=0.1):
             self.SUMOConfigDir = SUMOConfigDir
             self.stepTime = stepTime
             self.traci = traci
+            self.GUI = GUI
             options = self.get_options()                                                             
-            if options.nogui:
+            #if options.nogui:
+            if self.GUI != True:
                 self.sumoBinary = checkBinary('sumo')
             else:
                 self.sumoBinary = checkBinary('sumo-gui')  

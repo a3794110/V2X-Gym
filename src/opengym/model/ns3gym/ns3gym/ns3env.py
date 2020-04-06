@@ -143,7 +143,7 @@ class Ns3SumoZmqBridge(object):
 
         if self.startSim:
             # run simulation script
-            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug)
+            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug, ScriptDir=" ", CV_Num=self.CV_Num)
         else:
             print("Waiting for simulation script to connect on port: tcp://localhost:{}".format(port))
             print('Please start proper ns-3 simulation script using ./waf --run "..."')
@@ -471,7 +471,7 @@ class Ns3SumoZmqBridge(object):
 
 
 class Ns3Env(gym.Env):
-    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, RLV2XConfig=" ", CV_Num = 0):
+    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, V2XGymConfig=" ", CV_Num = 0):
         self.stepTime = stepTime
         self.port = port
         self.startSim = startSim
@@ -490,7 +490,7 @@ class Ns3Env(gym.Env):
 
         ################################# hank
         self.CV_Num = CV_Num
-        self.RLV2XConfig = RLV2XConfig
+        self.V2XGymConfig = V2XGymConfig
         self.InitialSUMO = False
         ################################# hank
 

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Configuration>
     <TrafficConfig >
         <dir>scratch/V2XSim_Test/data/Simulation/map.sumocfg</dir>
@@ -6,12 +7,12 @@
 
     <NetworkConfig >
         <dir>NetworkEnvSetting.xml</dir>
-        <scenario>scratch/first.cc</scenario>
+        <scenario>scratch/V2XSim_Test/ns3sim.cc</scenario>
     </NetworkConfig>
 
-    <RLSpace >
+    <!--RLSpace >
         <dir>RLSpace.xml</dir>
-    </RLSpace>
+    </RLSpace><!-->
 </Configuration>
 
 

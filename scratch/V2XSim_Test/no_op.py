@@ -48,11 +48,10 @@ stepTime = 0.1  # seconds
 seed = 0
 simArgs = {"--simTime": simTime,
            "--testArg": 123,
-           "--nodeNum": nodeNum,
             }
 debug = True
 
-env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, RLV2XConfig="RL-V2XSimConfig.xml", CV_Num=100)
+env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="RL-V2XSimConfig.xml", CV_Num=nodeNum)
 env.reset()
 
 ob_space = env.observation_space

@@ -13,6 +13,8 @@ apt-get install gcc g++ python
 
 see https://www.nsnam.org/wiki/Installation
 ```
+2. Install xml element
+pip install elementpath
 2. Install ZMQ and Protocol Buffers libs:
 ```
 # to install protobuf-3.6 on ubuntu 16.04:
