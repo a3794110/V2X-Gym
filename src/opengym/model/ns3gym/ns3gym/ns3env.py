@@ -36,23 +36,7 @@ except ImportError:
     sys.exit(
         "please declare environment variable 'SUMO_HOME' as the root directory of your sumo installation (it should contain folders 'bin', 'tools' and 'docs')")
 
-class StartSUMO(object):
-    def __init__(self, SUMOConfigDir="data/Simulation/map.sumocfg", stepTime=0.1):
-        self.SUMOConfigDir = SUMOConfigDir
-        self.stepTime = stepTime
-        options = self.get_options()                                                             
-        if options.nogui:
-            sumoBinary = checkBinary('sumo')
-        else:
-            sumoBinary = checkBinary('sumo-gui')                            
-        traci.start([sumoBinary, '-c', os.path.join(self.SUMOConfigDir) , '--step-length', str(self.stepTime)])
 
-    def get_options(self):
-        optParser = optparse.OptionParser()
-        optParser.add_option("--nogui", action="store_true",
-                            default=False, help="run the commandline version of sumo")
-        options, args = optParser.parse_args()
-        return options
 
 
 class CV_Mobility_Control(object):
@@ -503,8 +487,8 @@ class Ns3Env(gym.Env):
 
         ################################# hank
         self.CV_Num = CV_Num
-        self.traci = traci
         self.RLV2XConfig = RLV2XConfig
+        self.InitialSUMO = False
         ################################# hank
 
         self.ns3ZmqBridge = Ns3ZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, self.CV_Num)
@@ -537,6 +521,9 @@ class Ns3Env(gym.Env):
     def reset(self):
         if not self.envDirty:
             obs = self.ns3ZmqBridge.get_obs()
+            if self.InitialSUMO == False :
+                self.InitSUMO()
+                self.InitialSUMO = True
             return obs
 
         if self.ns3ZmqBridge:
@@ -551,6 +538,8 @@ class Ns3Env(gym.Env):
         # get first observations
         self.ns3ZmqBridge.rx_env_state()
         obs = self.ns3ZmqBridge.get_obs()
+
+
         return obs
 
     def render(self, mode='human'):
@@ -567,5 +556,25 @@ class Ns3Env(gym.Env):
 
         if self.viewer:
             self.viewer.close()
-    def StartTrafficModule(self):
-        StartSUMO()
+    
+    def InitSUMO(self, SUMOConfigDir="data/Simulation/map.sumocfg", stepTime=0.1):
+        self.SUMOConfigDir = SUMOConfigDir
+        self.stepTime = stepTime
+        self.traci = traci
+        options = self.get_options()                                                             
+        if options.nogui:
+            self.sumoBinary = checkBinary('sumo')
+        else:
+            self.sumoBinary = checkBinary('sumo-gui')  
+        
+        self.RunSUMO()
+        
+    def RunSUMO(self):
+        self.traci.start([self.sumoBinary, '-c', os.path.join(self.SUMOConfigDir) , '--step-length', str(self.stepTime)])
+
+    def get_options(self):
+        optParser = optparse.OptionParser()
+        optParser.add_option("--nogui", action="store_true",
+                            default=False, help="run the commandline version of sumo")
+        options, args = optParser.parse_args()
+        return options

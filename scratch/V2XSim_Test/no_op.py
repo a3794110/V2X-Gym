@@ -6,10 +6,10 @@ import time
 import numpy as np
 import sys
 import os
+
 from ns3gym import ns3env
+
 import optparse
-
-
 
 
 '''try:
@@ -64,21 +64,21 @@ stepIdx = 0
 currIt = 0
 allRxPkts = 0
 
-env.StartTrafficModule() #hank
+#env.StartTrafficModule() #hank
     
-
-'''def get_options():
+'''
+def get_options():
     optParser = optparse.OptionParser()
     optParser.add_option("--nogui", action="store_true",
                          default=False, help="run the commandline version of sumo")
     options, args = optParser.parse_args()
-    return options'''
+    return options
 
 
 #-------------------------------------------------------------------------------#
 #                Include SUMO Map
 #===============================================================================#    
-'''options = get_options()                                                             
+options = get_options()                                                             
 if options.nogui:
     sumoBinary = checkBinary('sumo')
 else:
