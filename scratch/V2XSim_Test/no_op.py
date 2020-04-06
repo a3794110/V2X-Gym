@@ -88,12 +88,12 @@ traci.start([sumoBinary, '-c', os.path.join('data/Simulation', 'map.sumocfg'), '
 #Vehicle = {}
 #VehilceDensity = 1
 
-msTimer = env.traci.simulation.getCurrentTime()
+msTimer = env.ns3ZmqBridge.MobilityControl.traci.simulation.getCurrentTime()
 mobilitycontrol = env.ns3ZmqBridge.MobilityControl
 
 def get_no_op_action(obs, stepIdx):
         
-        if (env.traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
+        if (mobilitycontrol.traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
             mobilitycontrol.CreateCV(mobilitycontrol.addID, "routedist1", "typedist1")
         
         action = np.arange(stepIdx)

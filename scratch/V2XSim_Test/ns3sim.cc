@@ -122,14 +122,14 @@ std::string MyGetExtraInfo(void)
   return myInfo;
 }
 
-void SetMobility (Ptr<Node> node, Vector vel){
+/*void SetMobility (Ptr<Node> node, Vector vel){
     //Ptr<ConstantPositionMobilityModel > mobility = node->GetObject<ConstantPositionMobilityModel > ();
     static double index_time;
     Ptr<WaypointMobilityModel> ueWaypointMobility =  node->GetObject<WaypointMobilityModel > ();  
     ueWaypointMobility->AddWaypoint(Waypoint(Seconds(index_time), vel));
     index_time+=0.1;
     //mobility->SetPosition (vel);
-}
+}*/
 
 
 /*

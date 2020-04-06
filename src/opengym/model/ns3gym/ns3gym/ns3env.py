@@ -9,8 +9,10 @@ import gym
 from gym import spaces
 from gym.utils import seeding
 from enum import IntEnum
+from ns3gym.CVMobilityControl import CV_Mobility_Control
+from ns3gym.start_sumosim import SUMOSim
 
-from ns3gym.start_sim import start_sim_script, build_ns3_project
+from ns3gym.start_ns3sim import start_sim_script, build_ns3_project
 import optparse
 
 
@@ -39,12 +41,13 @@ except ImportError:
 
 
 
-class CV_Mobility_Control(object):
+'''class CV_Mobility_Control(object):
     def __init__(self, CV_Num = 0):
         self.CV_Num = CV_Num
         self.VehIDList = set()
         self.VehinNet = set()
         self.addID = 0
+        self.traci =traci
     
 
     def CreateCV(self, i=0, routeid='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
@@ -88,16 +91,16 @@ class CV_Mobility_Control(object):
 
         Mobility_Sync_Space = self.Vehicle_Position_List()
         
-        return Mobility_Sync_Space
+        return Mobility_Sync_Space'''
 
 ########################################################################################################################################################################
 
 
 
-class Ns3ZmqBridge(object):
-    """docstring for Ns3ZmqBridge"""
+class Ns3SumoZmqBridge(object):
+    """docstring for Ns3SumoZmqBridge"""
     def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0):
-        super(Ns3ZmqBridge, self).__init__()
+        super(Ns3SumoZmqBridge, self).__init__()
         port = int(port)
         self.port = port
         self.startSim = startSim
@@ -491,7 +494,7 @@ class Ns3Env(gym.Env):
         self.InitialSUMO = False
         ################################# hank
 
-        self.ns3ZmqBridge = Ns3ZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, self.CV_Num)
+        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, self.CV_Num)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()
@@ -522,7 +525,7 @@ class Ns3Env(gym.Env):
         if not self.envDirty:
             obs = self.ns3ZmqBridge.get_obs()
             if self.InitialSUMO == False :
-                self.InitSUMO()
+                SUMOSim()
                 self.InitialSUMO = True
             return obs
 
@@ -531,7 +534,7 @@ class Ns3Env(gym.Env):
             self.ns3ZmqBridge = None
 
         self.envDirty = False
-        self.ns3ZmqBridge = Ns3ZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug)
+        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()
@@ -557,7 +560,7 @@ class Ns3Env(gym.Env):
         if self.viewer:
             self.viewer.close()
     
-    def InitSUMO(self, SUMOConfigDir="data/Simulation/map.sumocfg", stepTime=0.1):
+    '''def InitSUMO(self, SUMOConfigDir="data/Simulation/map.sumocfg", stepTime=0.1):
         self.SUMOConfigDir = SUMOConfigDir
         self.stepTime = stepTime
         self.traci = traci
@@ -577,4 +580,4 @@ class Ns3Env(gym.Env):
         optParser.add_option("--nogui", action="store_true",
                             default=False, help="run the commandline version of sumo")
         options, args = optParser.parse_args()
-        return options
+        return options'''
