@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Configuration>
+    <TrafficConfig >
+        <dir>data/Simulation/map.sumocfg</dir>
+        <gui>false</gui>
+    </TrafficConfig>
+
+    <NetworkConfig >
+        <dir>NetworkEnvSetting.xml</dir>
+        <scenario>V2XSim_Test</scenario>
+    </NetworkConfig>
+
+    <!--RLSpace >
+        <dir>RLSpace.xml</dir>
+    </RLSpace><!-->
+</Configuration>
+
+

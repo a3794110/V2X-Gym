@@ -11,6 +11,7 @@ from gym.utils import seeding
 from enum import IntEnum
 from ns3gym.CVMobilityControl import CV_Mobility_Control
 from ns3gym.start_sumosim import SUMOSim
+from ns3gym.V2XGymConfigSetting import V2XGymConfigSetting
 
 from ns3gym.start_ns3sim import start_sim_script, build_ns3_project
 import optparse
@@ -99,7 +100,7 @@ except ImportError:
 
 class Ns3SumoZmqBridge(object):
     """docstring for Ns3SumoZmqBridge"""
-    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0):
+    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0, ScriptDir=" ", NetworkConfig=" "):
         super(Ns3SumoZmqBridge, self).__init__()
         port = int(port)
         self.port = port
@@ -114,6 +115,8 @@ class Ns3SumoZmqBridge(object):
         #############################hank
         self.CV_Num = CV_Num 
         self.MobilityControl = CV_Mobility_Control(CV_Num)
+        self.ScriptDir = ScriptDir
+        self.NetworkConfig = NetworkConfig
         ############################
 
         context = zmq.Context()
@@ -143,7 +146,7 @@ class Ns3SumoZmqBridge(object):
 
         if self.startSim:
             # run simulation script
-            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug, ScriptDir=" ", CV_Num=self.CV_Num)
+            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug, self.ScriptDir, self.NetworkConfig, self.CV_Num)
         else:
             print("Waiting for simulation script to connect on port: tcp://localhost:{}".format(port))
             print('Please start proper ns-3 simulation script using ./waf --run "..."')
@@ -492,9 +495,12 @@ class Ns3Env(gym.Env):
         self.CV_Num = CV_Num
         self.V2XGymConfig = V2XGymConfig
         self.InitialSUMO = False
+        self.V2XGymConfigSetting = V2XGymConfigSetting( self.V2XGymConfig )
+        self.SUMOConfigDir, self.gui = self.V2XGymConfigSetting.GetSUMOCfgAttribute()
+        self.NetworkConfig, self.ScriptDir = self.V2XGymConfigSetting.GetNs3CfgAttribute()
         ################################# hank
 
-        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, self.CV_Num)
+        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, CV_Num = self.CV_Num, ScriptDir=self.ScriptDir, NetworkConfig= self.NetworkConfig)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()
@@ -525,7 +531,7 @@ class Ns3Env(gym.Env):
         if not self.envDirty:
             obs = self.ns3ZmqBridge.get_obs()
             if self.InitialSUMO == False :
-                SUMOSim()
+                SUMOSim(SUMOConfigDir=self.SUMOConfigDir, GUI=self.gui, stepTime=self.stepTime)
                 self.InitialSUMO = True
             return obs
 
@@ -534,7 +540,7 @@ class Ns3Env(gym.Env):
             self.ns3ZmqBridge = None
 
         self.envDirty = False
-        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug)
+        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, CV_Num = self.CV_Num, ScriptDir=self.ScriptDir, NetworkConfig= self.NetworkConfig)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()

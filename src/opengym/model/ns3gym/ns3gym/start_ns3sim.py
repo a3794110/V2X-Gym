@@ -59,10 +59,10 @@ def build_ns3_project(debug=True): #debug: show ns3 compile info during ns3gym r
 	os.chdir(cwd)
 
 
-def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkSettingDir= " ", CV_Num=0, AntennaHeight=0):
+def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkConfig= " ", CV_Num=0, AntennaHeight=0):
 	
-	if NetworkSettingDir != " ":#allow Network Setting Config Selection
-		simArgs["--NetworkSettingDir"] = NetworkSettingDir
+	if NetworkConfig != " ":#allow Network Setting Config Selection
+		simArgs["--NetworkConfig"] = NetworkConfig
 
 	simArgs["--CV_Num"] = CV_Num
 	simArgs["--AntennaHeight"] = AntennaHeight
@@ -71,7 +71,7 @@ def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" 
 	if ScriptDir == " ": #allow Script selection 
 		simScriptName = os.path.basename(cwd)
 	else:
-		simScriptName = ScriptDir
+		simScriptName = ScriptDir #ns3 script location
 	wafPath = find_waf_path(cwd)
 	baseNs3Dir = os.path.dirname(wafPath)
 
