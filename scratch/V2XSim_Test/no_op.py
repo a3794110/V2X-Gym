@@ -51,7 +51,11 @@ simArgs = {"--simTime": simTime,
             }
 debug = True
 
-env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig.xml", CV_Num=nodeNum)
+CV_Args = {"CV_Num": nodeNum,
+            "Antenna_Height": 15,
+            }
+
+env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig.xml", CV_Args=CV_Args)
 env.reset()
 
 ob_space = env.observation_space

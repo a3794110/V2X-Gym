@@ -164,12 +164,11 @@ int
 main (int argc, char *argv[])
 {
   // Parameters of the scenario
-  uint32_t simSeed = 1;
+  /*uint32_t simSeed = 1;
   double simulationTime = 100; //seconds
   double envStepTime = 0.1; //seconds, ns3gym env step time interval
-  uint32_t openGymPort = 5551;
+  uint32_t openGymPort = 5552;
   uint32_t testArg = 0;
-  
   uint32_t CV_Num = 100;
   uint32_t AntennaHeight = 0;
   string NetworkConfig;
@@ -180,13 +179,15 @@ main (int argc, char *argv[])
   cmd.AddValue ("simSeed", "Seed for random generator. Default: 1", simSeed);
   cmd.AddValue ("simTime", "Simulation time in seconds. Default: 10s", simulationTime);
   cmd.AddValue ("testArg", "Extra simulation argument. Default: 0", testArg);
-  
+  cmd.AddValue ("envStepTime", "stpe time", envStepTime);
+
   cmd.AddValue ("CV_Num","Number of Connected Car. Default: 100",CV_Num  );
   cmd.AddValue ("NetworkConfig", "the location of network config file", NetworkConfig);
   cmd.AddValue ("AntennaHeight", "the antenna height of connected car", AntennaHeight);
 
-
-  cmd.Parse (argc, argv);
+  cmd.Parse (argc, argv);*/
+  V2XGym_InitialParameters();
+  V2XGym_SettingConfigParameters();
 
   NS_LOG_UNCOND("Ns3Env parameters:");
   NS_LOG_UNCOND("--simulationTime: " << simulationTime);
@@ -198,18 +199,15 @@ main (int argc, char *argv[])
   RngSeedManager::SetSeed (1);
   RngSeedManager::SetRun (simSeed);
 
-
+  
 
 
   // Configuration of the scenario
   // Create Nodes
   NodeContainer nodes;
   nodes.Create (CV_Num);
-  
-  // Mobility model
   MobilityHelper ueMobility;
   ueMobility.SetMobilityModel ("ns3::WaypointMobilityModel");
-  //ueMobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
   ueMobility.Install (nodes);
   for (uint32_t i=0; i<CV_Num; i++)
   {

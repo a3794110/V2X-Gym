@@ -241,6 +241,29 @@ namespace ns3{
             Config::SetDefault(Arg1, RegisterMethodResult1.P##Type );\
         } while(0)
         
+    #define V2XGym_InitialParameters()\
+            uint32_t simSeed = 1;\
+            double simulationTime = 100;\
+            double envStepTime = 0.1; \
+            uint32_t openGymPort = 5551;\
+            uint32_t testArg = 0;\
+            uint32_t CV_Num = 100;\
+            uint32_t AntennaHeight = 0;\
+            string NetworkConfig;\
+            CommandLine cmd;\
+            cmd.AddValue ("openGymPort", "Port number for OpenGym env. Default: 5555", openGymPort);\
+            cmd.AddValue ("simSeed", "Seed for random generator. Default: 1", simSeed);\
+            cmd.AddValue ("simTime", "Simulation time in seconds. Default: 10s", simulationTime);\
+            cmd.AddValue ("testArg", "Extra simulation argument. Default: 0", testArg);\
+            cmd.AddValue ("envStepTime", "stpe time", envStepTime);\
+            cmd.AddValue ("CV_Num","Number of Connected Car. Default: 100",CV_Num  );\
+            cmd.AddValue ("NetworkConfig", "the location of network config file", NetworkConfig);\
+            cmd.AddValue ("AntennaHeight", "the antenna height of connected car", AntennaHeight)\
+       
+    #define V2XGym_SettingConfigParameters()\
+        do{\
+            cmd.Parse (argc, argv);\
+        } while (0)\
 
 
     class NetworkSetting: public Object{
