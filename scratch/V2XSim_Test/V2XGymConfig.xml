@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Configuration>
     <TrafficConfig >
-        <dir>data/Simulation/map.sumocfg</dir>
+        <dir>data/Simulation/map.sumocfg</dir> <!--start from V2XSim_Tset-->
         <gui>false</gui>
     </TrafficConfig>
 
     <NetworkConfig >
-        <dir>NetworkEnvSetting.xml</dir>
+        <dir>NetworkEnvSetting.xml</dir> <!--start from ns3gym-extention-->
         <scenario>V2XSim_Test</scenario>
     </NetworkConfig>
 
-    <!--RLSpace >
-        <dir>RLSpace.xml</dir>
-    </RLSpace><!-->
+    <RLSpace >
+        <dir>RLSpace.xml</dir>  <!--start from V2XSim_Tset-->
+    </RLSpace>
 </Configuration>
 
 

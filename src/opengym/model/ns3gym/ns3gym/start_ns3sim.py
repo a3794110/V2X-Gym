@@ -4,6 +4,8 @@ import os
 import time
 import subprocess
 
+from ns3gym.RLSpaceParser import RLSpaceParser
+
 
 def find_waf_path(cwd):
 	wafPath = cwd
@@ -59,14 +61,25 @@ def build_ns3_project(debug=True): #debug: show ns3 compile info during ns3gym r
 	os.chdir(cwd)
 
 
-def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkConfig= " ", CV_Num=0, AntennaHeight=0):
+def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkConfig= " ", CV_Num=0, AntennaHeight=0, RLConfig=" "):
 	
 	if NetworkConfig != " ":#allow Network Setting Config Selection
 		simArgs["--NetworkConfig"] = NetworkConfig
+	if RLConfig != " ":
+		SpaceParser = RLSpaceParser(RLConfig) 
+		obs_low, obs_high, obs_dtype, obs_shape = SpaceParser.GetObsSpaceAttribute()
+		simArgs["--obs_low"] = obs_low
+		simArgs["--obs_high"] = obs_high
+		simArgs["--obs_dtype"] = obs_dtype
+		simArgs["--obs_shape"] = obs_shape
+		action_low, action_high, action_dtype, action_shape = SpaceParser.GetActionSpaceAttribute()
+		simArgs["--action_low"] = action_low
+		simArgs["--action_high"] = action_high
+		simArgs["--action_dtype"] = action_dtype
+		simArgs["--action_shape"] = action_shape
 
 	simArgs["--CV_Num"] = CV_Num
 	simArgs["--AntennaHeight"] = AntennaHeight
-
 	cwd = os.getcwd()
 	if ScriptDir == " ": #allow Script selection 
 		simScriptName = os.path.basename(cwd)

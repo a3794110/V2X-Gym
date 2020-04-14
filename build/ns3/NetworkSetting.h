@@ -110,6 +110,7 @@ namespace ns3{
             return "string";
         }
     };
+    
 
 
     struct ReturnNS3_CType{
@@ -135,7 +136,7 @@ namespace ns3{
 
     extern ReturnNS3_CType RegisterMethodResult1, RegisterMethodResult2;
     extern int MethodArgSelection;
-    #define RegisterPtrMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
+    #define V2XGym_RegisterPtrMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 \
@@ -151,7 +152,7 @@ namespace ns3{
             }\
         } while (0)
 
-    #define RegisterPtrMethod_onearg(Helper, SubMethod, Type, NetworkSettingInstance)\
+    #define V2XGym_RegisterPtrMethod_onearg(Helper, SubMethod, Type, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)), 0);\
@@ -163,7 +164,7 @@ namespace ns3{
             }\
         } while (0)
 
-    #define RegisterPtrMethod_noarg(Helper, SubMethod, NetworkSettingInstance)\
+    #define V2XGym_RegisterPtrMethod_noarg(Helper, SubMethod, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 CallPtrSubMethod_noArg(Helper, SubMethod);\
@@ -173,7 +174,7 @@ namespace ns3{
                 exit(1);\
             }\
         } while (0)
-    #define RegisterMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
+    #define V2XGym_RegisterMethod_twoarg(Helper, SubMethod, Type1, Type2, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 \
@@ -189,7 +190,7 @@ namespace ns3{
             }\
         } while (0)
 
-    #define RegisterMethod_onearg(Helper, SubMethod, Type, NetworkSettingInstance)\
+    #define V2XGym_RegisterMethod_onearg(Helper, SubMethod, Type, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( NetworkSettingInstance->GenerateSubmethodStr(Stringize(Helper), Stringize(SubMethod)), 0);\
@@ -201,7 +202,7 @@ namespace ns3{
             }\
         } while (0)
 
-    #define RegisterMethod_noarg(Helper, SubMethod, NetworkSettingInstance)\
+    #define V2XGym_RegisterMethod_noarg(Helper, SubMethod, NetworkSettingInstance)\
         do{ \
             if( NetworkSettingInstance->Search( Stringize(Helper), Stringize(SubMethod) ) ){ \
                 CallSubMethod_noArg(Helper, SubMethod);\
@@ -213,7 +214,7 @@ namespace ns3{
         } while (0)
 
 
-    #define RegisterParameters(Parameter, Type, NetworkSettingInstance)\
+    #define V2XGym_RegisterParameters(Parameter, Type, NetworkSettingInstance)\
         do{\
             /*ReturnCType Parameter##Result;*/\
             RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( Stringize(Parameter), 0);\
@@ -226,7 +227,7 @@ namespace ns3{
     #define ConfigCmd() \
             Cmd.Parse(argc, argv)\
 
-    #define RegisterCmdParameters(Parameter, Type, NetworkSettingInstance, Comment)\
+    #define V2XGym_RegisterCmdParameters(Parameter, Type, NetworkSettingInstance, Comment)\
         do{\
             /*ReturnCType Parameter##Result;*/\
             Cmd.AddValue(Comment, Parameter);\
@@ -240,31 +241,88 @@ namespace ns3{
             RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( Arg1, 0);\
             Config::SetDefault(Arg1, RegisterMethodResult1.P##Type );\
         } while(0)
-        
+
+    
+    extern uint32_t AntennaHeight;    
+    extern uint32_t CV_Num;
+    extern uint32_t obs_low;  
+    extern uint32_t obs_high;
+    extern std::string obs_shape; 
+    extern std::string obs_dtype; 
+    extern vector<uint32_t> obs_shape_vector;
+
+    extern uint32_t action_low;  
+    extern uint32_t action_high;
+    extern std::string action_shape; 
+    extern std::string action_dtype; 
+    extern vector<uint32_t> action_shape_vector;
+
+    std::vector<uint32_t> V2XGym_GetRLShape(string shape);
+
     #define V2XGym_InitialParameters()\
-            uint32_t simSeed = 1;\
-            double simulationTime = 100;\
-            double envStepTime = 0.1; \
-            uint32_t openGymPort = 5551;\
-            uint32_t testArg = 0;\
-            uint32_t CV_Num = 100;\
-            uint32_t AntennaHeight = 0;\
-            string NetworkConfig;\
-            CommandLine cmd;\
-            cmd.AddValue ("openGymPort", "Port number for OpenGym env. Default: 5555", openGymPort);\
-            cmd.AddValue ("simSeed", "Seed for random generator. Default: 1", simSeed);\
-            cmd.AddValue ("simTime", "Simulation time in seconds. Default: 10s", simulationTime);\
-            cmd.AddValue ("testArg", "Extra simulation argument. Default: 0", testArg);\
-            cmd.AddValue ("envStepTime", "stpe time", envStepTime);\
-            cmd.AddValue ("CV_Num","Number of Connected Car. Default: 100",CV_Num  );\
-            cmd.AddValue ("NetworkConfig", "the location of network config file", NetworkConfig);\
-            cmd.AddValue ("AntennaHeight", "the antenna height of connected car", AntennaHeight)\
+        uint32_t simSeed = 1;\
+        double simulationTime = 100;\
+        double envStepTime = 0.1; \
+        uint32_t openGymPort = 5555;\
+        uint32_t testArg = 0;\
+        string NetworkConfig;\
+        CommandLine cmd;\
+        cmd.AddValue ("openGymPort", "Port number for OpenGym env. Default: 5555", openGymPort);\
+        cmd.AddValue ("simSeed", "Seed for random generator. Default: 1", simSeed);\
+        cmd.AddValue ("simTime", "Simulation time in seconds. Default: 10s", simulationTime);\
+        cmd.AddValue ("testArg", "Extra simulation argument. Default: 0", testArg);\
+        cmd.AddValue ("envStepTime", "stpe time", envStepTime);\
+        cmd.AddValue ("CV_Num","Number of Connected Car. Default: 100",CV_Num  );\
+        cmd.AddValue ("NetworkConfig", "the location of network config file", NetworkConfig);\
+        cmd.AddValue ("AntennaHeight", "the antenna height of connected car", AntennaHeight);\
+        cmd.AddValue ("obs_low", "low bound of observation space", obs_low);\
+        cmd.AddValue ("obs_high", "high bound of observation space", obs_high);\
+        cmd.AddValue ("obs_shape", "shape of observation space", obs_shape);\
+        cmd.AddValue ("obs_dtype", "dtype of obs space", obs_dtype);\
+        cmd.AddValue ("action_low", "low bound of action space", action_low);\
+        cmd.AddValue ("action_high", "high bound of action space", action_high);\
+        cmd.AddValue ("action_shape", "shape of action space", action_shape);\
+        cmd.AddValue ("action_dtype", "dtype of action space", action_dtype);\
        
     #define V2XGym_SettingConfigParameters()\
         do{\
             cmd.Parse (argc, argv);\
-        } while (0)\
+            obs_shape_vector = V2XGym_GetRLShape(obs_shape);\
+            action_shape_vector = V2XGym_GetRLShape(action_shape);\
+            NS_LOG_UNCOND("Ns3Env parameters:");\
+            NS_LOG_UNCOND("--simulationTime: " << simulationTime);\
+            NS_LOG_UNCOND("--openGymPort: " << openGymPort);\
+            NS_LOG_UNCOND("--envStepTime: " << envStepTime);\
+            NS_LOG_UNCOND("--seed: " << simSeed);\
+            NS_LOG_UNCOND("--testArg: " << testArg);\
+            NS_LOG_UNCOND("--CV_Num: "<<CV_Num);\
+            NS_LOG_UNCOND("--NetworkConfig: "<<NetworkConfig);\
+            NS_LOG_UNCOND("--AntennaHeight: "<<AntennaHeight);\
+            NS_LOG_UNCOND("--obs_low: "<<obs_low);\
+            NS_LOG_UNCOND("--obs_high: "<<obs_high);\
+            NS_LOG_UNCOND("--obs_shape: "<<obs_shape);\
+            NS_LOG_UNCOND("--obs_dtype: "<<obs_dtype);\
+            NS_LOG_UNCOND("--action_low: "<<action_low);\
+            NS_LOG_UNCOND("--action_high: "<<action_high);\
+            NS_LOG_UNCOND("--action_shape: "<<action_shape);\
+            NS_LOG_UNCOND("--action_dtype: "<<action_dtype);\
+        }while(0)\
 
+        
+
+    #define V2XGym_InitCVs()\
+            NodeContainer nodes;\
+            nodes.Create (CV_Num);\
+            MobilityHelper ueMobility;\
+            ueMobility.SetMobilityModel ("ns3::WaypointMobilityModel");\
+            ueMobility.Install (nodes);\
+            for (uint32_t i=0; i<CV_Num; i++)\
+            {\
+                Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());   \
+                ueWaypointMobility->AddWaypoint(Waypoint(Seconds(0),Vector(0, 0 ,0)));\
+            }\
+        
+        
 
     class NetworkSetting: public Object{
         public:
@@ -321,12 +379,12 @@ namespace ns3{
             void Increment(string Method);
             
             int GetMethodCounter( string Method);
+
         private:
             std::map<std::string, std::vector<std::string> > Config;
             std::map<std::string, int> MethodCounter ;
             
     };
-
 }
 
 #endif

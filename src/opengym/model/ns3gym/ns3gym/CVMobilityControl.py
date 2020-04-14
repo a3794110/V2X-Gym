@@ -24,7 +24,7 @@ class CV_Mobility_Control(object):
         self.traci =traci
     
 
-    def CreateCV(self, i=0, routeid='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
+    def CreateNode_Dynamic(self, i=0, routeid='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
         IDList = traci.vehicle.getIDList()
         if str(i) in IDList:
             print ("The created ID already in network!!")

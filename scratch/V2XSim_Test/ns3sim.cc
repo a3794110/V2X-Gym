@@ -35,11 +35,17 @@ Define observation space
 */
 Ptr<OpenGymSpace> MyGetObservationSpace(void)
 {
-  uint32_t nodeNum = 5;
+  /*uint32_t nodeNum = 5;
   float low = 0.0;
   float high = 10.0;
   std::vector<uint32_t> shape = {nodeNum,};
-  std::string dtype = TypeNameGet<uint32_t> ();
+  std::string dtype = TypeNameGet<uint32_t> ();*/
+
+  float low = obs_low;
+  float high = obs_high;
+  std::vector<uint32_t> shape = obs_shape_vector;
+  std::string dtype = obs_dtype;
+
   Ptr<OpenGymBoxSpace> space = CreateObject<OpenGymBoxSpace> (low, high, shape, dtype);
   NS_LOG_UNCOND ("MyGetObservationSpace: " << space);
   return space;
@@ -51,11 +57,17 @@ Define action space
 Ptr<OpenGymSpace> MyGetActionSpace(void)
 {
   //uint32_t nodeNum = NodeList::GetNNodes ();
-  uint32_t nodeNum = 60;
+  /*uint32_t nodeNum = 60;
   float low = 0.0;
   float high = 0.0;
   std::vector<uint32_t> shape = {nodeNum,};
-  std::string dtype = TypeNameGet<uint32_t> ();
+  std::string dtype = TypeNameGet<uint32_t> ();*/
+
+  float low = action_low;
+  float high = action_high;
+  std::vector<uint32_t> shape = action_shape_vector;
+  std::string dtype = action_dtype;
+
   Ptr<OpenGymBoxSpace> space = CreateObject<OpenGymBoxSpace> (low, high, shape, dtype);
   NS_LOG_UNCOND ("MyGetActionSpace: " << space);
   return space;
@@ -187,14 +199,10 @@ main (int argc, char *argv[])
 
   cmd.Parse (argc, argv);*/
   V2XGym_InitialParameters();
+  //cmd.AddValue... need to add between here
   V2XGym_SettingConfigParameters();
 
-  NS_LOG_UNCOND("Ns3Env parameters:");
-  NS_LOG_UNCOND("--simulationTime: " << simulationTime);
-  NS_LOG_UNCOND("--openGymPort: " << openGymPort);
-  NS_LOG_UNCOND("--envStepTime: " << envStepTime);
-  NS_LOG_UNCOND("--seed: " << simSeed);
-  NS_LOG_UNCOND("--testArg: " << testArg);
+  
 
   RngSeedManager::SetSeed (1);
   RngSeedManager::SetRun (simSeed);
@@ -204,7 +212,9 @@ main (int argc, char *argv[])
 
   // Configuration of the scenario
   // Create Nodes
-  NodeContainer nodes;
+
+  V2XGym_InitCVs();
+  /*NodeContainer nodes;
   nodes.Create (CV_Num);
   MobilityHelper ueMobility;
   ueMobility.SetMobilityModel ("ns3::WaypointMobilityModel");
@@ -213,7 +223,7 @@ main (int argc, char *argv[])
   {
     Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());   
     ueWaypointMobility->AddWaypoint(Waypoint(Seconds(0),Vector(0, 0 ,0)));
-  }
+  }*/
 
 
 
@@ -227,6 +237,7 @@ main (int argc, char *argv[])
   openGym->SetGetExtraInfoCb( MakeCallback (&MyGetExtraInfo) );
   openGym->SetExecuteActionsCb( MakeCallback (&MyExecuteActions) );
   Simulator::Schedule (Seconds(0.0), &ScheduleNextStateRead, envStepTime, openGym);
+
 
   NS_LOG_UNCOND ("Simulation start");
   Simulator::Stop (Seconds (simulationTime));

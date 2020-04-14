@@ -65,7 +65,8 @@ main (int argc, char *argv[])
   //NetworkSetting* NetSet = new NetworkSetting;
   Ptr<NetworkSetting> NetSet = CreateObject<NetworkSetting>();
   NetSet->IncludeConfig("NetworkEnvSetting.xml");
-  RegisterParameters(simTime, double, NetSet);
+  V2XGym_RegisterParameters(simTime, double, NetSet);
+  
   //RegisterParameters(abc, string, NetSet);
   NS_LOG_UNCOND( simTime<<std::endl);
 
@@ -90,8 +91,8 @@ main (int argc, char *argv[])
    }
   //SetDeaultConfig("ns3::LteHelper::EnbComponentCarrierManager", StringValue,  NetSet);
   Ptr<LteHelper> lteHelper = CreateObject<LteHelper> ();
-  RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, StringValue , NetSet);
-  RegisterPtrMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
+  V2XGym_RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, StringValue , NetSet);
+  V2XGym_RegisterPtrMethod_noarg(lteHelper, EnableUlRxPhyTraces, NetSet);
   //RegisterMethod_onearg(lteHelper, SetFadingModel, string, NetSet);
 
   Ptr<PointToPointEpcHelper>  epcHelper = CreateObject<PointToPointEpcHelper> ();
@@ -108,7 +109,7 @@ main (int argc, char *argv[])
    // Create a single RemoteHost
   NodeContainer remoteHostContainer;
   //remoteHostContainer.Create (1);
-  RegisterMethod_onearg(remoteHostContainer, Create, int, NetSet);
+  V2XGym_RegisterMethod_onearg(remoteHostContainer, Create, int, NetSet);
 
   Ptr<Node> remoteHost = remoteHostContainer.Get (0);
   InternetStackHelper internet;

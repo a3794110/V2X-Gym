@@ -17,6 +17,9 @@ class V2XGymConfigSetting(object):
             if child.tag == "NetworkConfig":
                 self.netcfgdir = root[self.i][0].text
                 self.scenario = root[self.i][1].text
+            if child.tag == "RLSpace":
+                self.RLConfig = root[self.i][0].text
+
             self.i = self.i + 1
 
     def GetSUMOCfgAttribute(self):
@@ -24,3 +27,6 @@ class V2XGymConfigSetting(object):
     
     def GetNs3CfgAttribute(self):
         return self.netcfgdir, self.scenario
+
+    def GetRLSpaceAttribute(self):
+        return self.RLConfig

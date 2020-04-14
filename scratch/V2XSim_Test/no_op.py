@@ -46,16 +46,16 @@ port = 5551
 simTime = 100 # seconds
 stepTime = 0.1  # seconds
 seed = 0
-simArgs = {"--simTime": simTime,
-           "--testArg": 123,
+simArgs = {"--simTime": simTime, #not optional
+           "--testArg": 123, #optional
             }
 debug = True
 
-CV_Args = {"CV_Num": nodeNum,
-            "Antenna_Height": 15,
+CV_Args = {"CV_Num": nodeNum, #not optional
+            "Antenna_Height": 15, #not optional
             }
 
-env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig.xml", CV_Args=CV_Args)
+env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig.xml", CV_Args=CV_Args) #V2XGymConfig is optional
 env.reset()
 
 ob_space = env.observation_space
@@ -97,7 +97,7 @@ mobilitycontrol = env.ns3ZmqBridge.MobilityControl
 def get_no_op_action(obs, stepIdx):
         
         if (mobilitycontrol.traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)
-            mobilitycontrol.CreateCV(mobilitycontrol.addID, "routedist1", "typedist1")
+            mobilitycontrol.CreateNode_Dynamic(mobilitycontrol.addID, "routedist1", "typedist1")
         
         action = np.arange(stepIdx)
         return action

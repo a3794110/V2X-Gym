@@ -109,6 +109,22 @@ namespace ns3{
 
 ReturnNS3_CType RegisterMethodResult1, RegisterMethodResult2;
 int MethodArgSelection;
+uint32_t AntennaHeight = 0;    
+uint32_t CV_Num = 100;
+
+// RL related parameter defination
+uint32_t obs_low;  
+uint32_t obs_high;
+std::string obs_shape; 
+std::string obs_dtype;
+vector<uint32_t> obs_shape_vector;
+
+uint32_t action_low;  
+uint32_t action_high;
+std::string action_shape; 
+std::string action_dtype;
+vector<uint32_t> action_shape_vector;
+
 
 void NetworkSetting::IncludeConfig(std::string Dir){
     /*Config["lteHelper::SetAttribute"].push_back("Scheduler");
@@ -191,4 +207,47 @@ void NetworkSetting::Increment(string Method){
 int NetworkSetting::GetMethodCounter( string Method){
     return MethodCounter[Method];
 }
+
+std::vector<uint32_t> V2XGym_GetRLShape(string shape){
+    //string obs_extract;
+    std::vector<uint32_t> vectorshape;
+    uint obs_dim_num[5];
+    int obs_dim = 0;
+    if (shape.empty()){
+        NS_LOG_UNCOND("In NetworkSetting.cc::V2XGym_GetRLShape: Nothing in it!");
+        exit(1);
+    }
+    char* shapechar = const_cast<char*>(shape.c_str());
+    char* pch = strtok( shapechar, ",");
+    while (pch != NULL)
+    {   
+        obs_dim_num[obs_dim] = atoi(pch);
+        obs_dim ++;
+        pch = strtok (NULL, ",");
+    }
+    if (obs_dim == 1){
+        vectorshape = { obs_dim_num[0], };
+    }
+    else if (obs_dim == 2){
+        vectorshape = { obs_dim_num[0], obs_dim_num[0],};
+    }
+    else if (obs_dim == 3){
+        vectorshape = { obs_dim_num[0], obs_dim_num[1], obs_dim_num[2],};
+    }
+    else if (obs_dim == 4){
+        vectorshape = { obs_dim_num[0], obs_dim_num[1], obs_dim_num[2], obs_dim_num[3],};
+    }
+    else if (obs_dim == 5){
+         vectorshape = { obs_dim_num[0], obs_dim_num[1], obs_dim_num[2], obs_dim_num[3], obs_dim_num[4],};
+    }
+    else{
+        NS_LOG_UNCOND("Over the RL Obs Space Size Limit (5 dimention)!!");
+        exit(1);
+    }
+
+
+    return vectorshape;
+}
+
+
 }

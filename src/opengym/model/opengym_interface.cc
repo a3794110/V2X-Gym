@@ -419,6 +419,7 @@ OpenGymInterface::ExecuteSetMobility (Ptr<Node> node, Vector vel){
 }
 
 //hank
+extern uint32_t AntennaHeight;
 void
 OpenGymInterface::SyncMobility(Ptr<OpenGymDataContainer> trajectory)
 {
@@ -432,7 +433,7 @@ OpenGymInterface::SyncMobility(Ptr<OpenGymDataContainer> trajectory)
   {
     Ptr<Node> node = NodeList::GetNode(i);
     //Simulator::Schedule (Seconds (0), &OpenGymInterface::ExecuteSetMobility, this, node ,Vector ( actionVector[i*3+1], actionVector[i*3+2], 0)); 
-    ExecuteSetMobility(node ,Vector ( actionVector[i*3+1], actionVector[i*3+2], 0));
+    ExecuteSetMobility(node ,Vector ( actionVector[i*3+1], actionVector[i*3+2], AntennaHeight));
   }
   //index = index + 1;
 }
