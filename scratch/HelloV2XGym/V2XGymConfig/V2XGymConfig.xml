@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Configuration>
+    <TrafficConfig >
+        <dir>V2XGymConfig/sumoconfig/Simulation/map.sumocfg</dir> <!--start from V2XSim_Tset-->
+        <gui>false</gui>
+    </TrafficConfig>
+
+    <NetworkConfig >
+        <dir>scratch/HelloV2XGym/V2XGymConfig/NetworkEnvSetting.xml</dir> <!--start from ns3gym-extention-->
+        <scenario>HelloV2XGym</scenario>
+    </NetworkConfig>
+
+    <RLSpace >
+        <dir>V2XGymConfig/RLSpace.xml</dir>  <!--start from V2XSim_Tset-->
+    </RLSpace>
+</Configuration>
+
+
