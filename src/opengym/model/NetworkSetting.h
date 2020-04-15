@@ -236,7 +236,7 @@ namespace ns3{
         } while(0)
 
     //ReturnNS3Type result;
-    #define SetDeaultConfig(Arg1, Type, NetworkSettingInstance) \
+    #define V2XGym_SetDeaultConfig(Arg1, Type, NetworkSettingInstance) \
         do{\
             RegisterMethodResult1 = NetworkSettingInstance->GetArg<Type>( Arg1, 0);\
             Config::SetDefault(Arg1, RegisterMethodResult1.P##Type );\

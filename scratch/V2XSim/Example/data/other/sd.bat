@@ -1,1 +1,0 @@
-python randomTrips.py -n map.net.xml -e 100 -l -o map.trips.xml
