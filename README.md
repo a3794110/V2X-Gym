@@ -91,4 +91,4 @@ Ping-Han Hsieh, Natinal Tsing Hua Uiversity, Institue of Communications Engineer
 
 Future works
 ========
-We will upload an RL V2X example which improving the performance of sensing-based SPS with RL in few weeks.
+We will upload a RL V2X example which improving the performance of sensing-based SPS with RL in few weeks.
