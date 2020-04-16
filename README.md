@@ -10,6 +10,9 @@ The goal of this project is to provide a vehicular network simulation framework 
 * Vehicles created in SUMO will also sync with node in [ns-3](https://www.nsnam.org/).
 * Agents can interact with network envorment with [OpenAI Gym](https://gym.openai.com/) interface (action, reward and observaiton) based on [ns3-gym](https://github.com/tkn-tub/ns3-gym)
 
+Author
+========
+Ping-Han Hsieh, Natinal Tsing Hua Uiversity, Institue of Communications Engineering, a3794110@gmail.com 
 
 Version
 ============
@@ -85,9 +88,7 @@ All examples can be found [here](./scratch/), the examples user document is offe
 
 https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/ByMy5jSOU
 
-Contact
-========
-Ping-Han Hsieh, Natinal Tsing Hua Uiversity, Institue of Communications Engineering, a3794110@gmail.com 
+
 
 Future works
 ========
