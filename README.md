@@ -36,7 +36,9 @@ apt-get install gcc g++ python
 see https://www.nsnam.org/wiki/Installation
 ```
 3. Install xml element
+```
 pip install elementpath
+```
 
 4. Install ZMQ and Protocol Buffers libs:
 ```
