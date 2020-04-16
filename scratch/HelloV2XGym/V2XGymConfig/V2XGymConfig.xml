@@ -2,7 +2,7 @@
 <Configuration>
     <TrafficConfig >
         <dir>V2XGymConfig/sumoconfig/Simulation/map.sumocfg</dir> <!--start from V2XSim_Tset-->
-        <gui>false</gui>
+        <gui>true</gui>
     </TrafficConfig>
 
     <NetworkConfig >
