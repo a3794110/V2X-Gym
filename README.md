@@ -4,7 +4,7 @@ V2X-Gym is the integration of [OpenAI Gym](https://gym.openai.com/) (a toolkit f
 
 The goal of this project is to provide a vehicular network simulation framework which can (1) model your purposed RL V2X algorithm with [OpenAI Gym](https://gym.openai.com/) interface, (2) setting network and traffic enviroment with unified interface and (3) attach user purposed network/traffic model/script easily. We list several features of this framework on bellow:
 * Setting network/traffic/RL configuration with unified interface (xml files)
-* Above mentioned configuration interface can be easily to attach on user purposed ns-3 script or SUMO script.(developing V2X module can be attached to this framework)
+* Above mentioned configuration interface can be easily to attach on user purposed ns-3 script or SUMO script.(developing V2X module can be attached to this framework in future)
 * This project is dependent from ns-3 and SUMO (portability).
 * Agents can interact with traffic enviroment and import real world map with common used SUMO API. 
 * Vehicles created in SUMO will also sync with node in ns-3.
