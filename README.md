@@ -84,7 +84,7 @@ https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/B1fdW9HuI
 Example: 
 ========
 
-All examples can be found [here](./scratch/), the examples user document is offered in the following link:
+All examples can be found [here](./scratch/), the introduction of these examples is offered in the following link:
 
 https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/ByMy5jSOU
 
@@ -92,7 +92,7 @@ Q&A
 ========
 How to add New Network Scenario or model into framework?
 
-  For maintanance, this framework support adding new network model into it, the adding procedure is descripted in [user manual link](https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/B1fdW9HuI).
+  For maintanance, this framework support adding new network model into it, the adding procedure is descripted in [user manual](https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/B1fdW9HuI).
 
 Future works
 ========
