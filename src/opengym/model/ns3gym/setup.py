@@ -3,10 +3,10 @@ import sys
 import os.path
 
 cwd = os.getcwd()
-protobufFile = cwd + '/ns3gym/messages_pb2.py'
+protobufFile = cwd + '/v2xgym/messages_pb2.py'
 
 if not os.path.isfile(protobufFile):
-    print("File: ", "ns3-gym/src/opengym/model/ns3gym/ns3gym/messages_pb2.py", " was not found.")
+    print("File: ", "ns3-gym/src/opengym/model/ns3gym/v2xgym/messages_pb2.py", " was not found.")
     sys.exit('Protocol Buffer messages are missing. Please run ./waf configure to generate the file')
 
 
@@ -16,17 +16,17 @@ def readme():
 
 
 setup(
-    name='ns3gym',
-    version='0.1.0',
+    name='v2xgym',
+    version='0.9',
     packages=find_packages(),
     scripts=[],
     url='',
     license='MIT',
-    author='Piotr Gawlowicz',
-    author_email='gawlowicz.p@gmail.com',
-    description='OpenAI Gym meets ns-3',
-    long_description='OpenAI Gym meets ns-3',
-    keywords='openAI gym, ML, RL, ns-3',
+    author='Piotr Gawlowicz and Ping-Han Hsieh',
+    author_email='gawlowicz.p@gmail.com and a3794110@gmail.com',
+    description='OpenAI Gym meets ns-3 and SUMO',
+    long_description='OpenAI Gym meets ns-3 and SUMO',
+    keywords='openAI gym, ML, RL, ns-3, SUMO, V2X',
     install_requires=['pyzmq', 'numpy', 'protobuf', 'gym'],
     extras_require={},
 )

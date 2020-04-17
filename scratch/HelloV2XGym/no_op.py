@@ -7,7 +7,7 @@ import numpy as np
 import sys
 import os
 
-from ns3gym import v2xenv
+from v2xgym import v2xenv
 
 import optparse
 
