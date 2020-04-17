@@ -60,7 +60,7 @@ apt-get install protobuf-compiler
 ./waf build
 ```
 
-6. Install ns3gym located in src/opengym/model/ns3gym (Python3 required)
+6. Install v2xgym located in src/opengym/model/ns3gym (Python3 required)
 ```
 pip3 install ./src/opengym/model/ns3gym
 ```
