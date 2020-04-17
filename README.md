@@ -2,13 +2,13 @@ V2X-Gym: a vehicular network simulation framework with reinforcement learning in
 ============
 V2X-Gym is the integration of [OpenAI Gym](https://gym.openai.com/) (a toolkit for reinforcement learning (RL) widely used in research), [SUMO](https://github.com/tkn-tub/ns3-gym) (an urban mobility simulator), [ns–3](https://www.nsnam.org/) (the de-facto standard for academic and industry studies in the areas of networking protocols and communication technologies) and [ns3-gym](https://github.com/tkn-tub/ns3-gym) (a framework that integrates both OpenAI Gym and ns-3 in order to encourage usage of RL in networking research).
 
-The goal of this project is to provide a vehicular network simulation framework which can (1) model your purposed RL V2X algorithm with [OpenAI Gym](https://gym.openai.com/) interface, (2) setting network and traffic enviroment with unified interface and (3) attach user purposed network/traffic model/script easily. We list several features of this framework on bellow:
+The goal of this project is to provide a vehicular network simulation framework which can (1) DO RL V2X Research: model your purposed RL V2X algorithm with [OpenAI Gym](https://gym.openai.com/) interface, (2) Unified Interface: setting network and traffic enviroment with unified interface and (3) Flexibility: attach user purposed network/traffic model/script easily. We list several features of this framework on bellow:
 * Setting network/traffic/RL configuration with unified interface (xml files)
-* Above mentioned configuration interface can be attached on user purposed [ns-3](https://www.nsnam.org/) script or [SUMO](https://github.com/tkn-tub/ns3-gym) script.(developed V2X module can be attached to this framework in future)
-* This project is dependent from [ns-3](https://www.nsnam.org/) and [SUMO](https://github.com/tkn-tub/ns3-gym) (portability).
-* Agents can interact with traffic enviroment and import real world map with common used [SUMO](https://github.com/tkn-tub/ns3-gym) API. 
-* Vehicles created in SUMO will also sync with node in [ns-3](https://www.nsnam.org/).
+* Above mentioned configuration interface can be attached on user purposed [ns-3](https://www.nsnam.org/) script or [SUMO](https://github.com/tkn-tub/ns3-gym) script.(developed V2X module can be attached to this framework)
+* Agents can interact with traffic enviroment and import real world map with common used [SUMO](https://github.com/tkn-tub/ns3-gym)-method in this framework. 
 * Agents can interact with network envorment with [OpenAI Gym](https://gym.openai.com/) interface (action, reward and observaiton) based on [ns3-gym](https://github.com/tkn-tub/ns3-gym)
+* Vehicles created in SUMO will also sync with node in [ns-3](https://www.nsnam.org/).
+
 
 Author
 ========
