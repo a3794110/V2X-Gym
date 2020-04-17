@@ -9,6 +9,7 @@ The goal of this project is to provide a vehicular network simulation framework 
 * Agents can interact with network envorment with [OpenAI Gym](https://gym.openai.com/) interface (action, reward and observaiton) based on [ns3-gym](https://github.com/tkn-tub/ns3-gym)
 * Vehicles created in SUMO will also sync with node in [ns-3](https://www.nsnam.org/).
 
+![image](Schematic_Diagram_of_V2XGym.png)
 
 Author
 ========
