@@ -475,7 +475,7 @@ class Ns3SumoZmqBridge(object):
         return dataContainer
 
 
-class Ns3Env(gym.Env):
+class V2XEnv(gym.Env):
     def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, V2XGymConfig=" ", CV_Args = {"CV_Num": 0, "Antenna_Height": 15,}):
         self.stepTime = stepTime
         self.port = port

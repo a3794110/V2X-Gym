@@ -7,7 +7,7 @@ import numpy as np
 import sys
 import os
 
-from ns3gym import ns3env
+from ns3gym import v2xenv
 
 import optparse
 
@@ -55,7 +55,7 @@ CV_Args = {"CV_Num": nodeNum, #not optional
             "Antenna_Height": 15, #not optional
             }
 
-env = ns3env.Ns3Env(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig/V2XGymConfig.xml", CV_Args=CV_Args) #V2XGymConfig is optional
+env = v2xenv.V2XEnv(port=port, stepTime=stepTime, startSim=startSim, simSeed=seed, simArgs=simArgs, debug=debug, V2XGymConfig="V2XGymConfig/V2XGymConfig.xml", CV_Args=CV_Args) #V2XGymConfig is optional
 env.reset()
 
 ob_space = env.observation_space
