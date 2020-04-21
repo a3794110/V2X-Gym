@@ -10,7 +10,8 @@ The goal of this project is to provide a vehicular network simulation framework 
 * V2X-Gym supports distributed simulation (one side: SUMO/RL Agent, other side: ns-3).
 
 
-  ![image](Schematic_Diagram_of_V2XGym.png)*Fig. 1: General V2X-Gym*
+![image](images/Schematic_Diagram_of_V2XGym.png)
+<p style="text-align: center;">Figure 1: General V2X-Gym</p>
 
   
 
