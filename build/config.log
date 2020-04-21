@@ -1,4 +1,4 @@
-# project ns (3-dev) configured on Thu Apr 16 03:29:24 2020 by
+# project ns (3-dev) configured on Tue Apr 21 23:31:45 2020 by
 # waf 2.0.9 (abi 20, python 30502f0 on linux)
 # using ./waf configure
 #
@@ -10,7 +10,7 @@ Setting out to
 /home/hank/ns3gym-extention/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
-find program=['gcc', 'cc'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
+find program=['gcc', 'cc'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
 ['/usr/bin/gcc', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -261,14 +261,14 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
 5.4.0
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
-find program=['g++', 'c++'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
+find program=['g++', 'c++'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
 ['/usr/bin/g++', '-dM', '-E', '-']
 out: #define __SSP_STRONG__ 3
 #define __DBL_MIN_EXP__ (-1021)
@@ -519,30 +519,30 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_ACQ_REL 4
 #define __ATOMIC_RELEASE 3
 
-find program=['ar'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
+find program=['ar'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='AR' -> ['/usr/bin/ar']
 /usr/bin/g++
 ------------------------------------------------------
 Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
 /home/hank/env01/bin/python
-find program=['python'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/home/hank/env01/bin/python']
+find program=['python'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/home/hank/env01/bin/python']
 ['/home/hank/env01/bin/python', '-c', 'import imp;print(imp.get_tag())']
 out: cpython-35
 
@@ -607,7 +607,7 @@ LDVERSION = '3.5m'
 ------------------------------------------------------
 python-config
 /home/hank/env01/bin/python-config
-find program=['/home/hank/env01/bin/python-config', 'python3.5-config', 'python-config-3.5', 'python3.5m-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/home/hank/env01/bin/python-config']
+find program=['/home/hank/env01/bin/python-config', 'python3.5-config', 'python-config-3.5', 'python3.5m-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/home/hank/env01/bin/python-config']
 ------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags' flags
 ['/home/hank/env01/bin/python-config', '--cflags', '--libs', '--ldflags']
@@ -644,12 +644,12 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e75de1625e3147c046999e63c15fd9f1/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6911393e9f1eb9c07aab34abe41de314/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fwrapv', '-O2', '-g', '-fstack-protector-strong', '-g', '-flto', '-fuse-linker-plugin', '-ffat-lto-objects', '-I/home/hank/env01/include/python3.5m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_e75de1625e3147c046999e63c15fd9f1/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e75de1625e3147c046999e63c15fd9f1/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fwrapv', '-O2', '-g', '-fstack-protector-strong', '-g', '-flto', '-fuse-linker-plugin', '-ffat-lto-objects', '-I/home/hank/env01/include/python3.5m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_6911393e9f1eb9c07aab34abe41de314/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6911393e9f1eb9c07aab34abe41de314/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_e75de1625e3147c046999e63c15fd9f1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_6911393e9f1eb9c07aab34abe41de314/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
@@ -687,30 +687,30 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_84338a19aa506304d9eb6d6b4ac9fda4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_55acf22b3b48a55995506554b69cceca/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fwrapv', '-O2', '-g', '-fstack-protector-strong', '-g', '-flto', '-fuse-linker-plugin', '-ffat-lto-objects', '-I/home/hank/env01/include/python3.5m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_84338a19aa506304d9eb6d6b4ac9fda4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_84338a19aa506304d9eb6d6b4ac9fda4/testbuild/testprog.cpython-35m-x86_64-linux-gnu.so[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fwrapv', '-O2', '-g', '-fstack-protector-strong', '-g', '-flto', '-fuse-linker-plugin', '-ffat-lto-objects', '-I/home/hank/env01/include/python3.5m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_55acf22b3b48a55995506554b69cceca/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_55acf22b3b48a55995506554b69cceca/testbuild/testprog.cpython-35m-x86_64-linux-gnu.so[0m
 
-['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_84338a19aa506304d9eb6d6b4ac9fda4/testbuild/testprog.cpython-35m-x86_64-linux-gnu.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_55acf22b3b48a55995506554b69cceca/testbuild/testprog.cpython-35m-x86_64-linux-gnu.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.5m', '-lpthread', '-ldl', '-lutil', '-lm']
 yes
 ------------------------------------------------------------------
 Checking for compilation flag -fvisibility=hidden support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wno-array-bounds support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for pybindgen location
@@ -738,9 +738,9 @@ int main ()
 }
 
 <==
-[1/1] Compiling [32mbuild/.conf_check_1ed0334597a0d07da01ce28444ccf5d2/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_22fa96ff287891a636fc7932a69a2e62/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_1ed0334597a0d07da01ce28444ccf5d2/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_22fa96ff287891a636fc7932a69a2e62/testbuild/test.cpp.1.o']
 yes
 ------------------------------------------------------------------
 Checking for types uint64_t and unsigned long equivalence
@@ -759,9 +759,9 @@ int main ()
 }
 
 <==
-[1/1] Compiling [32mbuild/.conf_check_08b814cafb0299d5ca15cdb9689cb2b0/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_f2df8008683447dedda0de693935f012/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_08b814cafb0299d5ca15cdb9689cb2b0/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_f2df8008683447dedda0de693935f012/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main()’:
 ../test.cpp:7:67: error: conversion from ‘std::vector<long long unsigned int>’ to non-scalar type ‘std::vector<long unsigned int>’ requested
     std::vector< uint64_t > t = std::vector< unsigned long long > ();
@@ -795,12 +795,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4fd85ecb0c72a53b343e62313f88b36a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2b0170c847a5402a32cf4be7865c1d90/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_4fd85ecb0c72a53b343e62313f88b36a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_4fd85ecb0c72a53b343e62313f88b36a/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_2b0170c847a5402a32cf4be7865c1d90/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2b0170c847a5402a32cf4be7865c1d90/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_4fd85ecb0c72a53b343e62313f88b36a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_2b0170c847a5402a32cf4be7865c1d90/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 complete
 ------------------------------------------------------------------
 Checking for python module 'pygccxml'
@@ -814,7 +814,7 @@ Checking for pygccxml version
 ------------------------------------------------------------------
 Checking for program 'castxml'
 /usr/bin/castxml
-find program=['castxml'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CASTXML' -> ['/usr/bin/castxml']
+find program=['castxml'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CASTXML' -> ['/usr/bin/castxml']
 ------------------------------------------------------------------
 Checking for castxml version
 0.1
@@ -861,12 +861,12 @@ Checking for boost linkage
 int main() { boost::system::error_code c; }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_82c5b534c7de83ed579574e010c4a96b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_712e21c2039ef9a8bc413400af4e0165/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_82c5b534c7de83ed579574e010c4a96b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_82c5b534c7de83ed579574e010c4a96b/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3.5/site-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3.5/site-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_712e21c2039ef9a8bc413400af4e0165/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_712e21c2039ef9a8bc413400af4e0165/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_82c5b534c7de83ed579574e010c4a96b/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_712e21c2039ef9a8bc413400af4e0165/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
 ok
 ------------------------------------------------------------------
 Checking for click location
@@ -874,7 +874,7 @@ not found
 ------------------------------------------------------------------
 Checking for program 'pkg-config'
 /usr/bin/pkg-config
-find program=['pkg-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
+find program=['pkg-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
 ------------------------------------------------------------------
 Checking for 'gtk+-3.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-3.0']
@@ -905,9 +905,9 @@ checking for uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_50e22e30275a939faa277bc151c95595/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_135d2502c3c68927e1cbbe9187631272/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_50e22e30275a939faa277bc151c95595/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_135d2502c3c68927e1cbbe9187631272/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -946,12 +946,12 @@ checking for __uint128_t
         }
         
 <==
-[1/2] Compiling [32mbuild/.conf_check_b0ef6a93ea9be8dacaef597f64a003f4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_417a8173949c8b438395d07ade2be444/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_b0ef6a93ea9be8dacaef597f64a003f4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b0ef6a93ea9be8dacaef597f64a003f4/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_417a8173949c8b438395d07ade2be444/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_417a8173949c8b438395d07ade2be444/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_b0ef6a93ea9be8dacaef597f64a003f4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_417a8173949c8b438395d07ade2be444/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking high precision implementation
@@ -967,12 +967,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0edce90d47e3123d78762d1d68541132/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -985,12 +985,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f097d822229f777f81b75cf124c8df23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1003,9 +1003,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6a9b6a7a96f7d4457df7227690c2f3f6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_33cd8924ccbc93b746333f0faf4184e6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_6a9b6a7a96f7d4457df7227690c2f3f6/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_33cd8924ccbc93b746333f0faf4184e6/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -1030,12 +1030,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_744d38659a1de4d064e360cbcceeeeb4/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1d5d1071ce9d054b5d9bc500b82ba114/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_744d38659a1de4d064e360cbcceeeeb4/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_744d38659a1de4d064e360cbcceeeeb4/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_1d5d1071ce9d054b5d9bc500b82ba114/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1d5d1071ce9d054b5d9bc500b82ba114/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_744d38659a1de4d064e360cbcceeeeb4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_1d5d1071ce9d054b5d9bc500b82ba114/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -1048,12 +1048,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3b76465bc93fcfd8fc0922bf08d3ac4d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ce2e9d64581e8298beca00f0ae76dec0/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_3b76465bc93fcfd8fc0922bf08d3ac4d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3b76465bc93fcfd8fc0922bf08d3ac4d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_ce2e9d64581e8298beca00f0ae76dec0/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ce2e9d64581e8298beca00f0ae76dec0/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_3b76465bc93fcfd8fc0922bf08d3ac4d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_ce2e9d64581e8298beca00f0ae76dec0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header dirent.h
@@ -1066,12 +1066,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4b13c447a979dbddf5000ebb1370b15b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_0e4ca1297467ab9ca00bad7c82f5d149/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_4b13c447a979dbddf5000ebb1370b15b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_4b13c447a979dbddf5000ebb1370b15b/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_0e4ca1297467ab9ca00bad7c82f5d149/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0e4ca1297467ab9ca00bad7c82f5d149/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_4b13c447a979dbddf5000ebb1370b15b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_0e4ca1297467ab9ca00bad7c82f5d149/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdlib.h
@@ -1084,12 +1084,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_049fad09f773fdadb0b1589467c55e2e/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6bdd3249ddf710f8e2c05bc0b3489cf2/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_049fad09f773fdadb0b1589467c55e2e/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_049fad09f773fdadb0b1589467c55e2e/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_6bdd3249ddf710f8e2c05bc0b3489cf2/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6bdd3249ddf710f8e2c05bc0b3489cf2/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_049fad09f773fdadb0b1589467c55e2e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_6bdd3249ddf710f8e2c05bc0b3489cf2/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header signal.h
@@ -1102,12 +1102,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_1f0db4e9b87716e3462377d3533941ac/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_cf554636417fb16d293522986ec5baba/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_1f0db4e9b87716e3462377d3533941ac/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_1f0db4e9b87716e3462377d3533941ac/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_cf554636417fb16d293522986ec5baba/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_cf554636417fb16d293522986ec5baba/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_1f0db4e9b87716e3462377d3533941ac/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_cf554636417fb16d293522986ec5baba/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header pthread.h
@@ -1122,12 +1122,12 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_bc3ec398f3f7da16845b96fbba4089c0/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d93fb1b84c1c509d143e96926b8989bc/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_bc3ec398f3f7da16845b96fbba4089c0/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_bc3ec398f3f7da16845b96fbba4089c0/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d93fb1b84c1c509d143e96926b8989bc/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d93fb1b84c1c509d143e96926b8989bc/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_bc3ec398f3f7da16845b96fbba4089c0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_d93fb1b84c1c509d143e96926b8989bc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header stdint.h
@@ -1140,12 +1140,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0edce90d47e3123d78762d1d68541132/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_0edce90d47e3123d78762d1d68541132/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_204b6889ca6b5e669ca343a3359a4c0e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1158,12 +1158,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f097d822229f777f81b75cf124c8df23/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_ce8c5b9512d5f6bf906abaf5ecbe60dc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_f097d822229f777f81b75cf124c8df23/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1176,9 +1176,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6a9b6a7a96f7d4457df7227690c2f3f6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_33cd8924ccbc93b746333f0faf4184e6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_6a9b6a7a96f7d4457df7227690c2f3f6/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_33cd8924ccbc93b746333f0faf4184e6/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -1202,12 +1202,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_636595a5b244f4356ada3953a0818b57/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f250b3819a5803d13fae6a8b1756167d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_636595a5b244f4356ada3953a0818b57/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_636595a5b244f4356ada3953a0818b57/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_f250b3819a5803d13fae6a8b1756167d/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f250b3819a5803d13fae6a8b1756167d/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_636595a5b244f4356ada3953a0818b57/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_f250b3819a5803d13fae6a8b1756167d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 ------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1220,12 +1220,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_323261fae1b58d6b84035a9eeff02c0a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_48cac0b5737d4cbb49b85fe3ec5578fd/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_323261fae1b58d6b84035a9eeff02c0a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_323261fae1b58d6b84035a9eeff02c0a/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_48cac0b5737d4cbb49b85fe3ec5578fd/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_48cac0b5737d4cbb49b85fe3ec5578fd/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_323261fae1b58d6b84035a9eeff02c0a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_48cac0b5737d4cbb49b85fe3ec5578fd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/if.h
@@ -1238,12 +1238,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_db91a440e7301c6086375a96e5265efa/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a3089f17ff5543909e75c119f6653100/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_db91a440e7301c6086375a96e5265efa/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_db91a440e7301c6086375a96e5265efa/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_a3089f17ff5543909e75c119f6653100/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a3089f17ff5543909e75c119f6653100/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_db91a440e7301c6086375a96e5265efa/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_a3089f17ff5543909e75c119f6653100/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1256,12 +1256,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_b508f3606543613aa3f57998c7709240/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_915c68e588046e1765ffaf03c5dfac9e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_b508f3606543613aa3f57998c7709240/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_b508f3606543613aa3f57998c7709240/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_915c68e588046e1765ffaf03c5dfac9e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_915c68e588046e1765ffaf03c5dfac9e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_b508f3606543613aa3f57998c7709240/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_915c68e588046e1765ffaf03c5dfac9e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1274,12 +1274,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_65590e6b27cd4da54861731a8093e113/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1292,12 +1292,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_11614647bf4fe3a9ab0ab71eac98c6d1/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_215fcae6d04e322510ea5c1795d17599/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_11614647bf4fe3a9ab0ab71eac98c6d1/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_11614647bf4fe3a9ab0ab71eac98c6d1/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_215fcae6d04e322510ea5c1795d17599/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_215fcae6d04e322510ea5c1795d17599/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_11614647bf4fe3a9ab0ab71eac98c6d1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_215fcae6d04e322510ea5c1795d17599/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 ------------------------------------------------------------------
 Checking for NSC location
@@ -1315,12 +1315,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_af6d1f271a2bf3d9db8773f4c38a22c7/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_e1aa1f3c39edbf1c690cb9f443ed074e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_af6d1f271a2bf3d9db8773f4c38a22c7/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_af6d1f271a2bf3d9db8773f4c38a22c7/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_e1aa1f3c39edbf1c690cb9f443ed074e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_e1aa1f3c39edbf1c690cb9f443ed074e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_af6d1f271a2bf3d9db8773f4c38a22c7/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lzmq']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_e1aa1f3c39edbf1c690cb9f443ed074e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lzmq']
 yes
 ------------------------------------------------------------------
 Checking for library protobuf
@@ -1332,17 +1332,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_c00e997c1acf83b0ec2928f08a074c62/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1f7b083a2b2a5861ee4f1384bd14237f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_c00e997c1acf83b0ec2928f08a074c62/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_c00e997c1acf83b0ec2928f08a074c62/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_1f7b083a2b2a5861ee4f1384bd14237f/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1f7b083a2b2a5861ee4f1384bd14237f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_c00e997c1acf83b0ec2928f08a074c62/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lprotobuf']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_1f7b083a2b2a5861ee4f1384bd14237f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lprotobuf']
 yes
 ------------------------------------------------------------------
 Checking for program 'protoc'
 /usr/bin/protoc
-find program=['protoc'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PROTOC' -> ['/usr/bin/protoc']
+find program=['protoc'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PROTOC' -> ['/usr/bin/protoc']
 ------------------------------------------------------------------
 Checking for protoc version
 3.1.0
@@ -1369,12 +1369,12 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_65590e6b27cd4da54861731a8093e113/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/testprog[0m
 
-['/usr/bin/g++', '-lzmq', '-lprotobuf', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_65590e6b27cd4da54861731a8093e113/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lzmq', '-lprotobuf']
+['/usr/bin/g++', '-lzmq', '-lprotobuf', 'test.cpp.1.o', '-o/home/hank/ns3gym-extention/build/.conf_check_223f5f10debb6ed161ff102ec4eab7d6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lzmq', '-lprotobuf']
 yes
 ------------------------------------------------------------------
 Checking for python module 'gi'
@@ -1451,11 +1451,11 @@ from /home/hank/ns3gym-extention/src/visualizer: Could not find the python modul
 ------------------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
-find program=['sudo'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
+find program=['sudo'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
 ------------------------------------------------------------------
 Checking for program 'valgrind'
 /usr/bin/valgrind
-find program=['valgrind'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
+find program=['valgrind'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
 ------------------------------------------------------------------
 Checking for 'gsl'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
@@ -1469,45 +1469,45 @@ from /home/hank/ns3gym-extention: The configuration failed
 ------------------------------------------------------------------
 python-config
 not found
-find program=['libgcrypt-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
+find program=['libgcrypt-config'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
 from /home/hank/ns3gym-extention: Could not find the program ['libgcrypt-config']
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_953c47e06e44b50ac4e5a665d4174379/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_4e38df7831bff772891eb0ab8ae8cb9d/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_953c47e06e44b50ac4e5a665d4174379/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_4e38df7831bff772891eb0ab8ae8cb9d/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_dbb9a558ac5cdf8d4743610c3a639e32/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_d2ab01b10d40db4e64c3c280d08e4a8f/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_953c47e06e44b50ac4e5a665d4174379/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_4e38df7831bff772891eb0ab8ae8cb9d/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_953c47e06e44b50ac4e5a665d4174379/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_ZMQ=1', '-DHAVE_PROTOBUF=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o/home/hank/ns3gym-extention/build/.conf_check_4e38df7831bff772891eb0ab8ae8cb9d/testbuild/test.c.1.o']
 ok
 ------------------------------------------------------------------
 Checking for program 'doxygen'
 /usr/bin/doxygen
-find program=['doxygen'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> ['/usr/bin/doxygen']
+find program=['doxygen'] paths=['/home/hank/env01/bin', '/home/hank/bin', '/home/hank/.local/bin', '/home/hank/bin', '/home/hank/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> ['/usr/bin/doxygen']

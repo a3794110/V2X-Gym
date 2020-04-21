@@ -54,7 +54,7 @@ def configure(conf):
         else:
             conf.fatal('Build ns3gym Protobuf C++ messages failed')
 
-        rc = subprocess.call(protoc+" -I="+pbSrcDir+" --python_out="+pbSrcDir+"ns3gym/ns3gym/ "+pbSrcDir+"messages.proto", shell=True)
+        rc = subprocess.call(protoc+" -I="+pbSrcDir+" --python_out="+pbSrcDir+"ns3gym/v2xgym/ "+pbSrcDir+"messages.proto", shell=True)
 
         if rc == 0:
             conf.msg("Build ns3gym Protobuf Python messages", "Done")

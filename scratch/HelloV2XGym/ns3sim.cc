@@ -170,7 +170,7 @@ main (int argc, char *argv[])
   V2XGym_InitCVs();
 
   // OpenGym Env
-  Ptr<OpenGymInterface> openGym = CreateObject<OpenGymInterface> (openGymPort);
+  Ptr<OpenGymInterface> openGym = CreateObject<OpenGymInterface> ("tcp://localhost:", openGymPort);
   openGym->SetGetActionSpaceCb( MakeCallback (&MyGetActionSpace) );
   openGym->SetGetObservationSpaceCb( MakeCallback (&MyGetObservationSpace) );
   openGym->SetGetGameOverCb( MakeCallback (&MyGetGameOver) );

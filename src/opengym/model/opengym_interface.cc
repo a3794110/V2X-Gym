@@ -53,20 +53,20 @@ OpenGymInterface::GetTypeId (void)
 }
 
 Ptr<OpenGymInterface>
-OpenGymInterface::Get (uint32_t port)
+OpenGymInterface::Get (std::string addr,uint32_t port)
 {
   NS_LOG_FUNCTION_NOARGS ();
-  return *DoGet (port);
+  return *DoGet (addr, port);
 }
 
 Ptr<OpenGymInterface> *
-OpenGymInterface::DoGet (uint32_t port)
+OpenGymInterface::DoGet (std::string addr, uint32_t port)
 {
   NS_LOG_FUNCTION_NOARGS ();
   static Ptr<OpenGymInterface> ptr = 0;
   if (ptr == 0)
     {
-      ptr = CreateObject<OpenGymInterface> (port);
+      ptr = CreateObject<OpenGymInterface> (addr, port);
       Config::RegisterRootNamespaceObject (ptr);
       Simulator::ScheduleDestroy (&OpenGymInterface::Delete);
     }
@@ -81,8 +81,8 @@ OpenGymInterface::Delete (void)
   (*DoGet ()) = 0;
 }
 
-OpenGymInterface::OpenGymInterface(uint32_t port):
-  m_port(port), m_zmq_context(1), m_zmq_socket(m_zmq_context, ZMQ_REQ),
+OpenGymInterface::OpenGymInterface(std::string addr, uint32_t port):
+  m_addr(addr), m_port(port), m_zmq_context(1), m_zmq_socket(m_zmq_context, ZMQ_REQ),
   m_simEnd(false), m_stopEnvRequested(false), m_initSimMsgSent(false)
 {
   NS_LOG_FUNCTION (this);
@@ -164,7 +164,8 @@ OpenGymInterface::Init()
   }
   m_initSimMsgSent = true;
 
-  std::string connectAddr = "tcp://localhost:" + std::to_string(m_port);
+  //std::string connectAddr = "tcp://localhost:" + std::to_string(m_port);
+  std::string connectAddr = m_addr + std::to_string(m_port);
   zmq_connect ((void*)m_zmq_socket, connectAddr.c_str());
 
   Ptr<OpenGymSpace> obsSpace = GetObservationSpace();
