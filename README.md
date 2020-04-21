@@ -11,7 +11,7 @@ The goal of this project is to provide a vehicular network simulation framework 
 
 
 ![image](images/Schematic_Diagram_of_V2XGym.png)
-<center>Figure 1: General V2X-Gym</center>
+Figure 1: General V2X-Gym
   
 
 Author
