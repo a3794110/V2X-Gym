@@ -9,13 +9,11 @@ The goal of this project is to provide a vehicular network simulation framework 
 * Agents can interact with network envorment with [OpenAI Gym](https://gym.openai.com/) interface (action, reward and observaiton) based on [ns3-gym](https://github.com/tkn-tub/ns3-gym).
 * V2X-Gym supports distributed simulation (one side: SUMO/RL Agent, other side: ns-3).
 
-.center[
-  ![image](Schematic_Diagram_of_V2XGym.png)
 
-  .caption[
-  **Fig. 1:** General V2X-Gym
-  ]
-]
+  ![image](Schematic_Diagram_of_V2XGym.png)*Fig. 1: General V2X-Gym*
+
+  
+
 Author
 ========
 Ping-Han Hsieh, Natinal Tsing Hua Uiversity, Institue of Communications Engineering, a3794110@gmail.com 
