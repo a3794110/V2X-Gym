@@ -134,8 +134,8 @@ public:
   virtual void UlReceiveMacCe (MacCeListElement_s bsr, uint8_t componentCarrierId);
   virtual void NotifyPrbOccupancy (double prbOccupancy, uint8_t componentCarrierId);
   // inherited from LteMacSapUser
-  virtual void NotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams);
-  virtual void ReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams);
+  virtual void NotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid);
+  virtual void ReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid);
   virtual void NotifyHarqDeliveryFailure ();
 
 
@@ -162,15 +162,15 @@ void MemberLteCcmMacSapUser<C>::NotifyPrbOccupancy (double prbOccupancy, uint8_t
 }
 
 template <class C>
-void MemberLteCcmMacSapUser<C>::NotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams)
+void MemberLteCcmMacSapUser<C>::NotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid)
 {
-  m_owner->DoNotifyTxOpportunity (txOpParams);
+  m_owner->DoNotifyTxOpportunity (bytes, layer, harqId, componentCarrierId, rnti, lcid);
 }
 
 template <class C>
-void MemberLteCcmMacSapUser<C>::ReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams)
+void MemberLteCcmMacSapUser<C>::ReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid)
 {
-  m_owner->DoReceivePdu (rxPduParams);
+  m_owner->DoReceivePdu (p, rnti, lcid);
 }
 
 template <class C>

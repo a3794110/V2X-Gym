@@ -31,12 +31,10 @@
 #include "ns3/ipv6-header.h"
 #include "ns3/udp-header.h"
 #include "ns3/tcp-header.h"
-#include "ns3/ipv4-l3-protocol.h"
-#include "ns3/icmpv4-l4-protocol.h"
 #include "ns3/udp-l4-protocol.h"
 #include "ns3/tcp-l4-protocol.h"
-#include "ns3/ipv6-l3-protocol.h"
 #include "ns3/icmpv6-l4-protocol.h"
+#include "ns3/icmpv4-l4-protocol.h"
 
 namespace ns3 {
 
@@ -64,12 +62,17 @@ EpcTftClassifier::Delete (uint32_t id)
   m_tftMap.erase (id);
 }
 
+ 
 uint32_t 
-EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction, uint16_t protocolNumber)
+EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction)
 {
   NS_LOG_FUNCTION (this << p << p->GetSize () << direction);
 
   Ptr<Packet> pCopy = p->Copy ();
+
+  uint8_t ipType;
+  pCopy->CopyData (&ipType, 1);
+  ipType = (ipType>>4) & 0x0f;
 
   Ipv4Address localAddressIpv4;
   Ipv4Address remoteAddressIpv4;
@@ -83,7 +86,7 @@ EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction, uint16_t
   uint16_t localPort = 0;
   uint16_t remotePort = 0;
 
-  if (protocolNumber == Ipv4L3Protocol::PROT_NUMBER)
+  if (ipType == 0x04)
     {
       Ipv4Header ipv4Header;
       pCopy->RemoveHeader (ipv4Header);
@@ -199,7 +202,7 @@ EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction, uint16_t
             }
         }
     }
-  else if (protocolNumber == Ipv6L3Protocol::PROT_NUMBER)
+  else if (ipType == 0x06)
     {
       Ipv6Header ipv6Header;
       pCopy->RemoveHeader (ipv6Header);
@@ -258,7 +261,7 @@ EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction, uint16_t
     }
 
 
-  if (protocolNumber == Ipv4L3Protocol::PROT_NUMBER)
+  if (ipType == 0x04)
     {
       NS_LOG_INFO ("Classifying packet:"
           << " localAddr="  << localAddressIpv4
@@ -285,7 +288,7 @@ EpcTftClassifier::Classify (Ptr<Packet> p, EpcTft::Direction direction, uint16_t
             }
         }
     }
-  else if (protocolNumber == Ipv6L3Protocol::PROT_NUMBER)
+  else if (ipType == 0x06)
     {
       NS_LOG_INFO ("Classifying packet:"
           << " localAddr="  << localAddressIpv6

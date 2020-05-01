@@ -870,7 +870,7 @@ PyTypeObject PyNs3TopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3TopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TopologyReader__tp_clear,             /* tp_clear */
@@ -1357,7 +1357,7 @@ PyTypeObject PyNs3InetTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "InetTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3InetTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3InetTopologyReader__tp_clear,             /* tp_clear */
@@ -1484,7 +1484,7 @@ PyTypeObject PyNs3OrbisTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "OrbisTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3OrbisTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OrbisTopologyReader__tp_clear,             /* tp_clear */
@@ -1611,7 +1611,7 @@ PyTypeObject PyNs3RocketfuelTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RocketfuelTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3RocketfuelTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RocketfuelTopologyReader__tp_clear,             /* tp_clear */

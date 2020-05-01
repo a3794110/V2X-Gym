@@ -15,8 +15,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
- * Author: Manuel Requena <manuel.requena@cttc.es>
- *         Nicola Baldo <nbaldo@cttc.es>
+ * Authors: Manuel Requena <manuel.requena@cttc.es>
+ *          Nicola Baldo <nbaldo@cttc.es>
+ * Modified by: NIST (D2D)
  */
 
 #include "ns3/simulator.h"
@@ -111,9 +112,9 @@ LteRlcTm::DoTransmitPdcpPdu (Ptr<Packet> p)
  */
 
 void
-LteRlcTm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams)
+LteRlcTm::DoNotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid)
 {
-  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << txOpParams.bytes  << (uint32_t) txOpParams.layer << (uint32_t) txOpParams.harqId);
+  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << bytes  << (uint32_t) layer << (uint32_t) harqId);
 
   // 5.1.1.1 Transmit operations 
   // 5.1.1.1.1 General
@@ -129,9 +130,9 @@ LteRlcTm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpPara
 
   Ptr<Packet> packet = (*(m_txBuffer.begin ()))->Copy ();
 
-  if (txOpParams.bytes < packet->GetSize ())
+  if (bytes < packet->GetSize ())
     {
-      NS_LOG_WARN ("TX opportunity too small = " << txOpParams.bytes << " (PDU size: " << packet->GetSize () << ")");
+      NS_LOG_WARN ("TX opportunity too small = " << bytes << " (PDU size: " << packet->GetSize () << ")");
       return;
     }
 
@@ -148,9 +149,11 @@ LteRlcTm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpPara
   params.pdu = packet;
   params.rnti = m_rnti;
   params.lcid = m_lcid;
-  params.layer = txOpParams.layer;
-  params.harqProcessId = txOpParams.harqId;
-  params.componentCarrierId = txOpParams.componentCarrierId;
+  params.srcL2Id = m_srcL2Id;
+  params.dstL2Id = m_dstL2Id;
+  params.layer = layer;
+  params.harqProcessId = harqId;
+  params.componentCarrierId = componentCarrierId;
 
   m_macSapProvider->TransmitPdu (params);
 
@@ -168,24 +171,24 @@ LteRlcTm::DoNotifyHarqDeliveryFailure ()
 }
 
 void
-LteRlcTm::DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams)
+LteRlcTm::DoReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid)
 {
-  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << rxPduParams.p->GetSize ());
+  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << p->GetSize ());
 
   // Receiver timestamp
   RlcTag rlcTag;
   Time delay;
-  NS_ASSERT_MSG (rxPduParams.p->PeekPacketTag (rlcTag), "RlcTag is missing");
-  rxPduParams.p->RemovePacketTag (rlcTag);
+  NS_ASSERT_MSG (p->PeekPacketTag (rlcTag), "RlcTag is missing");
+  p->RemovePacketTag (rlcTag);
   delay = Simulator::Now() - rlcTag.GetSenderTimestamp ();
-  m_rxPdu (m_rnti, m_lcid, rxPduParams.p->GetSize (), delay.GetNanoSeconds ());
+  m_rxPdu (m_rnti, m_lcid, p->GetSize (), delay.GetNanoSeconds ());
 
   // 5.1.1.2 Receive operations 
   // 5.1.1.2.1  General
   // When receiving a new TMD PDU from lower layer, the receiving TM RLC entity shall:
   // - deliver the TMD PDU without any modification to upper layer.
 
-   m_rlcSapUser->ReceivePdcpPdu (rxPduParams.p);
+   m_rlcSapUser->ReceivePdcpPdu (p);
 }
 
 
@@ -208,6 +211,8 @@ LteRlcTm::DoReportBufferStatus (void)
   LteMacSapProvider::ReportBufferStatusParameters r;
   r.rnti = m_rnti;
   r.lcid = m_lcid;
+  r.srcL2Id = m_srcL2Id;
+  r.dstL2Id = m_dstL2Id;
   r.txQueueSize = queueSize;
   r.txQueueHolDelay = holDelay.GetMilliSeconds () ;
   r.retxQueueSize = 0;

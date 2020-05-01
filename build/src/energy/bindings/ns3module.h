@@ -2290,10 +2290,6 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3DeviceEnergyModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DeviceEnergyModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -2301,6 +2297,10 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DeviceEnergyModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3DeviceEnergyModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     static PyObject * _wrap_DoDispose(PyNs3DeviceEnergyModel *self);
     inline void DoDispose__parent_caller()
@@ -2378,6 +2378,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergyHarvester *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3EnergyHarvester *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2385,10 +2389,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergyHarvester *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergyHarvester *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual void DoDispose();
 
@@ -2462,13 +2462,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergyHarvesterContainer *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergyHarvesterContainer *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergyHarvesterContainer *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -2528,21 +2528,21 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergySource *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergySource *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_CalculateTotalCurrent(PyNs3EnergySource *self);
-    inline double CalculateTotalCurrent__parent_caller()
-    { return ns3::EnergySource::CalculateTotalCurrent(); }
-
-    static PyObject * _wrap_NotifyEnergyChanged(PyNs3EnergySource *self);
-    inline void NotifyEnergyChanged__parent_caller()
-    { ns3::EnergySource::NotifyEnergyChanged(); }
+    static PyObject * _wrap_DoInitialize(PyNs3EnergySource *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     static PyObject * _wrap_BreakDeviceEnergyModelRefCycle(PyNs3EnergySource *self);
     inline void BreakDeviceEnergyModelRefCycle__parent_caller()
     { ns3::EnergySource::BreakDeviceEnergyModelRefCycle(); }
+
+    static PyObject * _wrap_CalculateTotalCurrent(PyNs3EnergySource *self);
+    inline double CalculateTotalCurrent__parent_caller()
+    { return ns3::EnergySource::CalculateTotalCurrent(); }
 
     static PyObject * _wrap_NotifyEnergyRecharged(PyNs3EnergySource *self);
     inline void NotifyEnergyRecharged__parent_caller()
@@ -2552,13 +2552,13 @@ public:
     inline void NotifyEnergyDrained__parent_caller()
     { ns3::EnergySource::NotifyEnergyDrained(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergySource *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyEnergyChanged(PyNs3EnergySource *self);
+    inline void NotifyEnergyChanged__parent_caller()
+    { ns3::EnergySource::NotifyEnergyChanged(); }
 
-    static PyObject * _wrap_DoInitialize(PyNs3EnergySource *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergySource *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual double GetEnergyFraction();
 
@@ -2640,13 +2640,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergySourceContainer *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EnergySourceContainer *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3EnergySourceContainer *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -2706,13 +2706,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3LiIonEnergySource *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3LiIonEnergySource *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3LiIonEnergySource *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DecreaseRemainingEnergy(double energyJ);
 
@@ -2786,13 +2786,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3RvBatteryModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RvBatteryModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3RvBatteryModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual double GetEnergyFraction();
 
@@ -2862,6 +2862,10 @@ public:
     }
 
 
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SimpleDeviceEnergyModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
     static PyObject * _wrap_DoInitialize(PyNs3SimpleDeviceEnergyModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2869,10 +2873,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3SimpleDeviceEnergyModel *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SimpleDeviceEnergyModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     virtual void ChangeState(int newState);
 
@@ -2954,13 +2954,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3BasicEnergyHarvester *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BasicEnergyHarvester *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3BasicEnergyHarvester *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3022,13 +3022,13 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3BasicEnergySource *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BasicEnergySource *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3BasicEnergySource *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual double GetEnergyFraction();
 

@@ -1728,13 +1728,13 @@ _wrap_PyNs3OrganizationIdentifier__copy__(PyNs3OrganizationIdentifier *self)
 }
 
 static PyMethodDef PyNs3OrganizationIdentifier_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetManagementId", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_GetManagementId, METH_NOARGS, "GetManagementId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "IsNull", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_IsNull, METH_NOARGS, "IsNull()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: ns3::OrganizationIdentifier::OrganizationIdentifierType" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OrganizationIdentifier_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: ns3::OrganizationIdentifier::OrganizationIdentifierType" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OrganizationIdentifier__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3013,9 +3013,9 @@ _wrap_PyNs3VendorSpecificContentManager__copy__(PyNs3VendorSpecificContentManage
 }
 
 static PyMethodDef PyNs3VendorSpecificContentManager_methods[] = {
-    {(char *) "DeregisterVscCallback", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_DeregisterVscCallback, METH_VARARGS|METH_KEYWORDS, "DeregisterVscCallback(oi)\n\ntype: oi: ns3::OrganizationIdentifier &" },
-    {(char *) "IsVscCallbackRegistered", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_IsVscCallbackRegistered, METH_VARARGS|METH_KEYWORDS, "IsVscCallbackRegistered(oi)\n\ntype: oi: ns3::OrganizationIdentifier &" },
-    {(char *) "RegisterVscCallback", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_RegisterVscCallback, METH_VARARGS|METH_KEYWORDS, "RegisterVscCallback(oi, cb)\n\ntype: oi: ns3::OrganizationIdentifier\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::WifiMac >, ns3::OrganizationIdentifier const &, ns3::Ptr< ns3::Packet const >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "DeregisterVscCallback", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_DeregisterVscCallback, METH_KEYWORDS|METH_VARARGS, "DeregisterVscCallback(oi)\n\ntype: oi: ns3::OrganizationIdentifier &" },
+    {(char *) "IsVscCallbackRegistered", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_IsVscCallbackRegistered, METH_KEYWORDS|METH_VARARGS, "IsVscCallbackRegistered(oi)\n\ntype: oi: ns3::OrganizationIdentifier &" },
+    {(char *) "RegisterVscCallback", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager_RegisterVscCallback, METH_KEYWORDS|METH_VARARGS, "RegisterVscCallback(oi, cb)\n\ntype: oi: ns3::OrganizationIdentifier\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::WifiMac >, ns3::OrganizationIdentifier const &, ns3::Ptr< ns3::Packet const >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3VendorSpecificContentManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3806,11 +3806,11 @@ _wrap_PyNs3WaveBsmHelper__copy__(PyNs3WaveBsmHelper *self)
 }
 
 static PyMethodDef PyNs3WaveBsmHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WaveBsmHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(c, stream)\n\ntype: c: ns3::NodeContainer\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WaveBsmHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(c, stream)\n\ntype: c: ns3::NodeContainer\ntype: stream: int64_t" },
     {(char *) "GetNodesMoving", (PyCFunction) _wrap_PyNs3WaveBsmHelper_GetNodesMoving, METH_NOARGS|METH_STATIC, "GetNodesMoving()\n\n" },
     {(char *) "GetWaveBsmStats", (PyCFunction) _wrap_PyNs3WaveBsmHelper_GetWaveBsmStats, METH_NOARGS, "GetWaveBsmStats()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveBsmHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3WaveBsmHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveBsmHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3WaveBsmHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveBsmHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4295,14 +4295,14 @@ _wrap_PyNs3WaveHelper__copy__(PyNs3WaveHelper *self)
 }
 
 static PyMethodDef PyNs3WaveHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WaveHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(c, stream)\n\ntype: c: ns3::NetDeviceContainer\ntype: stream: int64_t" },
-    {(char *) "CreateMacForChannel", (PyCFunction) _wrap_PyNs3WaveHelper_CreateMacForChannel, METH_VARARGS|METH_KEYWORDS, "CreateMacForChannel(channelNumbers)\n\ntype: channelNumbers: std::vector< unsigned int >" },
-    {(char *) "CreatePhys", (PyCFunction) _wrap_PyNs3WaveHelper_CreatePhys, METH_VARARGS|METH_KEYWORDS, "CreatePhys(phys)\n\ntype: phys: uint32_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WaveHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(c, stream)\n\ntype: c: ns3::NetDeviceContainer\ntype: stream: int64_t" },
+    {(char *) "CreateMacForChannel", (PyCFunction) _wrap_PyNs3WaveHelper_CreateMacForChannel, METH_KEYWORDS|METH_VARARGS, "CreateMacForChannel(channelNumbers)\n\ntype: channelNumbers: std::vector< unsigned int >" },
+    {(char *) "CreatePhys", (PyCFunction) _wrap_PyNs3WaveHelper_CreatePhys, METH_KEYWORDS|METH_VARARGS, "CreatePhys(phys)\n\ntype: phys: uint32_t" },
     {(char *) "Default", (PyCFunction) _wrap_PyNs3WaveHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
     {(char *) "EnableLogComponents", (PyCFunction) _wrap_PyNs3WaveHelper_EnableLogComponents, METH_NOARGS|METH_STATIC, "EnableLogComponents()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetChannelScheduler", (PyCFunction) _wrap_PyNs3WaveHelper_SetChannelScheduler, METH_VARARGS|METH_KEYWORDS, "SetChannelScheduler(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetRemoteStationManager", (PyCFunction) _wrap_PyNs3WaveHelper_SetRemoteStationManager, METH_VARARGS|METH_KEYWORDS, "SetRemoteStationManager(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3WaveHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetChannelScheduler", (PyCFunction) _wrap_PyNs3WaveHelper_SetChannelScheduler, METH_KEYWORDS|METH_VARARGS, "SetChannelScheduler(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetRemoteStationManager", (PyCFunction) _wrap_PyNs3WaveHelper_SetRemoteStationManager, METH_KEYWORDS|METH_VARARGS, "SetRemoteStationManager(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4618,13 +4618,13 @@ _wrap_PyNs3HigherLayerTxVectorTag__copy__(PyNs3HigherLayerTxVectorTag *self)
 }
 
 static PyMethodDef PyNs3HigherLayerTxVectorTag_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(i)\n\ntype: i: ns3::TagBuffer" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(i)\n\ntype: i: ns3::TagBuffer" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTxVector", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_GetTxVector, METH_NOARGS, "GetTxVector()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsAdaptable", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_IsAdaptable, METH_NOARGS, "IsAdaptable()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(i)\n\ntype: i: ns3::TagBuffer" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(i)\n\ntype: i: ns3::TagBuffer" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HigherLayerTxVectorTag__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4948,7 +4948,7 @@ _wrap_PyNs3NqosWaveMacHelper__copy__(PyNs3NqosWaveMacHelper *self)
 
 static PyMethodDef PyNs3NqosWaveMacHelper_methods[] = {
     {(char *) "Default", (PyCFunction) _wrap_PyNs3NqosWaveMacHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3NqosWaveMacHelper_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7, n8, v8, n9, v9, n10, v10)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &\ntype: n8: std::string\ntype: v8: ns3::AttributeValue const &\ntype: n9: std::string\ntype: v9: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3NqosWaveMacHelper_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7, n8, v8, n9, v9, n10, v10)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &\ntype: n8: std::string\ntype: v8: ns3::AttributeValue const &\ntype: n9: std::string\ntype: v9: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3NqosWaveMacHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5275,7 +5275,7 @@ _wrap_PyNs3QosWaveMacHelper__copy__(PyNs3QosWaveMacHelper *self)
 
 static PyMethodDef PyNs3QosWaveMacHelper_methods[] = {
     {(char *) "Default", (PyCFunction) _wrap_PyNs3QosWaveMacHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3QosWaveMacHelper_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7, n8, v8, n9, v9, n10, v10)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &\ntype: n8: std::string\ntype: v8: ns3::AttributeValue const &\ntype: n9: std::string\ntype: v9: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3QosWaveMacHelper_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7, n8, v8, n9, v9, n10, v10)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &\ntype: n8: std::string\ntype: v8: ns3::AttributeValue const &\ntype: n9: std::string\ntype: v9: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QosWaveMacHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5737,14 +5737,14 @@ _wrap_PyNs3VendorSpecificActionHeader__copy__(PyNs3VendorSpecificActionHeader *s
 }
 
 static PyMethodDef PyNs3VendorSpecificActionHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCategory", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_GetCategory, METH_NOARGS, "GetCategory()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetOrganizationIdentifier", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_GetOrganizationIdentifier, METH_NOARGS, "GetOrganizationIdentifier()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetOrganizationIdentifier", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_SetOrganizationIdentifier, METH_VARARGS|METH_KEYWORDS, "SetOrganizationIdentifier(oi)\n\ntype: oi: ns3::OrganizationIdentifier" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetOrganizationIdentifier", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader_SetOrganizationIdentifier, METH_KEYWORDS|METH_VARARGS, "SetOrganizationIdentifier(oi)\n\ntype: oi: ns3::OrganizationIdentifier" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3VendorSpecificActionHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5841,22 +5841,6 @@ PyTypeObject PyNs3VendorSpecificActionHeader_Type = {
 
 
 PyObject *
-PyNs3VsaManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3VsaManager *self)
-{
-    PyObject *py_retval;
-    PyNs3VsaManager__PythonHelper *helper = dynamic_cast< PyNs3VsaManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3VsaManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3VsaManager *self)
 {
     PyObject *py_retval;
@@ -5867,6 +5851,22 @@ PyNs3VsaManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3VsaManager *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3VsaManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3VsaManager *self)
+{
+    PyObject *py_retval;
+    PyNs3VsaManager__PythonHelper *helper = dynamic_cast< PyNs3VsaManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6325,13 +6325,13 @@ _wrap_PyNs3VsaManager__copy__(PyNs3VsaManager *self)
 static PyMethodDef PyNs3VsaManager_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3VsaManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "RemoveAll", (PyCFunction) _wrap_PyNs3VsaManager_RemoveAll, METH_NOARGS, "RemoveAll()\n\n" },
-    {(char *) "RemoveByChannel", (PyCFunction) _wrap_PyNs3VsaManager_RemoveByChannel, METH_VARARGS|METH_KEYWORDS, "RemoveByChannel(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "RemoveByOrganizationIdentifier", (PyCFunction) _wrap_PyNs3VsaManager_RemoveByOrganizationIdentifier, METH_VARARGS|METH_KEYWORDS, "RemoveByOrganizationIdentifier(oi)\n\ntype: oi: ns3::OrganizationIdentifier const &" },
-    {(char *) "SendVsa", (PyCFunction) _wrap_PyNs3VsaManager_SendVsa, METH_VARARGS|METH_KEYWORDS, "SendVsa(vsaInfo)\n\ntype: vsaInfo: ns3::VsaInfo const &" },
-    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3VsaManager_SetWaveNetDevice, METH_VARARGS|METH_KEYWORDS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
-    {(char *) "SetWaveVsaCallback", (PyCFunction) _wrap_PyNs3VsaManager_SetWaveVsaCallback, METH_VARARGS|METH_KEYWORDS, "SetWaveVsaCallback(vsaCallback)\n\ntype: vsaCallback: ns3::Callback< bool, ns3::Ptr< ns3::Packet const >, ns3::Address const &, unsigned int, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3VsaManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "RemoveByChannel", (PyCFunction) _wrap_PyNs3VsaManager_RemoveByChannel, METH_KEYWORDS|METH_VARARGS, "RemoveByChannel(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "RemoveByOrganizationIdentifier", (PyCFunction) _wrap_PyNs3VsaManager_RemoveByOrganizationIdentifier, METH_KEYWORDS|METH_VARARGS, "RemoveByOrganizationIdentifier(oi)\n\ntype: oi: ns3::OrganizationIdentifier const &" },
+    {(char *) "SendVsa", (PyCFunction) _wrap_PyNs3VsaManager_SendVsa, METH_KEYWORDS|METH_VARARGS, "SendVsa(vsaInfo)\n\ntype: vsaInfo: ns3::VsaInfo const &" },
+    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3VsaManager_SetWaveNetDevice, METH_KEYWORDS|METH_VARARGS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
+    {(char *) "SetWaveVsaCallback", (PyCFunction) _wrap_PyNs3VsaManager_SetWaveVsaCallback, METH_KEYWORDS|METH_VARARGS, "SetWaveVsaCallback(vsaCallback)\n\ntype: vsaCallback: ns3::Callback< bool, ns3::Ptr< ns3::Packet const >, ns3::Address const &, unsigned int, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3VsaManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3VsaManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3VsaManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6826,26 +6826,26 @@ _wrap_PyNs3WaveBsmStats__copy__(PyNs3WaveBsmStats *self)
 }
 
 static PyMethodDef PyNs3WaveBsmStats_methods[] = {
-    {(char *) "GetBsmPdr", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetBsmPdr, METH_VARARGS|METH_KEYWORDS, "GetBsmPdr(index)\n\ntype: index: int" },
-    {(char *) "GetCumulativeBsmPdr", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetCumulativeBsmPdr, METH_VARARGS|METH_KEYWORDS, "GetCumulativeBsmPdr(index)\n\ntype: index: int" },
-    {(char *) "GetExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetExpectedRxPktCount, METH_VARARGS|METH_KEYWORDS, "GetExpectedRxPktCount(index)\n\ntype: index: int" },
+    {(char *) "GetBsmPdr", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetBsmPdr, METH_KEYWORDS|METH_VARARGS, "GetBsmPdr(index)\n\ntype: index: int" },
+    {(char *) "GetCumulativeBsmPdr", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetCumulativeBsmPdr, METH_KEYWORDS|METH_VARARGS, "GetCumulativeBsmPdr(index)\n\ntype: index: int" },
+    {(char *) "GetExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetExpectedRxPktCount, METH_KEYWORDS|METH_VARARGS, "GetExpectedRxPktCount(index)\n\ntype: index: int" },
     {(char *) "GetLogging", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetLogging, METH_NOARGS, "GetLogging()\n\n" },
     {(char *) "GetRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetRxPktCount, METH_NOARGS, "GetRxPktCount()\n\n" },
-    {(char *) "GetRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetRxPktInRangeCount, METH_VARARGS|METH_KEYWORDS, "GetRxPktInRangeCount(index)\n\ntype: index: int" },
+    {(char *) "GetRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetRxPktInRangeCount, METH_KEYWORDS|METH_VARARGS, "GetRxPktInRangeCount(index)\n\ntype: index: int" },
     {(char *) "GetTxByteCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetTxByteCount, METH_NOARGS, "GetTxByteCount()\n\n" },
     {(char *) "GetTxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetTxPktCount, METH_NOARGS, "GetTxPktCount()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WaveBsmStats_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IncExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncExpectedRxPktCount, METH_VARARGS|METH_KEYWORDS, "IncExpectedRxPktCount(index)\n\ntype: index: int" },
+    {(char *) "IncExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncExpectedRxPktCount, METH_KEYWORDS|METH_VARARGS, "IncExpectedRxPktCount(index)\n\ntype: index: int" },
     {(char *) "IncRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncRxPktCount, METH_NOARGS, "IncRxPktCount()\n\n" },
-    {(char *) "IncRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncRxPktInRangeCount, METH_VARARGS|METH_KEYWORDS, "IncRxPktInRangeCount(index)\n\ntype: index: int" },
-    {(char *) "IncTxByteCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncTxByteCount, METH_VARARGS|METH_KEYWORDS, "IncTxByteCount(bytes)\n\ntype: bytes: int" },
+    {(char *) "IncRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncRxPktInRangeCount, METH_KEYWORDS|METH_VARARGS, "IncRxPktInRangeCount(index)\n\ntype: index: int" },
+    {(char *) "IncTxByteCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncTxByteCount, METH_KEYWORDS|METH_VARARGS, "IncTxByteCount(bytes)\n\ntype: bytes: int" },
     {(char *) "IncTxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_IncTxPktCount, METH_NOARGS, "IncTxPktCount()\n\n" },
-    {(char *) "ResetTotalRxPktCounts", (PyCFunction) _wrap_PyNs3WaveBsmStats_ResetTotalRxPktCounts, METH_VARARGS|METH_KEYWORDS, "ResetTotalRxPktCounts(index)\n\ntype: index: int" },
-    {(char *) "SetExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetExpectedRxPktCount, METH_VARARGS|METH_KEYWORDS, "SetExpectedRxPktCount(index, count)\n\ntype: index: int\ntype: count: int" },
-    {(char *) "SetLogging", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetLogging, METH_VARARGS|METH_KEYWORDS, "SetLogging(log)\n\ntype: log: int" },
-    {(char *) "SetRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetRxPktCount, METH_VARARGS|METH_KEYWORDS, "SetRxPktCount(count)\n\ntype: count: int" },
-    {(char *) "SetRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetRxPktInRangeCount, METH_VARARGS|METH_KEYWORDS, "SetRxPktInRangeCount(index, count)\n\ntype: index: int\ntype: count: int" },
-    {(char *) "SetTxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetTxPktCount, METH_VARARGS|METH_KEYWORDS, "SetTxPktCount(count)\n\ntype: count: int" },
+    {(char *) "ResetTotalRxPktCounts", (PyCFunction) _wrap_PyNs3WaveBsmStats_ResetTotalRxPktCounts, METH_KEYWORDS|METH_VARARGS, "ResetTotalRxPktCounts(index)\n\ntype: index: int" },
+    {(char *) "SetExpectedRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetExpectedRxPktCount, METH_KEYWORDS|METH_VARARGS, "SetExpectedRxPktCount(index, count)\n\ntype: index: int\ntype: count: int" },
+    {(char *) "SetLogging", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetLogging, METH_KEYWORDS|METH_VARARGS, "SetLogging(log)\n\ntype: log: int" },
+    {(char *) "SetRxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetRxPktCount, METH_KEYWORDS|METH_VARARGS, "SetRxPktCount(count)\n\ntype: count: int" },
+    {(char *) "SetRxPktInRangeCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetRxPktInRangeCount, METH_KEYWORDS|METH_VARARGS, "SetRxPktInRangeCount(index, count)\n\ntype: index: int\ntype: count: int" },
+    {(char *) "SetTxPktCount", (PyCFunction) _wrap_PyNs3WaveBsmStats_SetTxPktCount, METH_KEYWORDS|METH_VARARGS, "SetTxPktCount(count)\n\ntype: count: int" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveBsmStats__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7159,8 +7159,8 @@ _wrap_PyNs3Wifi80211pHelper__copy__(PyNs3Wifi80211pHelper *self)
 static PyMethodDef PyNs3Wifi80211pHelper_methods[] = {
     {(char *) "Default", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
     {(char *) "EnableLogComponents", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_EnableLogComponents, METH_NOARGS|METH_STATIC, "EnableLogComponents()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(phy, macHelper, c)\n\ntype: phy: ns3::WifiPhyHelper const &\ntype: macHelper: ns3::WifiMacHelper const &\ntype: c: ns3::NodeContainer" },
-    {(char *) "SetStandard", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_SetStandard, METH_VARARGS|METH_KEYWORDS, "SetStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(phy, macHelper, c)\n\ntype: phy: ns3::WifiPhyHelper const &\ntype: macHelper: ns3::WifiMacHelper const &\ntype: c: ns3::NodeContainer" },
+    {(char *) "SetStandard", (PyCFunction) _wrap_PyNs3Wifi80211pHelper_SetStandard, METH_KEYWORDS|METH_VARARGS, "SetStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Wifi80211pHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7764,16 +7764,16 @@ PyTypeObject PyNs3YansWavePhyHelper_Type = {
 
 
 PyObject *
-PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BsmApplication *self)
+PyNs3BsmApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsmApplication *self)
 {
     PyObject *py_retval;
     PyNs3BsmApplication__PythonHelper *helper = dynamic_cast< PyNs3BsmApplication__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7796,22 +7796,6 @@ PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize(PyNs3BsmApplication *self)
 }
 
 PyObject *
-PyNs3BsmApplication__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsmApplication *self)
-{
-    PyObject *py_retval;
-    PyNs3BsmApplication__PythonHelper *helper = dynamic_cast< PyNs3BsmApplication__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3BsmApplication__PythonHelper::_wrap_DoDispose(PyNs3BsmApplication *self)
 {
     PyObject *py_retval;
@@ -7822,6 +7806,22 @@ PyNs3BsmApplication__PythonHelper::_wrap_DoDispose(PyNs3BsmApplication *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BsmApplication *self)
+{
+    PyObject *py_retval;
+    PyNs3BsmApplication__PythonHelper *helper = dynamic_cast< PyNs3BsmApplication__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8359,12 +8359,12 @@ _wrap_PyNs3BsmApplication__copy__(PyNs3BsmApplication *self)
 }
 
 static PyMethodDef PyNs3BsmApplication_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3BsmApplication_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(streamIndex)\n\ntype: streamIndex: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3BsmApplication_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(streamIndex)\n\ntype: streamIndex: int64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BsmApplication_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BsmApplication__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BsmApplication__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8525,9 +8525,9 @@ _wrap_PyNs3ChannelCoordinationListener_NotifySchSlotStart(PyNs3ChannelCoordinati
 }
 
 static PyMethodDef PyNs3ChannelCoordinationListener_methods[] = {
-    {(char *) "NotifyCchSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifyCchSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifyCchSlotStart(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "NotifyGuardSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifyGuardSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifyGuardSlotStart(duration, cchi)\n\ntype: duration: ns3::Time\ntype: cchi: bool" },
-    {(char *) "NotifySchSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifySchSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifySchSlotStart(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "NotifyCchSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifyCchSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifyCchSlotStart(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "NotifyGuardSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifyGuardSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifyGuardSlotStart(duration, cchi)\n\ntype: duration: ns3::Time\ntype: cchi: bool" },
+    {(char *) "NotifySchSlotStart", (PyCFunction) _wrap_PyNs3ChannelCoordinationListener_NotifySchSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifySchSlotStart(duration)\n\ntype: duration: ns3::Time" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -8606,22 +8606,6 @@ PyTypeObject PyNs3ChannelCoordinationListener_Type = {
 
 
 PyObject *
-PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelCoordinator *self)
-{
-    PyObject *py_retval;
-    PyNs3ChannelCoordinator__PythonHelper *helper = dynamic_cast< PyNs3ChannelCoordinator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelCoordinator *self)
 {
     PyObject *py_retval;
@@ -8632,6 +8616,22 @@ PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelCoor
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelCoordinator *self)
+{
+    PyObject *py_retval;
+    PyNs3ChannelCoordinator__PythonHelper *helper = dynamic_cast< PyNs3ChannelCoordinator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9386,26 +9386,26 @@ static PyMethodDef PyNs3ChannelCoordinator_methods[] = {
     {(char *) "GetDefaultSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetDefaultSchInterval, METH_NOARGS|METH_STATIC, "GetDefaultSchInterval()\n\n" },
     {(char *) "GetDefaultSyncInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetDefaultSyncInterval, METH_NOARGS|METH_STATIC, "GetDefaultSyncInterval()\n\n" },
     {(char *) "GetGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetGuardInterval, METH_NOARGS, "GetGuardInterval()\n\n" },
-    {(char *) "GetIntervalTime", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetIntervalTime, METH_VARARGS|METH_KEYWORDS, "GetIntervalTime(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "GetRemainTime", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetRemainTime, METH_VARARGS|METH_KEYWORDS, "GetRemainTime(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "GetIntervalTime", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetIntervalTime, METH_KEYWORDS|METH_VARARGS, "GetIntervalTime(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "GetRemainTime", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetRemainTime, METH_KEYWORDS|METH_VARARGS, "GetRemainTime(duration)\n\ntype: duration: ns3::Time" },
     {(char *) "GetSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetSchInterval, METH_NOARGS, "GetSchInterval()\n\n" },
     {(char *) "GetSyncInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetSyncInterval, METH_NOARGS, "GetSyncInterval()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ChannelCoordinator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsCchInterval, METH_VARARGS|METH_KEYWORDS, "IsCchInterval(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "IsGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsGuardInterval, METH_VARARGS|METH_KEYWORDS, "IsGuardInterval(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "IsSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsSchInterval, METH_VARARGS|METH_KEYWORDS, "IsSchInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "IsCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsCchInterval, METH_KEYWORDS|METH_VARARGS, "IsCchInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "IsGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsGuardInterval, METH_KEYWORDS|METH_VARARGS, "IsGuardInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "IsSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsSchInterval, METH_KEYWORDS|METH_VARARGS, "IsSchInterval(duration)\n\ntype: duration: ns3::Time" },
     {(char *) "IsValidConfig", (PyCFunction) _wrap_PyNs3ChannelCoordinator_IsValidConfig, METH_NOARGS, "IsValidConfig()\n\n" },
-    {(char *) "NeedTimeToCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToCchInterval, METH_VARARGS|METH_KEYWORDS, "NeedTimeToCchInterval(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "NeedTimeToGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToGuardInterval, METH_VARARGS|METH_KEYWORDS, "NeedTimeToGuardInterval(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "NeedTimeToSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToSchInterval, METH_VARARGS|METH_KEYWORDS, "NeedTimeToSchInterval(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "RegisterListener", (PyCFunction) _wrap_PyNs3ChannelCoordinator_RegisterListener, METH_VARARGS|METH_KEYWORDS, "RegisterListener(listener)\n\ntype: listener: ns3::Ptr< ns3::ChannelCoordinationListener >" },
-    {(char *) "SetCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetCchInterval, METH_VARARGS|METH_KEYWORDS, "SetCchInterval(cchi)\n\ntype: cchi: ns3::Time" },
-    {(char *) "SetGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetGuardInterval, METH_VARARGS|METH_KEYWORDS, "SetGuardInterval(guardi)\n\ntype: guardi: ns3::Time" },
-    {(char *) "SetSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetSchInterval, METH_VARARGS|METH_KEYWORDS, "SetSchInterval(schi)\n\ntype: schi: ns3::Time" },
+    {(char *) "NeedTimeToCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToCchInterval, METH_KEYWORDS|METH_VARARGS, "NeedTimeToCchInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "NeedTimeToGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToGuardInterval, METH_KEYWORDS|METH_VARARGS, "NeedTimeToGuardInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "NeedTimeToSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_NeedTimeToSchInterval, METH_KEYWORDS|METH_VARARGS, "NeedTimeToSchInterval(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "RegisterListener", (PyCFunction) _wrap_PyNs3ChannelCoordinator_RegisterListener, METH_KEYWORDS|METH_VARARGS, "RegisterListener(listener)\n\ntype: listener: ns3::Ptr< ns3::ChannelCoordinationListener >" },
+    {(char *) "SetCchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetCchInterval, METH_KEYWORDS|METH_VARARGS, "SetCchInterval(cchi)\n\ntype: cchi: ns3::Time" },
+    {(char *) "SetGuardInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetGuardInterval, METH_KEYWORDS|METH_VARARGS, "SetGuardInterval(guardi)\n\ntype: guardi: ns3::Time" },
+    {(char *) "SetSchInterval", (PyCFunction) _wrap_PyNs3ChannelCoordinator_SetSchInterval, METH_KEYWORDS|METH_VARARGS, "SetSchInterval(schi)\n\ntype: schi: ns3::Time" },
     {(char *) "UnregisterAllListeners", (PyCFunction) _wrap_PyNs3ChannelCoordinator_UnregisterAllListeners, METH_NOARGS, "UnregisterAllListeners()\n\n" },
-    {(char *) "UnregisterListener", (PyCFunction) _wrap_PyNs3ChannelCoordinator_UnregisterListener, METH_VARARGS|METH_KEYWORDS, "UnregisterListener(listener)\n\ntype: listener: ns3::Ptr< ns3::ChannelCoordinationListener >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "UnregisterListener", (PyCFunction) _wrap_PyNs3ChannelCoordinator_UnregisterListener, METH_KEYWORDS|METH_VARARGS, "UnregisterListener(listener)\n\ntype: listener: ns3::Ptr< ns3::ChannelCoordinationListener >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelCoordinator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ChannelCoordinator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9800,18 +9800,18 @@ _wrap_PyNs3ChannelManager__copy__(PyNs3ChannelManager *self)
 
 static PyMethodDef PyNs3ChannelManager_methods[] = {
     {(char *) "GetCch", (PyCFunction) _wrap_PyNs3ChannelManager_GetCch, METH_NOARGS|METH_STATIC, "GetCch()\n\n" },
-    {(char *) "GetManagementAdaptable", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementAdaptable, METH_VARARGS|METH_KEYWORDS, "GetManagementAdaptable(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "GetManagementDataRate", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementDataRate, METH_VARARGS|METH_KEYWORDS, "GetManagementDataRate(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "GetManagementPowerLevel", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementPowerLevel, METH_VARARGS|METH_KEYWORDS, "GetManagementPowerLevel(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "GetManagementPreamble", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementPreamble, METH_VARARGS|METH_KEYWORDS, "GetManagementPreamble(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetManagementAdaptable", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementAdaptable, METH_KEYWORDS|METH_VARARGS, "GetManagementAdaptable(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetManagementDataRate", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementDataRate, METH_KEYWORDS|METH_VARARGS, "GetManagementDataRate(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetManagementPowerLevel", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementPowerLevel, METH_KEYWORDS|METH_VARARGS, "GetManagementPowerLevel(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetManagementPreamble", (PyCFunction) _wrap_PyNs3ChannelManager_GetManagementPreamble, METH_KEYWORDS|METH_VARARGS, "GetManagementPreamble(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetNumberOfWaveChannels", (PyCFunction) _wrap_PyNs3ChannelManager_GetNumberOfWaveChannels, METH_NOARGS|METH_STATIC, "GetNumberOfWaveChannels()\n\n" },
-    {(char *) "GetOperatingClass", (PyCFunction) _wrap_PyNs3ChannelManager_GetOperatingClass, METH_VARARGS|METH_KEYWORDS, "GetOperatingClass(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetOperatingClass", (PyCFunction) _wrap_PyNs3ChannelManager_GetOperatingClass, METH_KEYWORDS|METH_VARARGS, "GetOperatingClass(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetSchs", (PyCFunction) _wrap_PyNs3ChannelManager_GetSchs, METH_NOARGS|METH_STATIC, "GetSchs()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ChannelManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetWaveChannels", (PyCFunction) _wrap_PyNs3ChannelManager_GetWaveChannels, METH_NOARGS|METH_STATIC, "GetWaveChannels()\n\n" },
-    {(char *) "IsCch", (PyCFunction) _wrap_PyNs3ChannelManager_IsCch, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "IsCch(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "IsSch", (PyCFunction) _wrap_PyNs3ChannelManager_IsSch, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "IsSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "IsWaveChannel", (PyCFunction) _wrap_PyNs3ChannelManager_IsWaveChannel, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "IsWaveChannel(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsCch", (PyCFunction) _wrap_PyNs3ChannelManager_IsCch, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "IsCch(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsSch", (PyCFunction) _wrap_PyNs3ChannelManager_IsSch, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "IsSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsWaveChannel", (PyCFunction) _wrap_PyNs3ChannelManager_IsWaveChannel, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "IsWaveChannel(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ChannelManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9908,16 +9908,16 @@ PyTypeObject PyNs3ChannelManager_Type = {
 
 
 PyObject *
-PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelScheduler *self)
+PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelScheduler *self)
 {
     PyObject *py_retval;
     PyNs3ChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3ChannelScheduler__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9940,22 +9940,6 @@ PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize(PyNs3ChannelScheduler *s
 }
 
 PyObject *
-PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3ChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3ChannelScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ChannelScheduler__PythonHelper::_wrap_DoDispose(PyNs3ChannelScheduler *self)
 {
     PyObject *py_retval;
@@ -9966,6 +9950,22 @@ PyNs3ChannelScheduler__PythonHelper::_wrap_DoDispose(PyNs3ChannelScheduler *self
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3ChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3ChannelScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10888,22 +10888,22 @@ _wrap_PyNs3ChannelScheduler_StopSch(PyNs3ChannelScheduler *self, PyObject *args,
 }
 
 static PyMethodDef PyNs3ChannelScheduler_methods[] = {
-    {(char *) "GetAssignedAccessType", (PyCFunction) _wrap_PyNs3ChannelScheduler_GetAssignedAccessType, METH_VARARGS|METH_KEYWORDS, "GetAssignedAccessType(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetAssignedAccessType", (PyCFunction) _wrap_PyNs3ChannelScheduler_GetAssignedAccessType, METH_KEYWORDS|METH_VARARGS, "GetAssignedAccessType(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ChannelScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsAlternatingAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsAlternatingAccessAssigned, METH_VARARGS|METH_KEYWORDS, "IsAlternatingAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsAlternatingAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsAlternatingAccessAssigned, METH_KEYWORDS|METH_VARARGS, "IsAlternatingAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "IsCchAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsCchAccessAssigned, METH_NOARGS, "IsCchAccessAssigned()\n\n" },
-    {(char *) "IsChannelAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsChannelAccessAssigned, METH_VARARGS|METH_KEYWORDS, "IsChannelAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "IsContinuousAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsContinuousAccessAssigned, METH_VARARGS|METH_KEYWORDS, "IsContinuousAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsChannelAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsChannelAccessAssigned, METH_KEYWORDS|METH_VARARGS, "IsChannelAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsContinuousAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsContinuousAccessAssigned, METH_KEYWORDS|METH_VARARGS, "IsContinuousAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "IsDefaultCchAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsDefaultCchAccessAssigned, METH_NOARGS, "IsDefaultCchAccessAssigned()\n\n" },
-    {(char *) "IsExtendedAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsExtendedAccessAssigned, METH_VARARGS|METH_KEYWORDS, "IsExtendedAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "IsExtendedAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsExtendedAccessAssigned, METH_KEYWORDS|METH_VARARGS, "IsExtendedAccessAssigned(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "IsSchAccessAssigned", (PyCFunction) _wrap_PyNs3ChannelScheduler_IsSchAccessAssigned, METH_NOARGS, "IsSchAccessAssigned()\n\n" },
-    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3ChannelScheduler_SetWaveNetDevice, METH_VARARGS|METH_KEYWORDS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
-    {(char *) "StartSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StartSch, METH_VARARGS|METH_KEYWORDS, "StartSch(schInfo)\n\ntype: schInfo: ns3::SchInfo const &" },
-    {(char *) "StopSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StopSch, METH_VARARGS|METH_KEYWORDS, "StopSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3ChannelScheduler_SetWaveNetDevice, METH_KEYWORDS|METH_VARARGS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
+    {(char *) "StartSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StartSch, METH_KEYWORDS|METH_VARARGS, "StartSch(schInfo)\n\ntype: schInfo: ns3::SchInfo const &" },
+    {(char *) "StopSch", (PyCFunction) _wrap_PyNs3ChannelScheduler_StopSch, METH_KEYWORDS|METH_VARARGS, "StopSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11002,22 +11002,6 @@ PyTypeObject PyNs3ChannelScheduler_Type = {
 
 
 PyObject *
-PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DefaultChannelScheduler *self)
-{
-    PyObject *py_retval;
-    PyNs3DefaultChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3DefaultChannelScheduler__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DefaultChannelScheduler *self)
 {
     PyObject *py_retval;
@@ -11028,6 +11012,22 @@ PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Defaul
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DefaultChannelScheduler *self)
+{
+    PyObject *py_retval;
+    PyNs3DefaultChannelScheduler__PythonHelper *helper = dynamic_cast< PyNs3DefaultChannelScheduler__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11876,14 +11876,14 @@ _wrap_PyNs3DefaultChannelScheduler__copy__(PyNs3DefaultChannelScheduler *self)
 }
 
 static PyMethodDef PyNs3DefaultChannelScheduler_methods[] = {
-    {(char *) "GetAssignedAccessType", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_GetAssignedAccessType, METH_VARARGS|METH_KEYWORDS, "GetAssignedAccessType(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetAssignedAccessType", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_GetAssignedAccessType, METH_KEYWORDS|METH_VARARGS, "GetAssignedAccessType(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyCchSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifyCchSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifyCchSlotStart(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "NotifyGuardSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifyGuardSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifyGuardSlotStart(duration, cchi)\n\ntype: duration: ns3::Time\ntype: cchi: bool" },
-    {(char *) "NotifySchSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifySchSlotStart, METH_VARARGS|METH_KEYWORDS, "NotifySchSlotStart(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_SetWaveNetDevice, METH_VARARGS|METH_KEYWORDS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyCchSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifyCchSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifyCchSlotStart(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "NotifyGuardSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifyGuardSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifyGuardSlotStart(duration, cchi)\n\ntype: duration: ns3::Time\ntype: cchi: bool" },
+    {(char *) "NotifySchSlotStart", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_NotifySchSlotStart, METH_KEYWORDS|METH_VARARGS, "NotifySchSlotStart(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler_SetWaveNetDevice, METH_KEYWORDS|METH_VARARGS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DefaultChannelScheduler__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DefaultChannelScheduler__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12284,10 +12284,10 @@ _wrap_PyNs3OrganizationIdentifierValue__copy__(PyNs3OrganizationIdentifierValue 
 
 static PyMethodDef PyNs3OrganizationIdentifierValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::OrganizationIdentifier const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::OrganizationIdentifier const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OrganizationIdentifierValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12367,16 +12367,16 @@ PyTypeObject PyNs3OrganizationIdentifierValue_Type = {
 
 
 PyObject *
-PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveMacLow *self)
+PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveMacLow *self)
 {
     PyObject *py_retval;
     PyNs3WaveMacLow__PythonHelper *helper = dynamic_cast< PyNs3WaveMacLow__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12399,16 +12399,16 @@ PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize(PyNs3WaveMacLow *self)
 }
 
 PyObject *
-PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveMacLow *self)
+PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveMacLow *self)
 {
     PyObject *py_retval;
     PyNs3WaveMacLow__PythonHelper *helper = dynamic_cast< PyNs3WaveMacLow__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13060,11 +13060,11 @@ _wrap_PyNs3WaveMacLow__copy__(PyNs3WaveMacLow *self)
 
 static PyMethodDef PyNs3WaveMacLow_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WaveMacLow_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3WaveMacLow_SetWaveNetDevice, METH_VARARGS|METH_KEYWORDS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
-    {(char *) "StartTransmission", (PyCFunction) _wrap_PyNs3WaveMacLow_StartTransmission, METH_VARARGS|METH_KEYWORDS, "StartTransmission(packet, hdr, parameters, txop)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: hdr: ns3::WifiMacHeader const *\ntype: parameters: ns3::MacLowTransmissionParameters\ntype: txop: ns3::Ptr< ns3::Txop >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "SetWaveNetDevice", (PyCFunction) _wrap_PyNs3WaveMacLow_SetWaveNetDevice, METH_KEYWORDS|METH_VARARGS, "SetWaveNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
+    {(char *) "StartTransmission", (PyCFunction) _wrap_PyNs3WaveMacLow_StartTransmission, METH_KEYWORDS|METH_VARARGS, "StartTransmission(packet, hdr, parameters, txop)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: hdr: ns3::WifiMacHeader const *\ntype: parameters: ns3::MacLowTransmissionParameters\ntype: txop: ns3::Ptr< ns3::Txop >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveMacLow__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveMacLow__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13164,22 +13164,6 @@ PyTypeObject PyNs3WaveMacLow_Type = {
 
 
 PyObject *
-PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3WaveNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WaveNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveNetDevice *self)
 {
     PyObject *py_retval;
@@ -13190,6 +13174,22 @@ PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveNetDevice *s
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaveNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3WaveNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WaveNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15895,12 +15895,12 @@ _wrap_PyNs3WaveNetDevice__copy__(PyNs3WaveNetDevice *self)
 }
 
 static PyMethodDef PyNs3WaveNetDevice_methods[] = {
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "AddMac", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddMac, METH_VARARGS|METH_KEYWORDS, "AddMac(channelNumber, mac)\n\ntype: channelNumber: uint32_t\ntype: mac: ns3::Ptr< ns3::OcbWifiMac >" },
-    {(char *) "AddPhy", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddPhy, METH_VARARGS|METH_KEYWORDS, "AddPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::WifiPhy >" },
-    {(char *) "CancelTx", (PyCFunction) _wrap_PyNs3WaveNetDevice_CancelTx, METH_VARARGS|METH_KEYWORDS, "CancelTx(channelNumber, ac)\n\ntype: channelNumber: uint32_t\ntype: ac: ns3::AcIndex" },
-    {(char *) "ChangeAddress", (PyCFunction) _wrap_PyNs3WaveNetDevice_ChangeAddress, METH_VARARGS|METH_KEYWORDS, "ChangeAddress(newAddress)\n\ntype: newAddress: ns3::Address" },
-    {(char *) "DeleteTxProfile", (PyCFunction) _wrap_PyNs3WaveNetDevice_DeleteTxProfile, METH_VARARGS|METH_KEYWORDS, "DeleteTxProfile(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddMac", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddMac, METH_KEYWORDS|METH_VARARGS, "AddMac(channelNumber, mac)\n\ntype: channelNumber: uint32_t\ntype: mac: ns3::Ptr< ns3::OcbWifiMac >" },
+    {(char *) "AddPhy", (PyCFunction) _wrap_PyNs3WaveNetDevice_AddPhy, METH_KEYWORDS|METH_VARARGS, "AddPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::WifiPhy >" },
+    {(char *) "CancelTx", (PyCFunction) _wrap_PyNs3WaveNetDevice_CancelTx, METH_KEYWORDS|METH_VARARGS, "CancelTx(channelNumber, ac)\n\ntype: channelNumber: uint32_t\ntype: ac: ns3::AcIndex" },
+    {(char *) "ChangeAddress", (PyCFunction) _wrap_PyNs3WaveNetDevice_ChangeAddress, METH_KEYWORDS|METH_VARARGS, "ChangeAddress(newAddress)\n\ntype: newAddress: ns3::Address" },
+    {(char *) "DeleteTxProfile", (PyCFunction) _wrap_PyNs3WaveNetDevice_DeleteTxProfile, METH_KEYWORDS|METH_VARARGS, "DeleteTxProfile(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
@@ -15908,12 +15908,12 @@ static PyMethodDef PyNs3WaveNetDevice_methods[] = {
     {(char *) "GetChannelManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetChannelManager, METH_NOARGS, "GetChannelManager()\n\n" },
     {(char *) "GetChannelScheduler", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetChannelScheduler, METH_NOARGS, "GetChannelScheduler()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
-    {(char *) "GetMac", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMac, METH_VARARGS|METH_KEYWORDS, "GetMac(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "GetMac", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMac, METH_KEYWORDS|METH_VARARGS, "GetMac(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "GetMacs", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMacs, METH_NOARGS, "GetMacs()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
-    {(char *) "GetPhy", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetPhy, METH_VARARGS|METH_KEYWORDS, "GetPhy(index)\n\ntype: index: uint32_t" },
+    {(char *) "GetPhy", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetPhy, METH_KEYWORDS|METH_VARARGS, "GetPhy(index)\n\ntype: index: uint32_t" },
     {(char *) "GetPhys", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetPhys, METH_NOARGS, "GetPhys()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetVsaManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_GetVsaManager, METH_NOARGS, "GetVsaManager()\n\n" },
@@ -15923,28 +15923,28 @@ static PyMethodDef PyNs3WaveNetDevice_methods[] = {
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3WaveNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3WaveNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3WaveNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "RegisterTxProfile", (PyCFunction) _wrap_PyNs3WaveNetDevice_RegisterTxProfile, METH_VARARGS|METH_KEYWORDS, "RegisterTxProfile(txprofile)\n\ntype: txprofile: ns3::TxProfile const &" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3WaveNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3WaveNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendX", (PyCFunction) _wrap_PyNs3WaveNetDevice_SendX, METH_VARARGS|METH_KEYWORDS, "SendX(packet, dest, protocol, txInfo)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocol: uint32_t\ntype: txInfo: ns3::TxInfo const &" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetChannelCoordinator", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelCoordinator, METH_VARARGS|METH_KEYWORDS, "SetChannelCoordinator(channelCoordinator)\n\ntype: channelCoordinator: ns3::Ptr< ns3::ChannelCoordinator >" },
-    {(char *) "SetChannelManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelManager, METH_VARARGS|METH_KEYWORDS, "SetChannelManager(channelManager)\n\ntype: channelManager: ns3::Ptr< ns3::ChannelManager >" },
-    {(char *) "SetChannelScheduler", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelScheduler, METH_VARARGS|METH_KEYWORDS, "SetChannelScheduler(channelScheduler)\n\ntype: channelScheduler: ns3::Ptr< ns3::ChannelScheduler >" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetVsaManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetVsaManager, METH_VARARGS|METH_KEYWORDS, "SetVsaManager(vsaManager)\n\ntype: vsaManager: ns3::Ptr< ns3::VsaManager >" },
-    {(char *) "SetWaveVsaCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetWaveVsaCallback, METH_VARARGS|METH_KEYWORDS, "SetWaveVsaCallback(vsaCallback)\n\ntype: vsaCallback: ns3::Callback< bool, ns3::Ptr< ns3::Packet const >, ns3::Address const &, unsigned int, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "StartSch", (PyCFunction) _wrap_PyNs3WaveNetDevice_StartSch, METH_VARARGS|METH_KEYWORDS, "StartSch(schInfo)\n\ntype: schInfo: ns3::SchInfo const &" },
-    {(char *) "StartVsa", (PyCFunction) _wrap_PyNs3WaveNetDevice_StartVsa, METH_VARARGS|METH_KEYWORDS, "StartVsa(vsaInfo)\n\ntype: vsaInfo: ns3::VsaInfo const &" },
-    {(char *) "StopSch", (PyCFunction) _wrap_PyNs3WaveNetDevice_StopSch, METH_VARARGS|METH_KEYWORDS, "StopSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
-    {(char *) "StopVsa", (PyCFunction) _wrap_PyNs3WaveNetDevice_StopVsa, METH_VARARGS|METH_KEYWORDS, "StopVsa(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "RegisterTxProfile", (PyCFunction) _wrap_PyNs3WaveNetDevice_RegisterTxProfile, METH_KEYWORDS|METH_VARARGS, "RegisterTxProfile(txprofile)\n\ntype: txprofile: ns3::TxProfile const &" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3WaveNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3WaveNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendX", (PyCFunction) _wrap_PyNs3WaveNetDevice_SendX, METH_KEYWORDS|METH_VARARGS, "SendX(packet, dest, protocol, txInfo)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocol: uint32_t\ntype: txInfo: ns3::TxInfo const &" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetChannelCoordinator", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelCoordinator, METH_KEYWORDS|METH_VARARGS, "SetChannelCoordinator(channelCoordinator)\n\ntype: channelCoordinator: ns3::Ptr< ns3::ChannelCoordinator >" },
+    {(char *) "SetChannelManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelManager, METH_KEYWORDS|METH_VARARGS, "SetChannelManager(channelManager)\n\ntype: channelManager: ns3::Ptr< ns3::ChannelManager >" },
+    {(char *) "SetChannelScheduler", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetChannelScheduler, METH_KEYWORDS|METH_VARARGS, "SetChannelScheduler(channelScheduler)\n\ntype: channelScheduler: ns3::Ptr< ns3::ChannelScheduler >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetVsaManager", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetVsaManager, METH_KEYWORDS|METH_VARARGS, "SetVsaManager(vsaManager)\n\ntype: vsaManager: ns3::Ptr< ns3::VsaManager >" },
+    {(char *) "SetWaveVsaCallback", (PyCFunction) _wrap_PyNs3WaveNetDevice_SetWaveVsaCallback, METH_KEYWORDS|METH_VARARGS, "SetWaveVsaCallback(vsaCallback)\n\ntype: vsaCallback: ns3::Callback< bool, ns3::Ptr< ns3::Packet const >, ns3::Address const &, unsigned int, unsigned int, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "StartSch", (PyCFunction) _wrap_PyNs3WaveNetDevice_StartSch, METH_KEYWORDS|METH_VARARGS, "StartSch(schInfo)\n\ntype: schInfo: ns3::SchInfo const &" },
+    {(char *) "StartVsa", (PyCFunction) _wrap_PyNs3WaveNetDevice_StartVsa, METH_KEYWORDS|METH_VARARGS, "StartVsa(vsaInfo)\n\ntype: vsaInfo: ns3::VsaInfo const &" },
+    {(char *) "StopSch", (PyCFunction) _wrap_PyNs3WaveNetDevice_StopSch, METH_KEYWORDS|METH_VARARGS, "StopSch(channelNumber)\n\ntype: channelNumber: uint32_t" },
+    {(char *) "StopVsa", (PyCFunction) _wrap_PyNs3WaveNetDevice_StopVsa, METH_KEYWORDS|METH_VARARGS, "StopVsa(channelNumber)\n\ntype: channelNumber: uint32_t" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3WaveNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaveNetDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16065,6 +16065,38 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk(PyNs3OcbWifiMac *self, PyObject *args,
 }
 
 PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3OcbWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose(PyNs3OcbWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3OcbWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -16082,38 +16114,6 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3OcbWifiMac *self, PyOb
         return NULL;
     }
     helper->SetQosSupported__parent_caller(enable);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OcbWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3OcbWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16141,22 +16141,6 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed(PyNs3OcbWifiMac *self, PyObject *a
 }
 
 PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose(PyNs3OcbWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OcbWifiMac *self)
 {
     PyObject *py_retval;
@@ -16167,6 +16151,32 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OcbWifiMac *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Packet *aggregatedPacket;
+    ns3::Packet *aggregatedPacket_ptr;
+    PyNs3WifiMacHeader *hdr;
+    ns3::WifiMacHeader *hdr_ptr;
+    PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
+    hdr_ptr = (hdr ? hdr->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16194,26 +16204,16 @@ PyNs3OcbWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3OcbWifiMac *se
 }
 
 PyObject *
-PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3OcbWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OcbWifiMac *self)
 {
     PyObject *py_retval;
-    PyNs3Packet *aggregatedPacket;
-    ns3::Packet *aggregatedPacket_ptr;
-    PyNs3WifiMacHeader *hdr;
-    ns3::WifiMacHeader *hdr_ptr;
     PyNs3OcbWifiMac__PythonHelper *helper = dynamic_cast< PyNs3OcbWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
-    hdr_ptr = (hdr ? hdr->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18990,32 +18990,32 @@ _wrap_PyNs3OcbWifiMac_Reset(PyNs3OcbWifiMac *self)
 
 static PyMethodDef PyNs3OcbWifiMac_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OcbWifiMac_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SendVsc", (PyCFunction) _wrap_PyNs3OcbWifiMac_SendVsc, METH_VARARGS|METH_KEYWORDS, "SendVsc(vsc, peer, oi)\n\ntype: vsc: ns3::Ptr< ns3::Packet >\ntype: peer: ns3::Mac48Address\ntype: oi: ns3::OrganizationIdentifier" },
-    {(char *) "AddReceiveVscCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_AddReceiveVscCallback, METH_VARARGS|METH_KEYWORDS, "AddReceiveVscCallback(oi, cb)\n\ntype: oi: ns3::OrganizationIdentifier\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::WifiMac >, ns3::OrganizationIdentifier const &, ns3::Ptr< ns3::Packet const >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "RemoveReceiveVscCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_RemoveReceiveVscCallback, METH_VARARGS|METH_KEYWORDS, "RemoveReceiveVscCallback(oi)\n\ntype: oi: ns3::OrganizationIdentifier" },
+    {(char *) "SendVsc", (PyCFunction) _wrap_PyNs3OcbWifiMac_SendVsc, METH_KEYWORDS|METH_VARARGS, "SendVsc(vsc, peer, oi)\n\ntype: vsc: ns3::Ptr< ns3::Packet >\ntype: peer: ns3::Mac48Address\ntype: oi: ns3::OrganizationIdentifier" },
+    {(char *) "AddReceiveVscCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_AddReceiveVscCallback, METH_KEYWORDS|METH_VARARGS, "AddReceiveVscCallback(oi, cb)\n\ntype: oi: ns3::OrganizationIdentifier\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::WifiMac >, ns3::OrganizationIdentifier const &, ns3::Ptr< ns3::Packet const >, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "RemoveReceiveVscCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_RemoveReceiveVscCallback, METH_KEYWORDS|METH_VARARGS, "RemoveReceiveVscCallback(oi)\n\ntype: oi: ns3::OrganizationIdentifier" },
     {(char *) "GetSsid", (PyCFunction) _wrap_PyNs3OcbWifiMac_GetSsid, METH_NOARGS, "GetSsid()\n\n" },
-    {(char *) "SetSsid", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetSsid, METH_VARARGS|METH_KEYWORDS, "SetSsid(ssid)\n\ntype: ssid: ns3::Ssid" },
-    {(char *) "SetBssid", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetBssid, METH_VARARGS|METH_KEYWORDS, "SetBssid(bssid)\n\ntype: bssid: ns3::Mac48Address" },
+    {(char *) "SetSsid", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetSsid, METH_KEYWORDS|METH_VARARGS, "SetSsid(ssid)\n\ntype: ssid: ns3::Ssid" },
+    {(char *) "SetBssid", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetBssid, METH_KEYWORDS|METH_VARARGS, "SetBssid(bssid)\n\ntype: bssid: ns3::Mac48Address" },
     {(char *) "GetBssid", (PyCFunction) _wrap_PyNs3OcbWifiMac_GetBssid, METH_NOARGS, "GetBssid()\n\n" },
-    {(char *) "SetLinkUpCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetLinkUpCallback, METH_VARARGS|METH_KEYWORDS, "SetLinkUpCallback(linkUp)\n\ntype: linkUp: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetLinkDownCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetLinkDownCallback, METH_VARARGS|METH_KEYWORDS, "SetLinkDownCallback(linkDown)\n\ntype: linkDown: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3OcbWifiMac_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, to)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: to: ns3::Mac48Address" },
-    {(char *) "ConfigureEdca", (PyCFunction) _wrap_PyNs3OcbWifiMac_ConfigureEdca, METH_VARARGS|METH_KEYWORDS, "ConfigureEdca(cwmin, cwmax, aifsn, ac)\n\ntype: cwmin: uint32_t\ntype: cwmax: uint32_t\ntype: aifsn: uint32_t\ntype: ac: ns3::AcIndex" },
-    {(char *) "EnableForWave", (PyCFunction) _wrap_PyNs3OcbWifiMac_EnableForWave, METH_VARARGS|METH_KEYWORDS, "EnableForWave(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
+    {(char *) "SetLinkUpCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetLinkUpCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkUpCallback(linkUp)\n\ntype: linkUp: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetLinkDownCallback", (PyCFunction) _wrap_PyNs3OcbWifiMac_SetLinkDownCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkDownCallback(linkDown)\n\ntype: linkDown: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3OcbWifiMac_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, to)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: to: ns3::Mac48Address" },
+    {(char *) "ConfigureEdca", (PyCFunction) _wrap_PyNs3OcbWifiMac_ConfigureEdca, METH_KEYWORDS|METH_VARARGS, "ConfigureEdca(cwmin, cwmax, aifsn, ac)\n\ntype: cwmin: uint32_t\ntype: cwmax: uint32_t\ntype: aifsn: uint32_t\ntype: ac: ns3::AcIndex" },
+    {(char *) "EnableForWave", (PyCFunction) _wrap_PyNs3OcbWifiMac_EnableForWave, METH_KEYWORDS|METH_VARARGS, "EnableForWave(device)\n\ntype: device: ns3::Ptr< ns3::WaveNetDevice >" },
     {(char *) "Suspend", (PyCFunction) _wrap_PyNs3OcbWifiMac_Suspend, METH_NOARGS, "Suspend()\n\n" },
     {(char *) "Resume", (PyCFunction) _wrap_PyNs3OcbWifiMac_Resume, METH_NOARGS, "Resume()\n\n" },
-    {(char *) "MakeVirtualBusy", (PyCFunction) _wrap_PyNs3OcbWifiMac_MakeVirtualBusy, METH_VARARGS|METH_KEYWORDS, "MakeVirtualBusy(duration)\n\ntype: duration: ns3::Time" },
-    {(char *) "CancleTx", (PyCFunction) _wrap_PyNs3OcbWifiMac_CancleTx, METH_VARARGS|METH_KEYWORDS, "CancleTx(ac)\n\ntype: ac: ns3::AcIndex" },
+    {(char *) "MakeVirtualBusy", (PyCFunction) _wrap_PyNs3OcbWifiMac_MakeVirtualBusy, METH_KEYWORDS|METH_VARARGS, "MakeVirtualBusy(duration)\n\ntype: duration: ns3::Time" },
+    {(char *) "CancleTx", (PyCFunction) _wrap_PyNs3OcbWifiMac_CancleTx, METH_KEYWORDS|METH_VARARGS, "CancleTx(ac)\n\ntype: ac: ns3::AcIndex" },
     {(char *) "Reset", (PyCFunction) _wrap_PyNs3OcbWifiMac_Reset, METH_NOARGS, "Reset()\n\n" },
-    {(char *) "TxOk", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetQosSupported", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_SetQosSupported, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "TxOk", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "TxFailed", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "SetQosSupported", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_SetQosSupported, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "TxFailed", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OcbWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 

@@ -151,6 +151,11 @@ public:
    */
   virtual void SetNumberOfComponentCarriers (uint16_t noOfComponentCarriers);
 
+  /**
+   * \brief Sets a pointer to eNodeB RRC instance
+   * \param rrc the RRC
+   */
+  virtual void SetRrc (const Ptr<LteEnbRrc> rrc);
 
 protected:
 

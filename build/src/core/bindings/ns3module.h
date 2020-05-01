@@ -378,13 +378,13 @@ public:
     }
 
 
-    static PyObject * _wrap_ConstructSelf(PyNs3ObjectBase *self, PyObject *args, PyObject *kwargs);
-    inline void ConstructSelf__parent_caller(ns3::AttributeConstructionList const & attributes)
-    { ns3::ObjectBase::ConstructSelf(attributes); }
-
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ObjectBase *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_ConstructSelf(PyNs3ObjectBase *self, PyObject *args, PyObject *kwargs);
+    inline void ConstructSelf__parent_caller(ns3::AttributeConstructionList const & attributes)
+    { ns3::ObjectBase::ConstructSelf(attributes); }
 
     virtual ns3::TypeId GetInstanceTypeId() const;
 
@@ -807,10 +807,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Object *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3Object *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -818,6 +814,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3Object *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Object *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3Object *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -888,10 +888,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomVariableStream *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3RandomVariableStream *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -899,6 +895,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3RandomVariableStream *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3RandomVariableStream *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3RandomVariableStream *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -966,10 +966,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Scheduler *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3Scheduler *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -977,6 +973,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3Scheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Scheduler *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3Scheduler *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1068,10 +1068,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SequentialRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3SequentialRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1079,6 +1075,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3SequentialRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SequentialRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3SequentialRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1287,10 +1287,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Synchronizer *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3Synchronizer *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1298,6 +1294,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3Synchronizer *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Synchronizer *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3Synchronizer *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1406,10 +1406,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3TriangularRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3TriangularRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1417,6 +1413,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3TriangularRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3TriangularRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3TriangularRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1480,10 +1480,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UniformRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3UniformRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1491,6 +1487,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3UniformRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3UniformRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3UniformRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1559,49 +1559,37 @@ public:
     }
 
 
-    static PyObject * _wrap_DoSignal(PyNs3WallClockSynchronizer *self);
-    inline void DoSignal__parent_caller()
-    { ns3::WallClockSynchronizer::DoSignal(); }
-
-    static PyObject * _wrap_SleepWait(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
-    inline bool SleepWait__parent_caller(uint64_t ns)
-    { return ns3::WallClockSynchronizer::SleepWait(ns); }
+    static PyObject * _wrap_DoSetCondition(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
+    inline void DoSetCondition__parent_caller(bool cond)
+    { ns3::WallClockSynchronizer::DoSetCondition(cond); }
 
     static PyObject * _wrap_DoSynchronize(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
     inline bool DoSynchronize__parent_caller(uint64_t nsCurrent, uint64_t nsDelay)
     { return ns3::WallClockSynchronizer::DoSynchronize(nsCurrent, nsDelay); }
 
-    static PyObject * _wrap_GetNormalizedRealtime(PyNs3WallClockSynchronizer *self);
-    inline uint64_t GetNormalizedRealtime__parent_caller()
-    { return ns3::WallClockSynchronizer::GetNormalizedRealtime(); }
-
     static PyObject * _wrap_DoGetCurrentRealtime(PyNs3WallClockSynchronizer *self);
     inline uint64_t DoGetCurrentRealtime__parent_caller()
     { return ns3::WallClockSynchronizer::DoGetCurrentRealtime(); }
+
+    static PyObject * _wrap_DoEventEnd(PyNs3WallClockSynchronizer *self);
+    inline uint64_t DoEventEnd__parent_caller()
+    { return ns3::WallClockSynchronizer::DoEventEnd(); }
 
     static PyObject * _wrap_DoGetDrift(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
     inline int64_t DoGetDrift__parent_caller(uint64_t ns)
     { return ns3::WallClockSynchronizer::DoGetDrift(ns); }
 
-    static PyObject * _wrap_DoRealtime(PyNs3WallClockSynchronizer *self);
-    inline bool DoRealtime__parent_caller()
-    { return ns3::WallClockSynchronizer::DoRealtime(); }
-
     static PyObject * _wrap_GetRealtime(PyNs3WallClockSynchronizer *self);
     inline uint64_t GetRealtime__parent_caller()
     { return ns3::WallClockSynchronizer::GetRealtime(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WallClockSynchronizer *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoEventStart(PyNs3WallClockSynchronizer *self);
-    inline void DoEventStart__parent_caller()
-    { ns3::WallClockSynchronizer::DoEventStart(); }
-
     static PyObject * _wrap_DriftCorrect(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
     inline uint64_t DriftCorrect__parent_caller(uint64_t nsNow, uint64_t nsDelay)
     { return ns3::WallClockSynchronizer::DriftCorrect(nsNow, nsDelay); }
+
+    static PyObject * _wrap_GetNormalizedRealtime(PyNs3WallClockSynchronizer *self);
+    inline uint64_t GetNormalizedRealtime__parent_caller()
+    { return ns3::WallClockSynchronizer::GetNormalizedRealtime(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3WallClockSynchronizer *self);
     inline void DoInitialize__parent_caller()
@@ -1611,25 +1599,37 @@ public:
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
 
+    static PyObject * _wrap_DoEventStart(PyNs3WallClockSynchronizer *self);
+    inline void DoEventStart__parent_caller()
+    { ns3::WallClockSynchronizer::DoEventStart(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WallClockSynchronizer *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+
+    static PyObject * _wrap_DoSignal(PyNs3WallClockSynchronizer *self);
+    inline void DoSignal__parent_caller()
+    { ns3::WallClockSynchronizer::DoSignal(); }
+
+    static PyObject * _wrap_SleepWait(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
+    inline bool SleepWait__parent_caller(uint64_t ns)
+    { return ns3::WallClockSynchronizer::SleepWait(ns); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3WallClockSynchronizer *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoEventEnd(PyNs3WallClockSynchronizer *self);
-    inline uint64_t DoEventEnd__parent_caller()
-    { return ns3::WallClockSynchronizer::DoEventEnd(); }
 
     static PyObject * _wrap_DoSetOrigin(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
     inline void DoSetOrigin__parent_caller(uint64_t ns)
     { ns3::WallClockSynchronizer::DoSetOrigin(ns); }
 
+    static PyObject * _wrap_DoRealtime(PyNs3WallClockSynchronizer *self);
+    inline bool DoRealtime__parent_caller()
+    { return ns3::WallClockSynchronizer::DoRealtime(); }
+
     static PyObject * _wrap_SpinWait(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
     inline bool SpinWait__parent_caller(uint64_t ns)
     { return ns3::WallClockSynchronizer::SpinWait(ns); }
-
-    static PyObject * _wrap_DoSetCondition(PyNs3WallClockSynchronizer *self, PyObject *args, PyObject *kwargs);
-    inline void DoSetCondition__parent_caller(bool cond)
-    { ns3::WallClockSynchronizer::DoSetCondition(cond); }
 
     virtual uint64_t DoEventEnd();
 
@@ -1703,10 +1703,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WeibullRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3WeibullRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1714,6 +1710,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3WeibullRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WeibullRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3WeibullRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1777,10 +1777,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ZetaRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ZetaRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1788,6 +1784,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ZetaRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ZetaRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ZetaRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1851,10 +1851,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ZipfRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ZipfRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1862,6 +1858,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ZipfRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ZipfRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ZipfRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -1979,10 +1979,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CalendarScheduler *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3CalendarScheduler *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -1990,6 +1986,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3CalendarScheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CalendarScheduler *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3CalendarScheduler *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2089,10 +2089,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ConstantRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2100,6 +2096,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ConstantRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2174,10 +2174,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DeterministicRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3DeterministicRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2185,6 +2181,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3DeterministicRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DeterministicRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DeterministicRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2258,10 +2258,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EmpiricalRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3EmpiricalRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2269,6 +2265,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3EmpiricalRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3EmpiricalRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3EmpiricalRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2386,10 +2386,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ErlangRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ErlangRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2397,6 +2393,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ErlangRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ErlangRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ErlangRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2470,10 +2470,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ExponentialRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ExponentialRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2481,6 +2477,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ExponentialRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ExponentialRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ExponentialRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2554,10 +2554,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3GammaRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3GammaRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2565,6 +2561,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3GammaRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3GammaRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3GammaRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2632,10 +2632,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3HeapScheduler *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3HeapScheduler *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2643,6 +2639,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3HeapScheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3HeapScheduler *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3HeapScheduler *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2726,10 +2726,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ListScheduler *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ListScheduler *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2737,6 +2733,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ListScheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ListScheduler *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ListScheduler *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2806,10 +2806,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3LogNormalRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3LogNormalRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2817,6 +2813,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3LogNormalRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3LogNormalRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3LogNormalRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2884,10 +2884,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MapScheduler *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3MapScheduler *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2895,6 +2891,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3MapScheduler *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MapScheduler *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3MapScheduler *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -2965,10 +2965,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3NormalRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3NormalRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -2976,6 +2972,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3NormalRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3NormalRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3NormalRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()
@@ -3089,10 +3089,6 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParetoRandomVariable *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
     static PyObject * _wrap_DoInitialize(PyNs3ParetoRandomVariable *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
@@ -3100,6 +3096,10 @@ public:
     static PyObject * _wrap_DoDispose(PyNs3ParetoRandomVariable *self);
     inline void DoDispose__parent_caller()
     { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParetoRandomVariable *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_NotifyNewAggregate(PyNs3ParetoRandomVariable *self);
     inline void NotifyNewAggregate__parent_caller()

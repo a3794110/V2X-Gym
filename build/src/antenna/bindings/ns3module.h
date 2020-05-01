@@ -772,17 +772,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3AntennaModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3AntennaModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3AntennaModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -848,17 +848,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3CosineAntennaModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3CosineAntennaModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3CosineAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3CosineAntennaModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -924,17 +924,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3IsotropicAntennaModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3IsotropicAntennaModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3IsotropicAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3IsotropicAntennaModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual double GetGainDb(ns3::Angles a);
 
@@ -1000,17 +1000,17 @@ public:
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
 
-    static PyObject * _wrap_DoDispose(PyNs3ParabolicAntennaModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3ParabolicAntennaModel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ParabolicAntennaModel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_DoDispose(PyNs3ParabolicAntennaModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual double GetGainDb(ns3::Angles a);
 

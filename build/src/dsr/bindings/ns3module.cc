@@ -1616,7 +1616,7 @@ PyTypeObject PyNs3DsrDsrFsHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrFsHeader(arg0)\nDsrFsHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrFsHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrFsHeader__tp_clear,             /* tp_clear */
@@ -1908,7 +1908,7 @@ PyTypeObject PyNs3DsrDsrGraReply_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrGraReply(arg0)\nDsrGraReply()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrGraReply__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrGraReply__tp_clear,             /* tp_clear */
@@ -3393,7 +3393,7 @@ PyTypeObject PyNs3DsrDsrNetworkQueue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrNetworkQueue(maxLen, maxDelay)\nDsrNetworkQueue(arg0)\nDsrNetworkQueue()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrNetworkQueue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrNetworkQueue__tp_clear,             /* tp_clear */
@@ -4610,7 +4610,7 @@ PyTypeObject PyNs3DsrDsrOptionHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionHeader(arg0)\nDsrOptionHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionHeader__tp_clear,             /* tp_clear */
@@ -5094,7 +5094,7 @@ PyTypeObject PyNs3DsrDsrOptionPad1Header_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionPad1Header(arg0)\nDsrOptionPad1Header()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPad1Header__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPad1Header__tp_clear,             /* tp_clear */
@@ -5353,7 +5353,7 @@ PyTypeObject PyNs3DsrDsrOptionPadnHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionPadnHeader(arg0)\nDsrOptionPadnHeader(pad)",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPadnHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPadnHeader__tp_clear,             /* tp_clear */
@@ -5768,7 +5768,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRerrHeader(arg0)\nDsrOptionRerrHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrHeader__tp_clear,             /* tp_clear */
@@ -6218,7 +6218,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrUnreachHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRerrUnreachHeader(arg0)\nDsrOptionRerrUnreachHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrUnreachHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrUnreachHeader__tp_clear,             /* tp_clear */
@@ -6633,7 +6633,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrUnsupportHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRerrUnsupportHeader(arg0)\nDsrOptionRerrUnsupportHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrUnsupportHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrUnsupportHeader__tp_clear,             /* tp_clear */
@@ -7035,7 +7035,7 @@ PyTypeObject PyNs3DsrDsrOptionRrepHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRrepHeader(arg0)\nDsrOptionRrepHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRrepHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRrepHeader__tp_clear,             /* tp_clear */
@@ -7516,7 +7516,7 @@ PyTypeObject PyNs3DsrDsrOptionRreqHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRreqHeader(arg0)\nDsrOptionRreqHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRreqHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRreqHeader__tp_clear,             /* tp_clear */
@@ -7990,7 +7990,7 @@ PyTypeObject PyNs3DsrDsrOptionSRHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionSRHeader(arg0)\nDsrOptionSRHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionSRHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionSRHeader__tp_clear,             /* tp_clear */
@@ -8023,6 +8023,22 @@ PyTypeObject PyNs3DsrDsrOptionSRHeader_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptions__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptions *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptions__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptions__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptions__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptions *self)
 {
     PyObject *py_retval;
@@ -8049,22 +8065,6 @@ PyNs3DsrDsrOptions__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrDsrO
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptions__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptions *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptions__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptions__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9106,9 +9106,9 @@ static PyMethodDef PyNs3DsrDsrOptions_methods[] = {
     {(char *) "SearchNextHop", (PyCFunction) _wrap_PyNs3DsrDsrOptions_SearchNextHop, METH_KEYWORDS|METH_VARARGS, "SearchNextHop(ipv4Address, vec)\n\ntype: ipv4Address: ns3::Ipv4Address\ntype: vec: std::vector< ns3::Ipv4Address > &" },
     {(char *) "SetNode", (PyCFunction) _wrap_PyNs3DsrDsrOptions_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "SetRoute", (PyCFunction) _wrap_PyNs3DsrDsrOptions_SetRoute, METH_KEYWORDS|METH_VARARGS, "SetRoute(nextHop, srcAddress)\n\ntype: nextHop: ns3::Ipv4Address\ntype: srcAddress: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptions__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptions__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptions__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptions__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptions__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -9175,7 +9175,7 @@ PyTypeObject PyNs3DsrDsrOptions_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptions(arg0)\nDsrOptions()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptions__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptions__tp_clear,             /* tp_clear */
@@ -10107,7 +10107,7 @@ PyTypeObject PyNs3DsrDsrPassiveBuffer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrPassiveBuffer(arg0)\nDsrPassiveBuffer()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrPassiveBuffer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrPassiveBuffer__tp_clear,             /* tp_clear */
@@ -11654,7 +11654,7 @@ PyTypeObject PyNs3DsrDsrRouteCache_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrRouteCache(arg0)\nDsrRouteCache()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRouteCache__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRouteCache__tp_clear,             /* tp_clear */
@@ -14402,7 +14402,7 @@ PyTypeObject PyNs3DsrDsrRouting_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrRouting(arg0)\nDsrRouting()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRouting__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRouting__tp_clear,             /* tp_clear */
@@ -14577,6 +14577,173 @@ _wrap_PyNs3DsrDsrRoutingHeader_Serialize(PyNs3DsrDsrRoutingHeader *self, PyObjec
 }
 
 PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetNextHeader(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint8_t retval;
+    
+    retval = self->obj->GetNextHeader();
+    py_retval = Py_BuildValue((char *) "i", (int)retval);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_SetDestId(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    int destId;
+    const char *keywords[] = {"destId", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &destId)) {
+        return NULL;
+    }
+    if (destId > 0xffff) {
+        PyErr_SetString(PyExc_ValueError, "Out of range");
+        return NULL;
+    }
+    self->obj->SetDestId(destId);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetPayloadLength(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint16_t retval;
+    
+    retval = self->obj->GetPayloadLength();
+    py_retval = Py_BuildValue((char *) "i", retval);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetDestId(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint16_t retval;
+    
+    retval = self->obj->GetDestId();
+    py_retval = Py_BuildValue((char *) "i", retval);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_SetAttributeFailSafe(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetSourceId(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint16_t retval;
+    
+    retval = self->obj->GetSourceId();
+    py_retval = Py_BuildValue((char *) "i", retval);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnectWithoutContext(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceDisconnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_SetMessageType(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    int messageType;
+    const char *keywords[] = {"messageType", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &messageType)) {
+        return NULL;
+    }
+    if (messageType > 0xff) {
+        PyErr_SetString(PyExc_ValueError, "Out of range");
+        return NULL;
+    }
+    self->obj->SetMessageType(messageType);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_AddDsrOption(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionHeader *option;
+    const char *keywords[] = {"option", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3DsrDsrOptionHeader_Type, &option)) {
+        return NULL;
+    }
+    self->obj->AddDsrOption(*((PyNs3DsrDsrOptionHeader *) option)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionsOffset(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint32_t retval;
+    
+    retval = self->obj->GetDsrOptionsOffset();
+    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnect(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    const char *context;
+    Py_ssize_t context_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "context", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
 _wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionBuffer(PyNs3DsrDsrRoutingHeader *self)
 {
     PyObject *py_retval;
@@ -14588,6 +14755,129 @@ _wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionBuffer(PyNs3DsrDsrRoutingHeader *self
     py_Buffer->obj = new ns3::Buffer(retval);
     PyNs3Buffer_wrapper_registry[(void *) py_Buffer->obj] = (PyObject *) py_Buffer;
     py_retval = Py_BuildValue((char *) "N", py_Buffer);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_TraceConnectWithoutContext(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceConnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_TraceConnect(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    const char *context;
+    Py_ssize_t context_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "context", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceConnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetAttributeFailSafe(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetAttribute(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    self->obj->GetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_SetAttribute(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_GetMessageType(PyNs3DsrDsrRoutingHeader *self)
+{
+    PyObject *py_retval;
+    uint8_t retval;
+    
+    retval = self->obj->GetMessageType();
+    py_retval = Py_BuildValue((char *) "i", (int)retval);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3DsrDsrRoutingHeader_SetSourceId(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    int sourceId;
+    const char *keywords[] = {"sourceId", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &sourceId)) {
+        return NULL;
+    }
+    if (sourceId > 0xffff) {
+        PyErr_SetString(PyExc_ValueError, "Out of range");
+        return NULL;
+    }
+    self->obj->SetSourceId(sourceId);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -14631,296 +14921,6 @@ _wrap_PyNs3DsrDsrRoutingHeader_SetPayloadLength(PyNs3DsrDsrRoutingHeader *self, 
     return py_retval;
 }
 
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_SetDestId(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    int destId;
-    const char *keywords[] = {"destId", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &destId)) {
-        return NULL;
-    }
-    if (destId > 0xffff) {
-        PyErr_SetString(PyExc_ValueError, "Out of range");
-        return NULL;
-    }
-    self->obj->SetDestId(destId);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetAttribute(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    self->obj->GetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetPayloadLength(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint16_t retval;
-    
-    retval = self->obj->GetPayloadLength();
-    py_retval = Py_BuildValue((char *) "i", retval);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetAttributeFailSafe(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_AddDsrOption(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionHeader *option;
-    const char *keywords[] = {"option", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3DsrDsrOptionHeader_Type, &option)) {
-        return NULL;
-    }
-    self->obj->AddDsrOption(*((PyNs3DsrDsrOptionHeader *) option)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnectWithoutContext(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceDisconnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_TraceConnect(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    const char *context;
-    Py_ssize_t context_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "context", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceConnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnect(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    const char *context;
-    Py_ssize_t context_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "context", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_SetMessageType(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    int messageType;
-    const char *keywords[] = {"messageType", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &messageType)) {
-        return NULL;
-    }
-    if (messageType > 0xff) {
-        PyErr_SetString(PyExc_ValueError, "Out of range");
-        return NULL;
-    }
-    self->obj->SetMessageType(messageType);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetMessageType(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint8_t retval;
-    
-    retval = self->obj->GetMessageType();
-    py_retval = Py_BuildValue((char *) "i", (int)retval);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetDestId(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint16_t retval;
-    
-    retval = self->obj->GetDestId();
-    py_retval = Py_BuildValue((char *) "i", retval);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_SetSourceId(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    int sourceId;
-    const char *keywords[] = {"sourceId", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &sourceId)) {
-        return NULL;
-    }
-    if (sourceId > 0xffff) {
-        PyErr_SetString(PyExc_ValueError, "Out of range");
-        return NULL;
-    }
-    self->obj->SetSourceId(sourceId);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetSourceId(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint16_t retval;
-    
-    retval = self->obj->GetSourceId();
-    py_retval = Py_BuildValue((char *) "i", retval);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionsOffset(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint32_t retval;
-    
-    retval = self->obj->GetDsrOptionsOffset();
-    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_SetAttributeFailSafe(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_SetAttribute(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_TraceConnectWithoutContext(PyNs3DsrDsrRoutingHeader *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceConnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3DsrDsrRoutingHeader_GetNextHeader(PyNs3DsrDsrRoutingHeader *self)
-{
-    PyObject *py_retval;
-    uint8_t retval;
-    
-    retval = self->obj->GetNextHeader();
-    py_retval = Py_BuildValue((char *) "i", (int)retval);
-    return py_retval;
-}
-
 
 static PyObject*
 _wrap_PyNs3DsrDsrRoutingHeader__copy__(PyNs3DsrDsrRoutingHeader *self)
@@ -14942,27 +14942,27 @@ static PyMethodDef PyNs3DsrDsrRoutingHeader_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "GetNextHeader", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetNextHeader, METH_NOARGS, "GetNextHeader()\n\n" },
+    {(char *) "SetDestId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetDestId, METH_KEYWORDS|METH_VARARGS, "SetDestId(destId)\n\ntype: destId: uint16_t" },
+    {(char *) "GetPayloadLength", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetPayloadLength, METH_NOARGS, "GetPayloadLength()\n\n" },
+    {(char *) "GetDestId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetDestId, METH_NOARGS, "GetDestId()\n\n" },
+    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "GetSourceId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetSourceId, METH_NOARGS, "GetSourceId()\n\n" },
+    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "SetMessageType", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetMessageType, METH_KEYWORDS|METH_VARARGS, "SetMessageType(messageType)\n\ntype: messageType: uint8_t" },
+    {(char *) "AddDsrOption", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_AddDsrOption, METH_KEYWORDS|METH_VARARGS, "AddDsrOption(option)\n\ntype: option: ns3::dsr::DsrOptionHeader const &" },
+    {(char *) "GetDsrOptionsOffset", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionsOffset, METH_NOARGS, "GetDsrOptionsOffset()\n\n" },
+    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnect, METH_KEYWORDS|METH_VARARGS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "GetDsrOptionBuffer", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionBuffer, METH_NOARGS, "GetDsrOptionBuffer()\n\n" },
+    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceConnect, METH_KEYWORDS|METH_VARARGS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "GetMessageType", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetMessageType, METH_NOARGS, "GetMessageType()\n\n" },
+    {(char *) "SetSourceId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetSourceId, METH_KEYWORDS|METH_VARARGS, "SetSourceId(sourceId)\n\ntype: sourceId: uint16_t" },
     {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetNextHeader, METH_KEYWORDS|METH_VARARGS, "SetNextHeader(protocol)\n\ntype: protocol: uint8_t" },
     {(char *) "SetPayloadLength", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetPayloadLength, METH_KEYWORDS|METH_VARARGS, "SetPayloadLength(length)\n\ntype: length: uint16_t" },
-    {(char *) "SetDestId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetDestId, METH_KEYWORDS|METH_VARARGS, "SetDestId(destId)\n\ntype: destId: uint16_t" },
-    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "GetPayloadLength", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetPayloadLength, METH_NOARGS, "GetPayloadLength()\n\n" },
-    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "AddDsrOption", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_AddDsrOption, METH_KEYWORDS|METH_VARARGS, "AddDsrOption(option)\n\ntype: option: ns3::dsr::DsrOptionHeader const &" },
-    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceConnect, METH_KEYWORDS|METH_VARARGS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceDisconnect, METH_KEYWORDS|METH_VARARGS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "SetMessageType", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetMessageType, METH_KEYWORDS|METH_VARARGS, "SetMessageType(messageType)\n\ntype: messageType: uint8_t" },
-    {(char *) "GetMessageType", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetMessageType, METH_NOARGS, "GetMessageType()\n\n" },
-    {(char *) "GetDestId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetDestId, METH_NOARGS, "GetDestId()\n\n" },
-    {(char *) "SetSourceId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetSourceId, METH_KEYWORDS|METH_VARARGS, "SetSourceId(sourceId)\n\ntype: sourceId: uint16_t" },
-    {(char *) "GetSourceId", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetSourceId, METH_NOARGS, "GetSourceId()\n\n" },
-    {(char *) "GetDsrOptionsOffset", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetDsrOptionsOffset, METH_NOARGS, "GetDsrOptionsOffset()\n\n" },
-    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_TraceConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "GetNextHeader", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader_GetNextHeader, METH_NOARGS, "GetNextHeader()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrRoutingHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15037,7 +15037,7 @@ PyTypeObject PyNs3DsrDsrRoutingHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrRoutingHeader(arg0)\nDsrRoutingHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRoutingHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRoutingHeader__tp_clear,             /* tp_clear */
@@ -15525,7 +15525,7 @@ PyTypeObject PyNs3DsrDsrRreqTable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrRreqTable(arg0)\nDsrRreqTable()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRreqTable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRreqTable__tp_clear,             /* tp_clear */
@@ -18039,6 +18039,22 @@ PyTypeObject PyNs3DsrRreqTableEntry_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionAck__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionAck *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionAck__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionAck__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionAck__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionAck *self)
 {
     PyObject *py_retval;
@@ -18065,22 +18081,6 @@ PyNs3DsrDsrOptionAck__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrDs
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionAck__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionAck *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionAck__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionAck__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18823,9 +18823,9 @@ static PyMethodDef PyNs3DsrDsrOptionAck_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionAck_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionAck_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionAck_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionAck__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionAck__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionAck__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionAck__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionAck__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionAck__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -18893,7 +18893,7 @@ PyTypeObject PyNs3DsrDsrOptionAck_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionAck(arg0)\nDsrOptionAck()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAck__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAck__tp_clear,             /* tp_clear */
@@ -19273,7 +19273,7 @@ PyTypeObject PyNs3DsrDsrOptionAckHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionAckHeader(arg0)\nDsrOptionAckHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckHeader__tp_clear,             /* tp_clear */
@@ -19306,6 +19306,22 @@ PyTypeObject PyNs3DsrDsrOptionAckHeader_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionAckReq *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionAckReq__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionAckReq__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionAckReq *self)
 {
     PyObject *py_retval;
@@ -19332,22 +19348,6 @@ PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ds
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionAckReq *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionAckReq__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionAckReq__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20090,9 +20090,9 @@ static PyMethodDef PyNs3DsrDsrOptionAckReq_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionAckReq_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionAckReq_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionAckReq_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionAckReq__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionAckReq__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -20160,7 +20160,7 @@ PyTypeObject PyNs3DsrDsrOptionAckReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionAckReq(arg0)\nDsrOptionAckReq()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckReq__tp_clear,             /* tp_clear */
@@ -20470,7 +20470,7 @@ PyTypeObject PyNs3DsrDsrOptionAckReqHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionAckReqHeader(arg0)\nDsrOptionAckReqHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckReqHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckReqHeader__tp_clear,             /* tp_clear */
@@ -20503,6 +20503,22 @@ PyTypeObject PyNs3DsrDsrOptionAckReqHeader_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionPad1 *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionPad1__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionPad1__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionPad1 *self)
 {
     PyObject *py_retval;
@@ -20529,22 +20545,6 @@ PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrD
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionPad1 *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionPad1__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionPad1__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21269,9 +21269,9 @@ static PyMethodDef PyNs3DsrDsrOptionPad1_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionPad1_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionPad1_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionPad1_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionPad1__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionPad1__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -21339,7 +21339,7 @@ PyTypeObject PyNs3DsrDsrOptionPad1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionPad1(arg0)\nDsrOptionPad1()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPad1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPad1__tp_clear,             /* tp_clear */
@@ -21372,6 +21372,22 @@ PyTypeObject PyNs3DsrDsrOptionPad1_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionPadn *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionPadn__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionPadn__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionPadn *self)
 {
     PyObject *py_retval;
@@ -21398,22 +21414,6 @@ PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrD
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionPadn *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionPadn__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionPadn__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22138,9 +22138,9 @@ static PyMethodDef PyNs3DsrDsrOptionPadn_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionPadn_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionPadn_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionPadn_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionPadn__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionPadn__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -22208,7 +22208,7 @@ PyTypeObject PyNs3DsrDsrOptionPadn_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionPadn(arg0)\nDsrOptionPadn()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPadn__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPadn__tp_clear,             /* tp_clear */
@@ -22241,6 +22241,22 @@ PyTypeObject PyNs3DsrDsrOptionPadn_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRerr *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionRerr__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRerr__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRerr *self)
 {
     PyObject *py_retval;
@@ -22267,22 +22283,6 @@ PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrD
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRerr *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionRerr__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRerr__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23053,9 +23053,9 @@ static PyMethodDef PyNs3DsrDsrOptionRerr_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionRerr_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionRerr_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionRerr_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionRerr__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionRerr__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -23123,7 +23123,7 @@ PyTypeObject PyNs3DsrDsrOptionRerr_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRerr(arg0)\nDsrOptionRerr()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerr__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerr__tp_clear,             /* tp_clear */
@@ -23156,6 +23156,22 @@ PyTypeObject PyNs3DsrDsrOptionRerr_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRrep *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionRrep__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRrep__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRrep *self)
 {
     PyObject *py_retval;
@@ -23182,22 +23198,6 @@ PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrD
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRrep *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionRrep__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRrep__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23940,9 +23940,9 @@ static PyMethodDef PyNs3DsrDsrOptionRrep_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionRrep_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionRrep_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionRrep_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionRrep__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionRrep__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -24010,7 +24010,7 @@ PyTypeObject PyNs3DsrDsrOptionRrep_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRrep(arg0)\nDsrOptionRrep()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRrep__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRrep__tp_clear,             /* tp_clear */
@@ -24043,6 +24043,22 @@ PyTypeObject PyNs3DsrDsrOptionRrep_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRreq *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionRreq__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRreq__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRreq *self)
 {
     PyObject *py_retval;
@@ -24069,22 +24085,6 @@ PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrD
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionRreq *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionRreq__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionRreq__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -24827,9 +24827,9 @@ static PyMethodDef PyNs3DsrDsrOptionRreq_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionRreq_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionRreq_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionRreq_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionRreq__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionRreq__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -24897,7 +24897,7 @@ PyTypeObject PyNs3DsrDsrOptionRreq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionRreq(arg0)\nDsrOptionRreq()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRreq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRreq__tp_clear,             /* tp_clear */
@@ -24930,6 +24930,22 @@ PyTypeObject PyNs3DsrDsrOptionRreq_Type = {
 
 
 PyObject *
+PyNs3DsrDsrOptionSR__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionSR *self)
+{
+    PyObject *py_retval;
+    PyNs3DsrDsrOptionSR__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionSR__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3DsrDsrOptionSR__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DsrDsrOptionSR *self)
 {
     PyObject *py_retval;
@@ -24956,22 +24972,6 @@ PyNs3DsrDsrOptionSR__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DsrDsr
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3DsrDsrOptionSR__PythonHelper::_wrap_DoDispose(PyNs3DsrDsrOptionSR *self)
-{
-    PyObject *py_retval;
-    PyNs3DsrDsrOptionSR__PythonHelper *helper = dynamic_cast< PyNs3DsrDsrOptionSR__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25714,9 +25714,9 @@ static PyMethodDef PyNs3DsrDsrOptionSR_methods[] = {
     {(char *) "GetOptionNumber", (PyCFunction) _wrap_PyNs3DsrDsrOptionSR_GetOptionNumber, METH_NOARGS, "GetOptionNumber()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsrDsrOptionSR_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Process", (PyCFunction) _wrap_PyNs3DsrDsrOptionSR_Process, METH_KEYWORDS|METH_VARARGS, "Process(packet, dsrP, ipv4Address, source, ipv4Header, protocol, isPromisc, promiscSource)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dsrP: ns3::Ptr< ns3::Packet >\ntype: ipv4Address: ns3::Ipv4Address\ntype: source: ns3::Ipv4Address\ntype: ipv4Header: ns3::Ipv4Header const &\ntype: protocol: uint8_t\ntype: isPromisc: bool &\ntype: promiscSource: ns3::Ipv4Address" },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionSR__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DsrDsrOptionSR__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DsrDsrOptionSR__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DsrDsrOptionSR__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DsrDsrOptionSR__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsrDsrOptionSR__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -25784,7 +25784,7 @@ PyTypeObject PyNs3DsrDsrOptionSR_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DsrOptionSR(arg0)\nDsrOptionSR()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionSR__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionSR__tp_clear,             /* tp_clear */

@@ -174,9 +174,9 @@ private:
     uint8_t m_rsrq; ///< RSRQ
   };
 
-  /// Cell Id is used as the key for the following map
+  ///               cellId
   typedef std::map<uint16_t, Ptr<UeMeasure> > MeasurementRow_t;
-  /// RNTI is used as the key for the following map
+  ///               rnti
   typedef std::map<uint16_t, MeasurementRow_t> MeasurementTable_t;
   MeasurementTable_t m_ueMeasures; ///< UE measures
 

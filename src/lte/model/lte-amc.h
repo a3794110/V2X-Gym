@@ -16,8 +16,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Original Author: Giuseppe Piro  <g.piro@poliba.it>
- * Modified by:     Nicola Baldo   <nbaldo@cttc.es>
- * Modified by:     Marco Miozzo   <mmiozzo@cttc.es>
+ * Modified by:     
+ *          Nicola Baldo   <nbaldo@cttc.es>
+ *          Marco Miozzo   <mmiozzo@cttc.es>
+ *          NIST (D2D)
  */
 
 #ifndef AMCMODULE_H
@@ -64,20 +66,24 @@ public:
       /**
        * An AMC model based on 10% of BER according to LteMiErrorModel.
        */
-      MiErrorModel
+      MiErrorModel,
+      /**
+       * An AMC model based on 10% of BER according to LtePhyErrorModel
+       */
+      NistErrorModel
     };
   
   /**
    * \brief Get the Modulation and Coding Scheme for
    * a CQI value
    * \param cqi the cqi value
-   * \return the MCS value
+   * \return the MCS  value
    */
   int GetMcsFromCqi (int cqi);
 
   /**
   * \brief Get the Transport Block Size for a selected MCS and number of PRB (table 7.1.7.2.1-1 of 36.213)
-  * \param mcs the MCS index
+  * \param mcs the mcs index
   * \param nprb the no. of PRB
   * \return the Transport Block Size in bits
   */
@@ -85,7 +91,7 @@ public:
 
   /**
    * \brief Get the Transport Block Size for a selected MCS and number of PRB (table 8.6.1-1 of 36.213)
-   * \param mcs the MCS index
+   * \param mcs the mcs index
    * \param nprb the no. of PRB
    * \return the Transport Block Size in bits
    */

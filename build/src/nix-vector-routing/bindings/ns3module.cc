@@ -838,7 +838,7 @@ PyTypeObject PyNs3Ipv4NixVectorHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4NixVectorHelper(arg0)\nIpv4NixVectorHelper()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4NixVectorHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4NixVectorHelper__tp_clear,             /* tp_clear */
@@ -1068,7 +1068,7 @@ PyTypeObject PyNs3Ipv4NixVectorRouting_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4NixVectorRouting(arg0)\nIpv4NixVectorRouting()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4NixVectorRouting__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4NixVectorRouting__tp_clear,             /* tp_clear */

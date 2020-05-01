@@ -3051,17 +3051,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ServiceFlowManager *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ServiceFlowManager *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3ServiceFlowManager *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ServiceFlowManager *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ServiceFlowManager *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3132,17 +3132,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SsServiceFlowManager *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SsServiceFlowManager *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3SsServiceFlowManager *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SsServiceFlowManager *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SsServiceFlowManager *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3290,17 +3290,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxConnection *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxConnection *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3WimaxConnection *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxConnection *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxConnection *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3448,17 +3448,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3BsServiceFlowManager *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BsServiceFlowManager *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3BsServiceFlowManager *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BsServiceFlowManager *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3BsServiceFlowManager *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3518,17 +3518,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConnectionManager *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConnectionManager *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3ConnectionManager *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConnectionManager *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConnectionManager *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void DoDispose();
 
@@ -3698,21 +3698,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoDispose(PyNs3WimaxChannel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3WimaxChannel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoDispose(PyNs3WimaxChannel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -3781,17 +3781,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxNetDevice *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3WimaxNetDevice *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WimaxNetDevice *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WimaxNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void SetConnectionManager(ns3::Ptr< ns3::ConnectionManager > connectionManager);
 
@@ -3921,17 +3921,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3BaseStationNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BaseStationNetDevice *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3BaseStationNetDevice *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3BaseStationNetDevice *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3BaseStationNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual void Start();
 
@@ -4071,21 +4071,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoDispose(PyNs3SimpleOfdmWimaxChannel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
-
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SimpleOfdmWimaxChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3SimpleOfdmWimaxChannel *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SimpleOfdmWimaxChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
+
+    static PyObject * _wrap_DoDispose(PyNs3SimpleOfdmWimaxChannel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
 
     virtual int64_t AssignStreams(int64_t stream);
 
@@ -4157,17 +4157,17 @@ public:
     }
 
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SubscriberStationNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SubscriberStationNetDevice *self);
+    inline void NotifyConstructionCompleted__parent_caller()
+    { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3SubscriberStationNetDevice *self);
     inline void DoInitialize__parent_caller()
     { ns3::Object::DoInitialize(); }
 
-    static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SubscriberStationNetDevice *self);
-    inline void NotifyConstructionCompleted__parent_caller()
-    { ns3::ObjectBase::NotifyConstructionCompleted(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SubscriberStationNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     virtual bool Enqueue(ns3::Ptr< ns3::Packet > packet, ns3::MacHeaderType const & hdrType, ns3::Ptr< ns3::WimaxConnection > connection);
 

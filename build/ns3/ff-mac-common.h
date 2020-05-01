@@ -16,6 +16,10 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Author: Manuel Requena <manuel.requena@cttc.es>
+ * 
+ * Modified by:
+ *          Fabian Eckermann <fabian.eckermann@udo.edu> (CNI)
+ *          Moritz Kahlert <moritz.kahlert@udo.edu> (CNI)
  */
 
 #ifndef FF_MAC_COMMON_H
@@ -24,6 +28,8 @@
 #include <ns3/simple-ref-count.h>
 #include <ns3/ptr.h>
 #include <vector>
+#include <bitset>
+#include <map>
 
 
 /**
@@ -93,24 +99,24 @@ enum NormalExtended_e
 struct DlDciListElement_s
 {
   uint16_t  m_rnti; ///< RNTI
-  uint32_t  m_rbBitmap; ///< RB bitmap
-  uint8_t   m_rbShift; ///< RB shift
-  uint8_t   m_resAlloc; ///< The type of resource allocation
-  std::vector <uint16_t>  m_tbsSize; ///< The TBs size
-  std::vector <uint8_t>   m_mcs; ///< MCS
-  std::vector <uint8_t>   m_ndi; ///< New data indicator
-  std::vector <uint8_t>   m_rv; ///< Redundancy version
-  uint8_t   m_cceIndex; ///< Control Channel Element index
-  uint8_t   m_aggrLevel; ///< The aggregation level
+  uint32_t  m_rbBitmap; ///< rb bitmap
+  uint8_t   m_rbShift; ///< rb shift
+  uint8_t   m_resAlloc; ///< res allocate
+  std::vector <uint16_t>  m_tbsSize; ///< tbs size
+  std::vector <uint8_t>   m_mcs; ///< mcs
+  std::vector <uint8_t>   m_ndi; ///< ndi
+  std::vector <uint8_t>   m_rv; ///< rv
+  uint8_t   m_cceIndex; ///< CCE index
+  uint8_t   m_aggrLevel; ///< aggr level
   uint8_t   m_precodingInfo; ///< precoding info
   /// Format enumeration
   enum Format_e
   {
     ONE, ONE_A, ONE_B, ONE_C, ONE_D, TWO, TWO_A, TWO_B
   } m_format; ///< the format
-  uint8_t   m_tpc; ///< Tx power control command
+  uint8_t   m_tpc; ///< TPC
   uint8_t   m_harqProcess; ///< HARQ process
-  uint8_t   m_dai; ///< DL assignment index
+  uint8_t   m_dai; ///< DAI
   /// Vrb Format enum
   enum VrbFormat_e
   {
@@ -144,17 +150,94 @@ struct UlDciListElement_s
   uint16_t  m_tbSize; ///< size
   uint8_t   m_mcs; ///< MCS
   uint8_t   m_ndi; ///< NDI
-  uint8_t   m_cceIndex; ///< Control Channel Element index
-  uint8_t   m_aggrLevel; ///< The aggregation level
+  uint8_t   m_cceIndex; ///< CCE index
+  uint8_t   m_aggrLevel; ///< aggr level
   uint8_t   m_ueTxAntennaSelection; ///< UE antenna selection
   bool      m_hopping; ///< hopping?
   uint8_t   m_n2Dmrs; ///< n2 DMRS
-  int8_t    m_tpc; ///< Tx power control command
+  int8_t    m_tpc; ///< TPC
   bool      m_cqiRequest; ///< CQI request
   uint8_t   m_ulIndex; ///< UL index
-  uint8_t   m_dai; ///< DL assignment index
+  uint8_t   m_dai; ///< DAI
   uint8_t   m_freqHopping; ///< freq hopping
   int8_t    m_pdcchPowerOffset; ///< CCH power offset
+};
+
+/**
+ * \brief See section 5.3.3.1.9 Rel 12.4
+ */
+struct SlDciListElement_s
+{
+  uint16_t m_rnti;
+  uint16_t m_resPscch;
+  uint8_t m_tpc;
+  uint8_t m_hopping;
+  uint8_t m_rbStart; //models rb assignment
+  uint8_t m_rbLen;   //models rb assignment
+  uint8_t m_trp;
+};
+
+/**
+ * \brief See section 5.4.3.1.1 Rel 12.4
+ */
+struct SciListElement_s
+{
+  uint16_t  m_rnti;
+  uint8_t   m_resPscch;       //added for modeling
+  uint8_t   m_hopping;
+  uint8_t   m_rbStart; //models rb assignment
+  uint8_t   m_rbLen;   //models rb assignment
+  uint16_t  m_tbSize;  //added for modeling
+  uint8_t   m_trp;
+  uint8_t   m_mcs;
+  uint16_t  m_timing;
+  uint8_t   m_groupDstId;
+};
+ 
+/**
+ * \brief See 36.212 section 5.3.3.1.9A V15.0.1
+ * DCI format 5A is used for scheduling of PSCCH, and also contains 
+ * several SCI format 1 fields used for the scheduling of PSSCH
+ */
+struct SlDciListElementV2x 
+{
+  uint8_t m_CIF;                      // carrier indicator 
+  uint16_t m_firstSubchannelIdx;      // lowest index of the subchannel allocation to the inital transmission
+  uint16_t m_RIV;                     // frequency resource location of initial transmission and retransmission 
+  uint8_t m_SFgap;                    // time gap between initial transmission and retransmission
+  uint8_t m_slIndex;                  // SL index (present only for cases with TDD operation with uplink-downlink configuration 0-6)
+  uint8_t m_slSPSconfigIndex;         // SL SPS configuration index (present only when the format 5A CRC is scrambled with SL-SPS-V-RNTI)
+  uint8_t m_indicator;                // Activation/release indication (present only when the format 5A CRC is scrambled with SL-SPS-V-RNTI)
+}; 
+
+/**
+ * \brief See section 36.212 5.4.3.1.2 V15.0.1
+ * SCI format 1 is used for scheduling of PSSCH 
+ */
+struct SciListElementV2x  
+{
+  uint16_t m_rnti; 
+  uint8_t m_prio;                     // priority - 3 bits
+  uint16_t m_pRsvp;                    // resource reservation - 4 bits 
+  uint16_t m_riv;                     // frequency resource location of initial transmission and retransmission - ceil(log2(N_subCH(N_subCH+1)/2)) bits
+  uint8_t m_sfGap;                    // time gap between initial transmission and retransmission - 4 bits
+  uint8_t m_mcs;                      // modulation and coding scheme - 5 bits
+  uint8_t m_reTxIdx;                  // retransmission index - 1 bit
+  
+  uint16_t m_resPscch;           // added for modelling: resource where PSCCH occur (in subchannel)
+  uint16_t m_tbSize;                  // added for modelling: transferblock size
+};
+
+
+
+struct SlDiscMsg
+{
+  uint16_t  m_rnti; //added for modeling
+  uint8_t   m_resPsdch; //added for modeling
+  uint8_t m_msgType; 
+  std::bitset <184> m_proSeAppCode;
+  uint32_t m_mic;
+  uint8_t m_utcBasedCounter;
 };
 
 /**
@@ -183,7 +266,7 @@ struct VendorSpecificListElement_s
  */
 struct LogicalChannelConfigListElement_s
 {
-  uint8_t   m_logicalChannelIdentity; ///< logical channel identity
+  uint8_t   m_logicalChannelIdentity; ///< logical channel indentity
   uint8_t   m_logicalChannelGroup; ///< logical channel group
 
   /// Direction enum
@@ -203,7 +286,7 @@ struct LogicalChannelConfigListElement_s
 
   uint8_t   m_qci; ///< QCI
   uint64_t  m_eRabMaximulBitrateUl; ///< ERAB maximum bit rate UL
-  uint64_t  m_eRabMaximulBitrateDl; ///< ERAB maximum bit rate DL
+  uint64_t  m_eRabMaximulBitrateDl; ///< ERAB mqximum bit rate DL
   uint64_t  m_eRabGuaranteedBitrateUl; ///< ERAB guaranteed bit rate UL
   uint64_t  m_eRabGuaranteedBitrateDl; ///< ERAB guaranteed bit rate DL
 };
@@ -237,7 +320,7 @@ struct PhichListElement_s
  */
 struct RlcPduListElement_s
 {
-  uint8_t   m_logicalChannelIdentity; ///< logical channel identity
+  uint8_t   m_logicalChannelIdentity; ///< logical channel indentity
   uint16_t  m_size; ///< size
 };
 
@@ -264,7 +347,7 @@ struct UlGrant_s
   uint16_t m_tbSize; ///< size
   uint8_t m_mcs; ///< MCS
   bool m_hopping; ///< hopping?
-  int8_t m_tpc; ///< Tx power control command
+  int8_t m_tpc; ///< TPC 
   bool m_cqiRequest; ///< CQI request?
   bool m_ulDelay; ///< UL delay?
 }; 
@@ -306,7 +389,7 @@ struct UlInfoListElement_s
   {
     Ok, NotOk, NotValid
   } m_receptionStatus; ///< the status
-  uint8_t   m_tpc; ///< Tx power control command
+  uint8_t   m_tpc; ///< TPC
 };
 
 /**
@@ -325,6 +408,7 @@ struct MacCeValue_u
   uint8_t   m_phr; ///< phr
   uint8_t   m_crnti; ///< NRTI
   std::vector <uint8_t> m_bufferStatus; ///< buffer status
+  std::map <uint8_t, std::vector <uint8_t> > m_SlBufferStatus; ///< modified structure m_bufferStatus to handle UL different bearer scheduling
 };
 
 /**
@@ -336,7 +420,7 @@ struct MacCeListElement_s
   /// MAC CE type enum
   enum MacCeType_e
   {
-    BSR, PHR, CRNTI
+    BSR, PHR, CRNTI, SLBSR
   } m_macCeType; ///< MAC CE type
   struct MacCeValue_u m_macCeValue; ///< MAC CE value
 };

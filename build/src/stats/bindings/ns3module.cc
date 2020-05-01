@@ -263,8 +263,8 @@ _wrap_stats_isNaN(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *
 PyObject * _wrap_stats_isNaN(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef stats_functions[] = {
-    {(char *) "GetWildcardMatches", (PyCFunction) _wrap_stats_GetWildcardMatches, METH_VARARGS|METH_KEYWORDS, "GetWildcardMatches(configPath, matchedPath, wildcardSeparator)\n\ntype: configPath: std::string const &\ntype: matchedPath: std::string const &\ntype: wildcardSeparator: std::string const &" },
-    {(char *) "isNaN", (PyCFunction) _wrap_stats_isNaN, METH_VARARGS|METH_KEYWORDS, "isNaN(x)\n\ntype: x: double" },
+    {(char *) "GetWildcardMatches", (PyCFunction) _wrap_stats_GetWildcardMatches, METH_KEYWORDS|METH_VARARGS, "GetWildcardMatches(configPath, matchedPath, wildcardSeparator)\n\ntype: configPath: std::string const &\ntype: matchedPath: std::string const &\ntype: wildcardSeparator: std::string const &" },
+    {(char *) "isNaN", (PyCFunction) _wrap_stats_isNaN, METH_KEYWORDS|METH_VARARGS, "isNaN(x)\n\ntype: x: double" },
     {NULL, NULL, 0, NULL}
 };
 /* --- classes --- */
@@ -725,8 +725,8 @@ _wrap_PyNs3DataOutputCallback_OutputStatistic(PyNs3DataOutputCallback *self, PyO
 }
 
 static PyMethodDef PyNs3DataOutputCallback_methods[] = {
-    {(char *) "OutputSingleton", (PyCFunction) _wrap_PyNs3DataOutputCallback_OutputSingleton, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "OutputStatistic", (PyCFunction) _wrap_PyNs3DataOutputCallback_OutputStatistic, METH_VARARGS|METH_KEYWORDS, "OutputStatistic(key, variable, statSum)\n\ntype: key: std::string\ntype: variable: std::string\ntype: statSum: ns3::StatisticalSummary const *" },
+    {(char *) "OutputSingleton", (PyCFunction) _wrap_PyNs3DataOutputCallback_OutputSingleton, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "OutputStatistic", (PyCFunction) _wrap_PyNs3DataOutputCallback_OutputStatistic, METH_KEYWORDS|METH_VARARGS, "OutputStatistic(key, variable, statSum)\n\ntype: key: std::string\ntype: variable: std::string\ntype: statSum: ns3::StatisticalSummary const *" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -789,7 +789,7 @@ PyTypeObject PyNs3DataOutputCallback_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DataOutputCallback(arg0)\nDataOutputCallback()",                        /* Documentation string */
     (traverseproc)PyNs3DataOutputCallback__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataOutputCallback__tp_clear,             /* tp_clear */
@@ -1387,24 +1387,24 @@ _wrap_PyNs3FileHelper__copy__(PyNs3FileHelper *self)
 }
 
 static PyMethodDef PyNs3FileHelper_methods[] = {
-    {(char *) "AddAggregator", (PyCFunction) _wrap_PyNs3FileHelper_AddAggregator, METH_VARARGS|METH_KEYWORDS, "AddAggregator(aggregatorName, outputFileName, onlyOneAggregator)\n\ntype: aggregatorName: std::string const &\ntype: outputFileName: std::string const &\ntype: onlyOneAggregator: bool" },
-    {(char *) "AddTimeSeriesAdaptor", (PyCFunction) _wrap_PyNs3FileHelper_AddTimeSeriesAdaptor, METH_VARARGS|METH_KEYWORDS, "AddTimeSeriesAdaptor(adaptorName)\n\ntype: adaptorName: std::string const &" },
-    {(char *) "ConfigureFile", (PyCFunction) _wrap_PyNs3FileHelper_ConfigureFile, METH_VARARGS|METH_KEYWORDS, "ConfigureFile(outputFileNameWithoutExtension, fileType)\n\ntype: outputFileNameWithoutExtension: std::string const &\ntype: fileType: ns3::FileAggregator::FileType" },
-    {(char *) "GetAggregatorMultiple", (PyCFunction) _wrap_PyNs3FileHelper_GetAggregatorMultiple, METH_VARARGS|METH_KEYWORDS, "GetAggregatorMultiple(aggregatorName, outputFileName)\n\ntype: aggregatorName: std::string const &\ntype: outputFileName: std::string const &" },
+    {(char *) "AddAggregator", (PyCFunction) _wrap_PyNs3FileHelper_AddAggregator, METH_KEYWORDS|METH_VARARGS, "AddAggregator(aggregatorName, outputFileName, onlyOneAggregator)\n\ntype: aggregatorName: std::string const &\ntype: outputFileName: std::string const &\ntype: onlyOneAggregator: bool" },
+    {(char *) "AddTimeSeriesAdaptor", (PyCFunction) _wrap_PyNs3FileHelper_AddTimeSeriesAdaptor, METH_KEYWORDS|METH_VARARGS, "AddTimeSeriesAdaptor(adaptorName)\n\ntype: adaptorName: std::string const &" },
+    {(char *) "ConfigureFile", (PyCFunction) _wrap_PyNs3FileHelper_ConfigureFile, METH_KEYWORDS|METH_VARARGS, "ConfigureFile(outputFileNameWithoutExtension, fileType)\n\ntype: outputFileNameWithoutExtension: std::string const &\ntype: fileType: ns3::FileAggregator::FileType" },
+    {(char *) "GetAggregatorMultiple", (PyCFunction) _wrap_PyNs3FileHelper_GetAggregatorMultiple, METH_KEYWORDS|METH_VARARGS, "GetAggregatorMultiple(aggregatorName, outputFileName)\n\ntype: aggregatorName: std::string const &\ntype: outputFileName: std::string const &" },
     {(char *) "GetAggregatorSingle", (PyCFunction) _wrap_PyNs3FileHelper_GetAggregatorSingle, METH_NOARGS, "GetAggregatorSingle()\n\n" },
-    {(char *) "GetProbe", (PyCFunction) _wrap_PyNs3FileHelper_GetProbe, METH_VARARGS|METH_KEYWORDS, "GetProbe(probeName)\n\ntype: probeName: std::string" },
-    {(char *) "Set10dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set10dFormat, METH_VARARGS|METH_KEYWORDS, "Set10dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set1dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set1dFormat, METH_VARARGS|METH_KEYWORDS, "Set1dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set2dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set2dFormat, METH_VARARGS|METH_KEYWORDS, "Set2dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set3dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set3dFormat, METH_VARARGS|METH_KEYWORDS, "Set3dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set4dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set4dFormat, METH_VARARGS|METH_KEYWORDS, "Set4dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set5dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set5dFormat, METH_VARARGS|METH_KEYWORDS, "Set5dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set6dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set6dFormat, METH_VARARGS|METH_KEYWORDS, "Set6dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set7dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set7dFormat, METH_VARARGS|METH_KEYWORDS, "Set7dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set8dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set8dFormat, METH_VARARGS|METH_KEYWORDS, "Set8dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set9dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set9dFormat, METH_VARARGS|METH_KEYWORDS, "Set9dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "SetHeading", (PyCFunction) _wrap_PyNs3FileHelper_SetHeading, METH_VARARGS|METH_KEYWORDS, "SetHeading(heading)\n\ntype: heading: std::string const &" },
-    {(char *) "WriteProbe", (PyCFunction) _wrap_PyNs3FileHelper_WriteProbe, METH_VARARGS|METH_KEYWORDS, "WriteProbe(typeId, path, probeTraceSource)\n\ntype: typeId: std::string const &\ntype: path: std::string const &\ntype: probeTraceSource: std::string const &" },
+    {(char *) "GetProbe", (PyCFunction) _wrap_PyNs3FileHelper_GetProbe, METH_KEYWORDS|METH_VARARGS, "GetProbe(probeName)\n\ntype: probeName: std::string" },
+    {(char *) "Set10dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set10dFormat, METH_KEYWORDS|METH_VARARGS, "Set10dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set1dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set1dFormat, METH_KEYWORDS|METH_VARARGS, "Set1dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set2dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set2dFormat, METH_KEYWORDS|METH_VARARGS, "Set2dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set3dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set3dFormat, METH_KEYWORDS|METH_VARARGS, "Set3dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set4dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set4dFormat, METH_KEYWORDS|METH_VARARGS, "Set4dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set5dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set5dFormat, METH_KEYWORDS|METH_VARARGS, "Set5dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set6dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set6dFormat, METH_KEYWORDS|METH_VARARGS, "Set6dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set7dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set7dFormat, METH_KEYWORDS|METH_VARARGS, "Set7dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set8dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set8dFormat, METH_KEYWORDS|METH_VARARGS, "Set8dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set9dFormat", (PyCFunction) _wrap_PyNs3FileHelper_Set9dFormat, METH_KEYWORDS|METH_VARARGS, "Set9dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "SetHeading", (PyCFunction) _wrap_PyNs3FileHelper_SetHeading, METH_KEYWORDS|METH_VARARGS, "SetHeading(heading)\n\ntype: heading: std::string const &" },
+    {(char *) "WriteProbe", (PyCFunction) _wrap_PyNs3FileHelper_WriteProbe, METH_KEYWORDS|METH_VARARGS, "WriteProbe(typeId, path, probeTraceSource)\n\ntype: typeId: std::string const &\ntype: path: std::string const &\ntype: probeTraceSource: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FileHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1754,15 +1754,15 @@ _wrap_PyNs3Gnuplot__copy__(PyNs3Gnuplot *self)
 }
 
 static PyMethodDef PyNs3Gnuplot_methods[] = {
-    {(char *) "AddDataset", (PyCFunction) _wrap_PyNs3Gnuplot_AddDataset, METH_VARARGS|METH_KEYWORDS, "AddDataset(dataset)\n\ntype: dataset: ns3::GnuplotDataset const &" },
-    {(char *) "AppendExtra", (PyCFunction) _wrap_PyNs3Gnuplot_AppendExtra, METH_VARARGS|METH_KEYWORDS, "AppendExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "DetectTerminal", (PyCFunction) _wrap_PyNs3Gnuplot_DetectTerminal, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "DetectTerminal(filename)\n\ntype: filename: std::string const &" },
-    {(char *) "SetDataFileDatasetIndex", (PyCFunction) _wrap_PyNs3Gnuplot_SetDataFileDatasetIndex, METH_VARARGS|METH_KEYWORDS, "SetDataFileDatasetIndex(index)\n\ntype: index: unsigned int" },
-    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3Gnuplot_SetExtra, METH_VARARGS|METH_KEYWORDS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "SetLegend", (PyCFunction) _wrap_PyNs3Gnuplot_SetLegend, METH_VARARGS|METH_KEYWORDS, "SetLegend(xLegend, yLegend)\n\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &" },
-    {(char *) "SetOutputFilename", (PyCFunction) _wrap_PyNs3Gnuplot_SetOutputFilename, METH_VARARGS|METH_KEYWORDS, "SetOutputFilename(outputFilename)\n\ntype: outputFilename: std::string const &" },
-    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3Gnuplot_SetTerminal, METH_VARARGS|METH_KEYWORDS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
-    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3Gnuplot_SetTitle, METH_VARARGS|METH_KEYWORDS, "SetTitle(title)\n\ntype: title: std::string const &" },
+    {(char *) "AddDataset", (PyCFunction) _wrap_PyNs3Gnuplot_AddDataset, METH_KEYWORDS|METH_VARARGS, "AddDataset(dataset)\n\ntype: dataset: ns3::GnuplotDataset const &" },
+    {(char *) "AppendExtra", (PyCFunction) _wrap_PyNs3Gnuplot_AppendExtra, METH_KEYWORDS|METH_VARARGS, "AppendExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "DetectTerminal", (PyCFunction) _wrap_PyNs3Gnuplot_DetectTerminal, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "DetectTerminal(filename)\n\ntype: filename: std::string const &" },
+    {(char *) "SetDataFileDatasetIndex", (PyCFunction) _wrap_PyNs3Gnuplot_SetDataFileDatasetIndex, METH_KEYWORDS|METH_VARARGS, "SetDataFileDatasetIndex(index)\n\ntype: index: unsigned int" },
+    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3Gnuplot_SetExtra, METH_KEYWORDS|METH_VARARGS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "SetLegend", (PyCFunction) _wrap_PyNs3Gnuplot_SetLegend, METH_KEYWORDS|METH_VARARGS, "SetLegend(xLegend, yLegend)\n\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &" },
+    {(char *) "SetOutputFilename", (PyCFunction) _wrap_PyNs3Gnuplot_SetOutputFilename, METH_KEYWORDS|METH_VARARGS, "SetOutputFilename(outputFilename)\n\ntype: outputFilename: std::string const &" },
+    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3Gnuplot_SetTerminal, METH_KEYWORDS|METH_VARARGS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
+    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3Gnuplot_SetTitle, METH_KEYWORDS|METH_VARARGS, "SetTitle(title)\n\ntype: title: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Gnuplot__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1982,9 +1982,9 @@ _wrap_PyNs3GnuplotCollection__copy__(PyNs3GnuplotCollection *self)
 }
 
 static PyMethodDef PyNs3GnuplotCollection_methods[] = {
-    {(char *) "AddPlot", (PyCFunction) _wrap_PyNs3GnuplotCollection_AddPlot, METH_VARARGS|METH_KEYWORDS, "AddPlot(plot)\n\ntype: plot: ns3::Gnuplot const &" },
-    {(char *) "GetPlot", (PyCFunction) _wrap_PyNs3GnuplotCollection_GetPlot, METH_VARARGS|METH_KEYWORDS, "GetPlot(id)\n\ntype: id: unsigned int" },
-    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3GnuplotCollection_SetTerminal, METH_VARARGS|METH_KEYWORDS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
+    {(char *) "AddPlot", (PyCFunction) _wrap_PyNs3GnuplotCollection_AddPlot, METH_KEYWORDS|METH_VARARGS, "AddPlot(plot)\n\ntype: plot: ns3::Gnuplot const &" },
+    {(char *) "GetPlot", (PyCFunction) _wrap_PyNs3GnuplotCollection_GetPlot, METH_KEYWORDS|METH_VARARGS, "GetPlot(id)\n\ntype: id: unsigned int" },
+    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3GnuplotCollection_SetTerminal, METH_KEYWORDS|METH_VARARGS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GnuplotCollection__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2152,9 +2152,9 @@ _wrap_PyNs3GnuplotDataset__copy__(PyNs3GnuplotDataset *self)
 }
 
 static PyMethodDef PyNs3GnuplotDataset_methods[] = {
-    {(char *) "SetDefaultExtra", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetDefaultExtra, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetDefaultExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetExtra, METH_VARARGS|METH_KEYWORDS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetTitle, METH_VARARGS|METH_KEYWORDS, "SetTitle(title)\n\ntype: title: std::string const &" },
+    {(char *) "SetDefaultExtra", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetDefaultExtra, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetDefaultExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetExtra, METH_KEYWORDS|METH_VARARGS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3GnuplotDataset_SetTitle, METH_KEYWORDS|METH_VARARGS, "SetTitle(title)\n\ntype: title: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GnuplotDataset__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2543,11 +2543,11 @@ _wrap_PyNs3GnuplotHelper__copy__(PyNs3GnuplotHelper *self)
 }
 
 static PyMethodDef PyNs3GnuplotHelper_methods[] = {
-    {(char *) "AddTimeSeriesAdaptor", (PyCFunction) _wrap_PyNs3GnuplotHelper_AddTimeSeriesAdaptor, METH_VARARGS|METH_KEYWORDS, "AddTimeSeriesAdaptor(adaptorName)\n\ntype: adaptorName: std::string const &" },
-    {(char *) "ConfigurePlot", (PyCFunction) _wrap_PyNs3GnuplotHelper_ConfigurePlot, METH_VARARGS|METH_KEYWORDS, "ConfigurePlot(outputFileNameWithoutExtension, title, xLegend, yLegend, terminalType)\n\ntype: outputFileNameWithoutExtension: std::string const &\ntype: title: std::string const &\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &\ntype: terminalType: std::string const &" },
+    {(char *) "AddTimeSeriesAdaptor", (PyCFunction) _wrap_PyNs3GnuplotHelper_AddTimeSeriesAdaptor, METH_KEYWORDS|METH_VARARGS, "AddTimeSeriesAdaptor(adaptorName)\n\ntype: adaptorName: std::string const &" },
+    {(char *) "ConfigurePlot", (PyCFunction) _wrap_PyNs3GnuplotHelper_ConfigurePlot, METH_KEYWORDS|METH_VARARGS, "ConfigurePlot(outputFileNameWithoutExtension, title, xLegend, yLegend, terminalType)\n\ntype: outputFileNameWithoutExtension: std::string const &\ntype: title: std::string const &\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &\ntype: terminalType: std::string const &" },
     {(char *) "GetAggregator", (PyCFunction) _wrap_PyNs3GnuplotHelper_GetAggregator, METH_NOARGS, "GetAggregator()\n\n" },
-    {(char *) "GetProbe", (PyCFunction) _wrap_PyNs3GnuplotHelper_GetProbe, METH_VARARGS|METH_KEYWORDS, "GetProbe(probeName)\n\ntype: probeName: std::string" },
-    {(char *) "PlotProbe", (PyCFunction) _wrap_PyNs3GnuplotHelper_PlotProbe, METH_VARARGS|METH_KEYWORDS, "PlotProbe(typeId, path, probeTraceSource, title, keyLocation)\n\ntype: typeId: std::string const &\ntype: path: std::string const &\ntype: probeTraceSource: std::string const &\ntype: title: std::string const &\ntype: keyLocation: ns3::GnuplotAggregator::KeyLocation" },
+    {(char *) "GetProbe", (PyCFunction) _wrap_PyNs3GnuplotHelper_GetProbe, METH_KEYWORDS|METH_VARARGS, "GetProbe(probeName)\n\ntype: probeName: std::string" },
+    {(char *) "PlotProbe", (PyCFunction) _wrap_PyNs3GnuplotHelper_PlotProbe, METH_KEYWORDS|METH_VARARGS, "PlotProbe(typeId, path, probeTraceSource, title, keyLocation)\n\ntype: typeId: std::string const &\ntype: path: std::string const &\ntype: probeTraceSource: std::string const &\ntype: title: std::string const &\ntype: keyLocation: ns3::GnuplotAggregator::KeyLocation" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GnuplotHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3317,7 +3317,7 @@ PyTypeObject PyNs3StatisticalSummary_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "StatisticalSummary(arg0)\nStatisticalSummary()",                        /* Documentation string */
     (traverseproc)PyNs3StatisticalSummary__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3StatisticalSummary__tp_clear,             /* tp_clear */
@@ -3620,12 +3620,12 @@ _wrap_PyNs3Gnuplot2dDataset__copy__(PyNs3Gnuplot2dDataset *self)
 }
 
 static PyMethodDef PyNs3Gnuplot2dDataset_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_Add, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_Add, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "AddEmptyLine", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_AddEmptyLine, METH_NOARGS, "AddEmptyLine()\n\n" },
-    {(char *) "SetDefaultErrorBars", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetDefaultErrorBars, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetDefaultErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
-    {(char *) "SetDefaultStyle", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetDefaultStyle, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetDefaultStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
-    {(char *) "SetErrorBars", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetErrorBars, METH_VARARGS|METH_KEYWORDS, "SetErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
-    {(char *) "SetStyle", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetStyle, METH_VARARGS|METH_KEYWORDS, "SetStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
+    {(char *) "SetDefaultErrorBars", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetDefaultErrorBars, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetDefaultErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
+    {(char *) "SetDefaultStyle", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetDefaultStyle, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetDefaultStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
+    {(char *) "SetErrorBars", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetErrorBars, METH_KEYWORDS|METH_VARARGS, "SetErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
+    {(char *) "SetStyle", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset_SetStyle, METH_KEYWORDS|METH_VARARGS, "SetStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Gnuplot2dDataset__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3816,7 +3816,7 @@ _wrap_PyNs3Gnuplot2dFunction__copy__(PyNs3Gnuplot2dFunction *self)
 }
 
 static PyMethodDef PyNs3Gnuplot2dFunction_methods[] = {
-    {(char *) "SetFunction", (PyCFunction) _wrap_PyNs3Gnuplot2dFunction_SetFunction, METH_VARARGS|METH_KEYWORDS, "SetFunction(function)\n\ntype: function: std::string const &" },
+    {(char *) "SetFunction", (PyCFunction) _wrap_PyNs3Gnuplot2dFunction_SetFunction, METH_KEYWORDS|METH_VARARGS, "SetFunction(function)\n\ntype: function: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Gnuplot2dFunction__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4051,10 +4051,10 @@ _wrap_PyNs3Gnuplot3dDataset__copy__(PyNs3Gnuplot3dDataset *self)
 }
 
 static PyMethodDef PyNs3Gnuplot3dDataset_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_Add, METH_VARARGS|METH_KEYWORDS, "Add(x, y, z)\n\ntype: x: double\ntype: y: double\ntype: z: double" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_Add, METH_KEYWORDS|METH_VARARGS, "Add(x, y, z)\n\ntype: x: double\ntype: y: double\ntype: z: double" },
     {(char *) "AddEmptyLine", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_AddEmptyLine, METH_NOARGS, "AddEmptyLine()\n\n" },
-    {(char *) "SetDefaultStyle", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_SetDefaultStyle, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetDefaultStyle(style)\n\ntype: style: std::string const &" },
-    {(char *) "SetStyle", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_SetStyle, METH_VARARGS|METH_KEYWORDS, "SetStyle(style)\n\ntype: style: std::string const &" },
+    {(char *) "SetDefaultStyle", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_SetDefaultStyle, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetDefaultStyle(style)\n\ntype: style: std::string const &" },
+    {(char *) "SetStyle", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset_SetStyle, METH_KEYWORDS|METH_VARARGS, "SetStyle(style)\n\ntype: style: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Gnuplot3dDataset__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4245,7 +4245,7 @@ _wrap_PyNs3Gnuplot3dFunction__copy__(PyNs3Gnuplot3dFunction *self)
 }
 
 static PyMethodDef PyNs3Gnuplot3dFunction_methods[] = {
-    {(char *) "SetFunction", (PyCFunction) _wrap_PyNs3Gnuplot3dFunction_SetFunction, METH_VARARGS|METH_KEYWORDS, "SetFunction(function)\n\ntype: function: std::string const &" },
+    {(char *) "SetFunction", (PyCFunction) _wrap_PyNs3Gnuplot3dFunction_SetFunction, METH_KEYWORDS|METH_VARARGS, "SetFunction(function)\n\ntype: function: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Gnuplot3dFunction__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4501,11 +4501,11 @@ static PyMethodDef PyNs3DataCalculator_methods[] = {
     {(char *) "GetEnabled", (PyCFunction) _wrap_PyNs3DataCalculator_GetEnabled, METH_NOARGS, "GetEnabled()\n\n" },
     {(char *) "GetKey", (PyCFunction) _wrap_PyNs3DataCalculator_GetKey, METH_NOARGS, "GetKey()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataCalculator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3DataCalculator_Output, METH_VARARGS|METH_KEYWORDS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
-    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3DataCalculator_SetContext, METH_VARARGS|METH_KEYWORDS, "SetContext(context)\n\ntype: context: std::string const" },
-    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3DataCalculator_SetKey, METH_VARARGS|METH_KEYWORDS, "SetKey(key)\n\ntype: key: std::string const" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3DataCalculator_Start, METH_VARARGS|METH_KEYWORDS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3DataCalculator_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(stopTime)\n\ntype: stopTime: ns3::Time const &" },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3DataCalculator_Output, METH_KEYWORDS|METH_VARARGS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
+    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3DataCalculator_SetContext, METH_KEYWORDS|METH_VARARGS, "SetContext(context)\n\ntype: context: std::string const" },
+    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3DataCalculator_SetKey, METH_KEYWORDS|METH_VARARGS, "SetKey(key)\n\ntype: key: std::string const" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3DataCalculator_Start, METH_KEYWORDS|METH_VARARGS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3DataCalculator_Stop, METH_KEYWORDS|METH_VARARGS, "Stop(stopTime)\n\ntype: stopTime: ns3::Time const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -4568,7 +4568,7 @@ PyTypeObject PyNs3DataCalculator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DataCalculator(arg0)\nDataCalculator()",                        /* Documentation string */
     (traverseproc)PyNs3DataCalculator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCalculator__tp_clear,             /* tp_clear */
@@ -4601,16 +4601,16 @@ PyTypeObject PyNs3DataCalculator_Type = {
 
 
 PyObject *
-PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose(PyNs3DataCollectionObject *self)
+PyNs3DataCollectionObject__PythonHelper::_wrap_DoInitialize(PyNs3DataCollectionObject *self)
 {
     PyObject *py_retval;
     PyNs3DataCollectionObject__PythonHelper *helper = dynamic_cast< PyNs3DataCollectionObject__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4633,16 +4633,16 @@ PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DataColle
 }
 
 PyObject *
-PyNs3DataCollectionObject__PythonHelper::_wrap_DoInitialize(PyNs3DataCollectionObject *self)
+PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose(PyNs3DataCollectionObject *self)
 {
     PyObject *py_retval;
     PyNs3DataCollectionObject__PythonHelper *helper = dynamic_cast< PyNs3DataCollectionObject__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5132,10 +5132,10 @@ static PyMethodDef PyNs3DataCollectionObject_methods[] = {
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3DataCollectionObject_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataCollectionObject_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3DataCollectionObject_IsEnabled, METH_NOARGS, "IsEnabled()\n\n" },
-    {(char *) "SetName", (PyCFunction) _wrap_PyNs3DataCollectionObject_SetName, METH_VARARGS|METH_KEYWORDS, "SetName(name)\n\ntype: name: std::string" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetName", (PyCFunction) _wrap_PyNs3DataCollectionObject_SetName, METH_KEYWORDS|METH_VARARGS, "SetName(name)\n\ntype: name: std::string" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollectionObject__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DataCollectionObject__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -5203,7 +5203,7 @@ PyTypeObject PyNs3DataCollectionObject_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DataCollectionObject(arg0)\nDataCollectionObject()",                        /* Documentation string */
     (traverseproc)PyNs3DataCollectionObject__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCollectionObject__tp_clear,             /* tp_clear */
@@ -5236,16 +5236,16 @@ PyTypeObject PyNs3DataCollectionObject_Type = {
 
 
 PyObject *
-PyNs3DataCollector__PythonHelper::_wrap_DoDispose(PyNs3DataCollector *self)
+PyNs3DataCollector__PythonHelper::_wrap_DoInitialize(PyNs3DataCollector *self)
 {
     PyObject *py_retval;
     PyNs3DataCollector__PythonHelper *helper = dynamic_cast< PyNs3DataCollector__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataCollector is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5268,16 +5268,16 @@ PyNs3DataCollector__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DataCollector *s
 }
 
 PyObject *
-PyNs3DataCollector__PythonHelper::_wrap_DoInitialize(PyNs3DataCollector *self)
+PyNs3DataCollector__PythonHelper::_wrap_DoDispose(PyNs3DataCollector *self)
 {
     PyObject *py_retval;
     PyNs3DataCollector__PythonHelper *helper = dynamic_cast< PyNs3DataCollector__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataCollector is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5859,18 +5859,18 @@ _wrap_PyNs3DataCollector__copy__(PyNs3DataCollector *self)
 }
 
 static PyMethodDef PyNs3DataCollector_methods[] = {
-    {(char *) "AddDataCalculator", (PyCFunction) _wrap_PyNs3DataCollector_AddDataCalculator, METH_VARARGS|METH_KEYWORDS, "AddDataCalculator(datac)\n\ntype: datac: ns3::Ptr< ns3::DataCalculator >" },
-    {(char *) "AddMetadata", (PyCFunction) _wrap_PyNs3DataCollector_AddMetadata, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DescribeRun", (PyCFunction) _wrap_PyNs3DataCollector_DescribeRun, METH_VARARGS|METH_KEYWORDS, "DescribeRun(experiment, strategy, input, runID, description)\n\ntype: experiment: std::string\ntype: strategy: std::string\ntype: input: std::string\ntype: runID: std::string\ntype: description: std::string" },
+    {(char *) "AddDataCalculator", (PyCFunction) _wrap_PyNs3DataCollector_AddDataCalculator, METH_KEYWORDS|METH_VARARGS, "AddDataCalculator(datac)\n\ntype: datac: ns3::Ptr< ns3::DataCalculator >" },
+    {(char *) "AddMetadata", (PyCFunction) _wrap_PyNs3DataCollector_AddMetadata, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DescribeRun", (PyCFunction) _wrap_PyNs3DataCollector_DescribeRun, METH_KEYWORDS|METH_VARARGS, "DescribeRun(experiment, strategy, input, runID, description)\n\ntype: experiment: std::string\ntype: strategy: std::string\ntype: input: std::string\ntype: runID: std::string\ntype: description: std::string" },
     {(char *) "GetDescription", (PyCFunction) _wrap_PyNs3DataCollector_GetDescription, METH_NOARGS, "GetDescription()\n\n" },
     {(char *) "GetExperimentLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetExperimentLabel, METH_NOARGS, "GetExperimentLabel()\n\n" },
     {(char *) "GetInputLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetInputLabel, METH_NOARGS, "GetInputLabel()\n\n" },
     {(char *) "GetRunLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetRunLabel, METH_NOARGS, "GetRunLabel()\n\n" },
     {(char *) "GetStrategyLabel", (PyCFunction) _wrap_PyNs3DataCollector_GetStrategyLabel, METH_NOARGS, "GetStrategyLabel()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataCollector_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataCollector__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DataCollector__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -5938,7 +5938,7 @@ PyTypeObject PyNs3DataCollector_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DataCollector(arg0)\nDataCollector()",                        /* Documentation string */
     (traverseproc)PyNs3DataCollector__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataCollector__tp_clear,             /* tp_clear */
@@ -5971,16 +5971,16 @@ PyTypeObject PyNs3DataCollector_Type = {
 
 
 PyObject *
-PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose(PyNs3DataOutputInterface *self)
+PyNs3DataOutputInterface__PythonHelper::_wrap_DoInitialize(PyNs3DataOutputInterface *self)
 {
     PyObject *py_retval;
     PyNs3DataOutputInterface__PythonHelper *helper = dynamic_cast< PyNs3DataOutputInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataOutputInterface is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6003,16 +6003,16 @@ PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DataOutput
 }
 
 PyObject *
-PyNs3DataOutputInterface__PythonHelper::_wrap_DoInitialize(PyNs3DataOutputInterface *self)
+PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose(PyNs3DataOutputInterface *self)
 {
     PyObject *py_retval;
     PyNs3DataOutputInterface__PythonHelper *helper = dynamic_cast< PyNs3DataOutputInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class DataOutputInterface is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6465,11 +6465,11 @@ _wrap_PyNs3DataOutputInterface_SetFilePrefix(PyNs3DataOutputInterface *self, PyO
 static PyMethodDef PyNs3DataOutputInterface_methods[] = {
     {(char *) "GetFilePrefix", (PyCFunction) _wrap_PyNs3DataOutputInterface_GetFilePrefix, METH_NOARGS, "GetFilePrefix()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DataOutputInterface_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3DataOutputInterface_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
-    {(char *) "SetFilePrefix", (PyCFunction) _wrap_PyNs3DataOutputInterface_SetFilePrefix, METH_VARARGS|METH_KEYWORDS, "SetFilePrefix(prefix)\n\ntype: prefix: std::string const" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3DataOutputInterface_Output, METH_KEYWORDS|METH_VARARGS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
+    {(char *) "SetFilePrefix", (PyCFunction) _wrap_PyNs3DataOutputInterface_SetFilePrefix, METH_KEYWORDS|METH_VARARGS, "SetFilePrefix(prefix)\n\ntype: prefix: std::string const" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DataOutputInterface__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -6536,7 +6536,7 @@ PyTypeObject PyNs3DataOutputInterface_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DataOutputInterface(arg0)\nDataOutputInterface()",                        /* Documentation string */
     (traverseproc)PyNs3DataOutputInterface__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DataOutputInterface__tp_clear,             /* tp_clear */
@@ -7078,28 +7078,28 @@ _wrap_PyNs3FileAggregator_Write10d(PyNs3FileAggregator *self, PyObject *args, Py
 
 static PyMethodDef PyNs3FileAggregator_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FileAggregator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetFileType", (PyCFunction) _wrap_PyNs3FileAggregator_SetFileType, METH_VARARGS|METH_KEYWORDS, "SetFileType(fileType)\n\ntype: fileType: ns3::FileAggregator::FileType" },
-    {(char *) "SetHeading", (PyCFunction) _wrap_PyNs3FileAggregator_SetHeading, METH_VARARGS|METH_KEYWORDS, "SetHeading(heading)\n\ntype: heading: std::string const &" },
-    {(char *) "Set1dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set1dFormat, METH_VARARGS|METH_KEYWORDS, "Set1dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set2dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set2dFormat, METH_VARARGS|METH_KEYWORDS, "Set2dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set3dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set3dFormat, METH_VARARGS|METH_KEYWORDS, "Set3dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set4dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set4dFormat, METH_VARARGS|METH_KEYWORDS, "Set4dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set5dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set5dFormat, METH_VARARGS|METH_KEYWORDS, "Set5dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set6dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set6dFormat, METH_VARARGS|METH_KEYWORDS, "Set6dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set7dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set7dFormat, METH_VARARGS|METH_KEYWORDS, "Set7dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set8dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set8dFormat, METH_VARARGS|METH_KEYWORDS, "Set8dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set9dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set9dFormat, METH_VARARGS|METH_KEYWORDS, "Set9dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Set10dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set10dFormat, METH_VARARGS|METH_KEYWORDS, "Set10dFormat(format)\n\ntype: format: std::string const &" },
-    {(char *) "Write1d", (PyCFunction) _wrap_PyNs3FileAggregator_Write1d, METH_VARARGS|METH_KEYWORDS, "Write1d(context, v1)\n\ntype: context: std::string\ntype: v1: double" },
-    {(char *) "Write2d", (PyCFunction) _wrap_PyNs3FileAggregator_Write2d, METH_VARARGS|METH_KEYWORDS, "Write2d(context, v1, v2)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double" },
-    {(char *) "Write3d", (PyCFunction) _wrap_PyNs3FileAggregator_Write3d, METH_VARARGS|METH_KEYWORDS, "Write3d(context, v1, v2, v3)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double" },
-    {(char *) "Write4d", (PyCFunction) _wrap_PyNs3FileAggregator_Write4d, METH_VARARGS|METH_KEYWORDS, "Write4d(context, v1, v2, v3, v4)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double" },
-    {(char *) "Write5d", (PyCFunction) _wrap_PyNs3FileAggregator_Write5d, METH_VARARGS|METH_KEYWORDS, "Write5d(context, v1, v2, v3, v4, v5)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double" },
-    {(char *) "Write6d", (PyCFunction) _wrap_PyNs3FileAggregator_Write6d, METH_VARARGS|METH_KEYWORDS, "Write6d(context, v1, v2, v3, v4, v5, v6)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double" },
-    {(char *) "Write7d", (PyCFunction) _wrap_PyNs3FileAggregator_Write7d, METH_VARARGS|METH_KEYWORDS, "Write7d(context, v1, v2, v3, v4, v5, v6, v7)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double" },
-    {(char *) "Write8d", (PyCFunction) _wrap_PyNs3FileAggregator_Write8d, METH_VARARGS|METH_KEYWORDS, "Write8d(context, v1, v2, v3, v4, v5, v6, v7, v8)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double" },
-    {(char *) "Write9d", (PyCFunction) _wrap_PyNs3FileAggregator_Write9d, METH_VARARGS|METH_KEYWORDS, "Write9d(context, v1, v2, v3, v4, v5, v6, v7, v8, v9)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double\ntype: v9: double" },
-    {(char *) "Write10d", (PyCFunction) _wrap_PyNs3FileAggregator_Write10d, METH_VARARGS|METH_KEYWORDS, "Write10d(context, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double\ntype: v9: double\ntype: v10: double" },
+    {(char *) "SetFileType", (PyCFunction) _wrap_PyNs3FileAggregator_SetFileType, METH_KEYWORDS|METH_VARARGS, "SetFileType(fileType)\n\ntype: fileType: ns3::FileAggregator::FileType" },
+    {(char *) "SetHeading", (PyCFunction) _wrap_PyNs3FileAggregator_SetHeading, METH_KEYWORDS|METH_VARARGS, "SetHeading(heading)\n\ntype: heading: std::string const &" },
+    {(char *) "Set1dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set1dFormat, METH_KEYWORDS|METH_VARARGS, "Set1dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set2dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set2dFormat, METH_KEYWORDS|METH_VARARGS, "Set2dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set3dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set3dFormat, METH_KEYWORDS|METH_VARARGS, "Set3dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set4dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set4dFormat, METH_KEYWORDS|METH_VARARGS, "Set4dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set5dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set5dFormat, METH_KEYWORDS|METH_VARARGS, "Set5dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set6dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set6dFormat, METH_KEYWORDS|METH_VARARGS, "Set6dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set7dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set7dFormat, METH_KEYWORDS|METH_VARARGS, "Set7dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set8dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set8dFormat, METH_KEYWORDS|METH_VARARGS, "Set8dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set9dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set9dFormat, METH_KEYWORDS|METH_VARARGS, "Set9dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Set10dFormat", (PyCFunction) _wrap_PyNs3FileAggregator_Set10dFormat, METH_KEYWORDS|METH_VARARGS, "Set10dFormat(format)\n\ntype: format: std::string const &" },
+    {(char *) "Write1d", (PyCFunction) _wrap_PyNs3FileAggregator_Write1d, METH_KEYWORDS|METH_VARARGS, "Write1d(context, v1)\n\ntype: context: std::string\ntype: v1: double" },
+    {(char *) "Write2d", (PyCFunction) _wrap_PyNs3FileAggregator_Write2d, METH_KEYWORDS|METH_VARARGS, "Write2d(context, v1, v2)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double" },
+    {(char *) "Write3d", (PyCFunction) _wrap_PyNs3FileAggregator_Write3d, METH_KEYWORDS|METH_VARARGS, "Write3d(context, v1, v2, v3)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double" },
+    {(char *) "Write4d", (PyCFunction) _wrap_PyNs3FileAggregator_Write4d, METH_KEYWORDS|METH_VARARGS, "Write4d(context, v1, v2, v3, v4)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double" },
+    {(char *) "Write5d", (PyCFunction) _wrap_PyNs3FileAggregator_Write5d, METH_KEYWORDS|METH_VARARGS, "Write5d(context, v1, v2, v3, v4, v5)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double" },
+    {(char *) "Write6d", (PyCFunction) _wrap_PyNs3FileAggregator_Write6d, METH_KEYWORDS|METH_VARARGS, "Write6d(context, v1, v2, v3, v4, v5, v6)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double" },
+    {(char *) "Write7d", (PyCFunction) _wrap_PyNs3FileAggregator_Write7d, METH_KEYWORDS|METH_VARARGS, "Write7d(context, v1, v2, v3, v4, v5, v6, v7)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double" },
+    {(char *) "Write8d", (PyCFunction) _wrap_PyNs3FileAggregator_Write8d, METH_KEYWORDS|METH_VARARGS, "Write8d(context, v1, v2, v3, v4, v5, v6, v7, v8)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double" },
+    {(char *) "Write9d", (PyCFunction) _wrap_PyNs3FileAggregator_Write9d, METH_KEYWORDS|METH_VARARGS, "Write9d(context, v1, v2, v3, v4, v5, v6, v7, v8, v9)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double\ntype: v9: double" },
+    {(char *) "Write10d", (PyCFunction) _wrap_PyNs3FileAggregator_Write10d, METH_KEYWORDS|METH_VARARGS, "Write10d(context, v1, v2, v3, v4, v5, v6, v7, v8, v9, v10)\n\ntype: context: std::string\ntype: v1: double\ntype: v2: double\ntype: v3: double\ntype: v4: double\ntype: v5: double\ntype: v6: double\ntype: v7: double\ntype: v8: double\ntype: v9: double\ntype: v10: double" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -7162,7 +7162,7 @@ PyTypeObject PyNs3FileAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FileAggregator(outputFileName, fileType)",                        /* Documentation string */
     (traverseproc)PyNs3FileAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FileAggregator__tp_clear,             /* tp_clear */
@@ -7668,25 +7668,25 @@ _wrap_PyNs3GnuplotAggregator__copy__(PyNs3GnuplotAggregator *self)
 }
 
 static PyMethodDef PyNs3GnuplotAggregator_methods[] = {
-    {(char *) "Add2dDataset", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Add2dDataset, METH_VARARGS|METH_KEYWORDS, "Add2dDataset(dataset, title)\n\ntype: dataset: std::string const &\ntype: title: std::string const &" },
-    {(char *) "AppendExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_AppendExtra, METH_VARARGS|METH_KEYWORDS, "AppendExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "Add2dDataset", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Add2dDataset, METH_KEYWORDS|METH_VARARGS, "Add2dDataset(dataset, title)\n\ntype: dataset: std::string const &\ntype: title: std::string const &" },
+    {(char *) "AppendExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_AppendExtra, METH_KEYWORDS|METH_VARARGS, "AppendExtra(extra)\n\ntype: extra: std::string const &" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GnuplotAggregator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Set2dDatasetDefaultErrorBars", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultErrorBars, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Set2dDatasetDefaultErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
-    {(char *) "Set2dDatasetDefaultExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultExtra, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Set2dDatasetDefaultExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "Set2dDatasetDefaultStyle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultStyle, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Set2dDatasetDefaultStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
-    {(char *) "Set2dDatasetErrorBars", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetErrorBars, METH_VARARGS|METH_KEYWORDS, "Set2dDatasetErrorBars(dataset, errorBars)\n\ntype: dataset: std::string const &\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
-    {(char *) "Set2dDatasetExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetExtra, METH_VARARGS|METH_KEYWORDS, "Set2dDatasetExtra(dataset, extra)\n\ntype: dataset: std::string const &\ntype: extra: std::string const &" },
-    {(char *) "Set2dDatasetStyle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetStyle, METH_VARARGS|METH_KEYWORDS, "Set2dDatasetStyle(dataset, style)\n\ntype: dataset: std::string const &\ntype: style: ns3::Gnuplot2dDataset::Style" },
-    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetExtra, METH_VARARGS|METH_KEYWORDS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
-    {(char *) "SetKeyLocation", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetKeyLocation, METH_VARARGS|METH_KEYWORDS, "SetKeyLocation(keyLocation)\n\ntype: keyLocation: ns3::GnuplotAggregator::KeyLocation" },
-    {(char *) "SetLegend", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetLegend, METH_VARARGS|METH_KEYWORDS, "SetLegend(xLegend, yLegend)\n\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &" },
-    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetTerminal, METH_VARARGS|METH_KEYWORDS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
-    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetTitle, METH_VARARGS|METH_KEYWORDS, "SetTitle(title)\n\ntype: title: std::string const &" },
-    {(char *) "Write2d", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2d, METH_VARARGS|METH_KEYWORDS, "Write2d(context, x, y)\n\ntype: context: std::string\ntype: x: double\ntype: y: double" },
-    {(char *) "Write2dDatasetEmptyLine", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dDatasetEmptyLine, METH_VARARGS|METH_KEYWORDS, "Write2dDatasetEmptyLine(dataset)\n\ntype: dataset: std::string const &" },
-    {(char *) "Write2dWithXErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithXErrorDelta, METH_VARARGS|METH_KEYWORDS, "Write2dWithXErrorDelta(context, x, y, errorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: errorDelta: double" },
-    {(char *) "Write2dWithXYErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithXYErrorDelta, METH_VARARGS|METH_KEYWORDS, "Write2dWithXYErrorDelta(context, x, y, xErrorDelta, yErrorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: xErrorDelta: double\ntype: yErrorDelta: double" },
-    {(char *) "Write2dWithYErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithYErrorDelta, METH_VARARGS|METH_KEYWORDS, "Write2dWithYErrorDelta(context, x, y, errorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: errorDelta: double" },
+    {(char *) "Set2dDatasetDefaultErrorBars", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultErrorBars, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Set2dDatasetDefaultErrorBars(errorBars)\n\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
+    {(char *) "Set2dDatasetDefaultExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultExtra, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Set2dDatasetDefaultExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "Set2dDatasetDefaultStyle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetDefaultStyle, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Set2dDatasetDefaultStyle(style)\n\ntype: style: ns3::Gnuplot2dDataset::Style" },
+    {(char *) "Set2dDatasetErrorBars", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetErrorBars, METH_KEYWORDS|METH_VARARGS, "Set2dDatasetErrorBars(dataset, errorBars)\n\ntype: dataset: std::string const &\ntype: errorBars: ns3::Gnuplot2dDataset::ErrorBars" },
+    {(char *) "Set2dDatasetExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetExtra, METH_KEYWORDS|METH_VARARGS, "Set2dDatasetExtra(dataset, extra)\n\ntype: dataset: std::string const &\ntype: extra: std::string const &" },
+    {(char *) "Set2dDatasetStyle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Set2dDatasetStyle, METH_KEYWORDS|METH_VARARGS, "Set2dDatasetStyle(dataset, style)\n\ntype: dataset: std::string const &\ntype: style: ns3::Gnuplot2dDataset::Style" },
+    {(char *) "SetExtra", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetExtra, METH_KEYWORDS|METH_VARARGS, "SetExtra(extra)\n\ntype: extra: std::string const &" },
+    {(char *) "SetKeyLocation", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetKeyLocation, METH_KEYWORDS|METH_VARARGS, "SetKeyLocation(keyLocation)\n\ntype: keyLocation: ns3::GnuplotAggregator::KeyLocation" },
+    {(char *) "SetLegend", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetLegend, METH_KEYWORDS|METH_VARARGS, "SetLegend(xLegend, yLegend)\n\ntype: xLegend: std::string const &\ntype: yLegend: std::string const &" },
+    {(char *) "SetTerminal", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetTerminal, METH_KEYWORDS|METH_VARARGS, "SetTerminal(terminal)\n\ntype: terminal: std::string const &" },
+    {(char *) "SetTitle", (PyCFunction) _wrap_PyNs3GnuplotAggregator_SetTitle, METH_KEYWORDS|METH_VARARGS, "SetTitle(title)\n\ntype: title: std::string const &" },
+    {(char *) "Write2d", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2d, METH_KEYWORDS|METH_VARARGS, "Write2d(context, x, y)\n\ntype: context: std::string\ntype: x: double\ntype: y: double" },
+    {(char *) "Write2dDatasetEmptyLine", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dDatasetEmptyLine, METH_KEYWORDS|METH_VARARGS, "Write2dDatasetEmptyLine(dataset)\n\ntype: dataset: std::string const &" },
+    {(char *) "Write2dWithXErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithXErrorDelta, METH_KEYWORDS|METH_VARARGS, "Write2dWithXErrorDelta(context, x, y, errorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: errorDelta: double" },
+    {(char *) "Write2dWithXYErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithXYErrorDelta, METH_KEYWORDS|METH_VARARGS, "Write2dWithXYErrorDelta(context, x, y, xErrorDelta, yErrorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: xErrorDelta: double\ntype: yErrorDelta: double" },
+    {(char *) "Write2dWithYErrorDelta", (PyCFunction) _wrap_PyNs3GnuplotAggregator_Write2dWithYErrorDelta, METH_KEYWORDS|METH_VARARGS, "Write2dWithYErrorDelta(context, x, y, errorDelta)\n\ntype: context: std::string\ntype: x: double\ntype: y: double\ntype: errorDelta: double" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GnuplotAggregator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7750,7 +7750,7 @@ PyTypeObject PyNs3GnuplotAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GnuplotAggregator(outputFileNameWithoutExtension)\nGnuplotAggregator(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3GnuplotAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GnuplotAggregator__tp_clear,             /* tp_clear */
@@ -7783,16 +7783,16 @@ PyTypeObject PyNs3GnuplotAggregator_Type = {
 
 
 PyObject *
-PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
+PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoInitialize(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper = dynamic_cast< PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MinMaxAvgTotalCalculator is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7815,16 +7815,16 @@ PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyNewAggregate(Py
 }
 
 PyObject *
-PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoInitialize(PyNs3MinMaxAvgTotalCalculator__Double *self)
+PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
 {
     PyObject *py_retval;
     PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper = dynamic_cast< PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MinMaxAvgTotalCalculator is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8798,6 +8798,112 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getVariance(PyNs3MinMaxAvgTotalCalcu
 }
 
 PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    std::string retval;
+    
+    retval = self->obj->GetContext();
+    py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Stop(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Time *stopTime;
+    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
+    const char *keywords[] = {"stopTime", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &stopTime)) {
+        return NULL;
+    }
+    (helper_class == NULL)? (self->obj->Stop(*((PyNs3Time *) stopTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Stop(*((PyNs3Time *) stopTime)->obj));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    
+    retval = self->obj->IsInitialized();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    const char *context;
+    Py_ssize_t context_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "context", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    
+    self->obj->Disable();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Object *other;
+    ns3::Object *other_ptr;
+    const char *keywords[] = {"other", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Object_Type, &other)) {
+        return NULL;
+    }
+    other_ptr = (other ? other->obj : NULL);
+    self->obj->AggregateObject(ns3::Ptr< ns3::Object  > (other_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -8811,6 +8917,162 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext(PyNs3M
         return NULL;
     }
     retval = self->obj->TraceDisconnectWithoutContext(std::string(name, name_len), *((PyNs3CallbackBase *) cb)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    
+    self->obj->Dispose();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    self->obj->GetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    std::string retval;
+    
+    retval = self->obj->GetKey();
+    py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *context;
+    Py_ssize_t context_len;
+    const char *keywords[] = {"context", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &context, &context_len)) {
+        return NULL;
+    }
+    self->obj->SetContext(std::string(context, context_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *name;
+    Py_ssize_t name_len;
+    PyNs3AttributeValue *value;
+    const char *keywords[] = {"name", "value", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
+        return NULL;
+    }
+    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    PyNs3ObjectAggregateIterator *py_AggregateIterator;
+    
+    ns3::Object::AggregateIterator retval = self->obj->GetAggregateIterator();
+    py_AggregateIterator = PyObject_New(PyNs3ObjectAggregateIterator, &PyNs3ObjectAggregateIterator_Type);
+    py_AggregateIterator->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+    py_AggregateIterator->obj = new ns3::Object::AggregateIterator(retval);
+    PyNs3ObjectAggregateIterator_wrapper_registry[(void *) py_AggregateIterator->obj] = (PyObject *) py_AggregateIterator;
+    py_retval = Py_BuildValue((char *) "N", py_AggregateIterator);
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Time *startTime;
+    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
+    const char *keywords[] = {"startTime", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &startTime)) {
+        return NULL;
+    }
+    (helper_class == NULL)? (self->obj->Start(*((PyNs3Time *) startTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Start(*((PyNs3Time *) startTime)->obj));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetEnabled(PyNs3MinMaxAvgTotalCalculator__Double *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    
+    retval = self->obj->GetEnabled();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    const char *name;
+    Py_ssize_t name_len;
+    const char *context;
+    Py_ssize_t context_len;
+    PyNs3CallbackBase *cb;
+    const char *keywords[] = {"name", "context", "cb", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+        return NULL;
+    }
+    retval = self->obj->TraceConnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
     py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
@@ -8838,48 +9100,17 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable(PyNs3MinMaxAvgTotalCalculator
 }
 
 PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
+_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    const char *context;
-    Py_ssize_t context_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "context", "cb", NULL};
+    const char *key;
+    Py_ssize_t key_len;
+    const char *keywords[] = {"key", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &key, &key_len)) {
         return NULL;
     }
-    retval = self->obj->TraceDisconnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *context;
-    Py_ssize_t context_len;
-    const char *keywords[] = {"context", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &context, &context_len)) {
-        return NULL;
-    }
-    self->obj->SetContext(std::string(context, context_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    
-    self->obj->Dispose();
+    self->obj->SetKey(std::string(key, key_len));
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8903,237 +9134,6 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext(PyNs3MinM
     return py_retval;
 }
 
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    PyNs3ObjectAggregateIterator *py_AggregateIterator;
-    
-    ns3::Object::AggregateIterator retval = self->obj->GetAggregateIterator();
-    py_AggregateIterator = PyObject_New(PyNs3ObjectAggregateIterator, &PyNs3ObjectAggregateIterator_Type);
-    py_AggregateIterator->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-    py_AggregateIterator->obj = new ns3::Object::AggregateIterator(retval);
-    PyNs3ObjectAggregateIterator_wrapper_registry[(void *) py_AggregateIterator->obj] = (PyObject *) py_AggregateIterator;
-    py_retval = Py_BuildValue((char *) "N", py_AggregateIterator);
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Object *other;
-    ns3::Object *other_ptr;
-    const char *keywords[] = {"other", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Object_Type, &other)) {
-        return NULL;
-    }
-    other_ptr = (other ? other->obj : NULL);
-    self->obj->AggregateObject(ns3::Ptr< ns3::Object  > (other_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->SetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    retval = self->obj->GetAttributeFailSafe(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Time *startTime;
-    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
-    const char *keywords[] = {"startTime", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &startTime)) {
-        return NULL;
-    }
-    (helper_class == NULL)? (self->obj->Start(*((PyNs3Time *) startTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Start(*((PyNs3Time *) startTime)->obj));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    self->obj->SetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetEnabled(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    
-    retval = self->obj->GetEnabled();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    std::string retval;
-    
-    retval = self->obj->GetKey();
-    py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Stop(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Time *stopTime;
-    PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper *helper_class = dynamic_cast<PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper*> (self->obj);
-    const char *keywords[] = {"stopTime", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3Time_Type, &stopTime)) {
-        return NULL;
-    }
-    (helper_class == NULL)? (self->obj->Stop(*((PyNs3Time *) stopTime)->obj)) : (self->obj->ns3::MinMaxAvgTotalCalculator< double >::Stop(*((PyNs3Time *) stopTime)->obj));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *name;
-    Py_ssize_t name_len;
-    PyNs3AttributeValue *value;
-    const char *keywords[] = {"name", "value", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#O!", (char **) keywords, &name, &name_len, &PyNs3AttributeValue_Type, &value)) {
-        return NULL;
-    }
-    self->obj->GetAttribute(std::string(name, name_len), *((PyNs3AttributeValue *) value)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool retval;
-    const char *name;
-    Py_ssize_t name_len;
-    const char *context;
-    Py_ssize_t context_len;
-    PyNs3CallbackBase *cb;
-    const char *keywords[] = {"name", "context", "cb", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#s#O!", (char **) keywords, &name, &name_len, &context, &context_len, &PyNs3CallbackBase_Type, &cb)) {
-        return NULL;
-    }
-    retval = self->obj->TraceConnect(std::string(name, name_len), std::string(context, context_len), *((PyNs3CallbackBase *) cb)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey(PyNs3MinMaxAvgTotalCalculator__Double *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *key;
-    Py_ssize_t key_len;
-    const char *keywords[] = {"key", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &key, &key_len)) {
-        return NULL;
-    }
-    self->obj->SetKey(std::string(key, key_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    std::string retval;
-    
-    retval = self->obj->GetContext();
-    py_retval = Py_BuildValue((char *) "s#", (retval).c_str(), (retval).size());
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    
-    self->obj->Disable();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized(PyNs3MinMaxAvgTotalCalculator__Double *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    
-    retval = self->obj->IsInitialized();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
 
 static PyObject*
 _wrap_PyNs3MinMaxAvgTotalCalculator__Double__copy__(PyNs3MinMaxAvgTotalCalculator__Double *self)
@@ -9152,9 +9152,9 @@ _wrap_PyNs3MinMaxAvgTotalCalculator__Double__copy__(PyNs3MinMaxAvgTotalCalculato
 
 static PyMethodDef PyNs3MinMaxAvgTotalCalculator__Double_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Output, METH_VARARGS|METH_KEYWORDS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Output, METH_KEYWORDS|METH_VARARGS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
     {(char *) "Reset", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Reset, METH_NOARGS, "Reset()\n\n" },
-    {(char *) "Update", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Update, METH_VARARGS|METH_KEYWORDS, "Update(i)\n\ntype: i: double const" },
+    {(char *) "Update", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Update, METH_KEYWORDS|METH_VARARGS, "Update(i)\n\ntype: i: double const" },
     {(char *) "getCount", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getCount, METH_NOARGS, "getCount()\n\n" },
     {(char *) "getMax", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getMax, METH_NOARGS, "getMax()\n\n" },
     {(char *) "getMean", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getMean, METH_NOARGS, "getMean()\n\n" },
@@ -9163,32 +9163,32 @@ static PyMethodDef PyNs3MinMaxAvgTotalCalculator__Double_methods[] = {
     {(char *) "getStddev", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getStddev, METH_NOARGS, "getStddev()\n\n" },
     {(char *) "getSum", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getSum, METH_NOARGS, "getSum()\n\n" },
     {(char *) "getVariance", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_getVariance, METH_NOARGS, "getVariance()\n\n" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MinMaxAvgTotalCalculator__Double__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "GetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext, METH_NOARGS, "GetContext()\n\n" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Stop, METH_KEYWORDS|METH_VARARGS, "Stop(stopTime)\n\ntype: stopTime: ns3::Time const &" },
+    {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
+    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect, METH_KEYWORDS|METH_VARARGS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Disable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable, METH_NOARGS, "Disable()\n\n" },
+    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject, METH_KEYWORDS|METH_VARARGS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
+    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Dispose", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose, METH_NOARGS, "Dispose()\n\n" },
+    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "GetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey, METH_NOARGS, "GetKey()\n\n" },
+    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext, METH_KEYWORDS|METH_VARARGS, "SetContext(context)\n\ntype: context: std::string const" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "GetAggregateIterator", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator, METH_NOARGS, "GetAggregateIterator()\n\n" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start, METH_KEYWORDS|METH_VARARGS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
+    {(char *) "GetEnabled", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetEnabled, METH_NOARGS, "GetEnabled()\n\n" },
+    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect, METH_KEYWORDS|METH_VARARGS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "Initialize", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Initialize, METH_NOARGS, "Initialize()\n\n" },
     {(char *) "Enable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Enable, METH_NOARGS, "Enable()\n\n" },
-    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceDisconnect, METH_VARARGS|METH_KEYWORDS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "SetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetContext, METH_VARARGS|METH_KEYWORDS, "SetContext(context)\n\ntype: context: std::string const" },
-    {(char *) "Dispose", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Dispose, METH_NOARGS, "Dispose()\n\n" },
-    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "GetAggregateIterator", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAggregateIterator, METH_NOARGS, "GetAggregateIterator()\n\n" },
-    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_AggregateObject, METH_VARARGS|METH_KEYWORDS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
-    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Start, METH_VARARGS|METH_KEYWORDS, "Start(startTime)\n\ntype: startTime: ns3::Time const &" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "GetEnabled", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetEnabled, METH_NOARGS, "GetEnabled()\n\n" },
-    {(char *) "GetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetKey, METH_NOARGS, "GetKey()\n\n" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(stopTime)\n\ntype: stopTime: ns3::Time const &" },
-    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetAttribute, METH_VARARGS|METH_KEYWORDS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnect, METH_VARARGS|METH_KEYWORDS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey, METH_VARARGS|METH_KEYWORDS, "SetKey(key)\n\ntype: key: std::string const" },
-    {(char *) "GetContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_GetContext, METH_NOARGS, "GetContext()\n\n" },
-    {(char *) "Disable", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_Disable, METH_NOARGS, "Disable()\n\n" },
-    {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
+    {(char *) "SetKey", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_SetKey, METH_KEYWORDS|METH_VARARGS, "SetKey(key)\n\ntype: key: std::string const" },
+    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double_TraceConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MinMaxAvgTotalCalculator__Double__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9255,7 +9255,7 @@ PyTypeObject PyNs3MinMaxAvgTotalCalculator__Double_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MinMaxAvgTotalCalculator__Double(arg0)\nMinMaxAvgTotalCalculator__Double()",                        /* Documentation string */
     (traverseproc)PyNs3MinMaxAvgTotalCalculator__Double__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MinMaxAvgTotalCalculator__Double__tp_clear,             /* tp_clear */
@@ -9288,16 +9288,16 @@ PyTypeObject PyNs3MinMaxAvgTotalCalculator__Double_Type = {
 
 
 PyObject *
-PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose(PyNs3OmnetDataOutput *self)
+PyNs3OmnetDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3OmnetDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3OmnetDataOutput__PythonHelper *helper = dynamic_cast< PyNs3OmnetDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OmnetDataOutput is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9320,16 +9320,16 @@ PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OmnetDataOutpu
 }
 
 PyObject *
-PyNs3OmnetDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3OmnetDataOutput *self)
+PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose(PyNs3OmnetDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3OmnetDataOutput__PythonHelper *helper = dynamic_cast< PyNs3OmnetDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class OmnetDataOutput is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9773,10 +9773,10 @@ _wrap_PyNs3OmnetDataOutput__copy__(PyNs3OmnetDataOutput *self)
 
 static PyMethodDef PyNs3OmnetDataOutput_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OmnetDataOutput_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3OmnetDataOutput_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3OmnetDataOutput_Output, METH_KEYWORDS|METH_VARARGS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OmnetDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OmnetDataOutput__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -9844,7 +9844,7 @@ PyTypeObject PyNs3OmnetDataOutput_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OmnetDataOutput(arg0)\nOmnetDataOutput()",                        /* Documentation string */
     (traverseproc)PyNs3OmnetDataOutput__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OmnetDataOutput__tp_clear,             /* tp_clear */
@@ -9877,16 +9877,16 @@ PyTypeObject PyNs3OmnetDataOutput_Type = {
 
 
 PyObject *
-PyNs3Probe__PythonHelper::_wrap_DoDispose(PyNs3Probe *self)
+PyNs3Probe__PythonHelper::_wrap_DoInitialize(PyNs3Probe *self)
 {
     PyObject *py_retval;
     PyNs3Probe__PythonHelper *helper = dynamic_cast< PyNs3Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9909,16 +9909,16 @@ PyNs3Probe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Probe *self)
 }
 
 PyObject *
-PyNs3Probe__PythonHelper::_wrap_DoInitialize(PyNs3Probe *self)
+PyNs3Probe__PythonHelper::_wrap_DoDispose(PyNs3Probe *self)
 {
     PyObject *py_retval;
     PyNs3Probe__PythonHelper *helper = dynamic_cast< PyNs3Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10506,13 +10506,13 @@ _wrap_PyNs3Probe_IsEnabled(PyNs3Probe *self)
 }
 
 static PyMethodDef PyNs3Probe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Probe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Probe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Probe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Probe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Probe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3Probe_IsEnabled, METH_NOARGS, "IsEnabled()\n\n" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -10579,7 +10579,7 @@ PyTypeObject PyNs3Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Probe(arg0)\nProbe()",                        /* Documentation string */
     (traverseproc)PyNs3Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Probe__tp_clear,             /* tp_clear */
@@ -10612,16 +10612,16 @@ PyTypeObject PyNs3Probe_Type = {
 
 
 PyObject *
-PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose(PyNs3SqliteDataOutput *self)
+PyNs3SqliteDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3SqliteDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3SqliteDataOutput__PythonHelper *helper = dynamic_cast< PyNs3SqliteDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SqliteDataOutput is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10644,16 +10644,16 @@ PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SqliteDataOut
 }
 
 PyObject *
-PyNs3SqliteDataOutput__PythonHelper::_wrap_DoInitialize(PyNs3SqliteDataOutput *self)
+PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose(PyNs3SqliteDataOutput *self)
 {
     PyObject *py_retval;
     PyNs3SqliteDataOutput__PythonHelper *helper = dynamic_cast< PyNs3SqliteDataOutput__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SqliteDataOutput is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11097,10 +11097,10 @@ _wrap_PyNs3SqliteDataOutput__copy__(PyNs3SqliteDataOutput *self)
 
 static PyMethodDef PyNs3SqliteDataOutput_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SqliteDataOutput_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3SqliteDataOutput_Output, METH_VARARGS|METH_KEYWORDS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3SqliteDataOutput_Output, METH_KEYWORDS|METH_VARARGS, "Output(dc)\n\ntype: dc: ns3::DataCollector &" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SqliteDataOutput__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SqliteDataOutput__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -11168,7 +11168,7 @@ PyTypeObject PyNs3SqliteDataOutput_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SqliteDataOutput(arg0)\nSqliteDataOutput()",                        /* Documentation string */
     (traverseproc)PyNs3SqliteDataOutput__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SqliteDataOutput__tp_clear,             /* tp_clear */
@@ -11201,16 +11201,16 @@ PyTypeObject PyNs3SqliteDataOutput_Type = {
 
 
 PyObject *
-PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose(PyNs3TimeMinMaxAvgTotalCalculator *self)
+PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoInitialize(PyNs3TimeMinMaxAvgTotalCalculator *self)
 {
     PyObject *py_retval;
     PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper *helper = dynamic_cast< PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class TimeMinMaxAvgTotalCalculator is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11233,16 +11233,16 @@ PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3T
 }
 
 PyObject *
-PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoInitialize(PyNs3TimeMinMaxAvgTotalCalculator *self)
+PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose(PyNs3TimeMinMaxAvgTotalCalculator *self)
 {
     PyObject *py_retval;
     PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper *helper = dynamic_cast< PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class TimeMinMaxAvgTotalCalculator is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11749,11 +11749,11 @@ _wrap_PyNs3TimeMinMaxAvgTotalCalculator__copy__(PyNs3TimeMinMaxAvgTotalCalculato
 
 static PyMethodDef PyNs3TimeMinMaxAvgTotalCalculator_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Output", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Output, METH_VARARGS|METH_KEYWORDS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
-    {(char *) "Update", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Update, METH_VARARGS|METH_KEYWORDS, "Update(i)\n\ntype: i: ns3::Time const" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "Output", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Output, METH_KEYWORDS|METH_VARARGS, "Output(callback)\n\ntype: callback: ns3::DataOutputCallback &" },
+    {(char *) "Update", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator_Update, METH_KEYWORDS|METH_VARARGS, "Update(i)\n\ntype: i: ns3::Time const" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeMinMaxAvgTotalCalculator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeMinMaxAvgTotalCalculator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -11821,7 +11821,7 @@ PyTypeObject PyNs3TimeMinMaxAvgTotalCalculator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TimeMinMaxAvgTotalCalculator(arg0)\nTimeMinMaxAvgTotalCalculator()",                        /* Documentation string */
     (traverseproc)PyNs3TimeMinMaxAvgTotalCalculator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeMinMaxAvgTotalCalculator__tp_clear,             /* tp_clear */
@@ -11854,16 +11854,16 @@ PyTypeObject PyNs3TimeMinMaxAvgTotalCalculator_Type = {
 
 
 PyObject *
-PyNs3TimeProbe__PythonHelper::_wrap_DoDispose(PyNs3TimeProbe *self)
+PyNs3TimeProbe__PythonHelper::_wrap_DoInitialize(PyNs3TimeProbe *self)
 {
     PyObject *py_retval;
     PyNs3TimeProbe__PythonHelper *helper = dynamic_cast< PyNs3TimeProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11886,16 +11886,16 @@ PyNs3TimeProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TimeProbe *self)
 }
 
 PyObject *
-PyNs3TimeProbe__PythonHelper::_wrap_DoInitialize(PyNs3TimeProbe *self)
+PyNs3TimeProbe__PythonHelper::_wrap_DoDispose(PyNs3TimeProbe *self)
 {
     PyObject *py_retval;
     PyNs3TimeProbe__PythonHelper *helper = dynamic_cast< PyNs3TimeProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12532,15 +12532,15 @@ _wrap_PyNs3TimeProbe__copy__(PyNs3TimeProbe *self)
 }
 
 static PyMethodDef PyNs3TimeProbe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3TimeProbe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3TimeProbe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3TimeProbe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3TimeProbe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TimeProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3TimeProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3TimeProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: ns3::Time" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3TimeProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: ns3::Time" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3TimeProbe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: ns3::Time" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3TimeProbe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: ns3::Time" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TimeProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -12608,7 +12608,7 @@ PyTypeObject PyNs3TimeProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TimeProbe(arg0)\nTimeProbe()",                        /* Documentation string */
     (traverseproc)PyNs3TimeProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeProbe__tp_clear,             /* tp_clear */
@@ -12852,11 +12852,11 @@ _wrap_PyNs3TimeSeriesAdaptor__copy__(PyNs3TimeSeriesAdaptor *self)
 
 static PyMethodDef PyNs3TimeSeriesAdaptor_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "TraceSinkBoolean", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkBoolean, METH_VARARGS|METH_KEYWORDS, "TraceSinkBoolean(oldData, newData)\n\ntype: oldData: bool\ntype: newData: bool" },
-    {(char *) "TraceSinkDouble", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkDouble, METH_VARARGS|METH_KEYWORDS, "TraceSinkDouble(oldData, newData)\n\ntype: oldData: double\ntype: newData: double" },
-    {(char *) "TraceSinkUinteger16", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger16, METH_VARARGS|METH_KEYWORDS, "TraceSinkUinteger16(oldData, newData)\n\ntype: oldData: uint16_t\ntype: newData: uint16_t" },
-    {(char *) "TraceSinkUinteger32", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger32, METH_VARARGS|METH_KEYWORDS, "TraceSinkUinteger32(oldData, newData)\n\ntype: oldData: uint32_t\ntype: newData: uint32_t" },
-    {(char *) "TraceSinkUinteger8", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger8, METH_VARARGS|METH_KEYWORDS, "TraceSinkUinteger8(oldData, newData)\n\ntype: oldData: uint8_t\ntype: newData: uint8_t" },
+    {(char *) "TraceSinkBoolean", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkBoolean, METH_KEYWORDS|METH_VARARGS, "TraceSinkBoolean(oldData, newData)\n\ntype: oldData: bool\ntype: newData: bool" },
+    {(char *) "TraceSinkDouble", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkDouble, METH_KEYWORDS|METH_VARARGS, "TraceSinkDouble(oldData, newData)\n\ntype: oldData: double\ntype: newData: double" },
+    {(char *) "TraceSinkUinteger16", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger16, METH_KEYWORDS|METH_VARARGS, "TraceSinkUinteger16(oldData, newData)\n\ntype: oldData: uint16_t\ntype: newData: uint16_t" },
+    {(char *) "TraceSinkUinteger32", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger32, METH_KEYWORDS|METH_VARARGS, "TraceSinkUinteger32(oldData, newData)\n\ntype: oldData: uint32_t\ntype: newData: uint32_t" },
+    {(char *) "TraceSinkUinteger8", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor_TraceSinkUinteger8, METH_KEYWORDS|METH_VARARGS, "TraceSinkUinteger8(oldData, newData)\n\ntype: oldData: uint8_t\ntype: newData: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeSeriesAdaptor__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12920,7 +12920,7 @@ PyTypeObject PyNs3TimeSeriesAdaptor_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TimeSeriesAdaptor(arg0)\nTimeSeriesAdaptor()",                        /* Documentation string */
     (traverseproc)PyNs3TimeSeriesAdaptor__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimeSeriesAdaptor__tp_clear,             /* tp_clear */
@@ -12953,16 +12953,16 @@ PyTypeObject PyNs3TimeSeriesAdaptor_Type = {
 
 
 PyObject *
-PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger16Probe *self)
+PyNs3Uinteger16Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger16Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger16Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger16Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12985,16 +12985,16 @@ PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Uinteger16Prob
 }
 
 PyObject *
-PyNs3Uinteger16Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger16Probe *self)
+PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger16Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger16Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger16Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13639,15 +13639,15 @@ _wrap_PyNs3Uinteger16Probe__copy__(PyNs3Uinteger16Probe *self)
 }
 
 static PyMethodDef PyNs3Uinteger16Probe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger16Probe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger16Probe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger16Probe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger16Probe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Uinteger16Probe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger16Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint16_t" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint16_t" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: uint16_t" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger16Probe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint16_t" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger16Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger16Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -13715,7 +13715,7 @@ PyTypeObject PyNs3Uinteger16Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Uinteger16Probe(arg0)\nUinteger16Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger16Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger16Probe__tp_clear,             /* tp_clear */
@@ -13748,16 +13748,16 @@ PyTypeObject PyNs3Uinteger16Probe_Type = {
 
 
 PyObject *
-PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger32Probe *self)
+PyNs3Uinteger32Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger32Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger32Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger32Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13780,16 +13780,16 @@ PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Uinteger32Prob
 }
 
 PyObject *
-PyNs3Uinteger32Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger32Probe *self)
+PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger32Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger32Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger32Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14426,15 +14426,15 @@ _wrap_PyNs3Uinteger32Probe__copy__(PyNs3Uinteger32Probe *self)
 }
 
 static PyMethodDef PyNs3Uinteger32Probe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger32Probe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger32Probe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger32Probe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger32Probe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Uinteger32Probe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger32Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint32_t" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint32_t" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: uint32_t" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger32Probe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint32_t" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger32Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger32Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -14502,7 +14502,7 @@ PyTypeObject PyNs3Uinteger32Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Uinteger32Probe(arg0)\nUinteger32Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger32Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger32Probe__tp_clear,             /* tp_clear */
@@ -14535,16 +14535,16 @@ PyTypeObject PyNs3Uinteger32Probe_Type = {
 
 
 PyObject *
-PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger8Probe *self)
+PyNs3Uinteger8Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger8Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger8Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger8Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14567,16 +14567,16 @@ PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Uinteger8Probe 
 }
 
 PyObject *
-PyNs3Uinteger8Probe__PythonHelper::_wrap_DoInitialize(PyNs3Uinteger8Probe *self)
+PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose(PyNs3Uinteger8Probe *self)
 {
     PyObject *py_retval;
     PyNs3Uinteger8Probe__PythonHelper *helper = dynamic_cast< PyNs3Uinteger8Probe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15221,15 +15221,15 @@ _wrap_PyNs3Uinteger8Probe__copy__(PyNs3Uinteger8Probe *self)
 }
 
 static PyMethodDef PyNs3Uinteger8Probe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger8Probe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger8Probe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3Uinteger8Probe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3Uinteger8Probe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Uinteger8Probe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3Uinteger8Probe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: uint8_t" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint8_t" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: uint8_t" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3Uinteger8Probe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: uint8_t" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Uinteger8Probe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Uinteger8Probe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -15297,7 +15297,7 @@ PyTypeObject PyNs3Uinteger8Probe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Uinteger8Probe(arg0)\nUinteger8Probe()",                        /* Documentation string */
     (traverseproc)PyNs3Uinteger8Probe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Uinteger8Probe__tp_clear,             /* tp_clear */
@@ -15330,16 +15330,16 @@ PyTypeObject PyNs3Uinteger8Probe_Type = {
 
 
 PyObject *
-PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose(PyNs3BooleanProbe *self)
+PyNs3BooleanProbe__PythonHelper::_wrap_DoInitialize(PyNs3BooleanProbe *self)
 {
     PyObject *py_retval;
     PyNs3BooleanProbe__PythonHelper *helper = dynamic_cast< PyNs3BooleanProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15362,16 +15362,16 @@ PyNs3BooleanProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BooleanProbe *sel
 }
 
 PyObject *
-PyNs3BooleanProbe__PythonHelper::_wrap_DoInitialize(PyNs3BooleanProbe *self)
+PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose(PyNs3BooleanProbe *self)
 {
     PyObject *py_retval;
     PyNs3BooleanProbe__PythonHelper *helper = dynamic_cast< PyNs3BooleanProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16012,15 +16012,15 @@ _wrap_PyNs3BooleanProbe__copy__(PyNs3BooleanProbe *self)
 }
 
 static PyMethodDef PyNs3BooleanProbe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3BooleanProbe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3BooleanProbe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3BooleanProbe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3BooleanProbe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BooleanProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3BooleanProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: bool" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: bool" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: bool" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3BooleanProbe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: bool" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BooleanProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BooleanProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -16088,7 +16088,7 @@ PyTypeObject PyNs3BooleanProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BooleanProbe(arg0)\nBooleanProbe()",                        /* Documentation string */
     (traverseproc)PyNs3BooleanProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BooleanProbe__tp_clear,             /* tp_clear */
@@ -16121,16 +16121,16 @@ PyTypeObject PyNs3BooleanProbe_Type = {
 
 
 PyObject *
-PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose(PyNs3DoubleProbe *self)
+PyNs3DoubleProbe__PythonHelper::_wrap_DoInitialize(PyNs3DoubleProbe *self)
 {
     PyObject *py_retval;
     PyNs3DoubleProbe__PythonHelper *helper = dynamic_cast< PyNs3DoubleProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16153,16 +16153,16 @@ PyNs3DoubleProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DoubleProbe *self)
 }
 
 PyObject *
-PyNs3DoubleProbe__PythonHelper::_wrap_DoInitialize(PyNs3DoubleProbe *self)
+PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose(PyNs3DoubleProbe *self)
 {
     PyObject *py_retval;
     PyNs3DoubleProbe__PythonHelper *helper = dynamic_cast< PyNs3DoubleProbe__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16799,15 +16799,15 @@ _wrap_PyNs3DoubleProbe__copy__(PyNs3DoubleProbe *self)
 }
 
 static PyMethodDef PyNs3DoubleProbe_methods[] = {
-    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3DoubleProbe_ConnectByObject, METH_VARARGS|METH_KEYWORDS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
-    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3DoubleProbe_ConnectByPath, METH_VARARGS|METH_KEYWORDS, "ConnectByPath(path)\n\ntype: path: std::string" },
+    {(char *) "ConnectByObject", (PyCFunction) _wrap_PyNs3DoubleProbe_ConnectByObject, METH_KEYWORDS|METH_VARARGS, "ConnectByObject(traceSource, obj)\n\ntype: traceSource: std::string\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "ConnectByPath", (PyCFunction) _wrap_PyNs3DoubleProbe_ConnectByPath, METH_KEYWORDS|METH_VARARGS, "ConnectByPath(path)\n\ntype: path: std::string" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DoubleProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3DoubleProbe_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: double" },
-    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValueByPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: double" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: double" },
+    {(char *) "SetValueByPath", (PyCFunction) _wrap_PyNs3DoubleProbe_SetValueByPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetValueByPath(path, value)\n\ntype: path: std::string\ntype: value: double" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DoubleProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DoubleProbe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -16875,7 +16875,7 @@ PyTypeObject PyNs3DoubleProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DoubleProbe(arg0)\nDoubleProbe()",                        /* Documentation string */
     (traverseproc)PyNs3DoubleProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DoubleProbe__tp_clear,             /* tp_clear */

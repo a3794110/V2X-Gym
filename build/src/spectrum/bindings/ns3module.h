@@ -3263,21 +3263,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumErrorModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3SpectrumErrorModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumErrorModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3SpectrumErrorModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumErrorModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void EvaluateChunk(ns3::SpectrumValue const & sinr, ns3::Time duration);
 
@@ -3343,21 +3343,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumInterference *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3SpectrumInterference *self);
-    inline void DoDispose__parent_caller()
-    { ns3::SpectrumInterference::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumInterference *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3SpectrumInterference *self);
+    inline void DoDispose__parent_caller()
+    { ns3::SpectrumInterference::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumInterference *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -3423,21 +3423,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumPhy *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3SpectrumPhy *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumPhy *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3SpectrumPhy *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumPhy *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void SetDevice(ns3::Ptr< ns3::NetDevice > d);
 
@@ -3513,21 +3513,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumPropagationLossModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumPropagationLossModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumPropagationLossModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -3605,21 +3605,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3TvSpectrumTransmitter *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3TvSpectrumTransmitter *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3TvSpectrumTransmitter *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3TvSpectrumTransmitter *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3TvSpectrumTransmitter *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void SetChannel(ns3::Ptr< ns3::SpectrumChannel > c);
 
@@ -3699,17 +3699,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3WaveformGenerator *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaveformGenerator *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3WaveformGenerator *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3WaveformGenerator *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3WaveformGenerator *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void SetChannel(ns3::Ptr< ns3::SpectrumChannel > c);
 
@@ -3802,21 +3802,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3ConstantSpectrumPropagationLossModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ConstantSpectrumPropagationLossModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3ConstantSpectrumPropagationLossModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual ns3::Ptr< ns3::SpectrumValue > DoCalcRxPowerSpectralDensity(ns3::Ptr< ns3::SpectrumValue const > txPsd, ns3::Ptr< ns3::MobilityModel const > a, ns3::Ptr< ns3::MobilityModel const > b) const;
 
@@ -3878,21 +3878,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3FriisSpectrumPropagationLossModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3FriisSpectrumPropagationLossModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::SpectrumPropagationLossModel::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3FriisSpectrumPropagationLossModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual ns3::Ptr< ns3::SpectrumValue > DoCalcRxPowerSpectralDensity(ns3::Ptr< ns3::SpectrumValue const > txPsd, ns3::Ptr< ns3::MobilityModel const > a, ns3::Ptr< ns3::MobilityModel const > b) const;
 
@@ -3950,17 +3950,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3HalfDuplexIdealPhy *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3HalfDuplexIdealPhy *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3HalfDuplexIdealPhy *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void SetChannel(ns3::Ptr< ns3::SpectrumChannel > c);
 
@@ -4046,17 +4046,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3NonCommunicatingNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3NonCommunicatingNetDevice *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3NonCommunicatingNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual ns3::Address GetAddress() const;
 
@@ -4158,21 +4158,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3ShannonSpectrumErrorModel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::ShannonSpectrumErrorModel::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3ShannonSpectrumErrorModel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::ShannonSpectrumErrorModel::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3ShannonSpectrumErrorModel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void EvaluateChunk(ns3::SpectrumValue const & sinr, ns3::Time duration);
 
@@ -4234,21 +4234,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumAnalyzer *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3SpectrumAnalyzer *self);
-    inline void DoDispose__parent_caller()
-    { ns3::SpectrumAnalyzer::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumAnalyzer *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3SpectrumAnalyzer *self);
+    inline void DoDispose__parent_caller()
+    { ns3::SpectrumAnalyzer::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumAnalyzer *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void SetChannel(ns3::Ptr< ns3::SpectrumChannel > c);
 
@@ -4330,17 +4330,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SpectrumChannel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SpectrumChannel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SpectrumChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3SpectrumChannel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void AddRx(ns3::Ptr< ns3::SpectrumPhy > phy);
 
@@ -4408,17 +4408,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3AlohaNoackNetDevice *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3AlohaNoackNetDevice *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3AlohaNoackNetDevice *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual ns3::Address GetAddress() const;
 
@@ -4520,21 +4520,21 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3MultiModelSpectrumChannel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self);
-    inline void DoDispose__parent_caller()
-    { ns3::MultiModelSpectrumChannel::DoDispose(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MultiModelSpectrumChannel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self);
+    inline void DoDispose__parent_caller()
+    { ns3::MultiModelSpectrumChannel::DoDispose(); }
+
+    static PyObject * _wrap_DoInitialize(PyNs3MultiModelSpectrumChannel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void AddRx(ns3::Ptr< ns3::SpectrumPhy > phy);
 
@@ -4604,17 +4604,17 @@ public:
     }
 
 
-    static PyObject * _wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
+    static PyObject * _wrap_NotifyNewAggregate(PyNs3SingleModelSpectrumChannel *self);
+    inline void NotifyNewAggregate__parent_caller()
+    { ns3::Object::NotifyNewAggregate(); }
 
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3SingleModelSpectrumChannel *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
 
-    static PyObject * _wrap_NotifyNewAggregate(PyNs3SingleModelSpectrumChannel *self);
-    inline void NotifyNewAggregate__parent_caller()
-    { ns3::Object::NotifyNewAggregate(); }
+    static PyObject * _wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
 
     virtual void AddRx(ns3::Ptr< ns3::SpectrumPhy > phy);
 

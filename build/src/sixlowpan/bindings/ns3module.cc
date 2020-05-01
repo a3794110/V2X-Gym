@@ -642,8 +642,8 @@ _wrap_PyNs3SixLowPanDispatch__copy__(PyNs3SixLowPanDispatch *self)
 }
 
 static PyMethodDef PyNs3SixLowPanDispatch_methods[] = {
-    {(char *) "GetDispatchType", (PyCFunction) _wrap_PyNs3SixLowPanDispatch_GetDispatchType, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetDispatchType(dispatch)\n\ntype: dispatch: uint8_t" },
-    {(char *) "GetNhcDispatchType", (PyCFunction) _wrap_PyNs3SixLowPanDispatch_GetNhcDispatchType, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetNhcDispatchType(dispatch)\n\ntype: dispatch: uint8_t" },
+    {(char *) "GetDispatchType", (PyCFunction) _wrap_PyNs3SixLowPanDispatch_GetDispatchType, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetDispatchType(dispatch)\n\ntype: dispatch: uint8_t" },
+    {(char *) "GetNhcDispatchType", (PyCFunction) _wrap_PyNs3SixLowPanDispatch_GetNhcDispatchType, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetNhcDispatchType(dispatch)\n\ntype: dispatch: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanDispatch__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -859,9 +859,9 @@ _wrap_PyNs3SixLowPanHelper__copy__(PyNs3SixLowPanHelper *self)
 }
 
 static PyMethodDef PyNs3SixLowPanHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SixLowPanHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(c, stream)\n\ntype: c: ns3::NetDeviceContainer\ntype: stream: int64_t" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3SixLowPanHelper_Install, METH_KEYWORDS|METH_VARARGS, "Install(c)\n\ntype: c: ns3::NetDeviceContainer" },
-    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3SixLowPanHelper_SetDeviceAttribute, METH_KEYWORDS|METH_VARARGS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SixLowPanHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(c, stream)\n\ntype: c: ns3::NetDeviceContainer\ntype: stream: int64_t" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3SixLowPanHelper_Install, METH_VARARGS|METH_KEYWORDS, "Install(c)\n\ntype: c: ns3::NetDeviceContainer" },
+    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3SixLowPanHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1164,15 +1164,15 @@ _wrap_PyNs3SixLowPanFrag1__copy__(PyNs3SixLowPanFrag1 *self)
 }
 
 static PyMethodDef PyNs3SixLowPanFrag1_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_GetDatagramSize, METH_NOARGS, "GetDatagramSize()\n\n" },
     {(char *) "GetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_GetDatagramTag, METH_NOARGS, "GetDatagramTag()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_SetDatagramSize, METH_KEYWORDS|METH_VARARGS, "SetDatagramSize(datagramSize)\n\ntype: datagramSize: uint16_t" },
-    {(char *) "SetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_SetDatagramTag, METH_KEYWORDS|METH_VARARGS, "SetDatagramTag(datagramTag)\n\ntype: datagramTag: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_SetDatagramSize, METH_VARARGS|METH_KEYWORDS, "SetDatagramSize(datagramSize)\n\ntype: datagramSize: uint16_t" },
+    {(char *) "SetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFrag1_SetDatagramTag, METH_VARARGS|METH_KEYWORDS, "SetDatagramTag(datagramTag)\n\ntype: datagramTag: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanFrag1__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1247,7 +1247,7 @@ PyTypeObject PyNs3SixLowPanFrag1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanFrag1(arg0)\nSixLowPanFrag1()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanFrag1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanFrag1__tp_clear,             /* tp_clear */
@@ -1536,17 +1536,17 @@ _wrap_PyNs3SixLowPanFragN__copy__(PyNs3SixLowPanFragN *self)
 }
 
 static PyMethodDef PyNs3SixLowPanFragN_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetDatagramOffset", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetDatagramOffset, METH_NOARGS, "GetDatagramOffset()\n\n" },
     {(char *) "GetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetDatagramSize, METH_NOARGS, "GetDatagramSize()\n\n" },
     {(char *) "GetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetDatagramTag, METH_NOARGS, "GetDatagramTag()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanFragN_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDatagramOffset", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramOffset, METH_KEYWORDS|METH_VARARGS, "SetDatagramOffset(datagramOffset)\n\ntype: datagramOffset: uint8_t" },
-    {(char *) "SetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramSize, METH_KEYWORDS|METH_VARARGS, "SetDatagramSize(datagramSize)\n\ntype: datagramSize: uint16_t" },
-    {(char *) "SetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramTag, METH_KEYWORDS|METH_VARARGS, "SetDatagramTag(datagramTag)\n\ntype: datagramTag: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDatagramOffset", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramOffset, METH_VARARGS|METH_KEYWORDS, "SetDatagramOffset(datagramOffset)\n\ntype: datagramOffset: uint8_t" },
+    {(char *) "SetDatagramSize", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramSize, METH_VARARGS|METH_KEYWORDS, "SetDatagramSize(datagramSize)\n\ntype: datagramSize: uint16_t" },
+    {(char *) "SetDatagramTag", (PyCFunction) _wrap_PyNs3SixLowPanFragN_SetDatagramTag, METH_VARARGS|METH_KEYWORDS, "SetDatagramTag(datagramTag)\n\ntype: datagramTag: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanFragN__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1621,7 +1621,7 @@ PyTypeObject PyNs3SixLowPanFragN_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanFragN(arg0)\nSixLowPanFragN()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanFragN__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanFragN__tp_clear,             /* tp_clear */
@@ -2059,7 +2059,7 @@ _wrap_PyNs3SixLowPanHc1__copy__(PyNs3SixLowPanHc1 *self)
 }
 
 static PyMethodDef PyNs3SixLowPanHc1_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanHc1_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanHc1_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetDstCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_GetDstCompression, METH_NOARGS, "GetDstCompression()\n\n" },
     {(char *) "GetFlowLabel", (PyCFunction) _wrap_PyNs3SixLowPanHc1_GetFlowLabel, METH_NOARGS, "GetFlowLabel()\n\n" },
     {(char *) "GetHopLimit", (PyCFunction) _wrap_PyNs3SixLowPanHc1_GetHopLimit, METH_NOARGS, "GetHopLimit()\n\n" },
@@ -2071,15 +2071,15 @@ static PyMethodDef PyNs3SixLowPanHc1_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanHc1_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsHc2HeaderPresent", (PyCFunction) _wrap_PyNs3SixLowPanHc1_IsHc2HeaderPresent, METH_NOARGS, "IsHc2HeaderPresent()\n\n" },
     {(char *) "IsTcflCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_IsTcflCompression, METH_NOARGS, "IsTcflCompression()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanHc1_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDstCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetDstCompression, METH_KEYWORDS|METH_VARARGS, "SetDstCompression(dstCompression)\n\ntype: dstCompression: ns3::SixLowPanHc1::LowPanHc1Addr_e" },
-    {(char *) "SetFlowLabel", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetFlowLabel, METH_KEYWORDS|METH_VARARGS, "SetFlowLabel(flowLabel)\n\ntype: flowLabel: uint32_t" },
-    {(char *) "SetHc2HeaderPresent", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetHc2HeaderPresent, METH_KEYWORDS|METH_VARARGS, "SetHc2HeaderPresent(hc2HeaderPresent)\n\ntype: hc2HeaderPresent: bool" },
-    {(char *) "SetHopLimit", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetHopLimit, METH_KEYWORDS|METH_VARARGS, "SetHopLimit(limit)\n\ntype: limit: uint8_t" },
-    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetNextHeader, METH_KEYWORDS|METH_VARARGS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
-    {(char *) "SetSrcCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetSrcCompression, METH_KEYWORDS|METH_VARARGS, "SetSrcCompression(srcCompression)\n\ntype: srcCompression: ns3::SixLowPanHc1::LowPanHc1Addr_e" },
-    {(char *) "SetTcflCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetTcflCompression, METH_KEYWORDS|METH_VARARGS, "SetTcflCompression(tcflCompression)\n\ntype: tcflCompression: bool" },
-    {(char *) "SetTrafficClass", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetTrafficClass, METH_KEYWORDS|METH_VARARGS, "SetTrafficClass(trafficClass)\n\ntype: trafficClass: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanHc1_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDstCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetDstCompression, METH_VARARGS|METH_KEYWORDS, "SetDstCompression(dstCompression)\n\ntype: dstCompression: ns3::SixLowPanHc1::LowPanHc1Addr_e" },
+    {(char *) "SetFlowLabel", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetFlowLabel, METH_VARARGS|METH_KEYWORDS, "SetFlowLabel(flowLabel)\n\ntype: flowLabel: uint32_t" },
+    {(char *) "SetHc2HeaderPresent", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetHc2HeaderPresent, METH_VARARGS|METH_KEYWORDS, "SetHc2HeaderPresent(hc2HeaderPresent)\n\ntype: hc2HeaderPresent: bool" },
+    {(char *) "SetHopLimit", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetHopLimit, METH_VARARGS|METH_KEYWORDS, "SetHopLimit(limit)\n\ntype: limit: uint8_t" },
+    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetNextHeader, METH_VARARGS|METH_KEYWORDS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
+    {(char *) "SetSrcCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetSrcCompression, METH_VARARGS|METH_KEYWORDS, "SetSrcCompression(srcCompression)\n\ntype: srcCompression: ns3::SixLowPanHc1::LowPanHc1Addr_e" },
+    {(char *) "SetTcflCompression", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetTcflCompression, METH_VARARGS|METH_KEYWORDS, "SetTcflCompression(tcflCompression)\n\ntype: tcflCompression: bool" },
+    {(char *) "SetTrafficClass", (PyCFunction) _wrap_PyNs3SixLowPanHc1_SetTrafficClass, METH_VARARGS|METH_KEYWORDS, "SetTrafficClass(trafficClass)\n\ntype: trafficClass: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanHc1__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2154,7 +2154,7 @@ PyTypeObject PyNs3SixLowPanHc1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanHc1(arg0)\nSixLowPanHc1()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanHc1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanHc1__tp_clear,             /* tp_clear */
@@ -2946,7 +2946,7 @@ _wrap_PyNs3SixLowPanIphc__copy__(PyNs3SixLowPanIphc *self)
 }
 
 static PyMethodDef PyNs3SixLowPanIphc_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanIphc_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanIphc_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetDac", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetDac, METH_NOARGS, "GetDac()\n\n" },
     {(char *) "GetDam", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetDam, METH_NOARGS, "GetDam()\n\n" },
@@ -2968,25 +2968,25 @@ static PyMethodDef PyNs3SixLowPanIphc_methods[] = {
     {(char *) "GetSrcContextId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetSrcContextId, METH_NOARGS, "GetSrcContextId()\n\n" },
     {(char *) "GetTf", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetTf, METH_NOARGS, "GetTf()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanIphc_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cidField)\n\ntype: cidField: bool" },
-    {(char *) "SetDac", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDac, METH_KEYWORDS|METH_VARARGS, "SetDac(dacField)\n\ntype: dacField: bool" },
-    {(char *) "SetDam", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDam, METH_KEYWORDS|METH_VARARGS, "SetDam(damField)\n\ntype: damField: ns3::SixLowPanIphc::HeaderCompression_e" },
-    {(char *) "SetDscp", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDscp, METH_KEYWORDS|METH_VARARGS, "SetDscp(dscp)\n\ntype: dscp: uint8_t" },
-    {(char *) "SetDstAddress", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDstAddress, METH_KEYWORDS|METH_VARARGS, "SetDstAddress(dstAddress)\n\ntype: dstAddress: ns3::Ipv6Address" },
-    {(char *) "SetDstContextId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDstContextId, METH_KEYWORDS|METH_VARARGS, "SetDstContextId(dstContextId)\n\ntype: dstContextId: uint8_t" },
-    {(char *) "SetEcn", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetEcn, METH_KEYWORDS|METH_VARARGS, "SetEcn(ecn)\n\ntype: ecn: uint8_t" },
-    {(char *) "SetFlowLabel", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetFlowLabel, METH_KEYWORDS|METH_VARARGS, "SetFlowLabel(flowLabel)\n\ntype: flowLabel: uint32_t" },
-    {(char *) "SetHlim", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetHlim, METH_KEYWORDS|METH_VARARGS, "SetHlim(hlimField)\n\ntype: hlimField: ns3::SixLowPanIphc::Hlim_e" },
-    {(char *) "SetHopLimit", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetHopLimit, METH_KEYWORDS|METH_VARARGS, "SetHopLimit(hopLimit)\n\ntype: hopLimit: uint8_t" },
-    {(char *) "SetM", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetM, METH_KEYWORDS|METH_VARARGS, "SetM(mField)\n\ntype: mField: bool" },
-    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetNextHeader, METH_KEYWORDS|METH_VARARGS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
-    {(char *) "SetNh", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetNh, METH_KEYWORDS|METH_VARARGS, "SetNh(nhField)\n\ntype: nhField: bool" },
-    {(char *) "SetSac", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSac, METH_KEYWORDS|METH_VARARGS, "SetSac(sacField)\n\ntype: sacField: bool" },
-    {(char *) "SetSam", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSam, METH_KEYWORDS|METH_VARARGS, "SetSam(samField)\n\ntype: samField: ns3::SixLowPanIphc::HeaderCompression_e" },
-    {(char *) "SetSrcAddress", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSrcAddress, METH_KEYWORDS|METH_VARARGS, "SetSrcAddress(srcAddress)\n\ntype: srcAddress: ns3::Ipv6Address" },
-    {(char *) "SetSrcContextId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSrcContextId, METH_KEYWORDS|METH_VARARGS, "SetSrcContextId(srcContextId)\n\ntype: srcContextId: uint8_t" },
-    {(char *) "SetTf", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetTf, METH_KEYWORDS|METH_VARARGS, "SetTf(tfField)\n\ntype: tfField: ns3::SixLowPanIphc::TrafficClassFlowLabel_e" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanIphc_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cidField)\n\ntype: cidField: bool" },
+    {(char *) "SetDac", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDac, METH_VARARGS|METH_KEYWORDS, "SetDac(dacField)\n\ntype: dacField: bool" },
+    {(char *) "SetDam", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDam, METH_VARARGS|METH_KEYWORDS, "SetDam(damField)\n\ntype: damField: ns3::SixLowPanIphc::HeaderCompression_e" },
+    {(char *) "SetDscp", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDscp, METH_VARARGS|METH_KEYWORDS, "SetDscp(dscp)\n\ntype: dscp: uint8_t" },
+    {(char *) "SetDstAddress", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDstAddress, METH_VARARGS|METH_KEYWORDS, "SetDstAddress(dstAddress)\n\ntype: dstAddress: ns3::Ipv6Address" },
+    {(char *) "SetDstContextId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetDstContextId, METH_VARARGS|METH_KEYWORDS, "SetDstContextId(dstContextId)\n\ntype: dstContextId: uint8_t" },
+    {(char *) "SetEcn", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetEcn, METH_VARARGS|METH_KEYWORDS, "SetEcn(ecn)\n\ntype: ecn: uint8_t" },
+    {(char *) "SetFlowLabel", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetFlowLabel, METH_VARARGS|METH_KEYWORDS, "SetFlowLabel(flowLabel)\n\ntype: flowLabel: uint32_t" },
+    {(char *) "SetHlim", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetHlim, METH_VARARGS|METH_KEYWORDS, "SetHlim(hlimField)\n\ntype: hlimField: ns3::SixLowPanIphc::Hlim_e" },
+    {(char *) "SetHopLimit", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetHopLimit, METH_VARARGS|METH_KEYWORDS, "SetHopLimit(hopLimit)\n\ntype: hopLimit: uint8_t" },
+    {(char *) "SetM", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetM, METH_VARARGS|METH_KEYWORDS, "SetM(mField)\n\ntype: mField: bool" },
+    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetNextHeader, METH_VARARGS|METH_KEYWORDS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
+    {(char *) "SetNh", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetNh, METH_VARARGS|METH_KEYWORDS, "SetNh(nhField)\n\ntype: nhField: bool" },
+    {(char *) "SetSac", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSac, METH_VARARGS|METH_KEYWORDS, "SetSac(sacField)\n\ntype: sacField: bool" },
+    {(char *) "SetSam", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSam, METH_VARARGS|METH_KEYWORDS, "SetSam(samField)\n\ntype: samField: ns3::SixLowPanIphc::HeaderCompression_e" },
+    {(char *) "SetSrcAddress", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSrcAddress, METH_VARARGS|METH_KEYWORDS, "SetSrcAddress(srcAddress)\n\ntype: srcAddress: ns3::Ipv6Address" },
+    {(char *) "SetSrcContextId", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetSrcContextId, METH_VARARGS|METH_KEYWORDS, "SetSrcContextId(srcContextId)\n\ntype: srcContextId: uint8_t" },
+    {(char *) "SetTf", (PyCFunction) _wrap_PyNs3SixLowPanIphc_SetTf, METH_VARARGS|METH_KEYWORDS, "SetTf(tfField)\n\ntype: tfField: ns3::SixLowPanIphc::TrafficClassFlowLabel_e" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanIphc__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3061,7 +3061,7 @@ PyTypeObject PyNs3SixLowPanIphc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanIphc(dispatch)\nSixLowPanIphc(arg0)\nSixLowPanIphc()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanIphc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanIphc__tp_clear,             /* tp_clear */
@@ -3251,11 +3251,11 @@ _wrap_PyNs3SixLowPanIpv6__copy__(PyNs3SixLowPanIpv6 *self)
 }
 
 static PyMethodDef PyNs3SixLowPanIpv6_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanIpv6_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanIpv6__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3330,7 +3330,7 @@ PyTypeObject PyNs3SixLowPanIpv6_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanIpv6(arg0)\nSixLowPanIpv6()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanIpv6__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanIpv6__tp_clear,             /* tp_clear */
@@ -3625,7 +3625,7 @@ _wrap_PyNs3SixLowPanNhcExtension__copy__(PyNs3SixLowPanNhcExtension *self)
 }
 
 static PyMethodDef PyNs3SixLowPanNhcExtension_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetEid", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetEid, METH_NOARGS, "GetEid()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetNextHeader, METH_NOARGS, "GetNextHeader()\n\n" },
@@ -3633,10 +3633,10 @@ static PyMethodDef PyNs3SixLowPanNhcExtension_methods[] = {
     {(char *) "GetNhcDispatchType", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetNhcDispatchType, METH_NOARGS, "GetNhcDispatchType()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetEid", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetEid, METH_KEYWORDS|METH_VARARGS, "SetEid(extensionHeaderType)\n\ntype: extensionHeaderType: ns3::SixLowPanNhcExtension::Eid_e" },
-    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetNextHeader, METH_KEYWORDS|METH_VARARGS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
-    {(char *) "SetNh", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetNh, METH_KEYWORDS|METH_VARARGS, "SetNh(nhField)\n\ntype: nhField: bool" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetEid", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetEid, METH_VARARGS|METH_KEYWORDS, "SetEid(extensionHeaderType)\n\ntype: extensionHeaderType: ns3::SixLowPanNhcExtension::Eid_e" },
+    {(char *) "SetNextHeader", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetNextHeader, METH_VARARGS|METH_KEYWORDS, "SetNextHeader(nextHeader)\n\ntype: nextHeader: uint8_t" },
+    {(char *) "SetNh", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension_SetNh, METH_VARARGS|METH_KEYWORDS, "SetNh(nhField)\n\ntype: nhField: bool" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanNhcExtension__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3711,7 +3711,7 @@ PyTypeObject PyNs3SixLowPanNhcExtension_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanNhcExtension(arg0)\nSixLowPanNhcExtension()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanNhcExtension__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanNhcExtension__tp_clear,             /* tp_clear */
@@ -4072,7 +4072,7 @@ _wrap_PyNs3SixLowPanUdpNhcExtension__copy__(PyNs3SixLowPanUdpNhcExtension *self)
 }
 
 static PyMethodDef PyNs3SixLowPanUdpNhcExtension_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetC", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetC, METH_NOARGS, "GetC()\n\n" },
     {(char *) "GetChecksum", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetChecksum, METH_NOARGS, "GetChecksum()\n\n" },
     {(char *) "GetDstPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetDstPort, METH_NOARGS, "GetDstPort()\n\n" },
@@ -4082,12 +4082,12 @@ static PyMethodDef PyNs3SixLowPanUdpNhcExtension_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetSrcPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetSrcPort, METH_NOARGS, "GetSrcPort()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetC", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetC, METH_KEYWORDS|METH_VARARGS, "SetC(cField)\n\ntype: cField: bool" },
-    {(char *) "SetChecksum", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetChecksum, METH_KEYWORDS|METH_VARARGS, "SetChecksum(checksum)\n\ntype: checksum: uint16_t" },
-    {(char *) "SetDstPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetDstPort, METH_KEYWORDS|METH_VARARGS, "SetDstPort(port)\n\ntype: port: uint16_t" },
-    {(char *) "SetPorts", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetPorts, METH_KEYWORDS|METH_VARARGS, "SetPorts(port)\n\ntype: port: ns3::SixLowPanUdpNhcExtension::Ports_e" },
-    {(char *) "SetSrcPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetSrcPort, METH_KEYWORDS|METH_VARARGS, "SetSrcPort(port)\n\ntype: port: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetC", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetC, METH_VARARGS|METH_KEYWORDS, "SetC(cField)\n\ntype: cField: bool" },
+    {(char *) "SetChecksum", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetChecksum, METH_VARARGS|METH_KEYWORDS, "SetChecksum(checksum)\n\ntype: checksum: uint16_t" },
+    {(char *) "SetDstPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetDstPort, METH_VARARGS|METH_KEYWORDS, "SetDstPort(port)\n\ntype: port: uint16_t" },
+    {(char *) "SetPorts", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetPorts, METH_VARARGS|METH_KEYWORDS, "SetPorts(port)\n\ntype: port: ns3::SixLowPanUdpNhcExtension::Ports_e" },
+    {(char *) "SetSrcPort", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension_SetSrcPort, METH_VARARGS|METH_KEYWORDS, "SetSrcPort(port)\n\ntype: port: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SixLowPanUdpNhcExtension__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4162,7 +4162,7 @@ PyTypeObject PyNs3SixLowPanUdpNhcExtension_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanUdpNhcExtension(arg0)\nSixLowPanUdpNhcExtension()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanUdpNhcExtension__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanUdpNhcExtension__tp_clear,             /* tp_clear */
@@ -4734,12 +4734,12 @@ _wrap_PyNs3SixLowPanNetDevice_SupportsSendFrom(PyNs3SixLowPanNetDevice *self)
 }
 
 static PyMethodDef PyNs3SixLowPanNetDevice_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "GetNetDevice", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetNetDevice, METH_NOARGS, "GetNetDevice()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
@@ -4748,14 +4748,14 @@ static PyMethodDef PyNs3SixLowPanNetDevice_methods[] = {
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNetDevice", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetNetDevice, METH_KEYWORDS|METH_VARARGS, "SetNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNetDevice", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetNetDevice, METH_VARARGS|METH_KEYWORDS, "SetNetDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3SixLowPanNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
     {NULL, NULL, 0, NULL}
 };
@@ -4819,7 +4819,7 @@ PyTypeObject PyNs3SixLowPanNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SixLowPanNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanNetDevice__tp_clear,             /* tp_clear */

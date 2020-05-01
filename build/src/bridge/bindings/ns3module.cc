@@ -751,22 +751,6 @@ PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose(PyNs3BridgeChannel *self)
 }
 
 PyObject *
-PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize(PyNs3BridgeChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3BridgeChannel__PythonHelper *helper = dynamic_cast< PyNs3BridgeChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BridgeChannel *self)
 {
     PyObject *py_retval;
@@ -777,6 +761,22 @@ PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BridgeC
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize(PyNs3BridgeChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3BridgeChannel__PythonHelper *helper = dynamic_cast< PyNs3BridgeChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1230,8 +1230,8 @@ static PyMethodDef PyNs3BridgeChannel_methods[] = {
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3BridgeChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BridgeChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1297,7 +1297,7 @@ PyTypeObject PyNs3BridgeChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "BridgeChannel()",                        /* Documentation string */
     (traverseproc)PyNs3BridgeChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BridgeChannel__tp_clear,             /* tp_clear */
@@ -2000,7 +2000,7 @@ PyTypeObject PyNs3BridgeNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "BridgeNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3BridgeNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BridgeNetDevice__tp_clear,             /* tp_clear */

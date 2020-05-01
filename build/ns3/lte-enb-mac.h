@@ -20,6 +20,7 @@
  * Modified by:
  *          Danilo Abrignani <danilo.abrignani@unibo.it> (Carrier Aggregation - GSoC 2015)
  *          Biljana Bojovic <biljana.bojovic@cttc.es> (Carrier Aggregation)
+ *          NIST (D2D)
  */
 
 #ifndef LTE_ENB_MAC_H
@@ -251,6 +252,17 @@ private:
   */
   void DoUeUpdateConfigurationReq (LteEnbCmacSapProvider::UeConfig params);
   /**
+   * \brief add pool function
+   * \param group group
+   * \param pool Ptr<SidelinkCommResourcePool>
+   */
+  void DoAddPool (uint32_t group, Ptr<SidelinkCommResourcePool> pool);
+  /**
+   * \brief remove pool function
+   * \param group group
+   */
+  void DoRemovePool (uint32_t group);
+  /**
   * \brief Get RACH configuration function
   * \returns LteEnbCmacSapProvider::RachConfig
   */
@@ -363,7 +375,7 @@ private:
   */
   void DoDlInfoListElementHarqFeeback (DlInfoListElement_s params);
 
-  /// RNTI, LC ID, SAP of the RLC instance
+  /// rnti, lcid, SAP of the RLC instance
   std::map <uint16_t, std::map<uint8_t, LteMacSapUser*> > m_rlcAttached;
 
   std::vector <CqiListElement_s> m_dlCqiReceived; ///< DL-CQI received

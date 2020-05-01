@@ -659,22 +659,6 @@ PyTypeObject PyNs3PropagationCache__Ns3JakesProcess_Type = {
 
 
 PyObject *
-PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PropagationDelayModel *self)
-{
-    PyObject *py_retval;
-    PyNs3PropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationDelayModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3PropagationDelayModel *self)
 {
     PyObject *py_retval;
@@ -691,16 +675,16 @@ PyNs3PropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3PropagationDelayM
 }
 
 PyObject *
-PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PropagationDelayModel *self)
+PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PropagationDelayModel *self)
 {
     PyObject *py_retval;
     PyNs3PropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationDelayModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -717,6 +701,22 @@ PyNs3PropagationDelayModel__PythonHelper::_wrap_DoInitialize(PyNs3PropagationDel
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PropagationDelayModel *self)
+{
+    PyObject *py_retval;
+    PyNs3PropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationDelayModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1256,10 +1256,10 @@ static PyMethodDef PyNs3PropagationDelayModel_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3PropagationDelayModel_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetDelay", (PyCFunction) _wrap_PyNs3PropagationDelayModel_GetDelay, METH_VARARGS|METH_KEYWORDS, "GetDelay(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PropagationDelayModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1325,7 +1325,7 @@ PyTypeObject PyNs3PropagationDelayModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PropagationDelayModel(arg0)\nPropagationDelayModel()",                        /* Documentation string */
     (traverseproc)PyNs3PropagationDelayModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PropagationDelayModel__tp_clear,             /* tp_clear */
@@ -1358,22 +1358,6 @@ PyTypeObject PyNs3PropagationDelayModel_Type = {
 
 
 PyObject *
-PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3PropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -1390,16 +1374,16 @@ PyNs3PropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3PropagationLossMod
 }
 
 PyObject *
-PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PropagationLossModel *self)
+PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1416,6 +1400,22 @@ PyNs3PropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3PropagationLoss
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3PropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -1965,10 +1965,10 @@ static PyMethodDef PyNs3PropagationLossModel_methods[] = {
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3PropagationLossModel_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "CalcRxPower", (PyCFunction) _wrap_PyNs3PropagationLossModel_CalcRxPower, METH_VARARGS|METH_KEYWORDS, "CalcRxPower(txPowerDbm, a, b)\n\ntype: txPowerDbm: double\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3PropagationLossModel_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -2034,7 +2034,7 @@ PyTypeObject PyNs3PropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3PropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PropagationLossModel__tp_clear,             /* tp_clear */
@@ -2067,22 +2067,6 @@ PyTypeObject PyNs3PropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomPropagationDelayModel *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationDelayModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3RandomPropagationDelayModel *self)
 {
     PyObject *py_retval;
@@ -2099,16 +2083,16 @@ PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3RandomPropa
 }
 
 PyObject *
-PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RandomPropagationDelayModel *self)
+PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomPropagationDelayModel *self)
 {
     PyObject *py_retval;
     PyNs3RandomPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationDelayModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2125,6 +2109,22 @@ PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_DoInitialize(PyNs3RandomPr
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RandomPropagationDelayModel *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationDelayModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2667,10 +2667,10 @@ _wrap_PyNs3RandomPropagationDelayModel__copy__(PyNs3RandomPropagationDelayModel 
 static PyMethodDef PyNs3RandomPropagationDelayModel_methods[] = {
     {(char *) "GetDelay", (PyCFunction) _wrap_PyNs3RandomPropagationDelayModel_GetDelay, METH_VARARGS|METH_KEYWORDS, "GetDelay(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomPropagationDelayModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomPropagationDelayModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2737,7 +2737,7 @@ PyTypeObject PyNs3RandomPropagationDelayModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RandomPropagationDelayModel(arg0)\nRandomPropagationDelayModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomPropagationDelayModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomPropagationDelayModel__tp_clear,             /* tp_clear */
@@ -2770,22 +2770,6 @@ PyTypeObject PyNs3RandomPropagationDelayModel_Type = {
 
 
 PyObject *
-PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3RandomPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -2802,16 +2786,16 @@ PyNs3RandomPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3RandomPropag
 }
 
 PyObject *
-PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RandomPropagationLossModel *self)
+PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3RandomPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2828,6 +2812,22 @@ PyNs3RandomPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3RandomPro
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RandomPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RandomPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3271,10 +3271,10 @@ _wrap_PyNs3RandomPropagationLossModel_GetTypeId(void)
 
 static PyMethodDef PyNs3RandomPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -3340,7 +3340,7 @@ PyTypeObject PyNs3RandomPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RandomPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomPropagationLossModel__tp_clear,             /* tp_clear */
@@ -3373,22 +3373,6 @@ PyTypeObject PyNs3RandomPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RangePropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3RangePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RangePropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RangePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3RangePropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -3405,16 +3389,16 @@ PyNs3RangePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3RangePropagat
 }
 
 PyObject *
-PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RangePropagationLossModel *self)
+PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RangePropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3RangePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RangePropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3431,6 +3415,22 @@ PyNs3RangePropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3RangePropa
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RangePropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3RangePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3RangePropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3874,10 +3874,10 @@ _wrap_PyNs3RangePropagationLossModel_GetTypeId(void)
 
 static PyMethodDef PyNs3RangePropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RangePropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RangePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -3943,7 +3943,7 @@ PyTypeObject PyNs3RangePropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RangePropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3RangePropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RangePropagationLossModel__tp_clear,             /* tp_clear */
@@ -3976,22 +3976,6 @@ PyTypeObject PyNs3RangePropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ThreeLogDistancePropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ThreeLogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ThreeLogDistancePropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ThreeLogDistancePropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -4008,16 +3992,16 @@ PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Th
 }
 
 PyObject *
-PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeLogDistancePropagationLossModel *self)
+PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ThreeLogDistancePropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ThreeLogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ThreeLogDistancePropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4034,6 +4018,22 @@ PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ThreeLogDistancePropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ThreeLogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ThreeLogDistancePropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4477,10 +4477,10 @@ _wrap_PyNs3ThreeLogDistancePropagationLossModel_GetTypeId(void)
 
 static PyMethodDef PyNs3ThreeLogDistancePropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ThreeLogDistancePropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ThreeLogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -4546,7 +4546,7 @@ PyTypeObject PyNs3ThreeLogDistancePropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ThreeLogDistancePropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ThreeLogDistancePropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ThreeLogDistancePropagationLossModel__tp_clear,             /* tp_clear */
@@ -4579,22 +4579,6 @@ PyTypeObject PyNs3ThreeLogDistancePropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TwoRayGroundPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3TwoRayGroundPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3TwoRayGroundPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3TwoRayGroundPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -4611,16 +4595,16 @@ PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3TwoRay
 }
 
 PyObject *
-PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TwoRayGroundPropagationLossModel *self)
+PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3TwoRayGroundPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3TwoRayGroundPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3TwoRayGroundPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4637,6 +4621,22 @@ PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Two
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TwoRayGroundPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3TwoRayGroundPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3TwoRayGroundPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5191,10 +5191,10 @@ static PyMethodDef PyNs3TwoRayGroundPropagationLossModel_methods[] = {
     {(char *) "GetFrequency", (PyCFunction) _wrap_PyNs3TwoRayGroundPropagationLossModel_GetFrequency, METH_NOARGS, "GetFrequency()\n\n" },
     {(char *) "GetSystemLoss", (PyCFunction) _wrap_PyNs3TwoRayGroundPropagationLossModel_GetSystemLoss, METH_NOARGS, "GetSystemLoss()\n\n" },
     {(char *) "SetHeightAboveZ", (PyCFunction) _wrap_PyNs3TwoRayGroundPropagationLossModel_SetHeightAboveZ, METH_VARARGS|METH_KEYWORDS, "SetHeightAboveZ(heightAboveZ)\n\ntype: heightAboveZ: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TwoRayGroundPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -5260,7 +5260,7 @@ PyTypeObject PyNs3TwoRayGroundPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TwoRayGroundPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3TwoRayGroundPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TwoRayGroundPropagationLossModel__tp_clear,             /* tp_clear */
@@ -5293,22 +5293,6 @@ PyTypeObject PyNs3TwoRayGroundPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ConstantSpeedPropagationDelayModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantSpeedPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpeedPropagationDelayModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantSpeedPropagationDelayModel *self)
 {
     PyObject *py_retval;
@@ -5325,16 +5309,16 @@ PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_DoDispose(PyNs3Cons
 }
 
 PyObject *
-PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpeedPropagationDelayModel *self)
+PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ConstantSpeedPropagationDelayModel *self)
 {
     PyObject *py_retval;
     PyNs3ConstantSpeedPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpeedPropagationDelayModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5351,6 +5335,22 @@ PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_DoInitialize(PyNs3C
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpeedPropagationDelayModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantSpeedPropagationDelayModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpeedPropagationDelayModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5924,10 +5924,10 @@ static PyMethodDef PyNs3ConstantSpeedPropagationDelayModel_methods[] = {
     {(char *) "GetSpeed", (PyCFunction) _wrap_PyNs3ConstantSpeedPropagationDelayModel_GetSpeed, METH_NOARGS, "GetSpeed()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantSpeedPropagationDelayModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetSpeed", (PyCFunction) _wrap_PyNs3ConstantSpeedPropagationDelayModel_SetSpeed, METH_VARARGS|METH_KEYWORDS, "SetSpeed(speed)\n\ntype: speed: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantSpeedPropagationDelayModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantSpeedPropagationDelayModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5994,7 +5994,7 @@ PyTypeObject PyNs3ConstantSpeedPropagationDelayModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ConstantSpeedPropagationDelayModel(arg0)\nConstantSpeedPropagationDelayModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantSpeedPropagationDelayModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantSpeedPropagationDelayModel__tp_clear,             /* tp_clear */
@@ -6027,22 +6027,6 @@ PyTypeObject PyNs3ConstantSpeedPropagationDelayModel_Type = {
 
 
 PyObject *
-PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Cost231PropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3Cost231PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Cost231PropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Cost231PropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -6059,16 +6043,16 @@ PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Cost231Prop
 }
 
 PyObject *
-PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Cost231PropagationLossModel *self)
+PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Cost231PropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3Cost231PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Cost231PropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6085,6 +6069,22 @@ PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Cost231P
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Cost231PropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3Cost231PropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Cost231PropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6760,10 +6760,10 @@ static PyMethodDef PyNs3Cost231PropagationLossModel_methods[] = {
     {(char *) "GetLambda", (PyCFunction) _wrap_PyNs3Cost231PropagationLossModel_GetLambda, METH_NOARGS, "GetLambda()\n\n" },
     {(char *) "GetShadowing", (PyCFunction) _wrap_PyNs3Cost231PropagationLossModel_GetShadowing, METH_NOARGS, "GetShadowing()\n\n" },
     {(char *) "SetShadowing", (PyCFunction) _wrap_PyNs3Cost231PropagationLossModel_SetShadowing, METH_VARARGS|METH_KEYWORDS, "SetShadowing(shadowing)\n\ntype: shadowing: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Cost231PropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -6829,7 +6829,7 @@ PyTypeObject PyNs3Cost231PropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Cost231PropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3Cost231PropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Cost231PropagationLossModel__tp_clear,             /* tp_clear */
@@ -6862,22 +6862,6 @@ PyTypeObject PyNs3Cost231PropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FixedRssLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3FixedRssLossModel__PythonHelper *helper = dynamic_cast< PyNs3FixedRssLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3FixedRssLossModel__PythonHelper::_wrap_DoDispose(PyNs3FixedRssLossModel *self)
 {
     PyObject *py_retval;
@@ -6894,16 +6878,16 @@ PyNs3FixedRssLossModel__PythonHelper::_wrap_DoDispose(PyNs3FixedRssLossModel *se
 }
 
 PyObject *
-PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FixedRssLossModel *self)
+PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FixedRssLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FixedRssLossModel__PythonHelper *helper = dynamic_cast< PyNs3FixedRssLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6920,6 +6904,22 @@ PyNs3FixedRssLossModel__PythonHelper::_wrap_DoInitialize(PyNs3FixedRssLossModel 
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FixedRssLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3FixedRssLossModel__PythonHelper *helper = dynamic_cast< PyNs3FixedRssLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7381,10 +7381,10 @@ _wrap_PyNs3FixedRssLossModel_SetRss(PyNs3FixedRssLossModel *self, PyObject *args
 static PyMethodDef PyNs3FixedRssLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FixedRssLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetRss", (PyCFunction) _wrap_PyNs3FixedRssLossModel_SetRss, METH_VARARGS|METH_KEYWORDS, "SetRss(rss)\n\ntype: rss: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FixedRssLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -7450,7 +7450,7 @@ PyTypeObject PyNs3FixedRssLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FixedRssLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3FixedRssLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FixedRssLossModel__tp_clear,             /* tp_clear */
@@ -7483,22 +7483,6 @@ PyTypeObject PyNs3FixedRssLossModel_Type = {
 
 
 PyObject *
-PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FriisPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3FriisPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3FriisPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -7515,16 +7499,16 @@ PyNs3FriisPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisPropagat
 }
 
 PyObject *
-PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisPropagationLossModel *self)
+PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FriisPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FriisPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7541,6 +7525,22 @@ PyNs3FriisPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3FriisPropa
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3FriisPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8077,10 +8077,10 @@ static PyMethodDef PyNs3FriisPropagationLossModel_methods[] = {
     {(char *) "GetMinLoss", (PyCFunction) _wrap_PyNs3FriisPropagationLossModel_GetMinLoss, METH_NOARGS, "GetMinLoss()\n\n" },
     {(char *) "GetFrequency", (PyCFunction) _wrap_PyNs3FriisPropagationLossModel_GetFrequency, METH_NOARGS, "GetFrequency()\n\n" },
     {(char *) "GetSystemLoss", (PyCFunction) _wrap_PyNs3FriisPropagationLossModel_GetSystemLoss, METH_NOARGS, "GetSystemLoss()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FriisPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -8146,7 +8146,7 @@ PyTypeObject PyNs3FriisPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FriisPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3FriisPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FriisPropagationLossModel__tp_clear,             /* tp_clear */
@@ -8179,22 +8179,6 @@ PyTypeObject PyNs3FriisPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ItuR1411LosPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ItuR1411LosPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411LosPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ItuR1411LosPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -8211,16 +8195,16 @@ PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ItuR141
 }
 
 PyObject *
-PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ItuR1411LosPropagationLossModel *self)
+PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ItuR1411LosPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ItuR1411LosPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411LosPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8237,6 +8221,22 @@ PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3ItuR
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ItuR1411LosPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ItuR1411LosPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411LosPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8721,10 +8721,10 @@ static PyMethodDef PyNs3ItuR1411LosPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ItuR1411LosPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3ItuR1411LosPropagationLossModel_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(freq)\n\ntype: freq: double" },
     {(char *) "GetLoss", (PyCFunction) _wrap_PyNs3ItuR1411LosPropagationLossModel_GetLoss, METH_VARARGS|METH_KEYWORDS, "GetLoss(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ItuR1411LosPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -8790,7 +8790,7 @@ PyTypeObject PyNs3ItuR1411LosPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ItuR1411LosPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ItuR1411LosPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ItuR1411LosPropagationLossModel__tp_clear,             /* tp_clear */
@@ -8823,22 +8823,6 @@ PyTypeObject PyNs3ItuR1411LosPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ItuR1411NlosOverRooftopPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ItuR1411NlosOverRooftopPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -8855,16 +8839,16 @@ PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_DoDispose(
 }
 
 PyObject *
-PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ItuR1411NlosOverRooftopPropagationLossModel *self)
+PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ItuR1411NlosOverRooftopPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8881,6 +8865,22 @@ PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_DoInitiali
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ItuR1411NlosOverRooftopPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9365,10 +9365,10 @@ static PyMethodDef PyNs3ItuR1411NlosOverRooftopPropagationLossModel_methods[] = 
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ItuR1411NlosOverRooftopPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3ItuR1411NlosOverRooftopPropagationLossModel_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(freq)\n\ntype: freq: double" },
     {(char *) "GetLoss", (PyCFunction) _wrap_PyNs3ItuR1411NlosOverRooftopPropagationLossModel_GetLoss, METH_VARARGS|METH_KEYWORDS, "GetLoss(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ItuR1411NlosOverRooftopPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9434,7 +9434,7 @@ PyTypeObject PyNs3ItuR1411NlosOverRooftopPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ItuR1411NlosOverRooftopPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ItuR1411NlosOverRooftopPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ItuR1411NlosOverRooftopPropagationLossModel__tp_clear,             /* tp_clear */
@@ -9483,22 +9483,6 @@ PyNs3JakesProcess__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3JakesPro
 }
 
 PyObject *
-PyNs3JakesProcess__PythonHelper::_wrap_NotifyNewAggregate(PyNs3JakesProcess *self)
-{
-    PyObject *py_retval;
-    PyNs3JakesProcess__PythonHelper *helper = dynamic_cast< PyNs3JakesProcess__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3JakesProcess__PythonHelper::_wrap_DoInitialize(PyNs3JakesProcess *self)
 {
     PyObject *py_retval;
@@ -9509,6 +9493,22 @@ PyNs3JakesProcess__PythonHelper::_wrap_DoInitialize(PyNs3JakesProcess *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3JakesProcess__PythonHelper::_wrap_NotifyNewAggregate(PyNs3JakesProcess *self)
+{
+    PyObject *py_retval;
+    PyNs3JakesProcess__PythonHelper *helper = dynamic_cast< PyNs3JakesProcess__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9911,8 +9911,8 @@ static PyMethodDef PyNs3JakesProcess_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3JakesProcess_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetPropagationLossModel", (PyCFunction) _wrap_PyNs3JakesProcess_SetPropagationLossModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationLossModel(model)\n\ntype: model: ns3::Ptr< ns3::PropagationLossModel const >" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3JakesProcess__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3JakesProcess__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3JakesProcess__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3JakesProcess__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3JakesProcess__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9979,7 +9979,7 @@ PyTypeObject PyNs3JakesProcess_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "JakesProcess(arg0)\nJakesProcess()",                        /* Documentation string */
     (traverseproc)PyNs3JakesProcess__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3JakesProcess__tp_clear,             /* tp_clear */
@@ -10012,22 +10012,6 @@ PyTypeObject PyNs3JakesProcess_Type = {
 
 
 PyObject *
-PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3JakesPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3JakesPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3JakesPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3JakesPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3JakesPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -10044,16 +10028,16 @@ PyNs3JakesPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3JakesPropagat
 }
 
 PyObject *
-PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3JakesPropagationLossModel *self)
+PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3JakesPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3JakesPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3JakesPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10070,6 +10054,22 @@ PyNs3JakesPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3JakesPropa
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3JakesPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3JakesPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3JakesPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10513,10 +10513,10 @@ _wrap_PyNs3JakesPropagationLossModel_GetTypeId(void)
 
 static PyMethodDef PyNs3JakesPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3JakesPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3JakesPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10582,7 +10582,7 @@ PyTypeObject PyNs3JakesPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "JakesPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3JakesPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3JakesPropagationLossModel__tp_clear,             /* tp_clear */
@@ -10615,22 +10615,6 @@ PyTypeObject PyNs3JakesPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Kun2600MhzPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3Kun2600MhzPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Kun2600MhzPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Kun2600MhzPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -10647,16 +10631,16 @@ PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Kun2600M
 }
 
 PyObject *
-PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Kun2600MhzPropagationLossModel *self)
+PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Kun2600MhzPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3Kun2600MhzPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Kun2600MhzPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10673,6 +10657,22 @@ PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Kun26
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Kun2600MhzPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3Kun2600MhzPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3Kun2600MhzPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11139,10 +11139,10 @@ _wrap_PyNs3Kun2600MhzPropagationLossModel_GetLoss(PyNs3Kun2600MhzPropagationLoss
 static PyMethodDef PyNs3Kun2600MhzPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Kun2600MhzPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetLoss", (PyCFunction) _wrap_PyNs3Kun2600MhzPropagationLossModel_GetLoss, METH_VARARGS|METH_KEYWORDS, "GetLoss(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Kun2600MhzPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11208,7 +11208,7 @@ PyTypeObject PyNs3Kun2600MhzPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Kun2600MhzPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3Kun2600MhzPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Kun2600MhzPropagationLossModel__tp_clear,             /* tp_clear */
@@ -11241,22 +11241,6 @@ PyTypeObject PyNs3Kun2600MhzPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LogDistancePropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3LogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3LogDistancePropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3LogDistancePropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -11273,16 +11257,16 @@ PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3LogDist
 }
 
 PyObject *
-PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3LogDistancePropagationLossModel *self)
+PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LogDistancePropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3LogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3LogDistancePropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11299,6 +11283,22 @@ PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3LogD
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3LogDistancePropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3LogDistancePropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3LogDistancePropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11792,10 +11792,10 @@ static PyMethodDef PyNs3LogDistancePropagationLossModel_methods[] = {
     {(char *) "SetPathLossExponent", (PyCFunction) _wrap_PyNs3LogDistancePropagationLossModel_SetPathLossExponent, METH_VARARGS|METH_KEYWORDS, "SetPathLossExponent(n)\n\ntype: n: double" },
     {(char *) "GetPathLossExponent", (PyCFunction) _wrap_PyNs3LogDistancePropagationLossModel_GetPathLossExponent, METH_NOARGS, "GetPathLossExponent()\n\n" },
     {(char *) "SetReference", (PyCFunction) _wrap_PyNs3LogDistancePropagationLossModel_SetReference, METH_VARARGS|METH_KEYWORDS, "SetReference(referenceDistance, referenceLoss)\n\ntype: referenceDistance: double\ntype: referenceLoss: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LogDistancePropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11861,7 +11861,7 @@ PyTypeObject PyNs3LogDistancePropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "LogDistancePropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3LogDistancePropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LogDistancePropagationLossModel__tp_clear,             /* tp_clear */
@@ -11894,22 +11894,6 @@ PyTypeObject PyNs3LogDistancePropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MatrixPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3MatrixPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3MatrixPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3MatrixPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -11926,16 +11910,16 @@ PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3MatrixPropag
 }
 
 PyObject *
-PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MatrixPropagationLossModel *self)
+PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MatrixPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3MatrixPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3MatrixPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11952,6 +11936,22 @@ PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3MatrixPro
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MatrixPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3MatrixPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3MatrixPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12440,10 +12440,10 @@ static PyMethodDef PyNs3MatrixPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MatrixPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetLoss", (PyCFunction) _wrap_PyNs3MatrixPropagationLossModel_SetLoss, METH_VARARGS|METH_KEYWORDS, "SetLoss(a, b, loss, symmetric)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >\ntype: loss: double\ntype: symmetric: bool" },
     {(char *) "SetDefaultLoss", (PyCFunction) _wrap_PyNs3MatrixPropagationLossModel_SetDefaultLoss, METH_VARARGS|METH_KEYWORDS, "SetDefaultLoss(defaultLoss)\n\ntype: defaultLoss: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MatrixPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -12509,7 +12509,7 @@ PyTypeObject PyNs3MatrixPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "MatrixPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3MatrixPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MatrixPropagationLossModel__tp_clear,             /* tp_clear */
@@ -12542,22 +12542,6 @@ PyTypeObject PyNs3MatrixPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3NakagamiPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3NakagamiPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3NakagamiPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3NakagamiPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -12574,16 +12558,16 @@ PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3NakagamiPr
 }
 
 PyObject *
-PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NakagamiPropagationLossModel *self)
+PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3NakagamiPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3NakagamiPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3NakagamiPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12600,6 +12584,22 @@ PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Nakagam
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NakagamiPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3NakagamiPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3NakagamiPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13043,10 +13043,10 @@ _wrap_PyNs3NakagamiPropagationLossModel_GetTypeId(void)
 
 static PyMethodDef PyNs3NakagamiPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3NakagamiPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NakagamiPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -13112,7 +13112,7 @@ PyTypeObject PyNs3NakagamiPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "NakagamiPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3NakagamiPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NakagamiPropagationLossModel__tp_clear,             /* tp_clear */
@@ -13145,22 +13145,6 @@ PyTypeObject PyNs3NakagamiPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OkumuraHataPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3OkumuraHataPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3OkumuraHataPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3OkumuraHataPropagationLossModel *self)
 {
     PyObject *py_retval;
@@ -13177,16 +13161,16 @@ PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3Okumura
 }
 
 PyObject *
-PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OkumuraHataPropagationLossModel *self)
+PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OkumuraHataPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3OkumuraHataPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3OkumuraHataPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13203,6 +13187,22 @@ PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3Okum
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3OkumuraHataPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3OkumuraHataPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3OkumuraHataPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13669,10 +13669,10 @@ _wrap_PyNs3OkumuraHataPropagationLossModel_GetLoss(PyNs3OkumuraHataPropagationLo
 static PyMethodDef PyNs3OkumuraHataPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OkumuraHataPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetLoss", (PyCFunction) _wrap_PyNs3OkumuraHataPropagationLossModel_GetLoss, METH_VARARGS|METH_KEYWORDS, "GetLoss(a, b)\n\ntype: a: ns3::Ptr< ns3::MobilityModel >\ntype: b: ns3::Ptr< ns3::MobilityModel >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OkumuraHataPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -13738,7 +13738,7 @@ PyTypeObject PyNs3OkumuraHataPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "OkumuraHataPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3OkumuraHataPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OkumuraHataPropagationLossModel__tp_clear,             /* tp_clear */

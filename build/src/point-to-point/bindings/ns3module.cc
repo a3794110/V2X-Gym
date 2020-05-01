@@ -1474,78 +1474,6 @@ PyObject * _wrap_PyNs3PointToPointHelper_EnablePcap(PyNs3PointToPointHelper *sel
     return NULL;
 }
 
-
-PyObject *
-_wrap_PyNs3PointToPointHelper_EnableAsciiAll__0(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3PointToPointHelper_EnableAsciiAll__1(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3PointToPointHelper_EnableAsciiAll(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3PointToPointHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3PointToPointHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
 PyObject *
 _wrap_PyNs3PointToPointHelper_EnablePcapAll(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs)
 {
@@ -1946,6 +1874,78 @@ PyObject * _wrap_PyNs3PointToPointHelper_EnableAscii(PyNs3PointToPointHelper *se
 }
 
 
+PyObject *
+_wrap_PyNs3PointToPointHelper_EnableAsciiAll__0(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3PointToPointHelper_EnableAsciiAll__1(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3PointToPointHelper_EnableAsciiAll(PyNs3PointToPointHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3PointToPointHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3PointToPointHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+
 static PyObject*
 _wrap_PyNs3PointToPointHelper__copy__(PyNs3PointToPointHelper *self)
 {
@@ -1966,9 +1966,9 @@ static PyMethodDef PyNs3PointToPointHelper_methods[] = {
     {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "SetQueue", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetQueue, METH_VARARGS|METH_KEYWORDS, "SetQueue(type, n1, v1, n2, v2, n3, v3, n4, v4)\n\ntype: type: std::string\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &" },
     {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcap, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcapAll, METH_VARARGS|METH_KEYWORDS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
     {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2035,7 +2035,7 @@ PyTypeObject PyNs3PointToPointHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointHelper(arg0)\nPointToPointHelper()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointHelper__tp_clear,             /* tp_clear */
@@ -2328,7 +2328,7 @@ PyTypeObject PyNs3PppHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PppHeader(arg0)\nPppHeader()",                        /* Documentation string */
     (traverseproc)PyNs3PppHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PppHeader__tp_clear,             /* tp_clear */
@@ -2361,16 +2361,16 @@ PyTypeObject PyNs3PppHeader_Type = {
 
 
 PyObject *
-PyNs3PointToPointChannel__PythonHelper::_wrap_DoInitialize(PyNs3PointToPointChannel *self)
+PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointChannel *self)
 {
     PyObject *py_retval;
     PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2389,22 +2389,6 @@ PyNs3PointToPointChannel__PythonHelper::_wrap_DoDispose(PyNs3PointToPointChannel
     helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PointToPointChannel__PythonHelper::_wrap_IsInitialized(PyNs3PointToPointChannel *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method IsInitialized of class PointToPointChannel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->IsInitialized__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -2463,22 +2447,6 @@ PyNs3PointToPointChannel__PythonHelper::_wrap_GetDestination(PyNs3PointToPointCh
 }
 
 PyObject *
-PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPointChannel *self)
 {
     PyObject *py_retval;
@@ -2491,6 +2459,58 @@ PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPoi
     helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PointToPointChannel__PythonHelper::_wrap_IsInitialized(PyNs3PointToPointChannel *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method IsInitialized of class PointToPointChannel is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->IsInitialized__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3PointToPointChannel__PythonHelper::_wrap_DoInitialize(PyNs3PointToPointChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PointToPointChannel__PythonHelper::_wrap_GetDelay(PyNs3PointToPointChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
+    PyNs3Time *py_Time;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetDelay of class PointToPointChannel is protected and can only be called by a subclass");
+        return NULL;
+    }
+    ns3::Time retval = helper->GetDelay__parent_caller();
+    py_Time = PyObject_New(PyNs3Time, &PyNs3Time_Type);
+    py_Time->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+    py_Time->obj = new ns3::Time(retval);
+    PyNs3Time_wrapper_registry[(void *) py_Time->obj] = (PyObject *) py_Time;
+    py_retval = Py_BuildValue((char *) "N", py_Time);
     return py_retval;
 }
 
@@ -2545,26 +2565,6 @@ PyNs3PointToPointChannel__PythonHelper::_wrap_GetSource(PyNs3PointToPointChannel
         }
     }
     py_retval = Py_BuildValue((char *) "N", py_PointToPointNetDevice);
-    return py_retval;
-}
-
-PyObject *
-PyNs3PointToPointChannel__PythonHelper::_wrap_GetDelay(PyNs3PointToPointChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3PointToPointChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointChannel__PythonHelper* >(self->obj);
-    PyNs3Time *py_Time;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetDelay of class PointToPointChannel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    ns3::Time retval = helper->GetDelay__parent_caller();
-    py_Time = PyObject_New(PyNs3Time, &PyNs3Time_Type);
-    py_Time->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-    py_Time->obj = new ns3::Time(retval);
-    PyNs3Time_wrapper_registry[(void *) py_Time->obj] = (PyObject *) py_Time;
-    py_retval = Py_BuildValue((char *) "N", py_Time);
     return py_retval;
 }
 
@@ -3279,14 +3279,14 @@ static PyMethodDef PyNs3PointToPointChannel_methods[] = {
     {(char *) "GetPointToPointDevice", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetPointToPointDevice, METH_VARARGS|METH_KEYWORDS, "GetPointToPointDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointChannel_TransmitStart, METH_VARARGS|METH_KEYWORDS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "IsInitialized", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_IsInitialized, METH_NOARGS, NULL },
-    {(char *) "GetDestination", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDestination, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "GetDestination", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDestination, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "GetSource", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetSource, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "IsInitialized", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_IsInitialized, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "GetDelay", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDelay, METH_NOARGS, NULL },
+    {(char *) "GetSource", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetSource, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3353,7 +3353,7 @@ PyTypeObject PyNs3PointToPointChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointChannel(arg0)\nPointToPointChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointChannel__tp_clear,             /* tp_clear */
@@ -3386,6 +3386,22 @@ PyTypeObject PyNs3PointToPointChannel_Type = {
 
 
 PyObject *
+PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPointNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3PointToPointNetDevice__PythonHelper *helper = dynamic_cast< PyNs3PointToPointNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive(PyNs3PointToPointNetDevice *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -3409,22 +3425,6 @@ PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive(PyNs3PointToPointNe
 }
 
 PyObject *
-PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3PointToPointNetDevice__PythonHelper *helper = dynamic_cast< PyNs3PointToPointNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3PointToPointNetDevice *self)
 {
     PyObject *py_retval;
@@ -3441,16 +3441,16 @@ PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3PointToPointNe
 }
 
 PyObject *
-PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPointNetDevice *self)
+PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3PointToPointNetDevice__PythonHelper *helper = dynamic_cast< PyNs3PointToPointNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5542,10 +5542,10 @@ static PyMethodDef PyNs3PointToPointNetDevice_methods[] = {
     {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "DoMpiReceive", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoMpiReceive", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -5611,7 +5611,7 @@ PyTypeObject PyNs3PointToPointNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointNetDevice__tp_clear,             /* tp_clear */
@@ -5644,6 +5644,38 @@ PyTypeObject PyNs3PointToPointNetDevice_Type = {
 
 
 PyObject *
+PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPointRemoteChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3PointToPointRemoteChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointRemoteChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointRemoteChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3PointToPointRemoteChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointRemoteChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoInitialize(PyNs3PointToPointRemoteChannel *self)
 {
     PyObject *py_retval;
@@ -5670,38 +5702,6 @@ PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoDispose(PyNs3PointToPointR
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3PointToPointRemoteChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3PointToPointRemoteChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointRemoteChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PointToPointRemoteChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3PointToPointRemoteChannel__PythonHelper *helper = dynamic_cast< PyNs3PointToPointRemoteChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6281,10 +6281,10 @@ _wrap_PyNs3PointToPointRemoteChannel__copy__(PyNs3PointToPointRemoteChannel *sel
 static PyMethodDef PyNs3PointToPointRemoteChannel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel_TransmitStart, METH_VARARGS|METH_KEYWORDS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6351,7 +6351,7 @@ PyTypeObject PyNs3PointToPointRemoteChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointRemoteChannel(arg0)\nPointToPointRemoteChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointRemoteChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointRemoteChannel__tp_clear,             /* tp_clear */

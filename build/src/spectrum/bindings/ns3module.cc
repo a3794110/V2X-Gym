@@ -5708,7 +5708,7 @@ PyTypeObject PyNs3WifiSpectrumValue5MhzFactory_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WifiSpectrumValue5MhzFactory(arg0)\nWifiSpectrumValue5MhzFactory()",                        /* Documentation string */
     (traverseproc)PyNs3WifiSpectrumValue5MhzFactory__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiSpectrumValue5MhzFactory__tp_clear,             /* tp_clear */
@@ -7270,32 +7270,16 @@ PyTypeObject PyNs3SpectrumConverter_Type = {
 
 
 PyObject *
-PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumErrorModel *self)
+PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumErrorModel *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7318,16 +7302,32 @@ PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Sp
 }
 
 PyObject *
-PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumErrorModel *self)
+PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumErrorModel *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumErrorModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7891,10 +7891,10 @@ static PyMethodDef PyNs3SpectrumErrorModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsRxCorrect", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_IsRxCorrect, METH_NOARGS, "IsRxCorrect()\n\n" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumErrorModel_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -7960,7 +7960,7 @@ PyTypeObject PyNs3SpectrumErrorModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumErrorModel(arg0)\nSpectrumErrorModel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumErrorModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumErrorModel__tp_clear,             /* tp_clear */
@@ -7993,32 +7993,16 @@ PyTypeObject PyNs3SpectrumErrorModel_Type = {
 
 
 PyObject *
-PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumInterference *self)
+PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose(PyNs3SpectrumInterference *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumInterference is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8041,16 +8025,32 @@ PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3
 }
 
 PyObject *
-PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumInterference *self)
+PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose(PyNs3SpectrumInterference *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumInterference is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumInterference *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumInterference__PythonHelper *helper = dynamic_cast< PyNs3SpectrumInterference__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8515,10 +8515,10 @@ static PyMethodDef PyNs3SpectrumInterference_methods[] = {
     {(char *) "SetErrorModel", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetErrorModel, METH_KEYWORDS|METH_VARARGS, "SetErrorModel(e)\n\ntype: e: ns3::Ptr< ns3::SpectrumErrorModel >" },
     {(char *) "SetNoisePowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumInterference_SetNoisePowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "SetNoisePowerSpectralDensity(noisePsd)\n\ntype: noisePsd: ns3::Ptr< ns3::SpectrumValue const >" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumInterference_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p, rxPsd)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: rxPsd: ns3::Ptr< ns3::SpectrumValue const >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumInterference__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumInterference__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8585,7 +8585,7 @@ PyTypeObject PyNs3SpectrumInterference_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumInterference(arg0)\nSpectrumInterference()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumInterference__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumInterference__tp_clear,             /* tp_clear */
@@ -8886,32 +8886,16 @@ PyTypeObject PyNs3SpectrumModel_Type = {
 
 
 PyObject *
-PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumPhy *self)
+PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8934,16 +8918,32 @@ PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SpectrumP
 }
 
 PyObject *
-PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPhy *self)
+PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPhy *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9988,10 +9988,10 @@ static PyMethodDef PyNs3SpectrumPhy_methods[] = {
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3SpectrumPhy_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumPhy_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10057,7 +10057,7 @@ PyTypeObject PyNs3SpectrumPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumPhy()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumPhy__tp_clear,             /* tp_clear */
@@ -10090,32 +10090,16 @@ PyTypeObject PyNs3SpectrumPhy_Type = {
 
 
 PyObject *
-PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumPropagationLossModel *self)
+PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10138,16 +10122,32 @@ PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionComplet
 }
 
 PyObject *
-PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumPropagationLossModel *self)
+PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3SpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10689,10 +10689,10 @@ static PyMethodDef PyNs3SpectrumPropagationLossModel_methods[] = {
     {(char *) "CalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_CalcRxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "CalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetNext", (PyCFunction) _wrap_PyNs3SpectrumPropagationLossModel_SetNext, METH_KEYWORDS|METH_VARARGS, "SetNext(next)\n\ntype: next: ns3::Ptr< ns3::SpectrumPropagationLossModel >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10758,7 +10758,7 @@ PyTypeObject PyNs3SpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumPropagationLossModel(arg0)\nSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -11825,32 +11825,16 @@ PyTypeObject PyNs3SpectrumValue_Type = {
 
 
 PyObject *
-PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize(PyNs3TvSpectrumTransmitter *self)
+PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self)
 {
     PyObject *py_retval;
     PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose(PyNs3TvSpectrumTransmitter *self)
-{
-    PyObject *py_retval;
-    PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11873,16 +11857,32 @@ PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
 }
 
 PyObject *
-PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate(PyNs3TvSpectrumTransmitter *self)
+PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose(PyNs3TvSpectrumTransmitter *self)
 {
     PyObject *py_retval;
     PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize(PyNs3TvSpectrumTransmitter *self)
+{
+    PyObject *py_retval;
+    PyNs3TvSpectrumTransmitter__PythonHelper *helper = dynamic_cast< PyNs3TvSpectrumTransmitter__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13209,10 +13209,10 @@ static PyMethodDef PyNs3TvSpectrumTransmitter_methods[] = {
     {(char *) "GetTxPsd", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_GetTxPsd, METH_NOARGS, "GetTxPsd()\n\n" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3TvSpectrumTransmitter_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3TvSpectrumTransmitter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -13278,7 +13278,7 @@ PyTypeObject PyNs3TvSpectrumTransmitter_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TvSpectrumTransmitter()",                        /* Documentation string */
     (traverseproc)PyNs3TvSpectrumTransmitter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TvSpectrumTransmitter__tp_clear,             /* tp_clear */
@@ -13311,16 +13311,16 @@ PyTypeObject PyNs3TvSpectrumTransmitter_Type = {
 
 
 PyObject *
-PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize(PyNs3WaveformGenerator *self)
+PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveformGenerator *self)
 {
     PyObject *py_retval;
     PyNs3WaveformGenerator__PythonHelper *helper = dynamic_cast< PyNs3WaveformGenerator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13343,16 +13343,16 @@ PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Wav
 }
 
 PyObject *
-PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WaveformGenerator *self)
+PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize(PyNs3WaveformGenerator *self)
 {
     PyObject *py_retval;
     PyNs3WaveformGenerator__PythonHelper *helper = dynamic_cast< PyNs3WaveformGenerator__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14642,9 +14642,9 @@ static PyMethodDef PyNs3WaveformGenerator_methods[] = {
     {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3WaveformGenerator_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3WaveformGenerator_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3WaveformGenerator_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WaveformGenerator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -14710,7 +14710,7 @@ PyTypeObject PyNs3WaveformGenerator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WaveformGenerator()",                        /* Documentation string */
     (traverseproc)PyNs3WaveformGenerator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaveformGenerator__tp_clear,             /* tp_clear */
@@ -15038,7 +15038,7 @@ PyTypeObject PyNs3AlohaNoackMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "AlohaNoackMacHeader(arg0)\nAlohaNoackMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AlohaNoackMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AlohaNoackMacHeader__tp_clear,             /* tp_clear */
@@ -15071,32 +15071,16 @@ PyTypeObject PyNs3AlohaNoackMacHeader_Type = {
 
 
 PyObject *
-PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantSpectrumPropagationLossModel *self)
+PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15119,16 +15103,32 @@ PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructio
 }
 
 PyObject *
-PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConstantSpectrumPropagationLossModel *self)
+PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantSpectrumPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantSpectrumPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15693,10 +15693,10 @@ static PyMethodDef PyNs3ConstantSpectrumPropagationLossModel_methods[] = {
     {(char *) "GetLossDb", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_GetLossDb, METH_NOARGS, "GetLossDb()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetLossDb", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel_SetLossDb, METH_KEYWORDS|METH_VARARGS, "SetLossDb(lossDb)\n\ntype: lossDb: double" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantSpectrumPropagationLossModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15763,7 +15763,7 @@ PyTypeObject PyNs3ConstantSpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConstantSpectrumPropagationLossModel(arg0)\nConstantSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantSpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantSpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -15796,32 +15796,16 @@ PyTypeObject PyNs3ConstantSpectrumPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3FriisSpectrumPropagationLossModel *self)
+PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self)
-{
-    PyObject *py_retval;
-    PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15844,16 +15828,32 @@ PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCo
 }
 
 PyObject *
-PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FriisSpectrumPropagationLossModel *self)
+PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose(PyNs3FriisSpectrumPropagationLossModel *self)
 {
     PyObject *py_retval;
     PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumPropagationLossModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize(PyNs3FriisSpectrumPropagationLossModel *self)
+{
+    PyObject *py_retval;
+    PyNs3FriisSpectrumPropagationLossModel__PythonHelper *helper = dynamic_cast< PyNs3FriisSpectrumPropagationLossModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16406,10 +16406,10 @@ static PyMethodDef PyNs3FriisSpectrumPropagationLossModel_methods[] = {
     {(char *) "CalculateLoss", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_CalculateLoss, METH_KEYWORDS|METH_VARARGS, "CalculateLoss(f, d)\n\ntype: f: double\ntype: d: double" },
     {(char *) "DoCalcRxPowerSpectralDensity", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_DoCalcRxPowerSpectralDensity, METH_KEYWORDS|METH_VARARGS, "DoCalcRxPowerSpectralDensity(txPsd, a, b)\n\ntype: txPsd: ns3::Ptr< ns3::SpectrumValue const >\ntype: a: ns3::Ptr< ns3::MobilityModel const >\ntype: b: ns3::Ptr< ns3::MobilityModel const >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3FriisSpectrumPropagationLossModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FriisSpectrumPropagationLossModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16476,7 +16476,7 @@ PyTypeObject PyNs3FriisSpectrumPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FriisSpectrumPropagationLossModel(arg0)\nFriisSpectrumPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3FriisSpectrumPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FriisSpectrumPropagationLossModel__tp_clear,             /* tp_clear */
@@ -16509,16 +16509,16 @@ PyTypeObject PyNs3FriisSpectrumPropagationLossModel_Type = {
 
 
 PyObject *
-PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self)
+PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3HalfDuplexIdealPhy *self)
 {
     PyObject *py_retval;
     PyNs3HalfDuplexIdealPhy__PythonHelper *helper = dynamic_cast< PyNs3HalfDuplexIdealPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16541,16 +16541,16 @@ PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ha
 }
 
 PyObject *
-PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3HalfDuplexIdealPhy *self)
+PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize(PyNs3HalfDuplexIdealPhy *self)
 {
     PyObject *py_retval;
     PyNs3HalfDuplexIdealPhy__PythonHelper *helper = dynamic_cast< PyNs3HalfDuplexIdealPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -17783,9 +17783,9 @@ static PyMethodDef PyNs3HalfDuplexIdealPhy_methods[] = {
     {(char *) "SetGenericPhyRxEndErrorCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndErrorCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyRxEndErrorCallback(c)\n\ntype: c: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetGenericPhyRxEndOkCallback", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetGenericPhyRxEndOkCallback, METH_KEYWORDS|METH_VARARGS, "SetGenericPhyRxEndOkCallback(c)\n\ntype: c: ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3HalfDuplexIdealPhy_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3HalfDuplexIdealPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -17851,7 +17851,7 @@ PyTypeObject PyNs3HalfDuplexIdealPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HalfDuplexIdealPhy()",                        /* Documentation string */
     (traverseproc)PyNs3HalfDuplexIdealPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HalfDuplexIdealPhy__tp_clear,             /* tp_clear */
@@ -18134,16 +18134,16 @@ PyTypeObject PyNs3HalfDuplexIdealPhySignalParameters_Type = {
 
 
 PyObject *
-PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self)
+PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NonCommunicatingNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3NonCommunicatingNetDevice__PythonHelper *helper = dynamic_cast< PyNs3NonCommunicatingNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18166,16 +18166,16 @@ PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
-PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NonCommunicatingNetDevice *self)
+PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3NonCommunicatingNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3NonCommunicatingNetDevice__PythonHelper *helper = dynamic_cast< PyNs3NonCommunicatingNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20352,9 +20352,9 @@ static PyMethodDef PyNs3NonCommunicatingNetDevice_methods[] = {
     {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3NonCommunicatingNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3NonCommunicatingNetDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20421,7 +20421,7 @@ PyTypeObject PyNs3NonCommunicatingNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "NonCommunicatingNetDevice(arg0)\nNonCommunicatingNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3NonCommunicatingNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NonCommunicatingNetDevice__tp_clear,             /* tp_clear */
@@ -20454,32 +20454,16 @@ PyTypeObject PyNs3NonCommunicatingNetDevice_Type = {
 
 
 PyObject *
-PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3ShannonSpectrumErrorModel *self)
+PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class ShannonSpectrumErrorModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -20502,16 +20486,32 @@ PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
-PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ShannonSpectrumErrorModel *self)
+PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose(PyNs3ShannonSpectrumErrorModel *self)
 {
     PyObject *py_retval;
     PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class ShannonSpectrumErrorModel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize(PyNs3ShannonSpectrumErrorModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ShannonSpectrumErrorModel__PythonHelper *helper = dynamic_cast< PyNs3ShannonSpectrumErrorModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21091,10 +21091,10 @@ static PyMethodDef PyNs3ShannonSpectrumErrorModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsRxCorrect", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_IsRxCorrect, METH_NOARGS, "IsRxCorrect()\n\n" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(p)\n\ntype: p: ns3::Ptr< ns3::Packet const >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ShannonSpectrumErrorModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ShannonSpectrumErrorModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -21161,7 +21161,7 @@ PyTypeObject PyNs3ShannonSpectrumErrorModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ShannonSpectrumErrorModel(arg0)\nShannonSpectrumErrorModel()",                        /* Documentation string */
     (traverseproc)PyNs3ShannonSpectrumErrorModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ShannonSpectrumErrorModel__tp_clear,             /* tp_clear */
@@ -21194,32 +21194,16 @@ PyTypeObject PyNs3ShannonSpectrumErrorModel_Type = {
 
 
 PyObject *
-PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumAnalyzer *self)
+PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose(PyNs3SpectrumAnalyzer *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumAnalyzer is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -21242,16 +21226,32 @@ PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Spec
 }
 
 PyObject *
-PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumAnalyzer *self)
+PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose(PyNs3SpectrumAnalyzer *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class SpectrumAnalyzer is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumAnalyzer *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumAnalyzer__PythonHelper *helper = dynamic_cast< PyNs3SpectrumAnalyzer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22476,10 +22476,10 @@ static PyMethodDef PyNs3SpectrumAnalyzer_methods[] = {
     {(char *) "SetAntenna", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_SetAntenna, METH_KEYWORDS|METH_VARARGS, "SetAntenna(a)\n\ntype: a: ns3::Ptr< ns3::AntennaModel >" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3SpectrumAnalyzer_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumAnalyzer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -22545,7 +22545,7 @@ PyTypeObject PyNs3SpectrumAnalyzer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumAnalyzer()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumAnalyzer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumAnalyzer__tp_clear,             /* tp_clear */
@@ -22578,16 +22578,16 @@ PyTypeObject PyNs3SpectrumAnalyzer_Type = {
 
 
 PyObject *
-PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumChannel *self)
+PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22610,16 +22610,16 @@ PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Spect
 }
 
 PyObject *
-PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumChannel *self)
+PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23367,9 +23367,9 @@ static PyMethodDef PyNs3SpectrumChannel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetPropagationDelayModel", (PyCFunction) _wrap_PyNs3SpectrumChannel_SetPropagationDelayModel, METH_KEYWORDS|METH_VARARGS, "SetPropagationDelayModel(delay)\n\ntype: delay: ns3::Ptr< ns3::PropagationDelayModel >" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -23435,7 +23435,7 @@ PyTypeObject PyNs3SpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SpectrumChannel(arg0)\nSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumChannel__tp_clear,             /* tp_clear */
@@ -23468,16 +23468,16 @@ PyTypeObject PyNs3SpectrumChannel_Type = {
 
 
 PyObject *
-PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self)
+PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AlohaNoackNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3AlohaNoackNetDevice__PythonHelper *helper = dynamic_cast< PyNs3AlohaNoackNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23500,16 +23500,16 @@ PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3A
 }
 
 PyObject *
-PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AlohaNoackNetDevice *self)
+PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3AlohaNoackNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3AlohaNoackNetDevice__PythonHelper *helper = dynamic_cast< PyNs3AlohaNoackNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25776,9 +25776,9 @@ static PyMethodDef PyNs3AlohaNoackNetDevice_methods[] = {
     {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3AlohaNoackNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3AlohaNoackNetDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -25845,7 +25845,7 @@ PyTypeObject PyNs3AlohaNoackNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "AlohaNoackNetDevice(arg0)\nAlohaNoackNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3AlohaNoackNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AlohaNoackNetDevice__tp_clear,             /* tp_clear */
@@ -25878,32 +25878,16 @@ PyTypeObject PyNs3AlohaNoackNetDevice_Type = {
 
 
 PyObject *
-PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3MultiModelSpectrumChannel *self)
+PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MultiModelSpectrumChannel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -25926,16 +25910,32 @@ PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted(
 }
 
 PyObject *
-PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MultiModelSpectrumChannel *self)
+PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose(PyNs3MultiModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class MultiModelSpectrumChannel is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3MultiModelSpectrumChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3MultiModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3MultiModelSpectrumChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -26729,10 +26729,10 @@ static PyMethodDef PyNs3MultiModelSpectrumChannel_methods[] = {
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3MultiModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MultiModelSpectrumChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -26799,7 +26799,7 @@ PyTypeObject PyNs3MultiModelSpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MultiModelSpectrumChannel(arg0)\nMultiModelSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3MultiModelSpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MultiModelSpectrumChannel__tp_clear,             /* tp_clear */
@@ -26832,16 +26832,16 @@ PyTypeObject PyNs3MultiModelSpectrumChannel_Type = {
 
 
 PyObject *
-PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self)
+PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SingleModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3SingleModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SingleModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -26864,16 +26864,16 @@ PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted
 }
 
 PyObject *
-PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SingleModelSpectrumChannel *self)
+PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize(PyNs3SingleModelSpectrumChannel *self)
 {
     PyObject *py_retval;
     PyNs3SingleModelSpectrumChannel__PythonHelper *helper = dynamic_cast< PyNs3SingleModelSpectrumChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -27572,9 +27572,9 @@ static PyMethodDef PyNs3SingleModelSpectrumChannel_methods[] = {
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SingleModelSpectrumChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SingleModelSpectrumChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -27641,7 +27641,7 @@ PyTypeObject PyNs3SingleModelSpectrumChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SingleModelSpectrumChannel(arg0)\nSingleModelSpectrumChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SingleModelSpectrumChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SingleModelSpectrumChannel__tp_clear,             /* tp_clear */

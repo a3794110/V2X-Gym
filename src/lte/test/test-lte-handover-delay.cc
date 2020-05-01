@@ -63,7 +63,6 @@ public:
   /**
    * Constructor
    *
-   *\param numberOfComponentCarriers number of component carriers
    * \param useIdealRrc if true, use the ideal RRC
    * \param handoverTime the time of handover
    * \param delayThreshold the delay threshold
@@ -123,7 +122,7 @@ private:
   void EnbHandoverEndOkCallback (std::string context, uint64_t imsi,
       uint16_t cellid, uint16_t rnti);
 
-  uint8_t m_numberOfComponentCarriers; ///< Number of component carriers
+  uint8_t m_numberOfComponentCarriers;
   bool m_useIdealRrc; ///< use ideal RRC?
   Time m_handoverTime; ///< handover time
   Time m_delayThreshold; ///< the delay threshold

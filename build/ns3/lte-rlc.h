@@ -16,6 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Author: Nicola Baldo <nbaldo@cttc.es>
+ * Modified by: NIST (D2D)
  */
 
 #ifndef LTE_RLC_H
@@ -76,6 +77,18 @@ public:
    * \param lcId
    */
   void SetLcId (uint8_t lcId);
+
+  /**
+   * Sets the source L2 Id for sidelink identification of the PDCP entity
+   * \param src
+   */
+  void SetSourceL2Id (uint32_t src);
+  
+  /**
+   * Sets the destination L2 Id for sidelink identification of the PDCP entity
+   * \param src
+   */
+  void SetDestinationL2Id (uint32_t dst);
 
   /**
    *
@@ -148,9 +161,14 @@ protected:
   /**
    * Notify transmit opportunity
    *
-   * \param params LteMacSapUser::TxOpportunityParameters
+   * \param bytes number of bytes
+   * \param layer the layer
+   * \param harqId the HARQ ID
+   * \param componentCarrierId component carrier ID
+   * \param rnti the RNTI
+   * \param lcid the LCID
    */ 
-  virtual void DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters params) = 0;
+  virtual void DoNotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid) = 0;
   /**
    * Notify HARQ delivery failure
    */ 
@@ -158,15 +176,20 @@ protected:
   /**
    * Receive PDU function
    *
-   * \param params the LteMacSapUser::ReceivePduParameters
+   * \param p the packet
+   * \param rnti the RNTI
+   * \param lcid the LCID
    */ 
-  virtual void DoReceivePdu (LteMacSapUser::ReceivePduParameters params) = 0;
+  virtual void DoReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid) = 0;
 
   LteMacSapUser* m_macSapUser; ///< MAC SAP user
   LteMacSapProvider* m_macSapProvider; ///< MAC SAP provider
 
   uint16_t m_rnti; ///< RNTI
   uint8_t m_lcid; ///< LCID
+  /* Additional identifier for sidelink */
+  uint32_t m_srcL2Id; ///< Source L2 ID (24 bits)
+  uint32_t m_dstL2Id; ///< Destination L2 ID (24 bits)
 
   /**
    * Used to inform of a PDU delivery to the MAC SAP provider
@@ -203,9 +226,9 @@ public:
   virtual void DoDispose ();
 
   virtual void DoTransmitPdcpPdu (Ptr<Packet> p);
-  virtual void DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams);
+  virtual void DoNotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid);
   virtual void DoNotifyHarqDeliveryFailure ();
-  virtual void DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams);
+  virtual void DoReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid);
 
 
 

@@ -1027,8 +1027,8 @@ _wrap_PyNs3TapBridgeHelper__copy__(PyNs3TapBridgeHelper *self)
 }
 
 static PyMethodDef PyNs3TapBridgeHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3TapBridgeHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TapBridgeHelper_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3TapBridgeHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TapBridgeHelper_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TapBridgeHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1849,14 +1849,14 @@ _wrap_PyNs3TapBridge__copy__(PyNs3TapBridge *self)
 }
 
 static PyMethodDef PyNs3TapBridge_methods[] = {
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3TapBridge_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3TapBridge_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3TapBridge_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBridgedNetDevice", (PyCFunction) _wrap_PyNs3TapBridge_GetBridgedNetDevice, METH_NOARGS, "GetBridgedNetDevice()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3TapBridge_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3TapBridge_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetMode", (PyCFunction) _wrap_PyNs3TapBridge_GetMode, METH_NOARGS, "GetMode()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3TapBridge_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3TapBridge_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3TapBridge_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3TapBridge_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TapBridge_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3TapBridge_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
@@ -1865,18 +1865,18 @@ static PyMethodDef PyNs3TapBridge_methods[] = {
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3TapBridge_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3TapBridge_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3TapBridge_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3TapBridge_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3TapBridge_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3TapBridge_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
-    {(char *) "SetBridgedNetDevice", (PyCFunction) _wrap_PyNs3TapBridge_SetBridgedNetDevice, METH_VARARGS|METH_KEYWORDS, "SetBridgedNetDevice(bridgedDevice)\n\ntype: bridgedDevice: ns3::Ptr< ns3::NetDevice >" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3TapBridge_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMode", (PyCFunction) _wrap_PyNs3TapBridge_SetMode, METH_VARARGS|METH_KEYWORDS, "SetMode(mode)\n\ntype: mode: ns3::TapBridge::Mode" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3TapBridge_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3TapBridge_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3TapBridge_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3TapBridge_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3TapBridge_Start, METH_VARARGS|METH_KEYWORDS, "Start(tStart)\n\ntype: tStart: ns3::Time" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3TapBridge_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(tStop)\n\ntype: tStop: ns3::Time" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3TapBridge_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3TapBridge_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3TapBridge_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetBridgedNetDevice", (PyCFunction) _wrap_PyNs3TapBridge_SetBridgedNetDevice, METH_KEYWORDS|METH_VARARGS, "SetBridgedNetDevice(bridgedDevice)\n\ntype: bridgedDevice: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3TapBridge_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMode", (PyCFunction) _wrap_PyNs3TapBridge_SetMode, METH_KEYWORDS|METH_VARARGS, "SetMode(mode)\n\ntype: mode: ns3::TapBridge::Mode" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3TapBridge_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3TapBridge_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3TapBridge_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3TapBridge_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3TapBridge_Start, METH_KEYWORDS|METH_VARARGS, "Start(tStart)\n\ntype: tStart: ns3::Time" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3TapBridge_Stop, METH_KEYWORDS|METH_VARARGS, "Stop(tStop)\n\ntype: tStop: ns3::Time" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3TapBridge_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TapBridge__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1941,7 +1941,7 @@ PyTypeObject PyNs3TapBridge_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TapBridge(arg0)\nTapBridge()",                        /* Documentation string */
     (traverseproc)PyNs3TapBridge__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TapBridge__tp_clear,             /* tp_clear */

@@ -1321,15 +1321,15 @@ _wrap_PyNs3CidFactory__copy__(PyNs3CidFactory *self)
 }
 
 static PyMethodDef PyNs3CidFactory_methods[] = {
-    {(char *) "Allocate", (PyCFunction) _wrap_PyNs3CidFactory_Allocate, METH_VARARGS|METH_KEYWORDS, "Allocate(type)\n\ntype: type: ns3::Cid::Type" },
+    {(char *) "Allocate", (PyCFunction) _wrap_PyNs3CidFactory_Allocate, METH_KEYWORDS|METH_VARARGS, "Allocate(type)\n\ntype: type: ns3::Cid::Type" },
     {(char *) "AllocateBasic", (PyCFunction) _wrap_PyNs3CidFactory_AllocateBasic, METH_NOARGS, "AllocateBasic()\n\n" },
     {(char *) "AllocateMulticast", (PyCFunction) _wrap_PyNs3CidFactory_AllocateMulticast, METH_NOARGS, "AllocateMulticast()\n\n" },
     {(char *) "AllocatePrimary", (PyCFunction) _wrap_PyNs3CidFactory_AllocatePrimary, METH_NOARGS, "AllocatePrimary()\n\n" },
     {(char *) "AllocateTransportOrSecondary", (PyCFunction) _wrap_PyNs3CidFactory_AllocateTransportOrSecondary, METH_NOARGS, "AllocateTransportOrSecondary()\n\n" },
-    {(char *) "FreeCid", (PyCFunction) _wrap_PyNs3CidFactory_FreeCid, METH_VARARGS|METH_KEYWORDS, "FreeCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "IsBasic", (PyCFunction) _wrap_PyNs3CidFactory_IsBasic, METH_VARARGS|METH_KEYWORDS, "IsBasic(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "IsPrimary", (PyCFunction) _wrap_PyNs3CidFactory_IsPrimary, METH_VARARGS|METH_KEYWORDS, "IsPrimary(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "IsTransport", (PyCFunction) _wrap_PyNs3CidFactory_IsTransport, METH_VARARGS|METH_KEYWORDS, "IsTransport(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "FreeCid", (PyCFunction) _wrap_PyNs3CidFactory_FreeCid, METH_KEYWORDS|METH_VARARGS, "FreeCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "IsBasic", (PyCFunction) _wrap_PyNs3CidFactory_IsBasic, METH_KEYWORDS|METH_VARARGS, "IsBasic(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "IsPrimary", (PyCFunction) _wrap_PyNs3CidFactory_IsPrimary, METH_KEYWORDS|METH_VARARGS, "IsPrimary(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "IsTransport", (PyCFunction) _wrap_PyNs3CidFactory_IsTransport, METH_KEYWORDS|METH_VARARGS, "IsTransport(cid)\n\ntype: cid: ns3::Cid" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CidFactory__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1627,8 +1627,8 @@ _wrap_PyNs3CsParameters__copy__(PyNs3CsParameters *self)
 static PyMethodDef PyNs3CsParameters_methods[] = {
     {(char *) "GetClassifierDscAction", (PyCFunction) _wrap_PyNs3CsParameters_GetClassifierDscAction, METH_NOARGS, "GetClassifierDscAction()\n\n" },
     {(char *) "GetPacketClassifierRule", (PyCFunction) _wrap_PyNs3CsParameters_GetPacketClassifierRule, METH_NOARGS, "GetPacketClassifierRule()\n\n" },
-    {(char *) "SetClassifierDscAction", (PyCFunction) _wrap_PyNs3CsParameters_SetClassifierDscAction, METH_VARARGS|METH_KEYWORDS, "SetClassifierDscAction(action)\n\ntype: action: ns3::CsParameters::Action" },
-    {(char *) "SetPacketClassifierRule", (PyCFunction) _wrap_PyNs3CsParameters_SetPacketClassifierRule, METH_VARARGS|METH_KEYWORDS, "SetPacketClassifierRule(packetClassifierRule)\n\ntype: packetClassifierRule: ns3::IpcsClassifierRecord" },
+    {(char *) "SetClassifierDscAction", (PyCFunction) _wrap_PyNs3CsParameters_SetClassifierDscAction, METH_KEYWORDS|METH_VARARGS, "SetClassifierDscAction(action)\n\ntype: action: ns3::CsParameters::Action" },
+    {(char *) "SetPacketClassifierRule", (PyCFunction) _wrap_PyNs3CsParameters_SetPacketClassifierRule, METH_KEYWORDS|METH_VARARGS, "SetPacketClassifierRule(packetClassifierRule)\n\ntype: packetClassifierRule: ns3::IpcsClassifierRecord" },
     {(char *) "ToTlv", (PyCFunction) _wrap_PyNs3CsParameters_ToTlv, METH_NOARGS, "ToTlv()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CsParameters__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -2047,11 +2047,11 @@ static PyMethodDef PyNs3DcdChannelEncodings_methods[] = {
     {(char *) "GetEirxPIrMax", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_GetEirxPIrMax, METH_NOARGS, "GetEirxPIrMax()\n\n" },
     {(char *) "GetFrequency", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_GetFrequency, METH_NOARGS, "GetFrequency()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_GetSize, METH_NOARGS, "GetSize()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetBsEirp", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetBsEirp, METH_VARARGS|METH_KEYWORDS, "SetBsEirp(bs_eirp)\n\ntype: bs_eirp: uint16_t" },
-    {(char *) "SetEirxPIrMax", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetEirxPIrMax, METH_VARARGS|METH_KEYWORDS, "SetEirxPIrMax(rss_ir_max)\n\ntype: rss_ir_max: uint16_t" },
-    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetBsEirp", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetBsEirp, METH_KEYWORDS|METH_VARARGS, "SetBsEirp(bs_eirp)\n\ntype: bs_eirp: uint16_t" },
+    {(char *) "SetEirxPIrMax", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetEirxPIrMax, METH_KEYWORDS|METH_VARARGS, "SetEirxPIrMax(rss_ir_max)\n\ntype: rss_ir_max: uint16_t" },
+    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3DcdChannelEncodings_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -2117,7 +2117,7 @@ PyTypeObject PyNs3DcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DcdChannelEncodings(arg0)\nDcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3DcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -2453,13 +2453,13 @@ static PyMethodDef PyNs3DlFramePrefixIe_methods[] = {
     {(char *) "GetRateId", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_GetRateId, METH_NOARGS, "GetRateId()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetStartTime", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_GetStartTime, METH_NOARGS, "GetStartTime()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetDiuc, METH_VARARGS|METH_KEYWORDS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
-    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetLength, METH_VARARGS|METH_KEYWORDS, "SetLength(length)\n\ntype: length: uint16_t" },
-    {(char *) "SetPreamblePresent", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetPreamblePresent, METH_VARARGS|METH_KEYWORDS, "SetPreamblePresent(preamblePresent)\n\ntype: preamblePresent: uint8_t" },
-    {(char *) "SetRateId", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetRateId, METH_VARARGS|METH_KEYWORDS, "SetRateId(rateId)\n\ntype: rateId: uint8_t" },
-    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetStartTime, METH_VARARGS|METH_KEYWORDS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetDiuc, METH_KEYWORDS|METH_VARARGS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
+    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetLength, METH_KEYWORDS|METH_VARARGS, "SetLength(length)\n\ntype: length: uint16_t" },
+    {(char *) "SetPreamblePresent", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetPreamblePresent, METH_KEYWORDS|METH_VARARGS, "SetPreamblePresent(preamblePresent)\n\ntype: preamblePresent: uint8_t" },
+    {(char *) "SetRateId", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetRateId, METH_KEYWORDS|METH_VARARGS, "SetRateId(rateId)\n\ntype: rateId: uint8_t" },
+    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_SetStartTime, METH_KEYWORDS|METH_VARARGS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3DlFramePrefixIe_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DlFramePrefixIe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3002,18 +3002,18 @@ _wrap_PyNs3IpcsClassifierRecord__copy__(PyNs3IpcsClassifierRecord *self)
 }
 
 static PyMethodDef PyNs3IpcsClassifierRecord_methods[] = {
-    {(char *) "AddDstAddr", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddDstAddr, METH_VARARGS|METH_KEYWORDS, "AddDstAddr(dstAddress, dstMask)\n\ntype: dstAddress: ns3::Ipv4Address\ntype: dstMask: ns3::Ipv4Mask" },
-    {(char *) "AddDstPortRange", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddDstPortRange, METH_VARARGS|METH_KEYWORDS, "AddDstPortRange(dstPortLow, dstPortHigh)\n\ntype: dstPortLow: uint16_t\ntype: dstPortHigh: uint16_t" },
-    {(char *) "AddProtocol", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddProtocol, METH_VARARGS|METH_KEYWORDS, "AddProtocol(proto)\n\ntype: proto: uint8_t" },
-    {(char *) "AddSrcAddr", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddSrcAddr, METH_VARARGS|METH_KEYWORDS, "AddSrcAddr(srcAddress, srcMask)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: srcMask: ns3::Ipv4Mask" },
-    {(char *) "AddSrcPortRange", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddSrcPortRange, METH_VARARGS|METH_KEYWORDS, "AddSrcPortRange(srcPortLow, srcPortHigh)\n\ntype: srcPortLow: uint16_t\ntype: srcPortHigh: uint16_t" },
-    {(char *) "CheckMatch", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_CheckMatch, METH_VARARGS|METH_KEYWORDS, "CheckMatch(srcAddress, dstAddress, srcPort, dstPort, proto)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: dstAddress: ns3::Ipv4Address\ntype: srcPort: uint16_t\ntype: dstPort: uint16_t\ntype: proto: uint8_t" },
+    {(char *) "AddDstAddr", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddDstAddr, METH_KEYWORDS|METH_VARARGS, "AddDstAddr(dstAddress, dstMask)\n\ntype: dstAddress: ns3::Ipv4Address\ntype: dstMask: ns3::Ipv4Mask" },
+    {(char *) "AddDstPortRange", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddDstPortRange, METH_KEYWORDS|METH_VARARGS, "AddDstPortRange(dstPortLow, dstPortHigh)\n\ntype: dstPortLow: uint16_t\ntype: dstPortHigh: uint16_t" },
+    {(char *) "AddProtocol", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddProtocol, METH_KEYWORDS|METH_VARARGS, "AddProtocol(proto)\n\ntype: proto: uint8_t" },
+    {(char *) "AddSrcAddr", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddSrcAddr, METH_KEYWORDS|METH_VARARGS, "AddSrcAddr(srcAddress, srcMask)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: srcMask: ns3::Ipv4Mask" },
+    {(char *) "AddSrcPortRange", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_AddSrcPortRange, METH_KEYWORDS|METH_VARARGS, "AddSrcPortRange(srcPortLow, srcPortHigh)\n\ntype: srcPortLow: uint16_t\ntype: srcPortHigh: uint16_t" },
+    {(char *) "CheckMatch", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_CheckMatch, METH_KEYWORDS|METH_VARARGS, "CheckMatch(srcAddress, dstAddress, srcPort, dstPort, proto)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: dstAddress: ns3::Ipv4Address\ntype: srcPort: uint16_t\ntype: dstPort: uint16_t\ntype: proto: uint8_t" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetIndex", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_GetIndex, METH_NOARGS, "GetIndex()\n\n" },
     {(char *) "GetPriority", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_GetPriority, METH_NOARGS, "GetPriority()\n\n" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: uint16_t" },
-    {(char *) "SetIndex", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetIndex, METH_VARARGS|METH_KEYWORDS, "SetIndex(index)\n\ntype: index: uint16_t" },
-    {(char *) "SetPriority", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetPriority, METH_VARARGS|METH_KEYWORDS, "SetPriority(prio)\n\ntype: prio: uint8_t" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: uint16_t" },
+    {(char *) "SetIndex", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetIndex, METH_KEYWORDS|METH_VARARGS, "SetIndex(index)\n\ntype: index: uint16_t" },
+    {(char *) "SetPriority", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_SetPriority, METH_KEYWORDS|METH_VARARGS, "SetPriority(prio)\n\ntype: prio: uint8_t" },
     {(char *) "ToTlv", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord_ToTlv, METH_NOARGS, "ToTlv()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3IpcsClassifierRecord__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -3506,12 +3506,12 @@ static PyMethodDef PyNs3OfdmDcdChannelEncodings_methods[] = {
     {(char *) "GetRtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_GetRtg, METH_NOARGS, "GetRtg()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetTtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_GetTtg, METH_NOARGS, "GetTtg()\n\n" },
-    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetBaseStationId, METH_VARARGS|METH_KEYWORDS, "SetBaseStationId(baseStationId)\n\ntype: baseStationId: ns3::Mac48Address" },
-    {(char *) "SetChannelNr", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetChannelNr, METH_VARARGS|METH_KEYWORDS, "SetChannelNr(channelNr)\n\ntype: channelNr: uint8_t" },
-    {(char *) "SetFrameDurationCode", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetFrameDurationCode, METH_VARARGS|METH_KEYWORDS, "SetFrameDurationCode(frameDurationCode)\n\ntype: frameDurationCode: uint8_t" },
-    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetFrameNumber, METH_VARARGS|METH_KEYWORDS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
-    {(char *) "SetRtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetRtg, METH_VARARGS|METH_KEYWORDS, "SetRtg(rtg)\n\ntype: rtg: uint8_t" },
-    {(char *) "SetTtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetTtg, METH_VARARGS|METH_KEYWORDS, "SetTtg(ttg)\n\ntype: ttg: uint8_t" },
+    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetBaseStationId, METH_KEYWORDS|METH_VARARGS, "SetBaseStationId(baseStationId)\n\ntype: baseStationId: ns3::Mac48Address" },
+    {(char *) "SetChannelNr", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetChannelNr, METH_KEYWORDS|METH_VARARGS, "SetChannelNr(channelNr)\n\ntype: channelNr: uint8_t" },
+    {(char *) "SetFrameDurationCode", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetFrameDurationCode, METH_KEYWORDS|METH_VARARGS, "SetFrameDurationCode(frameDurationCode)\n\ntype: frameDurationCode: uint8_t" },
+    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetFrameNumber, METH_KEYWORDS|METH_VARARGS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
+    {(char *) "SetRtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetRtg, METH_KEYWORDS|METH_VARARGS, "SetRtg(rtg)\n\ntype: rtg: uint8_t" },
+    {(char *) "SetTtg", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings_SetTtg, METH_KEYWORDS|METH_VARARGS, "SetTtg(ttg)\n\ntype: ttg: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmDcdChannelEncodings__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3578,7 +3578,7 @@ PyTypeObject PyNs3OfdmDcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OfdmDcdChannelEncodings(arg0)\nOfdmDcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmDcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmDcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -3880,12 +3880,12 @@ static PyMethodDef PyNs3OfdmDlBurstProfile_methods[] = {
     {(char *) "GetLength", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_GetLength, METH_NOARGS, "GetLength()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_GetType, METH_NOARGS, "GetType()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetDiuc, METH_VARARGS|METH_KEYWORDS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
-    {(char *) "SetFecCodeType", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetFecCodeType, METH_VARARGS|METH_KEYWORDS, "SetFecCodeType(fecCodeType)\n\ntype: fecCodeType: uint8_t" },
-    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetLength, METH_VARARGS|METH_KEYWORDS, "SetLength(length)\n\ntype: length: uint8_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetDiuc, METH_KEYWORDS|METH_VARARGS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
+    {(char *) "SetFecCodeType", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetFecCodeType, METH_KEYWORDS|METH_VARARGS, "SetFecCodeType(fecCodeType)\n\ntype: fecCodeType: uint8_t" },
+    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetLength, METH_KEYWORDS|METH_VARARGS, "SetLength(length)\n\ntype: length: uint8_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmDlBurstProfile__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4234,12 +4234,12 @@ static PyMethodDef PyNs3OfdmDlMapIe_methods[] = {
     {(char *) "GetPreamblePresent", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_GetPreamblePresent, METH_NOARGS, "GetPreamblePresent()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetStartTime", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_GetStartTime, METH_NOARGS, "GetStartTime()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetDiuc, METH_VARARGS|METH_KEYWORDS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
-    {(char *) "SetPreamblePresent", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetPreamblePresent, METH_VARARGS|METH_KEYWORDS, "SetPreamblePresent(preamblePresent)\n\ntype: preamblePresent: uint8_t" },
-    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetStartTime, METH_VARARGS|METH_KEYWORDS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "SetDiuc", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetDiuc, METH_KEYWORDS|METH_VARARGS, "SetDiuc(diuc)\n\ntype: diuc: uint8_t" },
+    {(char *) "SetPreamblePresent", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetPreamblePresent, METH_KEYWORDS|METH_VARARGS, "SetPreamblePresent(preamblePresent)\n\ntype: preamblePresent: uint8_t" },
+    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_SetStartTime, METH_KEYWORDS|METH_VARARGS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmDlMapIe_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmDlMapIe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4588,12 +4588,12 @@ static PyMethodDef PyNs3OfdmUlBurstProfile_methods[] = {
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_GetUiuc, METH_NOARGS, "GetUiuc()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetFecCodeType", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetFecCodeType, METH_VARARGS|METH_KEYWORDS, "SetFecCodeType(fecCodeType)\n\ntype: fecCodeType: uint8_t" },
-    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetLength, METH_VARARGS|METH_KEYWORDS, "SetLength(length)\n\ntype: length: uint8_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
-    {(char *) "SetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetUiuc, METH_VARARGS|METH_KEYWORDS, "SetUiuc(uiuc)\n\ntype: uiuc: uint8_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetFecCodeType", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetFecCodeType, METH_KEYWORDS|METH_VARARGS, "SetFecCodeType(fecCodeType)\n\ntype: fecCodeType: uint8_t" },
+    {(char *) "SetLength", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetLength, METH_KEYWORDS|METH_VARARGS, "SetLength(length)\n\ntype: length: uint8_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "SetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_SetUiuc, METH_KEYWORDS|METH_VARARGS, "SetUiuc(uiuc)\n\ntype: uiuc: uint8_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmUlBurstProfile__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5010,14 +5010,14 @@ static PyMethodDef PyNs3OfdmUlMapIe_methods[] = {
     {(char *) "GetStartTime", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_GetStartTime, METH_NOARGS, "GetStartTime()\n\n" },
     {(char *) "GetSubchannelIndex", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_GetSubchannelIndex, METH_NOARGS, "GetSubchannelIndex()\n\n" },
     {(char *) "GetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_GetUiuc, METH_NOARGS, "GetUiuc()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid const &" },
-    {(char *) "SetDuration", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetDuration, METH_VARARGS|METH_KEYWORDS, "SetDuration(duration)\n\ntype: duration: uint16_t" },
-    {(char *) "SetMidambleRepetitionInterval", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetMidambleRepetitionInterval, METH_VARARGS|METH_KEYWORDS, "SetMidambleRepetitionInterval(midambleRepetitionInterval)\n\ntype: midambleRepetitionInterval: uint8_t" },
-    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetStartTime, METH_VARARGS|METH_KEYWORDS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
-    {(char *) "SetSubchannelIndex", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetSubchannelIndex, METH_VARARGS|METH_KEYWORDS, "SetSubchannelIndex(subchannelIndex)\n\ntype: subchannelIndex: uint8_t" },
-    {(char *) "SetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetUiuc, METH_VARARGS|METH_KEYWORDS, "SetUiuc(uiuc)\n\ntype: uiuc: uint8_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid const &" },
+    {(char *) "SetDuration", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetDuration, METH_KEYWORDS|METH_VARARGS, "SetDuration(duration)\n\ntype: duration: uint16_t" },
+    {(char *) "SetMidambleRepetitionInterval", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetMidambleRepetitionInterval, METH_KEYWORDS|METH_VARARGS, "SetMidambleRepetitionInterval(midambleRepetitionInterval)\n\ntype: midambleRepetitionInterval: uint8_t" },
+    {(char *) "SetStartTime", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetStartTime, METH_KEYWORDS|METH_VARARGS, "SetStartTime(startTime)\n\ntype: startTime: uint16_t" },
+    {(char *) "SetSubchannelIndex", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetSubchannelIndex, METH_KEYWORDS|METH_VARARGS, "SetSubchannelIndex(subchannelIndex)\n\ntype: subchannelIndex: uint8_t" },
+    {(char *) "SetUiuc", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_SetUiuc, METH_KEYWORDS|METH_VARARGS, "SetUiuc(uiuc)\n\ntype: uiuc: uint8_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3OfdmUlMapIe_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmUlMapIe__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5281,13 +5281,13 @@ _wrap_PyNs3SNRToBlockErrorRateManager__copy__(PyNs3SNRToBlockErrorRateManager *s
 }
 
 static PyMethodDef PyNs3SNRToBlockErrorRateManager_methods[] = {
-    {(char *) "ActivateLoss", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_ActivateLoss, METH_VARARGS|METH_KEYWORDS, "ActivateLoss(loss)\n\ntype: loss: bool" },
-    {(char *) "GetBlockErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_GetBlockErrorRate, METH_VARARGS|METH_KEYWORDS, "GetBlockErrorRate(SNR, modulation)\n\ntype: SNR: double\ntype: modulation: uint8_t" },
+    {(char *) "ActivateLoss", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_ActivateLoss, METH_KEYWORDS|METH_VARARGS, "ActivateLoss(loss)\n\ntype: loss: bool" },
+    {(char *) "GetBlockErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_GetBlockErrorRate, METH_KEYWORDS|METH_VARARGS, "GetBlockErrorRate(SNR, modulation)\n\ntype: SNR: double\ntype: modulation: uint8_t" },
     {(char *) "GetTraceFilePath", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_GetTraceFilePath, METH_NOARGS, "GetTraceFilePath()\n\n" },
     {(char *) "LoadDefaultTraces", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_LoadDefaultTraces, METH_NOARGS, "LoadDefaultTraces()\n\n" },
     {(char *) "LoadTraces", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_LoadTraces, METH_NOARGS, "LoadTraces()\n\n" },
     {(char *) "ReLoadTraces", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_ReLoadTraces, METH_NOARGS, "ReLoadTraces()\n\n" },
-    {(char *) "SetTraceFilePath", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_SetTraceFilePath, METH_VARARGS|METH_KEYWORDS, "SetTraceFilePath(traceFilePath)\n\ntype: traceFilePath: char *" },
+    {(char *) "SetTraceFilePath", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager_SetTraceFilePath, METH_KEYWORDS|METH_VARARGS, "SetTraceFilePath(traceFilePath)\n\ntype: traceFilePath: char *" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5614,11 +5614,11 @@ static PyMethodDef PyNs3SNRToBlockErrorRateRecord_methods[] = {
     {(char *) "GetI2", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_GetI2, METH_NOARGS, "GetI2()\n\n" },
     {(char *) "GetSNRValue", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_GetSNRValue, METH_NOARGS, "GetSNRValue()\n\n" },
     {(char *) "GetSigma2", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_GetSigma2, METH_NOARGS, "GetSigma2()\n\n" },
-    {(char *) "SetBitErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetBitErrorRate, METH_VARARGS|METH_KEYWORDS, "SetBitErrorRate(arg0)\n\ntype: arg0: double" },
-    {(char *) "SetBlockErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetBlockErrorRate, METH_VARARGS|METH_KEYWORDS, "SetBlockErrorRate(arg0)\n\ntype: arg0: double" },
-    {(char *) "SetI1", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetI1, METH_VARARGS|METH_KEYWORDS, "SetI1(arg0)\n\ntype: arg0: double" },
-    {(char *) "SetI2", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetI2, METH_VARARGS|METH_KEYWORDS, "SetI2(arg0)\n\ntype: arg0: double" },
-    {(char *) "SetSNRValue", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetSNRValue, METH_VARARGS|METH_KEYWORDS, "SetSNRValue(arg0)\n\ntype: arg0: double" },
+    {(char *) "SetBitErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetBitErrorRate, METH_KEYWORDS|METH_VARARGS, "SetBitErrorRate(arg0)\n\ntype: arg0: double" },
+    {(char *) "SetBlockErrorRate", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetBlockErrorRate, METH_KEYWORDS|METH_VARARGS, "SetBlockErrorRate(arg0)\n\ntype: arg0: double" },
+    {(char *) "SetI1", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetI1, METH_KEYWORDS|METH_VARARGS, "SetI1(arg0)\n\ntype: arg0: double" },
+    {(char *) "SetI2", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetI2, METH_KEYWORDS|METH_VARARGS, "SetI2(arg0)\n\ntype: arg0: double" },
+    {(char *) "SetSNRValue", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord_SetSNRValue, METH_KEYWORDS|METH_VARARGS, "SetSNRValue(arg0)\n\ntype: arg0: double" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SNRToBlockErrorRateRecord__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6412,18 +6412,18 @@ static PyMethodDef PyNs3SSRecord_methods[] = {
     {(char *) "IncrementRangingCorrectionRetries", (PyCFunction) _wrap_PyNs3SSRecord_IncrementRangingCorrectionRetries, METH_NOARGS, "IncrementRangingCorrectionRetries()\n\n" },
     {(char *) "ResetInvitedRangingRetries", (PyCFunction) _wrap_PyNs3SSRecord_ResetInvitedRangingRetries, METH_NOARGS, "ResetInvitedRangingRetries()\n\n" },
     {(char *) "ResetRangingCorrectionRetries", (PyCFunction) _wrap_PyNs3SSRecord_ResetRangingCorrectionRetries, METH_NOARGS, "ResetRangingCorrectionRetries()\n\n" },
-    {(char *) "SetAreServiceFlowsAllocated", (PyCFunction) _wrap_PyNs3SSRecord_SetAreServiceFlowsAllocated, METH_VARARGS|METH_KEYWORDS, "SetAreServiceFlowsAllocated(val)\n\ntype: val: bool" },
-    {(char *) "SetBasicCid", (PyCFunction) _wrap_PyNs3SSRecord_SetBasicCid, METH_VARARGS|METH_KEYWORDS, "SetBasicCid(basicCid)\n\ntype: basicCid: ns3::Cid" },
-    {(char *) "SetDsaRsp", (PyCFunction) _wrap_PyNs3SSRecord_SetDsaRsp, METH_VARARGS|METH_KEYWORDS, "SetDsaRsp(dsaRsp)\n\ntype: dsaRsp: ns3::DsaRsp" },
-    {(char *) "SetDsaRspRetries", (PyCFunction) _wrap_PyNs3SSRecord_SetDsaRspRetries, METH_VARARGS|METH_KEYWORDS, "SetDsaRspRetries(dsaRspRetries)\n\ntype: dsaRspRetries: uint8_t" },
-    {(char *) "SetIPAddress", (PyCFunction) _wrap_PyNs3SSRecord_SetIPAddress, METH_VARARGS|METH_KEYWORDS, "SetIPAddress(IPaddress)\n\ntype: IPaddress: ns3::Ipv4Address" },
-    {(char *) "SetIsBroadcastSS", (PyCFunction) _wrap_PyNs3SSRecord_SetIsBroadcastSS, METH_VARARGS|METH_KEYWORDS, "SetIsBroadcastSS(broadcast_enable)\n\ntype: broadcast_enable: bool" },
-    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3SSRecord_SetMacAddress, METH_VARARGS|METH_KEYWORDS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
-    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SSRecord_SetModulationType, METH_VARARGS|METH_KEYWORDS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
-    {(char *) "SetPollMeBit", (PyCFunction) _wrap_PyNs3SSRecord_SetPollMeBit, METH_VARARGS|METH_KEYWORDS, "SetPollMeBit(pollMeBit)\n\ntype: pollMeBit: bool" },
-    {(char *) "SetPrimaryCid", (PyCFunction) _wrap_PyNs3SSRecord_SetPrimaryCid, METH_VARARGS|METH_KEYWORDS, "SetPrimaryCid(primaryCid)\n\ntype: primaryCid: ns3::Cid" },
-    {(char *) "SetRangingStatus", (PyCFunction) _wrap_PyNs3SSRecord_SetRangingStatus, METH_VARARGS|METH_KEYWORDS, "SetRangingStatus(rangingStatus)\n\ntype: rangingStatus: ns3::WimaxNetDevice::RangingStatus" },
-    {(char *) "SetSfTransactionId", (PyCFunction) _wrap_PyNs3SSRecord_SetSfTransactionId, METH_VARARGS|METH_KEYWORDS, "SetSfTransactionId(sfTransactionId)\n\ntype: sfTransactionId: uint16_t" },
+    {(char *) "SetAreServiceFlowsAllocated", (PyCFunction) _wrap_PyNs3SSRecord_SetAreServiceFlowsAllocated, METH_KEYWORDS|METH_VARARGS, "SetAreServiceFlowsAllocated(val)\n\ntype: val: bool" },
+    {(char *) "SetBasicCid", (PyCFunction) _wrap_PyNs3SSRecord_SetBasicCid, METH_KEYWORDS|METH_VARARGS, "SetBasicCid(basicCid)\n\ntype: basicCid: ns3::Cid" },
+    {(char *) "SetDsaRsp", (PyCFunction) _wrap_PyNs3SSRecord_SetDsaRsp, METH_KEYWORDS|METH_VARARGS, "SetDsaRsp(dsaRsp)\n\ntype: dsaRsp: ns3::DsaRsp" },
+    {(char *) "SetDsaRspRetries", (PyCFunction) _wrap_PyNs3SSRecord_SetDsaRspRetries, METH_KEYWORDS|METH_VARARGS, "SetDsaRspRetries(dsaRspRetries)\n\ntype: dsaRspRetries: uint8_t" },
+    {(char *) "SetIPAddress", (PyCFunction) _wrap_PyNs3SSRecord_SetIPAddress, METH_KEYWORDS|METH_VARARGS, "SetIPAddress(IPaddress)\n\ntype: IPaddress: ns3::Ipv4Address" },
+    {(char *) "SetIsBroadcastSS", (PyCFunction) _wrap_PyNs3SSRecord_SetIsBroadcastSS, METH_KEYWORDS|METH_VARARGS, "SetIsBroadcastSS(broadcast_enable)\n\ntype: broadcast_enable: bool" },
+    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3SSRecord_SetMacAddress, METH_KEYWORDS|METH_VARARGS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
+    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SSRecord_SetModulationType, METH_KEYWORDS|METH_VARARGS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "SetPollMeBit", (PyCFunction) _wrap_PyNs3SSRecord_SetPollMeBit, METH_KEYWORDS|METH_VARARGS, "SetPollMeBit(pollMeBit)\n\ntype: pollMeBit: bool" },
+    {(char *) "SetPrimaryCid", (PyCFunction) _wrap_PyNs3SSRecord_SetPrimaryCid, METH_KEYWORDS|METH_VARARGS, "SetPrimaryCid(primaryCid)\n\ntype: primaryCid: ns3::Cid" },
+    {(char *) "SetRangingStatus", (PyCFunction) _wrap_PyNs3SSRecord_SetRangingStatus, METH_KEYWORDS|METH_VARARGS, "SetRangingStatus(rangingStatus)\n\ntype: rangingStatus: ns3::WimaxNetDevice::RangingStatus" },
+    {(char *) "SetSfTransactionId", (PyCFunction) _wrap_PyNs3SSRecord_SetSfTransactionId, METH_KEYWORDS|METH_VARARGS, "SetSfTransactionId(sfTransactionId)\n\ntype: sfTransactionId: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SSRecord__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8170,9 +8170,9 @@ _wrap_PyNs3ServiceFlow__copy__(PyNs3ServiceFlow *self)
 }
 
 static PyMethodDef PyNs3ServiceFlow_methods[] = {
-    {(char *) "CheckClassifierMatch", (PyCFunction) _wrap_PyNs3ServiceFlow_CheckClassifierMatch, METH_VARARGS|METH_KEYWORDS, "CheckClassifierMatch(srcAddress, dstAddress, srcPort, dstPort, proto)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: dstAddress: ns3::Ipv4Address\ntype: srcPort: uint16_t\ntype: dstPort: uint16_t\ntype: proto: uint8_t" },
+    {(char *) "CheckClassifierMatch", (PyCFunction) _wrap_PyNs3ServiceFlow_CheckClassifierMatch, METH_KEYWORDS|METH_VARARGS, "CheckClassifierMatch(srcAddress, dstAddress, srcPort, dstPort, proto)\n\ntype: srcAddress: ns3::Ipv4Address\ntype: dstAddress: ns3::Ipv4Address\ntype: srcPort: uint16_t\ntype: dstPort: uint16_t\ntype: proto: uint8_t" },
     {(char *) "CleanUpQueue", (PyCFunction) _wrap_PyNs3ServiceFlow_CleanUpQueue, METH_NOARGS, "CleanUpQueue()\n\n" },
-    {(char *) "CopyParametersFrom", (PyCFunction) _wrap_PyNs3ServiceFlow_CopyParametersFrom, METH_VARARGS|METH_KEYWORDS, "CopyParametersFrom(sf)\n\ntype: sf: ns3::ServiceFlow" },
+    {(char *) "CopyParametersFrom", (PyCFunction) _wrap_PyNs3ServiceFlow_CopyParametersFrom, METH_KEYWORDS|METH_VARARGS, "CopyParametersFrom(sf)\n\ntype: sf: ns3::ServiceFlow" },
     {(char *) "GetArqBlockLifeTime", (PyCFunction) _wrap_PyNs3ServiceFlow_GetArqBlockLifeTime, METH_NOARGS, "GetArqBlockLifeTime()\n\n" },
     {(char *) "GetArqBlockSize", (PyCFunction) _wrap_PyNs3ServiceFlow_GetArqBlockSize, METH_NOARGS, "GetArqBlockSize()\n\n" },
     {(char *) "GetArqDeliverInOrder", (PyCFunction) _wrap_PyNs3ServiceFlow_GetArqDeliverInOrder, METH_NOARGS, "GetArqDeliverInOrder()\n\n" },
@@ -8211,43 +8211,43 @@ static PyMethodDef PyNs3ServiceFlow_methods[] = {
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3ServiceFlow_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetUnsolicitedGrantInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_GetUnsolicitedGrantInterval, METH_NOARGS, "GetUnsolicitedGrantInterval()\n\n" },
     {(char *) "GetUnsolicitedPollingInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_GetUnsolicitedPollingInterval, METH_NOARGS, "GetUnsolicitedPollingInterval()\n\n" },
-    {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3ServiceFlow_HasPackets, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3ServiceFlow_HasPackets, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "InitValues", (PyCFunction) _wrap_PyNs3ServiceFlow_InitValues, METH_NOARGS, "InitValues()\n\n" },
     {(char *) "PrintQoSParameters", (PyCFunction) _wrap_PyNs3ServiceFlow_PrintQoSParameters, METH_NOARGS, "PrintQoSParameters()\n\n" },
-    {(char *) "SetArqBlockLifeTime", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqBlockLifeTime, METH_VARARGS|METH_KEYWORDS, "SetArqBlockLifeTime(lifeTime)\n\ntype: lifeTime: uint16_t" },
-    {(char *) "SetArqBlockSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqBlockSize, METH_VARARGS|METH_KEYWORDS, "SetArqBlockSize(size)\n\ntype: size: uint16_t" },
-    {(char *) "SetArqDeliverInOrder", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqDeliverInOrder, METH_VARARGS|METH_KEYWORDS, "SetArqDeliverInOrder(inOrder)\n\ntype: inOrder: uint8_t" },
-    {(char *) "SetArqEnable", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqEnable, METH_VARARGS|METH_KEYWORDS, "SetArqEnable(arqEnable)\n\ntype: arqEnable: uint8_t" },
-    {(char *) "SetArqPurgeTimeout", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqPurgeTimeout, METH_VARARGS|METH_KEYWORDS, "SetArqPurgeTimeout(timeout)\n\ntype: timeout: uint16_t" },
-    {(char *) "SetArqRetryTimeoutRx", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqRetryTimeoutRx, METH_VARARGS|METH_KEYWORDS, "SetArqRetryTimeoutRx(timeout)\n\ntype: timeout: uint16_t" },
-    {(char *) "SetArqRetryTimeoutTx", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqRetryTimeoutTx, METH_VARARGS|METH_KEYWORDS, "SetArqRetryTimeoutTx(timeout)\n\ntype: timeout: uint16_t" },
-    {(char *) "SetArqSyncLoss", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqSyncLoss, METH_VARARGS|METH_KEYWORDS, "SetArqSyncLoss(syncLoss)\n\ntype: syncLoss: uint16_t" },
-    {(char *) "SetArqWindowSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqWindowSize, METH_VARARGS|METH_KEYWORDS, "SetArqWindowSize(arqWindowSize)\n\ntype: arqWindowSize: uint16_t" },
-    {(char *) "SetConnection", (PyCFunction) _wrap_PyNs3ServiceFlow_SetConnection, METH_VARARGS|METH_KEYWORDS, "SetConnection(connection)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
-    {(char *) "SetConvergenceSublayerParam", (PyCFunction) _wrap_PyNs3ServiceFlow_SetConvergenceSublayerParam, METH_VARARGS|METH_KEYWORDS, "SetConvergenceSublayerParam(csparam)\n\ntype: csparam: ns3::CsParameters" },
-    {(char *) "SetCsSpecification", (PyCFunction) _wrap_PyNs3ServiceFlow_SetCsSpecification, METH_VARARGS|METH_KEYWORDS, "SetCsSpecification(spec)\n\ntype: spec: ns3::ServiceFlow::CsSpecification" },
-    {(char *) "SetDirection", (PyCFunction) _wrap_PyNs3ServiceFlow_SetDirection, METH_VARARGS|METH_KEYWORDS, "SetDirection(direction)\n\ntype: direction: ns3::ServiceFlow::Direction" },
-    {(char *) "SetFixedversusVariableSduIndicator", (PyCFunction) _wrap_PyNs3ServiceFlow_SetFixedversusVariableSduIndicator, METH_VARARGS|METH_KEYWORDS, "SetFixedversusVariableSduIndicator(sduIndicator)\n\ntype: sduIndicator: uint8_t" },
-    {(char *) "SetIsEnabled", (PyCFunction) _wrap_PyNs3ServiceFlow_SetIsEnabled, METH_VARARGS|METH_KEYWORDS, "SetIsEnabled(isEnabled)\n\ntype: isEnabled: bool" },
-    {(char *) "SetIsMulticast", (PyCFunction) _wrap_PyNs3ServiceFlow_SetIsMulticast, METH_VARARGS|METH_KEYWORDS, "SetIsMulticast(isMulticast)\n\ntype: isMulticast: bool" },
-    {(char *) "SetMaxSustainedTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaxSustainedTrafficRate, METH_VARARGS|METH_KEYWORDS, "SetMaxSustainedTrafficRate(maxSustainedRate)\n\ntype: maxSustainedRate: uint32_t" },
-    {(char *) "SetMaxTrafficBurst", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaxTrafficBurst, METH_VARARGS|METH_KEYWORDS, "SetMaxTrafficBurst(maxTrafficBurst)\n\ntype: maxTrafficBurst: uint32_t" },
-    {(char *) "SetMaximumLatency", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaximumLatency, METH_VARARGS|METH_KEYWORDS, "SetMaximumLatency(MaximumLatency)\n\ntype: MaximumLatency: uint32_t" },
-    {(char *) "SetMinReservedTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMinReservedTrafficRate, METH_VARARGS|METH_KEYWORDS, "SetMinReservedTrafficRate(minResvRate)\n\ntype: minResvRate: uint32_t" },
-    {(char *) "SetMinTolerableTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMinTolerableTrafficRate, METH_VARARGS|METH_KEYWORDS, "SetMinTolerableTrafficRate(minJitter)\n\ntype: minJitter: uint32_t" },
-    {(char *) "SetModulation", (PyCFunction) _wrap_PyNs3ServiceFlow_SetModulation, METH_VARARGS|METH_KEYWORDS, "SetModulation(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
-    {(char *) "SetQosParamSetType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetQosParamSetType, METH_VARARGS|METH_KEYWORDS, "SetQosParamSetType(type)\n\ntype: type: uint8_t" },
-    {(char *) "SetRequestTransmissionPolicy", (PyCFunction) _wrap_PyNs3ServiceFlow_SetRequestTransmissionPolicy, METH_VARARGS|METH_KEYWORDS, "SetRequestTransmissionPolicy(policy)\n\ntype: policy: uint32_t" },
-    {(char *) "SetSduSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetSduSize, METH_VARARGS|METH_KEYWORDS, "SetSduSize(sduSize)\n\ntype: sduSize: uint8_t" },
-    {(char *) "SetServiceClassName", (PyCFunction) _wrap_PyNs3ServiceFlow_SetServiceClassName, METH_VARARGS|METH_KEYWORDS, "SetServiceClassName(name)\n\ntype: name: std::string" },
-    {(char *) "SetServiceSchedulingType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetServiceSchedulingType, METH_VARARGS|METH_KEYWORDS, "SetServiceSchedulingType(schedType)\n\ntype: schedType: ns3::ServiceFlow::SchedulingType" },
-    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3ServiceFlow_SetSfid, METH_VARARGS|METH_KEYWORDS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
-    {(char *) "SetTargetSAID", (PyCFunction) _wrap_PyNs3ServiceFlow_SetTargetSAID, METH_VARARGS|METH_KEYWORDS, "SetTargetSAID(targetSaid)\n\ntype: targetSaid: uint16_t" },
-    {(char *) "SetToleratedJitter", (PyCFunction) _wrap_PyNs3ServiceFlow_SetToleratedJitter, METH_VARARGS|METH_KEYWORDS, "SetToleratedJitter(jitter)\n\ntype: jitter: uint32_t" },
-    {(char *) "SetTrafficPriority", (PyCFunction) _wrap_PyNs3ServiceFlow_SetTrafficPriority, METH_VARARGS|METH_KEYWORDS, "SetTrafficPriority(priority)\n\ntype: priority: uint8_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: ns3::ServiceFlow::Type" },
-    {(char *) "SetUnsolicitedGrantInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_SetUnsolicitedGrantInterval, METH_VARARGS|METH_KEYWORDS, "SetUnsolicitedGrantInterval(unsolicitedGrantInterval)\n\ntype: unsolicitedGrantInterval: uint16_t" },
-    {(char *) "SetUnsolicitedPollingInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_SetUnsolicitedPollingInterval, METH_VARARGS|METH_KEYWORDS, "SetUnsolicitedPollingInterval(unsolicitedPollingInterval)\n\ntype: unsolicitedPollingInterval: uint16_t" },
+    {(char *) "SetArqBlockLifeTime", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqBlockLifeTime, METH_KEYWORDS|METH_VARARGS, "SetArqBlockLifeTime(lifeTime)\n\ntype: lifeTime: uint16_t" },
+    {(char *) "SetArqBlockSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqBlockSize, METH_KEYWORDS|METH_VARARGS, "SetArqBlockSize(size)\n\ntype: size: uint16_t" },
+    {(char *) "SetArqDeliverInOrder", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqDeliverInOrder, METH_KEYWORDS|METH_VARARGS, "SetArqDeliverInOrder(inOrder)\n\ntype: inOrder: uint8_t" },
+    {(char *) "SetArqEnable", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqEnable, METH_KEYWORDS|METH_VARARGS, "SetArqEnable(arqEnable)\n\ntype: arqEnable: uint8_t" },
+    {(char *) "SetArqPurgeTimeout", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqPurgeTimeout, METH_KEYWORDS|METH_VARARGS, "SetArqPurgeTimeout(timeout)\n\ntype: timeout: uint16_t" },
+    {(char *) "SetArqRetryTimeoutRx", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqRetryTimeoutRx, METH_KEYWORDS|METH_VARARGS, "SetArqRetryTimeoutRx(timeout)\n\ntype: timeout: uint16_t" },
+    {(char *) "SetArqRetryTimeoutTx", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqRetryTimeoutTx, METH_KEYWORDS|METH_VARARGS, "SetArqRetryTimeoutTx(timeout)\n\ntype: timeout: uint16_t" },
+    {(char *) "SetArqSyncLoss", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqSyncLoss, METH_KEYWORDS|METH_VARARGS, "SetArqSyncLoss(syncLoss)\n\ntype: syncLoss: uint16_t" },
+    {(char *) "SetArqWindowSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetArqWindowSize, METH_KEYWORDS|METH_VARARGS, "SetArqWindowSize(arqWindowSize)\n\ntype: arqWindowSize: uint16_t" },
+    {(char *) "SetConnection", (PyCFunction) _wrap_PyNs3ServiceFlow_SetConnection, METH_KEYWORDS|METH_VARARGS, "SetConnection(connection)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "SetConvergenceSublayerParam", (PyCFunction) _wrap_PyNs3ServiceFlow_SetConvergenceSublayerParam, METH_KEYWORDS|METH_VARARGS, "SetConvergenceSublayerParam(csparam)\n\ntype: csparam: ns3::CsParameters" },
+    {(char *) "SetCsSpecification", (PyCFunction) _wrap_PyNs3ServiceFlow_SetCsSpecification, METH_KEYWORDS|METH_VARARGS, "SetCsSpecification(spec)\n\ntype: spec: ns3::ServiceFlow::CsSpecification" },
+    {(char *) "SetDirection", (PyCFunction) _wrap_PyNs3ServiceFlow_SetDirection, METH_KEYWORDS|METH_VARARGS, "SetDirection(direction)\n\ntype: direction: ns3::ServiceFlow::Direction" },
+    {(char *) "SetFixedversusVariableSduIndicator", (PyCFunction) _wrap_PyNs3ServiceFlow_SetFixedversusVariableSduIndicator, METH_KEYWORDS|METH_VARARGS, "SetFixedversusVariableSduIndicator(sduIndicator)\n\ntype: sduIndicator: uint8_t" },
+    {(char *) "SetIsEnabled", (PyCFunction) _wrap_PyNs3ServiceFlow_SetIsEnabled, METH_KEYWORDS|METH_VARARGS, "SetIsEnabled(isEnabled)\n\ntype: isEnabled: bool" },
+    {(char *) "SetIsMulticast", (PyCFunction) _wrap_PyNs3ServiceFlow_SetIsMulticast, METH_KEYWORDS|METH_VARARGS, "SetIsMulticast(isMulticast)\n\ntype: isMulticast: bool" },
+    {(char *) "SetMaxSustainedTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaxSustainedTrafficRate, METH_KEYWORDS|METH_VARARGS, "SetMaxSustainedTrafficRate(maxSustainedRate)\n\ntype: maxSustainedRate: uint32_t" },
+    {(char *) "SetMaxTrafficBurst", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaxTrafficBurst, METH_KEYWORDS|METH_VARARGS, "SetMaxTrafficBurst(maxTrafficBurst)\n\ntype: maxTrafficBurst: uint32_t" },
+    {(char *) "SetMaximumLatency", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMaximumLatency, METH_KEYWORDS|METH_VARARGS, "SetMaximumLatency(MaximumLatency)\n\ntype: MaximumLatency: uint32_t" },
+    {(char *) "SetMinReservedTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMinReservedTrafficRate, METH_KEYWORDS|METH_VARARGS, "SetMinReservedTrafficRate(minResvRate)\n\ntype: minResvRate: uint32_t" },
+    {(char *) "SetMinTolerableTrafficRate", (PyCFunction) _wrap_PyNs3ServiceFlow_SetMinTolerableTrafficRate, METH_KEYWORDS|METH_VARARGS, "SetMinTolerableTrafficRate(minJitter)\n\ntype: minJitter: uint32_t" },
+    {(char *) "SetModulation", (PyCFunction) _wrap_PyNs3ServiceFlow_SetModulation, METH_KEYWORDS|METH_VARARGS, "SetModulation(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "SetQosParamSetType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetQosParamSetType, METH_KEYWORDS|METH_VARARGS, "SetQosParamSetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "SetRequestTransmissionPolicy", (PyCFunction) _wrap_PyNs3ServiceFlow_SetRequestTransmissionPolicy, METH_KEYWORDS|METH_VARARGS, "SetRequestTransmissionPolicy(policy)\n\ntype: policy: uint32_t" },
+    {(char *) "SetSduSize", (PyCFunction) _wrap_PyNs3ServiceFlow_SetSduSize, METH_KEYWORDS|METH_VARARGS, "SetSduSize(sduSize)\n\ntype: sduSize: uint8_t" },
+    {(char *) "SetServiceClassName", (PyCFunction) _wrap_PyNs3ServiceFlow_SetServiceClassName, METH_KEYWORDS|METH_VARARGS, "SetServiceClassName(name)\n\ntype: name: std::string" },
+    {(char *) "SetServiceSchedulingType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetServiceSchedulingType, METH_KEYWORDS|METH_VARARGS, "SetServiceSchedulingType(schedType)\n\ntype: schedType: ns3::ServiceFlow::SchedulingType" },
+    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3ServiceFlow_SetSfid, METH_KEYWORDS|METH_VARARGS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
+    {(char *) "SetTargetSAID", (PyCFunction) _wrap_PyNs3ServiceFlow_SetTargetSAID, METH_KEYWORDS|METH_VARARGS, "SetTargetSAID(targetSaid)\n\ntype: targetSaid: uint16_t" },
+    {(char *) "SetToleratedJitter", (PyCFunction) _wrap_PyNs3ServiceFlow_SetToleratedJitter, METH_KEYWORDS|METH_VARARGS, "SetToleratedJitter(jitter)\n\ntype: jitter: uint32_t" },
+    {(char *) "SetTrafficPriority", (PyCFunction) _wrap_PyNs3ServiceFlow_SetTrafficPriority, METH_KEYWORDS|METH_VARARGS, "SetTrafficPriority(priority)\n\ntype: priority: uint8_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3ServiceFlow_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: ns3::ServiceFlow::Type" },
+    {(char *) "SetUnsolicitedGrantInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_SetUnsolicitedGrantInterval, METH_KEYWORDS|METH_VARARGS, "SetUnsolicitedGrantInterval(unsolicitedGrantInterval)\n\ntype: unsolicitedGrantInterval: uint16_t" },
+    {(char *) "SetUnsolicitedPollingInterval", (PyCFunction) _wrap_PyNs3ServiceFlow_SetUnsolicitedPollingInterval, METH_KEYWORDS|METH_VARARGS, "SetUnsolicitedPollingInterval(unsolicitedPollingInterval)\n\ntype: unsolicitedPollingInterval: uint16_t" },
     {(char *) "ToTlv", (PyCFunction) _wrap_PyNs3ServiceFlow_ToTlv, METH_NOARGS, "ToTlv()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ServiceFlow__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -9008,30 +9008,30 @@ static PyMethodDef PyNs3ServiceFlowRecord_methods[] = {
     {(char *) "GetPktsRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_GetPktsRcvd, METH_NOARGS, "GetPktsRcvd()\n\n" },
     {(char *) "GetPktsSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_GetPktsSent, METH_NOARGS, "GetPktsSent()\n\n" },
     {(char *) "GetRequestedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_GetRequestedBandwidth, METH_NOARGS, "GetRequestedBandwidth()\n\n" },
-    {(char *) "IncreaseBacklogged", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_IncreaseBacklogged, METH_VARARGS|METH_KEYWORDS, "IncreaseBacklogged(backlogged)\n\ntype: backlogged: uint32_t" },
-    {(char *) "IncreaseBackloggedTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_IncreaseBackloggedTemp, METH_VARARGS|METH_KEYWORDS, "IncreaseBackloggedTemp(backloggedTemp)\n\ntype: backloggedTemp: uint32_t" },
-    {(char *) "SetBacklogged", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBacklogged, METH_VARARGS|METH_KEYWORDS, "SetBacklogged(backlogged)\n\ntype: backlogged: uint32_t" },
-    {(char *) "SetBackloggedTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBackloggedTemp, METH_VARARGS|METH_KEYWORDS, "SetBackloggedTemp(backloggedTemp)\n\ntype: backloggedTemp: uint32_t" },
-    {(char *) "SetBwSinceLastExpiry", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBwSinceLastExpiry, METH_VARARGS|METH_KEYWORDS, "SetBwSinceLastExpiry(bwSinceLastExpiry)\n\ntype: bwSinceLastExpiry: uint32_t" },
-    {(char *) "SetBytesRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBytesRcvd, METH_VARARGS|METH_KEYWORDS, "SetBytesRcvd(bytesRcvd)\n\ntype: bytesRcvd: uint32_t" },
-    {(char *) "SetBytesSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBytesSent, METH_VARARGS|METH_KEYWORDS, "SetBytesSent(bytesSent)\n\ntype: bytesSent: uint32_t" },
-    {(char *) "SetDlTimeStamp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetDlTimeStamp, METH_VARARGS|METH_KEYWORDS, "SetDlTimeStamp(dlTimeStamp)\n\ntype: dlTimeStamp: ns3::Time" },
-    {(char *) "SetGrantSize", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantSize, METH_VARARGS|METH_KEYWORDS, "SetGrantSize(grantSize)\n\ntype: grantSize: uint32_t" },
-    {(char *) "SetGrantTimeStamp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantTimeStamp, METH_VARARGS|METH_KEYWORDS, "SetGrantTimeStamp(grantTimeStamp)\n\ntype: grantTimeStamp: ns3::Time" },
-    {(char *) "SetGrantedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantedBandwidth, METH_VARARGS|METH_KEYWORDS, "SetGrantedBandwidth(grantedBandwidth)\n\ntype: grantedBandwidth: uint32_t" },
-    {(char *) "SetGrantedBandwidthTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantedBandwidthTemp, METH_VARARGS|METH_KEYWORDS, "SetGrantedBandwidthTemp(grantedBandwidthTemp)\n\ntype: grantedBandwidthTemp: uint32_t" },
-    {(char *) "SetLastGrantTime", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetLastGrantTime, METH_VARARGS|METH_KEYWORDS, "SetLastGrantTime(grantTime)\n\ntype: grantTime: ns3::Time" },
-    {(char *) "SetPktsRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetPktsRcvd, METH_VARARGS|METH_KEYWORDS, "SetPktsRcvd(pktsRcvd)\n\ntype: pktsRcvd: uint32_t" },
-    {(char *) "SetPktsSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetPktsSent, METH_VARARGS|METH_KEYWORDS, "SetPktsSent(pktsSent)\n\ntype: pktsSent: uint32_t" },
-    {(char *) "SetRequestedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetRequestedBandwidth, METH_VARARGS|METH_KEYWORDS, "SetRequestedBandwidth(requestedBandwidth)\n\ntype: requestedBandwidth: uint32_t" },
-    {(char *) "UpdateBwSinceLastExpiry", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBwSinceLastExpiry, METH_VARARGS|METH_KEYWORDS, "UpdateBwSinceLastExpiry(bwSinceLastExpiry)\n\ntype: bwSinceLastExpiry: uint32_t" },
-    {(char *) "UpdateBytesRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBytesRcvd, METH_VARARGS|METH_KEYWORDS, "UpdateBytesRcvd(bytesRcvd)\n\ntype: bytesRcvd: uint32_t" },
-    {(char *) "UpdateBytesSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBytesSent, METH_VARARGS|METH_KEYWORDS, "UpdateBytesSent(bytesSent)\n\ntype: bytesSent: uint32_t" },
-    {(char *) "UpdateGrantedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateGrantedBandwidth, METH_VARARGS|METH_KEYWORDS, "UpdateGrantedBandwidth(grantedBandwidth)\n\ntype: grantedBandwidth: uint32_t" },
-    {(char *) "UpdateGrantedBandwidthTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateGrantedBandwidthTemp, METH_VARARGS|METH_KEYWORDS, "UpdateGrantedBandwidthTemp(grantedBandwidthTemp)\n\ntype: grantedBandwidthTemp: uint32_t" },
-    {(char *) "UpdatePktsRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdatePktsRcvd, METH_VARARGS|METH_KEYWORDS, "UpdatePktsRcvd(pktsRcvd)\n\ntype: pktsRcvd: uint32_t" },
-    {(char *) "UpdatePktsSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdatePktsSent, METH_VARARGS|METH_KEYWORDS, "UpdatePktsSent(pktsSent)\n\ntype: pktsSent: uint32_t" },
-    {(char *) "UpdateRequestedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateRequestedBandwidth, METH_VARARGS|METH_KEYWORDS, "UpdateRequestedBandwidth(requestedBandwidth)\n\ntype: requestedBandwidth: uint32_t" },
+    {(char *) "IncreaseBacklogged", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_IncreaseBacklogged, METH_KEYWORDS|METH_VARARGS, "IncreaseBacklogged(backlogged)\n\ntype: backlogged: uint32_t" },
+    {(char *) "IncreaseBackloggedTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_IncreaseBackloggedTemp, METH_KEYWORDS|METH_VARARGS, "IncreaseBackloggedTemp(backloggedTemp)\n\ntype: backloggedTemp: uint32_t" },
+    {(char *) "SetBacklogged", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBacklogged, METH_KEYWORDS|METH_VARARGS, "SetBacklogged(backlogged)\n\ntype: backlogged: uint32_t" },
+    {(char *) "SetBackloggedTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBackloggedTemp, METH_KEYWORDS|METH_VARARGS, "SetBackloggedTemp(backloggedTemp)\n\ntype: backloggedTemp: uint32_t" },
+    {(char *) "SetBwSinceLastExpiry", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBwSinceLastExpiry, METH_KEYWORDS|METH_VARARGS, "SetBwSinceLastExpiry(bwSinceLastExpiry)\n\ntype: bwSinceLastExpiry: uint32_t" },
+    {(char *) "SetBytesRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBytesRcvd, METH_KEYWORDS|METH_VARARGS, "SetBytesRcvd(bytesRcvd)\n\ntype: bytesRcvd: uint32_t" },
+    {(char *) "SetBytesSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetBytesSent, METH_KEYWORDS|METH_VARARGS, "SetBytesSent(bytesSent)\n\ntype: bytesSent: uint32_t" },
+    {(char *) "SetDlTimeStamp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetDlTimeStamp, METH_KEYWORDS|METH_VARARGS, "SetDlTimeStamp(dlTimeStamp)\n\ntype: dlTimeStamp: ns3::Time" },
+    {(char *) "SetGrantSize", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantSize, METH_KEYWORDS|METH_VARARGS, "SetGrantSize(grantSize)\n\ntype: grantSize: uint32_t" },
+    {(char *) "SetGrantTimeStamp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantTimeStamp, METH_KEYWORDS|METH_VARARGS, "SetGrantTimeStamp(grantTimeStamp)\n\ntype: grantTimeStamp: ns3::Time" },
+    {(char *) "SetGrantedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantedBandwidth, METH_KEYWORDS|METH_VARARGS, "SetGrantedBandwidth(grantedBandwidth)\n\ntype: grantedBandwidth: uint32_t" },
+    {(char *) "SetGrantedBandwidthTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetGrantedBandwidthTemp, METH_KEYWORDS|METH_VARARGS, "SetGrantedBandwidthTemp(grantedBandwidthTemp)\n\ntype: grantedBandwidthTemp: uint32_t" },
+    {(char *) "SetLastGrantTime", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetLastGrantTime, METH_KEYWORDS|METH_VARARGS, "SetLastGrantTime(grantTime)\n\ntype: grantTime: ns3::Time" },
+    {(char *) "SetPktsRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetPktsRcvd, METH_KEYWORDS|METH_VARARGS, "SetPktsRcvd(pktsRcvd)\n\ntype: pktsRcvd: uint32_t" },
+    {(char *) "SetPktsSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetPktsSent, METH_KEYWORDS|METH_VARARGS, "SetPktsSent(pktsSent)\n\ntype: pktsSent: uint32_t" },
+    {(char *) "SetRequestedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_SetRequestedBandwidth, METH_KEYWORDS|METH_VARARGS, "SetRequestedBandwidth(requestedBandwidth)\n\ntype: requestedBandwidth: uint32_t" },
+    {(char *) "UpdateBwSinceLastExpiry", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBwSinceLastExpiry, METH_KEYWORDS|METH_VARARGS, "UpdateBwSinceLastExpiry(bwSinceLastExpiry)\n\ntype: bwSinceLastExpiry: uint32_t" },
+    {(char *) "UpdateBytesRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBytesRcvd, METH_KEYWORDS|METH_VARARGS, "UpdateBytesRcvd(bytesRcvd)\n\ntype: bytesRcvd: uint32_t" },
+    {(char *) "UpdateBytesSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateBytesSent, METH_KEYWORDS|METH_VARARGS, "UpdateBytesSent(bytesSent)\n\ntype: bytesSent: uint32_t" },
+    {(char *) "UpdateGrantedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateGrantedBandwidth, METH_KEYWORDS|METH_VARARGS, "UpdateGrantedBandwidth(grantedBandwidth)\n\ntype: grantedBandwidth: uint32_t" },
+    {(char *) "UpdateGrantedBandwidthTemp", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateGrantedBandwidthTemp, METH_KEYWORDS|METH_VARARGS, "UpdateGrantedBandwidthTemp(grantedBandwidthTemp)\n\ntype: grantedBandwidthTemp: uint32_t" },
+    {(char *) "UpdatePktsRcvd", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdatePktsRcvd, METH_KEYWORDS|METH_VARARGS, "UpdatePktsRcvd(pktsRcvd)\n\ntype: pktsRcvd: uint32_t" },
+    {(char *) "UpdatePktsSent", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdatePktsSent, METH_KEYWORDS|METH_VARARGS, "UpdatePktsSent(pktsSent)\n\ntype: pktsSent: uint32_t" },
+    {(char *) "UpdateRequestedBandwidth", (PyCFunction) _wrap_PyNs3ServiceFlowRecord_UpdateRequestedBandwidth, METH_KEYWORDS|METH_VARARGS, "UpdateRequestedBandwidth(requestedBandwidth)\n\ntype: requestedBandwidth: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ServiceFlowRecord__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9166,9 +9166,9 @@ _wrap_PyNs3TlvValue_Serialize(PyNs3TlvValue *self, PyObject *args, PyObject *kwa
 }
 
 static PyMethodDef PyNs3TlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3TlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLen)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLen: uint64_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3TlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLen)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLen: uint64_t" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3TlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3TlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3TlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9231,7 +9231,7 @@ PyTypeObject PyNs3TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TlvValue(arg0)\nTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TlvValue__tp_clear,             /* tp_clear */
@@ -9486,12 +9486,12 @@ _wrap_PyNs3TosTlvValue__copy__(PyNs3TosTlvValue *self)
 }
 
 static PyMethodDef PyNs3TosTlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3TosTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3TosTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "GetHigh", (PyCFunction) _wrap_PyNs3TosTlvValue_GetHigh, METH_NOARGS, "GetHigh()\n\n" },
     {(char *) "GetLow", (PyCFunction) _wrap_PyNs3TosTlvValue_GetLow, METH_NOARGS, "GetLow()\n\n" },
     {(char *) "GetMask", (PyCFunction) _wrap_PyNs3TosTlvValue_GetMask, METH_NOARGS, "GetMask()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3TosTlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3TosTlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3TosTlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TosTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9555,7 +9555,7 @@ PyTypeObject PyNs3TosTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TosTlvValue(low, high, mask)\nTosTlvValue(arg0)\nTosTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3TosTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TosTlvValue__tp_clear,             /* tp_clear */
@@ -9817,10 +9817,10 @@ _wrap_PyNs3U16TlvValue__copy__(PyNs3U16TlvValue *self)
 }
 
 static PyMethodDef PyNs3U16TlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U16TlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U16TlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3U16TlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3U16TlvValue_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U16TlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U16TlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3U16TlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -9884,7 +9884,7 @@ PyTypeObject PyNs3U16TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "U16TlvValue(value)\nU16TlvValue(arg0)\nU16TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U16TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U16TlvValue__tp_clear,             /* tp_clear */
@@ -10136,10 +10136,10 @@ _wrap_PyNs3U32TlvValue__copy__(PyNs3U32TlvValue *self)
 }
 
 static PyMethodDef PyNs3U32TlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U32TlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U32TlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3U32TlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3U32TlvValue_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U32TlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U32TlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3U32TlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -10203,7 +10203,7 @@ PyTypeObject PyNs3U32TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "U32TlvValue(value)\nU32TlvValue(arg0)\nU32TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U32TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U32TlvValue__tp_clear,             /* tp_clear */
@@ -10465,10 +10465,10 @@ _wrap_PyNs3U8TlvValue__copy__(PyNs3U8TlvValue *self)
 }
 
 static PyMethodDef PyNs3U8TlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U8TlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3U8TlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3U8TlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3U8TlvValue_GetValue, METH_NOARGS, "GetValue()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U8TlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3U8TlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3U8TlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -10532,7 +10532,7 @@ PyTypeObject PyNs3U8TlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "U8TlvValue(value)\nU8TlvValue(arg0)\nU8TlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3U8TlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3U8TlvValue__tp_clear,             /* tp_clear */
@@ -10903,11 +10903,11 @@ static PyMethodDef PyNs3UcdChannelEncodings_methods[] = {
     {(char *) "GetFrequency", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_GetFrequency, METH_NOARGS, "GetFrequency()\n\n" },
     {(char *) "GetRangReqOppSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_GetRangReqOppSize, METH_NOARGS, "GetRangReqOppSize()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_GetSize, METH_NOARGS, "GetSize()\n\n" },
-    {(char *) "Read", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_Read, METH_VARARGS|METH_KEYWORDS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetBwReqOppSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetBwReqOppSize, METH_VARARGS|METH_KEYWORDS, "SetBwReqOppSize(bwReqOppSize)\n\ntype: bwReqOppSize: uint16_t" },
-    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
-    {(char *) "SetRangReqOppSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetRangReqOppSize, METH_VARARGS|METH_KEYWORDS, "SetRangReqOppSize(rangReqOppSize)\n\ntype: rangReqOppSize: uint16_t" },
-    {(char *) "Write", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_Write, METH_VARARGS|METH_KEYWORDS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Read", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_Read, METH_KEYWORDS|METH_VARARGS, "Read(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetBwReqOppSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetBwReqOppSize, METH_KEYWORDS|METH_VARARGS, "SetBwReqOppSize(bwReqOppSize)\n\ntype: bwReqOppSize: uint16_t" },
+    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
+    {(char *) "SetRangReqOppSize", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_SetRangReqOppSize, METH_KEYWORDS|METH_VARARGS, "SetRangReqOppSize(rangReqOppSize)\n\ntype: rangReqOppSize: uint16_t" },
+    {(char *) "Write", (PyCFunction) _wrap_PyNs3UcdChannelEncodings_Write, METH_KEYWORDS|METH_VARARGS, "Write(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10973,7 +10973,7 @@ PyTypeObject PyNs3UcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UcdChannelEncodings(arg0)\nUcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3UcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -11077,10 +11077,10 @@ _wrap_PyNs3VectorTlvValue_Serialize(PyNs3VectorTlvValue *self, PyObject *args, P
 }
 
 static PyMethodDef PyNs3VectorTlvValue_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3VectorTlvValue_Add, METH_VARARGS|METH_KEYWORDS, "Add(val)\n\ntype: val: ns3::Tlv const &" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3VectorTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3VectorTlvValue_Add, METH_KEYWORDS|METH_VARARGS, "Add(val)\n\ntype: val: ns3::Tlv const &" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3VectorTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3VectorTlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3VectorTlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3VectorTlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -11143,7 +11143,7 @@ PyTypeObject PyNs3VectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "VectorTlvValue(arg0)\nVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3VectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3VectorTlvValue__tp_clear,             /* tp_clear */
@@ -12113,6 +12113,98 @@ _wrap_PyNs3WimaxHelper_SetPropagationLossModel(PyNs3WimaxHelper *self, PyObject 
 
 
 PyObject *
+_wrap_PyNs3WimaxHelper_EnableAsciiAll__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnableAsciiAll__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3WimaxHelper_EnableAsciiAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+PyObject *
+_wrap_PyNs3WimaxHelper_EnablePcapAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    bool promiscuous;
+    PyObject *py_promiscuous = NULL;
+    const char *keywords[] = {"prefix", "promiscuous", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
+        return NULL;
+    }
+    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
+    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+
+PyObject *
 _wrap_PyNs3WimaxHelper_EnableAscii__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -12492,78 +12584,6 @@ PyObject * _wrap_PyNs3WimaxHelper_EnableAscii(PyNs3WimaxHelper *self, PyObject *
 
 
 PyObject *
-_wrap_PyNs3WimaxHelper_EnableAsciiAll__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WimaxHelper_EnableAsciiAll__1(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3WimaxHelper_EnableAsciiAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3WimaxHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-
-PyObject *
 _wrap_PyNs3WimaxHelper_EnablePcap__0(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -12759,26 +12779,6 @@ PyObject * _wrap_PyNs3WimaxHelper_EnablePcap(PyNs3WimaxHelper *self, PyObject *a
     return NULL;
 }
 
-PyObject *
-_wrap_PyNs3WimaxHelper_EnablePcapAll(PyNs3WimaxHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    bool promiscuous;
-    PyObject *py_promiscuous = NULL;
-    const char *keywords[] = {"prefix", "promiscuous", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#|O", (char **) keywords, &prefix, &prefix_len, &py_promiscuous)) {
-        return NULL;
-    }
-    promiscuous = py_promiscuous? (bool) PyObject_IsTrue(py_promiscuous) : false;
-    self->obj->EnablePcapAll(std::string(prefix, prefix_len), promiscuous);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
 
 static PyObject*
 _wrap_PyNs3WimaxHelper__copy__(PyNs3WimaxHelper *self)
@@ -12795,20 +12795,20 @@ _wrap_PyNs3WimaxHelper__copy__(PyNs3WimaxHelper *self)
 }
 
 static PyMethodDef PyNs3WimaxHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "CreateBSScheduler", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateBSScheduler, METH_VARARGS|METH_KEYWORDS, "CreateBSScheduler(schedulerType)\n\ntype: schedulerType: ns3::WimaxHelper::SchedulerType" },
-    {(char *) "CreatePhy", (PyCFunction) _wrap_PyNs3WimaxHelper_CreatePhy, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "CreatePhyWithoutChannel", (PyCFunction) _wrap_PyNs3WimaxHelper_CreatePhyWithoutChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "CreateServiceFlow", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateServiceFlow, METH_VARARGS|METH_KEYWORDS, "CreateServiceFlow(direction, schedulinType, classifier)\n\ntype: direction: ns3::ServiceFlow::Direction\ntype: schedulinType: ns3::ServiceFlow::SchedulingType\ntype: classifier: ns3::IpcsClassifierRecord" },
-    {(char *) "CreateUplinkScheduler", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateUplinkScheduler, METH_VARARGS|METH_KEYWORDS, "CreateUplinkScheduler(schedulerType)\n\ntype: schedulerType: ns3::WimaxHelper::SchedulerType" },
-    {(char *) "EnableAsciiForConnection", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiForConnection, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "EnableAsciiForConnection(oss, nodeid, deviceid, netdevice, connection)\n\ntype: oss: ns3::Ptr< ns3::OutputStreamWrapper >\ntype: nodeid: uint32_t\ntype: deviceid: uint32_t\ntype: netdevice: char *\ntype: connection: char *" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "CreateBSScheduler", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateBSScheduler, METH_KEYWORDS|METH_VARARGS, "CreateBSScheduler(schedulerType)\n\ntype: schedulerType: ns3::WimaxHelper::SchedulerType" },
+    {(char *) "CreatePhy", (PyCFunction) _wrap_PyNs3WimaxHelper_CreatePhy, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "CreatePhyWithoutChannel", (PyCFunction) _wrap_PyNs3WimaxHelper_CreatePhyWithoutChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "CreateServiceFlow", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateServiceFlow, METH_KEYWORDS|METH_VARARGS, "CreateServiceFlow(direction, schedulinType, classifier)\n\ntype: direction: ns3::ServiceFlow::Direction\ntype: schedulinType: ns3::ServiceFlow::SchedulingType\ntype: classifier: ns3::IpcsClassifierRecord" },
+    {(char *) "CreateUplinkScheduler", (PyCFunction) _wrap_PyNs3WimaxHelper_CreateUplinkScheduler, METH_KEYWORDS|METH_VARARGS, "CreateUplinkScheduler(schedulerType)\n\ntype: schedulerType: ns3::WimaxHelper::SchedulerType" },
+    {(char *) "EnableAsciiForConnection", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiForConnection, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "EnableAsciiForConnection(oss, nodeid, deviceid, netdevice, connection)\n\ntype: oss: ns3::Ptr< ns3::OutputStreamWrapper >\ntype: nodeid: uint32_t\ntype: deviceid: uint32_t\ntype: netdevice: char *\ntype: connection: char *" },
     {(char *) "EnableLogComponents", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableLogComponents, METH_NOARGS|METH_STATIC, "EnableLogComponents()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3WimaxHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetPropagationLossModel", (PyCFunction) _wrap_PyNs3WimaxHelper_SetPropagationLossModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationLossModel(propagationModel)\n\ntype: propagationModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
-    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcap, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcapAll, METH_VARARGS|METH_KEYWORDS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3WimaxHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetPropagationLossModel", (PyCFunction) _wrap_PyNs3WimaxHelper_SetPropagationLossModel, METH_KEYWORDS|METH_VARARGS, "SetPropagationLossModel(propagationModel)\n\ntype: propagationModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
+    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3WimaxHelper_EnableAscii, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3WimaxHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12875,7 +12875,7 @@ PyTypeObject PyNs3WimaxHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxHelper(arg0)\nWimaxHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxHelper__tp_clear,             /* tp_clear */
@@ -13346,13 +13346,13 @@ static PyMethodDef PyNs3SimpleOfdmSendParam_methods[] = {
     {(char *) "GetIsFirstBlock", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_GetIsFirstBlock, METH_NOARGS, "GetIsFirstBlock()\n\n" },
     {(char *) "GetModulationType", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_GetModulationType, METH_NOARGS, "GetModulationType()\n\n" },
     {(char *) "GetRxPowerDbm", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_GetRxPowerDbm, METH_NOARGS, "GetRxPowerDbm()\n\n" },
-    {(char *) "SetBurstSize", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetBurstSize, METH_VARARGS|METH_KEYWORDS, "SetBurstSize(burstSize)\n\ntype: burstSize: uint32_t" },
-    {(char *) "SetDirection", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetDirection, METH_VARARGS|METH_KEYWORDS, "SetDirection(direction)\n\ntype: direction: uint8_t" },
-    {(char *) "SetFecBlock", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetFecBlock, METH_VARARGS|METH_KEYWORDS, "SetFecBlock(fecBlock)\n\ntype: fecBlock: ns3::bvec const &" },
-    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(Frequency)\n\ntype: Frequency: uint64_t" },
-    {(char *) "SetIsFirstBlock", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetIsFirstBlock, METH_VARARGS|METH_KEYWORDS, "SetIsFirstBlock(isFirstBlock)\n\ntype: isFirstBlock: bool" },
-    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetModulationType, METH_VARARGS|METH_KEYWORDS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
-    {(char *) "SetRxPowerDbm", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetRxPowerDbm, METH_VARARGS|METH_KEYWORDS, "SetRxPowerDbm(rxPowerDbm)\n\ntype: rxPowerDbm: double" },
+    {(char *) "SetBurstSize", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetBurstSize, METH_KEYWORDS|METH_VARARGS, "SetBurstSize(burstSize)\n\ntype: burstSize: uint32_t" },
+    {(char *) "SetDirection", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetDirection, METH_KEYWORDS|METH_VARARGS, "SetDirection(direction)\n\ntype: direction: uint8_t" },
+    {(char *) "SetFecBlock", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetFecBlock, METH_KEYWORDS|METH_VARARGS, "SetFecBlock(fecBlock)\n\ntype: fecBlock: ns3::bvec const &" },
+    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(Frequency)\n\ntype: Frequency: uint64_t" },
+    {(char *) "SetIsFirstBlock", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetIsFirstBlock, METH_KEYWORDS|METH_VARARGS, "SetIsFirstBlock(isFirstBlock)\n\ntype: isFirstBlock: bool" },
+    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetModulationType, METH_KEYWORDS|METH_VARARGS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "SetRxPowerDbm", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam_SetRxPowerDbm, METH_KEYWORDS|METH_VARARGS, "SetRxPowerDbm(rxPowerDbm)\n\ntype: rxPowerDbm: double" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SimpleOfdmSendParam__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13529,7 +13529,7 @@ _wrap_PyNs3ClassificationRuleVectorTlvValue__copy__(PyNs3ClassificationRuleVecto
 }
 
 static PyMethodDef PyNs3ClassificationRuleVectorTlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ClassificationRuleVectorTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ClassificationRuleVectorTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ClassificationRuleVectorTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13593,7 +13593,7 @@ PyTypeObject PyNs3ClassificationRuleVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ClassificationRuleVectorTlvValue(arg0)\nClassificationRuleVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3ClassificationRuleVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ClassificationRuleVectorTlvValue__tp_clear,             /* tp_clear */
@@ -13723,7 +13723,7 @@ _wrap_PyNs3CsParamVectorTlvValue__copy__(PyNs3CsParamVectorTlvValue *self)
 }
 
 static PyMethodDef PyNs3CsParamVectorTlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3CsParamVectorTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3CsParamVectorTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CsParamVectorTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13787,7 +13787,7 @@ PyTypeObject PyNs3CsParamVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "CsParamVectorTlvValue(arg0)\nCsParamVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3CsParamVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CsParamVectorTlvValue__tp_clear,             /* tp_clear */
@@ -13964,10 +13964,10 @@ _wrap_PyNs3Ipv4AddressTlvValue__copy__(PyNs3Ipv4AddressTlvValue *self)
 }
 
 static PyMethodDef PyNs3Ipv4AddressTlvValue_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Add, METH_VARARGS|METH_KEYWORDS, "Add(address, Mask)\n\ntype: address: ns3::Ipv4Address\ntype: Mask: ns3::Ipv4Mask" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Add, METH_KEYWORDS|METH_VARARGS, "Add(address, Mask)\n\ntype: address: ns3::Ipv4Address\ntype: Mask: ns3::Ipv4Mask" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ipv4AddressTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14031,7 +14031,7 @@ PyTypeObject PyNs3Ipv4AddressTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Ipv4AddressTlvValue(arg0)\nIpv4AddressTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4AddressTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4AddressTlvValue__tp_clear,             /* tp_clear */
@@ -14530,14 +14530,14 @@ _wrap_PyNs3MacHeaderType__copy__(PyNs3MacHeaderType *self)
 }
 
 static PyMethodDef PyNs3MacHeaderType_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3MacHeaderType_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3MacHeaderType_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3MacHeaderType_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3MacHeaderType_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3MacHeaderType_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3MacHeaderType_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MacHeaderType_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3MacHeaderType_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3MacHeaderType_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3MacHeaderType_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3MacHeaderType_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MacHeaderType__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14601,7 +14601,7 @@ PyTypeObject PyNs3MacHeaderType_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MacHeaderType(arg0)\nMacHeaderType(type)\nMacHeaderType()",                        /* Documentation string */
     (traverseproc)PyNs3MacHeaderType__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MacHeaderType__tp_clear,             /* tp_clear */
@@ -14874,14 +14874,14 @@ _wrap_PyNs3ManagementMessageType__copy__(PyNs3ManagementMessageType *self)
 }
 
 static PyMethodDef PyNs3ManagementMessageType_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ManagementMessageType_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ManagementMessageType_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3ManagementMessageType_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3ManagementMessageType_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3ManagementMessageType_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3ManagementMessageType_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ManagementMessageType_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ManagementMessageType_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3ManagementMessageType_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ManagementMessageType_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3ManagementMessageType_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ManagementMessageType__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14945,7 +14945,7 @@ PyTypeObject PyNs3ManagementMessageType_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ManagementMessageType(arg0)\nManagementMessageType(type)\nManagementMessageType()",                        /* Documentation string */
     (traverseproc)PyNs3ManagementMessageType__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ManagementMessageType__tp_clear,             /* tp_clear */
@@ -15219,8 +15219,8 @@ _wrap_PyNs3OfdmDownlinkFramePrefix_SetHcs(PyNs3OfdmDownlinkFramePrefix *self, Py
 }
 
 static PyMethodDef PyNs3OfdmDownlinkFramePrefix_methods[] = {
-    {(char *) "AddDlFramePrefixElement", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_AddDlFramePrefixElement, METH_VARARGS|METH_KEYWORDS, "AddDlFramePrefixElement(dlFramePrefixElement)\n\ntype: dlFramePrefixElement: ns3::DlFramePrefixIe" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddDlFramePrefixElement", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_AddDlFramePrefixElement, METH_KEYWORDS|METH_VARARGS, "AddDlFramePrefixElement(dlFramePrefixElement)\n\ntype: dlFramePrefixElement: ns3::DlFramePrefixIe" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetBaseStationId", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetBaseStationId, METH_NOARGS, "GetBaseStationId()\n\n" },
     {(char *) "GetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetConfigurationChangeCount, METH_NOARGS, "GetConfigurationChangeCount()\n\n" },
     {(char *) "GetDlFramePrefixElements", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetDlFramePrefixElements, METH_NOARGS, "GetDlFramePrefixElements()\n\n" },
@@ -15229,11 +15229,11 @@ static PyMethodDef PyNs3OfdmDownlinkFramePrefix_methods[] = {
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetBaseStationId, METH_VARARGS|METH_KEYWORDS, "SetBaseStationId(baseStationId)\n\ntype: baseStationId: ns3::Mac48Address" },
-    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetConfigurationChangeCount, METH_VARARGS|METH_KEYWORDS, "SetConfigurationChangeCount(configurationChangeCount)\n\ntype: configurationChangeCount: uint8_t" },
-    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetFrameNumber, METH_VARARGS|METH_KEYWORDS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
-    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetHcs, METH_VARARGS|METH_KEYWORDS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetBaseStationId, METH_KEYWORDS|METH_VARARGS, "SetBaseStationId(baseStationId)\n\ntype: baseStationId: ns3::Mac48Address" },
+    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetConfigurationChangeCount, METH_KEYWORDS|METH_VARARGS, "SetConfigurationChangeCount(configurationChangeCount)\n\ntype: configurationChangeCount: uint8_t" },
+    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetFrameNumber, METH_KEYWORDS|METH_VARARGS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
+    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3OfdmDownlinkFramePrefix_SetHcs, METH_KEYWORDS|METH_VARARGS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -15296,7 +15296,7 @@ PyTypeObject PyNs3OfdmDownlinkFramePrefix_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OfdmDownlinkFramePrefix(arg0)\nOfdmDownlinkFramePrefix()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmDownlinkFramePrefix__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmDownlinkFramePrefix__tp_clear,             /* tp_clear */
@@ -15862,8 +15862,8 @@ static PyMethodDef PyNs3OfdmUcdChannelEncodings_methods[] = {
     {(char *) "GetSbchnlFocContCodes", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_GetSbchnlFocContCodes, METH_NOARGS, "GetSbchnlFocContCodes()\n\n" },
     {(char *) "GetSbchnlReqRegionFullParams", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_GetSbchnlReqRegionFullParams, METH_NOARGS, "GetSbchnlReqRegionFullParams()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_GetSize, METH_NOARGS, "GetSize()\n\n" },
-    {(char *) "SetSbchnlFocContCodes", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_SetSbchnlFocContCodes, METH_VARARGS|METH_KEYWORDS, "SetSbchnlFocContCodes(sbchnlFocContCodes)\n\ntype: sbchnlFocContCodes: uint8_t" },
-    {(char *) "SetSbchnlReqRegionFullParams", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_SetSbchnlReqRegionFullParams, METH_VARARGS|METH_KEYWORDS, "SetSbchnlReqRegionFullParams(sbchnlReqRegionFullParams)\n\ntype: sbchnlReqRegionFullParams: uint8_t" },
+    {(char *) "SetSbchnlFocContCodes", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_SetSbchnlFocContCodes, METH_KEYWORDS|METH_VARARGS, "SetSbchnlFocContCodes(sbchnlFocContCodes)\n\ntype: sbchnlFocContCodes: uint8_t" },
+    {(char *) "SetSbchnlReqRegionFullParams", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings_SetSbchnlReqRegionFullParams, METH_KEYWORDS|METH_VARARGS, "SetSbchnlReqRegionFullParams(sbchnlReqRegionFullParams)\n\ntype: sbchnlReqRegionFullParams: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OfdmUcdChannelEncodings__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15930,7 +15930,7 @@ PyTypeObject PyNs3OfdmUcdChannelEncodings_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OfdmUcdChannelEncodings(arg0)\nOfdmUcdChannelEncodings()",                        /* Documentation string */
     (traverseproc)PyNs3OfdmUcdChannelEncodings__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OfdmUcdChannelEncodings__tp_clear,             /* tp_clear */
@@ -16115,10 +16115,10 @@ _wrap_PyNs3PortRangeTlvValue__copy__(PyNs3PortRangeTlvValue *self)
 }
 
 static PyMethodDef PyNs3PortRangeTlvValue_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Add, METH_VARARGS|METH_KEYWORDS, "Add(portLow, portHigh)\n\ntype: portLow: uint16_t\ntype: portHigh: uint16_t" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Add, METH_KEYWORDS|METH_VARARGS, "Add(portLow, portHigh)\n\ntype: portLow: uint16_t\ntype: portHigh: uint16_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3PortRangeTlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PortRangeTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16182,7 +16182,7 @@ PyTypeObject PyNs3PortRangeTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PortRangeTlvValue(arg0)\nPortRangeTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3PortRangeTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PortRangeTlvValue__tp_clear,             /* tp_clear */
@@ -16613,8 +16613,8 @@ _wrap_PyNs3PriorityUlJob__copy__(PyNs3PriorityUlJob *self)
 static PyMethodDef PyNs3PriorityUlJob_methods[] = {
     {(char *) "GetPriority", (PyCFunction) _wrap_PyNs3PriorityUlJob_GetPriority, METH_NOARGS, "GetPriority()\n\n" },
     {(char *) "GetUlJob", (PyCFunction) _wrap_PyNs3PriorityUlJob_GetUlJob, METH_NOARGS, "GetUlJob()\n\n" },
-    {(char *) "SetPriority", (PyCFunction) _wrap_PyNs3PriorityUlJob_SetPriority, METH_VARARGS|METH_KEYWORDS, "SetPriority(priority)\n\ntype: priority: int" },
-    {(char *) "SetUlJob", (PyCFunction) _wrap_PyNs3PriorityUlJob_SetUlJob, METH_VARARGS|METH_KEYWORDS, "SetUlJob(job)\n\ntype: job: ns3::Ptr< ns3::UlJob >" },
+    {(char *) "SetPriority", (PyCFunction) _wrap_PyNs3PriorityUlJob_SetPriority, METH_KEYWORDS|METH_VARARGS, "SetPriority(priority)\n\ntype: priority: int" },
+    {(char *) "SetUlJob", (PyCFunction) _wrap_PyNs3PriorityUlJob_SetUlJob, METH_KEYWORDS|METH_VARARGS, "SetUlJob(job)\n\ntype: job: ns3::Ptr< ns3::UlJob >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PriorityUlJob__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16678,7 +16678,7 @@ PyTypeObject PyNs3PriorityUlJob_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PriorityUlJob(arg0)\nPriorityUlJob()",                        /* Documentation string */
     (traverseproc)PyNs3PriorityUlJob__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PriorityUlJob__tp_clear,             /* tp_clear */
@@ -16858,10 +16858,10 @@ _wrap_PyNs3ProtocolTlvValue__copy__(PyNs3ProtocolTlvValue *self)
 }
 
 static PyMethodDef PyNs3ProtocolTlvValue_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Add, METH_VARARGS|METH_KEYWORDS, "Add(protocol)\n\ntype: protocol: uint8_t" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Add, METH_KEYWORDS|METH_VARARGS, "Add(protocol)\n\ntype: protocol: uint8_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3ProtocolTlvValue_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ProtocolTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16925,7 +16925,7 @@ PyTypeObject PyNs3ProtocolTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ProtocolTlvValue(arg0)\nProtocolTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3ProtocolTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ProtocolTlvValue__tp_clear,             /* tp_clear */
@@ -17238,7 +17238,7 @@ _wrap_PyNs3RngReq__copy__(PyNs3RngReq *self)
 }
 
 static PyMethodDef PyNs3RngReq_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3RngReq_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3RngReq_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3RngReq_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetMacAddress", (PyCFunction) _wrap_PyNs3RngReq_GetMacAddress, METH_NOARGS, "GetMacAddress()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3RngReq_GetName, METH_NOARGS, "GetName()\n\n" },
@@ -17247,10 +17247,10 @@ static PyMethodDef PyNs3RngReq_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3RngReq_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RngReq_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "PrintDebug", (PyCFunction) _wrap_PyNs3RngReq_PrintDebug, METH_NOARGS, "PrintDebug()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3RngReq_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3RngReq_SetMacAddress, METH_VARARGS|METH_KEYWORDS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
-    {(char *) "SetRangingAnomalies", (PyCFunction) _wrap_PyNs3RngReq_SetRangingAnomalies, METH_VARARGS|METH_KEYWORDS, "SetRangingAnomalies(rangingAnomalies)\n\ntype: rangingAnomalies: uint8_t" },
-    {(char *) "SetReqDlBurstProfile", (PyCFunction) _wrap_PyNs3RngReq_SetReqDlBurstProfile, METH_VARARGS|METH_KEYWORDS, "SetReqDlBurstProfile(reqDlBurstProfile)\n\ntype: reqDlBurstProfile: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3RngReq_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3RngReq_SetMacAddress, METH_KEYWORDS|METH_VARARGS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
+    {(char *) "SetRangingAnomalies", (PyCFunction) _wrap_PyNs3RngReq_SetRangingAnomalies, METH_KEYWORDS|METH_VARARGS, "SetRangingAnomalies(rangingAnomalies)\n\ntype: rangingAnomalies: uint8_t" },
+    {(char *) "SetReqDlBurstProfile", (PyCFunction) _wrap_PyNs3RngReq_SetReqDlBurstProfile, METH_KEYWORDS|METH_VARARGS, "SetReqDlBurstProfile(reqDlBurstProfile)\n\ntype: reqDlBurstProfile: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RngReq__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -17314,7 +17314,7 @@ PyTypeObject PyNs3RngReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RngReq(arg0)\nRngReq()",                        /* Documentation string */
     (traverseproc)PyNs3RngReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RngReq__tp_clear,             /* tp_clear */
@@ -17962,7 +17962,7 @@ _wrap_PyNs3RngRsp__copy__(PyNs3RngRsp *self)
 }
 
 static PyMethodDef PyNs3RngRsp_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3RngRsp_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3RngRsp_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetAasBdcastPermission", (PyCFunction) _wrap_PyNs3RngRsp_GetAasBdcastPermission, METH_NOARGS, "GetAasBdcastPermission()\n\n" },
     {(char *) "GetBasicCid", (PyCFunction) _wrap_PyNs3RngRsp_GetBasicCid, METH_NOARGS, "GetBasicCid()\n\n" },
     {(char *) "GetDlFreqOverride", (PyCFunction) _wrap_PyNs3RngRsp_GetDlFreqOverride, METH_NOARGS, "GetDlFreqOverride()\n\n" },
@@ -17981,21 +17981,21 @@ static PyMethodDef PyNs3RngRsp_methods[] = {
     {(char *) "GetTimingAdjust", (PyCFunction) _wrap_PyNs3RngRsp_GetTimingAdjust, METH_NOARGS, "GetTimingAdjust()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RngRsp_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUlChnlIdOverride", (PyCFunction) _wrap_PyNs3RngRsp_GetUlChnlIdOverride, METH_NOARGS, "GetUlChnlIdOverride()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3RngRsp_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetAasBdcastPermission", (PyCFunction) _wrap_PyNs3RngRsp_SetAasBdcastPermission, METH_VARARGS|METH_KEYWORDS, "SetAasBdcastPermission(aasBdcastPermission)\n\ntype: aasBdcastPermission: uint8_t" },
-    {(char *) "SetBasicCid", (PyCFunction) _wrap_PyNs3RngRsp_SetBasicCid, METH_VARARGS|METH_KEYWORDS, "SetBasicCid(basicCid)\n\ntype: basicCid: ns3::Cid" },
-    {(char *) "SetDlFreqOverride", (PyCFunction) _wrap_PyNs3RngRsp_SetDlFreqOverride, METH_VARARGS|METH_KEYWORDS, "SetDlFreqOverride(dlFreqOverride)\n\ntype: dlFreqOverride: uint32_t" },
-    {(char *) "SetDlOperBurstProfile", (PyCFunction) _wrap_PyNs3RngRsp_SetDlOperBurstProfile, METH_VARARGS|METH_KEYWORDS, "SetDlOperBurstProfile(dlOperBurstProfile)\n\ntype: dlOperBurstProfile: uint16_t" },
-    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3RngRsp_SetFrameNumber, METH_VARARGS|METH_KEYWORDS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
-    {(char *) "SetInitRangOppNumber", (PyCFunction) _wrap_PyNs3RngRsp_SetInitRangOppNumber, METH_VARARGS|METH_KEYWORDS, "SetInitRangOppNumber(initRangOppNumber)\n\ntype: initRangOppNumber: uint8_t" },
-    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3RngRsp_SetMacAddress, METH_VARARGS|METH_KEYWORDS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
-    {(char *) "SetOffsetFreqAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetOffsetFreqAdjust, METH_VARARGS|METH_KEYWORDS, "SetOffsetFreqAdjust(offsetFreqAdjust)\n\ntype: offsetFreqAdjust: uint32_t" },
-    {(char *) "SetPowerLevelAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetPowerLevelAdjust, METH_VARARGS|METH_KEYWORDS, "SetPowerLevelAdjust(powerLevelAdjust)\n\ntype: powerLevelAdjust: uint8_t" },
-    {(char *) "SetPrimaryCid", (PyCFunction) _wrap_PyNs3RngRsp_SetPrimaryCid, METH_VARARGS|METH_KEYWORDS, "SetPrimaryCid(primaryCid)\n\ntype: primaryCid: ns3::Cid" },
-    {(char *) "SetRangStatus", (PyCFunction) _wrap_PyNs3RngRsp_SetRangStatus, METH_VARARGS|METH_KEYWORDS, "SetRangStatus(rangStatus)\n\ntype: rangStatus: uint8_t" },
-    {(char *) "SetRangSubchnl", (PyCFunction) _wrap_PyNs3RngRsp_SetRangSubchnl, METH_VARARGS|METH_KEYWORDS, "SetRangSubchnl(rangSubchnl)\n\ntype: rangSubchnl: uint8_t" },
-    {(char *) "SetTimingAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetTimingAdjust, METH_VARARGS|METH_KEYWORDS, "SetTimingAdjust(timingAdjust)\n\ntype: timingAdjust: uint32_t" },
-    {(char *) "SetUlChnlIdOverride", (PyCFunction) _wrap_PyNs3RngRsp_SetUlChnlIdOverride, METH_VARARGS|METH_KEYWORDS, "SetUlChnlIdOverride(ulChnlIdOverride)\n\ntype: ulChnlIdOverride: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3RngRsp_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetAasBdcastPermission", (PyCFunction) _wrap_PyNs3RngRsp_SetAasBdcastPermission, METH_KEYWORDS|METH_VARARGS, "SetAasBdcastPermission(aasBdcastPermission)\n\ntype: aasBdcastPermission: uint8_t" },
+    {(char *) "SetBasicCid", (PyCFunction) _wrap_PyNs3RngRsp_SetBasicCid, METH_KEYWORDS|METH_VARARGS, "SetBasicCid(basicCid)\n\ntype: basicCid: ns3::Cid" },
+    {(char *) "SetDlFreqOverride", (PyCFunction) _wrap_PyNs3RngRsp_SetDlFreqOverride, METH_KEYWORDS|METH_VARARGS, "SetDlFreqOverride(dlFreqOverride)\n\ntype: dlFreqOverride: uint32_t" },
+    {(char *) "SetDlOperBurstProfile", (PyCFunction) _wrap_PyNs3RngRsp_SetDlOperBurstProfile, METH_KEYWORDS|METH_VARARGS, "SetDlOperBurstProfile(dlOperBurstProfile)\n\ntype: dlOperBurstProfile: uint16_t" },
+    {(char *) "SetFrameNumber", (PyCFunction) _wrap_PyNs3RngRsp_SetFrameNumber, METH_KEYWORDS|METH_VARARGS, "SetFrameNumber(frameNumber)\n\ntype: frameNumber: uint32_t" },
+    {(char *) "SetInitRangOppNumber", (PyCFunction) _wrap_PyNs3RngRsp_SetInitRangOppNumber, METH_KEYWORDS|METH_VARARGS, "SetInitRangOppNumber(initRangOppNumber)\n\ntype: initRangOppNumber: uint8_t" },
+    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3RngRsp_SetMacAddress, METH_KEYWORDS|METH_VARARGS, "SetMacAddress(macAddress)\n\ntype: macAddress: ns3::Mac48Address" },
+    {(char *) "SetOffsetFreqAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetOffsetFreqAdjust, METH_KEYWORDS|METH_VARARGS, "SetOffsetFreqAdjust(offsetFreqAdjust)\n\ntype: offsetFreqAdjust: uint32_t" },
+    {(char *) "SetPowerLevelAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetPowerLevelAdjust, METH_KEYWORDS|METH_VARARGS, "SetPowerLevelAdjust(powerLevelAdjust)\n\ntype: powerLevelAdjust: uint8_t" },
+    {(char *) "SetPrimaryCid", (PyCFunction) _wrap_PyNs3RngRsp_SetPrimaryCid, METH_KEYWORDS|METH_VARARGS, "SetPrimaryCid(primaryCid)\n\ntype: primaryCid: ns3::Cid" },
+    {(char *) "SetRangStatus", (PyCFunction) _wrap_PyNs3RngRsp_SetRangStatus, METH_KEYWORDS|METH_VARARGS, "SetRangStatus(rangStatus)\n\ntype: rangStatus: uint8_t" },
+    {(char *) "SetRangSubchnl", (PyCFunction) _wrap_PyNs3RngRsp_SetRangSubchnl, METH_KEYWORDS|METH_VARARGS, "SetRangSubchnl(rangSubchnl)\n\ntype: rangSubchnl: uint8_t" },
+    {(char *) "SetTimingAdjust", (PyCFunction) _wrap_PyNs3RngRsp_SetTimingAdjust, METH_KEYWORDS|METH_VARARGS, "SetTimingAdjust(timingAdjust)\n\ntype: timingAdjust: uint32_t" },
+    {(char *) "SetUlChnlIdOverride", (PyCFunction) _wrap_PyNs3RngRsp_SetUlChnlIdOverride, METH_KEYWORDS|METH_VARARGS, "SetUlChnlIdOverride(ulChnlIdOverride)\n\ntype: ulChnlIdOverride: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RngRsp__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -18059,7 +18059,7 @@ PyTypeObject PyNs3RngRsp_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RngRsp(arg0)\nRngRsp()",                        /* Documentation string */
     (traverseproc)PyNs3RngRsp__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RngRsp__tp_clear,             /* tp_clear */
@@ -18288,13 +18288,13 @@ _wrap_PyNs3SSManager__copy__(PyNs3SSManager *self)
 }
 
 static PyMethodDef PyNs3SSManager_methods[] = {
-    {(char *) "DeleteSSRecord", (PyCFunction) _wrap_PyNs3SSManager_DeleteSSRecord, METH_VARARGS|METH_KEYWORDS, "DeleteSSRecord(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "GetMacAddress", (PyCFunction) _wrap_PyNs3SSManager_GetMacAddress, METH_VARARGS|METH_KEYWORDS, "GetMacAddress(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "DeleteSSRecord", (PyCFunction) _wrap_PyNs3SSManager_DeleteSSRecord, METH_KEYWORDS|METH_VARARGS, "DeleteSSRecord(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "GetMacAddress", (PyCFunction) _wrap_PyNs3SSManager_GetMacAddress, METH_KEYWORDS|METH_VARARGS, "GetMacAddress(cid)\n\ntype: cid: ns3::Cid" },
     {(char *) "GetNRegisteredSSs", (PyCFunction) _wrap_PyNs3SSManager_GetNRegisteredSSs, METH_NOARGS, "GetNRegisteredSSs()\n\n" },
     {(char *) "GetNSSs", (PyCFunction) _wrap_PyNs3SSManager_GetNSSs, METH_NOARGS, "GetNSSs()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SSManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsInRecord", (PyCFunction) _wrap_PyNs3SSManager_IsInRecord, METH_VARARGS|METH_KEYWORDS, "IsInRecord(macAddress)\n\ntype: macAddress: ns3::Mac48Address const &" },
-    {(char *) "IsRegistered", (PyCFunction) _wrap_PyNs3SSManager_IsRegistered, METH_VARARGS|METH_KEYWORDS, "IsRegistered(macAddress)\n\ntype: macAddress: ns3::Mac48Address const &" },
+    {(char *) "IsInRecord", (PyCFunction) _wrap_PyNs3SSManager_IsInRecord, METH_KEYWORDS|METH_VARARGS, "IsInRecord(macAddress)\n\ntype: macAddress: ns3::Mac48Address const &" },
+    {(char *) "IsRegistered", (PyCFunction) _wrap_PyNs3SSManager_IsRegistered, METH_KEYWORDS|METH_VARARGS, "IsRegistered(macAddress)\n\ntype: macAddress: ns3::Mac48Address const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SSManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -18358,7 +18358,7 @@ PyTypeObject PyNs3SSManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SSManager(arg0)\nSSManager()",                        /* Documentation string */
     (traverseproc)PyNs3SSManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SSManager__tp_clear,             /* tp_clear */
@@ -18391,16 +18391,16 @@ PyTypeObject PyNs3SSManager_Type = {
 
 
 PyObject *
-PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ServiceFlowManager *self)
+PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3ServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3ServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18423,16 +18423,16 @@ PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3ServiceFlowManage
 }
 
 PyObject *
-PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ServiceFlowManager *self)
+PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3ServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3ServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -18827,9 +18827,9 @@ static PyMethodDef PyNs3ServiceFlowManager_methods[] = {
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3ServiceFlowManager_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetNrServiceFlows", (PyCFunction) _wrap_PyNs3ServiceFlowManager_GetNrServiceFlows, METH_NOARGS, "GetNrServiceFlows()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ServiceFlowManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -18896,7 +18896,7 @@ PyTypeObject PyNs3ServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ServiceFlowManager(arg0)\nServiceFlowManager()",                        /* Documentation string */
     (traverseproc)PyNs3ServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ServiceFlowManager__tp_clear,             /* tp_clear */
@@ -19026,7 +19026,7 @@ _wrap_PyNs3SfVectorTlvValue__copy__(PyNs3SfVectorTlvValue *self)
 }
 
 static PyMethodDef PyNs3SfVectorTlvValue_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SfVectorTlvValue_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3SfVectorTlvValue_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start, valueLength)\n\ntype: start: ns3::Buffer::Iterator\ntype: valueLength: uint64_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SfVectorTlvValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -19090,7 +19090,7 @@ PyTypeObject PyNs3SfVectorTlvValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SfVectorTlvValue(arg0)\nSfVectorTlvValue()",                        /* Documentation string */
     (traverseproc)PyNs3SfVectorTlvValue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SfVectorTlvValue__tp_clear,             /* tp_clear */
@@ -19123,16 +19123,16 @@ PyTypeObject PyNs3SfVectorTlvValue_Type = {
 
 
 PyObject *
-PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SsServiceFlowManager *self)
+PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SsServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3SsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3SsServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -19155,16 +19155,16 @@ PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3SsServiceFlowMa
 }
 
 PyObject *
-PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SsServiceFlowManager *self)
+PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SsServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3SsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3SsServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -19725,21 +19725,21 @@ _wrap_PyNs3SsServiceFlowManager__copy__(PyNs3SsServiceFlowManager *self)
 }
 
 static PyMethodDef PyNs3SsServiceFlowManager_methods[] = {
-    {(char *) "AddServiceFlow", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_AddServiceFlow, METH_VARARGS|METH_KEYWORDS, "AddServiceFlow(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow" },
+    {(char *) "AddServiceFlow", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_AddServiceFlow, METH_KEYWORDS|METH_VARARGS, "AddServiceFlow(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow" },
     {(char *) "CreateDsaAck", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_CreateDsaAck, METH_NOARGS, "CreateDsaAck()\n\n" },
-    {(char *) "CreateDsaReq", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_CreateDsaReq, METH_VARARGS|METH_KEYWORDS, "CreateDsaReq(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow const *" },
+    {(char *) "CreateDsaReq", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_CreateDsaReq, METH_KEYWORDS|METH_VARARGS, "CreateDsaReq(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow const *" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetDsaAckTimeoutEvent", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_GetDsaAckTimeoutEvent, METH_NOARGS, "GetDsaAckTimeoutEvent()\n\n" },
     {(char *) "GetDsaRspTimeoutEvent", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_GetDsaRspTimeoutEvent, METH_NOARGS, "GetDsaRspTimeoutEvent()\n\n" },
     {(char *) "GetMaxDsaReqRetries", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_GetMaxDsaReqRetries, METH_NOARGS, "GetMaxDsaReqRetries()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "InitiateServiceFlows", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_InitiateServiceFlows, METH_NOARGS, "InitiateServiceFlows()\n\n" },
-    {(char *) "ProcessDsaRsp", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ProcessDsaRsp, METH_VARARGS|METH_KEYWORDS, "ProcessDsaRsp(dsaRsp)\n\ntype: dsaRsp: ns3::DsaRsp const &" },
-    {(char *) "ScheduleDsaReq", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ScheduleDsaReq, METH_VARARGS|METH_KEYWORDS, "ScheduleDsaReq(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow const *" },
-    {(char *) "SetMaxDsaReqRetries", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_SetMaxDsaReqRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxDsaReqRetries(maxDsaReqRetries)\n\ntype: maxDsaReqRetries: uint8_t" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "ProcessDsaRsp", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ProcessDsaRsp, METH_KEYWORDS|METH_VARARGS, "ProcessDsaRsp(dsaRsp)\n\ntype: dsaRsp: ns3::DsaRsp const &" },
+    {(char *) "ScheduleDsaReq", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_ScheduleDsaReq, METH_KEYWORDS|METH_VARARGS, "ScheduleDsaReq(serviceFlow)\n\ntype: serviceFlow: ns3::ServiceFlow const *" },
+    {(char *) "SetMaxDsaReqRetries", (PyCFunction) _wrap_PyNs3SsServiceFlowManager_SetMaxDsaReqRetries, METH_KEYWORDS|METH_VARARGS, "SetMaxDsaReqRetries(maxDsaReqRetries)\n\ntype: maxDsaReqRetries: uint8_t" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SsServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -19806,7 +19806,7 @@ PyTypeObject PyNs3SsServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SsServiceFlowManager(device)\nSsServiceFlowManager(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3SsServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SsServiceFlowManager__tp_clear,             /* tp_clear */
@@ -20072,14 +20072,14 @@ _wrap_PyNs3Tlv__copy__(PyNs3Tlv *self)
 }
 
 static PyMethodDef PyNs3Tlv_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Tlv_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Tlv_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Tlv_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetLength", (PyCFunction) _wrap_PyNs3Tlv_GetLength, METH_NOARGS, "GetLength()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Tlv_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetSizeOfLen", (PyCFunction) _wrap_PyNs3Tlv_GetSizeOfLen, METH_NOARGS, "GetSizeOfLen()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3Tlv_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Tlv_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Tlv_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Tlv_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Tlv__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20143,7 +20143,7 @@ PyTypeObject PyNs3Tlv_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Tlv(type, length, value)\nTlv(tlv)\nTlv()",                        /* Documentation string */
     (traverseproc)PyNs3Tlv__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Tlv__tp_clear,             /* tp_clear */
@@ -20610,8 +20610,8 @@ _wrap_PyNs3Ucd__copy__(PyNs3Ucd *self)
 }
 
 static PyMethodDef PyNs3Ucd_methods[] = {
-    {(char *) "AddUlBurstProfile", (PyCFunction) _wrap_PyNs3Ucd_AddUlBurstProfile, METH_VARARGS|METH_KEYWORDS, "AddUlBurstProfile(ulBurstProfile)\n\ntype: ulBurstProfile: ns3::OfdmUlBurstProfile" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Ucd_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddUlBurstProfile", (PyCFunction) _wrap_PyNs3Ucd_AddUlBurstProfile, METH_KEYWORDS|METH_VARARGS, "AddUlBurstProfile(ulBurstProfile)\n\ntype: ulBurstProfile: ns3::OfdmUlBurstProfile" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Ucd_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetChannelEncodings", (PyCFunction) _wrap_PyNs3Ucd_GetChannelEncodings, METH_NOARGS, "GetChannelEncodings()\n\n" },
     {(char *) "GetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Ucd_GetConfigurationChangeCount, METH_NOARGS, "GetConfigurationChangeCount()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Ucd_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
@@ -20624,14 +20624,14 @@ static PyMethodDef PyNs3Ucd_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Ucd_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Ucd_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUlBurstProfiles", (PyCFunction) _wrap_PyNs3Ucd_GetUlBurstProfiles, METH_NOARGS, "GetUlBurstProfiles()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Ucd_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetChannelEncodings", (PyCFunction) _wrap_PyNs3Ucd_SetChannelEncodings, METH_VARARGS|METH_KEYWORDS, "SetChannelEncodings(channelEncodings)\n\ntype: channelEncodings: ns3::OfdmUcdChannelEncodings" },
-    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Ucd_SetConfigurationChangeCount, METH_VARARGS|METH_KEYWORDS, "SetConfigurationChangeCount(ucdCount)\n\ntype: ucdCount: uint8_t" },
-    {(char *) "SetNrUlBurstProfiles", (PyCFunction) _wrap_PyNs3Ucd_SetNrUlBurstProfiles, METH_VARARGS|METH_KEYWORDS, "SetNrUlBurstProfiles(nrUlBurstProfiles)\n\ntype: nrUlBurstProfiles: uint8_t" },
-    {(char *) "SetRangingBackoffEnd", (PyCFunction) _wrap_PyNs3Ucd_SetRangingBackoffEnd, METH_VARARGS|METH_KEYWORDS, "SetRangingBackoffEnd(rangingBackoffEnd)\n\ntype: rangingBackoffEnd: uint8_t" },
-    {(char *) "SetRangingBackoffStart", (PyCFunction) _wrap_PyNs3Ucd_SetRangingBackoffStart, METH_VARARGS|METH_KEYWORDS, "SetRangingBackoffStart(rangingBackoffStart)\n\ntype: rangingBackoffStart: uint8_t" },
-    {(char *) "SetRequestBackoffEnd", (PyCFunction) _wrap_PyNs3Ucd_SetRequestBackoffEnd, METH_VARARGS|METH_KEYWORDS, "SetRequestBackoffEnd(requestBackoffEnd)\n\ntype: requestBackoffEnd: uint8_t" },
-    {(char *) "SetRequestBackoffStart", (PyCFunction) _wrap_PyNs3Ucd_SetRequestBackoffStart, METH_VARARGS|METH_KEYWORDS, "SetRequestBackoffStart(requestBackoffStart)\n\ntype: requestBackoffStart: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Ucd_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetChannelEncodings", (PyCFunction) _wrap_PyNs3Ucd_SetChannelEncodings, METH_KEYWORDS|METH_VARARGS, "SetChannelEncodings(channelEncodings)\n\ntype: channelEncodings: ns3::OfdmUcdChannelEncodings" },
+    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Ucd_SetConfigurationChangeCount, METH_KEYWORDS|METH_VARARGS, "SetConfigurationChangeCount(ucdCount)\n\ntype: ucdCount: uint8_t" },
+    {(char *) "SetNrUlBurstProfiles", (PyCFunction) _wrap_PyNs3Ucd_SetNrUlBurstProfiles, METH_KEYWORDS|METH_VARARGS, "SetNrUlBurstProfiles(nrUlBurstProfiles)\n\ntype: nrUlBurstProfiles: uint8_t" },
+    {(char *) "SetRangingBackoffEnd", (PyCFunction) _wrap_PyNs3Ucd_SetRangingBackoffEnd, METH_KEYWORDS|METH_VARARGS, "SetRangingBackoffEnd(rangingBackoffEnd)\n\ntype: rangingBackoffEnd: uint8_t" },
+    {(char *) "SetRangingBackoffStart", (PyCFunction) _wrap_PyNs3Ucd_SetRangingBackoffStart, METH_KEYWORDS|METH_VARARGS, "SetRangingBackoffStart(rangingBackoffStart)\n\ntype: rangingBackoffStart: uint8_t" },
+    {(char *) "SetRequestBackoffEnd", (PyCFunction) _wrap_PyNs3Ucd_SetRequestBackoffEnd, METH_KEYWORDS|METH_VARARGS, "SetRequestBackoffEnd(requestBackoffEnd)\n\ntype: requestBackoffEnd: uint8_t" },
+    {(char *) "SetRequestBackoffStart", (PyCFunction) _wrap_PyNs3Ucd_SetRequestBackoffStart, METH_KEYWORDS|METH_VARARGS, "SetRequestBackoffStart(requestBackoffStart)\n\ntype: requestBackoffStart: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ucd__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20695,7 +20695,7 @@ PyTypeObject PyNs3Ucd_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Ucd(arg0)\nUcd()",                        /* Documentation string */
     (traverseproc)PyNs3Ucd__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ucd__tp_clear,             /* tp_clear */
@@ -21004,12 +21004,12 @@ static PyMethodDef PyNs3UlJob_methods[] = {
     {(char *) "GetSchedulingType", (PyCFunction) _wrap_PyNs3UlJob_GetSchedulingType, METH_NOARGS, "GetSchedulingType()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3UlJob_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3UlJob_GetType, METH_NOARGS, "GetType()\n\n" },
-    {(char *) "SetDeadline", (PyCFunction) _wrap_PyNs3UlJob_SetDeadline, METH_VARARGS|METH_KEYWORDS, "SetDeadline(deadline)\n\ntype: deadline: ns3::Time" },
-    {(char *) "SetPeriod", (PyCFunction) _wrap_PyNs3UlJob_SetPeriod, METH_VARARGS|METH_KEYWORDS, "SetPeriod(period)\n\ntype: period: ns3::Time" },
-    {(char *) "SetReleaseTime", (PyCFunction) _wrap_PyNs3UlJob_SetReleaseTime, METH_VARARGS|METH_KEYWORDS, "SetReleaseTime(releaseTime)\n\ntype: releaseTime: ns3::Time" },
-    {(char *) "SetSchedulingType", (PyCFunction) _wrap_PyNs3UlJob_SetSchedulingType, METH_VARARGS|METH_KEYWORDS, "SetSchedulingType(schedulingType)\n\ntype: schedulingType: ns3::ServiceFlow::SchedulingType" },
-    {(char *) "SetSize", (PyCFunction) _wrap_PyNs3UlJob_SetSize, METH_VARARGS|METH_KEYWORDS, "SetSize(size)\n\ntype: size: uint32_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3UlJob_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: ns3::ReqType" },
+    {(char *) "SetDeadline", (PyCFunction) _wrap_PyNs3UlJob_SetDeadline, METH_KEYWORDS|METH_VARARGS, "SetDeadline(deadline)\n\ntype: deadline: ns3::Time" },
+    {(char *) "SetPeriod", (PyCFunction) _wrap_PyNs3UlJob_SetPeriod, METH_KEYWORDS|METH_VARARGS, "SetPeriod(period)\n\ntype: period: ns3::Time" },
+    {(char *) "SetReleaseTime", (PyCFunction) _wrap_PyNs3UlJob_SetReleaseTime, METH_KEYWORDS|METH_VARARGS, "SetReleaseTime(releaseTime)\n\ntype: releaseTime: ns3::Time" },
+    {(char *) "SetSchedulingType", (PyCFunction) _wrap_PyNs3UlJob_SetSchedulingType, METH_KEYWORDS|METH_VARARGS, "SetSchedulingType(schedulingType)\n\ntype: schedulingType: ns3::ServiceFlow::SchedulingType" },
+    {(char *) "SetSize", (PyCFunction) _wrap_PyNs3UlJob_SetSize, METH_KEYWORDS|METH_VARARGS, "SetSize(size)\n\ntype: size: uint32_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3UlJob_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: ns3::ReqType" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UlJob__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -21111,7 +21111,7 @@ PyTypeObject PyNs3UlJob_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UlJob(arg0)\nUlJob()",                        /* Documentation string */
     (traverseproc)PyNs3UlJob__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UlJob__tp_clear,             /* tp_clear */
@@ -21407,8 +21407,8 @@ _wrap_PyNs3UlMap__copy__(PyNs3UlMap *self)
 }
 
 static PyMethodDef PyNs3UlMap_methods[] = {
-    {(char *) "AddUlMapElement", (PyCFunction) _wrap_PyNs3UlMap_AddUlMapElement, METH_VARARGS|METH_KEYWORDS, "AddUlMapElement(ulMapElement)\n\ntype: ulMapElement: ns3::OfdmUlMapIe" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3UlMap_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddUlMapElement", (PyCFunction) _wrap_PyNs3UlMap_AddUlMapElement, METH_KEYWORDS|METH_VARARGS, "AddUlMapElement(ulMapElement)\n\ntype: ulMapElement: ns3::OfdmUlMapIe" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3UlMap_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetAllocationStartTime", (PyCFunction) _wrap_PyNs3UlMap_GetAllocationStartTime, METH_NOARGS, "GetAllocationStartTime()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3UlMap_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3UlMap_GetName, METH_NOARGS, "GetName()\n\n" },
@@ -21416,9 +21416,9 @@ static PyMethodDef PyNs3UlMap_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UlMap_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUcdCount", (PyCFunction) _wrap_PyNs3UlMap_GetUcdCount, METH_NOARGS, "GetUcdCount()\n\n" },
     {(char *) "GetUlMapElements", (PyCFunction) _wrap_PyNs3UlMap_GetUlMapElements, METH_NOARGS, "GetUlMapElements()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3UlMap_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetAllocationStartTime", (PyCFunction) _wrap_PyNs3UlMap_SetAllocationStartTime, METH_VARARGS|METH_KEYWORDS, "SetAllocationStartTime(allocationStartTime)\n\ntype: allocationStartTime: uint32_t" },
-    {(char *) "SetUcdCount", (PyCFunction) _wrap_PyNs3UlMap_SetUcdCount, METH_VARARGS|METH_KEYWORDS, "SetUcdCount(ucdCount)\n\ntype: ucdCount: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3UlMap_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetAllocationStartTime", (PyCFunction) _wrap_PyNs3UlMap_SetAllocationStartTime, METH_KEYWORDS|METH_VARARGS, "SetAllocationStartTime(allocationStartTime)\n\ntype: allocationStartTime: uint32_t" },
+    {(char *) "SetUcdCount", (PyCFunction) _wrap_PyNs3UlMap_SetUcdCount, METH_KEYWORDS|METH_VARARGS, "SetUcdCount(ucdCount)\n\ntype: ucdCount: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UlMap__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -21482,7 +21482,7 @@ PyTypeObject PyNs3UlMap_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UlMap(arg0)\nUlMap()",                        /* Documentation string */
     (traverseproc)PyNs3UlMap__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UlMap__tp_clear,             /* tp_clear */
@@ -21894,7 +21894,7 @@ _wrap_PyNs3UplinkScheduler_SetUcdTimeStamp(PyNs3UplinkScheduler *self, PyObject 
 static PyMethodDef PyNs3UplinkScheduler_methods[] = {
     {(char *) "CalculateAllocationStartTime", (PyCFunction) _wrap_PyNs3UplinkScheduler_CalculateAllocationStartTime, METH_NOARGS, "CalculateAllocationStartTime()\n\n" },
     {(char *) "GetBs", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetBs, METH_NOARGS, "GetBs()\n\n" },
-    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetChannelDescriptorsToUpdate, METH_VARARGS|METH_KEYWORDS, "GetChannelDescriptorsToUpdate(arg0, arg1, arg2, arg3)\n\ntype: arg0: bool &\ntype: arg1: bool &\ntype: arg2: bool &\ntype: arg3: bool &" },
+    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetChannelDescriptorsToUpdate, METH_KEYWORDS|METH_VARARGS, "GetChannelDescriptorsToUpdate(arg0, arg1, arg2, arg3)\n\ntype: arg0: bool &\ntype: arg1: bool &\ntype: arg2: bool &\ntype: arg3: bool &" },
     {(char *) "GetDcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetDcdTimeStamp, METH_NOARGS, "GetDcdTimeStamp()\n\n" },
     {(char *) "GetIsInvIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetIsInvIrIntrvlAllocated, METH_NOARGS, "GetIsInvIrIntrvlAllocated()\n\n" },
     {(char *) "GetIsIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetIsIrIntrvlAllocated, METH_NOARGS, "GetIsIrIntrvlAllocated()\n\n" },
@@ -21904,15 +21904,15 @@ static PyMethodDef PyNs3UplinkScheduler_methods[] = {
     {(char *) "GetUcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetUcdTimeStamp, METH_NOARGS, "GetUcdTimeStamp()\n\n" },
     {(char *) "GetUplinkAllocations", (PyCFunction) _wrap_PyNs3UplinkScheduler_GetUplinkAllocations, METH_NOARGS, "GetUplinkAllocations()\n\n" },
     {(char *) "InitOnce", (PyCFunction) _wrap_PyNs3UplinkScheduler_InitOnce, METH_NOARGS, "InitOnce()\n\n" },
-    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkScheduler_ProcessBandwidthRequest, METH_VARARGS|METH_KEYWORDS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
+    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkScheduler_ProcessBandwidthRequest, METH_KEYWORDS|METH_VARARGS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3UplinkScheduler_Schedule, METH_NOARGS, "Schedule()\n\n" },
-    {(char *) "SetBs", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetBs, METH_VARARGS|METH_KEYWORDS, "SetBs(bs)\n\ntype: bs: ns3::Ptr< ns3::BaseStationNetDevice >" },
-    {(char *) "SetDcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetDcdTimeStamp, METH_VARARGS|METH_KEYWORDS, "SetDcdTimeStamp(dcdTimeStamp)\n\ntype: dcdTimeStamp: ns3::Time" },
-    {(char *) "SetIsInvIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetIsInvIrIntrvlAllocated, METH_VARARGS|METH_KEYWORDS, "SetIsInvIrIntrvlAllocated(isInvIrIntrvlAllocated)\n\ntype: isInvIrIntrvlAllocated: bool" },
-    {(char *) "SetIsIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetIsIrIntrvlAllocated, METH_VARARGS|METH_KEYWORDS, "SetIsIrIntrvlAllocated(isIrIntrvlAllocated)\n\ntype: isIrIntrvlAllocated: bool" },
-    {(char *) "SetNrIrOppsAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetNrIrOppsAllocated, METH_VARARGS|METH_KEYWORDS, "SetNrIrOppsAllocated(nrIrOppsAllocated)\n\ntype: nrIrOppsAllocated: uint8_t" },
-    {(char *) "SetTimeStampIrInterval", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetTimeStampIrInterval, METH_VARARGS|METH_KEYWORDS, "SetTimeStampIrInterval(timeStampIrInterval)\n\ntype: timeStampIrInterval: ns3::Time" },
-    {(char *) "SetUcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetUcdTimeStamp, METH_VARARGS|METH_KEYWORDS, "SetUcdTimeStamp(ucdTimeStamp)\n\ntype: ucdTimeStamp: ns3::Time" },
+    {(char *) "SetBs", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetBs, METH_KEYWORDS|METH_VARARGS, "SetBs(bs)\n\ntype: bs: ns3::Ptr< ns3::BaseStationNetDevice >" },
+    {(char *) "SetDcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetDcdTimeStamp, METH_KEYWORDS|METH_VARARGS, "SetDcdTimeStamp(dcdTimeStamp)\n\ntype: dcdTimeStamp: ns3::Time" },
+    {(char *) "SetIsInvIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetIsInvIrIntrvlAllocated, METH_KEYWORDS|METH_VARARGS, "SetIsInvIrIntrvlAllocated(isInvIrIntrvlAllocated)\n\ntype: isInvIrIntrvlAllocated: bool" },
+    {(char *) "SetIsIrIntrvlAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetIsIrIntrvlAllocated, METH_KEYWORDS|METH_VARARGS, "SetIsIrIntrvlAllocated(isIrIntrvlAllocated)\n\ntype: isIrIntrvlAllocated: bool" },
+    {(char *) "SetNrIrOppsAllocated", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetNrIrOppsAllocated, METH_KEYWORDS|METH_VARARGS, "SetNrIrOppsAllocated(nrIrOppsAllocated)\n\ntype: nrIrOppsAllocated: uint8_t" },
+    {(char *) "SetTimeStampIrInterval", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetTimeStampIrInterval, METH_KEYWORDS|METH_VARARGS, "SetTimeStampIrInterval(timeStampIrInterval)\n\ntype: timeStampIrInterval: ns3::Time" },
+    {(char *) "SetUcdTimeStamp", (PyCFunction) _wrap_PyNs3UplinkScheduler_SetUcdTimeStamp, METH_KEYWORDS|METH_VARARGS, "SetUcdTimeStamp(ucdTimeStamp)\n\ntype: ucdTimeStamp: ns3::Time" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -21975,7 +21975,7 @@ PyTypeObject PyNs3UplinkScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UplinkScheduler(arg0)\nUplinkScheduler(bs)\nUplinkScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkScheduler__tp_clear,             /* tp_clear */
@@ -22346,15 +22346,15 @@ _wrap_PyNs3UplinkSchedulerMBQoS__copy__(PyNs3UplinkSchedulerMBQoS *self)
 
 static PyMethodDef PyNs3UplinkSchedulerMBQoS_methods[] = {
     {(char *) "CalculateAllocationStartTime", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_CalculateAllocationStartTime, METH_NOARGS, "CalculateAllocationStartTime()\n\n" },
-    {(char *) "CountSymbolsJobs", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_CountSymbolsJobs, METH_VARARGS|METH_KEYWORDS, "CountSymbolsJobs(job)\n\ntype: job: ns3::Ptr< ns3::UlJob >" },
-    {(char *) "CountSymbolsQueue", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_CountSymbolsQueue, METH_VARARGS|METH_KEYWORDS, "CountSymbolsQueue(jobs)\n\ntype: jobs: std::list< ns3::Ptr< ns3::UlJob > >" },
-    {(char *) "DequeueJob", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_DequeueJob, METH_VARARGS|METH_KEYWORDS, "DequeueJob(priority)\n\ntype: priority: ns3::UlJob::JobPriority" },
-    {(char *) "EnqueueJob", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_EnqueueJob, METH_VARARGS|METH_KEYWORDS, "EnqueueJob(priority, job)\n\ntype: priority: ns3::UlJob::JobPriority\ntype: job: ns3::Ptr< ns3::UlJob >" },
-    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_GetChannelDescriptorsToUpdate, METH_VARARGS|METH_KEYWORDS, "GetChannelDescriptorsToUpdate(updateDcd, updateUcd, sendDcd, sendUcd)\n\ntype: updateDcd: bool &\ntype: updateUcd: bool &\ntype: sendDcd: bool &\ntype: sendUcd: bool &" },
+    {(char *) "CountSymbolsJobs", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_CountSymbolsJobs, METH_KEYWORDS|METH_VARARGS, "CountSymbolsJobs(job)\n\ntype: job: ns3::Ptr< ns3::UlJob >" },
+    {(char *) "CountSymbolsQueue", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_CountSymbolsQueue, METH_KEYWORDS|METH_VARARGS, "CountSymbolsQueue(jobs)\n\ntype: jobs: std::list< ns3::Ptr< ns3::UlJob > >" },
+    {(char *) "DequeueJob", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_DequeueJob, METH_KEYWORDS|METH_VARARGS, "DequeueJob(priority)\n\ntype: priority: ns3::UlJob::JobPriority" },
+    {(char *) "EnqueueJob", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_EnqueueJob, METH_KEYWORDS|METH_VARARGS, "EnqueueJob(priority, job)\n\ntype: priority: ns3::UlJob::JobPriority\ntype: job: ns3::Ptr< ns3::UlJob >" },
+    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_GetChannelDescriptorsToUpdate, METH_KEYWORDS|METH_VARARGS, "GetChannelDescriptorsToUpdate(updateDcd, updateUcd, sendDcd, sendUcd)\n\ntype: updateDcd: bool &\ntype: updateUcd: bool &\ntype: sendDcd: bool &\ntype: sendUcd: bool &" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUplinkAllocations", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_GetUplinkAllocations, METH_NOARGS, "GetUplinkAllocations()\n\n" },
     {(char *) "InitOnce", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_InitOnce, METH_NOARGS, "InitOnce()\n\n" },
-    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_ProcessBandwidthRequest, METH_VARARGS|METH_KEYWORDS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
+    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_ProcessBandwidthRequest, METH_KEYWORDS|METH_VARARGS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_Schedule, METH_NOARGS, "Schedule()\n\n" },
     {(char *) "UplinkSchedWindowTimer", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS_UplinkSchedWindowTimer, METH_NOARGS, "UplinkSchedWindowTimer()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UplinkSchedulerMBQoS__copy__, METH_NOARGS, NULL},
@@ -22420,7 +22420,7 @@ PyTypeObject PyNs3UplinkSchedulerMBQoS_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UplinkSchedulerMBQoS(arg0)\nUplinkSchedulerMBQoS(time)\nUplinkSchedulerMBQoS()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerMBQoS__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerMBQoS__tp_clear,             /* tp_clear */
@@ -22682,11 +22682,11 @@ _wrap_PyNs3UplinkSchedulerRtps__copy__(PyNs3UplinkSchedulerRtps *self)
 
 static PyMethodDef PyNs3UplinkSchedulerRtps_methods[] = {
     {(char *) "CalculateAllocationStartTime", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_CalculateAllocationStartTime, METH_NOARGS, "CalculateAllocationStartTime()\n\n" },
-    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_GetChannelDescriptorsToUpdate, METH_VARARGS|METH_KEYWORDS, "GetChannelDescriptorsToUpdate(updateDcd, updateUcd, sendDcd, sendUcd)\n\ntype: updateDcd: bool &\ntype: updateUcd: bool &\ntype: sendDcd: bool &\ntype: sendUcd: bool &" },
+    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_GetChannelDescriptorsToUpdate, METH_KEYWORDS|METH_VARARGS, "GetChannelDescriptorsToUpdate(updateDcd, updateUcd, sendDcd, sendUcd)\n\ntype: updateDcd: bool &\ntype: updateUcd: bool &\ntype: sendDcd: bool &\ntype: sendUcd: bool &" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUplinkAllocations", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_GetUplinkAllocations, METH_NOARGS, "GetUplinkAllocations()\n\n" },
     {(char *) "InitOnce", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_InitOnce, METH_NOARGS, "InitOnce()\n\n" },
-    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_ProcessBandwidthRequest, METH_VARARGS|METH_KEYWORDS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
+    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_ProcessBandwidthRequest, METH_KEYWORDS|METH_VARARGS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps_Schedule, METH_NOARGS, "Schedule()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UplinkSchedulerRtps__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -22751,7 +22751,7 @@ PyTypeObject PyNs3UplinkSchedulerRtps_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UplinkSchedulerRtps(arg0)\nUplinkSchedulerRtps(bs)\nUplinkSchedulerRtps()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerRtps__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerRtps__tp_clear,             /* tp_clear */
@@ -23013,11 +23013,11 @@ _wrap_PyNs3UplinkSchedulerSimple__copy__(PyNs3UplinkSchedulerSimple *self)
 
 static PyMethodDef PyNs3UplinkSchedulerSimple_methods[] = {
     {(char *) "CalculateAllocationStartTime", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_CalculateAllocationStartTime, METH_NOARGS, "CalculateAllocationStartTime()\n\n" },
-    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_GetChannelDescriptorsToUpdate, METH_VARARGS|METH_KEYWORDS, "GetChannelDescriptorsToUpdate(arg0, arg1, arg2, arg3)\n\ntype: arg0: bool &\ntype: arg1: bool &\ntype: arg2: bool &\ntype: arg3: bool &" },
+    {(char *) "GetChannelDescriptorsToUpdate", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_GetChannelDescriptorsToUpdate, METH_KEYWORDS|METH_VARARGS, "GetChannelDescriptorsToUpdate(arg0, arg1, arg2, arg3)\n\ntype: arg0: bool &\ntype: arg1: bool &\ntype: arg2: bool &\ntype: arg3: bool &" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetUplinkAllocations", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_GetUplinkAllocations, METH_NOARGS, "GetUplinkAllocations()\n\n" },
     {(char *) "InitOnce", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_InitOnce, METH_NOARGS, "InitOnce()\n\n" },
-    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_ProcessBandwidthRequest, METH_VARARGS|METH_KEYWORDS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
+    {(char *) "ProcessBandwidthRequest", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_ProcessBandwidthRequest, METH_KEYWORDS|METH_VARARGS, "ProcessBandwidthRequest(bwRequestHdr)\n\ntype: bwRequestHdr: ns3::BandwidthRequestHeader const &" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple_Schedule, METH_NOARGS, "Schedule()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UplinkSchedulerSimple__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -23082,7 +23082,7 @@ PyTypeObject PyNs3UplinkSchedulerSimple_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UplinkSchedulerSimple(arg0)\nUplinkSchedulerSimple(bs)\nUplinkSchedulerSimple()",                        /* Documentation string */
     (traverseproc)PyNs3UplinkSchedulerSimple__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UplinkSchedulerSimple__tp_clear,             /* tp_clear */
@@ -23115,16 +23115,16 @@ PyTypeObject PyNs3UplinkSchedulerSimple_Type = {
 
 
 PyObject *
-PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxConnection *self)
+PyNs3WimaxConnection__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxConnection *self)
 {
     PyObject *py_retval;
     PyNs3WimaxConnection__PythonHelper *helper = dynamic_cast< PyNs3WimaxConnection__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23147,16 +23147,16 @@ PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize(PyNs3WimaxConnection *sel
 }
 
 PyObject *
-PyNs3WimaxConnection__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxConnection *self)
+PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxConnection *self)
 {
     PyObject *py_retval;
     PyNs3WimaxConnection__PythonHelper *helper = dynamic_cast< PyNs3WimaxConnection__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -23857,9 +23857,9 @@ _wrap_PyNs3WimaxConnection__copy__(PyNs3WimaxConnection *self)
 
 static PyMethodDef PyNs3WimaxConnection_methods[] = {
     {(char *) "ClearFragmentsQueue", (PyCFunction) _wrap_PyNs3WimaxConnection_ClearFragmentsQueue, METH_NOARGS, "ClearFragmentsQueue()\n\n" },
-    {(char *) "Dequeue", (PyCFunction) _wrap_PyNs3WimaxConnection_Dequeue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxConnection_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, hdrType, hdr)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: hdr: ns3::GenericMacHeader const &" },
-    {(char *) "FragmentEnqueue", (PyCFunction) _wrap_PyNs3WimaxConnection_FragmentEnqueue, METH_VARARGS|METH_KEYWORDS, "FragmentEnqueue(fragment)\n\ntype: fragment: ns3::Ptr< ns3::Packet const >" },
+    {(char *) "Dequeue", (PyCFunction) _wrap_PyNs3WimaxConnection_Dequeue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxConnection_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, hdrType, hdr)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: hdr: ns3::GenericMacHeader const &" },
+    {(char *) "FragmentEnqueue", (PyCFunction) _wrap_PyNs3WimaxConnection_FragmentEnqueue, METH_KEYWORDS|METH_VARARGS, "FragmentEnqueue(fragment)\n\ntype: fragment: ns3::Ptr< ns3::Packet const >" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3WimaxConnection_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetFragmentsQueue", (PyCFunction) _wrap_PyNs3WimaxConnection_GetFragmentsQueue, METH_NOARGS, "GetFragmentsQueue()\n\n" },
     {(char *) "GetQueue", (PyCFunction) _wrap_PyNs3WimaxConnection_GetQueue, METH_NOARGS, "GetQueue()\n\n" },
@@ -23867,10 +23867,10 @@ static PyMethodDef PyNs3WimaxConnection_methods[] = {
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3WimaxConnection_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxConnection_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetTypeStr", (PyCFunction) _wrap_PyNs3WimaxConnection_GetTypeStr, METH_NOARGS, "GetTypeStr()\n\n" },
-    {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3WimaxConnection_HasPackets, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3WimaxConnection_HasPackets, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxConnection__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxConnection__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -23937,7 +23937,7 @@ PyTypeObject PyNs3WimaxConnection_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxConnection(cid, type)\nWimaxConnection(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3WimaxConnection__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxConnection__tp_clear,             /* tp_clear */
@@ -24723,23 +24723,23 @@ _wrap_PyNs3WimaxMacQueue__copy__(PyNs3WimaxMacQueue *self)
 }
 
 static PyMethodDef PyNs3WimaxMacQueue_methods[] = {
-    {(char *) "CheckForFragmentation", (PyCFunction) _wrap_PyNs3WimaxMacQueue_CheckForFragmentation, METH_VARARGS|METH_KEYWORDS, "CheckForFragmentation(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
-    {(char *) "Dequeue", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Dequeue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, hdrType, hdr)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: hdr: ns3::GenericMacHeader const &" },
-    {(char *) "GetFirstPacketHdrSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketHdrSize, METH_VARARGS|METH_KEYWORDS, "GetFirstPacketHdrSize(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
-    {(char *) "GetFirstPacketPayloadSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketPayloadSize, METH_VARARGS|METH_KEYWORDS, "GetFirstPacketPayloadSize(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
-    {(char *) "GetFirstPacketRequiredByte", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketRequiredByte, METH_VARARGS|METH_KEYWORDS, "GetFirstPacketRequiredByte(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "CheckForFragmentation", (PyCFunction) _wrap_PyNs3WimaxMacQueue_CheckForFragmentation, METH_KEYWORDS|METH_VARARGS, "CheckForFragmentation(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "Dequeue", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Dequeue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, hdrType, hdr)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: hdr: ns3::GenericMacHeader const &" },
+    {(char *) "GetFirstPacketHdrSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketHdrSize, METH_KEYWORDS|METH_VARARGS, "GetFirstPacketHdrSize(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "GetFirstPacketPayloadSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketPayloadSize, METH_KEYWORDS|METH_VARARGS, "GetFirstPacketPayloadSize(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "GetFirstPacketRequiredByte", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetFirstPacketRequiredByte, METH_KEYWORDS|METH_VARARGS, "GetFirstPacketRequiredByte(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
     {(char *) "GetMaxSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetMaxSize, METH_NOARGS, "GetMaxSize()\n\n" },
     {(char *) "GetNBytes", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetNBytes, METH_NOARGS, "GetNBytes()\n\n" },
     {(char *) "GetQueueLengthWithMACOverhead", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetQueueLengthWithMACOverhead, METH_NOARGS, "GetQueueLengthWithMACOverhead()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxMacQueue_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3WimaxMacQueue_IsEmpty, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Peek", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Peek, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetFragmentNumber", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentNumber, METH_VARARGS|METH_KEYWORDS, "SetFragmentNumber(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
-    {(char *) "SetFragmentOffset", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentOffset, METH_VARARGS|METH_KEYWORDS, "SetFragmentOffset(packetType, offset)\n\ntype: packetType: ns3::MacHeaderType::HeaderType\ntype: offset: uint32_t" },
-    {(char *) "SetFragmentation", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentation, METH_VARARGS|METH_KEYWORDS, "SetFragmentation(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
-    {(char *) "SetMaxSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetMaxSize, METH_VARARGS|METH_KEYWORDS, "SetMaxSize(maxSize)\n\ntype: maxSize: uint32_t" },
+    {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3WimaxMacQueue_IsEmpty, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Peek", (PyCFunction) _wrap_PyNs3WimaxMacQueue_Peek, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetFragmentNumber", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentNumber, METH_KEYWORDS|METH_VARARGS, "SetFragmentNumber(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "SetFragmentOffset", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentOffset, METH_KEYWORDS|METH_VARARGS, "SetFragmentOffset(packetType, offset)\n\ntype: packetType: ns3::MacHeaderType::HeaderType\ntype: offset: uint32_t" },
+    {(char *) "SetFragmentation", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetFragmentation, METH_KEYWORDS|METH_VARARGS, "SetFragmentation(packetType)\n\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "SetMaxSize", (PyCFunction) _wrap_PyNs3WimaxMacQueue_SetMaxSize, METH_KEYWORDS|METH_VARARGS, "SetMaxSize(maxSize)\n\ntype: maxSize: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxMacQueue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -24803,7 +24803,7 @@ PyTypeObject PyNs3WimaxMacQueue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxMacQueue(maxSize)\nWimaxMacQueue(arg0)\nWimaxMacQueue()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxMacQueue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxMacQueue__tp_clear,             /* tp_clear */
@@ -25241,7 +25241,7 @@ _wrap_PyNs3WimaxMacQueueQueueElement__copy__(PyNs3WimaxMacQueueQueueElement *sel
 static PyMethodDef PyNs3WimaxMacQueueQueueElement_methods[] = {
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "SetFragmentNumber", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement_SetFragmentNumber, METH_NOARGS, "SetFragmentNumber()\n\n" },
-    {(char *) "SetFragmentOffset", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement_SetFragmentOffset, METH_VARARGS|METH_KEYWORDS, "SetFragmentOffset(offset)\n\ntype: offset: uint32_t" },
+    {(char *) "SetFragmentOffset", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement_SetFragmentOffset, METH_KEYWORDS|METH_VARARGS, "SetFragmentOffset(offset)\n\ntype: offset: uint32_t" },
     {(char *) "SetFragmentation", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement_SetFragmentation, METH_NOARGS, "SetFragmentation()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxMacQueueQueueElement__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -25519,12 +25519,12 @@ _wrap_PyNs3WimaxMacToMacHeader__copy__(PyNs3WimaxMacToMacHeader *self)
 }
 
 static PyMethodDef PyNs3WimaxMacToMacHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetSizeOfLen", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_GetSizeOfLen, METH_NOARGS, "GetSizeOfLen()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WimaxMacToMacHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -25588,7 +25588,7 @@ PyTypeObject PyNs3WimaxMacToMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxMacToMacHeader(arg0)\nWimaxMacToMacHeader(len)\nWimaxMacToMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxMacToMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxMacToMacHeader__tp_clear,             /* tp_clear */
@@ -26620,24 +26620,24 @@ _wrap_PyNs3WimaxPhy_StartScanning(PyNs3WimaxPhy *self, PyObject *args, PyObject 
 }
 
 static PyMethodDef PyNs3WimaxPhy_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxPhy_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxPhy_Attach, METH_VARARGS|METH_KEYWORDS, "Attach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxPhy_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxPhy_Attach, METH_KEYWORDS|METH_VARARGS, "Attach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3WimaxPhy_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3WimaxPhy_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "GetChannelBandwidth", (PyCFunction) _wrap_PyNs3WimaxPhy_GetChannelBandwidth, METH_NOARGS, "GetChannelBandwidth()\n\n" },
     {(char *) "GetChnlSrchTimeoutEvent", (PyCFunction) _wrap_PyNs3WimaxPhy_GetChnlSrchTimeoutEvent, METH_NOARGS, "GetChnlSrchTimeoutEvent()\n\n" },
-    {(char *) "GetDataRate", (PyCFunction) _wrap_PyNs3WimaxPhy_GetDataRate, METH_VARARGS|METH_KEYWORDS, "GetDataRate(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "GetDataRate", (PyCFunction) _wrap_PyNs3WimaxPhy_GetDataRate, METH_KEYWORDS|METH_VARARGS, "GetDataRate(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3WimaxPhy_GetDevice, METH_NOARGS, "GetDevice()\n\n" },
-    {(char *) "GetFrameDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_GetFrameDuration, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetFrameDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_GetFrameDuration, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetFrameDurationCode", (PyCFunction) _wrap_PyNs3WimaxPhy_GetFrameDurationCode, METH_NOARGS, "GetFrameDurationCode()\n\n" },
     {(char *) "GetFrameDurationSec", (PyCFunction) _wrap_PyNs3WimaxPhy_GetFrameDurationSec, METH_NOARGS, "GetFrameDurationSec()\n\n" },
     {(char *) "GetFrequency", (PyCFunction) _wrap_PyNs3WimaxPhy_GetFrequency, METH_NOARGS, "GetFrequency()\n\n" },
     {(char *) "GetGValue", (PyCFunction) _wrap_PyNs3WimaxPhy_GetGValue, METH_NOARGS, "GetGValue()\n\n" },
     {(char *) "GetMobility", (PyCFunction) _wrap_PyNs3WimaxPhy_GetMobility, METH_NOARGS, "GetMobility()\n\n" },
     {(char *) "GetNfft", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNfft, METH_NOARGS, "GetNfft()\n\n" },
-    {(char *) "GetNrBytes", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNrBytes, METH_VARARGS|METH_KEYWORDS, "GetNrBytes(symbols, modulationType)\n\ntype: symbols: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "GetNrBytes", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNrBytes, METH_KEYWORDS|METH_VARARGS, "GetNrBytes(symbols, modulationType)\n\ntype: symbols: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetNrCarriers", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNrCarriers, METH_NOARGS, "GetNrCarriers()\n\n" },
-    {(char *) "GetNrSymbols", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNrSymbols, METH_VARARGS|METH_KEYWORDS, "GetNrSymbols(size, modulationType)\n\ntype: size: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "GetNrSymbols", (PyCFunction) _wrap_PyNs3WimaxPhy_GetNrSymbols, METH_KEYWORDS|METH_VARARGS, "GetNrSymbols(size, modulationType)\n\ntype: size: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetPhyType", (PyCFunction) _wrap_PyNs3WimaxPhy_GetPhyType, METH_NOARGS, "GetPhyType()\n\n" },
     {(char *) "GetPsDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_GetPsDuration, METH_NOARGS, "GetPsDuration()\n\n" },
     {(char *) "GetPsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_GetPsPerFrame, METH_NOARGS, "GetPsPerFrame()\n\n" },
@@ -26650,30 +26650,30 @@ static PyMethodDef PyNs3WimaxPhy_methods[] = {
     {(char *) "GetState", (PyCFunction) _wrap_PyNs3WimaxPhy_GetState, METH_NOARGS, "GetState()\n\n" },
     {(char *) "GetSymbolDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_GetSymbolDuration, METH_NOARGS, "GetSymbolDuration()\n\n" },
     {(char *) "GetSymbolsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_GetSymbolsPerFrame, METH_NOARGS, "GetSymbolsPerFrame()\n\n" },
-    {(char *) "GetTransmissionTime", (PyCFunction) _wrap_PyNs3WimaxPhy_GetTransmissionTime, METH_VARARGS|METH_KEYWORDS, "GetTransmissionTime(size, modulationType)\n\ntype: size: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "GetTransmissionTime", (PyCFunction) _wrap_PyNs3WimaxPhy_GetTransmissionTime, METH_KEYWORDS|METH_VARARGS, "GetTransmissionTime(size, modulationType)\n\ntype: size: uint32_t\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetTtg", (PyCFunction) _wrap_PyNs3WimaxPhy_GetTtg, METH_NOARGS, "GetTtg()\n\n" },
     {(char *) "GetTxFrequency", (PyCFunction) _wrap_PyNs3WimaxPhy_GetTxFrequency, METH_NOARGS, "GetTxFrequency()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxPhy_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsDuplex", (PyCFunction) _wrap_PyNs3WimaxPhy_IsDuplex, METH_NOARGS, "IsDuplex()\n\n" },
-    {(char *) "SetChannelBandwidth", (PyCFunction) _wrap_PyNs3WimaxPhy_SetChannelBandwidth, METH_VARARGS|METH_KEYWORDS, "SetChannelBandwidth(channelBandwidth)\n\ntype: channelBandwidth: uint32_t" },
+    {(char *) "SetChannelBandwidth", (PyCFunction) _wrap_PyNs3WimaxPhy_SetChannelBandwidth, METH_KEYWORDS|METH_VARARGS, "SetChannelBandwidth(channelBandwidth)\n\ntype: channelBandwidth: uint32_t" },
     {(char *) "SetDataRates", (PyCFunction) _wrap_PyNs3WimaxPhy_SetDataRates, METH_NOARGS, "SetDataRates()\n\n" },
-    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3WimaxPhy_SetDevice, METH_VARARGS|METH_KEYWORDS, "SetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WimaxNetDevice >" },
-    {(char *) "SetDuplex", (PyCFunction) _wrap_PyNs3WimaxPhy_SetDuplex, METH_VARARGS|METH_KEYWORDS, "SetDuplex(rxFrequency, txFrequency)\n\ntype: rxFrequency: uint64_t\ntype: txFrequency: uint64_t" },
-    {(char *) "SetFrameDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetFrameDuration, METH_VARARGS|METH_KEYWORDS, "SetFrameDuration(frameDuration)\n\ntype: frameDuration: ns3::Time" },
-    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3WimaxPhy_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
-    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3WimaxPhy_SetMobility, METH_VARARGS|METH_KEYWORDS, "SetMobility(mobility)\n\ntype: mobility: ns3::Ptr< ns3::Object >" },
-    {(char *) "SetNrCarriers", (PyCFunction) _wrap_PyNs3WimaxPhy_SetNrCarriers, METH_VARARGS|METH_KEYWORDS, "SetNrCarriers(nrCarriers)\n\ntype: nrCarriers: uint8_t" },
+    {(char *) "SetDevice", (PyCFunction) _wrap_PyNs3WimaxPhy_SetDevice, METH_KEYWORDS|METH_VARARGS, "SetDevice(device)\n\ntype: device: ns3::Ptr< ns3::WimaxNetDevice >" },
+    {(char *) "SetDuplex", (PyCFunction) _wrap_PyNs3WimaxPhy_SetDuplex, METH_KEYWORDS|METH_VARARGS, "SetDuplex(rxFrequency, txFrequency)\n\ntype: rxFrequency: uint64_t\ntype: txFrequency: uint64_t" },
+    {(char *) "SetFrameDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetFrameDuration, METH_KEYWORDS|METH_VARARGS, "SetFrameDuration(frameDuration)\n\ntype: frameDuration: ns3::Time" },
+    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3WimaxPhy_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(frequency)\n\ntype: frequency: uint32_t" },
+    {(char *) "SetMobility", (PyCFunction) _wrap_PyNs3WimaxPhy_SetMobility, METH_KEYWORDS|METH_VARARGS, "SetMobility(mobility)\n\ntype: mobility: ns3::Ptr< ns3::Object >" },
+    {(char *) "SetNrCarriers", (PyCFunction) _wrap_PyNs3WimaxPhy_SetNrCarriers, METH_KEYWORDS|METH_VARARGS, "SetNrCarriers(nrCarriers)\n\ntype: nrCarriers: uint8_t" },
     {(char *) "SetPhyParameters", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPhyParameters, METH_NOARGS, "SetPhyParameters()\n\n" },
-    {(char *) "SetPsDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsDuration, METH_VARARGS|METH_KEYWORDS, "SetPsDuration(psDuration)\n\ntype: psDuration: ns3::Time" },
-    {(char *) "SetPsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsPerFrame, METH_VARARGS|METH_KEYWORDS, "SetPsPerFrame(psPerFrame)\n\ntype: psPerFrame: uint16_t" },
-    {(char *) "SetPsPerSymbol", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsPerSymbol, METH_VARARGS|METH_KEYWORDS, "SetPsPerSymbol(psPerSymbol)\n\ntype: psPerSymbol: uint16_t" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxPhy_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::Ptr< ns3::PacketBurst const >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetPsDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsDuration, METH_KEYWORDS|METH_VARARGS, "SetPsDuration(psDuration)\n\ntype: psDuration: ns3::Time" },
+    {(char *) "SetPsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsPerFrame, METH_KEYWORDS|METH_VARARGS, "SetPsPerFrame(psPerFrame)\n\ntype: psPerFrame: uint16_t" },
+    {(char *) "SetPsPerSymbol", (PyCFunction) _wrap_PyNs3WimaxPhy_SetPsPerSymbol, METH_KEYWORDS|METH_VARARGS, "SetPsPerSymbol(psPerSymbol)\n\ntype: psPerSymbol: uint16_t" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxPhy_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::Ptr< ns3::PacketBurst const >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SetScanningCallback", (PyCFunction) _wrap_PyNs3WimaxPhy_SetScanningCallback, METH_NOARGS, "SetScanningCallback()\n\n" },
-    {(char *) "SetSimplex", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSimplex, METH_VARARGS|METH_KEYWORDS, "SetSimplex(frequency)\n\ntype: frequency: uint64_t" },
-    {(char *) "SetState", (PyCFunction) _wrap_PyNs3WimaxPhy_SetState, METH_VARARGS|METH_KEYWORDS, "SetState(state)\n\ntype: state: ns3::WimaxPhy::PhyState" },
-    {(char *) "SetSymbolDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSymbolDuration, METH_VARARGS|METH_KEYWORDS, "SetSymbolDuration(symbolDuration)\n\ntype: symbolDuration: ns3::Time" },
-    {(char *) "SetSymbolsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSymbolsPerFrame, METH_VARARGS|METH_KEYWORDS, "SetSymbolsPerFrame(symbolsPerFrame)\n\ntype: symbolsPerFrame: uint32_t" },
-    {(char *) "StartScanning", (PyCFunction) _wrap_PyNs3WimaxPhy_StartScanning, METH_VARARGS|METH_KEYWORDS, "StartScanning(frequency, timeout, callback)\n\ntype: frequency: uint64_t\ntype: timeout: ns3::Time\ntype: callback: ns3::Callback< void, bool, unsigned long, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetSimplex", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSimplex, METH_KEYWORDS|METH_VARARGS, "SetSimplex(frequency)\n\ntype: frequency: uint64_t" },
+    {(char *) "SetState", (PyCFunction) _wrap_PyNs3WimaxPhy_SetState, METH_KEYWORDS|METH_VARARGS, "SetState(state)\n\ntype: state: ns3::WimaxPhy::PhyState" },
+    {(char *) "SetSymbolDuration", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSymbolDuration, METH_KEYWORDS|METH_VARARGS, "SetSymbolDuration(symbolDuration)\n\ntype: symbolDuration: ns3::Time" },
+    {(char *) "SetSymbolsPerFrame", (PyCFunction) _wrap_PyNs3WimaxPhy_SetSymbolsPerFrame, METH_KEYWORDS|METH_VARARGS, "SetSymbolsPerFrame(symbolsPerFrame)\n\ntype: symbolsPerFrame: uint32_t" },
+    {(char *) "StartScanning", (PyCFunction) _wrap_PyNs3WimaxPhy_StartScanning, METH_KEYWORDS|METH_VARARGS, "StartScanning(frequency, timeout, callback)\n\ntype: frequency: uint64_t\ntype: timeout: ns3::Time\ntype: callback: ns3::Callback< void, bool, unsigned long, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -26736,7 +26736,7 @@ PyTypeObject PyNs3WimaxPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxPhy(arg0)\nWimaxPhy()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxPhy__tp_clear,             /* tp_clear */
@@ -26917,12 +26917,12 @@ _wrap_PyNs3BSScheduler_SetBs(PyNs3BSScheduler *self, PyObject *args, PyObject *k
 }
 
 static PyMethodDef PyNs3BSScheduler_methods[] = {
-    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSScheduler_AddDownlinkBurst, METH_VARARGS|METH_KEYWORDS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "CheckForFragmentation", (PyCFunction) _wrap_PyNs3BSScheduler_CheckForFragmentation, METH_VARARGS|METH_KEYWORDS, "CheckForFragmentation(connection, availableSymbols, modulationType)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: availableSymbols: int\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSScheduler_AddDownlinkBurst, METH_KEYWORDS|METH_VARARGS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "CheckForFragmentation", (PyCFunction) _wrap_PyNs3BSScheduler_CheckForFragmentation, METH_KEYWORDS|METH_VARARGS, "CheckForFragmentation(connection, availableSymbols, modulationType)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: availableSymbols: int\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetBs", (PyCFunction) _wrap_PyNs3BSScheduler_GetBs, METH_NOARGS, "GetBs()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BSScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3BSScheduler_Schedule, METH_NOARGS, "Schedule()\n\n" },
-    {(char *) "SetBs", (PyCFunction) _wrap_PyNs3BSScheduler_SetBs, METH_VARARGS|METH_KEYWORDS, "SetBs(bs)\n\ntype: bs: ns3::Ptr< ns3::BaseStationNetDevice >" },
+    {(char *) "SetBs", (PyCFunction) _wrap_PyNs3BSScheduler_SetBs, METH_KEYWORDS|METH_VARARGS, "SetBs(bs)\n\ntype: bs: ns3::Ptr< ns3::BaseStationNetDevice >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -26985,7 +26985,7 @@ PyTypeObject PyNs3BSScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BSScheduler(arg0)\nBSScheduler(bs)\nBSScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3BSScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSScheduler__tp_clear,             /* tp_clear */
@@ -27190,7 +27190,7 @@ _wrap_PyNs3BSSchedulerRtps__copy__(PyNs3BSSchedulerRtps *self)
 }
 
 static PyMethodDef PyNs3BSSchedulerRtps_methods[] = {
-    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSSchedulerRtps_AddDownlinkBurst, METH_VARARGS|METH_KEYWORDS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSSchedulerRtps_AddDownlinkBurst, METH_KEYWORDS|METH_VARARGS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BSSchedulerRtps_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3BSSchedulerRtps_Schedule, METH_NOARGS, "Schedule()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BSSchedulerRtps__copy__, METH_NOARGS, NULL},
@@ -27256,7 +27256,7 @@ PyTypeObject PyNs3BSSchedulerRtps_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BSSchedulerRtps(arg0)\nBSSchedulerRtps(bs)\nBSSchedulerRtps()",                        /* Documentation string */
     (traverseproc)PyNs3BSSchedulerRtps__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSSchedulerRtps__tp_clear,             /* tp_clear */
@@ -27461,7 +27461,7 @@ _wrap_PyNs3BSSchedulerSimple__copy__(PyNs3BSSchedulerSimple *self)
 }
 
 static PyMethodDef PyNs3BSSchedulerSimple_methods[] = {
-    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSSchedulerSimple_AddDownlinkBurst, METH_VARARGS|METH_KEYWORDS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "AddDownlinkBurst", (PyCFunction) _wrap_PyNs3BSSchedulerSimple_AddDownlinkBurst, METH_KEYWORDS|METH_VARARGS, "AddDownlinkBurst(connection, diuc, modulationType, burst)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection const >\ntype: diuc: uint8_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BSSchedulerSimple_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Schedule", (PyCFunction) _wrap_PyNs3BSSchedulerSimple_Schedule, METH_NOARGS, "Schedule()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BSSchedulerSimple__copy__, METH_NOARGS, NULL},
@@ -27527,7 +27527,7 @@ PyTypeObject PyNs3BSSchedulerSimple_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BSSchedulerSimple(arg0)\nBSSchedulerSimple(bs)\nBSSchedulerSimple()",                        /* Documentation string */
     (traverseproc)PyNs3BSSchedulerSimple__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BSSchedulerSimple__tp_clear,             /* tp_clear */
@@ -27935,7 +27935,7 @@ _wrap_PyNs3BandwidthRequestHeader__copy__(PyNs3BandwidthRequestHeader *self)
 }
 
 static PyMethodDef PyNs3BandwidthRequestHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetBr", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetBr, METH_NOARGS, "GetBr()\n\n" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetEc", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetEc, METH_NOARGS, "GetEc()\n\n" },
@@ -27946,13 +27946,13 @@ static PyMethodDef PyNs3BandwidthRequestHeader_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetBr", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetBr, METH_VARARGS|METH_KEYWORDS, "SetBr(br)\n\ntype: br: uint32_t" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "SetEc", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetEc, METH_VARARGS|METH_KEYWORDS, "SetEc(ec)\n\ntype: ec: uint8_t" },
-    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetHcs, METH_VARARGS|METH_KEYWORDS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
-    {(char *) "SetHt", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetHt, METH_VARARGS|METH_KEYWORDS, "SetHt(ht)\n\ntype: ht: uint8_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetBr", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetBr, METH_KEYWORDS|METH_VARARGS, "SetBr(br)\n\ntype: br: uint32_t" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "SetEc", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetEc, METH_KEYWORDS|METH_VARARGS, "SetEc(ec)\n\ntype: ec: uint8_t" },
+    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetHcs, METH_KEYWORDS|METH_VARARGS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
+    {(char *) "SetHt", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetHt, METH_KEYWORDS|METH_VARARGS, "SetHt(ht)\n\ntype: ht: uint8_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
     {(char *) "check_hcs", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader_check_hcs, METH_NOARGS, "check_hcs()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BandwidthRequestHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -28017,7 +28017,7 @@ PyTypeObject PyNs3BandwidthRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BandwidthRequestHeader(arg0)\nBandwidthRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3BandwidthRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BandwidthRequestHeader__tp_clear,             /* tp_clear */
@@ -28050,16 +28050,16 @@ PyTypeObject PyNs3BandwidthRequestHeader_Type = {
 
 
 PyObject *
-PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsServiceFlowManager *self)
+PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BsServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3BsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3BsServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28082,16 +28082,16 @@ PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize(PyNs3BsServiceFlowMa
 }
 
 PyObject *
-PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BsServiceFlowManager *self)
+PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BsServiceFlowManager *self)
 {
     PyObject *py_retval;
     PyNs3BsServiceFlowManager__PythonHelper *helper = dynamic_cast< PyNs3BsServiceFlowManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28552,16 +28552,16 @@ _wrap_PyNs3BsServiceFlowManager__copy__(PyNs3BsServiceFlowManager *self)
 }
 
 static PyMethodDef PyNs3BsServiceFlowManager_methods[] = {
-    {(char *) "AddMulticastServiceFlow", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_AddMulticastServiceFlow, METH_VARARGS|METH_KEYWORDS, "AddMulticastServiceFlow(sf, modulation)\n\ntype: sf: ns3::ServiceFlow\ntype: modulation: ns3::WimaxPhy::ModulationType" },
-    {(char *) "AllocateServiceFlows", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_AllocateServiceFlows, METH_VARARGS|METH_KEYWORDS, "AllocateServiceFlows(dsaReq, cid)\n\ntype: dsaReq: ns3::DsaReq const &\ntype: cid: ns3::Cid" },
+    {(char *) "AddMulticastServiceFlow", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_AddMulticastServiceFlow, METH_KEYWORDS|METH_VARARGS, "AddMulticastServiceFlow(sf, modulation)\n\ntype: sf: ns3::ServiceFlow\ntype: modulation: ns3::WimaxPhy::ModulationType" },
+    {(char *) "AllocateServiceFlows", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_AllocateServiceFlows, METH_KEYWORDS|METH_VARARGS, "AllocateServiceFlows(dsaReq, cid)\n\ntype: dsaReq: ns3::DsaReq const &\ntype: cid: ns3::Cid" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetDsaAckTimeoutEvent", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_GetDsaAckTimeoutEvent, METH_NOARGS, "GetDsaAckTimeoutEvent()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "ProcessDsaAck", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_ProcessDsaAck, METH_VARARGS|METH_KEYWORDS, "ProcessDsaAck(dsaAck, cid)\n\ntype: dsaAck: ns3::DsaAck const &\ntype: cid: ns3::Cid" },
-    {(char *) "SetMaxDsaRspRetries", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_SetMaxDsaRspRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxDsaRspRetries(maxDsaRspRetries)\n\ntype: maxDsaRspRetries: uint8_t" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "ProcessDsaAck", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_ProcessDsaAck, METH_KEYWORDS|METH_VARARGS, "ProcessDsaAck(dsaAck, cid)\n\ntype: dsaAck: ns3::DsaAck const &\ntype: cid: ns3::Cid" },
+    {(char *) "SetMaxDsaRspRetries", (PyCFunction) _wrap_PyNs3BsServiceFlowManager_SetMaxDsaRspRetries, METH_KEYWORDS|METH_VARARGS, "SetMaxDsaRspRetries(maxDsaRspRetries)\n\ntype: maxDsaRspRetries: uint8_t" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BsServiceFlowManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BsServiceFlowManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -28628,7 +28628,7 @@ PyTypeObject PyNs3BsServiceFlowManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BsServiceFlowManager(device)\nBsServiceFlowManager(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3BsServiceFlowManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BsServiceFlowManager__tp_clear,             /* tp_clear */
@@ -28661,16 +28661,16 @@ PyTypeObject PyNs3BsServiceFlowManager_Type = {
 
 
 PyObject *
-PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConnectionManager *self)
+PyNs3ConnectionManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ConnectionManager *self)
 {
     PyObject *py_retval;
     PyNs3ConnectionManager__PythonHelper *helper = dynamic_cast< PyNs3ConnectionManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -28693,16 +28693,16 @@ PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize(PyNs3ConnectionManager 
 }
 
 PyObject *
-PyNs3ConnectionManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ConnectionManager *self)
+PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ConnectionManager *self)
 {
     PyObject *py_retval;
     PyNs3ConnectionManager__PythonHelper *helper = dynamic_cast< PyNs3ConnectionManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -29239,17 +29239,17 @@ _wrap_PyNs3ConnectionManager__copy__(PyNs3ConnectionManager *self)
 }
 
 static PyMethodDef PyNs3ConnectionManager_methods[] = {
-    {(char *) "AddConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_AddConnection, METH_VARARGS|METH_KEYWORDS, "AddConnection(connection, type)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: type: ns3::Cid::Type" },
-    {(char *) "CreateConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_CreateConnection, METH_VARARGS|METH_KEYWORDS, "CreateConnection(type)\n\ntype: type: ns3::Cid::Type" },
+    {(char *) "AddConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_AddConnection, METH_KEYWORDS|METH_VARARGS, "AddConnection(connection, type)\n\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: type: ns3::Cid::Type" },
+    {(char *) "CreateConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_CreateConnection, METH_KEYWORDS|METH_VARARGS, "CreateConnection(type)\n\ntype: type: ns3::Cid::Type" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3ConnectionManager_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
-    {(char *) "GetConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_GetConnection, METH_VARARGS|METH_KEYWORDS, "GetConnection(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "GetConnections", (PyCFunction) _wrap_PyNs3ConnectionManager_GetConnections, METH_VARARGS|METH_KEYWORDS, "GetConnections(type)\n\ntype: type: ns3::Cid::Type" },
-    {(char *) "GetNPackets", (PyCFunction) _wrap_PyNs3ConnectionManager_GetNPackets, METH_VARARGS|METH_KEYWORDS, "GetNPackets(type, schedulingType)\n\ntype: type: ns3::Cid::Type\ntype: schedulingType: ns3::ServiceFlow::SchedulingType" },
+    {(char *) "GetConnection", (PyCFunction) _wrap_PyNs3ConnectionManager_GetConnection, METH_KEYWORDS|METH_VARARGS, "GetConnection(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "GetConnections", (PyCFunction) _wrap_PyNs3ConnectionManager_GetConnections, METH_KEYWORDS|METH_VARARGS, "GetConnections(type)\n\ntype: type: ns3::Cid::Type" },
+    {(char *) "GetNPackets", (PyCFunction) _wrap_PyNs3ConnectionManager_GetNPackets, METH_KEYWORDS|METH_VARARGS, "GetNPackets(type, schedulingType)\n\ntype: type: ns3::Cid::Type\ntype: schedulingType: ns3::ServiceFlow::SchedulingType" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConnectionManager_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "HasPackets", (PyCFunction) _wrap_PyNs3ConnectionManager_HasPackets, METH_NOARGS, "HasPackets()\n\n" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConnectionManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConnectionManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -29316,7 +29316,7 @@ PyTypeObject PyNs3ConnectionManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConnectionManager(arg0)\nConnectionManager()",                        /* Documentation string */
     (traverseproc)PyNs3ConnectionManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConnectionManager__tp_clear,             /* tp_clear */
@@ -29651,8 +29651,8 @@ _wrap_PyNs3Dcd__copy__(PyNs3Dcd *self)
 }
 
 static PyMethodDef PyNs3Dcd_methods[] = {
-    {(char *) "AddDlBurstProfile", (PyCFunction) _wrap_PyNs3Dcd_AddDlBurstProfile, METH_VARARGS|METH_KEYWORDS, "AddDlBurstProfile(dlBurstProfile)\n\ntype: dlBurstProfile: ns3::OfdmDlBurstProfile" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dcd_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddDlBurstProfile", (PyCFunction) _wrap_PyNs3Dcd_AddDlBurstProfile, METH_KEYWORDS|METH_VARARGS, "AddDlBurstProfile(dlBurstProfile)\n\ntype: dlBurstProfile: ns3::OfdmDlBurstProfile" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dcd_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetChannelEncodings", (PyCFunction) _wrap_PyNs3Dcd_GetChannelEncodings, METH_NOARGS, "GetChannelEncodings()\n\n" },
     {(char *) "GetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Dcd_GetConfigurationChangeCount, METH_NOARGS, "GetConfigurationChangeCount()\n\n" },
     {(char *) "GetDlBurstProfiles", (PyCFunction) _wrap_PyNs3Dcd_GetDlBurstProfiles, METH_NOARGS, "GetDlBurstProfiles()\n\n" },
@@ -29661,10 +29661,10 @@ static PyMethodDef PyNs3Dcd_methods[] = {
     {(char *) "GetNrDlBurstProfiles", (PyCFunction) _wrap_PyNs3Dcd_GetNrDlBurstProfiles, METH_NOARGS, "GetNrDlBurstProfiles()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dcd_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dcd_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dcd_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetChannelEncodings", (PyCFunction) _wrap_PyNs3Dcd_SetChannelEncodings, METH_VARARGS|METH_KEYWORDS, "SetChannelEncodings(channelEncodings)\n\ntype: channelEncodings: ns3::OfdmDcdChannelEncodings" },
-    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Dcd_SetConfigurationChangeCount, METH_VARARGS|METH_KEYWORDS, "SetConfigurationChangeCount(configurationChangeCount)\n\ntype: configurationChangeCount: uint8_t" },
-    {(char *) "SetNrDlBurstProfiles", (PyCFunction) _wrap_PyNs3Dcd_SetNrDlBurstProfiles, METH_VARARGS|METH_KEYWORDS, "SetNrDlBurstProfiles(nrDlBurstProfiles)\n\ntype: nrDlBurstProfiles: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dcd_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetChannelEncodings", (PyCFunction) _wrap_PyNs3Dcd_SetChannelEncodings, METH_KEYWORDS|METH_VARARGS, "SetChannelEncodings(channelEncodings)\n\ntype: channelEncodings: ns3::OfdmDcdChannelEncodings" },
+    {(char *) "SetConfigurationChangeCount", (PyCFunction) _wrap_PyNs3Dcd_SetConfigurationChangeCount, METH_KEYWORDS|METH_VARARGS, "SetConfigurationChangeCount(configurationChangeCount)\n\ntype: configurationChangeCount: uint8_t" },
+    {(char *) "SetNrDlBurstProfiles", (PyCFunction) _wrap_PyNs3Dcd_SetNrDlBurstProfiles, METH_KEYWORDS|METH_VARARGS, "SetNrDlBurstProfiles(nrDlBurstProfiles)\n\ntype: nrDlBurstProfiles: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dcd__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -29728,7 +29728,7 @@ PyTypeObject PyNs3Dcd_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Dcd(arg0)\nDcd()",                        /* Documentation string */
     (traverseproc)PyNs3Dcd__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dcd__tp_clear,             /* tp_clear */
@@ -30028,8 +30028,8 @@ _wrap_PyNs3DlMap__copy__(PyNs3DlMap *self)
 }
 
 static PyMethodDef PyNs3DlMap_methods[] = {
-    {(char *) "AddDlMapElement", (PyCFunction) _wrap_PyNs3DlMap_AddDlMapElement, METH_VARARGS|METH_KEYWORDS, "AddDlMapElement(dlMapElement)\n\ntype: dlMapElement: ns3::OfdmDlMapIe" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DlMap_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddDlMapElement", (PyCFunction) _wrap_PyNs3DlMap_AddDlMapElement, METH_KEYWORDS|METH_VARARGS, "AddDlMapElement(dlMapElement)\n\ntype: dlMapElement: ns3::OfdmDlMapIe" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DlMap_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetBaseStationId", (PyCFunction) _wrap_PyNs3DlMap_GetBaseStationId, METH_NOARGS, "GetBaseStationId()\n\n" },
     {(char *) "GetDcdCount", (PyCFunction) _wrap_PyNs3DlMap_GetDcdCount, METH_NOARGS, "GetDcdCount()\n\n" },
     {(char *) "GetDlMapElements", (PyCFunction) _wrap_PyNs3DlMap_GetDlMapElements, METH_NOARGS, "GetDlMapElements()\n\n" },
@@ -30037,9 +30037,9 @@ static PyMethodDef PyNs3DlMap_methods[] = {
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3DlMap_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3DlMap_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DlMap_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DlMap_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3DlMap_SetBaseStationId, METH_VARARGS|METH_KEYWORDS, "SetBaseStationId(baseStationID)\n\ntype: baseStationID: ns3::Mac48Address" },
-    {(char *) "SetDcdCount", (PyCFunction) _wrap_PyNs3DlMap_SetDcdCount, METH_VARARGS|METH_KEYWORDS, "SetDcdCount(dcdCount)\n\ntype: dcdCount: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DlMap_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetBaseStationId", (PyCFunction) _wrap_PyNs3DlMap_SetBaseStationId, METH_KEYWORDS|METH_VARARGS, "SetBaseStationId(baseStationID)\n\ntype: baseStationID: ns3::Mac48Address" },
+    {(char *) "SetDcdCount", (PyCFunction) _wrap_PyNs3DlMap_SetDcdCount, METH_KEYWORDS|METH_VARARGS, "SetDcdCount(dcdCount)\n\ntype: dcdCount: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DlMap__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -30103,7 +30103,7 @@ PyTypeObject PyNs3DlMap_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DlMap(arg0)\nDlMap()",                        /* Documentation string */
     (traverseproc)PyNs3DlMap__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DlMap__tp_clear,             /* tp_clear */
@@ -30371,16 +30371,16 @@ _wrap_PyNs3DsaAck__copy__(PyNs3DsaAck *self)
 }
 
 static PyMethodDef PyNs3DsaAck_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaAck_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaAck_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaAck_GetConfirmationCode, METH_NOARGS, "GetConfirmationCode()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3DsaAck_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3DsaAck_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3DsaAck_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTransactionId", (PyCFunction) _wrap_PyNs3DsaAck_GetTransactionId, METH_NOARGS, "GetTransactionId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsaAck_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaAck_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaAck_SetConfirmationCode, METH_VARARGS|METH_KEYWORDS, "SetConfirmationCode(confirmationCode)\n\ntype: confirmationCode: uint16_t" },
-    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaAck_SetTransactionId, METH_VARARGS|METH_KEYWORDS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaAck_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaAck_SetConfirmationCode, METH_KEYWORDS|METH_VARARGS, "SetConfirmationCode(confirmationCode)\n\ntype: confirmationCode: uint16_t" },
+    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaAck_SetTransactionId, METH_KEYWORDS|METH_VARARGS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsaAck__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -30444,7 +30444,7 @@ PyTypeObject PyNs3DsaAck_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DsaAck(arg0)\nDsaAck()",                        /* Documentation string */
     (traverseproc)PyNs3DsaAck__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaAck__tp_clear,             /* tp_clear */
@@ -30802,7 +30802,7 @@ _wrap_PyNs3DsaReq__copy__(PyNs3DsaReq *self)
 }
 
 static PyMethodDef PyNs3DsaReq_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaReq_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaReq_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3DsaReq_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3DsaReq_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3DsaReq_GetName, METH_NOARGS, "GetName()\n\n" },
@@ -30811,11 +30811,11 @@ static PyMethodDef PyNs3DsaReq_methods[] = {
     {(char *) "GetSfid", (PyCFunction) _wrap_PyNs3DsaReq_GetSfid, METH_NOARGS, "GetSfid()\n\n" },
     {(char *) "GetTransactionId", (PyCFunction) _wrap_PyNs3DsaReq_GetTransactionId, METH_NOARGS, "GetTransactionId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsaReq_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaReq_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3DsaReq_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "SetServiceFlow", (PyCFunction) _wrap_PyNs3DsaReq_SetServiceFlow, METH_VARARGS|METH_KEYWORDS, "SetServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
-    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3DsaReq_SetSfid, METH_VARARGS|METH_KEYWORDS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
-    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaReq_SetTransactionId, METH_VARARGS|METH_KEYWORDS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaReq_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3DsaReq_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "SetServiceFlow", (PyCFunction) _wrap_PyNs3DsaReq_SetServiceFlow, METH_KEYWORDS|METH_VARARGS, "SetServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
+    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3DsaReq_SetSfid, METH_KEYWORDS|METH_VARARGS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
+    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaReq_SetTransactionId, METH_KEYWORDS|METH_VARARGS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsaReq__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -30879,7 +30879,7 @@ PyTypeObject PyNs3DsaReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DsaReq(arg0)\nDsaReq(sf)\nDsaReq()",                        /* Documentation string */
     (traverseproc)PyNs3DsaReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaReq__tp_clear,             /* tp_clear */
@@ -31242,7 +31242,7 @@ _wrap_PyNs3DsaRsp__copy__(PyNs3DsaRsp *self)
 }
 
 static PyMethodDef PyNs3DsaRsp_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaRsp_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3DsaRsp_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3DsaRsp_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaRsp_GetConfirmationCode, METH_NOARGS, "GetConfirmationCode()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3DsaRsp_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
@@ -31252,12 +31252,12 @@ static PyMethodDef PyNs3DsaRsp_methods[] = {
     {(char *) "GetSfid", (PyCFunction) _wrap_PyNs3DsaRsp_GetSfid, METH_NOARGS, "GetSfid()\n\n" },
     {(char *) "GetTransactionId", (PyCFunction) _wrap_PyNs3DsaRsp_GetTransactionId, METH_NOARGS, "GetTransactionId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DsaRsp_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaRsp_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3DsaRsp_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "SetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaRsp_SetConfirmationCode, METH_VARARGS|METH_KEYWORDS, "SetConfirmationCode(confirmationCode)\n\ntype: confirmationCode: uint16_t" },
-    {(char *) "SetServiceFlow", (PyCFunction) _wrap_PyNs3DsaRsp_SetServiceFlow, METH_VARARGS|METH_KEYWORDS, "SetServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
-    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3DsaRsp_SetSfid, METH_VARARGS|METH_KEYWORDS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
-    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaRsp_SetTransactionId, METH_VARARGS|METH_KEYWORDS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3DsaRsp_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3DsaRsp_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "SetConfirmationCode", (PyCFunction) _wrap_PyNs3DsaRsp_SetConfirmationCode, METH_KEYWORDS|METH_VARARGS, "SetConfirmationCode(confirmationCode)\n\ntype: confirmationCode: uint16_t" },
+    {(char *) "SetServiceFlow", (PyCFunction) _wrap_PyNs3DsaRsp_SetServiceFlow, METH_KEYWORDS|METH_VARARGS, "SetServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
+    {(char *) "SetSfid", (PyCFunction) _wrap_PyNs3DsaRsp_SetSfid, METH_KEYWORDS|METH_VARARGS, "SetSfid(sfid)\n\ntype: sfid: uint32_t" },
+    {(char *) "SetTransactionId", (PyCFunction) _wrap_PyNs3DsaRsp_SetTransactionId, METH_KEYWORDS|METH_VARARGS, "SetTransactionId(transactionId)\n\ntype: transactionId: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DsaRsp__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -31321,7 +31321,7 @@ PyTypeObject PyNs3DsaRsp_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "DsaRsp(arg0)\nDsaRsp()",                        /* Documentation string */
     (traverseproc)PyNs3DsaRsp__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsaRsp__tp_clear,             /* tp_clear */
@@ -31589,16 +31589,16 @@ _wrap_PyNs3FragmentationSubheader__copy__(PyNs3FragmentationSubheader *self)
 }
 
 static PyMethodDef PyNs3FragmentationSubheader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FragmentationSubheader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FragmentationSubheader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetFc", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetFc, METH_NOARGS, "GetFc()\n\n" },
     {(char *) "GetFsn", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetFsn, METH_NOARGS, "GetFsn()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FragmentationSubheader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FragmentationSubheader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetFc", (PyCFunction) _wrap_PyNs3FragmentationSubheader_SetFc, METH_VARARGS|METH_KEYWORDS, "SetFc(fc)\n\ntype: fc: uint8_t" },
-    {(char *) "SetFsn", (PyCFunction) _wrap_PyNs3FragmentationSubheader_SetFsn, METH_VARARGS|METH_KEYWORDS, "SetFsn(fsn)\n\ntype: fsn: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FragmentationSubheader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetFc", (PyCFunction) _wrap_PyNs3FragmentationSubheader_SetFc, METH_KEYWORDS|METH_VARARGS, "SetFc(fc)\n\ntype: fc: uint8_t" },
+    {(char *) "SetFsn", (PyCFunction) _wrap_PyNs3FragmentationSubheader_SetFsn, METH_KEYWORDS|METH_VARARGS, "SetFsn(fsn)\n\ntype: fsn: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FragmentationSubheader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -31662,7 +31662,7 @@ PyTypeObject PyNs3FragmentationSubheader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FragmentationSubheader(arg0)\nFragmentationSubheader()",                        /* Documentation string */
     (traverseproc)PyNs3FragmentationSubheader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FragmentationSubheader__tp_clear,             /* tp_clear */
@@ -32140,7 +32140,7 @@ _wrap_PyNs3GenericMacHeader__copy__(PyNs3GenericMacHeader *self)
 }
 
 static PyMethodDef PyNs3GenericMacHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3GenericMacHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3GenericMacHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCi", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetCi, METH_NOARGS, "GetCi()\n\n" },
     {(char *) "GetCid", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetCid, METH_NOARGS, "GetCid()\n\n" },
     {(char *) "GetEc", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetEc, METH_NOARGS, "GetEc()\n\n" },
@@ -32153,15 +32153,15 @@ static PyMethodDef PyNs3GenericMacHeader_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetType", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetType, METH_NOARGS, "GetType()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GenericMacHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3GenericMacHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetCi", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetCi, METH_VARARGS|METH_KEYWORDS, "SetCi(ci)\n\ntype: ci: uint8_t" },
-    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetCid, METH_VARARGS|METH_KEYWORDS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
-    {(char *) "SetEc", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetEc, METH_VARARGS|METH_KEYWORDS, "SetEc(ec)\n\ntype: ec: uint8_t" },
-    {(char *) "SetEks", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetEks, METH_VARARGS|METH_KEYWORDS, "SetEks(eks)\n\ntype: eks: uint8_t" },
-    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetHcs, METH_VARARGS|METH_KEYWORDS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
-    {(char *) "SetHt", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetHt, METH_VARARGS|METH_KEYWORDS, "SetHt(ht)\n\ntype: ht: uint8_t" },
-    {(char *) "SetLen", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetLen, METH_VARARGS|METH_KEYWORDS, "SetLen(len)\n\ntype: len: uint16_t" },
-    {(char *) "SetType", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetType, METH_VARARGS|METH_KEYWORDS, "SetType(type)\n\ntype: type: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3GenericMacHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetCi", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetCi, METH_KEYWORDS|METH_VARARGS, "SetCi(ci)\n\ntype: ci: uint8_t" },
+    {(char *) "SetCid", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetCid, METH_KEYWORDS|METH_VARARGS, "SetCid(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "SetEc", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetEc, METH_KEYWORDS|METH_VARARGS, "SetEc(ec)\n\ntype: ec: uint8_t" },
+    {(char *) "SetEks", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetEks, METH_KEYWORDS|METH_VARARGS, "SetEks(eks)\n\ntype: eks: uint8_t" },
+    {(char *) "SetHcs", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetHcs, METH_KEYWORDS|METH_VARARGS, "SetHcs(hcs)\n\ntype: hcs: uint8_t" },
+    {(char *) "SetHt", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetHt, METH_KEYWORDS|METH_VARARGS, "SetHt(ht)\n\ntype: ht: uint8_t" },
+    {(char *) "SetLen", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetLen, METH_KEYWORDS|METH_VARARGS, "SetLen(len)\n\ntype: len: uint16_t" },
+    {(char *) "SetType", (PyCFunction) _wrap_PyNs3GenericMacHeader_SetType, METH_KEYWORDS|METH_VARARGS, "SetType(type)\n\ntype: type: uint8_t" },
     {(char *) "check_hcs", (PyCFunction) _wrap_PyNs3GenericMacHeader_check_hcs, METH_NOARGS, "check_hcs()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GenericMacHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -32226,7 +32226,7 @@ PyTypeObject PyNs3GenericMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "GenericMacHeader(arg0)\nGenericMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3GenericMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GenericMacHeader__tp_clear,             /* tp_clear */
@@ -32527,7 +32527,7 @@ _wrap_PyNs3GrantManagementSubheader__copy__(PyNs3GrantManagementSubheader *self)
 }
 
 static PyMethodDef PyNs3GrantManagementSubheader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetPbr", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetPbr, METH_NOARGS, "GetPbr()\n\n" },
@@ -32535,10 +32535,10 @@ static PyMethodDef PyNs3GrantManagementSubheader_methods[] = {
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetSi", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetSi, METH_NOARGS, "GetSi()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetPbr", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetPbr, METH_VARARGS|METH_KEYWORDS, "SetPbr(pbr)\n\ntype: pbr: uint16_t" },
-    {(char *) "SetPm", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetPm, METH_VARARGS|METH_KEYWORDS, "SetPm(pm)\n\ntype: pm: uint8_t" },
-    {(char *) "SetSi", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetSi, METH_VARARGS|METH_KEYWORDS, "SetSi(si)\n\ntype: si: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetPbr", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetPbr, METH_KEYWORDS|METH_VARARGS, "SetPbr(pbr)\n\ntype: pbr: uint16_t" },
+    {(char *) "SetPm", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetPm, METH_KEYWORDS|METH_VARARGS, "SetPm(pm)\n\ntype: pm: uint8_t" },
+    {(char *) "SetSi", (PyCFunction) _wrap_PyNs3GrantManagementSubheader_SetSi, METH_KEYWORDS|METH_VARARGS, "SetSi(si)\n\ntype: si: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GrantManagementSubheader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -32602,7 +32602,7 @@ PyTypeObject PyNs3GrantManagementSubheader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "GrantManagementSubheader(arg0)\nGrantManagementSubheader()",                        /* Documentation string */
     (traverseproc)PyNs3GrantManagementSubheader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GrantManagementSubheader__tp_clear,             /* tp_clear */
@@ -32799,7 +32799,7 @@ PyTypeObject PyNs3IpcsClassifier_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "IpcsClassifier(arg0)\nIpcsClassifier()",                        /* Documentation string */
     (traverseproc)PyNs3IpcsClassifier__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3IpcsClassifier__tp_clear,             /* tp_clear */
@@ -33303,26 +33303,26 @@ _wrap_PyNs3SimpleOfdmWimaxPhy__copy__(PyNs3SimpleOfdmWimaxPhy *self)
 }
 
 static PyMethodDef PyNs3SimpleOfdmWimaxPhy_methods[] = {
-    {(char *) "ActivateLoss", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_ActivateLoss, METH_VARARGS|METH_KEYWORDS, "ActivateLoss(loss)\n\ntype: loss: bool" },
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "DoAttach", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_DoAttach, METH_VARARGS|METH_KEYWORDS, "DoAttach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
+    {(char *) "ActivateLoss", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_ActivateLoss, METH_KEYWORDS|METH_VARARGS, "ActivateLoss(loss)\n\ntype: loss: bool" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "DoAttach", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_DoAttach, METH_KEYWORDS|METH_VARARGS, "DoAttach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
     {(char *) "GetBandwidth", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_GetBandwidth, METH_NOARGS, "GetBandwidth()\n\n" },
     {(char *) "GetNoiseFigure", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_GetNoiseFigure, METH_NOARGS, "GetNoiseFigure()\n\n" },
     {(char *) "GetPhyType", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_GetPhyType, METH_NOARGS, "GetPhyType()\n\n" },
     {(char *) "GetTxPower", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_GetTxPower, METH_NOARGS, "GetTxPower()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyRxBegin", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxBegin, METH_VARARGS|METH_KEYWORDS, "NotifyRxBegin(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "NotifyRxDrop", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxDrop, METH_VARARGS|METH_KEYWORDS, "NotifyRxDrop(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "NotifyRxEnd", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxEnd, METH_VARARGS|METH_KEYWORDS, "NotifyRxEnd(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "NotifyTxBegin", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxBegin, METH_VARARGS|METH_KEYWORDS, "NotifyTxBegin(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "NotifyTxDrop", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxDrop, METH_VARARGS|METH_KEYWORDS, "NotifyTxDrop(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "NotifyTxEnd", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxEnd, METH_VARARGS|METH_KEYWORDS, "NotifyTxEnd(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_Send, METH_VARARGS|METH_KEYWORDS, "Send(burst, modulationType, direction)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t" },
-    {(char *) "SetBandwidth", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetBandwidth, METH_VARARGS|METH_KEYWORDS, "SetBandwidth(BW)\n\ntype: BW: uint32_t" },
-    {(char *) "SetNoiseFigure", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetNoiseFigure, METH_VARARGS|METH_KEYWORDS, "SetNoiseFigure(nf)\n\ntype: nf: double" },
-    {(char *) "SetSNRToBlockErrorRateTracesPath", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetSNRToBlockErrorRateTracesPath, METH_VARARGS|METH_KEYWORDS, "SetSNRToBlockErrorRateTracesPath(tracesPath)\n\ntype: tracesPath: char *" },
-    {(char *) "SetTxPower", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetTxPower, METH_VARARGS|METH_KEYWORDS, "SetTxPower(txPower)\n\ntype: txPower: double" },
-    {(char *) "StartReceive", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_StartReceive, METH_VARARGS|METH_KEYWORDS, "StartReceive(burstSize, isFirstBlock, frequency, modulationType, direction, rxPower, burst)\n\ntype: burstSize: uint32_t\ntype: isFirstBlock: bool\ntype: frequency: uint64_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t\ntype: rxPower: double\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyRxBegin", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxBegin, METH_KEYWORDS|METH_VARARGS, "NotifyRxBegin(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyRxDrop", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxDrop, METH_KEYWORDS|METH_VARARGS, "NotifyRxDrop(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyRxEnd", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyRxEnd, METH_KEYWORDS|METH_VARARGS, "NotifyRxEnd(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyTxBegin", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxBegin, METH_KEYWORDS|METH_VARARGS, "NotifyTxBegin(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyTxDrop", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxDrop, METH_KEYWORDS|METH_VARARGS, "NotifyTxDrop(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "NotifyTxEnd", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_NotifyTxEnd, METH_KEYWORDS|METH_VARARGS, "NotifyTxEnd(burst)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_Send, METH_KEYWORDS|METH_VARARGS, "Send(burst, modulationType, direction)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t" },
+    {(char *) "SetBandwidth", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetBandwidth, METH_KEYWORDS|METH_VARARGS, "SetBandwidth(BW)\n\ntype: BW: uint32_t" },
+    {(char *) "SetNoiseFigure", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetNoiseFigure, METH_KEYWORDS|METH_VARARGS, "SetNoiseFigure(nf)\n\ntype: nf: double" },
+    {(char *) "SetSNRToBlockErrorRateTracesPath", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetSNRToBlockErrorRateTracesPath, METH_KEYWORDS|METH_VARARGS, "SetSNRToBlockErrorRateTracesPath(tracesPath)\n\ntype: tracesPath: char *" },
+    {(char *) "SetTxPower", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_SetTxPower, METH_KEYWORDS|METH_VARARGS, "SetTxPower(txPower)\n\ntype: txPower: double" },
+    {(char *) "StartReceive", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy_StartReceive, METH_KEYWORDS|METH_VARARGS, "StartReceive(burstSize, isFirstBlock, frequency, modulationType, direction, rxPower, burst)\n\ntype: burstSize: uint32_t\ntype: isFirstBlock: bool\ntype: frequency: uint64_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t\ntype: rxPower: double\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxPhy__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -33386,7 +33386,7 @@ PyTypeObject PyNs3SimpleOfdmWimaxPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SimpleOfdmWimaxPhy(tracesPath)\nSimpleOfdmWimaxPhy(arg0)\nSimpleOfdmWimaxPhy()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleOfdmWimaxPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleOfdmWimaxPhy__tp_clear,             /* tp_clear */
@@ -33419,32 +33419,16 @@ PyTypeObject PyNs3SimpleOfdmWimaxPhy_Type = {
 
 
 PyObject *
-PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3WimaxChannel *self)
+PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self)
 {
     PyObject *py_retval;
     PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -33467,16 +33451,32 @@ PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3WimaxChannel *self)
 }
 
 PyObject *
-PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxChannel *self)
+PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxChannel *self)
 {
     PyObject *py_retval;
     PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3WimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3WimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3WimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -34243,15 +34243,15 @@ _wrap_PyNs3WimaxChannel_GetTypeId(void)
 }
 
 static PyMethodDef PyNs3WimaxChannel_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxChannel_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxChannel_Attach, METH_VARARGS|METH_KEYWORDS, "Attach(phy)\n\ntype: phy: ns3::Ptr< ns3::WimaxPhy >" },
-    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3WimaxChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3WimaxChannel_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxChannel_Attach, METH_KEYWORDS|METH_VARARGS, "Attach(phy)\n\ntype: phy: ns3::Ptr< ns3::WimaxPhy >" },
+    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3WimaxChannel_GetDevice, METH_KEYWORDS|METH_VARARGS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3WimaxChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3WimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -34317,7 +34317,7 @@ PyTypeObject PyNs3WimaxChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxChannel(arg0)\nWimaxChannel()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxChannel__tp_clear,             /* tp_clear */
@@ -34350,16 +34350,16 @@ PyTypeObject PyNs3WimaxChannel_Type = {
 
 
 PyObject *
-PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxNetDevice *self)
+PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3WimaxNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WimaxNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -34382,16 +34382,16 @@ PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3WimaxNetDevice *self)
 }
 
 PyObject *
-PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WimaxNetDevice *self)
+PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WimaxNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3WimaxNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WimaxNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -38124,68 +38124,68 @@ _wrap_PyNs3WimaxNetDevice_NotifyPromiscTrace(PyNs3WimaxNetDevice *self, PyObject
 
 static PyMethodDef PyNs3WimaxNetDevice_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetTtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetTtg, METH_VARARGS|METH_KEYWORDS, "SetTtg(ttg)\n\ntype: ttg: uint16_t" },
+    {(char *) "SetTtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetTtg, METH_KEYWORDS|METH_VARARGS, "SetTtg(ttg)\n\ntype: ttg: uint16_t" },
     {(char *) "GetTtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetTtg, METH_NOARGS, "GetTtg()\n\n" },
-    {(char *) "SetRtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetRtg, METH_VARARGS|METH_KEYWORDS, "SetRtg(rtg)\n\ntype: rtg: uint16_t" },
+    {(char *) "SetRtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetRtg, METH_KEYWORDS|METH_VARARGS, "SetRtg(rtg)\n\ntype: rtg: uint16_t" },
     {(char *) "GetRtg", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetRtg, METH_NOARGS, "GetRtg()\n\n" },
-    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Attach, METH_VARARGS|METH_KEYWORDS, "Attach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
-    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetPhy, METH_VARARGS|METH_KEYWORDS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::WimaxPhy >" },
+    {(char *) "Attach", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Attach, METH_KEYWORDS|METH_VARARGS, "Attach(channel)\n\ntype: channel: ns3::Ptr< ns3::WimaxChannel >" },
+    {(char *) "SetPhy", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetPhy, METH_KEYWORDS|METH_VARARGS, "SetPhy(phy)\n\ntype: phy: ns3::Ptr< ns3::WimaxPhy >" },
     {(char *) "GetPhy", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetPhy, METH_NOARGS, "GetPhy()\n\n" },
-    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetChannel, METH_VARARGS|METH_KEYWORDS, "SetChannel(wimaxChannel)\n\ntype: wimaxChannel: ns3::Ptr< ns3::WimaxChannel >" },
-    {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetChannel, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetNrFrames", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetNrFrames, METH_VARARGS|METH_KEYWORDS, "SetNrFrames(nrFrames)\n\ntype: nrFrames: uint32_t" },
+    {(char *) "SetChannel", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetChannel, METH_KEYWORDS|METH_VARARGS, "SetChannel(wimaxChannel)\n\ntype: wimaxChannel: ns3::Ptr< ns3::WimaxChannel >" },
+    {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetChannel, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetNrFrames", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetNrFrames, METH_KEYWORDS|METH_VARARGS, "SetNrFrames(nrFrames)\n\ntype: nrFrames: uint32_t" },
     {(char *) "GetNrFrames", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetNrFrames, METH_NOARGS, "GetNrFrames()\n\n" },
-    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetMacAddress, METH_VARARGS|METH_KEYWORDS, "SetMacAddress(address)\n\ntype: address: ns3::Mac48Address" },
+    {(char *) "SetMacAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetMacAddress, METH_KEYWORDS|METH_VARARGS, "SetMacAddress(address)\n\ntype: address: ns3::Mac48Address" },
     {(char *) "GetMacAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetMacAddress, METH_NOARGS, "GetMacAddress()\n\n" },
-    {(char *) "SetState", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetState, METH_VARARGS|METH_KEYWORDS, "SetState(state)\n\ntype: state: uint8_t" },
+    {(char *) "SetState", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetState, METH_KEYWORDS|METH_VARARGS, "SetState(state)\n\ntype: state: uint8_t" },
     {(char *) "GetState", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetState, METH_NOARGS, "GetState()\n\n" },
     {(char *) "GetInitialRangingConnection", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetInitialRangingConnection, METH_NOARGS, "GetInitialRangingConnection()\n\n" },
     {(char *) "GetBroadcastConnection", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetBroadcastConnection, METH_NOARGS, "GetBroadcastConnection()\n\n" },
-    {(char *) "SetCurrentDcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetCurrentDcd, METH_VARARGS|METH_KEYWORDS, "SetCurrentDcd(dcd)\n\ntype: dcd: ns3::Dcd" },
+    {(char *) "SetCurrentDcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetCurrentDcd, METH_KEYWORDS|METH_VARARGS, "SetCurrentDcd(dcd)\n\ntype: dcd: ns3::Dcd" },
     {(char *) "GetCurrentDcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetCurrentDcd, METH_NOARGS, "GetCurrentDcd()\n\n" },
-    {(char *) "SetCurrentUcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetCurrentUcd, METH_VARARGS|METH_KEYWORDS, "SetCurrentUcd(ucd)\n\ntype: ucd: ns3::Ucd" },
+    {(char *) "SetCurrentUcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetCurrentUcd, METH_KEYWORDS|METH_VARARGS, "SetCurrentUcd(ucd)\n\ntype: ucd: ns3::Ucd" },
     {(char *) "GetCurrentUcd", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetCurrentUcd, METH_NOARGS, "GetCurrentUcd()\n\n" },
     {(char *) "GetConnectionManager", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetConnectionManager, METH_NOARGS, "GetConnectionManager()\n\n" },
-    {(char *) "SetConnectionManager", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetConnectionManager, METH_VARARGS|METH_KEYWORDS, "SetConnectionManager(connectionManager)\n\ntype: connectionManager: ns3::Ptr< ns3::ConnectionManager >" },
+    {(char *) "SetConnectionManager", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetConnectionManager, METH_KEYWORDS|METH_VARARGS, "SetConnectionManager(connectionManager)\n\ntype: connectionManager: ns3::Ptr< ns3::ConnectionManager >" },
     {(char *) "CreateDefaultConnections", (PyCFunction) _wrap_PyNs3WimaxNetDevice_CreateDefaultConnections, METH_NOARGS, "CreateDefaultConnections()\n\n" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "ForwardUp", (PyCFunction) _wrap_PyNs3WimaxNetDevice_ForwardUp, METH_VARARGS|METH_KEYWORDS, "ForwardUp(packet, source, dest)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Mac48Address const &\ntype: dest: ns3::Mac48Address const &" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
-    {(char *) "ForwardDown", (PyCFunction) _wrap_PyNs3WimaxNetDevice_ForwardDown, METH_VARARGS|METH_KEYWORDS, "ForwardDown(burst, modulationType)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
-    {(char *) "SetName", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetName, METH_VARARGS|METH_KEYWORDS, "SetName(name)\n\ntype: name: std::string const" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "ForwardUp", (PyCFunction) _wrap_PyNs3WimaxNetDevice_ForwardUp, METH_KEYWORDS|METH_VARARGS, "ForwardUp(packet, source, dest)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Mac48Address const &\ntype: dest: ns3::Mac48Address const &" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "ForwardDown", (PyCFunction) _wrap_PyNs3WimaxNetDevice_ForwardDown, METH_KEYWORDS|METH_VARARGS, "ForwardDown(burst, modulationType)\n\ntype: burst: ns3::Ptr< ns3::PacketBurst >\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "SetName", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetName, METH_KEYWORDS|METH_VARARGS, "SetName(name)\n\ntype: name: std::string const" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetName, METH_NOARGS, "GetName()\n\n" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetPhyChannel", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetPhyChannel, METH_NOARGS, "GetPhyChannel()\n\n" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
     {(char *) "IsLinkUp", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsLinkUp, METH_NOARGS, "IsLinkUp()\n\n" },
-    {(char *) "SetLinkChangeCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "SetLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetLinkChangeCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "IsBroadcast", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsBroadcast, METH_NOARGS, "IsBroadcast()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "MakeMulticastAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_MakeMulticastAddress, METH_VARARGS|METH_KEYWORDS, "MakeMulticastAddress(multicastGroup)\n\ntype: multicastGroup: ns3::Ipv4Address" },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "MakeMulticastAddress", (PyCFunction) _wrap_PyNs3WimaxNetDevice_MakeMulticastAddress, METH_KEYWORDS|METH_VARARGS, "MakeMulticastAddress(multicastGroup)\n\ntype: multicastGroup: ns3::Ipv4Address" },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3WimaxNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3WimaxNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3WimaxNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3WimaxNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3WimaxNetDevice_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
     {(char *) "IsPromisc", (PyCFunction) _wrap_PyNs3WimaxNetDevice_IsPromisc, METH_NOARGS, "IsPromisc()\n\n" },
-    {(char *) "NotifyPromiscTrace", (PyCFunction) _wrap_PyNs3WimaxNetDevice_NotifyPromiscTrace, METH_VARARGS|METH_KEYWORDS, "NotifyPromiscTrace(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyPromiscTrace", (PyCFunction) _wrap_PyNs3WimaxNetDevice_NotifyPromiscTrace, METH_KEYWORDS|METH_VARARGS, "NotifyPromiscTrace(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WimaxNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -38251,7 +38251,7 @@ PyTypeObject PyNs3WimaxNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WimaxNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3WimaxNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WimaxNetDevice__tp_clear,             /* tp_clear */
@@ -38284,16 +38284,16 @@ PyTypeObject PyNs3WimaxNetDevice_Type = {
 
 
 PyObject *
-PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BaseStationNetDevice *self)
+PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BaseStationNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3BaseStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3BaseStationNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -38316,16 +38316,16 @@ PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3BaseStationNetD
 }
 
 PyObject *
-PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3BaseStationNetDevice *self)
+PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3BaseStationNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3BaseStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3BaseStationNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -41409,26 +41409,26 @@ _wrap_PyNs3BaseStationNetDevice_SetServiceFlowManager(PyNs3BaseStationNetDevice 
 
 static PyMethodDef PyNs3BaseStationNetDevice_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetInitialRangingInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetInitialRangingInterval, METH_VARARGS|METH_KEYWORDS, "SetInitialRangingInterval(initialRangInterval)\n\ntype: initialRangInterval: ns3::Time" },
+    {(char *) "SetInitialRangingInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetInitialRangingInterval, METH_KEYWORDS|METH_VARARGS, "SetInitialRangingInterval(initialRangInterval)\n\ntype: initialRangInterval: ns3::Time" },
     {(char *) "InitBaseStationNetDevice", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_InitBaseStationNetDevice, METH_NOARGS, "InitBaseStationNetDevice()\n\n" },
     {(char *) "GetInitialRangingInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetInitialRangingInterval, METH_NOARGS, "GetInitialRangingInterval()\n\n" },
-    {(char *) "SetDcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetDcdInterval, METH_VARARGS|METH_KEYWORDS, "SetDcdInterval(dcdInterval)\n\ntype: dcdInterval: ns3::Time" },
+    {(char *) "SetDcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetDcdInterval, METH_KEYWORDS|METH_VARARGS, "SetDcdInterval(dcdInterval)\n\ntype: dcdInterval: ns3::Time" },
     {(char *) "GetDcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetDcdInterval, METH_NOARGS, "GetDcdInterval()\n\n" },
-    {(char *) "SetUcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetUcdInterval, METH_VARARGS|METH_KEYWORDS, "SetUcdInterval(ucdInterval)\n\ntype: ucdInterval: ns3::Time" },
+    {(char *) "SetUcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetUcdInterval, METH_KEYWORDS|METH_VARARGS, "SetUcdInterval(ucdInterval)\n\ntype: ucdInterval: ns3::Time" },
     {(char *) "GetUcdInterval", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetUcdInterval, METH_NOARGS, "GetUcdInterval()\n\n" },
-    {(char *) "SetIntervalT8", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetIntervalT8, METH_VARARGS|METH_KEYWORDS, "SetIntervalT8(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "SetIntervalT8", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetIntervalT8, METH_KEYWORDS|METH_VARARGS, "SetIntervalT8(interval)\n\ntype: interval: ns3::Time" },
     {(char *) "GetIntervalT8", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetIntervalT8, METH_NOARGS, "GetIntervalT8()\n\n" },
-    {(char *) "SetMaxRangingCorrectionRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetMaxRangingCorrectionRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxRangingCorrectionRetries(maxRangCorrectionRetries)\n\ntype: maxRangCorrectionRetries: uint8_t" },
+    {(char *) "SetMaxRangingCorrectionRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetMaxRangingCorrectionRetries, METH_KEYWORDS|METH_VARARGS, "SetMaxRangingCorrectionRetries(maxRangCorrectionRetries)\n\ntype: maxRangCorrectionRetries: uint8_t" },
     {(char *) "GetMaxRangingCorrectionRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetMaxRangingCorrectionRetries, METH_NOARGS, "GetMaxRangingCorrectionRetries()\n\n" },
-    {(char *) "SetMaxInvitedRangRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetMaxInvitedRangRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxInvitedRangRetries(maxInvitedRangRetries)\n\ntype: maxInvitedRangRetries: uint8_t" },
+    {(char *) "SetMaxInvitedRangRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetMaxInvitedRangRetries, METH_KEYWORDS|METH_VARARGS, "SetMaxInvitedRangRetries(maxInvitedRangRetries)\n\ntype: maxInvitedRangRetries: uint8_t" },
     {(char *) "GetMaxInvitedRangRetries", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetMaxInvitedRangRetries, METH_NOARGS, "GetMaxInvitedRangRetries()\n\n" },
-    {(char *) "SetRangReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetRangReqOppSize, METH_VARARGS|METH_KEYWORDS, "SetRangReqOppSize(rangReqOppSize)\n\ntype: rangReqOppSize: uint8_t" },
+    {(char *) "SetRangReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetRangReqOppSize, METH_KEYWORDS|METH_VARARGS, "SetRangReqOppSize(rangReqOppSize)\n\ntype: rangReqOppSize: uint8_t" },
     {(char *) "GetRangReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetRangReqOppSize, METH_NOARGS, "GetRangReqOppSize()\n\n" },
-    {(char *) "SetBwReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBwReqOppSize, METH_VARARGS|METH_KEYWORDS, "SetBwReqOppSize(bwReqOppSize)\n\ntype: bwReqOppSize: uint8_t" },
+    {(char *) "SetBwReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBwReqOppSize, METH_KEYWORDS|METH_VARARGS, "SetBwReqOppSize(bwReqOppSize)\n\ntype: bwReqOppSize: uint8_t" },
     {(char *) "GetBwReqOppSize", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetBwReqOppSize, METH_NOARGS, "GetBwReqOppSize()\n\n" },
-    {(char *) "SetNrDlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetNrDlSymbols, METH_VARARGS|METH_KEYWORDS, "SetNrDlSymbols(dlSymbols)\n\ntype: dlSymbols: uint32_t" },
+    {(char *) "SetNrDlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetNrDlSymbols, METH_KEYWORDS|METH_VARARGS, "SetNrDlSymbols(dlSymbols)\n\ntype: dlSymbols: uint32_t" },
     {(char *) "GetNrDlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetNrDlSymbols, METH_NOARGS, "GetNrDlSymbols()\n\n" },
-    {(char *) "SetNrUlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetNrUlSymbols, METH_VARARGS|METH_KEYWORDS, "SetNrUlSymbols(ulSymbols)\n\ntype: ulSymbols: uint32_t" },
+    {(char *) "SetNrUlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetNrUlSymbols, METH_KEYWORDS|METH_VARARGS, "SetNrUlSymbols(ulSymbols)\n\ntype: ulSymbols: uint32_t" },
     {(char *) "GetNrUlSymbols", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetNrUlSymbols, METH_NOARGS, "GetNrUlSymbols()\n\n" },
     {(char *) "GetNrDcdSent", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetNrDcdSent, METH_NOARGS, "GetNrDcdSent()\n\n" },
     {(char *) "GetNrUcdSent", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetNrUcdSent, METH_NOARGS, "GetNrUcdSent()\n\n" },
@@ -41436,26 +41436,26 @@ static PyMethodDef PyNs3BaseStationNetDevice_methods[] = {
     {(char *) "GetUlSubframeStartTime", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetUlSubframeStartTime, METH_NOARGS, "GetUlSubframeStartTime()\n\n" },
     {(char *) "GetRangingOppNumber", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetRangingOppNumber, METH_NOARGS, "GetRangingOppNumber()\n\n" },
     {(char *) "GetSSManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetSSManager, METH_NOARGS, "GetSSManager()\n\n" },
-    {(char *) "SetSSManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetSSManager, METH_VARARGS|METH_KEYWORDS, "SetSSManager(ssManager)\n\ntype: ssManager: ns3::Ptr< ns3::SSManager >" },
+    {(char *) "SetSSManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetSSManager, METH_KEYWORDS|METH_VARARGS, "SetSSManager(ssManager)\n\ntype: ssManager: ns3::Ptr< ns3::SSManager >" },
     {(char *) "GetUplinkScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetUplinkScheduler, METH_NOARGS, "GetUplinkScheduler()\n\n" },
-    {(char *) "SetUplinkScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetUplinkScheduler, METH_VARARGS|METH_KEYWORDS, "SetUplinkScheduler(ulScheduler)\n\ntype: ulScheduler: ns3::Ptr< ns3::UplinkScheduler >" },
-    {(char *) "SetBSScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBSScheduler, METH_VARARGS|METH_KEYWORDS, "SetBSScheduler(bsSchedule)\n\ntype: bsSchedule: ns3::Ptr< ns3::BSScheduler >" },
+    {(char *) "SetUplinkScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetUplinkScheduler, METH_KEYWORDS|METH_VARARGS, "SetUplinkScheduler(ulScheduler)\n\ntype: ulScheduler: ns3::Ptr< ns3::UplinkScheduler >" },
+    {(char *) "SetBSScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBSScheduler, METH_KEYWORDS|METH_VARARGS, "SetBSScheduler(bsSchedule)\n\ntype: bsSchedule: ns3::Ptr< ns3::BSScheduler >" },
     {(char *) "GetBSScheduler", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetBSScheduler, METH_NOARGS, "GetBSScheduler()\n\n" },
     {(char *) "GetBsClassifier", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetBsClassifier, METH_NOARGS, "GetBsClassifier()\n\n" },
-    {(char *) "SetBsClassifier", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBsClassifier, METH_VARARGS|METH_KEYWORDS, "SetBsClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::IpcsClassifier >" },
+    {(char *) "SetBsClassifier", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetBsClassifier, METH_KEYWORDS|METH_VARARGS, "SetBsClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::IpcsClassifier >" },
     {(char *) "GetPsDuration", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetPsDuration, METH_NOARGS, "GetPsDuration()\n\n" },
     {(char *) "GetSymbolDuration", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetSymbolDuration, METH_NOARGS, "GetSymbolDuration()\n\n" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
-    {(char *) "GetConnection", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetConnection, METH_VARARGS|METH_KEYWORDS, "GetConnection(cid)\n\ntype: cid: ns3::Cid" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "GetConnection", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetConnection, METH_KEYWORDS|METH_VARARGS, "GetConnection(cid)\n\ntype: cid: ns3::Cid" },
     {(char *) "MarkUplinkAllocations", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_MarkUplinkAllocations, METH_NOARGS, "MarkUplinkAllocations()\n\n" },
-    {(char *) "MarkRangingOppStart", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_MarkRangingOppStart, METH_VARARGS|METH_KEYWORDS, "MarkRangingOppStart(rangingOppStartTime)\n\ntype: rangingOppStartTime: ns3::Time" },
+    {(char *) "MarkRangingOppStart", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_MarkRangingOppStart, METH_KEYWORDS|METH_VARARGS, "MarkRangingOppStart(rangingOppStartTime)\n\ntype: rangingOppStartTime: ns3::Time" },
     {(char *) "GetServiceFlowManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_GetServiceFlowManager, METH_NOARGS, "GetServiceFlowManager()\n\n" },
-    {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetServiceFlowManager, METH_VARARGS|METH_KEYWORDS, "SetServiceFlowManager(arg0)\n\ntype: arg0: ns3::Ptr< ns3::BsServiceFlowManager >" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3BaseStationNetDevice_SetServiceFlowManager, METH_KEYWORDS|METH_VARARGS, "SetServiceFlowManager(arg0)\n\ntype: arg0: ns3::Ptr< ns3::BsServiceFlowManager >" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3BaseStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -41521,7 +41521,7 @@ PyTypeObject PyNs3BaseStationNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BaseStationNetDevice(node, phy, uplinkScheduler, bsScheduler)\nBaseStationNetDevice(node, phy)\nBaseStationNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3BaseStationNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BaseStationNetDevice__tp_clear,             /* tp_clear */
@@ -41686,32 +41686,16 @@ PyTypeObject PyNs3CallbackImpl__Void_Ns3Ptr__lt__const_ns3Packet__gt___Ns3Mac48A
 
 
 PyObject *
-PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3SimpleOfdmWimaxChannel *self)
+PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self)
 {
     PyObject *py_retval;
     PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SimpleOfdmWimaxChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -41734,16 +41718,32 @@ PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize(PyNs3SimpleOfdmWim
 }
 
 PyObject *
-PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleOfdmWimaxChannel *self)
+PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SimpleOfdmWimaxChannel *self)
 {
     PyObject *py_retval;
     PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose(PyNs3SimpleOfdmWimaxChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3SimpleOfdmWimaxChannel__PythonHelper *helper = dynamic_cast< PyNs3SimpleOfdmWimaxChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -42534,14 +42534,14 @@ _wrap_PyNs3SimpleOfdmWimaxChannel__copy__(PyNs3SimpleOfdmWimaxChannel *self)
 }
 
 static PyMethodDef PyNs3SimpleOfdmWimaxChannel_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_Send, METH_VARARGS|METH_KEYWORDS, "Send(BlockTime, burstSize, phy, isFirstBlock, isLastBlock, frequency, modulationType, direction, txPowerDbm, burst)\n\ntype: BlockTime: ns3::Time\ntype: burstSize: uint32_t\ntype: phy: ns3::Ptr< ns3::WimaxPhy >\ntype: isFirstBlock: bool\ntype: isLastBlock: bool\ntype: frequency: uint64_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t\ntype: txPowerDbm: double\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
-    {(char *) "SetPropagationModel", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_SetPropagationModel, METH_VARARGS|METH_KEYWORDS, "SetPropagationModel(propModel)\n\ntype: propModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_Send, METH_KEYWORDS|METH_VARARGS, "Send(BlockTime, burstSize, phy, isFirstBlock, isLastBlock, frequency, modulationType, direction, txPowerDbm, burst)\n\ntype: BlockTime: ns3::Time\ntype: burstSize: uint32_t\ntype: phy: ns3::Ptr< ns3::WimaxPhy >\ntype: isFirstBlock: bool\ntype: isLastBlock: bool\ntype: frequency: uint64_t\ntype: modulationType: ns3::WimaxPhy::ModulationType\ntype: direction: uint8_t\ntype: txPowerDbm: double\ntype: burst: ns3::Ptr< ns3::PacketBurst >" },
+    {(char *) "SetPropagationModel", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel_SetPropagationModel, METH_KEYWORDS|METH_VARARGS, "SetPropagationModel(propModel)\n\ntype: propModel: ns3::SimpleOfdmWimaxChannel::PropModel" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SimpleOfdmWimaxChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SimpleOfdmWimaxChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -42608,7 +42608,7 @@ PyTypeObject PyNs3SimpleOfdmWimaxChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SimpleOfdmWimaxChannel(propModel)\nSimpleOfdmWimaxChannel(arg0)\nSimpleOfdmWimaxChannel()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleOfdmWimaxChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleOfdmWimaxChannel__tp_clear,             /* tp_clear */
@@ -42641,16 +42641,16 @@ PyTypeObject PyNs3SimpleOfdmWimaxChannel_Type = {
 
 
 PyObject *
-PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SubscriberStationNetDevice *self)
+PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SubscriberStationNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3SubscriberStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3SubscriberStationNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -42673,16 +42673,16 @@ PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3Subscribe
 }
 
 PyObject *
-PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SubscriberStationNetDevice *self)
+PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SubscriberStationNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3SubscriberStationNetDevice__PythonHelper *helper = dynamic_cast< PyNs3SubscriberStationNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -45801,58 +45801,58 @@ _wrap_PyNs3SubscriberStationNetDevice_SetServiceFlowManager(PyNs3SubscriberStati
 static PyMethodDef PyNs3SubscriberStationNetDevice_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "InitSubscriberStationNetDevice", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_InitSubscriberStationNetDevice, METH_NOARGS, "InitSubscriberStationNetDevice()\n\n" },
-    {(char *) "SetLostDlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetLostDlMapInterval, METH_VARARGS|METH_KEYWORDS, "SetLostDlMapInterval(lostDlMapInterval)\n\ntype: lostDlMapInterval: ns3::Time" },
+    {(char *) "SetLostDlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetLostDlMapInterval, METH_KEYWORDS|METH_VARARGS, "SetLostDlMapInterval(lostDlMapInterval)\n\ntype: lostDlMapInterval: ns3::Time" },
     {(char *) "GetLostDlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetLostDlMapInterval, METH_NOARGS, "GetLostDlMapInterval()\n\n" },
-    {(char *) "SetLostUlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetLostUlMapInterval, METH_VARARGS|METH_KEYWORDS, "SetLostUlMapInterval(lostUlMapInterval)\n\ntype: lostUlMapInterval: ns3::Time" },
+    {(char *) "SetLostUlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetLostUlMapInterval, METH_KEYWORDS|METH_VARARGS, "SetLostUlMapInterval(lostUlMapInterval)\n\ntype: lostUlMapInterval: ns3::Time" },
     {(char *) "GetLostUlMapInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetLostUlMapInterval, METH_NOARGS, "GetLostUlMapInterval()\n\n" },
-    {(char *) "SetMaxDcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxDcdInterval, METH_VARARGS|METH_KEYWORDS, "SetMaxDcdInterval(maxDcdInterval)\n\ntype: maxDcdInterval: ns3::Time" },
+    {(char *) "SetMaxDcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxDcdInterval, METH_KEYWORDS|METH_VARARGS, "SetMaxDcdInterval(maxDcdInterval)\n\ntype: maxDcdInterval: ns3::Time" },
     {(char *) "GetMaxDcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetMaxDcdInterval, METH_NOARGS, "GetMaxDcdInterval()\n\n" },
-    {(char *) "SetMaxUcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxUcdInterval, METH_VARARGS|METH_KEYWORDS, "SetMaxUcdInterval(maxUcdInterval)\n\ntype: maxUcdInterval: ns3::Time" },
+    {(char *) "SetMaxUcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxUcdInterval, METH_KEYWORDS|METH_VARARGS, "SetMaxUcdInterval(maxUcdInterval)\n\ntype: maxUcdInterval: ns3::Time" },
     {(char *) "GetMaxUcdInterval", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetMaxUcdInterval, METH_NOARGS, "GetMaxUcdInterval()\n\n" },
-    {(char *) "SetIntervalT1", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT1, METH_VARARGS|METH_KEYWORDS, "SetIntervalT1(interval1)\n\ntype: interval1: ns3::Time" },
+    {(char *) "SetIntervalT1", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT1, METH_KEYWORDS|METH_VARARGS, "SetIntervalT1(interval1)\n\ntype: interval1: ns3::Time" },
     {(char *) "GetIntervalT1", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT1, METH_NOARGS, "GetIntervalT1()\n\n" },
-    {(char *) "SetIntervalT2", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT2, METH_VARARGS|METH_KEYWORDS, "SetIntervalT2(interval2)\n\ntype: interval2: ns3::Time" },
+    {(char *) "SetIntervalT2", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT2, METH_KEYWORDS|METH_VARARGS, "SetIntervalT2(interval2)\n\ntype: interval2: ns3::Time" },
     {(char *) "GetIntervalT2", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT2, METH_NOARGS, "GetIntervalT2()\n\n" },
-    {(char *) "SetIntervalT3", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT3, METH_VARARGS|METH_KEYWORDS, "SetIntervalT3(interval3)\n\ntype: interval3: ns3::Time" },
+    {(char *) "SetIntervalT3", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT3, METH_KEYWORDS|METH_VARARGS, "SetIntervalT3(interval3)\n\ntype: interval3: ns3::Time" },
     {(char *) "GetIntervalT3", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT3, METH_NOARGS, "GetIntervalT3()\n\n" },
-    {(char *) "SetIntervalT7", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT7, METH_VARARGS|METH_KEYWORDS, "SetIntervalT7(interval7)\n\ntype: interval7: ns3::Time" },
+    {(char *) "SetIntervalT7", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT7, METH_KEYWORDS|METH_VARARGS, "SetIntervalT7(interval7)\n\ntype: interval7: ns3::Time" },
     {(char *) "GetIntervalT7", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT7, METH_NOARGS, "GetIntervalT7()\n\n" },
-    {(char *) "SetIntervalT12", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT12, METH_VARARGS|METH_KEYWORDS, "SetIntervalT12(interval12)\n\ntype: interval12: ns3::Time" },
+    {(char *) "SetIntervalT12", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT12, METH_KEYWORDS|METH_VARARGS, "SetIntervalT12(interval12)\n\ntype: interval12: ns3::Time" },
     {(char *) "GetIntervalT12", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT12, METH_NOARGS, "GetIntervalT12()\n\n" },
-    {(char *) "SetIntervalT20", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT20, METH_VARARGS|METH_KEYWORDS, "SetIntervalT20(interval20)\n\ntype: interval20: ns3::Time" },
+    {(char *) "SetIntervalT20", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT20, METH_KEYWORDS|METH_VARARGS, "SetIntervalT20(interval20)\n\ntype: interval20: ns3::Time" },
     {(char *) "GetIntervalT20", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT20, METH_NOARGS, "GetIntervalT20()\n\n" },
-    {(char *) "SetIntervalT21", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT21, METH_VARARGS|METH_KEYWORDS, "SetIntervalT21(interval21)\n\ntype: interval21: ns3::Time" },
+    {(char *) "SetIntervalT21", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIntervalT21, METH_KEYWORDS|METH_VARARGS, "SetIntervalT21(interval21)\n\ntype: interval21: ns3::Time" },
     {(char *) "GetIntervalT21", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIntervalT21, METH_NOARGS, "GetIntervalT21()\n\n" },
-    {(char *) "SetMaxContentionRangingRetries", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxContentionRangingRetries, METH_VARARGS|METH_KEYWORDS, "SetMaxContentionRangingRetries(maxContentionRangingRetries)\n\ntype: maxContentionRangingRetries: uint8_t" },
+    {(char *) "SetMaxContentionRangingRetries", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetMaxContentionRangingRetries, METH_KEYWORDS|METH_VARARGS, "SetMaxContentionRangingRetries(maxContentionRangingRetries)\n\ntype: maxContentionRangingRetries: uint8_t" },
     {(char *) "GetMaxContentionRangingRetries", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetMaxContentionRangingRetries, METH_NOARGS, "GetMaxContentionRangingRetries()\n\n" },
-    {(char *) "SetBasicConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetBasicConnection, METH_VARARGS|METH_KEYWORDS, "SetBasicConnection(basicConnection)\n\ntype: basicConnection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "SetBasicConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetBasicConnection, METH_KEYWORDS|METH_VARARGS, "SetBasicConnection(basicConnection)\n\ntype: basicConnection: ns3::Ptr< ns3::WimaxConnection >" },
     {(char *) "GetBasicConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetBasicConnection, METH_NOARGS, "GetBasicConnection()\n\n" },
-    {(char *) "SetPrimaryConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetPrimaryConnection, METH_VARARGS|METH_KEYWORDS, "SetPrimaryConnection(primaryConnection)\n\ntype: primaryConnection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "SetPrimaryConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetPrimaryConnection, METH_KEYWORDS|METH_VARARGS, "SetPrimaryConnection(primaryConnection)\n\ntype: primaryConnection: ns3::Ptr< ns3::WimaxConnection >" },
     {(char *) "GetPrimaryConnection", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetPrimaryConnection, METH_NOARGS, "GetPrimaryConnection()\n\n" },
     {(char *) "GetBasicCid", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetBasicCid, METH_NOARGS, "GetBasicCid()\n\n" },
     {(char *) "GetPrimaryCid", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetPrimaryCid, METH_NOARGS, "GetPrimaryCid()\n\n" },
-    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetModulationType, METH_VARARGS|METH_KEYWORDS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
+    {(char *) "SetModulationType", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetModulationType, METH_KEYWORDS|METH_VARARGS, "SetModulationType(modulationType)\n\ntype: modulationType: ns3::WimaxPhy::ModulationType" },
     {(char *) "GetModulationType", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetModulationType, METH_NOARGS, "GetModulationType()\n\n" },
-    {(char *) "SetAreManagementConnectionsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetAreManagementConnectionsAllocated, METH_VARARGS|METH_KEYWORDS, "SetAreManagementConnectionsAllocated(areManagementConnectionsAllocated)\n\ntype: areManagementConnectionsAllocated: bool" },
+    {(char *) "SetAreManagementConnectionsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetAreManagementConnectionsAllocated, METH_KEYWORDS|METH_VARARGS, "SetAreManagementConnectionsAllocated(areManagementConnectionsAllocated)\n\ntype: areManagementConnectionsAllocated: bool" },
     {(char *) "GetAreManagementConnectionsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetAreManagementConnectionsAllocated, METH_NOARGS, "GetAreManagementConnectionsAllocated()\n\n" },
-    {(char *) "SetAreServiceFlowsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetAreServiceFlowsAllocated, METH_VARARGS|METH_KEYWORDS, "SetAreServiceFlowsAllocated(areServiceFlowsAllocated)\n\ntype: areServiceFlowsAllocated: bool" },
+    {(char *) "SetAreServiceFlowsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetAreServiceFlowsAllocated, METH_KEYWORDS|METH_VARARGS, "SetAreServiceFlowsAllocated(areServiceFlowsAllocated)\n\ntype: areServiceFlowsAllocated: bool" },
     {(char *) "GetAreServiceFlowsAllocated", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetAreServiceFlowsAllocated, METH_NOARGS, "GetAreServiceFlowsAllocated()\n\n" },
     {(char *) "HasServiceFlows", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_HasServiceFlows, METH_NOARGS, "HasServiceFlows()\n\n" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
-    {(char *) "SendBurst", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SendBurst, METH_VARARGS|METH_KEYWORDS, "SendBurst(uiuc, nrSymbols, connection, packetType)\n\ntype: uiuc: uint8_t\ntype: nrSymbols: uint16_t\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: packetType: ns3::MacHeaderType::HeaderType" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, hdrType, connection)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: hdrType: ns3::MacHeaderType const &\ntype: connection: ns3::Ptr< ns3::WimaxConnection >" },
+    {(char *) "SendBurst", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SendBurst, METH_KEYWORDS|METH_VARARGS, "SendBurst(uiuc, nrSymbols, connection, packetType)\n\ntype: uiuc: uint8_t\ntype: nrSymbols: uint16_t\ntype: connection: ns3::Ptr< ns3::WimaxConnection >\ntype: packetType: ns3::MacHeaderType::HeaderType" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_Start, METH_NOARGS, "Start()\n\n" },
     {(char *) "Stop", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_Stop, METH_NOARGS, "Stop()\n\n" },
-    {(char *) "AddServiceFlow", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_AddServiceFlow, METH_VARARGS|METH_KEYWORDS, "AddServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
-    {(char *) "SetTimer", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetTimer, METH_VARARGS|METH_KEYWORDS, "SetTimer(eventId, event)\n\ntype: eventId: ns3::EventId\ntype: event: ns3::EventId &" },
+    {(char *) "AddServiceFlow", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_AddServiceFlow, METH_KEYWORDS|METH_VARARGS, "AddServiceFlow(sf)\n\ntype: sf: ns3::ServiceFlow" },
+    {(char *) "SetTimer", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetTimer, METH_KEYWORDS|METH_VARARGS, "SetTimer(eventId, event)\n\ntype: eventId: ns3::EventId\ntype: event: ns3::EventId &" },
     {(char *) "IsRegistered", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_IsRegistered, METH_NOARGS, "IsRegistered()\n\n" },
-    {(char *) "GetTimeToAllocation", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetTimeToAllocation, METH_VARARGS|METH_KEYWORDS, "GetTimeToAllocation(deferTime)\n\ntype: deferTime: ns3::Time" },
+    {(char *) "GetTimeToAllocation", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetTimeToAllocation, METH_KEYWORDS|METH_VARARGS, "GetTimeToAllocation(deferTime)\n\ntype: deferTime: ns3::Time" },
     {(char *) "GetIpcsClassifier", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetIpcsClassifier, METH_NOARGS, "GetIpcsClassifier()\n\n" },
-    {(char *) "SetIpcsPacketClassifier", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIpcsPacketClassifier, METH_VARARGS|METH_KEYWORDS, "SetIpcsPacketClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::IpcsClassifier >" },
+    {(char *) "SetIpcsPacketClassifier", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetIpcsPacketClassifier, METH_KEYWORDS|METH_VARARGS, "SetIpcsPacketClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::IpcsClassifier >" },
     {(char *) "GetServiceFlowManager", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_GetServiceFlowManager, METH_NOARGS, "GetServiceFlowManager()\n\n" },
-    {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetServiceFlowManager, METH_VARARGS|METH_KEYWORDS, "SetServiceFlowManager(sfm)\n\ntype: sfm: ns3::Ptr< ns3::SsServiceFlowManager >" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "SetServiceFlowManager", (PyCFunction) _wrap_PyNs3SubscriberStationNetDevice_SetServiceFlowManager, METH_KEYWORDS|METH_VARARGS, "SetServiceFlowManager(sfm)\n\ntype: sfm: ns3::Ptr< ns3::SsServiceFlowManager >" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SubscriberStationNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -45918,7 +45918,7 @@ PyTypeObject PyNs3SubscriberStationNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SubscriberStationNetDevice(node, phy)\nSubscriberStationNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3SubscriberStationNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SubscriberStationNetDevice__tp_clear,             /* tp_clear */

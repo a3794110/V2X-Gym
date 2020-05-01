@@ -1107,17 +1107,17 @@ _wrap_PyNs3CsmaStarHelper__copy__(PyNs3CsmaStarHelper *self)
 }
 
 static PyMethodDef PyNs3CsmaStarHelper_methods[] = {
-    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3CsmaStarHelper_AssignIpv4Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv4Addresses(address)\n\ntype: address: ns3::Ipv4AddressHelper" },
-    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3CsmaStarHelper_AssignIpv6Addresses, METH_KEYWORDS|METH_VARARGS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
+    {(char *) "AssignIpv4Addresses", (PyCFunction) _wrap_PyNs3CsmaStarHelper_AssignIpv4Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv4Addresses(address)\n\ntype: address: ns3::Ipv4AddressHelper" },
+    {(char *) "AssignIpv6Addresses", (PyCFunction) _wrap_PyNs3CsmaStarHelper_AssignIpv6Addresses, METH_VARARGS|METH_KEYWORDS, "AssignIpv6Addresses(network, prefix)\n\ntype: network: ns3::Ipv6Address\ntype: prefix: ns3::Ipv6Prefix" },
     {(char *) "GetHub", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHub, METH_NOARGS, "GetHub()\n\n" },
     {(char *) "GetHubDevices", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHubDevices, METH_NOARGS, "GetHubDevices()\n\n" },
-    {(char *) "GetHubIpv4Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHubIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetHubIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetHubIpv6Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHubIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetHubIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetHubIpv4Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHubIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetHubIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetHubIpv6Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetHubIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetHubIpv6Address(i)\n\ntype: i: uint32_t" },
     {(char *) "GetSpokeDevices", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeDevices, METH_NOARGS, "GetSpokeDevices()\n\n" },
-    {(char *) "GetSpokeIpv4Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeIpv4Address, METH_KEYWORDS|METH_VARARGS, "GetSpokeIpv4Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetSpokeIpv6Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeIpv6Address, METH_KEYWORDS|METH_VARARGS, "GetSpokeIpv6Address(i)\n\ntype: i: uint32_t" },
-    {(char *) "GetSpokeNode", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeNode, METH_KEYWORDS|METH_VARARGS, "GetSpokeNode(i)\n\ntype: i: uint32_t" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3CsmaStarHelper_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
+    {(char *) "GetSpokeIpv4Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeIpv4Address, METH_VARARGS|METH_KEYWORDS, "GetSpokeIpv4Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetSpokeIpv6Address", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeIpv6Address, METH_VARARGS|METH_KEYWORDS, "GetSpokeIpv6Address(i)\n\ntype: i: uint32_t" },
+    {(char *) "GetSpokeNode", (PyCFunction) _wrap_PyNs3CsmaStarHelper_GetSpokeNode, METH_VARARGS|METH_KEYWORDS, "GetSpokeNode(i)\n\ntype: i: uint32_t" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3CsmaStarHelper_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(stack)\n\ntype: stack: ns3::InternetStackHelper" },
     {(char *) "SpokeCount", (PyCFunction) _wrap_PyNs3CsmaStarHelper_SpokeCount, METH_NOARGS, "SpokeCount()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CsmaStarHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}

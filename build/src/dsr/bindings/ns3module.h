@@ -3329,6 +3329,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptions *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptions *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3336,10 +3340,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptions *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptions *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptions *self);
     inline void DoInitialize__parent_caller()
@@ -3598,6 +3598,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionAck *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionAck *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3605,10 +3609,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionAck *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionAck *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionAck *self);
     inline void DoInitialize__parent_caller()
@@ -3690,6 +3690,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionAckReq *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionAckReq *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3697,10 +3701,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionAckReq *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionAckReq *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionAckReq *self);
     inline void DoInitialize__parent_caller()
@@ -3782,6 +3782,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionPad1 *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionPad1 *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3789,10 +3793,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionPad1 *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionPad1 *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionPad1 *self);
     inline void DoInitialize__parent_caller()
@@ -3863,6 +3863,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionPadn *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionPadn *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3870,10 +3874,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionPadn *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionPadn *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionPadn *self);
     inline void DoInitialize__parent_caller()
@@ -3944,6 +3944,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRerr *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRerr *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -3951,10 +3955,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionRerr *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRerr *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionRerr *self);
     inline void DoInitialize__parent_caller()
@@ -4025,6 +4025,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRrep *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRrep *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4032,10 +4036,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionRrep *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRrep *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionRrep *self);
     inline void DoInitialize__parent_caller()
@@ -4106,6 +4106,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRreq *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionRreq *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4113,10 +4117,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionRreq *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionRreq *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionRreq *self);
     inline void DoInitialize__parent_caller()
@@ -4187,6 +4187,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionSR *self);
+    inline void DoDispose__parent_caller()
+    { ns3::Object::DoDispose(); }
+
     static PyObject * _wrap_NotifyNewAggregate(PyNs3DsrDsrOptionSR *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
@@ -4194,10 +4198,6 @@ public:
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3DsrDsrOptionSR *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
-
-    static PyObject * _wrap_DoDispose(PyNs3DsrDsrOptionSR *self);
-    inline void DoDispose__parent_caller()
-    { ns3::Object::DoDispose(); }
 
     static PyObject * _wrap_DoInitialize(PyNs3DsrDsrOptionSR *self);
     inline void DoInitialize__parent_caller()

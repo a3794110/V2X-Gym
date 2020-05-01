@@ -2592,22 +2592,6 @@ PyTypeObject PyNs3SimpleRefCount__Ns3RadvdPrefix_Ns3Empty_Ns3DefaultDeleter__lt_
 
 
 PyObject *
-PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpClient *self)
-{
-    PyObject *py_retval;
-    PyNs3DhcpClient__PythonHelper *helper = dynamic_cast< PyNs3DhcpClient__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3DhcpClient__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpClient *self)
 {
     PyObject *py_retval;
@@ -2650,6 +2634,22 @@ PyNs3DhcpClient__PythonHelper::_wrap_DoDispose(PyNs3DhcpClient *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpClient *self)
+{
+    PyObject *py_retval;
+    PyNs3DhcpClient__PythonHelper *helper = dynamic_cast< PyNs3DhcpClient__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3228,10 +3228,10 @@ static PyMethodDef PyNs3DhcpClient_methods[] = {
     {(char *) "GetDhcpServer", (PyCFunction) _wrap_PyNs3DhcpClient_GetDhcpServer, METH_NOARGS, "GetDhcpServer()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DhcpClient_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetDhcpClientNetDevice", (PyCFunction) _wrap_PyNs3DhcpClient_SetDhcpClientNetDevice, METH_VARARGS|METH_KEYWORDS, "SetDhcpClientNetDevice(netDevice)\n\ntype: netDevice: ns3::Ptr< ns3::NetDevice >" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpClient__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpClient__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3961,22 +3961,6 @@ PyTypeObject PyNs3DhcpHeader_Type = {
 
 
 PyObject *
-PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpServer *self)
-{
-    PyObject *py_retval;
-    PyNs3DhcpServer__PythonHelper *helper = dynamic_cast< PyNs3DhcpServer__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3DhcpServer__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3DhcpServer *self)
 {
     PyObject *py_retval;
@@ -4019,6 +4003,22 @@ PyNs3DhcpServer__PythonHelper::_wrap_DoDispose(PyNs3DhcpServer *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate(PyNs3DhcpServer *self)
+{
+    PyObject *py_retval;
+    PyNs3DhcpServer__PythonHelper *helper = dynamic_cast< PyNs3DhcpServer__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4500,10 +4500,10 @@ _wrap_PyNs3DhcpServer__copy__(PyNs3DhcpServer *self)
 static PyMethodDef PyNs3DhcpServer_methods[] = {
     {(char *) "AddStaticDhcpEntry", (PyCFunction) _wrap_PyNs3DhcpServer_AddStaticDhcpEntry, METH_VARARGS|METH_KEYWORDS, "AddStaticDhcpEntry(chaddr, addr)\n\ntype: chaddr: ns3::Address\ntype: addr: ns3::Ipv4Address" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DhcpServer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3DhcpServer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DhcpServer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4603,22 +4603,6 @@ PyTypeObject PyNs3DhcpServer_Type = {
 
 
 PyObject *
-PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ping6 *self)
-{
-    PyObject *py_retval;
-    PyNs3Ping6__PythonHelper *helper = dynamic_cast< PyNs3Ping6__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Ping6__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Ping6 *self)
 {
     PyObject *py_retval;
@@ -4661,6 +4645,22 @@ PyNs3Ping6__PythonHelper::_wrap_DoDispose(PyNs3Ping6 *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ping6 *self)
+{
+    PyObject *py_retval;
+    PyNs3Ping6__PythonHelper *helper = dynamic_cast< PyNs3Ping6__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5175,10 +5175,10 @@ static PyMethodDef PyNs3Ping6_methods[] = {
     {(char *) "SetLocal", (PyCFunction) _wrap_PyNs3Ping6_SetLocal, METH_VARARGS|METH_KEYWORDS, "SetLocal(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
     {(char *) "SetRemote", (PyCFunction) _wrap_PyNs3Ping6_SetRemote, METH_VARARGS|METH_KEYWORDS, "SetRemote(ipv6)\n\ntype: ipv6: ns3::Ipv6Address" },
     {(char *) "SetRouters", (PyCFunction) _wrap_PyNs3Ping6_SetRouters, METH_VARARGS|METH_KEYWORDS, "SetRouters(routers)\n\ntype: routers: std::vector< ns3::Ipv6Address >" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ping6__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ping6__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5278,22 +5278,6 @@ PyTypeObject PyNs3Ping6_Type = {
 
 
 PyObject *
-PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Radvd *self)
-{
-    PyObject *py_retval;
-    PyNs3Radvd__PythonHelper *helper = dynamic_cast< PyNs3Radvd__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Radvd__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Radvd *self)
 {
     PyObject *py_retval;
@@ -5336,6 +5320,22 @@ PyNs3Radvd__PythonHelper::_wrap_DoDispose(PyNs3Radvd *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Radvd *self)
+{
+    PyObject *py_retval;
+    PyNs3Radvd__PythonHelper *helper = dynamic_cast< PyNs3Radvd__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5925,10 +5925,10 @@ static PyMethodDef PyNs3Radvd_methods[] = {
     {(char *) "AddConfiguration", (PyCFunction) _wrap_PyNs3Radvd_AddConfiguration, METH_VARARGS|METH_KEYWORDS, "AddConfiguration(routerInterface)\n\ntype: routerInterface: ns3::Ptr< ns3::RadvdInterface >" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Radvd_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Radvd_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Radvd__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Radvd__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7337,22 +7337,6 @@ PyTypeObject PyNs3RadvdPrefix_Type = {
 
 
 PyObject *
-PyNs3V4Ping__PythonHelper::_wrap_NotifyNewAggregate(PyNs3V4Ping *self)
-{
-    PyObject *py_retval;
-    PyNs3V4Ping__PythonHelper *helper = dynamic_cast< PyNs3V4Ping__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3V4Ping__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3V4Ping *self)
 {
     PyObject *py_retval;
@@ -7379,6 +7363,22 @@ PyNs3V4Ping__PythonHelper::_wrap_DoInitialize(PyNs3V4Ping *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3V4Ping__PythonHelper::_wrap_NotifyNewAggregate(PyNs3V4Ping *self)
+{
+    PyObject *py_retval;
+    PyNs3V4Ping__PythonHelper *helper = dynamic_cast< PyNs3V4Ping__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7820,9 +7820,9 @@ _wrap_PyNs3V4Ping__copy__(PyNs3V4Ping *self)
 
 static PyMethodDef PyNs3V4Ping_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3V4Ping_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3V4Ping__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3V4Ping__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3V4Ping__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3V4Ping__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3V4Ping__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };

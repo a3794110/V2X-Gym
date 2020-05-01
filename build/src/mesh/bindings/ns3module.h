@@ -2567,6 +2567,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoInitialize(PyNs3MeshPointDevice *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3MeshPointDevice *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
@@ -2574,10 +2578,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3MeshPointDevice *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3MeshPointDevice *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -2902,6 +2902,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoInitialize(PyNs3Dot11sHwmpRtable *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Dot11sHwmpRtable *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
@@ -2909,10 +2913,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3Dot11sHwmpRtable *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3Dot11sHwmpRtable *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -3120,6 +3120,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoInitialize(PyNs3Dot11sPeerLink *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3Dot11sPeerLink *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
@@ -3127,10 +3131,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3Dot11sPeerLink *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3Dot11sPeerLink *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -3446,6 +3446,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoInitialize(PyNs3FlameFlameProtocol *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3FlameFlameProtocol *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
@@ -3453,10 +3457,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3FlameFlameProtocol *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3FlameFlameProtocol *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 
@@ -3525,6 +3525,10 @@ public:
     }
 
 
+    static PyObject * _wrap_DoInitialize(PyNs3FlameFlameRtable *self);
+    inline void DoInitialize__parent_caller()
+    { ns3::Object::DoInitialize(); }
+
     static PyObject * _wrap_NotifyConstructionCompleted(PyNs3FlameFlameRtable *self);
     inline void NotifyConstructionCompleted__parent_caller()
     { ns3::ObjectBase::NotifyConstructionCompleted(); }
@@ -3532,10 +3536,6 @@ public:
     static PyObject * _wrap_NotifyNewAggregate(PyNs3FlameFlameRtable *self);
     inline void NotifyNewAggregate__parent_caller()
     { ns3::Object::NotifyNewAggregate(); }
-
-    static PyObject * _wrap_DoInitialize(PyNs3FlameFlameRtable *self);
-    inline void DoInitialize__parent_caller()
-    { ns3::Object::DoInitialize(); }
 
     virtual void DoDispose();
 

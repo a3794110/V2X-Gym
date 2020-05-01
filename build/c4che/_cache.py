@@ -8,7 +8,7 @@ BUILD_SUFFIX = '-debug'
 CASTXML = ['/usr/bin/castxml']
 CC = ['/usr/bin/gcc']
 CCDEFINES = ['_DEBUG']
-CCFLAGS = ['-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing']
+CCFLAGS = ['-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wall', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing']
 CCFLAGS_PTHREAD = '-pthread'
 CCFLAGS_PYEXT = ['-fvisibility=hidden']
 CCLNK_SRC_F = []
@@ -25,8 +25,7 @@ COMPILER_CC = 'gcc'
 COMPILER_CXX = 'g++'
 CPPPATH_ST = '-I%s'
 CXX = ['/usr/bin/g++']
-CXXDEFINES = ['_DEBUG']
-CXXFLAGS = ['-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing']
+CXXFLAGS = ['-Wall', '-std=c++11']
 CXXFLAGS_MACBUNDLE = ['-fPIC']
 CXXFLAGS_PTHREAD = '-pthread'
 CXXFLAGS_PYEMBED = ['-g', '-fwrapv', '-O2', '-g', '-fstack-protector-strong', '-g', '-flto', '-fuse-linker-plugin', '-ffat-lto-objects']
@@ -43,7 +42,7 @@ DEFINES = ['NS3_BUILD_PROFILE_DEBUG', 'NS3_ASSERT_ENABLE', 'NS3_LOG_ENABLE', 'HA
 DEFINES_PYEMBED = ['NDEBUG']
 DEFINES_PYEXT = ['NDEBUG']
 DEFINES_ST = '-D%s'
-DEFINE_COMMENTS = {'HAVE_PROTOBUF': '', 'HAVE_NET_ETHERNET_H': '', 'HAVE_SYS_INT_TYPES_H': '', 'HAVE_SYS_IOCTL_H': '', 'HAVE_IF_NETS_H': '', 'HAVE_SYS_TYPES_H': '', 'HAVE_SYS_STAT_H': '', 'HAVE_GETENV': '', 'HAVE_LIBXML2': '', 'HAVE_UINT128_T': '', 'HAVE_PYEMBED': '', 'HAVE_INTTYPES_H': '', 'PYTHONARCHDIR': '', 'HAVE_PACKET_H': '', 'HAVE_DIRENT_H': '', 'HAVE_SIGNAL_H': '', 'HAVE_PTHREAD_H': '', 'HAVE_PYTHON_H': '', 'HAVE_ZMQ': '', 'HAVE_PYEXT': '', 'HAVE_RT': '', 'HAVE_STDLIB_H': '', 'INT64X64_USE_128': '', 'HAVE_SQLITE3': '', 'HAVE_STDINT_H': '', 'HAVE___UINT128_T': '', 'PYTHONDIR': '', 'HAVE_IF_TUN_H': ''}
+DEFINE_COMMENTS = {'HAVE_PYTHON_H': '', 'HAVE___UINT128_T': '', 'HAVE_PACKET_H': '', 'HAVE_DIRENT_H': '', 'HAVE_STDLIB_H': '', 'HAVE_LIBXML2': '', 'INT64X64_USE_128': '', 'HAVE_SIGNAL_H': '', 'HAVE_PYEXT': '', 'HAVE_PTHREAD_H': '', 'HAVE_NET_ETHERNET_H': '', 'HAVE_IF_TUN_H': '', 'HAVE_RT': '', 'HAVE_STDINT_H': '', 'HAVE_INTTYPES_H': '', 'HAVE_SYS_STAT_H': '', 'HAVE_UINT128_T': '', 'HAVE_IF_NETS_H': '', 'HAVE_PYEMBED': '', 'HAVE_GETENV': '', 'HAVE_SYS_TYPES_H': '', 'HAVE_SQLITE3': '', 'HAVE_SYS_IOCTL_H': '', 'PYTHONDIR': '', 'HAVE_PROTOBUF': '', 'HAVE_SYS_INT_TYPES_H': '', 'PYTHONARCHDIR': '', 'HAVE_ZMQ': ''}
 DEST_BINFMT = 'elf'
 DEST_CPU = 'x86_64'
 DEST_OS = 'linux'
@@ -135,9 +134,9 @@ MODULES_NOT_BUILT = ['brite', 'click', 'openflow', 'visualizer']
 NS3_CONTRIBUTED_MODULES = []
 NS3_ENABLED_CONTRIBUTED_MODULES = []
 NS3_ENABLED_MODULES = ['ns3-TinyXML', 'ns3-antenna', 'ns3-aodv', 'ns3-applications', 'ns3-bridge', 'ns3-buildings', 'ns3-config-store', 'ns3-core', 'ns3-csma', 'ns3-csma-layout', 'ns3-dsdv', 'ns3-dsr', 'ns3-energy', 'ns3-fd-net-device', 'ns3-flow-monitor', 'ns3-internet', 'ns3-internet-apps', 'ns3-lr-wpan', 'ns3-lte', 'ns3-mesh', 'ns3-mobility', 'ns3-mpi', 'ns3-netanim', 'ns3-network', 'ns3-nix-vector-routing', 'ns3-olsr', 'ns3-opengym', 'ns3-point-to-point', 'ns3-point-to-point-layout', 'ns3-propagation', 'ns3-sixlowpan', 'ns3-spectrum', 'ns3-stats', 'ns3-tap-bridge', 'ns3-test', 'ns3-topology-read', 'ns3-traffic-control', 'ns3-uan', 'ns3-virtual-net-device', 'ns3-wave', 'ns3-wifi', 'ns3-wimax']
-NS3_EXECUTABLE_PATH = ['/home/hank/ns3gym-extention/build/src/fd-net-device', '/home/hank/ns3gym-extention/build/src/tap-bridge']
+NS3_EXECUTABLE_PATH = ['/home/hank/ns3gym-v2x/build/src/fd-net-device', '/home/hank/ns3gym-v2x/build/src/tap-bridge']
 NS3_MODULES = ['ns3-TinyXML', 'ns3-antenna', 'ns3-aodv', 'ns3-applications', 'ns3-bridge', 'ns3-buildings', 'ns3-config-store', 'ns3-core', 'ns3-csma', 'ns3-csma-layout', 'ns3-dsdv', 'ns3-dsr', 'ns3-energy', 'ns3-fd-net-device', 'ns3-flow-monitor', 'ns3-internet', 'ns3-internet-apps', 'ns3-lr-wpan', 'ns3-lte', 'ns3-mesh', 'ns3-mobility', 'ns3-mpi', 'ns3-netanim', 'ns3-network', 'ns3-nix-vector-routing', 'ns3-olsr', 'ns3-opengym', 'ns3-point-to-point', 'ns3-point-to-point-layout', 'ns3-propagation', 'ns3-sixlowpan', 'ns3-spectrum', 'ns3-stats', 'ns3-tap-bridge', 'ns3-test', 'ns3-topology-read', 'ns3-traffic-control', 'ns3-uan', 'ns3-virtual-net-device', 'ns3-wave', 'ns3-wifi', 'ns3-wimax']
-NS3_MODULE_PATH = ['/usr/lib/gcc/x86_64-linux-gnu/5', '/home/hank/ns3gym-extention/build/lib']
+NS3_MODULE_PATH = ['/usr/lib/gcc/x86_64-linux-gnu/5', '/home/hank/ns3gym-v2x/build/lib']
 NS3_OPTIONAL_FEATURES = [('python', 'Python Bindings', True, None), ('castxml', 'Python API Scanning Support', True, None), ('brite', 'BRITE Integration', False, 'BRITE not enabled (see option --with-brite)'), ('nsclick', 'NS-3 Click Integration', False, 'nsclick not enabled (see option --with-nsclick)'), ('GtkConfigStore', 'GtkConfigStore', [], "library 'gtk+-3.0 >= 3.0' not found"), ('XmlIo', 'XmlIo', '-I/usr/include/libxml2 -lxml2\n', "library 'libxml-2.0 >= 2.7' not found"), ('Threading', 'Threading Primitives', True, '<pthread.h> include not detected'), ('RealTime', 'Real Time Simulator', True, 'threading not enabled'), ('FdNetDevice', 'File descriptor NetDevice', True, 'FdNetDevice module enabled'), ('TapFdNetDevice', 'Tap FdNetDevice', True, 'Tap support enabled'), ('EmuFdNetDevice', 'Emulation FdNetDevice', True, 'Emulation support enabled'), ('PlanetLabFdNetDevice', 'PlanetLab FdNetDevice', False, 'PlanetLab operating system not detected (see option --force-planetlab)'), ('nsc', 'Network Simulation Cradle', False, 'NSC not found (see option --with-nsc)'), ('mpi', 'MPI Support', False, 'option --enable-mpi not selected'), ('openflow', 'NS-3 OpenFlow Integration', False, 'OpenFlow not enabled (see option --with-openflow)'), ('SqliteDataOutput', 'SQlite stats data output', '-lsqlite3\n', "library 'sqlite3' not found"), ('TapBridge', 'Tap Bridge', True, '<linux/if_tun.h> include not detected'), ('PyViz', 'PyViz visualizer', False, 'Missing python modules: gi, gi.repository.GObject, cairo, pygraphviz, gi.repository.Gtk, gi.repository.Gdk, gi.repository.Pango, gi.repository.GooCanvas'), ('ENABLE_SUDO', 'Use sudo to set suid bit', False, 'option --enable-sudo not selected'), ('ENABLE_TESTS', 'Tests', False, 'defaults to disabled'), ('ENABLE_EXAMPLES', 'Examples', False, 'defaults to disabled'), ('GSL', 'GNU Scientific Library (GSL)', [], 'GSL not found'), ('libgcrypt', 'Gcrypt library', [], 'libgcrypt not found: you can use libgcrypt-config to find its location.'), ('DES Metrics', 'DES Metrics event collection', [], 'defaults to disabled')]
 OLDINCLUDEDIR = '/usr/include'
 PACKAGE = 'ns'
@@ -177,7 +176,7 @@ VALGRIND = ['/usr/bin/valgrind']
 VALGRIND_FOUND = True
 VERSION = '3-dev'
 WL_SONAME_SUPPORTED = True
-cfg_files = ['/home/hank/ns3gym-extention/build/ns3/config-store-config.h', '/home/hank/ns3gym-extention/build/ns3/core-config.h']
+cfg_files = ['/home/hank/ns3gym-v2x/build/ns3/config-store-config.h', '/home/hank/ns3gym-v2x/build/ns3/core-config.h']
 cprogram_PATTERN = '%s'
 cshlib_PATTERN = 'lib%s.so'
 cstlib_PATTERN = 'lib%s.a'

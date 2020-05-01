@@ -16,6 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Author: Manuel Requena <manuel.requena@cttc.es>
+ * Modified by: NIST (D2D)
  */
 
 #include "ns3/simulator.h"
@@ -124,14 +125,14 @@ LteRlcUm::DoTransmitPdcpPdu (Ptr<Packet> p)
  */
 
 void
-LteRlcUm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams)
+LteRlcUm::DoNotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid)
 {
-  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << txOpParams.bytes);
+  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << bytes);
 
-  if (txOpParams.bytes <= 2)
+  if (bytes <= 2)
     {
       // Stingy MAC: Header fix part is 2 bytes, we need more bytes for the data
-      NS_LOG_LOGIC ("TX opportunity too small = " << txOpParams.bytes);
+      NS_LOG_LOGIC ("TX opportunity too small = " << bytes);
       return;
     }
 
@@ -139,7 +140,7 @@ LteRlcUm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpPara
   LteRlcHeader rlcHeader;
 
   // Build Data field
-  uint32_t nextSegmentSize = txOpParams.bytes - 2;
+  uint32_t nextSegmentSize = bytes - 2;
   uint32_t nextSegmentId = 1;
   uint32_t dataFieldTotalSize = 0;
   uint32_t dataFieldAddedSize = 0;
@@ -387,9 +388,11 @@ LteRlcUm::DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpPara
   params.pdu = packet;
   params.rnti = m_rnti;
   params.lcid = m_lcid;
-  params.layer = txOpParams.layer;
-  params.harqProcessId = txOpParams.harqId;
-  params.componentCarrierId = txOpParams.componentCarrierId;
+  params.srcL2Id = m_srcL2Id;
+  params.dstL2Id = m_dstL2Id;
+  params.layer = layer;
+  params.harqProcessId = harqId;
+  params.componentCarrierId = componentCarrierId;
 
   m_macSapProvider->TransmitPdu (params);
 
@@ -407,23 +410,23 @@ LteRlcUm::DoNotifyHarqDeliveryFailure ()
 }
 
 void
-LteRlcUm::DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams)
+LteRlcUm::DoReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid)
 {
-  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << rxPduParams.p->GetSize ());
+  NS_LOG_FUNCTION (this << m_rnti << (uint32_t) m_lcid << p->GetSize ());
 
   // Receiver timestamp
   RlcTag rlcTag;
   Time delay;
-  NS_ASSERT_MSG (rxPduParams.p->PeekPacketTag (rlcTag), "RlcTag is missing");
-  rxPduParams.p->RemovePacketTag (rlcTag);
+  NS_ASSERT_MSG (p->PeekPacketTag (rlcTag), "RlcTag is missing");
+  p->RemovePacketTag (rlcTag);
   delay = Simulator::Now() - rlcTag.GetSenderTimestamp ();
-  m_rxPdu (m_rnti, m_lcid, rxPduParams.p->GetSize (), delay.GetNanoSeconds ());
+  m_rxPdu (m_rnti, m_lcid, p->GetSize (), delay.GetNanoSeconds ());
 
   // 5.1.2.2 Receive operations
 
   // Get RLC header parameters
   LteRlcHeader rlcHeader;
-  rxPduParams.p->PeekHeader (rlcHeader);
+  p->PeekHeader (rlcHeader);
   NS_LOG_LOGIC ("RLC header: " << rlcHeader);
   SequenceNumber10 seqNumber = rlcHeader.GetSequenceNumber ();
 
@@ -460,13 +463,13 @@ LteRlcUm::DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams)
      )
     {
       NS_LOG_LOGIC ("PDU discarded");
-      rxPduParams.p = 0;
+      p = 0;
       return;
     }
   else
     {
       NS_LOG_LOGIC ("Place PDU in the reception buffer");
-      m_rxBuffer[seqNumber.GetValue ()] = rxPduParams.p;
+      m_rxBuffer[seqNumber.GetValue ()] = p;
     }
 
 
@@ -558,7 +561,7 @@ LteRlcUm::DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams)
         {
           NS_LOG_LOGIC ("VR(UH) > VR(UR)");
           NS_LOG_LOGIC ("Start reordering timer");
-          m_reorderingTimer = Simulator::Schedule (Time ("0.1s"),
+          m_reorderingTimer = Simulator::Schedule (Time ("0.01s"), //Modified due to retransmission problem for vehicular d2d
                                                    &LteRlcUm::ExpireReorderingTimer ,this);
           m_vrUx = m_vrUh;
           NS_LOG_LOGIC ("New VR(UX) = " << m_vrUx);
@@ -1134,6 +1137,8 @@ LteRlcUm::DoReportBufferStatus (void)
   LteMacSapProvider::ReportBufferStatusParameters r;
   r.rnti = m_rnti;
   r.lcid = m_lcid;
+  r.srcL2Id = m_srcL2Id;
+  r.dstL2Id = m_dstL2Id;
   r.txQueueSize = queueSize;
   r.txQueueHolDelay = holDelay.GetMilliSeconds () ;
   r.retxQueueSize = 0;

@@ -437,9 +437,9 @@ static PyMethodDef PyNs3Dot11sDestinationAddressUnit_methods[] = {
     {(char *) "IsDo", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_IsDo, METH_NOARGS, "IsDo()\n\n" },
     {(char *) "IsRf", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_IsRf, METH_NOARGS, "IsRf()\n\n" },
     {(char *) "IsUsn", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_IsUsn, METH_NOARGS, "IsUsn()\n\n" },
-    {(char *) "SetDestSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetDestSeqNumber, METH_VARARGS|METH_KEYWORDS, "SetDestSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
-    {(char *) "SetDestinationAddress", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetDestinationAddress, METH_VARARGS|METH_KEYWORDS, "SetDestinationAddress(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
-    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetFlags, METH_VARARGS|METH_KEYWORDS, "SetFlags(doFlag, rfFlag, usnFlag)\n\ntype: doFlag: bool\ntype: rfFlag: bool\ntype: usnFlag: bool" },
+    {(char *) "SetDestSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetDestSeqNumber, METH_KEYWORDS|METH_VARARGS, "SetDestSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
+    {(char *) "SetDestinationAddress", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetDestinationAddress, METH_KEYWORDS|METH_VARARGS, "SetDestinationAddress(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
+    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit_SetFlags, METH_KEYWORDS|METH_VARARGS, "SetFlags(doFlag, rfFlag, usnFlag)\n\ntype: doFlag: bool\ntype: rfFlag: bool\ntype: usnFlag: bool" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sDestinationAddressUnit__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -926,11 +926,11 @@ _wrap_PyNs3Dot11sDot11sMeshCapability__copy__(PyNs3Dot11sDot11sMeshCapability *s
 }
 
 static PyMethodDef PyNs3Dot11sDot11sMeshCapability_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetUint8", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_GetUint8, METH_NOARGS, "GetUint8()\n\n" },
-    {(char *) "Is", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Is, METH_VARARGS|METH_KEYWORDS, "Is(cap, n)\n\ntype: cap: uint8_t\ntype: n: uint8_t" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "Is", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Is, METH_KEYWORDS|METH_VARARGS, "Is(cap, n)\n\ntype: cap: uint8_t\ntype: n: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sDot11sMeshCapability__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1638,14 +1638,14 @@ _wrap_PyNs3Dot11sHwmpProtocol_UnsetRoot(PyNs3Dot11sHwmpProtocol *self)
 }
 
 static PyMethodDef PyNs3Dot11sHwmpProtocol_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetRoutingTable", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_GetRoutingTable, METH_NOARGS, "GetRoutingTable()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_Install, METH_VARARGS|METH_KEYWORDS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
-    {(char *) "PeerLinkStatus", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_PeerLinkStatus, METH_VARARGS|METH_KEYWORDS, "PeerLinkStatus(meshPontAddress, peerAddress, interface, status)\n\ntype: meshPontAddress: ns3::Mac48Address\ntype: peerAddress: ns3::Mac48Address\ntype: interface: uint32_t\ntype: status: bool" },
-    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_RemoveRoutingStuff, METH_VARARGS|METH_KEYWORDS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
-    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_RequestRoute, METH_VARARGS|METH_KEYWORDS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_Install, METH_KEYWORDS|METH_VARARGS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "PeerLinkStatus", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_PeerLinkStatus, METH_KEYWORDS|METH_VARARGS, "PeerLinkStatus(meshPontAddress, peerAddress, interface, status)\n\ntype: meshPontAddress: ns3::Mac48Address\ntype: peerAddress: ns3::Mac48Address\ntype: interface: uint32_t\ntype: status: bool" },
+    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_RemoveRoutingStuff, METH_KEYWORDS|METH_VARARGS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
+    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_RequestRoute, METH_KEYWORDS|METH_VARARGS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
     {(char *) "SetRoot", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_SetRoot, METH_NOARGS, "SetRoot()\n\n" },
     {(char *) "UnsetRoot", (PyCFunction) _wrap_PyNs3Dot11sHwmpProtocol_UnsetRoot, METH_NOARGS, "UnsetRoot()\n\n" },
@@ -1716,7 +1716,7 @@ PyTypeObject PyNs3Dot11sHwmpProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HwmpProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sHwmpProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sHwmpProtocol__tp_clear,             /* tp_clear */
@@ -1968,6 +1968,22 @@ PyTypeObject PyNs3Dot11sHwmpProtocolFailedDestination_Type = {
 
 
 PyObject *
+PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_DoInitialize(PyNs3Dot11sHwmpRtable *self)
+{
+    PyObject *py_retval;
+    PyNs3Dot11sHwmpRtable__PythonHelper *helper = dynamic_cast< PyNs3Dot11sHwmpRtable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Dot11sHwmpRtable *self)
 {
     PyObject *py_retval;
@@ -1994,22 +2010,6 @@ PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Dot11sHwmpRta
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_DoInitialize(PyNs3Dot11sHwmpRtable *self)
-{
-    PyObject *py_retval;
-    PyNs3Dot11sHwmpRtable__PythonHelper *helper = dynamic_cast< PyNs3Dot11sHwmpRtable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2701,21 +2701,21 @@ _wrap_PyNs3Dot11sHwmpRtable__copy__(PyNs3Dot11sHwmpRtable *self)
 }
 
 static PyMethodDef PyNs3Dot11sHwmpRtable_methods[] = {
-    {(char *) "AddPrecursor", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddPrecursor, METH_VARARGS|METH_KEYWORDS, "AddPrecursor(destination, precursorInterface, precursorAddress, lifetime)\n\ntype: destination: ns3::Mac48Address\ntype: precursorInterface: uint32_t\ntype: precursorAddress: ns3::Mac48Address\ntype: lifetime: ns3::Time" },
-    {(char *) "AddProactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddProactivePath, METH_VARARGS|METH_KEYWORDS, "AddProactivePath(metric, root, retransmitter, interface, lifetime, seqnum)\n\ntype: metric: uint32_t\ntype: root: ns3::Mac48Address\ntype: retransmitter: ns3::Mac48Address\ntype: interface: uint32_t\ntype: lifetime: ns3::Time\ntype: seqnum: uint32_t" },
-    {(char *) "AddReactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddReactivePath, METH_VARARGS|METH_KEYWORDS, "AddReactivePath(destination, retransmitter, interface, metric, lifetime, seqnum)\n\ntype: destination: ns3::Mac48Address\ntype: retransmitter: ns3::Mac48Address\ntype: interface: uint32_t\ntype: metric: uint32_t\ntype: lifetime: ns3::Time\ntype: seqnum: uint32_t" },
-    {(char *) "DeleteProactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_DeleteProactivePath, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DeleteReactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_DeleteReactivePath, METH_VARARGS|METH_KEYWORDS, "DeleteReactivePath(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "AddPrecursor", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddPrecursor, METH_KEYWORDS|METH_VARARGS, "AddPrecursor(destination, precursorInterface, precursorAddress, lifetime)\n\ntype: destination: ns3::Mac48Address\ntype: precursorInterface: uint32_t\ntype: precursorAddress: ns3::Mac48Address\ntype: lifetime: ns3::Time" },
+    {(char *) "AddProactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddProactivePath, METH_KEYWORDS|METH_VARARGS, "AddProactivePath(metric, root, retransmitter, interface, lifetime, seqnum)\n\ntype: metric: uint32_t\ntype: root: ns3::Mac48Address\ntype: retransmitter: ns3::Mac48Address\ntype: interface: uint32_t\ntype: lifetime: ns3::Time\ntype: seqnum: uint32_t" },
+    {(char *) "AddReactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_AddReactivePath, METH_KEYWORDS|METH_VARARGS, "AddReactivePath(destination, retransmitter, interface, metric, lifetime, seqnum)\n\ntype: destination: ns3::Mac48Address\ntype: retransmitter: ns3::Mac48Address\ntype: interface: uint32_t\ntype: metric: uint32_t\ntype: lifetime: ns3::Time\ntype: seqnum: uint32_t" },
+    {(char *) "DeleteProactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_DeleteProactivePath, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DeleteReactivePath", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_DeleteReactivePath, METH_KEYWORDS|METH_VARARGS, "DeleteReactivePath(destination)\n\ntype: destination: ns3::Mac48Address" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "GetUnreachableDestinations", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_GetUnreachableDestinations, METH_VARARGS|METH_KEYWORDS, "GetUnreachableDestinations(peerAddress)\n\ntype: peerAddress: ns3::Mac48Address" },
+    {(char *) "GetUnreachableDestinations", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_GetUnreachableDestinations, METH_KEYWORDS|METH_VARARGS, "GetUnreachableDestinations(peerAddress)\n\ntype: peerAddress: ns3::Mac48Address" },
     {(char *) "LookupProactive", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupProactive, METH_NOARGS, "LookupProactive()\n\n" },
     {(char *) "LookupProactiveExpired", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupProactiveExpired, METH_NOARGS, "LookupProactiveExpired()\n\n" },
-    {(char *) "LookupReactive", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupReactive, METH_VARARGS|METH_KEYWORDS, "LookupReactive(destination)\n\ntype: destination: ns3::Mac48Address" },
-    {(char *) "LookupReactiveExpired", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupReactiveExpired, METH_VARARGS|METH_KEYWORDS, "LookupReactiveExpired(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "LookupReactive", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupReactive, METH_KEYWORDS|METH_VARARGS, "LookupReactive(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "LookupReactiveExpired", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable_LookupReactiveExpired, METH_KEYWORDS|METH_VARARGS, "LookupReactiveExpired(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Dot11sHwmpRtable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sHwmpRtable__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2782,7 +2782,7 @@ PyTypeObject PyNs3Dot11sHwmpRtable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HwmpRtable(arg0)\nHwmpRtable()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sHwmpRtable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sHwmpRtable__tp_clear,             /* tp_clear */
@@ -3389,14 +3389,14 @@ _wrap_PyNs3Dot11sIeBeaconTiming__copy__(PyNs3Dot11sIeBeaconTiming *self)
 }
 
 static PyMethodDef PyNs3Dot11sIeBeaconTiming_methods[] = {
-    {(char *) "AddNeighboursTimingElementUnit", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_AddNeighboursTimingElementUnit, METH_VARARGS|METH_KEYWORDS, "AddNeighboursTimingElementUnit(aid, last_beacon, beacon_interval)\n\ntype: aid: uint16_t\ntype: last_beacon: ns3::Time\ntype: beacon_interval: ns3::Time" },
+    {(char *) "AddNeighboursTimingElementUnit", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_AddNeighboursTimingElementUnit, METH_KEYWORDS|METH_VARARGS, "AddNeighboursTimingElementUnit(aid, last_beacon, beacon_interval)\n\ntype: aid: uint16_t\ntype: last_beacon: ns3::Time\ntype: beacon_interval: ns3::Time" },
     {(char *) "ClearTimingElement", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_ClearTimingElement, METH_NOARGS, "ClearTimingElement()\n\n" },
-    {(char *) "DelNeighboursTimingElementUnit", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_DelNeighboursTimingElementUnit, METH_VARARGS|METH_KEYWORDS, "DelNeighboursTimingElementUnit(aid, last_beacon, beacon_interval)\n\ntype: aid: uint16_t\ntype: last_beacon: ns3::Time\ntype: beacon_interval: ns3::Time" },
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DelNeighboursTimingElementUnit", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_DelNeighboursTimingElementUnit, METH_KEYWORDS|METH_VARARGS, "DelNeighboursTimingElementUnit(aid, last_beacon, beacon_interval)\n\ntype: aid: uint16_t\ntype: last_beacon: ns3::Time\ntype: beacon_interval: ns3::Time" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "GetNeighboursTimingElementsList", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_GetNeighboursTimingElementsList, METH_NOARGS, "GetNeighboursTimingElementsList()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTiming__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3667,9 +3667,9 @@ static PyMethodDef PyNs3Dot11sIeBeaconTimingUnit_methods[] = {
     {(char *) "GetAid", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_GetAid, METH_NOARGS, "GetAid()\n\n" },
     {(char *) "GetBeaconInterval", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_GetBeaconInterval, METH_NOARGS, "GetBeaconInterval()\n\n" },
     {(char *) "GetLastBeacon", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_GetLastBeacon, METH_NOARGS, "GetLastBeacon()\n\n" },
-    {(char *) "SetAid", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetAid, METH_VARARGS|METH_KEYWORDS, "SetAid(aid)\n\ntype: aid: uint8_t" },
-    {(char *) "SetBeaconInterval", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetBeaconInterval, METH_VARARGS|METH_KEYWORDS, "SetBeaconInterval(beaconInterval)\n\ntype: beaconInterval: uint16_t" },
-    {(char *) "SetLastBeacon", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetLastBeacon, METH_VARARGS|METH_KEYWORDS, "SetLastBeacon(lastBeacon)\n\ntype: lastBeacon: uint16_t" },
+    {(char *) "SetAid", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetAid, METH_KEYWORDS|METH_VARARGS, "SetAid(aid)\n\ntype: aid: uint8_t" },
+    {(char *) "SetBeaconInterval", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetBeaconInterval, METH_KEYWORDS|METH_VARARGS, "SetBeaconInterval(beaconInterval)\n\ntype: beaconInterval: uint16_t" },
+    {(char *) "SetLastBeacon", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit_SetLastBeacon, METH_KEYWORDS|METH_VARARGS, "SetLastBeacon(lastBeacon)\n\ntype: lastBeacon: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeBeaconTimingUnit__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4035,17 +4035,17 @@ _wrap_PyNs3Dot11sIeConfiguration__copy__(PyNs3Dot11sIeConfiguration *self)
 }
 
 static PyMethodDef PyNs3Dot11sIeConfiguration_methods[] = {
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "GetNeighborCount", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_GetNeighborCount, METH_NOARGS, "GetNeighborCount()\n\n" },
     {(char *) "IsAirtime", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_IsAirtime, METH_NOARGS, "IsAirtime()\n\n" },
     {(char *) "IsHWMP", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_IsHWMP, METH_NOARGS, "IsHWMP()\n\n" },
     {(char *) "MeshCapability", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_MeshCapability, METH_NOARGS, "MeshCapability()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetMetric, METH_VARARGS|METH_KEYWORDS, "SetMetric(metricId)\n\ntype: metricId: ns3::dot11s::dot11sPathSelectionMetric" },
-    {(char *) "SetNeighborCount", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetNeighborCount, METH_VARARGS|METH_KEYWORDS, "SetNeighborCount(neighbors)\n\ntype: neighbors: uint8_t" },
-    {(char *) "SetRouting", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetRouting, METH_VARARGS|METH_KEYWORDS, "SetRouting(routingId)\n\ntype: routingId: ns3::dot11s::dot11sPathSelectionProtocol" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetMetric, METH_KEYWORDS|METH_VARARGS, "SetMetric(metricId)\n\ntype: metricId: ns3::dot11s::dot11sPathSelectionMetric" },
+    {(char *) "SetNeighborCount", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetNeighborCount, METH_KEYWORDS|METH_VARARGS, "SetNeighborCount(neighbors)\n\ntype: neighbors: uint8_t" },
+    {(char *) "SetRouting", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration_SetRouting, METH_KEYWORDS|METH_VARARGS, "SetRouting(routingId)\n\ntype: routingId: ns3::dot11s::dot11sPathSelectionProtocol" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeConfiguration__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4372,12 +4372,12 @@ _wrap_PyNs3Dot11sIeLinkMetricReport__copy__(PyNs3Dot11sIeLinkMetricReport *self)
 }
 
 static PyMethodDef PyNs3Dot11sIeLinkMetricReport_methods[] = {
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "GetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_GetMetric, METH_NOARGS, "GetMetric()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_SetMetric, METH_VARARGS|METH_KEYWORDS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport_SetMetric, METH_KEYWORDS|METH_VARARGS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeLinkMetricReport__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4727,13 +4727,13 @@ _wrap_PyNs3Dot11sIeMeshId__copy__(PyNs3Dot11sIeMeshId *self)
 }
 
 static PyMethodDef PyNs3Dot11sIeMeshId_methods[] = {
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "IsBroadcast", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_IsBroadcast, METH_NOARGS, "IsBroadcast()\n\n" },
-    {(char *) "IsEqual", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_IsEqual, METH_VARARGS|METH_KEYWORDS, "IsEqual(o)\n\ntype: o: ns3::dot11s::IeMeshId const &" },
+    {(char *) "IsEqual", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_IsEqual, METH_KEYWORDS|METH_VARARGS, "IsEqual(o)\n\ntype: o: ns3::dot11s::IeMeshId const &" },
     {(char *) "PeekString", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_PeekString, METH_NOARGS, "PeekString()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeMeshId__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5164,10 +5164,10 @@ _wrap_PyNs3Dot11sIeMeshIdValue__copy__(PyNs3Dot11sIeMeshIdValue *self)
 
 static PyMethodDef PyNs3Dot11sIeMeshIdValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::dot11s::IeMeshId const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::dot11s::IeMeshId const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeMeshIdValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5546,17 +5546,17 @@ _wrap_PyNs3Dot11sIePeerManagement__copy__(PyNs3Dot11sIePeerManagement *self)
 }
 
 static PyMethodDef PyNs3Dot11sIePeerManagement_methods[] = {
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "GetLocalLinkId", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_GetLocalLinkId, METH_NOARGS, "GetLocalLinkId()\n\n" },
     {(char *) "GetPeerLinkId", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_GetPeerLinkId, METH_NOARGS, "GetPeerLinkId()\n\n" },
     {(char *) "GetReasonCode", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_GetReasonCode, METH_NOARGS, "GetReasonCode()\n\n" },
     {(char *) "GetSubtype", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_GetSubtype, METH_NOARGS, "GetSubtype()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetPeerClose", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerClose, METH_VARARGS|METH_KEYWORDS, "SetPeerClose(localLinkID, peerLinkId, reasonCode)\n\ntype: localLinkID: uint16_t\ntype: peerLinkId: uint16_t\ntype: reasonCode: ns3::dot11s::PmpReasonCode" },
-    {(char *) "SetPeerConfirm", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerConfirm, METH_VARARGS|METH_KEYWORDS, "SetPeerConfirm(localLinkID, peerLinkId)\n\ntype: localLinkID: uint16_t\ntype: peerLinkId: uint16_t" },
-    {(char *) "SetPeerOpen", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerOpen, METH_VARARGS|METH_KEYWORDS, "SetPeerOpen(localLinkId)\n\ntype: localLinkId: uint16_t" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetPeerClose", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerClose, METH_KEYWORDS|METH_VARARGS, "SetPeerClose(localLinkID, peerLinkId, reasonCode)\n\ntype: localLinkID: uint16_t\ntype: peerLinkId: uint16_t\ntype: reasonCode: ns3::dot11s::PmpReasonCode" },
+    {(char *) "SetPeerConfirm", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerConfirm, METH_KEYWORDS|METH_VARARGS, "SetPeerConfirm(localLinkID, peerLinkId)\n\ntype: localLinkID: uint16_t\ntype: peerLinkId: uint16_t" },
+    {(char *) "SetPeerOpen", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SetPeerOpen, METH_KEYWORDS|METH_VARARGS, "SetPeerOpen(localLinkId)\n\ntype: localLinkId: uint16_t" },
     {(char *) "SubtypeIsClose", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SubtypeIsClose, METH_NOARGS, "SubtypeIsClose()\n\n" },
     {(char *) "SubtypeIsConfirm", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SubtypeIsConfirm, METH_NOARGS, "SubtypeIsConfirm()\n\n" },
     {(char *) "SubtypeIsOpen", (PyCFunction) _wrap_PyNs3Dot11sIePeerManagement_SubtypeIsOpen, METH_NOARGS, "SubtypeIsOpen()\n\n" },
@@ -5829,10 +5829,10 @@ _wrap_PyNs3Dot11sIePeeringProtocol__copy__(PyNs3Dot11sIePeeringProtocol *self)
 }
 
 static PyMethodDef PyNs3Dot11sIePeeringProtocol_methods[] = {
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIePeeringProtocol__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6138,16 +6138,16 @@ _wrap_PyNs3Dot11sIePerr__copy__(PyNs3Dot11sIePerr *self)
 }
 
 static PyMethodDef PyNs3Dot11sIePerr_methods[] = {
-    {(char *) "AddAddressUnit", (PyCFunction) _wrap_PyNs3Dot11sIePerr_AddAddressUnit, METH_VARARGS|METH_KEYWORDS, "AddAddressUnit(unit)\n\ntype: unit: ns3::dot11s::HwmpProtocol::FailedDestination" },
-    {(char *) "DeleteAddressUnit", (PyCFunction) _wrap_PyNs3Dot11sIePerr_DeleteAddressUnit, METH_VARARGS|METH_KEYWORDS, "DeleteAddressUnit(address)\n\ntype: address: ns3::Mac48Address" },
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePerr_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "AddAddressUnit", (PyCFunction) _wrap_PyNs3Dot11sIePerr_AddAddressUnit, METH_KEYWORDS|METH_VARARGS, "AddAddressUnit(unit)\n\ntype: unit: ns3::dot11s::HwmpProtocol::FailedDestination" },
+    {(char *) "DeleteAddressUnit", (PyCFunction) _wrap_PyNs3Dot11sIePerr_DeleteAddressUnit, METH_KEYWORDS|METH_VARARGS, "DeleteAddressUnit(address)\n\ntype: address: ns3::Mac48Address" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePerr_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIePerr_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetAddressUnitVector", (PyCFunction) _wrap_PyNs3Dot11sIePerr_GetAddressUnitVector, METH_NOARGS, "GetAddressUnitVector()\n\n" },
     {(char *) "GetInformationFieldSize", (PyCFunction) _wrap_PyNs3Dot11sIePerr_GetInformationFieldSize, METH_NOARGS, "GetInformationFieldSize()\n\n" },
     {(char *) "GetNumOfDest", (PyCFunction) _wrap_PyNs3Dot11sIePerr_GetNumOfDest, METH_NOARGS, "GetNumOfDest()\n\n" },
     {(char *) "IsFull", (PyCFunction) _wrap_PyNs3Dot11sIePerr_IsFull, METH_NOARGS, "IsFull()\n\n" },
     {(char *) "ResetPerr", (PyCFunction) _wrap_PyNs3Dot11sIePerr_ResetPerr, METH_NOARGS, "ResetPerr()\n\n" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePerr_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePerr_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIePerr__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6728,7 +6728,7 @@ _wrap_PyNs3Dot11sIePrep__copy__(PyNs3Dot11sIePrep *self)
 
 static PyMethodDef PyNs3Dot11sIePrep_methods[] = {
     {(char *) "DecrementTtl", (PyCFunction) _wrap_PyNs3Dot11sIePrep_DecrementTtl, METH_NOARGS, "DecrementTtl()\n\n" },
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePrep_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePrep_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIePrep_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetDestinationAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_GetDestinationAddress, METH_NOARGS, "GetDestinationAddress()\n\n" },
     {(char *) "GetDestinationSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_GetDestinationSeqNumber, METH_NOARGS, "GetDestinationSeqNumber()\n\n" },
@@ -6740,17 +6740,17 @@ static PyMethodDef PyNs3Dot11sIePrep_methods[] = {
     {(char *) "GetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_GetOriginatorAddress, METH_NOARGS, "GetOriginatorAddress()\n\n" },
     {(char *) "GetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_GetOriginatorSeqNumber, METH_NOARGS, "GetOriginatorSeqNumber()\n\n" },
     {(char *) "GetTtl", (PyCFunction) _wrap_PyNs3Dot11sIePrep_GetTtl, METH_NOARGS, "GetTtl()\n\n" },
-    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIePrep_IncrementMetric, METH_VARARGS|METH_KEYWORDS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetDestinationAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetDestinationAddress, METH_VARARGS|METH_KEYWORDS, "SetDestinationAddress(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
-    {(char *) "SetDestinationSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetDestinationSeqNumber, METH_VARARGS|METH_KEYWORDS, "SetDestinationSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
-    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetFlags, METH_VARARGS|METH_KEYWORDS, "SetFlags(flags)\n\ntype: flags: uint8_t" },
-    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetHopcount, METH_VARARGS|METH_KEYWORDS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
-    {(char *) "SetLifetime", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetLifetime, METH_VARARGS|METH_KEYWORDS, "SetLifetime(lifetime)\n\ntype: lifetime: uint32_t" },
-    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetMetric, METH_VARARGS|METH_KEYWORDS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
-    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetOriginatorAddress, METH_VARARGS|METH_KEYWORDS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
-    {(char *) "SetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetOriginatorSeqNumber, METH_VARARGS|METH_KEYWORDS, "SetOriginatorSeqNumber(originator_seq_number)\n\ntype: originator_seq_number: uint32_t" },
-    {(char *) "SetTtl", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetTtl, METH_VARARGS|METH_KEYWORDS, "SetTtl(ttl)\n\ntype: ttl: uint8_t" },
+    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIePrep_IncrementMetric, METH_KEYWORDS|METH_VARARGS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetDestinationAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetDestinationAddress, METH_KEYWORDS|METH_VARARGS, "SetDestinationAddress(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
+    {(char *) "SetDestinationSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetDestinationSeqNumber, METH_KEYWORDS|METH_VARARGS, "SetDestinationSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
+    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetFlags, METH_KEYWORDS|METH_VARARGS, "SetFlags(flags)\n\ntype: flags: uint8_t" },
+    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetHopcount, METH_KEYWORDS|METH_VARARGS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
+    {(char *) "SetLifetime", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetLifetime, METH_KEYWORDS|METH_VARARGS, "SetLifetime(lifetime)\n\ntype: lifetime: uint32_t" },
+    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetMetric, METH_KEYWORDS|METH_VARARGS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetOriginatorAddress, METH_KEYWORDS|METH_VARARGS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
+    {(char *) "SetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetOriginatorSeqNumber, METH_KEYWORDS|METH_VARARGS, "SetOriginatorSeqNumber(originator_seq_number)\n\ntype: originator_seq_number: uint32_t" },
+    {(char *) "SetTtl", (PyCFunction) _wrap_PyNs3Dot11sIePrep_SetTtl, METH_KEYWORDS|METH_VARARGS, "SetTtl(ttl)\n\ntype: ttl: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIePrep__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7442,11 +7442,11 @@ _wrap_PyNs3Dot11sIePreq__copy__(PyNs3Dot11sIePreq *self)
 }
 
 static PyMethodDef PyNs3Dot11sIePreq_methods[] = {
-    {(char *) "AddDestinationAddressElement", (PyCFunction) _wrap_PyNs3Dot11sIePreq_AddDestinationAddressElement, METH_VARARGS|METH_KEYWORDS, "AddDestinationAddressElement(doFlag, rfFlag, dest_address, dest_seq_number)\n\ntype: doFlag: bool\ntype: rfFlag: bool\ntype: dest_address: ns3::Mac48Address\ntype: dest_seq_number: uint32_t" },
+    {(char *) "AddDestinationAddressElement", (PyCFunction) _wrap_PyNs3Dot11sIePreq_AddDestinationAddressElement, METH_KEYWORDS|METH_VARARGS, "AddDestinationAddressElement(doFlag, rfFlag, dest_address, dest_seq_number)\n\ntype: doFlag: bool\ntype: rfFlag: bool\ntype: dest_address: ns3::Mac48Address\ntype: dest_seq_number: uint32_t" },
     {(char *) "ClearDestinationAddressElements", (PyCFunction) _wrap_PyNs3Dot11sIePreq_ClearDestinationAddressElements, METH_NOARGS, "ClearDestinationAddressElements()\n\n" },
     {(char *) "DecrementTtl", (PyCFunction) _wrap_PyNs3Dot11sIePreq_DecrementTtl, METH_NOARGS, "DecrementTtl()\n\n" },
-    {(char *) "DelDestinationAddressElement", (PyCFunction) _wrap_PyNs3Dot11sIePreq_DelDestinationAddressElement, METH_VARARGS|METH_KEYWORDS, "DelDestinationAddressElement(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePreq_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DelDestinationAddressElement", (PyCFunction) _wrap_PyNs3Dot11sIePreq_DelDestinationAddressElement, METH_KEYWORDS|METH_VARARGS, "DelDestinationAddressElement(dest_address)\n\ntype: dest_address: ns3::Mac48Address" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePreq_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(i, length)\n\ntype: i: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIePreq_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetDestCount", (PyCFunction) _wrap_PyNs3Dot11sIePreq_GetDestCount, METH_NOARGS, "GetDestCount()\n\n" },
     {(char *) "GetDestinationList", (PyCFunction) _wrap_PyNs3Dot11sIePreq_GetDestinationList, METH_NOARGS, "GetDestinationList()\n\n" },
@@ -7458,21 +7458,21 @@ static PyMethodDef PyNs3Dot11sIePreq_methods[] = {
     {(char *) "GetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePreq_GetOriginatorSeqNumber, METH_NOARGS, "GetOriginatorSeqNumber()\n\n" },
     {(char *) "GetPreqID", (PyCFunction) _wrap_PyNs3Dot11sIePreq_GetPreqID, METH_NOARGS, "GetPreqID()\n\n" },
     {(char *) "GetTtl", (PyCFunction) _wrap_PyNs3Dot11sIePreq_GetTtl, METH_NOARGS, "GetTtl()\n\n" },
-    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIePreq_IncrementMetric, METH_VARARGS|METH_KEYWORDS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIePreq_IncrementMetric, METH_KEYWORDS|METH_VARARGS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
     {(char *) "IsFull", (PyCFunction) _wrap_PyNs3Dot11sIePreq_IsFull, METH_NOARGS, "IsFull()\n\n" },
     {(char *) "IsNeedNotPrep", (PyCFunction) _wrap_PyNs3Dot11sIePreq_IsNeedNotPrep, METH_NOARGS, "IsNeedNotPrep()\n\n" },
     {(char *) "IsUnicastPreq", (PyCFunction) _wrap_PyNs3Dot11sIePreq_IsUnicastPreq, METH_NOARGS, "IsUnicastPreq()\n\n" },
-    {(char *) "MayAddAddress", (PyCFunction) _wrap_PyNs3Dot11sIePreq_MayAddAddress, METH_VARARGS|METH_KEYWORDS, "MayAddAddress(originator)\n\ntype: originator: ns3::Mac48Address" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetDestCount", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetDestCount, METH_VARARGS|METH_KEYWORDS, "SetDestCount(dest_count)\n\ntype: dest_count: uint8_t" },
-    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetHopcount, METH_VARARGS|METH_KEYWORDS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
-    {(char *) "SetLifetime", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetLifetime, METH_VARARGS|METH_KEYWORDS, "SetLifetime(lifetime)\n\ntype: lifetime: uint32_t" },
-    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetMetric, METH_VARARGS|METH_KEYWORDS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "MayAddAddress", (PyCFunction) _wrap_PyNs3Dot11sIePreq_MayAddAddress, METH_KEYWORDS|METH_VARARGS, "MayAddAddress(originator)\n\ntype: originator: ns3::Mac48Address" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetDestCount", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetDestCount, METH_KEYWORDS|METH_VARARGS, "SetDestCount(dest_count)\n\ntype: dest_count: uint8_t" },
+    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetHopcount, METH_KEYWORDS|METH_VARARGS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
+    {(char *) "SetLifetime", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetLifetime, METH_KEYWORDS|METH_VARARGS, "SetLifetime(lifetime)\n\ntype: lifetime: uint32_t" },
+    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetMetric, METH_KEYWORDS|METH_VARARGS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
     {(char *) "SetNeedNotPrep", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetNeedNotPrep, METH_NOARGS, "SetNeedNotPrep()\n\n" },
-    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetOriginatorAddress, METH_VARARGS|METH_KEYWORDS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
-    {(char *) "SetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetOriginatorSeqNumber, METH_VARARGS|METH_KEYWORDS, "SetOriginatorSeqNumber(originator_seq_number)\n\ntype: originator_seq_number: uint32_t" },
-    {(char *) "SetPreqID", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetPreqID, METH_VARARGS|METH_KEYWORDS, "SetPreqID(id)\n\ntype: id: uint32_t" },
-    {(char *) "SetTTL", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetTTL, METH_VARARGS|METH_KEYWORDS, "SetTTL(ttl)\n\ntype: ttl: uint8_t" },
+    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetOriginatorAddress, METH_KEYWORDS|METH_VARARGS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
+    {(char *) "SetOriginatorSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetOriginatorSeqNumber, METH_KEYWORDS|METH_VARARGS, "SetOriginatorSeqNumber(originator_seq_number)\n\ntype: originator_seq_number: uint32_t" },
+    {(char *) "SetPreqID", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetPreqID, METH_KEYWORDS|METH_VARARGS, "SetPreqID(id)\n\ntype: id: uint32_t" },
+    {(char *) "SetTTL", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetTTL, METH_KEYWORDS|METH_VARARGS, "SetTTL(ttl)\n\ntype: ttl: uint8_t" },
     {(char *) "SetUnicastPreq", (PyCFunction) _wrap_PyNs3Dot11sIePreq_SetUnicastPreq, METH_NOARGS, "SetUnicastPreq()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIePreq__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -7963,7 +7963,7 @@ _wrap_PyNs3Dot11sIeRann__copy__(PyNs3Dot11sIeRann *self)
 
 static PyMethodDef PyNs3Dot11sIeRann_methods[] = {
     {(char *) "DecrementTtl", (PyCFunction) _wrap_PyNs3Dot11sIeRann_DecrementTtl, METH_NOARGS, "DecrementTtl()\n\n" },
-    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeRann_DeserializeInformationField, METH_VARARGS|METH_KEYWORDS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
+    {(char *) "DeserializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeRann_DeserializeInformationField, METH_KEYWORDS|METH_VARARGS, "DeserializeInformationField(start, length)\n\ntype: start: ns3::Buffer::Iterator\ntype: length: uint8_t" },
     {(char *) "ElementId", (PyCFunction) _wrap_PyNs3Dot11sIeRann_ElementId, METH_NOARGS, "ElementId()\n\n" },
     {(char *) "GetDestSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIeRann_GetDestSeqNumber, METH_NOARGS, "GetDestSeqNumber()\n\n" },
     {(char *) "GetFlags", (PyCFunction) _wrap_PyNs3Dot11sIeRann_GetFlags, METH_NOARGS, "GetFlags()\n\n" },
@@ -7972,14 +7972,14 @@ static PyMethodDef PyNs3Dot11sIeRann_methods[] = {
     {(char *) "GetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeRann_GetMetric, METH_NOARGS, "GetMetric()\n\n" },
     {(char *) "GetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIeRann_GetOriginatorAddress, METH_NOARGS, "GetOriginatorAddress()\n\n" },
     {(char *) "GetTtl", (PyCFunction) _wrap_PyNs3Dot11sIeRann_GetTtl, METH_NOARGS, "GetTtl()\n\n" },
-    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIeRann_IncrementMetric, METH_VARARGS|METH_KEYWORDS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
-    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SerializeInformationField, METH_VARARGS|METH_KEYWORDS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
-    {(char *) "SetDestSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetDestSeqNumber, METH_VARARGS|METH_KEYWORDS, "SetDestSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
-    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetFlags, METH_VARARGS|METH_KEYWORDS, "SetFlags(flags)\n\ntype: flags: uint8_t" },
-    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetHopcount, METH_VARARGS|METH_KEYWORDS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
-    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetMetric, METH_VARARGS|METH_KEYWORDS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
-    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetOriginatorAddress, METH_VARARGS|METH_KEYWORDS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
-    {(char *) "SetTTL", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetTTL, METH_VARARGS|METH_KEYWORDS, "SetTTL(ttl)\n\ntype: ttl: uint8_t" },
+    {(char *) "IncrementMetric", (PyCFunction) _wrap_PyNs3Dot11sIeRann_IncrementMetric, METH_KEYWORDS|METH_VARARGS, "IncrementMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "SerializeInformationField", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SerializeInformationField, METH_KEYWORDS|METH_VARARGS, "SerializeInformationField(i)\n\ntype: i: ns3::Buffer::Iterator" },
+    {(char *) "SetDestSeqNumber", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetDestSeqNumber, METH_KEYWORDS|METH_VARARGS, "SetDestSeqNumber(dest_seq_number)\n\ntype: dest_seq_number: uint32_t" },
+    {(char *) "SetFlags", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetFlags, METH_KEYWORDS|METH_VARARGS, "SetFlags(flags)\n\ntype: flags: uint8_t" },
+    {(char *) "SetHopcount", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetHopcount, METH_KEYWORDS|METH_VARARGS, "SetHopcount(hopcount)\n\ntype: hopcount: uint8_t" },
+    {(char *) "SetMetric", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetMetric, METH_KEYWORDS|METH_VARARGS, "SetMetric(metric)\n\ntype: metric: uint32_t" },
+    {(char *) "SetOriginatorAddress", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetOriginatorAddress, METH_KEYWORDS|METH_VARARGS, "SetOriginatorAddress(originator_address)\n\ntype: originator_address: ns3::Mac48Address" },
+    {(char *) "SetTTL", (PyCFunction) _wrap_PyNs3Dot11sIeRann_SetTTL, METH_KEYWORDS|METH_VARARGS, "SetTTL(ttl)\n\ntype: ttl: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sIeRann__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8459,7 +8459,7 @@ _wrap_PyNs3Dot11sMeshHeader__copy__(PyNs3Dot11sMeshHeader *self)
 }
 
 static PyMethodDef PyNs3Dot11sMeshHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetAddr4", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetAddr4, METH_NOARGS, "GetAddr4()\n\n" },
     {(char *) "GetAddr5", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetAddr5, METH_NOARGS, "GetAddr5()\n\n" },
     {(char *) "GetAddr6", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetAddr6, METH_NOARGS, "GetAddr6()\n\n" },
@@ -8469,13 +8469,13 @@ static PyMethodDef PyNs3Dot11sMeshHeader_methods[] = {
     {(char *) "GetMeshTtl", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetMeshTtl, METH_NOARGS, "GetMeshTtl()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetAddr4", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr4, METH_VARARGS|METH_KEYWORDS, "SetAddr4(address)\n\ntype: address: ns3::Mac48Address" },
-    {(char *) "SetAddr5", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr5, METH_VARARGS|METH_KEYWORDS, "SetAddr5(address)\n\ntype: address: ns3::Mac48Address" },
-    {(char *) "SetAddr6", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr6, METH_VARARGS|METH_KEYWORDS, "SetAddr6(address)\n\ntype: address: ns3::Mac48Address" },
-    {(char *) "SetAddressExt", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddressExt, METH_VARARGS|METH_KEYWORDS, "SetAddressExt(num_of_addresses)\n\ntype: num_of_addresses: uint8_t" },
-    {(char *) "SetMeshSeqno", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetMeshSeqno, METH_VARARGS|METH_KEYWORDS, "SetMeshSeqno(seqno)\n\ntype: seqno: uint32_t" },
-    {(char *) "SetMeshTtl", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetMeshTtl, METH_VARARGS|METH_KEYWORDS, "SetMeshTtl(TTL)\n\ntype: TTL: uint8_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetAddr4", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr4, METH_KEYWORDS|METH_VARARGS, "SetAddr4(address)\n\ntype: address: ns3::Mac48Address" },
+    {(char *) "SetAddr5", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr5, METH_KEYWORDS|METH_VARARGS, "SetAddr5(address)\n\ntype: address: ns3::Mac48Address" },
+    {(char *) "SetAddr6", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddr6, METH_KEYWORDS|METH_VARARGS, "SetAddr6(address)\n\ntype: address: ns3::Mac48Address" },
+    {(char *) "SetAddressExt", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetAddressExt, METH_KEYWORDS|METH_VARARGS, "SetAddressExt(num_of_addresses)\n\ntype: num_of_addresses: uint8_t" },
+    {(char *) "SetMeshSeqno", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetMeshSeqno, METH_KEYWORDS|METH_VARARGS, "SetMeshSeqno(seqno)\n\ntype: seqno: uint32_t" },
+    {(char *) "SetMeshTtl", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader_SetMeshTtl, METH_KEYWORDS|METH_VARARGS, "SetMeshTtl(TTL)\n\ntype: TTL: uint8_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sMeshHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8577,7 +8577,7 @@ PyTypeObject PyNs3Dot11sMeshHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshHeader(arg0)\nMeshHeader()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sMeshHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sMeshHeader__tp_clear,             /* tp_clear */
@@ -8610,6 +8610,22 @@ PyTypeObject PyNs3Dot11sMeshHeader_Type = {
 
 
 PyObject *
+PyNs3Dot11sPeerLink__PythonHelper::_wrap_DoInitialize(PyNs3Dot11sPeerLink *self)
+{
+    PyObject *py_retval;
+    PyNs3Dot11sPeerLink__PythonHelper *helper = dynamic_cast< PyNs3Dot11sPeerLink__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Dot11sPeerLink__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Dot11sPeerLink *self)
 {
     PyObject *py_retval;
@@ -8636,22 +8652,6 @@ PyNs3Dot11sPeerLink__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Dot11sPeerLink 
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Dot11sPeerLink__PythonHelper::_wrap_DoInitialize(PyNs3Dot11sPeerLink *self)
-{
-    PyObject *py_retval;
-    PyNs3Dot11sPeerLink__PythonHelper *helper = dynamic_cast< PyNs3Dot11sPeerLink__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9246,28 +9246,28 @@ _wrap_PyNs3Dot11sPeerLink_TransmissionFailure(PyNs3Dot11sPeerLink *self)
 static PyMethodDef PyNs3Dot11sPeerLink_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
-    {(char *) "SetBeaconInformation", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetBeaconInformation, METH_VARARGS|METH_KEYWORDS, "SetBeaconInformation(lastBeacon, BeaconInterval)\n\ntype: lastBeacon: ns3::Time\ntype: BeaconInterval: ns3::Time" },
-    {(char *) "SetPeerAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetPeerAddress, METH_VARARGS|METH_KEYWORDS, "SetPeerAddress(macaddr)\n\ntype: macaddr: ns3::Mac48Address" },
-    {(char *) "SetPeerMeshPointAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetPeerMeshPointAddress, METH_VARARGS|METH_KEYWORDS, "SetPeerMeshPointAddress(macaddr)\n\ntype: macaddr: ns3::Mac48Address" },
-    {(char *) "SetInterface", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetInterface, METH_VARARGS|METH_KEYWORDS, "SetInterface(interface)\n\ntype: interface: uint32_t" },
-    {(char *) "SetLocalLinkId", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetLocalLinkId, METH_VARARGS|METH_KEYWORDS, "SetLocalLinkId(id)\n\ntype: id: uint16_t" },
-    {(char *) "SetLocalAid", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetLocalAid, METH_VARARGS|METH_KEYWORDS, "SetLocalAid(aid)\n\ntype: aid: uint16_t" },
+    {(char *) "SetBeaconInformation", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetBeaconInformation, METH_KEYWORDS|METH_VARARGS, "SetBeaconInformation(lastBeacon, BeaconInterval)\n\ntype: lastBeacon: ns3::Time\ntype: BeaconInterval: ns3::Time" },
+    {(char *) "SetPeerAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetPeerAddress, METH_KEYWORDS|METH_VARARGS, "SetPeerAddress(macaddr)\n\ntype: macaddr: ns3::Mac48Address" },
+    {(char *) "SetPeerMeshPointAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetPeerMeshPointAddress, METH_KEYWORDS|METH_VARARGS, "SetPeerMeshPointAddress(macaddr)\n\ntype: macaddr: ns3::Mac48Address" },
+    {(char *) "SetInterface", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetInterface, METH_KEYWORDS|METH_VARARGS, "SetInterface(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "SetLocalLinkId", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetLocalLinkId, METH_KEYWORDS|METH_VARARGS, "SetLocalLinkId(id)\n\ntype: id: uint16_t" },
+    {(char *) "SetLocalAid", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetLocalAid, METH_KEYWORDS|METH_VARARGS, "SetLocalAid(aid)\n\ntype: aid: uint16_t" },
     {(char *) "GetPeerAid", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetPeerAid, METH_NOARGS, "GetPeerAid()\n\n" },
-    {(char *) "SetBeaconTimingElement", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetBeaconTimingElement, METH_VARARGS|METH_KEYWORDS, "SetBeaconTimingElement(beaconTiming)\n\ntype: beaconTiming: ns3::dot11s::IeBeaconTiming" },
+    {(char *) "SetBeaconTimingElement", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_SetBeaconTimingElement, METH_KEYWORDS|METH_VARARGS, "SetBeaconTimingElement(beaconTiming)\n\ntype: beaconTiming: ns3::dot11s::IeBeaconTiming" },
     {(char *) "GetPeerAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetPeerAddress, METH_NOARGS, "GetPeerAddress()\n\n" },
     {(char *) "GetLocalAid", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetLocalAid, METH_NOARGS, "GetLocalAid()\n\n" },
     {(char *) "GetLastBeacon", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetLastBeacon, METH_NOARGS, "GetLastBeacon()\n\n" },
     {(char *) "GetBeaconInterval", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetBeaconInterval, METH_NOARGS, "GetBeaconInterval()\n\n" },
     {(char *) "GetBeaconTimingElement", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_GetBeaconTimingElement, METH_NOARGS, "GetBeaconTimingElement()\n\n" },
-    {(char *) "MLMECancelPeerLink", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMECancelPeerLink, METH_VARARGS|METH_KEYWORDS, "MLMECancelPeerLink(reason)\n\ntype: reason: ns3::dot11s::PmpReasonCode" },
+    {(char *) "MLMECancelPeerLink", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMECancelPeerLink, METH_KEYWORDS|METH_VARARGS, "MLMECancelPeerLink(reason)\n\ntype: reason: ns3::dot11s::PmpReasonCode" },
     {(char *) "MLMEActivePeerLinkOpen", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMEActivePeerLinkOpen, METH_NOARGS, "MLMEActivePeerLinkOpen()\n\n" },
     {(char *) "MLMEPeeringRequestReject", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMEPeeringRequestReject, METH_NOARGS, "MLMEPeeringRequestReject()\n\n" },
-    {(char *) "MLMESetSignalStatusCallback", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMESetSignalStatusCallback, METH_VARARGS|METH_KEYWORDS, "MLMESetSignalStatusCallback(cb)\n\ntype: cb: ns3::Callback< void, unsigned int, ns3::Mac48Address, ns3::Mac48Address, ns3::dot11s::PeerLink::PeerState, ns3::dot11s::PeerLink::PeerState, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "MLMESetSignalStatusCallback", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_MLMESetSignalStatusCallback, METH_KEYWORDS|METH_VARARGS, "MLMESetSignalStatusCallback(cb)\n\ntype: cb: ns3::Callback< void, unsigned int, ns3::Mac48Address, ns3::Mac48Address, ns3::dot11s::PeerLink::PeerState, ns3::dot11s::PeerLink::PeerState, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "TransmissionSuccess", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_TransmissionSuccess, METH_NOARGS, "TransmissionSuccess()\n\n" },
     {(char *) "TransmissionFailure", (PyCFunction) _wrap_PyNs3Dot11sPeerLink_TransmissionFailure, METH_NOARGS, "TransmissionFailure()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Dot11sPeerLink__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Dot11sPeerLink__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Dot11sPeerLink__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Dot11sPeerLink__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9333,7 +9333,7 @@ PyTypeObject PyNs3Dot11sPeerLink_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PeerLink()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sPeerLink__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sPeerLink__tp_clear,             /* tp_clear */
@@ -9490,13 +9490,13 @@ _wrap_PyNs3Dot11sPeerLinkCloseStart_SetPlinkCloseStart(PyNs3Dot11sPeerLinkCloseS
 }
 
 static PyMethodDef PyNs3Dot11sPeerLinkCloseStart_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetFields", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_GetFields, METH_NOARGS, "GetFields()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetPlinkCloseStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_SetPlinkCloseStart, METH_VARARGS|METH_KEYWORDS, "SetPlinkCloseStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkCloseStart::PlinkCloseStartFields" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetPlinkCloseStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkCloseStart_SetPlinkCloseStart, METH_KEYWORDS|METH_VARARGS, "SetPlinkCloseStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkCloseStart::PlinkCloseStartFields" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9597,7 +9597,7 @@ PyTypeObject PyNs3Dot11sPeerLinkCloseStart_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PeerLinkCloseStart()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sPeerLinkCloseStart__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sPeerLinkCloseStart__tp_clear,             /* tp_clear */
@@ -9982,13 +9982,13 @@ _wrap_PyNs3Dot11sPeerLinkConfirmStart_SetPlinkConfirmStart(PyNs3Dot11sPeerLinkCo
 }
 
 static PyMethodDef PyNs3Dot11sPeerLinkConfirmStart_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetFields", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_GetFields, METH_NOARGS, "GetFields()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetPlinkConfirmStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_SetPlinkConfirmStart, METH_VARARGS|METH_KEYWORDS, "SetPlinkConfirmStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkConfirmStart::PlinkConfirmStartFields" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetPlinkConfirmStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkConfirmStart_SetPlinkConfirmStart, METH_KEYWORDS|METH_VARARGS, "SetPlinkConfirmStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkConfirmStart::PlinkConfirmStartFields" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10089,7 +10089,7 @@ PyTypeObject PyNs3Dot11sPeerLinkConfirmStart_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PeerLinkConfirmStart()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sPeerLinkConfirmStart__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sPeerLinkConfirmStart__tp_clear,             /* tp_clear */
@@ -10574,13 +10574,13 @@ _wrap_PyNs3Dot11sPeerLinkOpenStart_SetPlinkOpenStart(PyNs3Dot11sPeerLinkOpenStar
 }
 
 static PyMethodDef PyNs3Dot11sPeerLinkOpenStart_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetFields", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_GetFields, METH_NOARGS, "GetFields()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetPlinkOpenStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_SetPlinkOpenStart, METH_VARARGS|METH_KEYWORDS, "SetPlinkOpenStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkOpenStart::PlinkOpenStartFields" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetPlinkOpenStart", (PyCFunction) _wrap_PyNs3Dot11sPeerLinkOpenStart_SetPlinkOpenStart, METH_KEYWORDS|METH_VARARGS, "SetPlinkOpenStart(fields)\n\ntype: fields: ns3::dot11s::PeerLinkOpenStart::PlinkOpenStartFields" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -10681,7 +10681,7 @@ PyTypeObject PyNs3Dot11sPeerLinkOpenStart_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PeerLinkOpenStart()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sPeerLinkOpenStart__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sPeerLinkOpenStart__tp_clear,             /* tp_clear */
@@ -11804,29 +11804,29 @@ _wrap_PyNs3Dot11sPeerManagementProtocol_TransmissionSuccess(PyNs3Dot11sPeerManag
 }
 
 static PyMethodDef PyNs3Dot11sPeerManagementProtocol_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "ConfigurationMismatch", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ConfigurationMismatch, METH_VARARGS|METH_KEYWORDS, "ConfigurationMismatch(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "ConfigurationMismatch", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ConfigurationMismatch, METH_KEYWORDS|METH_VARARGS, "ConfigurationMismatch(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
-    {(char *) "FindPeerLink", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_FindPeerLink, METH_VARARGS|METH_KEYWORDS, "FindPeerLink(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
+    {(char *) "FindPeerLink", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_FindPeerLink, METH_KEYWORDS|METH_VARARGS, "FindPeerLink(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBeaconCollisionAvoidance", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetBeaconCollisionAvoidance, METH_NOARGS, "GetBeaconCollisionAvoidance()\n\n" },
-    {(char *) "GetBeaconTimingElement", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetBeaconTimingElement, METH_VARARGS|METH_KEYWORDS, "GetBeaconTimingElement(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "GetBeaconTimingElement", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetBeaconTimingElement, METH_KEYWORDS|METH_VARARGS, "GetBeaconTimingElement(interface)\n\ntype: interface: uint32_t" },
     {(char *) "GetMeshId", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetMeshId, METH_NOARGS, "GetMeshId()\n\n" },
     {(char *) "GetNumberOfLinks", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetNumberOfLinks, METH_NOARGS, "GetNumberOfLinks()\n\n" },
     {(char *) "GetPeerLinks", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetPeerLinks, METH_NOARGS, "GetPeerLinks()\n\n" },
-    {(char *) "GetPeers", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetPeers, METH_VARARGS|METH_KEYWORDS, "GetPeers(interface)\n\ntype: interface: uint32_t" },
+    {(char *) "GetPeers", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetPeers, METH_KEYWORDS|METH_VARARGS, "GetPeers(interface)\n\ntype: interface: uint32_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_Install, METH_VARARGS|METH_KEYWORDS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
-    {(char *) "IsActiveLink", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_IsActiveLink, METH_VARARGS|METH_KEYWORDS, "IsActiveLink(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
-    {(char *) "NotifyBeaconSent", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_NotifyBeaconSent, METH_VARARGS|METH_KEYWORDS, "NotifyBeaconSent(interface, beaconInterval)\n\ntype: interface: uint32_t\ntype: beaconInterval: ns3::Time" },
-    {(char *) "ReceiveBeacon", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ReceiveBeacon, METH_VARARGS|METH_KEYWORDS, "ReceiveBeacon(interface, peerAddress, beaconInterval, beaconTiming)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address\ntype: beaconInterval: ns3::Time\ntype: beaconTiming: ns3::Ptr< ns3::dot11s::IeBeaconTiming >" },
-    {(char *) "ReceivePeerLinkFrame", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ReceivePeerLinkFrame, METH_VARARGS|METH_KEYWORDS, "ReceivePeerLinkFrame(interface, peerAddress, peerMeshPointAddress, aid, peerManagementElement, meshConfig)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address\ntype: peerMeshPointAddress: ns3::Mac48Address\ntype: aid: uint16_t\ntype: peerManagementElement: ns3::dot11s::IePeerManagement\ntype: meshConfig: ns3::dot11s::IeConfiguration" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_Install, METH_KEYWORDS|METH_VARARGS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "IsActiveLink", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_IsActiveLink, METH_KEYWORDS|METH_VARARGS, "IsActiveLink(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address" },
+    {(char *) "NotifyBeaconSent", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_NotifyBeaconSent, METH_KEYWORDS|METH_VARARGS, "NotifyBeaconSent(interface, beaconInterval)\n\ntype: interface: uint32_t\ntype: beaconInterval: ns3::Time" },
+    {(char *) "ReceiveBeacon", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ReceiveBeacon, METH_KEYWORDS|METH_VARARGS, "ReceiveBeacon(interface, peerAddress, beaconInterval, beaconTiming)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address\ntype: beaconInterval: ns3::Time\ntype: beaconTiming: ns3::Ptr< ns3::dot11s::IeBeaconTiming >" },
+    {(char *) "ReceivePeerLinkFrame", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ReceivePeerLinkFrame, METH_KEYWORDS|METH_VARARGS, "ReceivePeerLinkFrame(interface, peerAddress, peerMeshPointAddress, aid, peerManagementElement, meshConfig)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address\ntype: peerMeshPointAddress: ns3::Mac48Address\ntype: aid: uint16_t\ntype: peerManagementElement: ns3::dot11s::IePeerManagement\ntype: meshConfig: ns3::dot11s::IeConfiguration" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
-    {(char *) "SetBeaconCollisionAvoidance", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetBeaconCollisionAvoidance, METH_VARARGS|METH_KEYWORDS, "SetBeaconCollisionAvoidance(enable)\n\ntype: enable: bool" },
-    {(char *) "SetMeshId", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetMeshId, METH_VARARGS|METH_KEYWORDS, "SetMeshId(s)\n\ntype: s: std::string" },
-    {(char *) "SetPeerLinkStatusCallback", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetPeerLinkStatusCallback, METH_VARARGS|METH_KEYWORDS, "SetPeerLinkStatusCallback(cb)\n\ntype: cb: ns3::Callback< void, ns3::Mac48Address, ns3::Mac48Address, unsigned int, bool, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "TransmissionFailure", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_TransmissionFailure, METH_VARARGS|METH_KEYWORDS, "TransmissionFailure(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address const" },
-    {(char *) "TransmissionSuccess", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_TransmissionSuccess, METH_VARARGS|METH_KEYWORDS, "TransmissionSuccess(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address const" },
+    {(char *) "SetBeaconCollisionAvoidance", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetBeaconCollisionAvoidance, METH_KEYWORDS|METH_VARARGS, "SetBeaconCollisionAvoidance(enable)\n\ntype: enable: bool" },
+    {(char *) "SetMeshId", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetMeshId, METH_KEYWORDS|METH_VARARGS, "SetMeshId(s)\n\ntype: s: std::string" },
+    {(char *) "SetPeerLinkStatusCallback", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_SetPeerLinkStatusCallback, METH_KEYWORDS|METH_VARARGS, "SetPeerLinkStatusCallback(cb)\n\ntype: cb: ns3::Callback< void, ns3::Mac48Address, ns3::Mac48Address, unsigned int, bool, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "TransmissionFailure", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_TransmissionFailure, METH_KEYWORDS|METH_VARARGS, "TransmissionFailure(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address const" },
+    {(char *) "TransmissionSuccess", (PyCFunction) _wrap_PyNs3Dot11sPeerManagementProtocol_TransmissionSuccess, METH_KEYWORDS|METH_VARARGS, "TransmissionSuccess(interface, peerAddress)\n\ntype: interface: uint32_t\ntype: peerAddress: ns3::Mac48Address const" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Dot11sPeerManagementProtocol__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Dot11sPeerManagementProtocol__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
@@ -11894,7 +11894,7 @@ PyTypeObject PyNs3Dot11sPeerManagementProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PeerManagementProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sPeerManagementProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sPeerManagementProtocol__tp_clear,             /* tp_clear */
@@ -14549,8 +14549,8 @@ _wrap_PyNs3FlameFlameHeader__copy__(PyNs3FlameFlameHeader *self)
 }
 
 static PyMethodDef PyNs3FlameFlameHeader_methods[] = {
-    {(char *) "AddCost", (PyCFunction) _wrap_PyNs3FlameFlameHeader_AddCost, METH_VARARGS|METH_KEYWORDS, "AddCost(cost)\n\ntype: cost: uint8_t" },
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FlameFlameHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "AddCost", (PyCFunction) _wrap_PyNs3FlameFlameHeader_AddCost, METH_KEYWORDS|METH_VARARGS, "AddCost(cost)\n\ntype: cost: uint8_t" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FlameFlameHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetCost", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetCost, METH_NOARGS, "GetCost()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetOrigDst", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetOrigDst, METH_NOARGS, "GetOrigDst()\n\n" },
@@ -14559,11 +14559,11 @@ static PyMethodDef PyNs3FlameFlameHeader_methods[] = {
     {(char *) "GetSeqno", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetSeqno, METH_NOARGS, "GetSeqno()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlameFlameHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FlameFlameHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetOrigDst", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetOrigDst, METH_VARARGS|METH_KEYWORDS, "SetOrigDst(dst)\n\ntype: dst: ns3::Mac48Address" },
-    {(char *) "SetOrigSrc", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetOrigSrc, METH_VARARGS|METH_KEYWORDS, "SetOrigSrc(OrigSrc)\n\ntype: OrigSrc: ns3::Mac48Address" },
-    {(char *) "SetProtocol", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetProtocol, METH_VARARGS|METH_KEYWORDS, "SetProtocol(protocol)\n\ntype: protocol: uint16_t" },
-    {(char *) "SetSeqno", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetSeqno, METH_VARARGS|METH_KEYWORDS, "SetSeqno(seqno)\n\ntype: seqno: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FlameFlameHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetOrigDst", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetOrigDst, METH_KEYWORDS|METH_VARARGS, "SetOrigDst(dst)\n\ntype: dst: ns3::Mac48Address" },
+    {(char *) "SetOrigSrc", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetOrigSrc, METH_KEYWORDS|METH_VARARGS, "SetOrigSrc(OrigSrc)\n\ntype: OrigSrc: ns3::Mac48Address" },
+    {(char *) "SetProtocol", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetProtocol, METH_KEYWORDS|METH_VARARGS, "SetProtocol(protocol)\n\ntype: protocol: uint16_t" },
+    {(char *) "SetSeqno", (PyCFunction) _wrap_PyNs3FlameFlameHeader_SetSeqno, METH_KEYWORDS|METH_VARARGS, "SetSeqno(seqno)\n\ntype: seqno: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FlameFlameHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14665,7 +14665,7 @@ PyTypeObject PyNs3FlameFlameHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlameHeader(arg0)\nFlameHeader()",                        /* Documentation string */
     (traverseproc)PyNs3FlameFlameHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlameFlameHeader__tp_clear,             /* tp_clear */
@@ -14698,6 +14698,22 @@ PyTypeObject PyNs3FlameFlameHeader_Type = {
 
 
 PyObject *
+PyNs3FlameFlameProtocol__PythonHelper::_wrap_DoInitialize(PyNs3FlameFlameProtocol *self)
+{
+    PyObject *py_retval;
+    PyNs3FlameFlameProtocol__PythonHelper *helper = dynamic_cast< PyNs3FlameFlameProtocol__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FlameFlameProtocol__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FlameFlameProtocol *self)
 {
     PyObject *py_retval;
@@ -14724,22 +14740,6 @@ PyNs3FlameFlameProtocol__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlameFlameP
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FlameFlameProtocol__PythonHelper::_wrap_DoInitialize(PyNs3FlameFlameProtocol *self)
-{
-    PyObject *py_retval;
-    PyNs3FlameFlameProtocol__PythonHelper *helper = dynamic_cast< PyNs3FlameFlameProtocol__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15216,13 +15216,13 @@ static PyMethodDef PyNs3FlameFlameProtocol_methods[] = {
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_Install, METH_VARARGS|METH_KEYWORDS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
-    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_RemoveRoutingStuff, METH_VARARGS|METH_KEYWORDS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
-    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_RequestRoute, METH_VARARGS|METH_KEYWORDS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_Install, METH_KEYWORDS|METH_VARARGS, "Install(arg0)\n\ntype: arg0: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_RemoveRoutingStuff, METH_KEYWORDS|METH_VARARGS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
+    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_RequestRoute, METH_KEYWORDS|METH_VARARGS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3FlameFlameProtocol_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3FlameFlameProtocol__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FlameFlameProtocol__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlameFlameProtocol__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3FlameFlameProtocol__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -15288,7 +15288,7 @@ PyTypeObject PyNs3FlameFlameProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlameProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3FlameFlameProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlameFlameProtocol__tp_clear,             /* tp_clear */
@@ -15521,13 +15521,13 @@ _wrap_PyNs3FlameFlameProtocolMac__copy__(PyNs3FlameFlameProtocolMac *self)
 }
 
 static PyMethodDef PyNs3FlameFlameProtocolMac_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetChannelId", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_GetChannelId, METH_NOARGS, "GetChannelId()\n\n" },
-    {(char *) "Receive", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_Receive, METH_VARARGS|METH_KEYWORDS, "Receive(packet, header)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader const &" },
+    {(char *) "Receive", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_Receive, METH_KEYWORDS|METH_VARARGS, "Receive(packet, header)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader const &" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
-    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_SetParent, METH_VARARGS|METH_KEYWORDS, "SetParent(parent)\n\ntype: parent: ns3::Ptr< ns3::MeshWifiInterfaceMac >" },
-    {(char *) "UpdateBeacon", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_UpdateBeacon, METH_VARARGS|METH_KEYWORDS, "UpdateBeacon(beacon)\n\ntype: beacon: ns3::MeshWifiBeacon &" },
-    {(char *) "UpdateOutcomingFrame", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_UpdateOutcomingFrame, METH_VARARGS|METH_KEYWORDS, "UpdateOutcomingFrame(packet, header, from, to)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader &\ntype: from: ns3::Mac48Address\ntype: to: ns3::Mac48Address" },
+    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_SetParent, METH_KEYWORDS|METH_VARARGS, "SetParent(parent)\n\ntype: parent: ns3::Ptr< ns3::MeshWifiInterfaceMac >" },
+    {(char *) "UpdateBeacon", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_UpdateBeacon, METH_KEYWORDS|METH_VARARGS, "UpdateBeacon(beacon)\n\ntype: beacon: ns3::MeshWifiBeacon &" },
+    {(char *) "UpdateOutcomingFrame", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac_UpdateOutcomingFrame, METH_KEYWORDS|METH_VARARGS, "UpdateOutcomingFrame(packet, header, from, to)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader &\ntype: from: ns3::Mac48Address\ntype: to: ns3::Mac48Address" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FlameFlameProtocolMac__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15607,6 +15607,22 @@ PyTypeObject PyNs3FlameFlameProtocolMac_Type = {
 
 
 PyObject *
+PyNs3FlameFlameRtable__PythonHelper::_wrap_DoInitialize(PyNs3FlameFlameRtable *self)
+{
+    PyObject *py_retval;
+    PyNs3FlameFlameRtable__PythonHelper *helper = dynamic_cast< PyNs3FlameFlameRtable__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FlameFlameRtable__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FlameFlameRtable *self)
 {
     PyObject *py_retval;
@@ -15633,22 +15649,6 @@ PyNs3FlameFlameRtable__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlameFlameRta
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FlameFlameRtable__PythonHelper::_wrap_DoInitialize(PyNs3FlameFlameRtable *self)
-{
-    PyObject *py_retval;
-    PyNs3FlameFlameRtable__PythonHelper *helper = dynamic_cast< PyNs3FlameFlameRtable__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16067,13 +16067,13 @@ _wrap_PyNs3FlameFlameRtable_Lookup(PyNs3FlameFlameRtable *self, PyObject *args, 
 }
 
 static PyMethodDef PyNs3FlameFlameRtable_methods[] = {
-    {(char *) "AddPath", (PyCFunction) _wrap_PyNs3FlameFlameRtable_AddPath, METH_VARARGS|METH_KEYWORDS, "AddPath(destination, retransmitter, interface, cost, seqnum)\n\ntype: destination: ns3::Mac48Address const\ntype: retransmitter: ns3::Mac48Address const\ntype: interface: uint32_t const\ntype: cost: uint8_t const\ntype: seqnum: uint16_t const" },
+    {(char *) "AddPath", (PyCFunction) _wrap_PyNs3FlameFlameRtable_AddPath, METH_KEYWORDS|METH_VARARGS, "AddPath(destination, retransmitter, interface, cost, seqnum)\n\ntype: destination: ns3::Mac48Address const\ntype: retransmitter: ns3::Mac48Address const\ntype: interface: uint32_t const\ntype: cost: uint8_t const\ntype: seqnum: uint16_t const" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3FlameFlameRtable_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlameFlameRtable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Lookup", (PyCFunction) _wrap_PyNs3FlameFlameRtable_Lookup, METH_VARARGS|METH_KEYWORDS, "Lookup(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "Lookup", (PyCFunction) _wrap_PyNs3FlameFlameRtable_Lookup, METH_KEYWORDS|METH_VARARGS, "Lookup(destination)\n\ntype: destination: ns3::Mac48Address" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3FlameFlameRtable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FlameFlameRtable__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlameFlameRtable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3FlameFlameRtable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -16139,7 +16139,7 @@ PyTypeObject PyNs3FlameFlameRtable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlameRtable()",                        /* Documentation string */
     (traverseproc)PyNs3FlameFlameRtable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlameFlameRtable__tp_clear,             /* tp_clear */
@@ -16759,11 +16759,11 @@ _wrap_PyNs3FlameFlameTag__copy__(PyNs3FlameFlameTag *self)
 }
 
 static PyMethodDef PyNs3FlameFlameTag_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FlameFlameTag_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(i)\n\ntype: i: ns3::TagBuffer" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3FlameFlameTag_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(i)\n\ntype: i: ns3::TagBuffer" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3FlameFlameTag_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3FlameFlameTag_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlameFlameTag_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FlameFlameTag_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(i)\n\ntype: i: ns3::TagBuffer" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3FlameFlameTag_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(i)\n\ntype: i: ns3::TagBuffer" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FlameFlameTag__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16827,7 +16827,7 @@ PyTypeObject PyNs3FlameFlameTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlameTag(arg0)\nFlameTag(a)",                        /* Documentation string */
     (traverseproc)PyNs3FlameFlameTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlameFlameTag__tp_clear,             /* tp_clear */
@@ -18316,12 +18316,12 @@ _wrap_PyNs3MeshHelper__copy__(PyNs3MeshHelper *self)
 
 static PyMethodDef PyNs3MeshHelper_methods[] = {
     {(char *) "Default", (PyCFunction) _wrap_PyNs3MeshHelper_Default, METH_NOARGS|METH_STATIC, "Default()\n\n" },
-    {(char *) "SetMacType", (PyCFunction) _wrap_PyNs3MeshHelper_SetMacType, METH_VARARGS|METH_KEYWORDS, "SetMacType(n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetNumberOfInterfaces", (PyCFunction) _wrap_PyNs3MeshHelper_SetNumberOfInterfaces, METH_VARARGS|METH_KEYWORDS, "SetNumberOfInterfaces(nInterfaces)\n\ntype: nInterfaces: uint32_t" },
-    {(char *) "SetRemoteStationManager", (PyCFunction) _wrap_PyNs3MeshHelper_SetRemoteStationManager, METH_VARARGS|METH_KEYWORDS, "SetRemoteStationManager(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetSpreadInterfaceChannels", (PyCFunction) _wrap_PyNs3MeshHelper_SetSpreadInterfaceChannels, METH_VARARGS|METH_KEYWORDS, "SetSpreadInterfaceChannels(policy)\n\ntype: policy: ns3::MeshHelper::ChannelPolicy" },
-    {(char *) "SetStackInstaller", (PyCFunction) _wrap_PyNs3MeshHelper_SetStackInstaller, METH_VARARGS|METH_KEYWORDS, "SetStackInstaller(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
-    {(char *) "SetStandard", (PyCFunction) _wrap_PyNs3MeshHelper_SetStandard, METH_VARARGS|METH_KEYWORDS, "SetStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
+    {(char *) "SetMacType", (PyCFunction) _wrap_PyNs3MeshHelper_SetMacType, METH_KEYWORDS|METH_VARARGS, "SetMacType(n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetNumberOfInterfaces", (PyCFunction) _wrap_PyNs3MeshHelper_SetNumberOfInterfaces, METH_KEYWORDS|METH_VARARGS, "SetNumberOfInterfaces(nInterfaces)\n\ntype: nInterfaces: uint32_t" },
+    {(char *) "SetRemoteStationManager", (PyCFunction) _wrap_PyNs3MeshHelper_SetRemoteStationManager, METH_KEYWORDS|METH_VARARGS, "SetRemoteStationManager(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetSpreadInterfaceChannels", (PyCFunction) _wrap_PyNs3MeshHelper_SetSpreadInterfaceChannels, METH_KEYWORDS|METH_VARARGS, "SetSpreadInterfaceChannels(policy)\n\ntype: policy: ns3::MeshHelper::ChannelPolicy" },
+    {(char *) "SetStackInstaller", (PyCFunction) _wrap_PyNs3MeshHelper_SetStackInstaller, METH_KEYWORDS|METH_VARARGS, "SetStackInstaller(type, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: type: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
+    {(char *) "SetStandard", (PyCFunction) _wrap_PyNs3MeshHelper_SetStandard, METH_KEYWORDS|METH_VARARGS, "SetStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MeshHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -18595,9 +18595,9 @@ _wrap_PyNs3MeshWifiBeacon__copy__(PyNs3MeshWifiBeacon *self)
 }
 
 static PyMethodDef PyNs3MeshWifiBeacon_methods[] = {
-    {(char *) "AddInformationElement", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_AddInformationElement, METH_VARARGS|METH_KEYWORDS, "AddInformationElement(ie)\n\ntype: ie: ns3::Ptr< ns3::WifiInformationElement >" },
+    {(char *) "AddInformationElement", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_AddInformationElement, METH_KEYWORDS|METH_VARARGS, "AddInformationElement(ie)\n\ntype: ie: ns3::Ptr< ns3::WifiInformationElement >" },
     {(char *) "BeaconHeader", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_BeaconHeader, METH_NOARGS, "BeaconHeader()\n\n" },
-    {(char *) "CreateHeader", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_CreateHeader, METH_VARARGS|METH_KEYWORDS, "CreateHeader(address, mpAddress)\n\ntype: address: ns3::Mac48Address\ntype: mpAddress: ns3::Mac48Address" },
+    {(char *) "CreateHeader", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_CreateHeader, METH_KEYWORDS|METH_VARARGS, "CreateHeader(address, mpAddress)\n\ntype: address: ns3::Mac48Address\ntype: mpAddress: ns3::Mac48Address" },
     {(char *) "CreatePacket", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_CreatePacket, METH_NOARGS, "CreatePacket()\n\n" },
     {(char *) "GetBeaconInterval", (PyCFunction) _wrap_PyNs3MeshWifiBeacon_GetBeaconInterval, METH_NOARGS, "GetBeaconInterval()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MeshWifiBeacon__copy__, METH_NOARGS, NULL},
@@ -19287,7 +19287,7 @@ _wrap_PyNs3MeshInformationElementVector__copy__(PyNs3MeshInformationElementVecto
 }
 
 static PyMethodDef PyNs3MeshInformationElementVector_methods[] = {
-    {(char *) "DeserializeSingleIe", (PyCFunction) _wrap_PyNs3MeshInformationElementVector_DeserializeSingleIe, METH_VARARGS|METH_KEYWORDS, "DeserializeSingleIe(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "DeserializeSingleIe", (PyCFunction) _wrap_PyNs3MeshInformationElementVector_DeserializeSingleIe, METH_KEYWORDS|METH_VARARGS, "DeserializeSingleIe(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3MeshInformationElementVector_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MeshInformationElementVector_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MeshInformationElementVector__copy__, METH_NOARGS, NULL},
@@ -19353,7 +19353,7 @@ PyTypeObject PyNs3MeshInformationElementVector_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshInformationElementVector(arg0)\nMeshInformationElementVector()",                        /* Documentation string */
     (traverseproc)PyNs3MeshInformationElementVector__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MeshInformationElementVector__tp_clear,             /* tp_clear */
@@ -19532,9 +19532,9 @@ _wrap_PyNs3MeshL2RoutingProtocol_SetMeshPoint(PyNs3MeshL2RoutingProtocol *self, 
 static PyMethodDef PyNs3MeshL2RoutingProtocol_methods[] = {
     {(char *) "GetMeshPoint", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_GetMeshPoint, METH_NOARGS, "GetMeshPoint()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_RemoveRoutingStuff, METH_VARARGS|METH_KEYWORDS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
-    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_RequestRoute, METH_VARARGS|METH_KEYWORDS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetMeshPoint", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_SetMeshPoint, METH_VARARGS|METH_KEYWORDS, "SetMeshPoint(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "RemoveRoutingStuff", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_RemoveRoutingStuff, METH_KEYWORDS|METH_VARARGS, "RemoveRoutingStuff(fromIface, source, destination, packet, protocolType)\n\ntype: fromIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: protocolType: uint16_t &" },
+    {(char *) "RequestRoute", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_RequestRoute, METH_KEYWORDS|METH_VARARGS, "RequestRoute(sourceIface, source, destination, packet, protocolType, routeReply)\n\ntype: sourceIface: uint32_t\ntype: source: ns3::Mac48Address const\ntype: destination: ns3::Mac48Address const\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: protocolType: uint16_t\ntype: routeReply: ns3::Callback< void, bool, ns3::Ptr< ns3::Packet >, ns3::Mac48Address, ns3::Mac48Address, unsigned short, unsigned int, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetMeshPoint", (PyCFunction) _wrap_PyNs3MeshL2RoutingProtocol_SetMeshPoint, METH_KEYWORDS|METH_VARARGS, "SetMeshPoint(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -19597,7 +19597,7 @@ PyTypeObject PyNs3MeshL2RoutingProtocol_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshL2RoutingProtocol(arg0)\nMeshL2RoutingProtocol()",                        /* Documentation string */
     (traverseproc)PyNs3MeshL2RoutingProtocol__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MeshL2RoutingProtocol__tp_clear,             /* tp_clear */
@@ -19673,7 +19673,7 @@ _wrap_PyNs3MeshStack_InstallStack(PyNs3MeshStack *self, PyObject *args, PyObject
 
 static PyMethodDef PyNs3MeshStack_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MeshStack_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3MeshStack_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3MeshStack_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -19736,7 +19736,7 @@ PyTypeObject PyNs3MeshStack_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshStack(arg0)\nMeshStack()",                        /* Documentation string */
     (traverseproc)PyNs3MeshStack__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MeshStack__tp_clear,             /* tp_clear */
@@ -19871,11 +19871,11 @@ _wrap_PyNs3MeshWifiInterfaceMacPlugin_UpdateOutcomingFrame(PyNs3MeshWifiInterfac
 }
 
 static PyMethodDef PyNs3MeshWifiInterfaceMacPlugin_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "Receive", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_Receive, METH_VARARGS|METH_KEYWORDS, "Receive(packet, header)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader const &" },
-    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_SetParent, METH_VARARGS|METH_KEYWORDS, "SetParent(parent)\n\ntype: parent: ns3::Ptr< ns3::MeshWifiInterfaceMac >" },
-    {(char *) "UpdateBeacon", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_UpdateBeacon, METH_VARARGS|METH_KEYWORDS, "UpdateBeacon(beacon)\n\ntype: beacon: ns3::MeshWifiBeacon &" },
-    {(char *) "UpdateOutcomingFrame", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_UpdateOutcomingFrame, METH_VARARGS|METH_KEYWORDS, "UpdateOutcomingFrame(packet, header, from, to)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader &\ntype: from: ns3::Mac48Address\ntype: to: ns3::Mac48Address" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "Receive", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_Receive, METH_KEYWORDS|METH_VARARGS, "Receive(packet, header)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader const &" },
+    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_SetParent, METH_KEYWORDS|METH_VARARGS, "SetParent(parent)\n\ntype: parent: ns3::Ptr< ns3::MeshWifiInterfaceMac >" },
+    {(char *) "UpdateBeacon", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_UpdateBeacon, METH_KEYWORDS|METH_VARARGS, "UpdateBeacon(beacon)\n\ntype: beacon: ns3::MeshWifiBeacon &" },
+    {(char *) "UpdateOutcomingFrame", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMacPlugin_UpdateOutcomingFrame, METH_KEYWORDS|METH_VARARGS, "UpdateOutcomingFrame(packet, header, from, to)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: header: ns3::WifiMacHeader &\ntype: from: ns3::Mac48Address\ntype: to: ns3::Mac48Address" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -20215,7 +20215,7 @@ _wrap_PyNs3Dot11sStack__copy__(PyNs3Dot11sStack *self)
 static PyMethodDef PyNs3Dot11sStack_methods[] = {
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3Dot11sStack_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Dot11sStack_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3Dot11sStack_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3Dot11sStack_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Dot11sStack__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20279,7 +20279,7 @@ PyTypeObject PyNs3Dot11sStack_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Dot11sStack(arg0)\nDot11sStack()",                        /* Documentation string */
     (traverseproc)PyNs3Dot11sStack__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Dot11sStack__tp_clear,             /* tp_clear */
@@ -20445,7 +20445,7 @@ _wrap_PyNs3FlameStack__copy__(PyNs3FlameStack *self)
 static PyMethodDef PyNs3FlameStack_methods[] = {
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3FlameStack_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlameStack_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3FlameStack_InstallStack, METH_VARARGS|METH_KEYWORDS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
+    {(char *) "InstallStack", (PyCFunction) _wrap_PyNs3FlameStack_InstallStack, METH_KEYWORDS|METH_VARARGS, "InstallStack(mp)\n\ntype: mp: ns3::Ptr< ns3::MeshPointDevice >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FlameStack__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -20509,7 +20509,7 @@ PyTypeObject PyNs3FlameStack_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlameStack(arg0)\nFlameStack()",                        /* Documentation string */
     (traverseproc)PyNs3FlameStack__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlameStack__tp_clear,             /* tp_clear */
@@ -20542,6 +20542,22 @@ PyTypeObject PyNs3FlameStack_Type = {
 
 
 PyObject *
+PyNs3MeshPointDevice__PythonHelper::_wrap_DoInitialize(PyNs3MeshPointDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3MeshPointDevice__PythonHelper *helper = dynamic_cast< PyNs3MeshPointDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3MeshPointDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MeshPointDevice *self)
 {
     PyObject *py_retval;
@@ -20568,22 +20584,6 @@ PyNs3MeshPointDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MeshPointDevic
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MeshPointDevice__PythonHelper::_wrap_DoInitialize(PyNs3MeshPointDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3MeshPointDevice__PythonHelper *helper = dynamic_cast< PyNs3MeshPointDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -22813,17 +22813,17 @@ _wrap_PyNs3MeshPointDevice__copy__(PyNs3MeshPointDevice *self)
 }
 
 static PyMethodDef PyNs3MeshPointDevice_methods[] = {
-    {(char *) "AddInterface", (PyCFunction) _wrap_PyNs3MeshPointDevice_AddInterface, METH_VARARGS|METH_KEYWORDS, "AddInterface(port)\n\ntype: port: ns3::Ptr< ns3::NetDevice >" },
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddInterface", (PyCFunction) _wrap_PyNs3MeshPointDevice_AddInterface, METH_KEYWORDS|METH_VARARGS, "AddInterface(port)\n\ntype: port: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "DoDispose", (PyCFunction) _wrap_PyNs3MeshPointDevice_DoDispose, METH_NOARGS, "DoDispose()\n\n" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
-    {(char *) "GetInterface", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetInterface, METH_VARARGS|METH_KEYWORDS, "GetInterface(id)\n\ntype: id: uint32_t" },
+    {(char *) "GetInterface", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetInterface, METH_KEYWORDS|METH_VARARGS, "GetInterface(id)\n\ntype: id: uint32_t" },
     {(char *) "GetInterfaces", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetInterfaces, METH_NOARGS, "GetInterfaces()\n\n" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "GetNInterfaces", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetNInterfaces, METH_NOARGS, "GetNInterfaces()\n\n" },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
     {(char *) "GetRoutingProtocol", (PyCFunction) _wrap_PyNs3MeshPointDevice_GetRoutingProtocol, METH_NOARGS, "GetRoutingProtocol()\n\n" },
@@ -22835,19 +22835,19 @@ static PyMethodDef PyNs3MeshPointDevice_methods[] = {
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3MeshPointDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3MeshPointDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3MeshPointDevice_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3MeshPointDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3MeshPointDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(a)\n\ntype: a: ns3::Address" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetRoutingProtocol", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetRoutingProtocol, METH_VARARGS|METH_KEYWORDS, "SetRoutingProtocol(protocol)\n\ntype: protocol: ns3::Ptr< ns3::MeshL2RoutingProtocol >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3MeshPointDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3MeshPointDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(a)\n\ntype: a: ns3::Address" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetRoutingProtocol", (PyCFunction) _wrap_PyNs3MeshPointDevice_SetRoutingProtocol, METH_KEYWORDS|METH_VARARGS, "SetRoutingProtocol(protocol)\n\ntype: protocol: ns3::Ptr< ns3::MeshL2RoutingProtocol >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3MeshPointDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3MeshPointDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MeshPointDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MeshPointDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3MeshPointDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MeshPointDevice__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -22914,7 +22914,7 @@ PyTypeObject PyNs3MeshPointDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshPointDevice(arg0)\nMeshPointDevice()",                        /* Documentation string */
     (traverseproc)PyNs3MeshPointDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MeshPointDevice__tp_clear,             /* tp_clear */
@@ -23421,30 +23421,30 @@ _wrap_PyNs3MeshWifiInterfaceMac_SwitchFrequencyChannel(PyNs3MeshWifiInterfaceMac
 }
 
 static PyMethodDef PyNs3MeshWifiInterfaceMac_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "CheckSupportedRates", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_CheckSupportedRates, METH_VARARGS|METH_KEYWORDS, "CheckSupportedRates(rates)\n\ntype: rates: ns3::SupportedRates" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_Enqueue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "FinishConfigureStandard", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_FinishConfigureStandard, METH_VARARGS|METH_KEYWORDS, "FinishConfigureStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "CheckSupportedRates", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_CheckSupportedRates, METH_KEYWORDS|METH_VARARGS, "CheckSupportedRates(rates)\n\ntype: rates: ns3::SupportedRates" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_Enqueue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, "FinishConfigureStandard(standard)\n\ntype: standard: ns3::WifiPhyStandard" },
     {(char *) "GetBeaconInterval", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetBeaconInterval, METH_NOARGS, "GetBeaconInterval()\n\n" },
     {(char *) "GetFrequencyChannel", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetFrequencyChannel, METH_NOARGS, "GetFrequencyChannel()\n\n" },
-    {(char *) "GetLinkMetric", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetLinkMetric, METH_VARARGS|METH_KEYWORDS, "GetLinkMetric(peerAddress)\n\ntype: peerAddress: ns3::Mac48Address" },
+    {(char *) "GetLinkMetric", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetLinkMetric, METH_KEYWORDS|METH_VARARGS, "GetLinkMetric(peerAddress)\n\ntype: peerAddress: ns3::Mac48Address" },
     {(char *) "GetMeshPointAddress", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetMeshPointAddress, METH_NOARGS, "GetMeshPointAddress()\n\n" },
     {(char *) "GetPhyStandard", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetPhyStandard, METH_NOARGS, "GetPhyStandard()\n\n" },
     {(char *) "GetSupportedRates", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetSupportedRates, METH_NOARGS, "GetSupportedRates()\n\n" },
     {(char *) "GetTbtt", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetTbtt, METH_NOARGS, "GetTbtt()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "InstallPlugin", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_InstallPlugin, METH_VARARGS|METH_KEYWORDS, "InstallPlugin(plugin)\n\ntype: plugin: ns3::Ptr< ns3::MeshWifiInterfaceMacPlugin >" },
+    {(char *) "InstallPlugin", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_InstallPlugin, METH_KEYWORDS|METH_VARARGS, "InstallPlugin(plugin)\n\ntype: plugin: ns3::Ptr< ns3::MeshWifiInterfaceMacPlugin >" },
     {(char *) "ResetStats", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_ResetStats, METH_NOARGS, "ResetStats()\n\n" },
-    {(char *) "SendManagementFrame", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SendManagementFrame, METH_VARARGS|METH_KEYWORDS, "SendManagementFrame(frame, hdr)\n\ntype: frame: ns3::Ptr< ns3::Packet >\ntype: hdr: ns3::WifiMacHeader const &" },
-    {(char *) "SetBeaconGeneration", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetBeaconGeneration, METH_VARARGS|METH_KEYWORDS, "SetBeaconGeneration(enable)\n\ntype: enable: bool" },
-    {(char *) "SetBeaconInterval", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetBeaconInterval, METH_VARARGS|METH_KEYWORDS, "SetBeaconInterval(interval)\n\ntype: interval: ns3::Time" },
-    {(char *) "SetLinkMetricCallback", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetLinkMetricCallback, METH_VARARGS|METH_KEYWORDS, "SetLinkMetricCallback(cb)\n\ntype: cb: ns3::Callback< unsigned int, ns3::Mac48Address, ns3::Ptr< ns3::MeshWifiInterfaceMac >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetLinkUpCallback", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetLinkUpCallback, METH_VARARGS|METH_KEYWORDS, "SetLinkUpCallback(linkUp)\n\ntype: linkUp: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetMeshPointAddress", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetMeshPointAddress, METH_VARARGS|METH_KEYWORDS, "SetMeshPointAddress(arg0)\n\ntype: arg0: ns3::Mac48Address" },
-    {(char *) "SetRandomStartDelay", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetRandomStartDelay, METH_VARARGS|METH_KEYWORDS, "SetRandomStartDelay(interval)\n\ntype: interval: ns3::Time" },
-    {(char *) "ShiftTbtt", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_ShiftTbtt, METH_VARARGS|METH_KEYWORDS, "ShiftTbtt(shift)\n\ntype: shift: ns3::Time" },
+    {(char *) "SendManagementFrame", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SendManagementFrame, METH_KEYWORDS|METH_VARARGS, "SendManagementFrame(frame, hdr)\n\ntype: frame: ns3::Ptr< ns3::Packet >\ntype: hdr: ns3::WifiMacHeader const &" },
+    {(char *) "SetBeaconGeneration", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetBeaconGeneration, METH_KEYWORDS|METH_VARARGS, "SetBeaconGeneration(enable)\n\ntype: enable: bool" },
+    {(char *) "SetBeaconInterval", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetBeaconInterval, METH_KEYWORDS|METH_VARARGS, "SetBeaconInterval(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "SetLinkMetricCallback", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetLinkMetricCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkMetricCallback(cb)\n\ntype: cb: ns3::Callback< unsigned int, ns3::Mac48Address, ns3::Ptr< ns3::MeshWifiInterfaceMac >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetLinkUpCallback", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetLinkUpCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkUpCallback(linkUp)\n\ntype: linkUp: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetMeshPointAddress", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetMeshPointAddress, METH_KEYWORDS|METH_VARARGS, "SetMeshPointAddress(arg0)\n\ntype: arg0: ns3::Mac48Address" },
+    {(char *) "SetRandomStartDelay", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SetRandomStartDelay, METH_KEYWORDS|METH_VARARGS, "SetRandomStartDelay(interval)\n\ntype: interval: ns3::Time" },
+    {(char *) "ShiftTbtt", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_ShiftTbtt, METH_KEYWORDS|METH_VARARGS, "ShiftTbtt(shift)\n\ntype: shift: ns3::Time" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "SwitchFrequencyChannel", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SwitchFrequencyChannel, METH_VARARGS|METH_KEYWORDS, "SwitchFrequencyChannel(new_id)\n\ntype: new_id: uint16_t" },
+    {(char *) "SwitchFrequencyChannel", (PyCFunction) _wrap_PyNs3MeshWifiInterfaceMac_SwitchFrequencyChannel, METH_KEYWORDS|METH_VARARGS, "SwitchFrequencyChannel(new_id)\n\ntype: new_id: uint16_t" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -23507,7 +23507,7 @@ PyTypeObject PyNs3MeshWifiInterfaceMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MeshWifiInterfaceMac()",                        /* Documentation string */
     (traverseproc)PyNs3MeshWifiInterfaceMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MeshWifiInterfaceMac__tp_clear,             /* tp_clear */

@@ -54,14 +54,19 @@ public:
   /**
    * MAC SAP
    * 
-   * \param txOpParams the LteMacSapUser::TxOpportunityParameters
+   * \param bytes number of bytes
+   * \param layer the layer
+   * \param harqId HARQ ID
+   * \param componentCarrierId component carrier ID
+   * \param rnti the RNTI
+   * \param lcid the LCID
    */
-  virtual void DoNotifyTxOpportunity (LteMacSapUser::TxOpportunityParameters txOpParams);
+  virtual void DoNotifyTxOpportunity (uint32_t bytes, uint8_t layer, uint8_t harqId, uint8_t componentCarrierId, uint16_t rnti, uint8_t lcid);
   /**
    * Notify HARQ deliver failure
    */
   virtual void DoNotifyHarqDeliveryFailure ();
-  virtual void DoReceivePdu (LteMacSapUser::ReceivePduParameters rxPduParams);
+  virtual void DoReceivePdu (Ptr<Packet> p, uint16_t rnti, uint8_t lcid);
 
 private:
   /// Expire RBS timer function

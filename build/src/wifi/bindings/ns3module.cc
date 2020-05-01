@@ -9048,7 +9048,7 @@ PyTypeObject PyNs3WifiHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiHelper(arg0)\nWifiHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WifiHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiHelper__tp_clear,             /* tp_clear */
@@ -9397,7 +9397,7 @@ PyTypeObject PyNs3WifiMacHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiMacHelper(arg0)\nWifiMacHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WifiMacHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiMacHelper__tp_clear,             /* tp_clear */
@@ -10252,6 +10252,39 @@ PyTypeObject PyNs3WifiModeFactory_Type = {
 
 
 PyObject *
+PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffTxEvent(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3PcapFileWrapper *file;
+    ns3::PcapFileWrapper *file_ptr;
+    PyNs3Packet *packet;
+    ns3::Packet *packet_ptr;
+    int channelFreqMhz;
+    PyNs3WifiTxVector *txVector;
+    PyNs3MpduInfo *aMpdu;
+    PyNs3WifiPhyHelper__PythonHelper *helper = dynamic_cast< PyNs3WifiPhyHelper__PythonHelper* >(self->obj);
+    const char *keywords[] = {"file", "packet", "channelFreqMhz", "txVector", "aMpdu", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!iO!O!", (char **) keywords, &PyNs3PcapFileWrapper_Type, &file, &PyNs3Packet_Type, &packet, &channelFreqMhz, &PyNs3WifiTxVector_Type, &txVector, &PyNs3MpduInfo_Type, &aMpdu)) {
+        return NULL;
+    }
+    file_ptr = (file ? file->obj : NULL);
+    packet_ptr = (packet ? packet->obj : NULL);
+    if (channelFreqMhz > 0xffff) {
+        PyErr_SetString(PyExc_ValueError, "Out of range");
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method PcapSniffTxEvent of class WifiPhyHelper is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->PcapSniffTxEvent__parent_caller(ns3::Ptr< ns3::PcapFileWrapper  > (file_ptr), ns3::Ptr< ns3::Packet  > (packet_ptr), channelFreqMhz, *((PyNs3WifiTxVector *) txVector)->obj, *((PyNs3MpduInfo *) aMpdu)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffRxEvent(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -10280,39 +10313,6 @@ PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffRxEvent(PyNs3WifiPhyHelper *sel
         return NULL;
     }
     helper->PcapSniffRxEvent__parent_caller(ns3::Ptr< ns3::PcapFileWrapper  > (file_ptr), ns3::Ptr< ns3::Packet  > (packet_ptr), channelFreqMhz, *((PyNs3WifiTxVector *) txVector)->obj, *((PyNs3MpduInfo *) aMpdu)->obj, *((PyNs3SignalNoiseDbm *) signalNoise)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffTxEvent(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3PcapFileWrapper *file;
-    ns3::PcapFileWrapper *file_ptr;
-    PyNs3Packet *packet;
-    ns3::Packet *packet_ptr;
-    int channelFreqMhz;
-    PyNs3WifiTxVector *txVector;
-    PyNs3MpduInfo *aMpdu;
-    PyNs3WifiPhyHelper__PythonHelper *helper = dynamic_cast< PyNs3WifiPhyHelper__PythonHelper* >(self->obj);
-    const char *keywords[] = {"file", "packet", "channelFreqMhz", "txVector", "aMpdu", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!iO!O!", (char **) keywords, &PyNs3PcapFileWrapper_Type, &file, &PyNs3Packet_Type, &packet, &channelFreqMhz, &PyNs3WifiTxVector_Type, &txVector, &PyNs3MpduInfo_Type, &aMpdu)) {
-        return NULL;
-    }
-    file_ptr = (file ? file->obj : NULL);
-    packet_ptr = (packet ? packet->obj : NULL);
-    if (channelFreqMhz > 0xffff) {
-        PyErr_SetString(PyExc_ValueError, "Out of range");
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method PcapSniffTxEvent of class WifiPhyHelper is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->PcapSniffTxEvent__parent_caller(ns3::Ptr< ns3::PcapFileWrapper  > (file_ptr), ns3::Ptr< ns3::Packet  > (packet_ptr), channelFreqMhz, *((PyNs3WifiTxVector *) txVector)->obj, *((PyNs3MpduInfo *) aMpdu)->obj);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -10844,78 +10844,6 @@ _wrap_PyNs3WifiPhyHelper_SetPcapDataLinkType(PyNs3WifiPhyHelper *self, PyObject 
 
 
 PyObject *
-_wrap_PyNs3WifiPhyHelper_EnableAsciiAll__0(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    const char *prefix;
-    Py_ssize_t prefix_len;
-    const char *keywords[] = {"prefix", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-_wrap_PyNs3WifiPhyHelper_EnableAsciiAll__1(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
-{
-    PyObject *py_retval;
-    PyNs3OutputStreamWrapper *stream;
-    ns3::OutputStreamWrapper *stream_ptr;
-    const char *keywords[] = {"stream", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
-        {
-            PyObject *exc_type, *traceback;
-            PyErr_Fetch(&exc_type, return_exception, &traceback);
-            Py_XDECREF(exc_type);
-            Py_XDECREF(traceback);
-        }
-        return NULL;
-    }
-    stream_ptr = (stream ? stream->obj : NULL);
-    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject * _wrap_PyNs3WifiPhyHelper_EnableAsciiAll(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject * retval;
-    PyObject *error_list;
-    PyObject *exceptions[2] = {0,};
-    retval = _wrap_PyNs3WifiPhyHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
-    if (!exceptions[0]) {
-        return retval;
-    }
-    retval = _wrap_PyNs3WifiPhyHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
-    if (!exceptions[1]) {
-        Py_DECREF(exceptions[0]);
-        return retval;
-    }
-    error_list = PyList_New(2);
-    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
-    Py_DECREF(exceptions[0]);
-    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
-    Py_DECREF(exceptions[1]);
-    PyErr_SetObject(PyExc_TypeError, error_list);
-    Py_DECREF(error_list);
-    return NULL;
-}
-
-
-PyObject *
 _wrap_PyNs3WifiPhyHelper_EnablePcap__0(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
 {
     PyObject *py_retval;
@@ -11106,6 +11034,78 @@ PyObject * _wrap_PyNs3WifiPhyHelper_EnablePcap(PyNs3WifiPhyHelper *self, PyObjec
     Py_DECREF(exceptions[3]);
     PyList_SET_ITEM(error_list, 4, PyObject_Str(exceptions[4]));
     Py_DECREF(exceptions[4]);
+    PyErr_SetObject(PyExc_TypeError, error_list);
+    Py_DECREF(error_list);
+    return NULL;
+}
+
+
+PyObject *
+_wrap_PyNs3WifiPhyHelper_EnableAsciiAll__0(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    const char *prefix;
+    Py_ssize_t prefix_len;
+    const char *keywords[] = {"prefix", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "s#", (char **) keywords, &prefix, &prefix_len)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    self->obj->EnableAsciiAll(std::string(prefix, prefix_len));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+_wrap_PyNs3WifiPhyHelper_EnableAsciiAll__1(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs, PyObject **return_exception)
+{
+    PyObject *py_retval;
+    PyNs3OutputStreamWrapper *stream;
+    ns3::OutputStreamWrapper *stream_ptr;
+    const char *keywords[] = {"stream", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3OutputStreamWrapper_Type, &stream)) {
+        {
+            PyObject *exc_type, *traceback;
+            PyErr_Fetch(&exc_type, return_exception, &traceback);
+            Py_XDECREF(exc_type);
+            Py_XDECREF(traceback);
+        }
+        return NULL;
+    }
+    stream_ptr = (stream ? stream->obj : NULL);
+    self->obj->EnableAsciiAll(ns3::Ptr< ns3::OutputStreamWrapper  > (stream_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject * _wrap_PyNs3WifiPhyHelper_EnableAsciiAll(PyNs3WifiPhyHelper *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject * retval;
+    PyObject *error_list;
+    PyObject *exceptions[2] = {0,};
+    retval = _wrap_PyNs3WifiPhyHelper_EnableAsciiAll__0(self, args, kwargs, &exceptions[0]);
+    if (!exceptions[0]) {
+        return retval;
+    }
+    retval = _wrap_PyNs3WifiPhyHelper_EnableAsciiAll__1(self, args, kwargs, &exceptions[1]);
+    if (!exceptions[1]) {
+        Py_DECREF(exceptions[0]);
+        return retval;
+    }
+    error_list = PyList_New(2);
+    PyList_SET_ITEM(error_list, 0, PyObject_Str(exceptions[0]));
+    Py_DECREF(exceptions[0]);
+    PyList_SET_ITEM(error_list, 1, PyObject_Str(exceptions[1]));
+    Py_DECREF(exceptions[1]);
     PyErr_SetObject(PyExc_TypeError, error_list);
     Py_DECREF(error_list);
     return NULL;
@@ -11516,10 +11516,10 @@ static PyMethodDef PyNs3WifiPhyHelper_methods[] = {
     {(char *) "Set", (PyCFunction) _wrap_PyNs3WifiPhyHelper_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, v)\n\ntype: name: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "SetErrorRateModel", (PyCFunction) _wrap_PyNs3WifiPhyHelper_SetErrorRateModel, METH_KEYWORDS|METH_VARARGS, "SetErrorRateModel(name, n0, v0, n1, v1, n2, v2, n3, v3, n4, v4, n5, v5, n6, v6, n7, v7)\n\ntype: name: std::string\ntype: n0: std::string\ntype: v0: ns3::AttributeValue const &\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &\ntype: n5: std::string\ntype: v5: ns3::AttributeValue const &\ntype: n6: std::string\ntype: v6: ns3::AttributeValue const &\ntype: n7: std::string\ntype: v7: ns3::AttributeValue const &" },
     {(char *) "SetPcapDataLinkType", (PyCFunction) _wrap_PyNs3WifiPhyHelper_SetPcapDataLinkType, METH_KEYWORDS|METH_VARARGS, "SetPcapDataLinkType(dlt)\n\ntype: dlt: ns3::WifiPhyHelper::SupportedPcapDataLinkTypes" },
-    {(char *) "PcapSniffRxEvent", (PyCFunction) PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffRxEvent, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "PcapSniffTxEvent", (PyCFunction) PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffTxEvent, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WifiPhyHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "PcapSniffRxEvent", (PyCFunction) PyNs3WifiPhyHelper__PythonHelper::_wrap_PcapSniffRxEvent, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3WifiPhyHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3WifiPhyHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3WifiPhyHelper_EnableAscii, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3WifiPhyHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
     {NULL, NULL, 0, NULL}
@@ -11587,7 +11587,7 @@ PyTypeObject PyNs3WifiPhyHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiPhyHelper(arg0)\nWifiPhyHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WifiPhyHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiPhyHelper__tp_clear,             /* tp_clear */
@@ -12377,7 +12377,7 @@ PyTypeObject PyNs3WifiPhyListener_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiPhyListener(arg0)\nWifiPhyListener()",                        /* Documentation string */
     (traverseproc)PyNs3WifiPhyListener__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiPhyListener__tp_clear,             /* tp_clear */
@@ -12718,7 +12718,7 @@ PyTypeObject PyNs3WifiPhyTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiPhyTag(txVector, mpdutype, frameComplete)\nWifiPhyTag(arg0)\nWifiPhyTag()",                        /* Documentation string */
     (traverseproc)PyNs3WifiPhyTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiPhyTag__tp_clear,             /* tp_clear */
@@ -13149,7 +13149,7 @@ PyTypeObject PyNs3WifiRadioEnergyModelHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiRadioEnergyModelHelper(arg0)\nWifiRadioEnergyModelHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WifiRadioEnergyModelHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiRadioEnergyModelHelper__tp_clear,             /* tp_clear */
@@ -14022,7 +14022,7 @@ PyTypeObject PyNs3WifiRadioEnergyModelPhyListener_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiRadioEnergyModelPhyListener(arg0)\nWifiRadioEnergyModelPhyListener()",                        /* Documentation string */
     (traverseproc)PyNs3WifiRadioEnergyModelPhyListener__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiRadioEnergyModelPhyListener__tp_clear,             /* tp_clear */
@@ -17217,7 +17217,7 @@ PyTypeObject PyNs3YansWifiPhyHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "YansWifiPhyHelper(arg0)\nYansWifiPhyHelper()",                        /* Documentation string */
     (traverseproc)PyNs3YansWifiPhyHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3YansWifiPhyHelper__tp_clear,             /* tp_clear */
@@ -17545,7 +17545,7 @@ PyTypeObject PyNs3AmpduTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AmpduTag(arg0)\nAmpduTag()",                        /* Documentation string */
     (traverseproc)PyNs3AmpduTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AmpduTag__tp_clear,             /* tp_clear */
@@ -18015,7 +18015,7 @@ PyTypeObject PyNs3MgtAddBaRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtAddBaRequestHeader(arg0)\nMgtAddBaRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtAddBaRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtAddBaRequestHeader__tp_clear,             /* tp_clear */
@@ -18485,7 +18485,7 @@ PyTypeObject PyNs3MgtAddBaResponseHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtAddBaResponseHeader(arg0)\nMgtAddBaResponseHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtAddBaResponseHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtAddBaResponseHeader__tp_clear,             /* tp_clear */
@@ -19029,7 +19029,7 @@ PyTypeObject PyNs3MgtAssocRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtAssocRequestHeader(arg0)\nMgtAssocRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtAssocRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtAssocRequestHeader__tp_clear,             /* tp_clear */
@@ -19739,7 +19739,7 @@ PyTypeObject PyNs3MgtAssocResponseHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtAssocResponseHeader(arg0)\nMgtAssocResponseHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtAssocResponseHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtAssocResponseHeader__tp_clear,             /* tp_clear */
@@ -20071,7 +20071,7 @@ PyTypeObject PyNs3MgtDelBaHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtDelBaHeader(arg0)\nMgtDelBaHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtDelBaHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtDelBaHeader__tp_clear,             /* tp_clear */
@@ -20545,7 +20545,7 @@ PyTypeObject PyNs3MgtProbeRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtProbeRequestHeader(arg0)\nMgtProbeRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtProbeRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtProbeRequestHeader__tp_clear,             /* tp_clear */
@@ -21350,7 +21350,7 @@ PyTypeObject PyNs3MgtProbeResponseHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtProbeResponseHeader(arg0)\nMgtProbeResponseHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtProbeResponseHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtProbeResponseHeader__tp_clear,             /* tp_clear */
@@ -21912,7 +21912,7 @@ PyTypeObject PyNs3MgtReassocRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtReassocRequestHeader(arg0)\nMgtReassocRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtReassocRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtReassocRequestHeader__tp_clear,             /* tp_clear */
@@ -23823,7 +23823,7 @@ PyTypeObject PyNs3SnrTag_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SnrTag(arg0)\nSnrTag()",                        /* Documentation string */
     (traverseproc)PyNs3SnrTag__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SnrTag__tp_clear,             /* tp_clear */
@@ -24401,7 +24401,7 @@ PyTypeObject PyNs3SpectrumWifiPhyHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumWifiPhyHelper(arg0)\nSpectrumWifiPhyHelper()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumWifiPhyHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumWifiPhyHelper__tp_clear,             /* tp_clear */
@@ -24434,6 +24434,116 @@ PyTypeObject PyNs3SpectrumWifiPhyHelper_Type = {
 
 
 PyObject *
+PyNs3Txop__PythonHelper::_wrap_NotifyAccessGranted(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyAccessGranted of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyAccessGranted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_NeedRtsRetransmission(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3Packet *packet;
+    ns3::Packet *packet_ptr;
+    PyNs3WifiMacHeader *hdr;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    const char *keywords[] = {"packet", "hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    packet_ptr = (packet ? packet->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NeedRtsRetransmission of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->NeedRtsRetransmission__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), *((PyNs3WifiMacHeader *) hdr)->obj);
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_DoDispose(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_UpdateFailedCw(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method UpdateFailedCw of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->UpdateFailedCw__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_GetBackoffSlots(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    uint32_t retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetBackoffSlots of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetBackoffSlots__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_UpdateBackoffSlotsNow(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    unsigned int nSlots;
+    PyNs3Time *backoffUpdateBound;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    const char *keywords[] = {"nSlots", "backoffUpdateBound", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "IO!", (char **) keywords, &nSlots, &PyNs3Time_Type, &backoffUpdateBound)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method UpdateBackoffSlotsNow of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->UpdateBackoffSlotsNow__parent_caller(nSlots, *((PyNs3Time *) backoffUpdateBound)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Txop__PythonHelper::_wrap_NotifyInternalCollision(PyNs3Txop *self)
 {
     PyObject *py_retval;
@@ -24444,6 +24554,81 @@ PyNs3Txop__PythonHelper::_wrap_NotifyInternalCollision(PyNs3Txop *self)
         return NULL;
     }
     helper->NotifyInternalCollision__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_TxDroppedPacket(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacQueueItem *item;
+    ns3::WifiMacQueueItem *item_ptr;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    const char *keywords[] = {"item", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacQueueItem_Type, &item)) {
+        return NULL;
+    }
+    item_ptr = (item ? item->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method TxDroppedPacket of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->TxDroppedPacket__parent_caller(ns3::Ptr< ns3::WifiMacQueueItem  > (item_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_GetBackoffStart(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    PyNs3Time *py_Time;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetBackoffStart of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    ns3::Time retval = helper->GetBackoffStart__parent_caller();
+    py_Time = PyObject_New(PyNs3Time, &PyNs3Time_Type);
+    py_Time->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+    py_Time->obj = new ns3::Time(retval);
+    PyNs3Time_wrapper_registry[(void *) py_Time->obj] = (PyObject *) py_Time;
+    py_retval = Py_BuildValue((char *) "N", py_Time);
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_StartAccessIfNeeded(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method StartAccessIfNeeded of class Txop is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->StartAccessIfNeeded__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -24474,74 +24659,6 @@ PyNs3Txop__PythonHelper::_wrap_NeedDataRetransmission(PyNs3Txop *self, PyObject 
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_NotifyAccessGranted(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyAccessGranted of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyAccessGranted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_RestartAccessIfNeeded(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method RestartAccessIfNeeded of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->RestartAccessIfNeeded__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_GetBackoffStart(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    PyNs3Time *py_Time;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetBackoffStart of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    ns3::Time retval = helper->GetBackoffStart__parent_caller();
-    py_Time = PyObject_New(PyNs3Time, &PyNs3Time_Type);
-    py_Time->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-    py_Time->obj = new ns3::Time(retval);
-    PyNs3Time_wrapper_registry[(void *) py_Time->obj] = (PyObject *) py_Time;
-    py_retval = Py_BuildValue((char *) "N", py_Time);
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Txop__PythonHelper::_wrap_GetCw(PyNs3Txop *self)
 {
     PyObject *py_retval;
@@ -24558,57 +24675,18 @@ PyNs3Txop__PythonHelper::_wrap_GetCw(PyNs3Txop *self)
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_GetFragmentSize(PyNs3Txop *self)
+PyNs3Txop__PythonHelper::_wrap_IsLastFragment(PyNs3Txop *self)
 {
     PyObject *py_retval;
-    uint32_t retval;
+    bool retval;
     PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetFragmentSize of class Txop is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method IsLastFragment of class Txop is protected and can only be called by a subclass");
         return NULL;
     }
-    retval = helper->GetFragmentSize__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_GetBackoffSlots(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    uint32_t retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetBackoffSlots of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetBackoffSlots__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_TxDroppedPacket(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3WifiMacQueueItem *item;
-    ns3::WifiMacQueueItem *item_ptr;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    const char *keywords[] = {"item", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacQueueItem_Type, &item)) {
-        return NULL;
-    }
-    item_ptr = (item ? item->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method TxDroppedPacket of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->TxDroppedPacket__parent_caller(ns3::Ptr< ns3::WifiMacQueueItem  > (item_ptr));
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
+    retval = helper->IsLastFragment__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -24629,18 +24707,18 @@ PyNs3Txop__PythonHelper::_wrap_DoInitialize(PyNs3Txop *self)
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_DoDispose(PyNs3Txop *self)
+PyNs3Txop__PythonHelper::_wrap_GetFragmentSize(PyNs3Txop *self)
 {
     PyObject *py_retval;
+    uint32_t retval;
     PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Txop is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method GetFragmentSize of class Txop is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
+    retval = helper->GetFragmentSize__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
     return py_retval;
 }
 
@@ -24655,6 +24733,22 @@ PyNs3Txop__PythonHelper::_wrap_ResetCw(PyNs3Txop *self)
         return NULL;
     }
     helper->ResetCw__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Txop__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Txop *self)
+{
+    PyObject *py_retval;
+    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -24693,18 +24787,18 @@ PyNs3Txop__PythonHelper::_wrap_GetNextFragmentSize(PyNs3Txop *self)
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_NextFragment(PyNs3Txop *self)
+PyNs3Txop__PythonHelper::_wrap_NeedFragmentation(PyNs3Txop *self)
 {
     PyObject *py_retval;
+    bool retval;
     PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NextFragment of class Txop is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NeedFragmentation of class Txop is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NextFragment__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
+    retval = helper->NeedFragmentation__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -24725,94 +24819,32 @@ PyNs3Txop__PythonHelper::_wrap_NotifyAccessRequested(PyNs3Txop *self)
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_NeedRtsRetransmission(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
+PyNs3Txop__PythonHelper::_wrap_RestartAccessIfNeeded(PyNs3Txop *self)
 {
     PyObject *py_retval;
-    bool retval;
-    PyNs3Packet *packet;
-    ns3::Packet *packet_ptr;
-    PyNs3WifiMacHeader *hdr;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    const char *keywords[] = {"packet", "hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    packet_ptr = (packet ? packet->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NeedRtsRetransmission of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->NeedRtsRetransmission__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), *((PyNs3WifiMacHeader *) hdr)->obj);
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_IsLastFragment(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    bool retval;
     PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method IsLastFragment of class Txop is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method RestartAccessIfNeeded of class Txop is protected and can only be called by a subclass");
         return NULL;
     }
-    retval = helper->IsLastFragment__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_UpdateBackoffSlotsNow(PyNs3Txop *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    unsigned int nSlots;
-    PyNs3Time *backoffUpdateBound;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    const char *keywords[] = {"nSlots", "backoffUpdateBound", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "IO!", (char **) keywords, &nSlots, &PyNs3Time_Type, &backoffUpdateBound)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method UpdateBackoffSlotsNow of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->UpdateBackoffSlotsNow__parent_caller(nSlots, *((PyNs3Time *) backoffUpdateBound)->obj);
+    helper->RestartAccessIfNeeded__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
 }
 
 PyObject *
-PyNs3Txop__PythonHelper::_wrap_NeedFragmentation(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NeedFragmentation of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->NeedFragmentation__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Txop *self)
+PyNs3Txop__PythonHelper::_wrap_NextFragment(PyNs3Txop *self)
 {
     PyObject *py_retval;
     PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NextFragment of class Txop is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NextFragment__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -24831,38 +24863,6 @@ PyNs3Txop__PythonHelper::_wrap_GetFragmentOffset(PyNs3Txop *self)
     }
     retval = helper->GetFragmentOffset__parent_caller();
     py_retval = Py_BuildValue((char *) "N", PyLong_FromUnsignedLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_StartAccessIfNeeded(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method StartAccessIfNeeded of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->StartAccessIfNeeded__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Txop__PythonHelper::_wrap_UpdateFailedCw(PyNs3Txop *self)
-{
-    PyObject *py_retval;
-    PyNs3Txop__PythonHelper *helper = dynamic_cast< PyNs3Txop__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method UpdateFailedCw of class Txop is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->UpdateFailedCw__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
     return py_retval;
 }
 
@@ -27271,31 +27271,31 @@ static PyMethodDef PyNs3Txop_methods[] = {
     {(char *) "StartBackoffNow", (PyCFunction) _wrap_PyNs3Txop_StartBackoffNow, METH_KEYWORDS|METH_VARARGS, "StartBackoffNow(nSlots)\n\ntype: nSlots: uint32_t" },
     {(char *) "StartNextFragment", (PyCFunction) _wrap_PyNs3Txop_StartNextFragment, METH_NOARGS, "StartNextFragment()\n\n" },
     {(char *) "StartNextPacket", (PyCFunction) _wrap_PyNs3Txop_StartNextPacket, METH_NOARGS, "StartNextPacket()\n\n" },
-    {(char *) "NotifyInternalCollision", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyInternalCollision, METH_NOARGS, NULL },
-    {(char *) "NeedDataRetransmission", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NeedDataRetransmission, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyAccessGranted", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyAccessGranted, METH_NOARGS, NULL },
-    {(char *) "RestartAccessIfNeeded", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_RestartAccessIfNeeded, METH_NOARGS, NULL },
-    {(char *) "GetBackoffStart", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetBackoffStart, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "GetCw", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetCw, METH_NOARGS, NULL },
-    {(char *) "GetFragmentSize", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetFragmentSize, METH_NOARGS, NULL },
-    {(char *) "GetBackoffSlots", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetBackoffSlots, METH_NOARGS, NULL },
-    {(char *) "TxDroppedPacket", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_TxDroppedPacket, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NeedRtsRetransmission", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NeedRtsRetransmission, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "UpdateFailedCw", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_UpdateFailedCw, METH_NOARGS, NULL },
+    {(char *) "GetBackoffSlots", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetBackoffSlots, METH_NOARGS, NULL },
+    {(char *) "UpdateBackoffSlotsNow", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_UpdateBackoffSlotsNow, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyInternalCollision", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyInternalCollision, METH_NOARGS, NULL },
+    {(char *) "TxDroppedPacket", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_TxDroppedPacket, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetBackoffStart", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetBackoffStart, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "StartAccessIfNeeded", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_StartAccessIfNeeded, METH_NOARGS, NULL },
+    {(char *) "NeedDataRetransmission", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NeedDataRetransmission, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetCw", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetCw, METH_NOARGS, NULL },
+    {(char *) "IsLastFragment", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_IsLastFragment, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "GetFragmentSize", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetFragmentSize, METH_NOARGS, NULL },
     {(char *) "ResetCw", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_ResetCw, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyCollision", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyCollision, METH_NOARGS, NULL },
     {(char *) "GetNextFragmentSize", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetNextFragmentSize, METH_NOARGS, NULL },
-    {(char *) "NextFragment", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NextFragment, METH_NOARGS, NULL },
-    {(char *) "NotifyAccessRequested", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyAccessRequested, METH_NOARGS, NULL },
-    {(char *) "NeedRtsRetransmission", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NeedRtsRetransmission, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "IsLastFragment", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_IsLastFragment, METH_NOARGS, NULL },
-    {(char *) "UpdateBackoffSlotsNow", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_UpdateBackoffSlotsNow, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NeedFragmentation", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NeedFragmentation, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyAccessRequested", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NotifyAccessRequested, METH_NOARGS, NULL },
+    {(char *) "RestartAccessIfNeeded", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_RestartAccessIfNeeded, METH_NOARGS, NULL },
+    {(char *) "NextFragment", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_NextFragment, METH_NOARGS, NULL },
     {(char *) "GetFragmentOffset", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_GetFragmentOffset, METH_NOARGS, NULL },
-    {(char *) "StartAccessIfNeeded", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_StartAccessIfNeeded, METH_NOARGS, NULL },
-    {(char *) "UpdateFailedCw", (PyCFunction) PyNs3Txop__PythonHelper::_wrap_UpdateFailedCw, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Txop__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -27362,7 +27362,7 @@ PyTypeObject PyNs3Txop_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Txop(arg0)\nTxop()",                        /* Documentation string */
     (traverseproc)PyNs3Txop__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Txop__tp_clear,             /* tp_clear */
@@ -27669,7 +27669,7 @@ PyTypeObject PyNs3WifiActionHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiActionHeader(arg0)\nWifiActionHeader()",                        /* Documentation string */
     (traverseproc)PyNs3WifiActionHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiActionHeader__tp_clear,             /* tp_clear */
@@ -28649,7 +28649,7 @@ PyTypeObject PyNs3WifiInformationElementVector_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiInformationElementVector(arg0)\nWifiInformationElementVector()",                        /* Documentation string */
     (traverseproc)PyNs3WifiInformationElementVector__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiInformationElementVector__tp_clear,             /* tp_clear */
@@ -29667,7 +29667,7 @@ PyTypeObject PyNs3WifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiMac(arg0)\nWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3WifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiMac__tp_clear,             /* tp_clear */
@@ -31025,7 +31025,7 @@ PyTypeObject PyNs3WifiMacHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiMacHeader(arg0)\nWifiMacHeader()",                        /* Documentation string */
     (traverseproc)PyNs3WifiMacHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiMacHeader__tp_clear,             /* tp_clear */
@@ -31480,7 +31480,7 @@ PyTypeObject PyNs3WifiMacTrailer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiMacTrailer(arg0)\nWifiMacTrailer()",                        /* Documentation string */
     (traverseproc)PyNs3WifiMacTrailer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiMacTrailer__tp_clear,             /* tp_clear */
@@ -31513,6 +31513,22 @@ PyTypeObject PyNs3WifiMacTrailer_Type = {
 
 
 PyObject *
+PyNs3WifiPhy__PythonHelper::_wrap_SwitchMaybeToCcaBusy(PyNs3WifiPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiPhy__PythonHelper *helper = dynamic_cast< PyNs3WifiPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SwitchMaybeToCcaBusy of class WifiPhy is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SwitchMaybeToCcaBusy__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiPhy *self)
 {
     PyObject *py_retval;
@@ -31523,22 +31539,6 @@ PyNs3WifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiPhy *self
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3WifiPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiPhy__PythonHelper *helper = dynamic_cast< PyNs3WifiPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiPhy is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -31566,6 +31566,22 @@ PyNs3WifiPhy__PythonHelper::_wrap_DoChannelSwitch(PyNs3WifiPhy *self, PyObject *
     }
     retval = helper->DoChannelSwitch__parent_caller(id);
     py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3WifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3WifiPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiPhy__PythonHelper *helper = dynamic_cast< PyNs3WifiPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiPhy is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -31605,22 +31621,6 @@ PyNs3WifiPhy__PythonHelper::_wrap_DoDispose(PyNs3WifiPhy *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiPhy__PythonHelper::_wrap_SwitchMaybeToCcaBusy(PyNs3WifiPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiPhy__PythonHelper *helper = dynamic_cast< PyNs3WifiPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SwitchMaybeToCcaBusy of class WifiPhy is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->SwitchMaybeToCcaBusy__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -35998,12 +35998,12 @@ static PyMethodDef PyNs3WifiPhy_methods[] = {
     {(char *) "StartReceivePacket", (PyCFunction) _wrap_PyNs3WifiPhy_StartReceivePacket, METH_KEYWORDS|METH_VARARGS, "StartReceivePacket(packet, txVector, mpdutype, event)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: txVector: ns3::WifiTxVector\ntype: mpdutype: ns3::MpduType\ntype: event: ns3::Ptr< ns3::Event >" },
     {(char *) "StartReceivePreambleAndHeader", (PyCFunction) _wrap_PyNs3WifiPhy_StartReceivePreambleAndHeader, METH_KEYWORDS|METH_VARARGS, "StartReceivePreambleAndHeader(packet, rxPowerW, rxDuration)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: rxPowerW: double\ntype: rxDuration: ns3::Time" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3WifiPhy_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(packet, txVector, txDuration)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: txVector: ns3::WifiTxVector\ntype: txDuration: ns3::Time" },
+    {(char *) "SwitchMaybeToCcaBusy", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_SwitchMaybeToCcaBusy, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoChannelSwitch", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_DoChannelSwitch, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoFrequencySwitch", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_DoFrequencySwitch, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "SwitchMaybeToCcaBusy", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_SwitchMaybeToCcaBusy, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -36070,7 +36070,7 @@ PyTypeObject PyNs3WifiPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiPhy(arg0)\nWifiPhy()",                        /* Documentation string */
     (traverseproc)PyNs3WifiPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiPhy__tp_clear,             /* tp_clear */
@@ -36635,7 +36635,7 @@ PyTypeObject PyNs3WifiPhyStateHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiPhyStateHelper(arg0)\nWifiPhyStateHelper()",                        /* Documentation string */
     (traverseproc)PyNs3WifiPhyStateHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiPhyStateHelper__tp_clear,             /* tp_clear */
@@ -38570,7 +38570,7 @@ PyTypeObject PyNs3WifiRemoteStationManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiRemoteStationManager(arg0)\nWifiRemoteStationManager()",                        /* Documentation string */
     (traverseproc)PyNs3WifiRemoteStationManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiRemoteStationManager__tp_clear,             /* tp_clear */
@@ -38603,16 +38603,16 @@ PyTypeObject PyNs3WifiRemoteStationManager_Type = {
 
 
 PyObject *
-PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiSpectrumPhyInterface *self)
+PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_DoInitialize(PyNs3WifiSpectrumPhyInterface *self)
 {
     PyObject *py_retval;
     PyNs3WifiSpectrumPhyInterface__PythonHelper *helper = dynamic_cast< PyNs3WifiSpectrumPhyInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -38635,16 +38635,16 @@ PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiS
 }
 
 PyObject *
-PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_DoInitialize(PyNs3WifiSpectrumPhyInterface *self)
+PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiSpectrumPhyInterface *self)
 {
     PyObject *py_retval;
     PyNs3WifiSpectrumPhyInterface__PythonHelper *helper = dynamic_cast< PyNs3WifiSpectrumPhyInterface__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -39598,9 +39598,9 @@ static PyMethodDef PyNs3WifiSpectrumPhyInterface_methods[] = {
     {(char *) "GetRxSpectrumModel", (PyCFunction) _wrap_PyNs3WifiSpectrumPhyInterface_GetRxSpectrumModel, METH_NOARGS, "GetRxSpectrumModel()\n\n" },
     {(char *) "GetRxAntenna", (PyCFunction) _wrap_PyNs3WifiSpectrumPhyInterface_GetRxAntenna, METH_NOARGS, "GetRxAntenna()\n\n" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3WifiSpectrumPhyInterface_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(params)\n\ntype: params: ns3::Ptr< ns3::SpectrumSignalParameters >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiSpectrumPhyInterface__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -39666,7 +39666,7 @@ PyTypeObject PyNs3WifiSpectrumPhyInterface_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiSpectrumPhyInterface()",                        /* Documentation string */
     (traverseproc)PyNs3WifiSpectrumPhyInterface__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiSpectrumPhyInterface__tp_clear,             /* tp_clear */
@@ -39949,16 +39949,16 @@ PyTypeObject PyNs3WifiSpectrumSignalParameters_Type = {
 
 
 PyObject *
-PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiTxCurrentModel *self)
+PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoInitialize(PyNs3WifiTxCurrentModel *self)
 {
     PyObject *py_retval;
     PyNs3WifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3WifiTxCurrentModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -39981,6 +39981,22 @@ PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoDispose(PyNs3WifiTxCurrentModel *
 }
 
 PyObject *
+PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiTxCurrentModel *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3WifiTxCurrentModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiTxCurrentModel *self)
 {
     PyObject *py_retval;
@@ -39991,22 +40007,6 @@ PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiTxCurre
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoInitialize(PyNs3WifiTxCurrentModel *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3WifiTxCurrentModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -40414,10 +40414,10 @@ _wrap_PyNs3WifiTxCurrentModel_GetTypeId(void)
 static PyMethodDef PyNs3WifiTxCurrentModel_methods[] = {
     {(char *) "CalcTxCurrent", (PyCFunction) _wrap_PyNs3WifiTxCurrentModel_CalcTxCurrent, METH_KEYWORDS|METH_VARARGS, "CalcTxCurrent(txPowerDbm)\n\ntype: txPowerDbm: double" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WifiTxCurrentModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -40483,7 +40483,7 @@ PyTypeObject PyNs3WifiTxCurrentModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiTxCurrentModel(arg0)\nWifiTxCurrentModel()",                        /* Documentation string */
     (traverseproc)PyNs3WifiTxCurrentModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiTxCurrentModel__tp_clear,             /* tp_clear */
@@ -40516,16 +40516,16 @@ PyTypeObject PyNs3WifiTxCurrentModel_Type = {
 
 
 PyObject *
-PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansWifiPhy *self)
+PyNs3YansWifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3YansWifiPhy *self)
 {
     PyObject *py_retval;
     PyNs3YansWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3YansWifiPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiPhy is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -40548,6 +40548,22 @@ PyNs3YansWifiPhy__PythonHelper::_wrap_DoDispose(PyNs3YansWifiPhy *self)
 }
 
 PyObject *
+PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansWifiPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3YansWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3YansWifiPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansWifiPhy *self)
 {
     PyObject *py_retval;
@@ -40558,22 +40574,6 @@ PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansWifiPhy *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3YansWifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3YansWifiPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3YansWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3YansWifiPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiPhy is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -41349,10 +41349,10 @@ static PyMethodDef PyNs3YansWifiPhy_methods[] = {
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3YansWifiPhy_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3YansWifiPhy_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3YansWifiPhy_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(packet, txVector, txDuration)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: txVector: ns3::WifiTxVector\ntype: txDuration: ns3::Time" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansWifiPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3YansWifiPhy__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -41419,7 +41419,7 @@ PyTypeObject PyNs3YansWifiPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "YansWifiPhy(arg0)\nYansWifiPhy()",                        /* Documentation string */
     (traverseproc)PyNs3YansWifiPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3YansWifiPhy__tp_clear,             /* tp_clear */
@@ -41676,7 +41676,7 @@ PyTypeObject PyNs3AarfWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AarfWifiManager(arg0)\nAarfWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3AarfWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AarfWifiManager__tp_clear,             /* tp_clear */
@@ -41933,7 +41933,7 @@ PyTypeObject PyNs3AarfcdWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AarfcdWifiManager(arg0)\nAarfcdWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3AarfcdWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AarfcdWifiManager__tp_clear,             /* tp_clear */
@@ -42259,7 +42259,7 @@ PyTypeObject PyNs3AmpduSubframeHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AmpduSubframeHeader(arg0)\nAmpduSubframeHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AmpduSubframeHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AmpduSubframeHeader__tp_clear,             /* tp_clear */
@@ -42516,7 +42516,7 @@ PyTypeObject PyNs3AmrrWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AmrrWifiManager(arg0)\nAmrrWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3AmrrWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AmrrWifiManager__tp_clear,             /* tp_clear */
@@ -42879,7 +42879,7 @@ PyTypeObject PyNs3AmsduSubframeHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AmsduSubframeHeader(arg0)\nAmsduSubframeHeader()",                        /* Documentation string */
     (traverseproc)PyNs3AmsduSubframeHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AmsduSubframeHeader__tp_clear,             /* tp_clear */
@@ -43136,7 +43136,7 @@ PyTypeObject PyNs3AparfWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AparfWifiManager(arg0)\nAparfWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3AparfWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AparfWifiManager__tp_clear,             /* tp_clear */
@@ -43393,7 +43393,7 @@ PyTypeObject PyNs3ArfWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ArfWifiManager(arg0)\nArfWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3ArfWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ArfWifiManager__tp_clear,             /* tp_clear */
@@ -43812,7 +43812,7 @@ PyTypeObject PyNs3AthstatsWifiTraceSink_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AthstatsWifiTraceSink(arg0)\nAthstatsWifiTraceSink()",                        /* Documentation string */
     (traverseproc)PyNs3AthstatsWifiTraceSink__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AthstatsWifiTraceSink__tp_clear,             /* tp_clear */
@@ -44635,7 +44635,7 @@ PyTypeObject PyNs3BlockAckManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "BlockAckManager()",                        /* Documentation string */
     (traverseproc)PyNs3BlockAckManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BlockAckManager__tp_clear,             /* tp_clear */
@@ -44892,7 +44892,7 @@ PyTypeObject PyNs3CaraWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "CaraWifiManager(arg0)\nCaraWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3CaraWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CaraWifiManager__tp_clear,             /* tp_clear */
@@ -45349,16 +45349,16 @@ PyTypeObject PyNs3CfParameterSet_Type = {
 
 
 PyObject *
-PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelAccessManager *self)
+PyNs3ChannelAccessManager__PythonHelper::_wrap_DoInitialize(PyNs3ChannelAccessManager *self)
 {
     PyObject *py_retval;
     PyNs3ChannelAccessManager__PythonHelper *helper = dynamic_cast< PyNs3ChannelAccessManager__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -45381,6 +45381,22 @@ PyNs3ChannelAccessManager__PythonHelper::_wrap_DoDispose(PyNs3ChannelAccessManag
 }
 
 PyObject *
+PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ChannelAccessManager *self)
+{
+    PyObject *py_retval;
+    PyNs3ChannelAccessManager__PythonHelper *helper = dynamic_cast< PyNs3ChannelAccessManager__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelAccessManager *self)
 {
     PyObject *py_retval;
@@ -45391,22 +45407,6 @@ PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ChannelAc
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ChannelAccessManager__PythonHelper::_wrap_DoInitialize(PyNs3ChannelAccessManager *self)
-{
-    PyObject *py_retval;
-    PyNs3ChannelAccessManager__PythonHelper *helper = dynamic_cast< PyNs3ChannelAccessManager__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -46179,10 +46179,10 @@ static PyMethodDef PyNs3ChannelAccessManager_methods[] = {
     {(char *) "SetSlot", (PyCFunction) _wrap_PyNs3ChannelAccessManager_SetSlot, METH_KEYWORDS|METH_VARARGS, "SetSlot(slotTime)\n\ntype: slotTime: ns3::Time" },
     {(char *) "SetupLow", (PyCFunction) _wrap_PyNs3ChannelAccessManager_SetupLow, METH_KEYWORDS|METH_VARARGS, "SetupLow(low)\n\ntype: low: ns3::Ptr< ns3::MacLow >" },
     {(char *) "SetupPhyListener", (PyCFunction) _wrap_PyNs3ChannelAccessManager_SetupPhyListener, METH_KEYWORDS|METH_VARARGS, "SetupPhyListener(phy)\n\ntype: phy: ns3::Ptr< ns3::WifiPhy >" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ChannelAccessManager__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ChannelAccessManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -46249,7 +46249,7 @@ PyTypeObject PyNs3ChannelAccessManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ChannelAccessManager(arg0)\nChannelAccessManager()",                        /* Documentation string */
     (traverseproc)PyNs3ChannelAccessManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ChannelAccessManager__tp_clear,             /* tp_clear */
@@ -46446,7 +46446,7 @@ PyTypeObject PyNs3ConstantRateWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConstantRateWifiManager(arg0)\nConstantRateWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantRateWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantRateWifiManager__tp_clear,             /* tp_clear */
@@ -46877,7 +46877,7 @@ PyTypeObject PyNs3CtrlBAckRequestHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "CtrlBAckRequestHeader(arg0)\nCtrlBAckRequestHeader()",                        /* Documentation string */
     (traverseproc)PyNs3CtrlBAckRequestHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CtrlBAckRequestHeader__tp_clear,             /* tp_clear */
@@ -47454,7 +47454,7 @@ PyTypeObject PyNs3CtrlBAckResponseHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "CtrlBAckResponseHeader(arg0)\nCtrlBAckResponseHeader()",                        /* Documentation string */
     (traverseproc)PyNs3CtrlBAckResponseHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CtrlBAckResponseHeader__tp_clear,             /* tp_clear */
@@ -49132,16 +49132,16 @@ PyTypeObject PyNs3ErpInformation_Type = {
 
 
 PyObject *
-PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ErrorRateModel *self)
+PyNs3ErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3ErrorRateModel *self)
 {
     PyObject *py_retval;
     PyNs3ErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3ErrorRateModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -49164,6 +49164,22 @@ PyNs3ErrorRateModel__PythonHelper::_wrap_DoDispose(PyNs3ErrorRateModel *self)
 }
 
 PyObject *
+PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ErrorRateModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3ErrorRateModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ErrorRateModel *self)
 {
     PyObject *py_retval;
@@ -49174,22 +49190,6 @@ PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ErrorRateModel 
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3ErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3ErrorRateModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3ErrorRateModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -49629,10 +49629,10 @@ static PyMethodDef PyNs3ErrorRateModel_methods[] = {
     {(char *) "CalculateSnr", (PyCFunction) _wrap_PyNs3ErrorRateModel_CalculateSnr, METH_KEYWORDS|METH_VARARGS, "CalculateSnr(txVector, ber)\n\ntype: txVector: ns3::WifiTxVector\ntype: ber: double" },
     {(char *) "GetChunkSuccessRate", (PyCFunction) _wrap_PyNs3ErrorRateModel_GetChunkSuccessRate, METH_KEYWORDS|METH_VARARGS, "GetChunkSuccessRate(mode, txVector, snr, nbits)\n\ntype: mode: ns3::WifiMode\ntype: txVector: ns3::WifiTxVector\ntype: snr: double\ntype: nbits: uint64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ErrorRateModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -49698,7 +49698,7 @@ PyTypeObject PyNs3ErrorRateModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ErrorRateModel(arg0)\nErrorRateModel()",                        /* Documentation string */
     (traverseproc)PyNs3ErrorRateModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ErrorRateModel__tp_clear,             /* tp_clear */
@@ -50865,16 +50865,16 @@ PyTypeObject PyNs3ExtendedSupportedRatesIE_Type = {
 
 
 PyObject *
-PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FrameCaptureModel *self)
+PyNs3FrameCaptureModel__PythonHelper::_wrap_DoInitialize(PyNs3FrameCaptureModel *self)
 {
     PyObject *py_retval;
     PyNs3FrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3FrameCaptureModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -50897,6 +50897,22 @@ PyNs3FrameCaptureModel__PythonHelper::_wrap_DoDispose(PyNs3FrameCaptureModel *se
 }
 
 PyObject *
+PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FrameCaptureModel *self)
+{
+    PyObject *py_retval;
+    PyNs3FrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3FrameCaptureModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FrameCaptureModel *self)
 {
     PyObject *py_retval;
@@ -50907,22 +50923,6 @@ PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FrameCapture
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FrameCaptureModel__PythonHelper::_wrap_DoInitialize(PyNs3FrameCaptureModel *self)
-{
-    PyObject *py_retval;
-    PyNs3FrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3FrameCaptureModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -51379,10 +51379,10 @@ _wrap_PyNs3FrameCaptureModel_GetTypeId(void)
 static PyMethodDef PyNs3FrameCaptureModel_methods[] = {
     {(char *) "CaptureNewFrame", (PyCFunction) _wrap_PyNs3FrameCaptureModel_CaptureNewFrame, METH_KEYWORDS|METH_VARARGS, "CaptureNewFrame(currentEvent, newEvent)\n\ntype: currentEvent: ns3::Ptr< ns3::Event >\ntype: newEvent: ns3::Ptr< ns3::Event >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FrameCaptureModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -51448,7 +51448,7 @@ PyTypeObject PyNs3FrameCaptureModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "FrameCaptureModel(arg0)\nFrameCaptureModel()",                        /* Documentation string */
     (traverseproc)PyNs3FrameCaptureModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FrameCaptureModel__tp_clear,             /* tp_clear */
@@ -54684,7 +54684,7 @@ PyTypeObject PyNs3IdealWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "IdealWifiManager(arg0)\nIdealWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3IdealWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3IdealWifiManager__tp_clear,             /* tp_clear */
@@ -54717,16 +54717,16 @@ PyTypeObject PyNs3IdealWifiManager_Type = {
 
 
 PyObject *
-PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LinearWifiTxCurrentModel *self)
+PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoInitialize(PyNs3LinearWifiTxCurrentModel *self)
 {
     PyObject *py_retval;
     PyNs3LinearWifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3LinearWifiTxCurrentModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -54749,6 +54749,22 @@ PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoDispose(PyNs3LinearWifiTxCu
 }
 
 PyObject *
+PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3LinearWifiTxCurrentModel *self)
+{
+    PyObject *py_retval;
+    PyNs3LinearWifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3LinearWifiTxCurrentModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3LinearWifiTxCurrentModel *self)
 {
     PyObject *py_retval;
@@ -54759,22 +54775,6 @@ PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Linea
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoInitialize(PyNs3LinearWifiTxCurrentModel *self)
-{
-    PyObject *py_retval;
-    PyNs3LinearWifiTxCurrentModel__PythonHelper *helper = dynamic_cast< PyNs3LinearWifiTxCurrentModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -55194,10 +55194,10 @@ _wrap_PyNs3LinearWifiTxCurrentModel__copy__(PyNs3LinearWifiTxCurrentModel *self)
 static PyMethodDef PyNs3LinearWifiTxCurrentModel_methods[] = {
     {(char *) "CalcTxCurrent", (PyCFunction) _wrap_PyNs3LinearWifiTxCurrentModel_CalcTxCurrent, METH_KEYWORDS|METH_VARARGS, "CalcTxCurrent(txPowerDbm)\n\ntype: txPowerDbm: double" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3LinearWifiTxCurrentModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LinearWifiTxCurrentModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3LinearWifiTxCurrentModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -55264,7 +55264,7 @@ PyTypeObject PyNs3LinearWifiTxCurrentModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "LinearWifiTxCurrentModel(arg0)\nLinearWifiTxCurrentModel()",                        /* Documentation string */
     (traverseproc)PyNs3LinearWifiTxCurrentModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LinearWifiTxCurrentModel__tp_clear,             /* tp_clear */
@@ -55297,16 +55297,16 @@ PyTypeObject PyNs3LinearWifiTxCurrentModel_Type = {
 
 
 PyObject *
-PyNs3MacLow__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MacLow *self)
+PyNs3MacLow__PythonHelper::_wrap_DoInitialize(PyNs3MacLow *self)
 {
     PyObject *py_retval;
     PyNs3MacLow__PythonHelper *helper = dynamic_cast< PyNs3MacLow__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -55329,16 +55329,16 @@ PyNs3MacLow__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MacLow *self)
 }
 
 PyObject *
-PyNs3MacLow__PythonHelper::_wrap_DoInitialize(PyNs3MacLow *self)
+PyNs3MacLow__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MacLow *self)
 {
     PyObject *py_retval;
     PyNs3MacLow__PythonHelper *helper = dynamic_cast< PyNs3MacLow__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -56971,9 +56971,9 @@ static PyMethodDef PyNs3MacLow_methods[] = {
     {(char *) "SetSlotTime", (PyCFunction) _wrap_PyNs3MacLow_SetSlotTime, METH_KEYWORDS|METH_VARARGS, "SetSlotTime(slotTime)\n\ntype: slotTime: ns3::Time" },
     {(char *) "StartTransmission", (PyCFunction) _wrap_PyNs3MacLow_StartTransmission, METH_KEYWORDS|METH_VARARGS, "StartTransmission(packet, hdr, parameters, txop)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: hdr: ns3::WifiMacHeader const *\ntype: parameters: ns3::MacLowTransmissionParameters\ntype: txop: ns3::Ptr< ns3::Txop >" },
     {(char *) "StopMpduAggregation", (PyCFunction) _wrap_PyNs3MacLow_StopMpduAggregation, METH_KEYWORDS|METH_VARARGS, "StopMpduAggregation(peekedPacket, peekedHdr, aggregatedPacket, blockAckSize)\n\ntype: peekedPacket: ns3::Ptr< ns3::Packet const >\ntype: peekedHdr: ns3::WifiMacHeader\ntype: aggregatedPacket: ns3::Ptr< ns3::Packet >\ntype: blockAckSize: uint8_t" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MacLow__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MacLow__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MacLow__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MacLow__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MacLow__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MacLow__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -57040,7 +57040,7 @@ PyTypeObject PyNs3MacLow_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MacLow(arg0)\nMacLow()",                        /* Documentation string */
     (traverseproc)PyNs3MacLow__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MacLow__tp_clear,             /* tp_clear */
@@ -57680,7 +57680,7 @@ PyTypeObject PyNs3MgtBeaconHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MgtBeaconHeader(arg0)\nMgtBeaconHeader()",                        /* Documentation string */
     (traverseproc)PyNs3MgtBeaconHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MgtBeaconHeader__tp_clear,             /* tp_clear */
@@ -57915,7 +57915,7 @@ PyTypeObject PyNs3MinstrelHtWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MinstrelHtWifiManager(arg0)\nMinstrelHtWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3MinstrelHtWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MinstrelHtWifiManager__tp_clear,             /* tp_clear */
@@ -58190,7 +58190,7 @@ PyTypeObject PyNs3MinstrelWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MinstrelWifiManager(arg0)\nMinstrelWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3MinstrelWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MinstrelWifiManager__tp_clear,             /* tp_clear */
@@ -58520,7 +58520,7 @@ PyTypeObject PyNs3MpduAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MpduAggregator(arg0)\nMpduAggregator()",                        /* Documentation string */
     (traverseproc)PyNs3MpduAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MpduAggregator__tp_clear,             /* tp_clear */
@@ -58777,7 +58777,7 @@ PyTypeObject PyNs3MsduAggregator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MsduAggregator(arg0)\nMsduAggregator()",                        /* Documentation string */
     (traverseproc)PyNs3MsduAggregator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MsduAggregator__tp_clear,             /* tp_clear */
@@ -58810,16 +58810,16 @@ PyTypeObject PyNs3MsduAggregator_Type = {
 
 
 PyObject *
-PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3NistErrorRateModel *self)
+PyNs3NistErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3NistErrorRateModel *self)
 {
     PyObject *py_retval;
     PyNs3NistErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3NistErrorRateModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -58842,6 +58842,22 @@ PyNs3NistErrorRateModel__PythonHelper::_wrap_DoDispose(PyNs3NistErrorRateModel *
 }
 
 PyObject *
+PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3NistErrorRateModel *self)
+{
+    PyObject *py_retval;
+    PyNs3NistErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3NistErrorRateModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NistErrorRateModel *self)
 {
     PyObject *py_retval;
@@ -58852,22 +58868,6 @@ PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3NistErrorRa
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3NistErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3NistErrorRateModel *self)
-{
-    PyObject *py_retval;
-    PyNs3NistErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3NistErrorRateModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -59300,10 +59300,10 @@ _wrap_PyNs3NistErrorRateModel__copy__(PyNs3NistErrorRateModel *self)
 static PyMethodDef PyNs3NistErrorRateModel_methods[] = {
     {(char *) "GetChunkSuccessRate", (PyCFunction) _wrap_PyNs3NistErrorRateModel_GetChunkSuccessRate, METH_KEYWORDS|METH_VARARGS, "GetChunkSuccessRate(mode, txVector, snr, nbits)\n\ntype: mode: ns3::WifiMode\ntype: txVector: ns3::WifiTxVector\ntype: snr: double\ntype: nbits: uint64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3NistErrorRateModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NistErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3NistErrorRateModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -59370,7 +59370,7 @@ PyTypeObject PyNs3NistErrorRateModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "NistErrorRateModel(arg0)\nNistErrorRateModel()",                        /* Documentation string */
     (traverseproc)PyNs3NistErrorRateModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NistErrorRateModel__tp_clear,             /* tp_clear */
@@ -59627,7 +59627,7 @@ PyTypeObject PyNs3OnoeWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OnoeWifiManager(arg0)\nOnoeWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3OnoeWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OnoeWifiManager__tp_clear,             /* tp_clear */
@@ -59884,7 +59884,7 @@ PyTypeObject PyNs3ParfWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ParfWifiManager(arg0)\nParfWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3ParfWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ParfWifiManager__tp_clear,             /* tp_clear */
@@ -60143,16 +60143,16 @@ PyTypeObject PyNs3QosBlockedDestinations_Type = {
 
 
 PyObject *
-PyNs3QosTxop__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3QosTxop *self)
+PyNs3QosTxop__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QosTxop *self)
 {
     PyObject *py_retval;
     PyNs3QosTxop__PythonHelper *helper = dynamic_cast< PyNs3QosTxop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -60175,16 +60175,16 @@ PyNs3QosTxop__PythonHelper::_wrap_NotifyAccessRequested(PyNs3QosTxop *self)
 }
 
 PyObject *
-PyNs3QosTxop__PythonHelper::_wrap_NotifyNewAggregate(PyNs3QosTxop *self)
+PyNs3QosTxop__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3QosTxop *self)
 {
     PyObject *py_retval;
     PyNs3QosTxop__PythonHelper *helper = dynamic_cast< PyNs3QosTxop__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -62725,9 +62725,9 @@ static PyMethodDef PyNs3QosTxop_methods[] = {
     {(char *) "SetTypeOfStation", (PyCFunction) _wrap_PyNs3QosTxop_SetTypeOfStation, METH_KEYWORDS|METH_VARARGS, "SetTypeOfStation(type)\n\ntype: type: ns3::TypeOfStation" },
     {(char *) "StartAccessIfNeeded", (PyCFunction) _wrap_PyNs3QosTxop_StartAccessIfNeeded, METH_NOARGS, "StartAccessIfNeeded()\n\n" },
     {(char *) "StartNextPacket", (PyCFunction) _wrap_PyNs3QosTxop_StartNextPacket, METH_NOARGS, "StartNextPacket()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QosTxop__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyAccessRequested", (PyCFunction) PyNs3QosTxop__PythonHelper::_wrap_NotifyAccessRequested, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QosTxop__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyAccessRequested", (PyCFunction) PyNs3QosTxop__PythonHelper::_wrap_NotifyAccessRequested, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QosTxop__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QosTxop__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -62794,7 +62794,7 @@ PyTypeObject PyNs3QosTxop_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "QosTxop(arg0)\nQosTxop()",                        /* Documentation string */
     (traverseproc)PyNs3QosTxop__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QosTxop__tp_clear,             /* tp_clear */
@@ -62827,6 +62827,77 @@ PyTypeObject PyNs3QosTxop_Type = {
 
 
 PyObject *
+PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropBeforeEnqueue(PyNs3Queue__Ns3WifiMacQueueItem *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacQueueItem *item;
+    ns3::WifiMacQueueItem *item_ptr;
+    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
+    const char *keywords[] = {"item", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacQueueItem_Type, &item)) {
+        return NULL;
+    }
+    item_ptr = (item ? item->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DropBeforeEnqueue of class Queue is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DropBeforeEnqueue__parent_caller(ns3::Ptr< ns3::WifiMacQueueItem  > (item_ptr));
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Queue__Ns3WifiMacQueueItem *self)
+{
+    PyObject *py_retval;
+    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoInitialize(PyNs3Queue__Ns3WifiMacQueueItem *self)
+{
+    PyObject *py_retval;
+    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoDispose(PyNs3Queue__Ns3WifiMacQueueItem *self)
+{
+    PyObject *py_retval;
+    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropAfterDequeue(PyNs3Queue__Ns3WifiMacQueueItem *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -62850,54 +62921,6 @@ PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropAfterDequeue(PyNs3Queue
 }
 
 PyObject *
-PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoInitialize(PyNs3Queue__Ns3WifiMacQueueItem *self)
-{
-    PyObject *py_retval;
-    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Queue__Ns3WifiMacQueueItem *self)
-{
-    PyObject *py_retval;
-    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoDispose(PyNs3Queue__Ns3WifiMacQueueItem *self)
-{
-    PyObject *py_retval;
-    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Queue__Ns3WifiMacQueueItem *self)
 {
     PyObject *py_retval;
@@ -62908,29 +62931,6 @@ PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Que
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropBeforeEnqueue(PyNs3Queue__Ns3WifiMacQueueItem *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3WifiMacQueueItem *item;
-    ns3::WifiMacQueueItem *item_ptr;
-    PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper *helper = dynamic_cast< PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper* >(self->obj);
-    const char *keywords[] = {"item", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacQueueItem_Type, &item)) {
-        return NULL;
-    }
-    item_ptr = (item ? item->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DropBeforeEnqueue of class Queue is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DropBeforeEnqueue__parent_caller(ns3::Ptr< ns3::WifiMacQueueItem  > (item_ptr));
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -63661,12 +63661,12 @@ static PyMethodDef PyNs3Queue__Ns3WifiMacQueueItem_methods[] = {
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3Queue__Ns3WifiMacQueueItem_Remove, METH_NOARGS, "Remove()\n\n" },
     {(char *) "Peek", (PyCFunction) _wrap_PyNs3Queue__Ns3WifiMacQueueItem_Peek, METH_NOARGS, "Peek()\n\n" },
     {(char *) "Flush", (PyCFunction) _wrap_PyNs3Queue__Ns3WifiMacQueueItem_Flush, METH_NOARGS, "Flush()\n\n" },
-    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropAfterDequeue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DropBeforeEnqueue", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropBeforeEnqueue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_DropAfterDequeue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Queue__Ns3WifiMacQueueItem__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -63732,7 +63732,7 @@ PyTypeObject PyNs3Queue__Ns3WifiMacQueueItem_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "Queue__Ns3WifiMacQueueItem(arg0)\nQueue__Ns3WifiMacQueueItem()",                        /* Documentation string */
     (traverseproc)PyNs3Queue__Ns3WifiMacQueueItem__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Queue__Ns3WifiMacQueueItem__tp_clear,             /* tp_clear */
@@ -63765,419 +63765,6 @@ PyTypeObject PyNs3Queue__Ns3WifiMacQueueItem_Type = {
 
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_TxOk(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3WifiMacHeader *hdr;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method TxOk of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->TxOk__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SetVhtSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool enable;
-    PyObject *py_enable;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"enable", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
-        return NULL;
-    }
-    enable = (bool) PyObject_IsTrue(py_enable);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetVhtSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->SetVhtSupported__parent_caller(enable);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetQosSupported(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetQosSupported__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetVhtSupported(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetVhtSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetVhtSupported__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetVIQueue(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    ns3::Ptr< ns3::QosTxop > retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    PyNs3QosTxop *py_QosTxop;
-    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
-    PyTypeObject *wrapper_type = 0;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetVIQueue of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetVIQueue__parent_caller();
-    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
-        Py_INCREF(Py_None);
-        return Py_None;
-    }
-    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
-    {
-        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
-        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-        Py_INCREF(py_QosTxop);
-    } else {
-        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
-        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
-            py_QosTxop = NULL;
-        } else {
-            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
-            Py_INCREF(py_QosTxop);
-        }
-    
-        if (py_QosTxop == NULL) {
-            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
-            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
-            py_QosTxop->inst_dict = NULL;
-    
-            py_QosTxop->inst_dict = NULL;
-            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
-            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
-        }
-    }
-    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetErpSupported(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetErpSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetErpSupported__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetBKQueue(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    ns3::Ptr< ns3::QosTxop > retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    PyNs3QosTxop *py_QosTxop;
-    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
-    PyTypeObject *wrapper_type = 0;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetBKQueue of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetBKQueue__parent_caller();
-    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
-        Py_INCREF(Py_None);
-        return Py_None;
-    }
-    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
-    {
-        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
-        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-        Py_INCREF(py_QosTxop);
-    } else {
-        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
-        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
-            py_QosTxop = NULL;
-        } else {
-            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
-            Py_INCREF(py_QosTxop);
-        }
-    
-        if (py_QosTxop == NULL) {
-            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
-            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
-            py_QosTxop->inst_dict = NULL;
-    
-            py_QosTxop->inst_dict = NULL;
-            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
-            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
-        }
-    }
-    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetBEQueue(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    ns3::Ptr< ns3::QosTxop > retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    PyNs3QosTxop *py_QosTxop;
-    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
-    PyTypeObject *wrapper_type = 0;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetBEQueue of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetBEQueue__parent_caller();
-    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
-        Py_INCREF(Py_None);
-        return Py_None;
-    }
-    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
-    {
-        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
-        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-        Py_INCREF(py_QosTxop);
-    } else {
-        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
-        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
-            py_QosTxop = NULL;
-        } else {
-            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
-            Py_INCREF(py_QosTxop);
-        }
-    
-        if (py_QosTxop == NULL) {
-            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
-            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
-            py_QosTxop->inst_dict = NULL;
-    
-            py_QosTxop->inst_dict = NULL;
-            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
-            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
-        }
-    }
-    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_Receive(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Packet *packet;
-    ns3::Packet *packet_ptr;
-    PyNs3WifiMacHeader *hdr;
-    ns3::WifiMacHeader *hdr_ptr;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"packet", "hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    packet_ptr = (packet ? packet->obj : NULL);
-    hdr_ptr = (hdr ? hdr->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method Receive of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->Receive__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), hdr_ptr);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetDsssSupported(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetDsssSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetDsssSupported__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_TxFailed(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3WifiMacHeader *hdr;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method TxFailed of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->TxFailed__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetHtSupported(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    bool retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetHtSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetHtSupported__parent_caller();
-    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_DoDispose(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SetErpSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    bool enable;
-    PyObject *py_enable;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"enable", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
-        return NULL;
-    }
-    enable = (bool) PyObject_IsTrue(py_enable);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetErpSupported of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->SetErpSupported__parent_caller(enable);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SendAddBaResponse(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3MgtAddBaRequestHeader *reqHdr;
-    ns3::MgtAddBaRequestHeader *reqHdr_ptr;
-    PyNs3Mac48Address *originator;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"reqHdr", "originator", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3MgtAddBaRequestHeader_Type, &reqHdr, &PyNs3Mac48Address_Type, &originator)) {
-        return NULL;
-    }
-    reqHdr_ptr = (reqHdr ? reqHdr->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SendAddBaResponse of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->SendAddBaResponse__parent_caller(reqHdr_ptr, *((PyNs3Mac48Address *) originator)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RegularWifiMac__PythonHelper::_wrap_SetDsssSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -64201,25 +63788,50 @@ PyNs3RegularWifiMac__PythonHelper::_wrap_SetDsssSupported(PyNs3RegularWifiMac *s
 }
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RegularWifiMac *self)
 {
     PyObject *py_retval;
-    bool enable;
-    PyObject *py_enable;
     PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"enable", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
-        return NULL;
-    }
-    enable = (bool) PyObject_IsTrue(py_enable);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->SetQosSupported__parent_caller(enable);
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetQosSupported(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetQosSupported__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetHtSupported(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetHtSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetHtSupported__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
     return py_retval;
 }
 
@@ -64247,41 +63859,117 @@ PyNs3RegularWifiMac__PythonHelper::_wrap_SetHeSupported(PyNs3RegularWifiMac *sel
 }
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SetHtSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3RegularWifiMac__PythonHelper::_wrap_ForwardUp(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    bool enable;
-    PyObject *py_enable;
+    PyNs3Packet *packet;
+    ns3::Packet *packet_ptr;
+    PyNs3Mac48Address *from;
+    PyNs3Mac48Address *to;
     PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"enable", NULL};
+    const char *keywords[] = {"packet", "from", "to", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3Mac48Address_Type, &from, &PyNs3Mac48Address_Type, &to)) {
         return NULL;
     }
-    enable = (bool) PyObject_IsTrue(py_enable);
+    packet_ptr = (packet ? packet->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetHtSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method ForwardUp of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->SetHtSupported__parent_caller(enable);
+    helper->ForwardUp__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), *((PyNs3Mac48Address *) from)->obj, *((PyNs3Mac48Address *) to)->obj);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
 }
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetHeSupported(PyNs3RegularWifiMac *self)
+PyNs3RegularWifiMac__PythonHelper::_wrap_DoDispose(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetVhtSupported(PyNs3RegularWifiMac *self)
 {
     PyObject *py_retval;
     bool retval;
     PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetHeSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method GetVhtSupported of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    retval = helper->GetHeSupported__parent_caller();
+    retval = helper->GetVhtSupported__parent_caller();
     py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_TxOk(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacHeader *hdr;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method TxOk of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->TxOk__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_SetTypeOfStation(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    ns3::TypeOfStation type;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"type", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &type)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetTypeOfStation of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetTypeOfStation__parent_caller(type);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
     return py_retval;
 }
 
@@ -64308,133 +63996,23 @@ PyNs3RegularWifiMac__PythonHelper::_wrap_ConfigureContentionWindow(PyNs3RegularW
 }
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3RegularWifiMac__PythonHelper::_wrap_SetVhtSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    ns3::WifiPhyStandard standard;
+    bool enable;
+    PyObject *py_enable;
     PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"standard", NULL};
+    const char *keywords[] = {"enable", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
         return NULL;
     }
+    enable = (bool) PyObject_IsTrue(py_enable);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method SetVhtSupported of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->FinishConfigureStandard__parent_caller(standard);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_GetVOQueue(PyNs3RegularWifiMac *self)
-{
-    PyObject *py_retval;
-    ns3::Ptr< ns3::QosTxop > retval;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    PyNs3QosTxop *py_QosTxop;
-    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
-    PyTypeObject *wrapper_type = 0;
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method GetVOQueue of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    retval = helper->GetVOQueue__parent_caller();
-    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
-        Py_INCREF(Py_None);
-        return Py_None;
-    }
-    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
-    {
-        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
-        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-        Py_INCREF(py_QosTxop);
-    } else {
-        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
-        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
-            py_QosTxop = NULL;
-        } else {
-            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
-            Py_INCREF(py_QosTxop);
-        }
-    
-        if (py_QosTxop == NULL) {
-            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
-            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
-            py_QosTxop->inst_dict = NULL;
-    
-            py_QosTxop->inst_dict = NULL;
-            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
-            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
-            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
-            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
-        }
-    }
-    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_SetTypeOfStation(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    ns3::TypeOfStation type;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"type", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &type)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetTypeOfStation of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->SetTypeOfStation__parent_caller(type);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    PyNs3Packet *aggregatedPacket;
-    ns3::Packet *aggregatedPacket_ptr;
-    PyNs3WifiMacHeader *hdr;
-    ns3::WifiMacHeader *hdr_ptr;
-    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
-        return NULL;
-    }
-    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
-    hdr_ptr = (hdr ? hdr->obj : NULL);
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
+    helper->SetVhtSupported__parent_caller(enable);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -64490,25 +64068,447 @@ PyNs3RegularWifiMac__PythonHelper::_wrap_GetTxop(PyNs3RegularWifiMac *self)
 }
 
 PyObject *
-PyNs3RegularWifiMac__PythonHelper::_wrap_ForwardUp(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3RegularWifiMac__PythonHelper::_wrap_SetHtSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool enable;
+    PyObject *py_enable;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"enable", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
+        return NULL;
+    }
+    enable = (bool) PyObject_IsTrue(py_enable);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetHtSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetHtSupported__parent_caller(enable);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3Packet *aggregatedPacket;
+    ns3::Packet *aggregatedPacket_ptr;
+    PyNs3WifiMacHeader *hdr;
+    ns3::WifiMacHeader *hdr_ptr;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
+    hdr_ptr = (hdr ? hdr->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetErpSupported(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetErpSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetErpSupported__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetDsssSupported(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetDsssSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetDsssSupported__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetBEQueue(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    ns3::Ptr< ns3::QosTxop > retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    PyNs3QosTxop *py_QosTxop;
+    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
+    PyTypeObject *wrapper_type = 0;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetBEQueue of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetBEQueue__parent_caller();
+    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
+        Py_INCREF(Py_None);
+        return Py_None;
+    }
+    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
+    {
+        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
+        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+        Py_INCREF(py_QosTxop);
+    } else {
+        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
+        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
+            py_QosTxop = NULL;
+        } else {
+            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
+            Py_INCREF(py_QosTxop);
+        }
+    
+        if (py_QosTxop == NULL) {
+            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
+            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
+            py_QosTxop->inst_dict = NULL;
+    
+            py_QosTxop->inst_dict = NULL;
+            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
+            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
+        }
+    }
+    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetHeSupported(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    bool retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetHeSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetHeSupported__parent_caller();
+    py_retval = Py_BuildValue((char *) "N", PyBool_FromLong(retval));
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_Receive(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
     PyNs3Packet *packet;
     ns3::Packet *packet_ptr;
-    PyNs3Mac48Address *from;
-    PyNs3Mac48Address *to;
+    PyNs3WifiMacHeader *hdr;
+    ns3::WifiMacHeader *hdr_ptr;
     PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"packet", "from", "to", NULL};
+    const char *keywords[] = {"packet", "hdr", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3Mac48Address_Type, &from, &PyNs3Mac48Address_Type, &to)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &packet, &PyNs3WifiMacHeader_Type, &hdr)) {
         return NULL;
     }
     packet_ptr = (packet ? packet->obj : NULL);
+    hdr_ptr = (hdr ? hdr->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method ForwardUp of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method Receive of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->ForwardUp__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), *((PyNs3Mac48Address *) from)->obj, *((PyNs3Mac48Address *) to)->obj);
+    helper->Receive__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), hdr_ptr);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetVIQueue(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    ns3::Ptr< ns3::QosTxop > retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    PyNs3QosTxop *py_QosTxop;
+    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
+    PyTypeObject *wrapper_type = 0;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetVIQueue of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetVIQueue__parent_caller();
+    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
+        Py_INCREF(Py_None);
+        return Py_None;
+    }
+    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
+    {
+        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
+        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+        Py_INCREF(py_QosTxop);
+    } else {
+        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
+        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
+            py_QosTxop = NULL;
+        } else {
+            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
+            Py_INCREF(py_QosTxop);
+        }
+    
+        if (py_QosTxop == NULL) {
+            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
+            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
+            py_QosTxop->inst_dict = NULL;
+    
+            py_QosTxop->inst_dict = NULL;
+            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
+            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
+        }
+    }
+    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetVOQueue(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    ns3::Ptr< ns3::QosTxop > retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    PyNs3QosTxop *py_QosTxop;
+    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
+    PyTypeObject *wrapper_type = 0;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetVOQueue of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetVOQueue__parent_caller();
+    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
+        Py_INCREF(Py_None);
+        return Py_None;
+    }
+    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
+    {
+        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
+        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+        Py_INCREF(py_QosTxop);
+    } else {
+        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
+        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
+            py_QosTxop = NULL;
+        } else {
+            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
+            Py_INCREF(py_QosTxop);
+        }
+    
+        if (py_QosTxop == NULL) {
+            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
+            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
+            py_QosTxop->inst_dict = NULL;
+    
+            py_QosTxop->inst_dict = NULL;
+            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
+            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
+        }
+    }
+    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_SetErpSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool enable;
+    PyObject *py_enable;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"enable", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
+        return NULL;
+    }
+    enable = (bool) PyObject_IsTrue(py_enable);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetErpSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetErpSupported__parent_caller(enable);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    bool enable;
+    PyObject *py_enable;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"enable", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
+        return NULL;
+    }
+    enable = (bool) PyObject_IsTrue(py_enable);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SetQosSupported__parent_caller(enable);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_SendAddBaResponse(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3MgtAddBaRequestHeader *reqHdr;
+    ns3::MgtAddBaRequestHeader *reqHdr_ptr;
+    PyNs3Mac48Address *originator;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"reqHdr", "originator", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3MgtAddBaRequestHeader_Type, &reqHdr, &PyNs3Mac48Address_Type, &originator)) {
+        return NULL;
+    }
+    reqHdr_ptr = (reqHdr ? reqHdr->obj : NULL);
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method SendAddBaResponse of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->SendAddBaResponse__parent_caller(reqHdr_ptr, *((PyNs3Mac48Address *) originator)->obj);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_GetBKQueue(PyNs3RegularWifiMac *self)
+{
+    PyObject *py_retval;
+    ns3::Ptr< ns3::QosTxop > retval;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    PyNs3QosTxop *py_QosTxop;
+    std::map<void*, PyObject*>::const_iterator wrapper_lookup_iter;
+    PyTypeObject *wrapper_type = 0;
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method GetBKQueue of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    retval = helper->GetBKQueue__parent_caller();
+    if (!(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))) {
+        Py_INCREF(Py_None);
+        return Py_None;
+    }
+    if (typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))).name() == typeid(PyNs3QosTxop__PythonHelper).name())
+    {
+        py_QosTxop = reinterpret_cast< PyNs3QosTxop* >(reinterpret_cast< PyNs3QosTxop__PythonHelper* >(const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))->m_pyself);
+        py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+        Py_INCREF(py_QosTxop);
+    } else {
+        wrapper_lookup_iter = PyNs3ObjectBase_wrapper_registry.find((void *) const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)));
+        if (wrapper_lookup_iter == PyNs3ObjectBase_wrapper_registry.end()) {
+            py_QosTxop = NULL;
+        } else {
+            py_QosTxop = (PyNs3QosTxop *) wrapper_lookup_iter->second;
+            Py_INCREF(py_QosTxop);
+        }
+    
+        if (py_QosTxop == NULL) {
+            wrapper_type = PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__typeid_map.lookup_wrapper(typeid((*const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval)))), &PyNs3QosTxop_Type);
+            py_QosTxop = PyObject_GC_New(PyNs3QosTxop, wrapper_type);
+            py_QosTxop->inst_dict = NULL;
+    
+            py_QosTxop->inst_dict = NULL;
+            py_QosTxop->flags = PYBINDGEN_WRAPPER_FLAG_NONE;
+            const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval))->Ref();
+            py_QosTxop->obj = const_cast<ns3::QosTxop *> (ns3::PeekPointer (retval));
+            PyNs3ObjectBase_wrapper_registry[(void *) py_QosTxop->obj] = (PyObject *) py_QosTxop;
+        }
+    }
+    py_retval = Py_BuildValue((char *) "N", py_QosTxop);
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    ns3::WifiPhyStandard standard;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"standard", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->FinishConfigureStandard__parent_caller(standard);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RegularWifiMac__PythonHelper::_wrap_TxFailed(PyNs3RegularWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacHeader *hdr;
+    PyNs3RegularWifiMac__PythonHelper *helper = dynamic_cast< PyNs3RegularWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"hdr", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!", (char **) keywords, &PyNs3WifiMacHeader_Type, &hdr)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method TxFailed of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->TxFailed__parent_caller(*((PyNs3WifiMacHeader *) hdr)->obj);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -67812,36 +67812,36 @@ static PyMethodDef PyNs3RegularWifiMac_methods[] = {
     {(char *) "GetBasicBlockAckTimeout", (PyCFunction) _wrap_PyNs3RegularWifiMac_GetBasicBlockAckTimeout, METH_NOARGS, "GetBasicBlockAckTimeout()\n\n" },
     {(char *) "SetCompressedBlockAckTimeout", (PyCFunction) _wrap_PyNs3RegularWifiMac_SetCompressedBlockAckTimeout, METH_KEYWORDS|METH_VARARGS, "SetCompressedBlockAckTimeout(blockAckTimeout)\n\ntype: blockAckTimeout: ns3::Time" },
     {(char *) "GetCompressedBlockAckTimeout", (PyCFunction) _wrap_PyNs3RegularWifiMac_GetCompressedBlockAckTimeout, METH_NOARGS, "GetCompressedBlockAckTimeout()\n\n" },
-    {(char *) "TxOk", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetVhtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetVhtSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetQosSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetQosSupported, METH_NOARGS, NULL },
-    {(char *) "GetVhtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVhtSupported, METH_NOARGS, NULL },
-    {(char *) "GetVIQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVIQueue, METH_NOARGS, NULL },
-    {(char *) "GetErpSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetErpSupported, METH_NOARGS, NULL },
-    {(char *) "GetBKQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetBKQueue, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "GetBEQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetBEQueue, METH_NOARGS, NULL },
-    {(char *) "Receive", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_Receive, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetDsssSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetDsssSupported, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "TxFailed", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetHtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetHtSupported, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "SetErpSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetErpSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SendAddBaResponse", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SendAddBaResponse, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "SetDsssSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetDsssSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetQosSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetQosSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetHeSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetHeSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetHtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetHtSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetHeSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetHeSupported, METH_NOARGS, NULL },
-    {(char *) "ConfigureContentionWindow", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_ConfigureContentionWindow, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "GetVOQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVOQueue, METH_NOARGS, NULL },
-    {(char *) "SetTypeOfStation", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetTypeOfStation, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetTxop", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetTxop, METH_NOARGS, NULL },
+    {(char *) "GetQosSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetQosSupported, METH_NOARGS, NULL },
+    {(char *) "GetHtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetHtSupported, METH_NOARGS, NULL },
+    {(char *) "SetHeSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetHeSupported, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "ForwardUp", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_ForwardUp, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "GetVhtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVhtSupported, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "TxOk", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetTypeOfStation", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetTypeOfStation, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "ConfigureContentionWindow", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_ConfigureContentionWindow, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetVhtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetVhtSupported, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetTxop", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetTxop, METH_NOARGS, NULL },
+    {(char *) "SetHtSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetHtSupported, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetErpSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetErpSupported, METH_NOARGS, NULL },
+    {(char *) "GetDsssSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetDsssSupported, METH_NOARGS, NULL },
+    {(char *) "GetBEQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetBEQueue, METH_NOARGS, NULL },
+    {(char *) "GetHeSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetHeSupported, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "Receive", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_Receive, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetVIQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVIQueue, METH_NOARGS, NULL },
+    {(char *) "GetVOQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetVOQueue, METH_NOARGS, NULL },
+    {(char *) "SetErpSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetErpSupported, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetQosSupported", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SetQosSupported, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SendAddBaResponse", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_SendAddBaResponse, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetBKQueue", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_GetBKQueue, METH_NOARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "TxFailed", (PyCFunction) PyNs3RegularWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -67907,7 +67907,7 @@ PyTypeObject PyNs3RegularWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RegularWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3RegularWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RegularWifiMac__tp_clear,             /* tp_clear */
@@ -68164,7 +68164,7 @@ PyTypeObject PyNs3RraaWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RraaWifiManager(arg0)\nRraaWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3RraaWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RraaWifiManager__tp_clear,             /* tp_clear */
@@ -68439,7 +68439,7 @@ PyTypeObject PyNs3RrpaaWifiManager_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RrpaaWifiManager(arg0)\nRrpaaWifiManager()",                        /* Documentation string */
     (traverseproc)PyNs3RrpaaWifiManager__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RrpaaWifiManager__tp_clear,             /* tp_clear */
@@ -68472,16 +68472,16 @@ PyTypeObject PyNs3RrpaaWifiManager_Type = {
 
 
 PyObject *
-PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleFrameCaptureModel *self)
+PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoInitialize(PyNs3SimpleFrameCaptureModel *self)
 {
     PyObject *py_retval;
     PyNs3SimpleFrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3SimpleFrameCaptureModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -68504,6 +68504,22 @@ PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoDispose(PyNs3SimpleFrameCapt
 }
 
 PyObject *
+PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SimpleFrameCaptureModel *self)
+{
+    PyObject *py_retval;
+    PyNs3SimpleFrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3SimpleFrameCaptureModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SimpleFrameCaptureModel *self)
 {
     PyObject *py_retval;
@@ -68514,22 +68530,6 @@ PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Simple
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoInitialize(PyNs3SimpleFrameCaptureModel *self)
-{
-    PyObject *py_retval;
-    PyNs3SimpleFrameCaptureModel__PythonHelper *helper = dynamic_cast< PyNs3SimpleFrameCaptureModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -69029,10 +69029,10 @@ static PyMethodDef PyNs3SimpleFrameCaptureModel_methods[] = {
     {(char *) "GetMargin", (PyCFunction) _wrap_PyNs3SimpleFrameCaptureModel_GetMargin, METH_NOARGS, "GetMargin()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimpleFrameCaptureModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetMargin", (PyCFunction) _wrap_PyNs3SimpleFrameCaptureModel_SetMargin, METH_KEYWORDS|METH_VARARGS, "SetMargin(margin)\n\ntype: margin: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SimpleFrameCaptureModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SimpleFrameCaptureModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -69099,7 +69099,7 @@ PyTypeObject PyNs3SimpleFrameCaptureModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SimpleFrameCaptureModel(arg0)\nSimpleFrameCaptureModel()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleFrameCaptureModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleFrameCaptureModel__tp_clear,             /* tp_clear */
@@ -69132,16 +69132,16 @@ PyTypeObject PyNs3SimpleFrameCaptureModel_Type = {
 
 
 PyObject *
-PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SpectrumWifiPhy *self)
+PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumWifiPhy *self)
 {
     PyObject *py_retval;
     PyNs3SpectrumWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumWifiPhy__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class SpectrumWifiPhy is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -69164,6 +69164,22 @@ PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoDispose(PyNs3SpectrumWifiPhy *self)
 }
 
 PyObject *
+PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SpectrumWifiPhy *self)
+{
+    PyObject *py_retval;
+    PyNs3SpectrumWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumWifiPhy__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumWifiPhy *self)
 {
     PyObject *py_retval;
@@ -69174,22 +69190,6 @@ PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyNewAggregate(PyNs3SpectrumWifiPh
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoInitialize(PyNs3SpectrumWifiPhy *self)
-{
-    PyObject *py_retval;
-    PyNs3SpectrumWifiPhy__PythonHelper *helper = dynamic_cast< PyNs3SpectrumWifiPhy__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class SpectrumWifiPhy is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -70280,10 +70280,10 @@ static PyMethodDef PyNs3SpectrumWifiPhy_methods[] = {
     {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3SpectrumWifiPhy_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(freq)\n\ntype: freq: uint16_t" },
     {(char *) "StartRx", (PyCFunction) _wrap_PyNs3SpectrumWifiPhy_StartRx, METH_KEYWORDS|METH_VARARGS, "StartRx(rxParams)\n\ntype: rxParams: ns3::Ptr< ns3::SpectrumSignalParameters >" },
     {(char *) "StartTx", (PyCFunction) _wrap_PyNs3SpectrumWifiPhy_StartTx, METH_KEYWORDS|METH_VARARGS, "StartTx(packet, txVector, txDuration)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: txVector: ns3::WifiTxVector\ntype: txDuration: ns3::Time" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SpectrumWifiPhy__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SpectrumWifiPhy__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -70350,7 +70350,7 @@ PyTypeObject PyNs3SpectrumWifiPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SpectrumWifiPhy(arg0)\nSpectrumWifiPhy()",                        /* Documentation string */
     (traverseproc)PyNs3SpectrumWifiPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SpectrumWifiPhy__tp_clear,             /* tp_clear */
@@ -72781,16 +72781,16 @@ PyTypeObject PyNs3VhtOperation_Type = {
 
 
 PyObject *
-PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiMacQueue *self)
+PyNs3WifiMacQueue__PythonHelper::_wrap_DoInitialize(PyNs3WifiMacQueue *self)
 {
     PyObject *py_retval;
     PyNs3WifiMacQueue__PythonHelper *helper = dynamic_cast< PyNs3WifiMacQueue__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -72813,6 +72813,22 @@ PyNs3WifiMacQueue__PythonHelper::_wrap_DoDispose(PyNs3WifiMacQueue *self)
 }
 
 PyObject *
+PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiMacQueue *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiMacQueue__PythonHelper *helper = dynamic_cast< PyNs3WifiMacQueue__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiMacQueue *self)
 {
     PyObject *py_retval;
@@ -72823,22 +72839,6 @@ PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiMacQueue *sel
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiMacQueue__PythonHelper::_wrap_DoInitialize(PyNs3WifiMacQueue *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiMacQueue__PythonHelper *helper = dynamic_cast< PyNs3WifiMacQueue__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -73874,10 +73874,10 @@ static PyMethodDef PyNs3WifiMacQueue_methods[] = {
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3WifiMacQueue_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "GetNPackets", (PyCFunction) _wrap_PyNs3WifiMacQueue_GetNPackets, METH_NOARGS, "GetNPackets()\n\n" },
     {(char *) "GetNBytes", (PyCFunction) _wrap_PyNs3WifiMacQueue_GetNBytes, METH_NOARGS, "GetNBytes()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiMacQueue__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WifiMacQueue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -73944,7 +73944,7 @@ PyTypeObject PyNs3WifiMacQueue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiMacQueue(arg0)\nWifiMacQueue()",                        /* Documentation string */
     (traverseproc)PyNs3WifiMacQueue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiMacQueue__tp_clear,             /* tp_clear */
@@ -74361,16 +74361,16 @@ PyTypeObject PyNs3WifiModeValue_Type = {
 
 
 PyObject *
-PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiNetDevice *self)
+PyNs3WifiNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3WifiNetDevice *self)
 {
     PyObject *py_retval;
     PyNs3WifiNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WifiNetDevice__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiNetDevice is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -74387,6 +74387,38 @@ PyNs3WifiNetDevice__PythonHelper::_wrap_DoDispose(PyNs3WifiNetDevice *self)
         return NULL;
     }
     helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WifiNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiNetDevice *self)
+{
+    PyObject *py_retval;
+    PyNs3WifiNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WifiNetDevice__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -74412,38 +74444,6 @@ PyNs3WifiNetDevice__PythonHelper::_wrap_ForwardUp(PyNs3WifiNetDevice *self, PyOb
         return NULL;
     }
     helper->ForwardUp__parent_caller(ns3::Ptr< ns3::Packet  > (packet_ptr), *((PyNs3Mac48Address *) from)->obj, *((PyNs3Mac48Address *) to)->obj);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WifiNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3WifiNetDevice__PythonHelper::_wrap_DoInitialize(PyNs3WifiNetDevice *self)
-{
-    PyObject *py_retval;
-    PyNs3WifiNetDevice__PythonHelper *helper = dynamic_cast< PyNs3WifiNetDevice__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class WifiNetDevice is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -76540,11 +76540,11 @@ static PyMethodDef PyNs3WifiNetDevice_methods[] = {
     {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3WifiNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
     {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3WifiNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3WifiNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "ForwardUp", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_ForwardUp, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "ForwardUp", (PyCFunction) PyNs3WifiNetDevice__PythonHelper::_wrap_ForwardUp, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -76610,7 +76610,7 @@ PyTypeObject PyNs3WifiNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3WifiNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiNetDevice__tp_clear,             /* tp_clear */
@@ -76643,16 +76643,16 @@ PyTypeObject PyNs3WifiNetDevice_Type = {
 
 
 PyObject *
-PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiRadioEnergyModel *self)
+PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_DoInitialize(PyNs3WifiRadioEnergyModel *self)
 {
     PyObject *py_retval;
     PyNs3WifiRadioEnergyModel__PythonHelper *helper = dynamic_cast< PyNs3WifiRadioEnergyModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -76675,16 +76675,16 @@ PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3WifiRadio
 }
 
 PyObject *
-PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_DoInitialize(PyNs3WifiRadioEnergyModel *self)
+PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WifiRadioEnergyModel *self)
 {
     PyObject *py_retval;
     PyNs3WifiRadioEnergyModel__PythonHelper *helper = dynamic_cast< PyNs3WifiRadioEnergyModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DoInitialize__parent_caller();
+    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -77721,9 +77721,9 @@ static PyMethodDef PyNs3WifiRadioEnergyModel_methods[] = {
     {(char *) "SetSwitchingCurrentA", (PyCFunction) _wrap_PyNs3WifiRadioEnergyModel_SetSwitchingCurrentA, METH_KEYWORDS|METH_VARARGS, "SetSwitchingCurrentA(switchingCurrentA)\n\ntype: switchingCurrentA: double" },
     {(char *) "SetTxCurrentA", (PyCFunction) _wrap_PyNs3WifiRadioEnergyModel_SetTxCurrentA, METH_KEYWORDS|METH_VARARGS, "SetTxCurrentA(txCurrentA)\n\ntype: txCurrentA: double" },
     {(char *) "SetTxCurrentFromModel", (PyCFunction) _wrap_PyNs3WifiRadioEnergyModel_SetTxCurrentFromModel, METH_KEYWORDS|METH_VARARGS, "SetTxCurrentFromModel(txPowerDbm)\n\ntype: txPowerDbm: double" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WifiRadioEnergyModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -77789,7 +77789,7 @@ PyTypeObject PyNs3WifiRadioEnergyModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WifiRadioEnergyModel(arg0)\nWifiRadioEnergyModel()",                        /* Documentation string */
     (traverseproc)PyNs3WifiRadioEnergyModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WifiRadioEnergyModel__tp_clear,             /* tp_clear */
@@ -77822,16 +77822,16 @@ PyTypeObject PyNs3WifiRadioEnergyModel_Type = {
 
 
 PyObject *
-PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansErrorRateModel *self)
+PyNs3YansErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3YansErrorRateModel *self)
 {
     PyObject *py_retval;
     PyNs3YansErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3YansErrorRateModel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -77854,6 +77854,22 @@ PyNs3YansErrorRateModel__PythonHelper::_wrap_DoDispose(PyNs3YansErrorRateModel *
 }
 
 PyObject *
+PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansErrorRateModel *self)
+{
+    PyObject *py_retval;
+    PyNs3YansErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3YansErrorRateModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansErrorRateModel *self)
 {
     PyObject *py_retval;
@@ -77864,22 +77880,6 @@ PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansErrorRa
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3YansErrorRateModel__PythonHelper::_wrap_DoInitialize(PyNs3YansErrorRateModel *self)
-{
-    PyObject *py_retval;
-    PyNs3YansErrorRateModel__PythonHelper *helper = dynamic_cast< PyNs3YansErrorRateModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -78312,10 +78312,10 @@ _wrap_PyNs3YansErrorRateModel__copy__(PyNs3YansErrorRateModel *self)
 static PyMethodDef PyNs3YansErrorRateModel_methods[] = {
     {(char *) "GetChunkSuccessRate", (PyCFunction) _wrap_PyNs3YansErrorRateModel_GetChunkSuccessRate, METH_KEYWORDS|METH_VARARGS, "GetChunkSuccessRate(mode, txVector, snr, nbits)\n\ntype: mode: ns3::WifiMode\ntype: txVector: ns3::WifiTxVector\ntype: snr: double\ntype: nbits: uint64_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3YansErrorRateModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansErrorRateModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3YansErrorRateModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -78382,7 +78382,7 @@ PyTypeObject PyNs3YansErrorRateModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "YansErrorRateModel(arg0)\nYansErrorRateModel()",                        /* Documentation string */
     (traverseproc)PyNs3YansErrorRateModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3YansErrorRateModel__tp_clear,             /* tp_clear */
@@ -78415,16 +78415,16 @@ PyTypeObject PyNs3YansErrorRateModel_Type = {
 
 
 PyObject *
-PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansWifiChannel *self)
+PyNs3YansWifiChannel__PythonHelper::_wrap_DoInitialize(PyNs3YansWifiChannel *self)
 {
     PyObject *py_retval;
     PyNs3YansWifiChannel__PythonHelper *helper = dynamic_cast< PyNs3YansWifiChannel__PythonHelper* >(self->obj);
     
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyConstructionCompleted__parent_caller();
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -78447,6 +78447,22 @@ PyNs3YansWifiChannel__PythonHelper::_wrap_DoDispose(PyNs3YansWifiChannel *self)
 }
 
 PyObject *
+PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3YansWifiChannel *self)
+{
+    PyObject *py_retval;
+    PyNs3YansWifiChannel__PythonHelper *helper = dynamic_cast< PyNs3YansWifiChannel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansWifiChannel *self)
 {
     PyObject *py_retval;
@@ -78457,22 +78473,6 @@ PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3YansWifiChanne
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3YansWifiChannel__PythonHelper::_wrap_DoInitialize(PyNs3YansWifiChannel *self)
-{
-    PyObject *py_retval;
-    PyNs3YansWifiChannel__PythonHelper *helper = dynamic_cast< PyNs3YansWifiChannel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -79053,10 +79053,10 @@ static PyMethodDef PyNs3YansWifiChannel_methods[] = {
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3YansWifiChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3YansWifiChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Send", (PyCFunction) _wrap_PyNs3YansWifiChannel_Send, METH_KEYWORDS|METH_VARARGS, "Send(sender, packet, txPowerDbm, duration)\n\ntype: sender: ns3::Ptr< ns3::YansWifiPhy >\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: txPowerDbm: double\ntype: duration: ns3::Time" },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3YansWifiChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3YansWifiChannel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -79123,7 +79123,7 @@ PyTypeObject PyNs3YansWifiChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "YansWifiChannel(arg0)\nYansWifiChannel()",                        /* Documentation string */
     (traverseproc)PyNs3YansWifiChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3YansWifiChannel__tp_clear,             /* tp_clear */
@@ -79156,21 +79156,23 @@ PyTypeObject PyNs3YansWifiChannel_Type = {
 
 
 PyObject *
-PyNs3AdhocWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3AdhocWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3AdhocWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3AdhocWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    ns3::WifiPhyStandard standard;
+    bool enable;
+    PyObject *py_enable;
     PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"standard", NULL};
+    const char *keywords[] = {"enable", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
         return NULL;
     }
+    enable = (bool) PyObject_IsTrue(py_enable);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method SetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->FinishConfigureStandard__parent_caller(standard);
+    helper->SetQosSupported__parent_caller(enable);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -79214,6 +79216,27 @@ PyNs3AdhocWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3AdhocWif
 }
 
 PyObject *
+PyNs3AdhocWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3AdhocWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    ns3::WifiPhyStandard standard;
+    PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"standard", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->FinishConfigureStandard__parent_caller(standard);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3AdhocWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3AdhocWifiMac *self)
 {
     PyObject *py_retval;
@@ -79230,23 +79253,16 @@ PyNs3AdhocWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3AdhocWifiMac *self)
 }
 
 PyObject *
-PyNs3AdhocWifiMac__PythonHelper::_wrap_SetQosSupported(PyNs3AdhocWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3AdhocWifiMac__PythonHelper::_wrap_DoDispose(PyNs3AdhocWifiMac *self)
 {
     PyObject *py_retval;
-    bool enable;
-    PyObject *py_enable;
     PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"enable", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O", (char **) keywords, &py_enable)) {
-        return NULL;
-    }
-    enable = (bool) PyObject_IsTrue(py_enable);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method SetQosSupported of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->SetQosSupported__parent_caller(enable);
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -79274,6 +79290,22 @@ PyNs3AdhocWifiMac__PythonHelper::_wrap_TxFailed(PyNs3AdhocWifiMac *self, PyObjec
 }
 
 PyObject *
+PyNs3AdhocWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AdhocWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3AdhocWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3AdhocWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
@@ -79294,38 +79326,6 @@ PyNs3AdhocWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3AdhocWifi
         return NULL;
     }
     helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3AdhocWifiMac__PythonHelper::_wrap_DoDispose(PyNs3AdhocWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3AdhocWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3AdhocWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3AdhocWifiMac__PythonHelper *helper = dynamic_cast< PyNs3AdhocWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -81807,15 +81807,15 @@ static PyMethodDef PyNs3AdhocWifiMac_methods[] = {
     {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3AdhocWifiMac_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Mac48Address" },
     {(char *) "SetLinkUpCallback", (PyCFunction) _wrap_PyNs3AdhocWifiMac_SetLinkUpCallback, METH_KEYWORDS|METH_VARARGS, "SetLinkUpCallback(linkUp)\n\ntype: linkUp: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3AdhocWifiMac_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, to)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: to: ns3::Mac48Address" },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetQosSupported", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_SetQosSupported, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "TxOk", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "SetQosSupported", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_SetQosSupported, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "TxFailed", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "TxFailed", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3AdhocWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -81881,7 +81881,7 @@ PyTypeObject PyNs3AdhocWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AdhocWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3AdhocWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AdhocWifiMac__tp_clear,             /* tp_clear */
@@ -82649,21 +82649,16 @@ PyTypeObject PyNs3CallbackImpl__Void_Ns3Time_Ns3Time_WifiPhyState_Ns3Empty_Ns3Em
 
 
 PyObject *
-PyNs3InfrastructureWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3InfrastructureWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3InfrastructureWifiMac *self)
 {
     PyObject *py_retval;
-    ns3::WifiPhyStandard standard;
     PyNs3InfrastructureWifiMac__PythonHelper *helper = dynamic_cast< PyNs3InfrastructureWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"standard", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
-        return NULL;
-    }
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->FinishConfigureStandard__parent_caller(standard);
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -82707,6 +82702,27 @@ PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
 }
 
 PyObject *
+PyNs3InfrastructureWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3InfrastructureWifiMac *self, PyObject *args, PyObject *kwargs)
+{
+    PyObject *py_retval;
+    ns3::WifiPhyStandard standard;
+    PyNs3InfrastructureWifiMac__PythonHelper *helper = dynamic_cast< PyNs3InfrastructureWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"standard", NULL};
+    
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
+        return NULL;
+    }
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->FinishConfigureStandard__parent_caller(standard);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3InfrastructureWifiMac *self)
 {
     PyObject *py_retval;
@@ -82717,6 +82733,22 @@ PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoInitialize(PyNs3Infrastructure
         return NULL;
     }
     helper->DoInitialize__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoDispose(PyNs3InfrastructureWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3InfrastructureWifiMac__PythonHelper *helper = dynamic_cast< PyNs3InfrastructureWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -82790,38 +82822,6 @@ PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3
         return NULL;
     }
     helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoDispose(PyNs3InfrastructureWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3InfrastructureWifiMac__PythonHelper *helper = dynamic_cast< PyNs3InfrastructureWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3InfrastructureWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3InfrastructureWifiMac__PythonHelper *helper = dynamic_cast< PyNs3InfrastructureWifiMac__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -85312,15 +85312,15 @@ static PyMethodDef PyNs3InfrastructureWifiMac_methods[] = {
     {(char *) "SetQosSupported", (PyCFunction) _wrap_PyNs3InfrastructureWifiMac_SetQosSupported, METH_KEYWORDS|METH_VARARGS, "SetQosSupported(enable)\n\ntype: enable: bool" },
     {(char *) "SetPcfSupported", (PyCFunction) _wrap_PyNs3InfrastructureWifiMac_SetPcfSupported, METH_KEYWORDS|METH_VARARGS, "SetPcfSupported(enable)\n\ntype: enable: bool" },
     {(char *) "GetPcfSupported", (PyCFunction) _wrap_PyNs3InfrastructureWifiMac_GetPcfSupported, METH_NOARGS, "GetPcfSupported()\n\n" },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "TxOk", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "Receive", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_Receive, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "TxFailed", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3InfrastructureWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -85386,7 +85386,7 @@ PyTypeObject PyNs3InfrastructureWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "InfrastructureWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3InfrastructureWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3InfrastructureWifiMac__tp_clear,             /* tp_clear */
@@ -85417,27 +85417,6 @@ PyTypeObject PyNs3InfrastructureWifiMac_Type = {
 
 
 
-
-PyObject *
-PyNs3StaWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3StaWifiMac *self, PyObject *args, PyObject *kwargs)
-{
-    PyObject *py_retval;
-    ns3::WifiPhyStandard standard;
-    PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"standard", NULL};
-    
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
-        return NULL;
-    }
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->FinishConfigureStandard__parent_caller(standard);
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
 
 PyObject *
 PyNs3StaWifiMac__PythonHelper::_wrap_TxOk(PyNs3StaWifiMac *self, PyObject *args, PyObject *kwargs)
@@ -85477,26 +85456,53 @@ PyNs3StaWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3StaWifiMac
 }
 
 PyObject *
-PyNs3StaWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3StaWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3StaWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3StaWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
-    PyNs3Packet *aggregatedPacket;
-    ns3::Packet *aggregatedPacket_ptr;
-    PyNs3WifiMacHeader *hdr;
-    ns3::WifiMacHeader *hdr_ptr;
+    ns3::WifiPhyStandard standard;
     PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
+    const char *keywords[] = {"standard", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
         return NULL;
     }
-    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
-    hdr_ptr = (hdr ? hdr->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
+    helper->FinishConfigureStandard__parent_caller(standard);
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3StaWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3StaWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3StaWifiMac__PythonHelper::_wrap_DoDispose(PyNs3StaWifiMac *self)
+{
+    PyObject *py_retval;
+    PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -85524,32 +85530,26 @@ PyNs3StaWifiMac__PythonHelper::_wrap_TxFailed(PyNs3StaWifiMac *self, PyObject *a
 }
 
 PyObject *
-PyNs3StaWifiMac__PythonHelper::_wrap_DoDispose(PyNs3StaWifiMac *self)
+PyNs3StaWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward(PyNs3StaWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
+    PyNs3Packet *aggregatedPacket;
+    ns3::Packet *aggregatedPacket_ptr;
+    PyNs3WifiMacHeader *hdr;
+    ns3::WifiMacHeader *hdr_ptr;
     PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"aggregatedPacket", "hdr", NULL};
     
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class RegularWifiMac is protected and can only be called by a subclass");
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "O!O!", (char **) keywords, &PyNs3Packet_Type, &aggregatedPacket, &PyNs3WifiMacHeader_Type, &hdr)) {
         return NULL;
     }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3StaWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3StaWifiMac *self)
-{
-    PyObject *py_retval;
-    PyNs3StaWifiMac__PythonHelper *helper = dynamic_cast< PyNs3StaWifiMac__PythonHelper* >(self->obj);
-    
+    aggregatedPacket_ptr = (aggregatedPacket ? aggregatedPacket->obj : NULL);
+    hdr_ptr = (hdr ? hdr->obj : NULL);
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method DeaggregateAmsduAndForward of class RegularWifiMac is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    helper->DeaggregateAmsduAndForward__parent_caller(ns3::Ptr< ns3::Packet  > (aggregatedPacket_ptr), hdr_ptr);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -87986,13 +87986,13 @@ _wrap_PyNs3StaWifiMac_Enqueue(PyNs3StaWifiMac *self, PyObject *args, PyObject *k
 static PyMethodDef PyNs3StaWifiMac_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3StaWifiMac_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3StaWifiMac_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(packet, to)\n\ntype: packet: ns3::Ptr< ns3::Packet const >\ntype: to: ns3::Mac48Address" },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "TxOk", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_TxOk, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
-    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "TxFailed", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
+    {(char *) "TxFailed", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_TxFailed, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DeaggregateAmsduAndForward", (PyCFunction) PyNs3StaWifiMac__PythonHelper::_wrap_DeaggregateAmsduAndForward, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -88058,7 +88058,7 @@ PyTypeObject PyNs3StaWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "StaWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3StaWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3StaWifiMac__tp_clear,             /* tp_clear */
@@ -88091,21 +88091,16 @@ PyTypeObject PyNs3StaWifiMac_Type = {
 
 
 PyObject *
-PyNs3ApWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3ApWifiMac *self, PyObject *args, PyObject *kwargs)
+PyNs3ApWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ApWifiMac *self)
 {
     PyObject *py_retval;
-    ns3::WifiPhyStandard standard;
     PyNs3ApWifiMac__PythonHelper *helper = dynamic_cast< PyNs3ApWifiMac__PythonHelper* >(self->obj);
-    const char *keywords[] = {"standard", NULL};
     
-    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
-        return NULL;
-    }
     if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
         return NULL;
     }
-    helper->FinishConfigureStandard__parent_caller(standard);
+    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -88128,16 +88123,21 @@ PyNs3ApWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3ApWifiMac *
 }
 
 PyObject *
-PyNs3ApWifiMac__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ApWifiMac *self)
+PyNs3ApWifiMac__PythonHelper::_wrap_FinishConfigureStandard(PyNs3ApWifiMac *self, PyObject *args, PyObject *kwargs)
 {
     PyObject *py_retval;
+    ns3::WifiPhyStandard standard;
     PyNs3ApWifiMac__PythonHelper *helper = dynamic_cast< PyNs3ApWifiMac__PythonHelper* >(self->obj);
+    const char *keywords[] = {"standard", NULL};
     
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+    if (!PyArg_ParseTupleAndKeywords(args, kwargs, (char *) "i", (char **) keywords, &standard)) {
         return NULL;
     }
-    helper->NotifyNewAggregate__parent_caller();
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method FinishConfigureStandard of class RegularWifiMac is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->FinishConfigureStandard__parent_caller(standard);
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -90826,9 +90826,9 @@ static PyMethodDef PyNs3ApWifiMac_methods[] = {
     {(char *) "IsNonGfHtStasPresent", (PyCFunction) _wrap_PyNs3ApWifiMac_IsNonGfHtStasPresent, METH_NOARGS, "IsNonGfHtStasPresent()\n\n" },
     {(char *) "GetVhtOperationalChannelWidth", (PyCFunction) _wrap_PyNs3ApWifiMac_GetVhtOperationalChannelWidth, METH_NOARGS, "GetVhtOperationalChannelWidth()\n\n" },
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3ApWifiMac_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3ApWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ApWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ApWifiMac__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ApWifiMac__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "FinishConfigureStandard", (PyCFunction) PyNs3ApWifiMac__PythonHelper::_wrap_FinishConfigureStandard, METH_KEYWORDS|METH_VARARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -90894,7 +90894,7 @@ PyTypeObject PyNs3ApWifiMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ApWifiMac()",                        /* Documentation string */
     (traverseproc)PyNs3ApWifiMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ApWifiMac__tp_clear,             /* tp_clear */

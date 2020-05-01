@@ -1565,6 +1565,38 @@ PyTypeObject PyNs3BuildingsHelper_Type = {
 
 
 PyObject *
+PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomBuildingPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomBuildingPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBuildingPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomBuildingPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomBuildingPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBuildingPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomBuildingPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -1591,38 +1623,6 @@ PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyN
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomBuildingPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomBuildingPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBuildingPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomBuildingPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomBuildingPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBuildingPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2107,10 +2107,10 @@ static PyMethodDef PyNs3RandomBuildingPositionAllocator_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2177,7 +2177,7 @@ PyTypeObject PyNs3RandomBuildingPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomBuildingPositionAllocator(arg0)\nRandomBuildingPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomBuildingPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomBuildingPositionAllocator__tp_clear,             /* tp_clear */
@@ -2210,6 +2210,38 @@ PyTypeObject PyNs3RandomBuildingPositionAllocator_Type = {
 
 
 PyObject *
+PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomRoomPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -2236,38 +2268,6 @@ PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ra
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2752,10 +2752,10 @@ static PyMethodDef PyNs3RandomRoomPositionAllocator_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2822,7 +2822,7 @@ PyTypeObject PyNs3RandomRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomRoomPositionAllocator(arg0)\nRandomRoomPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -2855,6 +2855,38 @@ PyTypeObject PyNs3RandomRoomPositionAllocator_Type = {
 
 
 PyObject *
+PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SameRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3SameRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3SameRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3SameRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3SameRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3SameRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3SameRoomPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -2881,38 +2913,6 @@ PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Same
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3SameRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3SameRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3SameRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SameRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3SameRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3SameRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3437,10 +3437,10 @@ static PyMethodDef PyNs3SameRoomPositionAllocator_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -3507,7 +3507,7 @@ PyTypeObject PyNs3SameRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SameRoomPositionAllocator(arg0)\nSameRoomPositionAllocator(c)\nSameRoomPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3SameRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SameRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -3540,6 +3540,22 @@ PyTypeObject PyNs3SameRoomPositionAllocator_Type = {
 
 
 PyObject *
+PyNs3Building__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Building *self)
+{
+    PyObject *py_retval;
+    PyNs3Building__PythonHelper *helper = dynamic_cast< PyNs3Building__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Building__PythonHelper::_wrap_DoInitialize(PyNs3Building *self)
 {
     PyObject *py_retval;
@@ -3566,22 +3582,6 @@ PyNs3Building__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Building *self)
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Building__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Building *self)
-{
-    PyObject *py_retval;
-    PyNs3Building__PythonHelper *helper = dynamic_cast< PyNs3Building__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4282,9 +4282,9 @@ static PyMethodDef PyNs3Building_methods[] = {
     {(char *) "SetNFloors", (PyCFunction) _wrap_PyNs3Building_SetNFloors, METH_VARARGS|METH_KEYWORDS, "SetNFloors(nfloors)\n\ntype: nfloors: uint16_t" },
     {(char *) "SetNRoomsX", (PyCFunction) _wrap_PyNs3Building_SetNRoomsX, METH_VARARGS|METH_KEYWORDS, "SetNRoomsX(nroomx)\n\ntype: nroomx: uint16_t" },
     {(char *) "SetNRoomsY", (PyCFunction) _wrap_PyNs3Building_SetNRoomsY, METH_VARARGS|METH_KEYWORDS, "SetNRoomsY(nroomy)\n\ntype: nroomy: uint16_t" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Building__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Building__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Building__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Building__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Building__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4351,7 +4351,7 @@ PyTypeObject PyNs3Building_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Building(xMin, xMax, yMin, yMax, zMin, zMax)\nBuilding(arg0)\nBuilding()",                        /* Documentation string */
     (traverseproc)PyNs3Building__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Building__tp_clear,             /* tp_clear */
@@ -4470,7 +4470,7 @@ PyTypeObject PyNs3BuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "BuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3BuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -4503,6 +4503,38 @@ PyTypeObject PyNs3BuildingsPropagationLossModel_Type = {
 
 
 PyObject *
+PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FixedRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3FixedRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3FixedRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3FixedRoomPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3FixedRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3FixedRoomPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3FixedRoomPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -4529,38 +4561,6 @@ PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Fix
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3FixedRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3FixedRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3FixedRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3FixedRoomPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3FixedRoomPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3FixedRoomPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5051,10 +5051,10 @@ static PyMethodDef PyNs3FixedRoomPositionAllocator_methods[] = {
     {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5121,7 +5121,7 @@ PyTypeObject PyNs3FixedRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FixedRoomPositionAllocator(x, y, z, b)\nFixedRoomPositionAllocator(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3FixedRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FixedRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -5360,7 +5360,7 @@ PyTypeObject PyNs3GridBuildingAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GridBuildingAllocator(arg0)\nGridBuildingAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3GridBuildingAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GridBuildingAllocator__tp_clear,             /* tp_clear */
@@ -5559,7 +5559,7 @@ PyTypeObject PyNs3HybridBuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HybridBuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3HybridBuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HybridBuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -5686,7 +5686,7 @@ PyTypeObject PyNs3ItuR1238PropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ItuR1238PropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ItuR1238PropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ItuR1238PropagationLossModel__tp_clear,             /* tp_clear */
@@ -6177,7 +6177,7 @@ PyTypeObject PyNs3MobilityBuildingInfo_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MobilityBuildingInfo(building)\nMobilityBuildingInfo(arg0)\nMobilityBuildingInfo()",                        /* Documentation string */
     (traverseproc)PyNs3MobilityBuildingInfo__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MobilityBuildingInfo__tp_clear,             /* tp_clear */
@@ -6304,7 +6304,7 @@ PyTypeObject PyNs3OhBuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OhBuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3OhBuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OhBuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -6337,6 +6337,38 @@ PyTypeObject PyNs3OhBuildingsPropagationLossModel_Type = {
 
 
 PyObject *
+PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OutdoorPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3OutdoorPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3OutdoorPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3OutdoorPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3OutdoorPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3OutdoorPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3OutdoorPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -6363,38 +6395,6 @@ PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Outdo
         return NULL;
     }
     helper->NotifyNewAggregate__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3OutdoorPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3OutdoorPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3OutdoorPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3OutdoorPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3OutdoorPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3OutdoorPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyConstructionCompleted of class ObjectBase is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyConstructionCompleted__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6939,10 +6939,10 @@ static PyMethodDef PyNs3OutdoorPositionAllocator_methods[] = {
     {(char *) "SetX", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetX, METH_VARARGS|METH_KEYWORDS, "SetX(x)\n\ntype: x: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "SetY", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "SetZ", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetZ, METH_VARARGS|METH_KEYWORDS, "SetZ(z)\n\ntype: z: ns3::Ptr< ns3::RandomVariableStream >" },
+    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7009,7 +7009,7 @@ PyTypeObject PyNs3OutdoorPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "OutdoorPositionAllocator(arg0)\nOutdoorPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3OutdoorPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OutdoorPositionAllocator__tp_clear,             /* tp_clear */

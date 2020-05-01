@@ -3258,22 +3258,6 @@ PyNs3PositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3PositionAllo
 }
 
 PyObject *
-PyNs3PositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3PositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3PositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3PositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3PositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3PositionAllocator *self)
 {
     PyObject *py_retval;
@@ -3300,6 +3284,22 @@ PyNs3PositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Pos
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3PositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3PositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3PositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3PositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3772,9 +3772,9 @@ static PyMethodDef PyNs3PositionAllocator_methods[] = {
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3PositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3PositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3PositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -3840,7 +3840,7 @@ PyTypeObject PyNs3PositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PositionAllocator(arg0)\nPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3PositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PositionAllocator__tp_clear,             /* tp_clear */
@@ -3889,22 +3889,6 @@ PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ran
 }
 
 PyObject *
-PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomBoxPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomBoxPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBoxPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomBoxPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -3931,6 +3915,22 @@ PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomBoxPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomBoxPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomBoxPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -4476,9 +4476,9 @@ static PyMethodDef PyNs3RandomBoxPositionAllocator_methods[] = {
     {(char *) "SetY", (PyCFunction) _wrap_PyNs3RandomBoxPositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "SetZ", (PyCFunction) _wrap_PyNs3RandomBoxPositionAllocator_SetZ, METH_VARARGS|METH_KEYWORDS, "SetZ(z)\n\ntype: z: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomBoxPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomBoxPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -4545,7 +4545,7 @@ PyTypeObject PyNs3RandomBoxPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomBoxPositionAllocator(arg0)\nRandomBoxPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomBoxPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomBoxPositionAllocator__tp_clear,             /* tp_clear */
@@ -4594,22 +4594,6 @@ PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ra
 }
 
 PyObject *
-PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomDiscPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomDiscPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomDiscPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomDiscPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -4636,6 +4620,22 @@ PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_NotifyConstructionComplete
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomDiscPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomDiscPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomDiscPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5197,9 +5197,9 @@ static PyMethodDef PyNs3RandomDiscPositionAllocator_methods[] = {
     {(char *) "SetX", (PyCFunction) _wrap_PyNs3RandomDiscPositionAllocator_SetX, METH_VARARGS|METH_KEYWORDS, "SetX(x)\n\ntype: x: double" },
     {(char *) "SetY", (PyCFunction) _wrap_PyNs3RandomDiscPositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: double" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomDiscPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomDiscPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5266,7 +5266,7 @@ PyTypeObject PyNs3RandomDiscPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomDiscPositionAllocator(arg0)\nRandomDiscPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomDiscPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomDiscPositionAllocator__tp_clear,             /* tp_clear */
@@ -5315,22 +5315,6 @@ PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(Py
 }
 
 PyObject *
-PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomRectanglePositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomRectanglePositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRectanglePositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3RandomRectanglePositionAllocator *self)
 {
     PyObject *py_retval;
@@ -5357,6 +5341,22 @@ PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_NotifyConstructionCom
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3RandomRectanglePositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomRectanglePositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3RandomRectanglePositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5882,9 +5882,9 @@ static PyMethodDef PyNs3RandomRectanglePositionAllocator_methods[] = {
     {(char *) "SetX", (PyCFunction) _wrap_PyNs3RandomRectanglePositionAllocator_SetX, METH_VARARGS|METH_KEYWORDS, "SetX(x)\n\ntype: x: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "SetY", (PyCFunction) _wrap_PyNs3RandomRectanglePositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomRectanglePositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomRectanglePositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5951,7 +5951,7 @@ PyTypeObject PyNs3RandomRectanglePositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomRectanglePositionAllocator(arg0)\nRandomRectanglePositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomRectanglePositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomRectanglePositionAllocator__tp_clear,             /* tp_clear */
@@ -6000,22 +6000,6 @@ PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3U
 }
 
 PyObject *
-PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3UniformDiscPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3UniformDiscPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3UniformDiscPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3UniformDiscPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -6042,6 +6026,22 @@ PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_NotifyConstructionComplet
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3UniformDiscPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3UniformDiscPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3UniformDiscPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6581,9 +6581,9 @@ static PyMethodDef PyNs3UniformDiscPositionAllocator_methods[] = {
     {(char *) "SetX", (PyCFunction) _wrap_PyNs3UniformDiscPositionAllocator_SetX, METH_VARARGS|METH_KEYWORDS, "SetX(x)\n\ntype: x: double" },
     {(char *) "SetY", (PyCFunction) _wrap_PyNs3UniformDiscPositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: double" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3UniformDiscPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UniformDiscPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6650,7 +6650,7 @@ PyTypeObject PyNs3UniformDiscPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UniformDiscPositionAllocator(arg0)\nUniformDiscPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3UniformDiscPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UniformDiscPositionAllocator__tp_clear,             /* tp_clear */
@@ -7083,22 +7083,6 @@ PyNs3GridPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3GridPosi
 }
 
 PyObject *
-PyNs3GridPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3GridPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3GridPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3GridPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3GridPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3GridPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -7125,6 +7109,22 @@ PyNs3GridPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3GridPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3GridPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3GridPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3GridPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -7796,9 +7796,9 @@ static PyMethodDef PyNs3GridPositionAllocator_methods[] = {
     {(char *) "SetMinY", (PyCFunction) _wrap_PyNs3GridPositionAllocator_SetMinY, METH_VARARGS|METH_KEYWORDS, "SetMinY(yMin)\n\ntype: yMin: double" },
     {(char *) "SetN", (PyCFunction) _wrap_PyNs3GridPositionAllocator_SetN, METH_VARARGS|METH_KEYWORDS, "SetN(n)\n\ntype: n: uint32_t" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3GridPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3GridPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3GridPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3GridPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3GridPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GridPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -7865,7 +7865,7 @@ PyTypeObject PyNs3GridPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "GridPositionAllocator(arg0)\nGridPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3GridPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GridPositionAllocator__tp_clear,             /* tp_clear */
@@ -7914,22 +7914,6 @@ PyNs3ListPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate(PyNs3ListPosi
 }
 
 PyObject *
-PyNs3ListPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3ListPositionAllocator *self)
-{
-    PyObject *py_retval;
-    PyNs3ListPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3ListPositionAllocator__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ListPositionAllocator__PythonHelper::_wrap_DoDispose(PyNs3ListPositionAllocator *self)
 {
     PyObject *py_retval;
@@ -7956,6 +7940,22 @@ PyNs3ListPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ListPositionAllocator__PythonHelper::_wrap_DoInitialize(PyNs3ListPositionAllocator *self)
+{
+    PyObject *py_retval;
+    PyNs3ListPositionAllocator__PythonHelper *helper = dynamic_cast< PyNs3ListPositionAllocator__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8472,9 +8472,9 @@ static PyMethodDef PyNs3ListPositionAllocator_methods[] = {
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3ListPositionAllocator_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ListPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ListPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ListPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ListPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ListPositionAllocator__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ListPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ListPositionAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8541,7 +8541,7 @@ PyTypeObject PyNs3ListPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ListPositionAllocator(arg0)\nListPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3ListPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ListPositionAllocator__tp_clear,             /* tp_clear */
@@ -8574,22 +8574,6 @@ PyTypeObject PyNs3ListPositionAllocator_Type = {
 
 
 PyObject *
-PyNs3MobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3MobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3MobilityModel__PythonHelper *helper = dynamic_cast< PyNs3MobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3MobilityModel__PythonHelper::_wrap_NotifyCourseChange(PyNs3MobilityModel *self)
 {
     PyObject *py_retval;
@@ -8600,22 +8584,6 @@ PyNs3MobilityModel__PythonHelper::_wrap_NotifyCourseChange(PyNs3MobilityModel *s
         return NULL;
     }
     helper->NotifyCourseChange__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3MobilityModel__PythonHelper::_wrap_DoDispose(PyNs3MobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3MobilityModel__PythonHelper *helper = dynamic_cast< PyNs3MobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoDispose__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -8638,6 +8606,22 @@ PyNs3MobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3MobilityModel *s
 }
 
 PyObject *
+PyNs3MobilityModel__PythonHelper::_wrap_DoDispose(PyNs3MobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3MobilityModel__PythonHelper *helper = dynamic_cast< PyNs3MobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoDispose of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoDispose__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3MobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3MobilityModel *self)
 {
     PyObject *py_retval;
@@ -8648,6 +8632,22 @@ PyNs3MobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3Mobilit
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3MobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3MobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3MobilityModel__PythonHelper *helper = dynamic_cast< PyNs3MobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -9290,11 +9290,11 @@ static PyMethodDef PyNs3MobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetVelocity", (PyCFunction) _wrap_PyNs3MobilityModel_GetVelocity, METH_NOARGS, "GetVelocity()\n\n" },
     {(char *) "SetPosition", (PyCFunction) _wrap_PyNs3MobilityModel_SetPosition, METH_VARARGS|METH_KEYWORDS, "SetPosition(position)\n\ntype: position: ns3::Vector const &" },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyCourseChange", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_NotifyCourseChange, METH_NOARGS, NULL },
-    {(char *) "DoDispose", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
+    {(char *) "DoDispose", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3MobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -9360,7 +9360,7 @@ PyTypeObject PyNs3MobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "MobilityModel(arg0)\nMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3MobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MobilityModel__tp_clear,             /* tp_clear */
@@ -10037,7 +10037,7 @@ PyTypeObject PyNs3RandomDirection2dMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomDirection2dMobilityModel(arg0)\nRandomDirection2dMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomDirection2dMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomDirection2dMobilityModel__tp_clear,             /* tp_clear */
@@ -10714,7 +10714,7 @@ PyTypeObject PyNs3RandomWalk2dMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomWalk2dMobilityModel(arg0)\nRandomWalk2dMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomWalk2dMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomWalk2dMobilityModel__tp_clear,             /* tp_clear */
@@ -10779,22 +10779,6 @@ PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3RandomWaypo
 }
 
 PyObject *
-PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3RandomWaypointMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3RandomWaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3RandomWaypointMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RandomWaypointMobilityModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3RandomWaypointMobilityModel *self)
 {
     PyObject *py_retval;
@@ -10805,6 +10789,22 @@ PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionComplete
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3RandomWaypointMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3RandomWaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3RandomWaypointMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class RandomWaypointMobilityModel is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -11359,8 +11359,8 @@ static PyMethodDef PyNs3RandomWaypointMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomWaypointMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3RandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomWaypointMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -11427,7 +11427,7 @@ PyTypeObject PyNs3RandomWaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RandomWaypointMobilityModel(arg0)\nRandomWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomWaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomWaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -11876,22 +11876,6 @@ PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3
 }
 
 PyObject *
-PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3SteadyStateRandomWaypointMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class SteadyStateRandomWaypointMobilityModel is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3SteadyStateRandomWaypointMobilityModel *self)
 {
     PyObject *py_retval;
@@ -11902,6 +11886,22 @@ PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstruct
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3SteadyStateRandomWaypointMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class SteadyStateRandomWaypointMobilityModel is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -12456,8 +12456,8 @@ static PyMethodDef PyNs3SteadyStateRandomWaypointMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SteadyStateRandomWaypointMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3SteadyStateRandomWaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SteadyStateRandomWaypointMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12524,7 +12524,7 @@ PyTypeObject PyNs3SteadyStateRandomWaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "SteadyStateRandomWaypointMobilityModel(arg0)\nSteadyStateRandomWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3SteadyStateRandomWaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SteadyStateRandomWaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -12658,22 +12658,6 @@ PyNs3WaypointMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Waypoint
 }
 
 PyObject *
-PyNs3WaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3WaypointMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3WaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3WaypointMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3WaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3WaypointMobilityModel *self)
 {
     PyObject *py_retval;
@@ -12684,6 +12668,22 @@ PyNs3WaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3WaypointMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3WaypointMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3WaypointMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3WaypointMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -13341,8 +13341,8 @@ static PyMethodDef PyNs3WaypointMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3WaypointMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "WaypointsLeft", (PyCFunction) _wrap_PyNs3WaypointMobilityModel_WaypointsLeft, METH_NOARGS, "WaypointsLeft()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WaypointMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3WaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3WaypointMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3WaypointMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3WaypointMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13409,7 +13409,7 @@ PyTypeObject PyNs3WaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "WaypointMobilityModel(arg0)\nWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3WaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -13757,22 +13757,6 @@ PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(P
 }
 
 PyObject *
-PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantAccelerationMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantAccelerationMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantAccelerationMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantAccelerationMobilityModel *self)
 {
     PyObject *py_retval;
@@ -13799,6 +13783,22 @@ PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_NotifyConstructionCo
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantAccelerationMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantAccelerationMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantAccelerationMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -14371,9 +14371,9 @@ static PyMethodDef PyNs3ConstantAccelerationMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantAccelerationMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetVelocityAndAcceleration", (PyCFunction) _wrap_PyNs3ConstantAccelerationMobilityModel_SetVelocityAndAcceleration, METH_VARARGS|METH_KEYWORDS, "SetVelocityAndAcceleration(velocity, acceleration)\n\ntype: velocity: ns3::Vector const &\ntype: acceleration: ns3::Vector const &" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantAccelerationMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantAccelerationMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -14440,7 +14440,7 @@ PyTypeObject PyNs3ConstantAccelerationMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConstantAccelerationMobilityModel(arg0)\nConstantAccelerationMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantAccelerationMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantAccelerationMobilityModel__tp_clear,             /* tp_clear */
@@ -14489,22 +14489,6 @@ PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3
 }
 
 PyObject *
-PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantPositionMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantPositionMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantPositionMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantPositionMobilityModel *self)
 {
     PyObject *py_retval;
@@ -14531,6 +14515,22 @@ PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_NotifyConstructionComple
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantPositionMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantPositionMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantPositionMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15084,9 +15084,9 @@ _wrap_PyNs3ConstantPositionMobilityModel__copy__(PyNs3ConstantPositionMobilityMo
 static PyMethodDef PyNs3ConstantPositionMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantPositionMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantPositionMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantPositionMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15153,7 +15153,7 @@ PyTypeObject PyNs3ConstantPositionMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConstantPositionMobilityModel(arg0)\nConstantPositionMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantPositionMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantPositionMobilityModel__tp_clear,             /* tp_clear */
@@ -15202,22 +15202,6 @@ PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3
 }
 
 PyObject *
-PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantVelocityMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3ConstantVelocityMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantVelocityMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3ConstantVelocityMobilityModel *self)
 {
     PyObject *py_retval;
@@ -15244,6 +15228,22 @@ PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_NotifyConstructionComple
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3ConstantVelocityMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3ConstantVelocityMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3ConstantVelocityMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -15815,9 +15815,9 @@ static PyMethodDef PyNs3ConstantVelocityMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantVelocityMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "SetVelocity", (PyCFunction) _wrap_PyNs3ConstantVelocityMobilityModel_SetVelocity, METH_VARARGS|METH_KEYWORDS, "SetVelocity(speed)\n\ntype: speed: ns3::Vector const &" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantVelocityMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConstantVelocityMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -15884,7 +15884,7 @@ PyTypeObject PyNs3ConstantVelocityMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "ConstantVelocityMobilityModel(arg0)\nConstantVelocityMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantVelocityMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantVelocityMobilityModel__tp_clear,             /* tp_clear */
@@ -15933,22 +15933,6 @@ PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Gauss
 }
 
 PyObject *
-PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3GaussMarkovMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3GaussMarkovMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3GaussMarkovMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(PyNs3GaussMarkovMobilityModel *self)
 {
     PyObject *py_retval;
@@ -15959,6 +15943,22 @@ PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(P
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3GaussMarkovMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3GaussMarkovMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3GaussMarkovMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -16511,8 +16511,8 @@ _wrap_PyNs3GaussMarkovMobilityModel__copy__(PyNs3GaussMarkovMobilityModel *self)
 static PyMethodDef PyNs3GaussMarkovMobilityModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GaussMarkovMobilityModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3GaussMarkovMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GaussMarkovMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -16579,7 +16579,7 @@ PyTypeObject PyNs3GaussMarkovMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "GaussMarkovMobilityModel(arg0)\nGaussMarkovMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3GaussMarkovMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GaussMarkovMobilityModel__tp_clear,             /* tp_clear */
@@ -16628,22 +16628,6 @@ PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Hier
 }
 
 PyObject *
-PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3HierarchicalMobilityModel *self)
-{
-    PyObject *py_retval;
-    PyNs3HierarchicalMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3HierarchicalMobilityModel__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
 PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoDispose(PyNs3HierarchicalMobilityModel *self)
 {
     PyObject *py_retval;
@@ -16670,6 +16654,22 @@ PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted(
         return NULL;
     }
     helper->NotifyConstructionCompleted__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
+PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoInitialize(PyNs3HierarchicalMobilityModel *self)
+{
+    PyObject *py_retval;
+    PyNs3HierarchicalMobilityModel__PythonHelper *helper = dynamic_cast< PyNs3HierarchicalMobilityModel__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method DoInitialize of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->DoInitialize__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -17355,9 +17355,9 @@ static PyMethodDef PyNs3HierarchicalMobilityModel_methods[] = {
     {(char *) "SetChild", (PyCFunction) _wrap_PyNs3HierarchicalMobilityModel_SetChild, METH_VARARGS|METH_KEYWORDS, "SetChild(model)\n\ntype: model: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "SetParent", (PyCFunction) _wrap_PyNs3HierarchicalMobilityModel_SetParent, METH_VARARGS|METH_KEYWORDS, "SetParent(model)\n\ntype: model: ns3::Ptr< ns3::MobilityModel >" },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
-    {(char *) "DoInitialize", (PyCFunction) PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
+    {(char *) "DoInitialize", (PyCFunction) PyNs3HierarchicalMobilityModel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HierarchicalMobilityModel__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -17424,7 +17424,7 @@ PyTypeObject PyNs3HierarchicalMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "HierarchicalMobilityModel(arg0)\nHierarchicalMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3HierarchicalMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HierarchicalMobilityModel__tp_clear,             /* tp_clear */

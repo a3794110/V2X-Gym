@@ -16,6 +16,7 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Author: Piotr Gawlowicz <gawlowicz.p@gmail.com>
+ * Modified by: NIST
  *
  */
 
@@ -48,7 +49,6 @@ LteUePowerControl::LteUePowerControl ()
 
   m_M_Pusch = 0;
   m_rsrpSet = false;
-  m_pcRsrpFilterCoefficient = 4; //Default value similar to the eNB (see lte-enb-rrc.cc)
 }
 
 LteUePowerControl::~LteUePowerControl ()
@@ -117,6 +117,19 @@ LteUePowerControl::GetTypeId (void)
                    IntegerValue (7),
                    MakeIntegerAccessor (&LteUePowerControl::m_PsrsOffset),
                    MakeIntegerChecker<int16_t> ())
+    // NIST
+    // Set PuschTxPowerSl and PucchTxPowerSl attributes
+    .AddAttribute ("PsschTxPower",
+                   "Value of PSSCH Tx Power in dBm",
+                   DoubleValue (23.0),
+                   MakeDoubleAccessor (&LteUePowerControl::m_psschTxPower),
+                   MakeDoubleChecker<double> ())
+    .AddAttribute ("PscchTxPower",
+                   "Value of PSCCH Tx Power in dBm",
+                   DoubleValue (23.0),
+                   MakeDoubleAccessor (&LteUePowerControl::m_pscchTxPower),
+                   MakeDoubleChecker<double> ())
+    //
     .AddTraceSource ("ReportPuschTxPower",
                      "Report PUSCH TxPower in dBm",
                      MakeTraceSourceAccessor (&LteUePowerControl::m_reportPuschTxPower),
@@ -129,6 +142,21 @@ LteUePowerControl::GetTypeId (void)
                      "Report SRS TxPower in dBm",
                      MakeTraceSourceAccessor (&LteUePowerControl::m_reportSrsTxPower),
                      "ns3::LteUePowerControl::TxPowerTracedCallback")
+    // NIST
+    // Traces to collect TxPower for both PSSCH and PSCCH channels
+    .AddTraceSource ("ReportPsschTxPower",
+                     "Report Sidelink PSSCH TxPower in dBm",
+                     MakeTraceSourceAccessor (&LteUePowerControl::m_reportPsschTxPower),
+                     "ns3::LteUePowerControl::TxPowerTracedCallback")
+    .AddTraceSource ("ReportPscchTxPower",
+                     "Report Sidelink PSCCH TxPower in dBm",
+                     MakeTraceSourceAccessor (&LteUePowerControl::m_reportPscchTxPower),
+                     "ns3::LteUePowerControl::TxPowerTracedCallback")
+    .AddTraceSource ("ReportPsdchTxPower",
+                     "Report Sidelink PSDCH TxPower in dBm",
+                     MakeTraceSourceAccessor (&LteUePowerControl::m_reportPsdchTxPower),
+                     "ns3::LteUePowerControl::TxPowerTracedCallback")
+    //
   ;
   return tid;
 }
@@ -261,17 +289,9 @@ LteUePowerControl::SetRsrp (double value)
       return;
     }
 
-  double alphaRsrp = std::pow (0.5, m_pcRsrpFilterCoefficient / 4.0);
-  m_rsrp = (1 - alphaRsrp) * m_rsrp + alphaRsrp * value;
-
+  double coeff = 0.7;
+  m_rsrp = coeff * m_rsrp + (1 - coeff) * value;
   m_pathLoss = m_referenceSignalPower - m_rsrp;
-}
-
-void
-LteUePowerControl::SetRsrpFilterCoefficient (uint8_t rsrpFilterCoefficient)
-{
-  NS_LOG_FUNCTION (this);
-  m_pcRsrpFilterCoefficient = rsrpFilterCoefficient;
 }
 
 void
@@ -464,5 +484,33 @@ LteUePowerControl::GetSrsTxPower (std::vector <int> dlRb)
 
   return m_curSrsTxPower;
 }
+
+// NIST
+// Get Tx Power for PSSCH and PSCCH channels for D2D 
+// to be called in LteUePhy class
+double
+LteUePowerControl::GetPsschTxPower (std::vector <int> dlRb)
+{
+  NS_LOG_FUNCTION (this);
+  m_M_Pusch = dlRb.size ();
+  m_reportPsschTxPower (m_cellId, m_rnti, m_psschTxPower);
+  return m_psschTxPower;
+}
+
+double
+LteUePowerControl::GetPscchTxPower (std::vector <int> dlRb)
+{
+  NS_LOG_FUNCTION (this);
+  m_reportPscchTxPower (m_cellId, m_rnti, m_pscchTxPower);
+  return m_pscchTxPower;
+}
+double
+LteUePowerControl::GetPsdchTxPower (std::vector <int> dlRb)
+{
+  NS_LOG_FUNCTION (this);
+  m_reportPsdchTxPower (m_cellId, m_rnti, m_psdchTxPower);
+  return m_psdchTxPower;
+}
+//
 
 } // namespace ns3

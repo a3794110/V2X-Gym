@@ -1210,14 +1210,14 @@ _wrap_PyNs3FlowMonitorHelper_SerializeToXmlFile(PyNs3FlowMonitorHelper *self, Py
 }
 
 static PyMethodDef PyNs3FlowMonitorHelper_methods[] = {
-    {(char *) "SetMonitorAttribute", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SetMonitorAttribute, METH_KEYWORDS|METH_VARARGS, "SetMonitorAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetMonitorAttribute", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SetMonitorAttribute, METH_VARARGS|METH_KEYWORDS, "SetMonitorAttribute(n1, v1)\n\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "InstallAll", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_InstallAll, METH_NOARGS, "InstallAll()\n\n" },
     {(char *) "GetMonitor", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_GetMonitor, METH_NOARGS, "GetMonitor()\n\n" },
     {(char *) "GetClassifier", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_GetClassifier, METH_NOARGS, "GetClassifier()\n\n" },
     {(char *) "GetClassifier6", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_GetClassifier6, METH_NOARGS, "GetClassifier6()\n\n" },
-    {(char *) "SerializeToXmlString", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SerializeToXmlString, METH_KEYWORDS|METH_VARARGS, "SerializeToXmlString(indent, enableHistograms, enableProbes)\n\ntype: indent: uint16_t\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
-    {(char *) "SerializeToXmlFile", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SerializeToXmlFile, METH_KEYWORDS|METH_VARARGS, "SerializeToXmlFile(fileName, enableHistograms, enableProbes)\n\ntype: fileName: std::string\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
+    {(char *) "SerializeToXmlString", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SerializeToXmlString, METH_VARARGS|METH_KEYWORDS, "SerializeToXmlString(indent, enableHistograms, enableProbes)\n\ntype: indent: uint16_t\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
+    {(char *) "SerializeToXmlFile", (PyCFunction) _wrap_PyNs3FlowMonitorHelper_SerializeToXmlFile, METH_VARARGS|METH_KEYWORDS, "SerializeToXmlFile(fileName, enableHistograms, enableProbes)\n\ntype: fileName: std::string\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1516,13 +1516,13 @@ _wrap_PyNs3Histogram__copy__(PyNs3Histogram *self)
 }
 
 static PyMethodDef PyNs3Histogram_methods[] = {
-    {(char *) "AddValue", (PyCFunction) _wrap_PyNs3Histogram_AddValue, METH_KEYWORDS|METH_VARARGS, "AddValue(value)\n\ntype: value: double" },
-    {(char *) "GetBinCount", (PyCFunction) _wrap_PyNs3Histogram_GetBinCount, METH_KEYWORDS|METH_VARARGS, "GetBinCount(index)\n\ntype: index: uint32_t" },
-    {(char *) "GetBinEnd", (PyCFunction) _wrap_PyNs3Histogram_GetBinEnd, METH_KEYWORDS|METH_VARARGS, "GetBinEnd(index)\n\ntype: index: uint32_t" },
-    {(char *) "GetBinStart", (PyCFunction) _wrap_PyNs3Histogram_GetBinStart, METH_KEYWORDS|METH_VARARGS, "GetBinStart(index)\n\ntype: index: uint32_t" },
-    {(char *) "GetBinWidth", (PyCFunction) _wrap_PyNs3Histogram_GetBinWidth, METH_KEYWORDS|METH_VARARGS, "GetBinWidth(index)\n\ntype: index: uint32_t" },
+    {(char *) "AddValue", (PyCFunction) _wrap_PyNs3Histogram_AddValue, METH_VARARGS|METH_KEYWORDS, "AddValue(value)\n\ntype: value: double" },
+    {(char *) "GetBinCount", (PyCFunction) _wrap_PyNs3Histogram_GetBinCount, METH_VARARGS|METH_KEYWORDS, "GetBinCount(index)\n\ntype: index: uint32_t" },
+    {(char *) "GetBinEnd", (PyCFunction) _wrap_PyNs3Histogram_GetBinEnd, METH_VARARGS|METH_KEYWORDS, "GetBinEnd(index)\n\ntype: index: uint32_t" },
+    {(char *) "GetBinStart", (PyCFunction) _wrap_PyNs3Histogram_GetBinStart, METH_VARARGS|METH_KEYWORDS, "GetBinStart(index)\n\ntype: index: uint32_t" },
+    {(char *) "GetBinWidth", (PyCFunction) _wrap_PyNs3Histogram_GetBinWidth, METH_VARARGS|METH_KEYWORDS, "GetBinWidth(index)\n\ntype: index: uint32_t" },
     {(char *) "GetNBins", (PyCFunction) _wrap_PyNs3Histogram_GetNBins, METH_NOARGS, "GetNBins()\n\n" },
-    {(char *) "SetDefaultBinWidth", (PyCFunction) _wrap_PyNs3Histogram_SetDefaultBinWidth, METH_KEYWORDS|METH_VARARGS, "SetDefaultBinWidth(binWidth)\n\ntype: binWidth: double" },
+    {(char *) "SetDefaultBinWidth", (PyCFunction) _wrap_PyNs3Histogram_SetDefaultBinWidth, METH_VARARGS|METH_KEYWORDS, "SetDefaultBinWidth(binWidth)\n\ntype: binWidth: double" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Histogram__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1847,6 +1847,22 @@ PyTypeObject PyNs3FlowClassifier_Type = {
 
 
 PyObject *
+PyNs3FlowMonitor__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlowMonitor *self)
+{
+    PyObject *py_retval;
+    PyNs3FlowMonitor__PythonHelper *helper = dynamic_cast< PyNs3FlowMonitor__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FlowMonitor__PythonHelper::_wrap_DoDispose(PyNs3FlowMonitor *self)
 {
     PyObject *py_retval;
@@ -1889,22 +1905,6 @@ PyNs3FlowMonitor__PythonHelper::_wrap_DoInitialize(PyNs3FlowMonitor *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FlowMonitor__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlowMonitor *self)
-{
-    PyObject *py_retval;
-    PyNs3FlowMonitor__PythonHelper *helper = dynamic_cast< PyNs3FlowMonitor__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -2610,27 +2610,27 @@ _wrap_PyNs3FlowMonitor__copy__(PyNs3FlowMonitor *self)
 }
 
 static PyMethodDef PyNs3FlowMonitor_methods[] = {
-    {(char *) "AddFlowClassifier", (PyCFunction) _wrap_PyNs3FlowMonitor_AddFlowClassifier, METH_KEYWORDS|METH_VARARGS, "AddFlowClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::FlowClassifier >" },
-    {(char *) "AddProbe", (PyCFunction) _wrap_PyNs3FlowMonitor_AddProbe, METH_KEYWORDS|METH_VARARGS, "AddProbe(probe)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >" },
-    {(char *) "CheckForLostPackets", (PyCFunction) _wrap_PyNs3FlowMonitor_CheckForLostPackets, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "AddFlowClassifier", (PyCFunction) _wrap_PyNs3FlowMonitor_AddFlowClassifier, METH_VARARGS|METH_KEYWORDS, "AddFlowClassifier(classifier)\n\ntype: classifier: ns3::Ptr< ns3::FlowClassifier >" },
+    {(char *) "AddProbe", (PyCFunction) _wrap_PyNs3FlowMonitor_AddProbe, METH_VARARGS|METH_KEYWORDS, "AddProbe(probe)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >" },
+    {(char *) "CheckForLostPackets", (PyCFunction) _wrap_PyNs3FlowMonitor_CheckForLostPackets, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "GetAllProbes", (PyCFunction) _wrap_PyNs3FlowMonitor_GetAllProbes, METH_NOARGS, "GetAllProbes()\n\n" },
     {(char *) "GetFlowStats", (PyCFunction) _wrap_PyNs3FlowMonitor_GetFlowStats, METH_NOARGS, "GetFlowStats()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3FlowMonitor_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlowMonitor_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "ReportDrop", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportDrop, METH_KEYWORDS|METH_VARARGS, "ReportDrop(probe, flowId, packetId, packetSize, reasonCode)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t\ntype: reasonCode: uint32_t" },
-    {(char *) "ReportFirstTx", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportFirstTx, METH_KEYWORDS|METH_VARARGS, "ReportFirstTx(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
-    {(char *) "ReportForwarding", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportForwarding, METH_KEYWORDS|METH_VARARGS, "ReportForwarding(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
-    {(char *) "ReportLastRx", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportLastRx, METH_KEYWORDS|METH_VARARGS, "ReportLastRx(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
-    {(char *) "SerializeToXmlFile", (PyCFunction) _wrap_PyNs3FlowMonitor_SerializeToXmlFile, METH_KEYWORDS|METH_VARARGS, "SerializeToXmlFile(fileName, enableHistograms, enableProbes)\n\ntype: fileName: std::string\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
-    {(char *) "SerializeToXmlString", (PyCFunction) _wrap_PyNs3FlowMonitor_SerializeToXmlString, METH_KEYWORDS|METH_VARARGS, "SerializeToXmlString(indent, enableHistograms, enableProbes)\n\ntype: indent: uint16_t\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
-    {(char *) "Start", (PyCFunction) _wrap_PyNs3FlowMonitor_Start, METH_KEYWORDS|METH_VARARGS, "Start(time)\n\ntype: time: ns3::Time const &" },
+    {(char *) "ReportDrop", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportDrop, METH_VARARGS|METH_KEYWORDS, "ReportDrop(probe, flowId, packetId, packetSize, reasonCode)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t\ntype: reasonCode: uint32_t" },
+    {(char *) "ReportFirstTx", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportFirstTx, METH_VARARGS|METH_KEYWORDS, "ReportFirstTx(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
+    {(char *) "ReportForwarding", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportForwarding, METH_VARARGS|METH_KEYWORDS, "ReportForwarding(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
+    {(char *) "ReportLastRx", (PyCFunction) _wrap_PyNs3FlowMonitor_ReportLastRx, METH_VARARGS|METH_KEYWORDS, "ReportLastRx(probe, flowId, packetId, packetSize)\n\ntype: probe: ns3::Ptr< ns3::FlowProbe >\ntype: flowId: uint32_t\ntype: packetId: uint32_t\ntype: packetSize: uint32_t" },
+    {(char *) "SerializeToXmlFile", (PyCFunction) _wrap_PyNs3FlowMonitor_SerializeToXmlFile, METH_VARARGS|METH_KEYWORDS, "SerializeToXmlFile(fileName, enableHistograms, enableProbes)\n\ntype: fileName: std::string\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
+    {(char *) "SerializeToXmlString", (PyCFunction) _wrap_PyNs3FlowMonitor_SerializeToXmlString, METH_VARARGS|METH_KEYWORDS, "SerializeToXmlString(indent, enableHistograms, enableProbes)\n\ntype: indent: uint16_t\ntype: enableHistograms: bool\ntype: enableProbes: bool" },
+    {(char *) "Start", (PyCFunction) _wrap_PyNs3FlowMonitor_Start, METH_VARARGS|METH_KEYWORDS, "Start(time)\n\ntype: time: ns3::Time const &" },
     {(char *) "StartRightNow", (PyCFunction) _wrap_PyNs3FlowMonitor_StartRightNow, METH_NOARGS, "StartRightNow()\n\n" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3FlowMonitor_Stop, METH_KEYWORDS|METH_VARARGS, "Stop(time)\n\ntype: time: ns3::Time const &" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3FlowMonitor_Stop, METH_VARARGS|METH_KEYWORDS, "Stop(time)\n\ntype: time: ns3::Time const &" },
     {(char *) "StopRightNow", (PyCFunction) _wrap_PyNs3FlowMonitor_StopRightNow, METH_NOARGS, "StopRightNow()\n\n" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlowMonitor__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FlowMonitor__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FlowMonitor__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FlowMonitor__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlowMonitor__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FlowMonitor__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2697,7 +2697,7 @@ PyTypeObject PyNs3FlowMonitor_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlowMonitor(arg0)\nFlowMonitor()",                        /* Documentation string */
     (traverseproc)PyNs3FlowMonitor__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlowMonitor__tp_clear,             /* tp_clear */
@@ -3471,6 +3471,22 @@ PyTypeObject PyNs3FlowMonitorFlowStats_Type = {
 
 
 PyObject *
+PyNs3FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlowProbe *self)
+{
+    PyObject *py_retval;
+    PyNs3FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3FlowProbe__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3FlowProbe__PythonHelper::_wrap_DoDispose(PyNs3FlowProbe *self)
 {
     PyObject *py_retval;
@@ -3513,22 +3529,6 @@ PyNs3FlowProbe__PythonHelper::_wrap_DoInitialize(PyNs3FlowProbe *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3FlowProbe *self)
-{
-    PyObject *py_retval;
-    PyNs3FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3FlowProbe__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -3857,14 +3857,14 @@ _wrap_PyNs3FlowProbe_GetTypeId(void)
 }
 
 static PyMethodDef PyNs3FlowProbe_methods[] = {
-    {(char *) "AddPacketDropStats", (PyCFunction) _wrap_PyNs3FlowProbe_AddPacketDropStats, METH_KEYWORDS|METH_VARARGS, "AddPacketDropStats(flowId, packetSize, reasonCode)\n\ntype: flowId: uint32_t\ntype: packetSize: uint32_t\ntype: reasonCode: uint32_t" },
-    {(char *) "AddPacketStats", (PyCFunction) _wrap_PyNs3FlowProbe_AddPacketStats, METH_KEYWORDS|METH_VARARGS, "AddPacketStats(flowId, packetSize, delayFromFirstProbe)\n\ntype: flowId: uint32_t\ntype: packetSize: uint32_t\ntype: delayFromFirstProbe: ns3::Time" },
+    {(char *) "AddPacketDropStats", (PyCFunction) _wrap_PyNs3FlowProbe_AddPacketDropStats, METH_VARARGS|METH_KEYWORDS, "AddPacketDropStats(flowId, packetSize, reasonCode)\n\ntype: flowId: uint32_t\ntype: packetSize: uint32_t\ntype: reasonCode: uint32_t" },
+    {(char *) "AddPacketStats", (PyCFunction) _wrap_PyNs3FlowProbe_AddPacketStats, METH_VARARGS|METH_KEYWORDS, "AddPacketStats(flowId, packetSize, delayFromFirstProbe)\n\ntype: flowId: uint32_t\ntype: packetSize: uint32_t\ntype: delayFromFirstProbe: ns3::Time" },
     {(char *) "GetStats", (PyCFunction) _wrap_PyNs3FlowProbe_GetStats, METH_NOARGS, "GetStats()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FlowProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3FlowProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3FlowProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FlowProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -3930,7 +3930,7 @@ PyTypeObject PyNs3FlowProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "FlowProbe(flowMonitor)",                        /* Documentation string */
     (traverseproc)PyNs3FlowProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FlowProbe__tp_clear,             /* tp_clear */
@@ -4326,8 +4326,8 @@ _wrap_PyNs3Ipv4FlowClassifier_FindFlow(PyNs3Ipv4FlowClassifier *self, PyObject *
 }
 
 static PyMethodDef PyNs3Ipv4FlowClassifier_methods[] = {
-    {(char *) "Classify", (PyCFunction) _wrap_PyNs3Ipv4FlowClassifier_Classify, METH_KEYWORDS|METH_VARARGS, "Classify(ipHeader, ipPayload, out_flowId, out_packetId)\n\ntype: ipHeader: ns3::Ipv4Header const &\ntype: ipPayload: ns3::Ptr< ns3::Packet const >\ntype: out_flowId: uint32_t *\ntype: out_packetId: uint32_t *" },
-    {(char *) "FindFlow", (PyCFunction) _wrap_PyNs3Ipv4FlowClassifier_FindFlow, METH_KEYWORDS|METH_VARARGS, "FindFlow(flowId)\n\ntype: flowId: uint32_t" },
+    {(char *) "Classify", (PyCFunction) _wrap_PyNs3Ipv4FlowClassifier_Classify, METH_VARARGS|METH_KEYWORDS, "Classify(ipHeader, ipPayload, out_flowId, out_packetId)\n\ntype: ipHeader: ns3::Ipv4Header const &\ntype: ipPayload: ns3::Ptr< ns3::Packet const >\ntype: out_flowId: uint32_t *\ntype: out_packetId: uint32_t *" },
+    {(char *) "FindFlow", (PyCFunction) _wrap_PyNs3Ipv4FlowClassifier_FindFlow, METH_VARARGS|METH_KEYWORDS, "FindFlow(flowId)\n\ntype: flowId: uint32_t" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -4931,6 +4931,22 @@ PyTypeObject PyNs3Ipv4FlowClassifierSortByCount_Type = {
 
 
 PyObject *
+PyNs3Ipv4FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ipv4FlowProbe *self)
+{
+    PyObject *py_retval;
+    PyNs3Ipv4FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3Ipv4FlowProbe__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Ipv4FlowProbe__PythonHelper::_wrap_DoDispose(PyNs3Ipv4FlowProbe *self)
 {
     PyObject *py_retval;
@@ -4973,22 +4989,6 @@ PyNs3Ipv4FlowProbe__PythonHelper::_wrap_DoInitialize(PyNs3Ipv4FlowProbe *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Ipv4FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ipv4FlowProbe *self)
-{
-    PyObject *py_retval;
-    PyNs3Ipv4FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3Ipv4FlowProbe__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -5273,10 +5273,10 @@ _wrap_PyNs3Ipv4FlowProbe_GetTypeId(void)
 
 static PyMethodDef PyNs3Ipv4FlowProbe_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Ipv4FlowProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ipv4FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Ipv4FlowProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Ipv4FlowProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Ipv4FlowProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ipv4FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -5342,7 +5342,7 @@ PyTypeObject PyNs3Ipv4FlowProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4FlowProbe(monitor, classifier, node)",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4FlowProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4FlowProbe__tp_clear,             /* tp_clear */
@@ -5431,8 +5431,8 @@ _wrap_PyNs3Ipv6FlowClassifier_FindFlow(PyNs3Ipv6FlowClassifier *self, PyObject *
 }
 
 static PyMethodDef PyNs3Ipv6FlowClassifier_methods[] = {
-    {(char *) "Classify", (PyCFunction) _wrap_PyNs3Ipv6FlowClassifier_Classify, METH_KEYWORDS|METH_VARARGS, "Classify(ipHeader, ipPayload, out_flowId, out_packetId)\n\ntype: ipHeader: ns3::Ipv6Header const &\ntype: ipPayload: ns3::Ptr< ns3::Packet const >\ntype: out_flowId: uint32_t *\ntype: out_packetId: uint32_t *" },
-    {(char *) "FindFlow", (PyCFunction) _wrap_PyNs3Ipv6FlowClassifier_FindFlow, METH_KEYWORDS|METH_VARARGS, "FindFlow(flowId)\n\ntype: flowId: uint32_t" },
+    {(char *) "Classify", (PyCFunction) _wrap_PyNs3Ipv6FlowClassifier_Classify, METH_VARARGS|METH_KEYWORDS, "Classify(ipHeader, ipPayload, out_flowId, out_packetId)\n\ntype: ipHeader: ns3::Ipv6Header const &\ntype: ipPayload: ns3::Ptr< ns3::Packet const >\ntype: out_flowId: uint32_t *\ntype: out_packetId: uint32_t *" },
+    {(char *) "FindFlow", (PyCFunction) _wrap_PyNs3Ipv6FlowClassifier_FindFlow, METH_VARARGS|METH_KEYWORDS, "FindFlow(flowId)\n\ntype: flowId: uint32_t" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -6036,6 +6036,22 @@ PyTypeObject PyNs3Ipv6FlowClassifierSortByCount_Type = {
 
 
 PyObject *
+PyNs3Ipv6FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ipv6FlowProbe *self)
+{
+    PyObject *py_retval;
+    PyNs3Ipv6FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3Ipv6FlowProbe__PythonHelper* >(self->obj);
+    
+    if (helper == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
+        return NULL;
+    }
+    helper->NotifyNewAggregate__parent_caller();
+    Py_INCREF(Py_None);
+    py_retval = Py_None;
+    return py_retval;
+}
+
+PyObject *
 PyNs3Ipv6FlowProbe__PythonHelper::_wrap_DoDispose(PyNs3Ipv6FlowProbe *self)
 {
     PyObject *py_retval;
@@ -6078,22 +6094,6 @@ PyNs3Ipv6FlowProbe__PythonHelper::_wrap_DoInitialize(PyNs3Ipv6FlowProbe *self)
         return NULL;
     }
     helper->DoInitialize__parent_caller();
-    Py_INCREF(Py_None);
-    py_retval = Py_None;
-    return py_retval;
-}
-
-PyObject *
-PyNs3Ipv6FlowProbe__PythonHelper::_wrap_NotifyNewAggregate(PyNs3Ipv6FlowProbe *self)
-{
-    PyObject *py_retval;
-    PyNs3Ipv6FlowProbe__PythonHelper *helper = dynamic_cast< PyNs3Ipv6FlowProbe__PythonHelper* >(self->obj);
-    
-    if (helper == NULL) {
-        PyErr_SetString(PyExc_TypeError, "Method NotifyNewAggregate of class Object is protected and can only be called by a subclass");
-        return NULL;
-    }
-    helper->NotifyNewAggregate__parent_caller();
     Py_INCREF(Py_None);
     py_retval = Py_None;
     return py_retval;
@@ -6378,10 +6378,10 @@ _wrap_PyNs3Ipv6FlowProbe_GetTypeId(void)
 
 static PyMethodDef PyNs3Ipv6FlowProbe_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Ipv6FlowProbe_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
+    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ipv6FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3Ipv6FlowProbe__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Ipv6FlowProbe__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Ipv6FlowProbe__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Ipv6FlowProbe__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -6447,7 +6447,7 @@ PyTypeObject PyNs3Ipv6FlowProbe_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv6FlowProbe(monitor, classifier, node)",                        /* Documentation string */
     (traverseproc)PyNs3Ipv6FlowProbe__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv6FlowProbe__tp_clear,             /* tp_clear */
