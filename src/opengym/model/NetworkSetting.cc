@@ -131,19 +131,20 @@ namespace ns3{
 ReturnNS3_CType RegisterMethodResult1, RegisterMethodResult2;
 int MethodArgSelection;
 uint32_t AntennaHeight = 0;    
-uint32_t CV_Num = 100;
+uint32_t CV_Num = 250;
+double envStepTime = 0.001; 
 
 // RL related parameter defination
-uint32_t obs_low;  
-uint32_t obs_high;
-std::string obs_shape; 
-std::string obs_dtype;
+uint32_t obs_low = 0;  
+uint32_t obs_high = 100;
+std::string obs_shape = "250"; 
+std::string obs_dtype = "uint32_t";
 vector<uint32_t> obs_shape_vector;
 
-uint32_t action_low;  
-uint32_t action_high;
-std::string action_shape; 
-std::string action_dtype;
+uint32_t action_low = 0;  
+uint32_t action_high = 10;
+std::string action_shape ="250"; 
+std::string action_dtype = "uint32_t";
 vector<uint32_t> action_shape_vector;
 
 

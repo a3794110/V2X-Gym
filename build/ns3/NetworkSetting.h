@@ -280,11 +280,12 @@ namespace ns3{
     extern vector<uint32_t> action_shape_vector;
 
     std::vector<uint32_t> V2XGym_GetRLShape(string shape);
+    extern double envStepTime; 
+
 
     #define V2XGym_InitialParameters()\
         uint32_t simSeed = 1;\
-        double simulationTime = 100;\
-        double envStepTime = 0.1; \
+        double simulationTime = 10;\
         uint32_t openGymPort = 5555;\
         uint32_t testArg = 0;\
         string NetworkConfig;\
@@ -332,15 +333,14 @@ namespace ns3{
 
         
 
-    #define V2XGym_InitCVs()\
-            NodeContainer nodes;\
-            nodes.Create (CV_Num);\
+    #define V2XGym_InitCVs(nodename)\
+            nodename.Create (CV_Num);\
             MobilityHelper ueMobility;\
             ueMobility.SetMobilityModel ("ns3::WaypointMobilityModel");\
-            ueMobility.Install (nodes);\
+            ueMobility.Install (nodename);\
             for (uint32_t i=0; i<CV_Num; i++)\
             {\
-                Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodes.Get(i)->GetObject<MobilityModel>());   \
+                Ptr<WaypointMobilityModel> ueWaypointMobility = DynamicCast<WaypointMobilityModel>( nodename.Get(i)->GetObject<MobilityModel>());   \
                 ueWaypointMobility->AddWaypoint(Waypoint(Seconds(0),Vector(0, 0 ,0)));\
             }\
         

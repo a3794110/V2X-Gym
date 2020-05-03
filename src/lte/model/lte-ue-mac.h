@@ -190,6 +190,7 @@ public:
 /*  typedef void (* SlUeSchedulingTracedCallback)
     (const uint32_t frame, const uint32_t subframe, const uint16_t rnti,     const uint8_t mcs, const uint16_t pscch_ri, const uint16_t pssch_rb, const uint16_t pssch_length, const uint16_t pssch_itrp);
 */
+  void SetRRI (uint16_t);
 
 private:
 

@@ -167,7 +167,8 @@ main (int argc, char *argv[])
 
 
   // Create Nodes
-  V2XGym_InitCVs();
+  NodeContainer ueVeh;
+  V2XGym_InitCVs(ueVeh);
 
   // OpenGym Env
   Ptr<OpenGymInterface> openGym = CreateObject<OpenGymInterface> ("tcp://localhost:", openGymPort);

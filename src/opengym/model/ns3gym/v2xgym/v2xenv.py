@@ -100,7 +100,7 @@ except ImportError:
 
 class Ns3SumoZmqBridge(object):
     """docstring for Ns3SumoZmqBridge"""
-    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0, Antenna_Height=15, ScriptDir=" ", NetworkConfig=" ", RLConfig = " "):
+    def __init__(self, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, CV_Num=0, Antenna_Height=15, ScriptDir=" ", NetworkConfig=" ", RLConfig = " ", gdb=False):
         super(Ns3SumoZmqBridge, self).__init__()
         port = int(port)
         self.port = port
@@ -119,6 +119,7 @@ class Ns3SumoZmqBridge(object):
         self.ScriptDir = ScriptDir
         self.NetworkConfig = NetworkConfig
         self.RLConfig = RLConfig
+        self.gdb = gdb
         ############################
 
         context = zmq.Context()
@@ -148,7 +149,7 @@ class Ns3SumoZmqBridge(object):
 
         if self.startSim:
             # run simulation script
-            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug, self.ScriptDir, self.NetworkConfig, self.CV_Num, self.Antenna_Height, self.RLConfig)
+            self.ns3Process = start_sim_script(port, simSeed, simArgs, debug, self.ScriptDir, self.NetworkConfig, self.CV_Num, self.Antenna_Height, self.RLConfig, gdb= self.gdb)
         else:
             print("Waiting for simulation script to connect on port: tcp://localhost:{}".format(port))
             print('Please start proper ns-3 simulation script using ./waf --run "..."')
@@ -476,7 +477,7 @@ class Ns3SumoZmqBridge(object):
 
 
 class V2XEnv(gym.Env):
-    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, V2XGymConfig=" ", CV_Args = {"CV_Num": 0, "Antenna_Height": 15,}):
+    def __init__(self, stepTime=0, port=0, startSim=True, simSeed=0, simArgs={}, debug=False, V2XGymConfig=" ", CV_Args = {"CV_Num": 0, "Antenna_Height": 15,}, gdb=False):
         self.stepTime = stepTime
         self.port = port
         self.startSim = startSim
@@ -498,13 +499,14 @@ class V2XEnv(gym.Env):
         self.Antenna_Height = CV_Args["Antenna_Height"]
         self.V2XGymConfig = V2XGymConfig
         self.InitialSUMO = False
+        self.gdb = gdb
         self.V2XGymConfigSetting = V2XGymConfigSetting( self.V2XGymConfig )
         self.SUMOConfigDir, self.gui = self.V2XGymConfigSetting.GetSUMOCfgAttribute()
         self.NetworkConfig, self.ScriptDir = self.V2XGymConfigSetting.GetNs3CfgAttribute()
         self.RLConfig = self.V2XGymConfigSetting.GetRLSpaceAttribute()
         ################################# hank
 
-        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, CV_Num = self.CV_Num, Antenna_Height=self.Antenna_Height,ScriptDir=self.ScriptDir, NetworkConfig= self.NetworkConfig, RLConfig = self.RLConfig)
+        self.ns3ZmqBridge = Ns3SumoZmqBridge(self.port, self.startSim, self.simSeed, self.simArgs, self.debug, CV_Num = self.CV_Num, Antenna_Height=self.Antenna_Height,ScriptDir=self.ScriptDir, NetworkConfig= self.NetworkConfig, RLConfig = self.RLConfig, gdb=self.gdb)
         self.ns3ZmqBridge.initialize_env(self.stepTime)
         self.action_space = self.ns3ZmqBridge.get_action_space()
         self.observation_space = self.ns3ZmqBridge.get_observation_space()

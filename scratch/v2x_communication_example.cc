@@ -172,7 +172,7 @@ main (int argc, char *argv[])
     // NOTE: commandline parser is currently (05.04.2019) not working for uint8_t (Bug 2916)
 
     uint16_t simTime = 10;                 // Simulation time in seconds
-    uint32_t numVeh = 100;                  // Number of vehicles
+    uint32_t numVeh = 250;                  // Number of vehicles
     lenCam = 190;                           // Length of CAM message in bytes [50-300 Bytes]
     double ueTxPower = 23.0;                // Transmission power in dBm
     double probResourceKeep = 0.0;          // Probability to select the previous resource again [0.0-0.8]
@@ -181,9 +181,9 @@ main (int argc, char *argv[])
     bool adjacencyPscchPssch = true;        // Subchannelization scheme
     bool partialSensing = false;            // Partial sensing enabled (actual only partialSensing is false supported)
     uint16_t sizeSubchannel = 10;           // Number of RBs per subchannel
-    uint16_t numSubchannel = 5;             // Number of subchannels per subframe
+    uint16_t numSubchannel = 3;             // Number of subchannels per subframe
     uint16_t startRbSubchannel = 0;         // Index of first RB corresponding to subchannelization
-    uint16_t pRsvp = 100;				    // Resource reservation interval 
+    uint16_t pRsvp = 500;				    // Resource reservation interval 
     uint16_t t1 = 4;                        // T1 value of selection window
     uint16_t t2 = 100;                      // T2 value of selection window
     uint16_t slBandwidth;                   // Sidelink bandwidth

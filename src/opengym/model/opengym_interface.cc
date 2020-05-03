@@ -408,21 +408,22 @@ OpenGymInterface::ExecuteActions(Ptr<OpenGymDataContainer> action)
   return reply;
 }
 
-
+extern double envStepTime; 
 //hank
 void 
 OpenGymInterface::ExecuteSetMobility (Ptr<Node> node, Vector vel){
   double index_time = 0;
   Ptr<WaypointMobilityModel> ueWaypointMobility =  node->GetObject<WaypointMobilityModel > ();    
-  index_time = Simulator::Now ().GetSeconds () + 0.1;
+  index_time = Simulator::Now ().GetSeconds () + envStepTime;
 
   ueWaypointMobility->AddWaypoint(Waypoint(Seconds(index_time), vel));
   Ptr<MobilityModel> mob = node->GetObject<MobilityModel>();
-  //NS_LOG_UNCOND (" SyncMobility: Node "  <<index_time<<" "<<mob->GetPosition().x<<", "<< mob->GetPosition().y<<", "<<  mob->GetPosition().z );
+  //NS_LOG_UNCOND (" SyncMobility: Node "  <<node->GetId()<<" "<<mob->GetPosition().x<<", "<< mob->GetPosition().y<<", "<<  mob->GetPosition().z );
 }
 
 //hank
 extern uint32_t AntennaHeight;
+extern uint32_t CV_Num;
 void
 OpenGymInterface::SyncMobility(Ptr<OpenGymDataContainer> trajectory)
 {
@@ -431,7 +432,8 @@ OpenGymInterface::SyncMobility(Ptr<OpenGymDataContainer> trajectory)
   Ptr<OpenGymBoxContainer<int> > box = DynamicCast<OpenGymBoxContainer<int> >(trajectory);
   std::vector<int> actionVector = box->GetData();
 
-  uint32_t nodeNum = NodeList::GetNNodes ();
+  //uint32_t nodeNum = NodeList::GetNNodes ();
+  uint32_t nodeNum = CV_Num;
   for (uint32_t i=0; i<nodeNum; i++)
   {
     Ptr<Node> node = NodeList::GetNode(i);

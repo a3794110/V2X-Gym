@@ -24,13 +24,13 @@ class CV_Mobility_Control(object):
         self.traci =traci
     
 
-    def CreateNode_Dynamic(self, i=0, routeid='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
+    def CreateNode_Dynamic(self, vehID=0, routeID='', typeID='DEFAULT_VEHTYPE', depart=None, departLane='first', departPos='base', departSpeed='0', arrivalLane='current', arrivalPos='max', arrivalSpeed='current', fromTaz='', toTaz='', line='', personCapacity=0, personNumber=0):
         IDList = traci.vehicle.getIDList()
-        if str(i) in IDList:
+        if str(vehID) in IDList:
             print ("The created ID already in network!!")
-        traci.vehicle.addFull(str(i),routeid, typeID, depart, departLane, departPos, departSpeed, arrivalLane, arrivalPos, arrivalSpeed, fromTaz, toTaz, line, personCapacity, personNumber)
+        traci.vehicle.addFull(str(vehID),routeID, typeID, depart, departLane, departPos, departSpeed, arrivalLane, arrivalPos, arrivalSpeed, fromTaz, toTaz, line, personCapacity, personNumber)
         #print(type(self.VehIDList) )
-        self.VehIDList.add( str(i) )
+        self.VehIDList.add( str(vehID) )
         self.addID += 1
         #print("IDList = ", self.VehIDList)
 
@@ -55,9 +55,9 @@ class CV_Mobility_Control(object):
     def MobilitySyncSpace(self):
 
         traci.simulationStep()
-        print("#############################################################")
+        '''print("#############################################################")
         getCurrentTime = traci.simulation.getCurrentTime()
-        print("getCurrentTime = ",getCurrentTime)
+        print("getCurrentTime = ",getCurrentTime)'''
         
 
         #if (traci.simulation.getCurrentTime() % 1000) == 0 : # create device to network  (每1秒增加車輛 Poisson λ=1 k=1)

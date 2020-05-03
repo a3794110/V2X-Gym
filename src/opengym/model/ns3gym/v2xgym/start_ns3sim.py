@@ -61,7 +61,7 @@ def build_ns3_project(debug=True): #debug: show ns3 compile info during ns3gym r
 	os.chdir(cwd)
 
 
-def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkConfig= " ", CV_Num=0, AntennaHeight=0, RLConfig=" "):
+def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" ", NetworkConfig= " ", CV_Num=0, AntennaHeight=0, RLConfig=" ", gdb=False):
 	
 	if NetworkConfig != " ":#allow Network Setting Config Selection
 		simArgs["--NetworkConfig"] = NetworkConfig
@@ -92,6 +92,8 @@ def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" 
 
 	wafString = wafPath + ' --run "' + simScriptName
 
+	
+
 	if port:
 		wafString += ' --openGymPort=' + str(port)
 
@@ -106,6 +108,8 @@ def start_sim_script(port=5555, simSeed=0, simArgs={}, debug=False, ScriptDir=" 
 
 	wafString += '"'
 
+
+	
 	ns3Proc = None
 	if debug:
 		ns3Proc = subprocess.Popen(wafString, shell=True, stdout=None, stderr=None)

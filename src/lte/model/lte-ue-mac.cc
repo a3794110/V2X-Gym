@@ -4386,4 +4386,11 @@ LteUeMac::GetDiscTxPool ()
   return m_discTxPools.m_pool; 
 }
 
+
+void
+LteUeMac::SetRRI(uint16_t rri){
+	NS_LOG_FUNCTION( this);
+	m_pRsvp = rri;	
+}
+
 } // namespace ns3
