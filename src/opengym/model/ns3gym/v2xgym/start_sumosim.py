@@ -15,11 +15,13 @@ except ImportError:
         "please declare environment variable 'SUMO_HOME' as the root directory of your sumo installation (it should contain folders 'bin', 'tools' and 'docs')")
     
 class SUMOSim(object):
-    def __init__(self, SUMOConfigDir="data/Simulation/map.sumocfg", GUI=True, stepTime=0.1):
+    def __init__(self, SUMOConfigDir="data/Simulation/map.sumocfg", GUI=True, stepTime=0.1, autorun="true", autostop="true"):
             self.SUMOConfigDir = SUMOConfigDir
             self.stepTime = stepTime
             self.traci = traci
             self.GUI = GUI
+            self.autorun = autorun
+            self.autostop = autostop
             options = self.get_options()                                                             
             #if options.nogui:
             if self.GUI != True:
@@ -30,7 +32,7 @@ class SUMOSim(object):
             self.RunSUMO()
         
     def RunSUMO(self):
-        self.traci.start([self.sumoBinary, '-c', os.path.join(self.SUMOConfigDir) , '--step-length', str(self.stepTime)])
+        self.traci.start([self.sumoBinary, '-c', os.path.join(self.SUMOConfigDir) , '--step-length', str(self.stepTime), '--quit-on-end', self.autostop, '--start', self.autorun])
 
     def get_options(self):
         optParser = optparse.OptionParser()

@@ -64,11 +64,11 @@ episodes = 50
 for episode in range(episodes):
     # Refresh state
     state = env.reset()
-    if episode == 0:
-        mobilitycontrol = env.ns3ZmqBridge.MobilityControl
-        for i in range(nodeNum):
-            mobilitycontrol.CreateNode_Dynamic(vehID=str(i), departSpeed ="0", arrivalSpeed="0", routeID="route0")
-            mobilitycontrol.traci.vehicle.moveToXY(vehID=str(i), x= 1+ random.randint(0, 100), y=random.randint(0, 100), edgeID="gneE0", lane=0, keepRoute=2)
+
+    mobilitycontrol = env.ns3ZmqBridge.MobilityControl
+    for i in range(nodeNum):
+        mobilitycontrol.CreateNode_Dynamic(vehID=str(i), departSpeed ="0", arrivalSpeed="0", routeID="route0")
+        mobilitycontrol.traci.vehicle.moveToXY(vehID=str(i), x= 1+ random.randint(0, 100), y=random.randint(0, 100), edgeID="gneE0", lane=0, keepRoute=2)
 
     ob_space = env.observation_space
     ac_space = env.action_space

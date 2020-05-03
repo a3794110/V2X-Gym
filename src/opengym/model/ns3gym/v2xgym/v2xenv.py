@@ -501,7 +501,7 @@ class V2XEnv(gym.Env):
         self.InitialSUMO = False
         self.gdb = gdb
         self.V2XGymConfigSetting = V2XGymConfigSetting( self.V2XGymConfig )
-        self.SUMOConfigDir, self.gui = self.V2XGymConfigSetting.GetSUMOCfgAttribute()
+        self.SUMOConfigDir, self.gui, self.autorun, self.autostop = self.V2XGymConfigSetting.GetSUMOCfgAttribute()
         self.NetworkConfig, self.ScriptDir = self.V2XGymConfigSetting.GetNs3CfgAttribute()
         self.RLConfig = self.V2XGymConfigSetting.GetRLSpaceAttribute()
         ################################# hank
@@ -534,12 +534,18 @@ class V2XEnv(gym.Env):
         return self.get_state()
 
     def reset(self):
+
+
         if not self.envDirty:
             obs = self.ns3ZmqBridge.get_obs()
             if self.InitialSUMO == False :
-                SUMOSim(SUMOConfigDir=self.SUMOConfigDir, GUI=self.gui, stepTime=self.stepTime)
+                SUMOSim(SUMOConfigDir=self.SUMOConfigDir, GUI=self.gui, stepTime=self.stepTime, autorun = self.autorun, autostop = self.autostop)
                 self.InitialSUMO = True
             return obs
+        else:
+            sys.stdout.flush()
+            self.ns3ZmqBridge.MobilityControl.traci.close()
+            SUMOSim(SUMOConfigDir=self.SUMOConfigDir, GUI=self.gui, stepTime=self.stepTime, autorun = self.autorun, autostop = self.autostop)
 
         if self.ns3ZmqBridge:
             self.ns3ZmqBridge.close()
