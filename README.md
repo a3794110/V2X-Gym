@@ -100,4 +100,4 @@ How to add New Network Scenario or model into framework?
 
 Future works
 ========
-We will upload a RL V2X example which improving the performance of sensing-based SPS with RL in few weeks.
+We will update architecture document and user manual in few weeks.
