@@ -71,13 +71,6 @@ pip3 install ./src/opengym/model/ns3gym
 
 7. (Optional) Install all libraries required by your agent (like tensorflow, keras, etc.).
 
-System Architecture
-========
-
-The system architecture introduction of V2X-Gym is offered in the following link:
-
-https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/r1BCZcBuI
-
 User Manual
 ========
 
