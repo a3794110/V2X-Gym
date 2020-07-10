@@ -1,4 +1,4 @@
-V2X-Gym: a vehicular network simulation framework with reinforcement learning interface
+V2X-Gym: a Reinforcement Leanring Framework for Evaluating RL-enhanced Vehiculr Network Algorithms
 ============
 V2X-Gym is the integration of [OpenAI Gym](https://gym.openai.com/) (a toolkit for reinforcement learning (RL) widely used in research), [SUMO](https://github.com/tkn-tub/ns3-gym) (an urban mobility simulator), [ns–3](https://www.nsnam.org/) (the de-facto standard for academic and industry studies in the areas of networking protocols and communication technologies) and [ns3-gym](https://github.com/tkn-tub/ns3-gym) (a framework that integrates both OpenAI Gym and ns-3 in order to encourage usage of RL in networking research).
 
