@@ -76,14 +76,14 @@ User Manual
 
 The user manual of V2X-Gym is offered in the following link:
 
-https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/B1fdW9HuI
+https://hackmd.io/IXjiYbHXQ8Saf2U3tHMpkw?view
 
 Example: 
 ========
 
 All examples can be found [here](./scratch/), the introduction of these examples is offered in the following link:
 
-https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/ByMy5jSOU
+https://hackmd.io/IXjiYbHXQ8Saf2U3tHMpkw?view
 
 Q&A
 ========
