@@ -1,13 +1,16 @@
 V2X-Gym: a Reinforcement Leanring Framework for Evaluating RL-enhanced Vehiculr Network Algorithms
 ============
-V2X-Gym is the integration of [OpenAI Gym](https://gym.openai.com/) (a toolkit for reinforcement learning (RL) widely used in research), [SUMO](https://github.com/tkn-tub/ns3-gym) (an urban mobility simulator), [ns–3](https://www.nsnam.org/) (the de-facto standard for academic and industry studies in the areas of networking protocols and communication technologies) and [ns3-gym](https://github.com/tkn-tub/ns3-gym) (a framework that integrates both OpenAI Gym and ns-3 in order to encourage usage of RL in networking research).
+The V2X-Gym is the integration of the [OpenAI-Gym](https://gym.openai.com/) API (an RL framework), [SUMO](https://github.com/tkn-tub/ns3-gym) (a traffic simulator) and [ns–3](https://www.nsnam.org/) (a de-fecto network simulator), which inherits the [ns3-gym](https://github.com/tkn-tub/ns3-gym) toolkit to build a standardized evironment for RL-enhanced vehicular network algorithm evaluaiton.
 
-The goal of this project is to provide a vehicular network simulation framework which can (1) DO RL V2X Research: model your purposed RL V2X algorithm with [OpenAI Gym](https://gym.openai.com/) interface, (2) Unified Interface: setting network and traffic enviroment with unified interface and (3) Flexibility: this framework can attach on user purposed network/traffic model/script with simple method. We list several features of this framework on bellow:
-* Setting network/traffic/RL configuration with unified interface (xml files)
-* Above mentioned configuration interface can be attached on user purposed [ns-3](https://www.nsnam.org/) script or [SUMO](https://github.com/tkn-tub/ns3-gym) script.(developed V2X module can be attached to this framework)
-* Agents can interact with traffic enviroment and import real world map with common used [SUMO](https://github.com/tkn-tub/ns3-gym)-like method in this framework (Vehicles created in SUMO will also sync with node in [ns-3](https://www.nsnam.org/).
-* Agents can interact with network envorment with [OpenAI Gym](https://gym.openai.com/) interface (action, reward and observaiton) based on [ns3-gym](https://github.com/tkn-tub/ns3-gym).
-* V2X-Gym supports distributed simulation (one side: SUMO/RL Agent, other side: ns-3).
+
+## Goals
+1. **RL-enhanced vehicular network environment:**
+The V2X-Gym framework encapsulates a proposed vehicular network simulator, which integrates SUMO and ns-3 via a client-server architecture. The encapsulated simulator provides an interface allowing an external process (agent) to interact with the simulated vehicular network environment via OpenAI-Gym API. 
+2. **Language-agnostic setting system:**
+To simplify the complexity of configuring the V2X-Gym framework, we implement a language-agnostic setting system, allowing users to configure the V2X-Gym via human-readable configuration files written in XML-format. 
+
+3. **Extensible framework structure:**
+The V2X-Gym framework provides several registration methods allowing newly proposed ns-3 network models to be added to the framework. The registered network models will be integrated to the built-in V2X-Gym functionalities, including the proposed RL-enhanced vehicular network environment and language-agnostic setting system.
 
 
 ![image](images/Schematic_Diagram_of_V2XGym.png)
