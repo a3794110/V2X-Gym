@@ -13,7 +13,7 @@ To simplify the complexity of configuring the V2X-Gym framework, we implement a 
 The V2X-Gym framework provides several registration methods allowing newly proposed ns-3 network models to be added to the framework. The registered network models will be integrated to the built-in V2X-Gym functionalities, including the proposed RL-enhanced vehicular network environment and language-agnostic setting system.
 
 
-![image](images/Schematic_Diagram_of_V2XGym.png)
+![image](Schematic_Diagram_of_V2XGym.png)
 Figure 1: General V2X-Gym
   
 
