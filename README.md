@@ -87,7 +87,7 @@ https://hackmd.io/IXjiYbHXQ8Saf2U3tHMpkw?view
 
 Q&A
 ========
-How to add New Network Scenario or model into framework?
+How to add new vehicular network scenario (ns-3 simulation script) into framework?
 
   For maintanance, this framework support adding new network model into it, the adding procedure is descripted in [user manual](https://hackmd.io/@7GrhaD36QtiCRdjPf7T_Qg/B1fdW9HuI).
 
