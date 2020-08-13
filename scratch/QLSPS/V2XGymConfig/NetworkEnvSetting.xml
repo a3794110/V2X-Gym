@@ -3,21 +3,79 @@
     <HelloV2XGym >
         <arg1>hello!!</arg1>
     </HelloV2XGym>
-    <lteHelper::SetAttribute >
-        <arg1>Scheduler</arg1>
-        <arg2>ns3::PfFfMacScheduler</arg2> 
+
+    <inputConfig::ConfigureDefaults>
+       <arg1>log_buffer_status.csv</arg1>
+    </inputConfig::ConfigureDefaults>
+
+    <lteHelper::DisableNewEnbPhy>
+      <arg1>"log_buffer_status.csv"</arg1>
+    </lteHelper::DisableNewEnbPhy>
+
+    <lteHelper::SetEnbAntennaModelType>
+     <arg1>ns3::NistParabolic3dAntennaModel</arg1>
+    </lteHelper::SetEnbAntennaModelType>
+
+    <lteHelper::SetAttribute>
+      <arg1>UseSameUlDlPropagationCondition</arg1>
+      <arg2>true</arg2> 
+      <arg3>PathlossModel</arg3> 
+      <arg4>ns3::CniUrbanmicrocellPropagationLossModel</arg4> 
+      <arg5>UseSidelink</arg5> 
+      <arg6>true</arg6>
     </lteHelper::SetAttribute>
-    <lteHelper::EnableUlRxPhyTraces >
-        <arg1>void</arg1>
-    </lteHelper::EnableUlRxPhyTraces>
-    <simTime >
-        <arg1>10</arg1>
-    </simTime>
-    <ns3::LteHelper::EnbComponentCarrierManager >
-        <arg1>ns3::RrComponentCarrierManager</arg1>
-    </ns3::LteHelper::EnbComponentCarrierManager>
-    <remoteHostContainer::Create >
-        <arg1>1</arg1>
-    </remoteHostContainer::Create>
+
+    <eNodeB::Create>
+       <arg1>1</arg1>
+    </eNodeB::Create>
+
+    <mob_eNB::SetMobilityModel>
+      <arg1>ns3::ConstantPositionMobilityModel</arg1>
+    </mob_eNB::SetMobilityModel>
+
+    <host::Bind>
+       <arg1>"log_rx_data_v2x.csv"</arg1>
+    </host::Bind>
+
+    <host::SetAllowBroadcast>
+       <arg1>true</arg1>
+    </host::SetAllowBroadcast>
+
+    <host::ShutdownRecv>
+       <arg1>"log_rx_data_v2x.csv"</arg1>
+    </host::ShutdownRecv>
+
+    <ueSidelinkConfiguration::SetSlEnabled>
+       <arg1>true</arg1>
+    </ueSidelinkConfiguration::SetSlEnabled>
+
+    <ueSidelinkConfiguration::SetV2xEnabled>
+       <arg1>true</arg1>
+    </ueSidelinkConfiguration::SetV2xEnabled>
+
+    <pFactory::SetHaveUeSelectedResourceConfig>
+       <arg1>true</arg1>
+    </pFactory::SetHaveUeSelectedResourceConfig>
+
+    <pFactory::SetStartRbPscchPool>
+       <arg1>0</arg1>
+    </pFactory::SetStartRbPscchPool>
+
+    <pFactory::SetDataTxP0 >
+       <arg1>-4</arg1>
+    </pFactory::SetDataTxP0 >
+
+    <pFactory::SetDataTxAlpha>
+       <arg1>0.9</arg1>
+    </pFactory::SetDataTxAlpha>
+
+    <lteHelper::EnableTraces>
+       <arg1>0.9</arg1>
+    </lteHelper::EnableTraces>
+
+    <openGym::NotifySimulationEnd>
+       <arg1>0.9</arg1>
+    </openGym::NotifySimulationEnd>
+
 </NetworkEnvSetting>
 
