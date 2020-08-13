@@ -127,7 +127,7 @@ Ptr<OpenGymDataContainer> MyGetObservation(void)
 
     for (uint8_t i=0; i<ueVeh.GetN();i++)
     {   
-        int id = i;
+        //int id = i;
         uint32_t buffsize = (txcnt_cv[i] - rxcnt_cv[i]);
         if(buffsize > 1000)
             buffsize = 1000;
@@ -318,6 +318,12 @@ main (int argc, char *argv[])
     uint16_t t1 = 4;                        // T1 value of selection window
     uint16_t t2 = 100;                      // T2 value of selection window
     uint16_t slBandwidth;                   // Sidelink bandwidth
+
+    Ptr<NetworkSetting> NetSet = CreateObject<NetworkSetting>();
+    InitialCmd();
+    ConfigCmd();
+    //V2XGym_RegisterCmdParameters(adjacencyPscchPssch, bool, NetSet," Scheme for subchannelization");
+
     cmd.AddValue ("adjacencyPscchPssch", "Scheme for subchannelization", adjacencyPscchPssch); 
     cmd.AddValue ("sizeSubchannel", "Number of RBs per Subchannel", sizeSubchannel);
     cmd.AddValue ("numSubchannel", "Number of Subchannels", numSubchannel);
@@ -335,20 +341,23 @@ main (int argc, char *argv[])
     cmd.AddValue ("log_tx_data", "name of the tx data logfile", tx_data);
     cmd.AddValue ("baseline", "Distance in which messages are transmitted and must be received", baseline);
 
-  V2XGym_SettingConfigParameters(); // cmd.Parse (argc, argv);
-
+    V2XGym_SettingConfigParameters(); // cmd.Parse (argc, argv);
+  
+    NetSet->IncludeConfig("scratch/NetworkEnvSetting.xml");
+    std::string HelloV2XGym;
+    V2XGym_RegisterParameters(HelloV2XGym, string, NetSet);
 
     RngSeedManager::SetSeed (1);
     RngSeedManager::SetRun (simSeed);
 
     AsciiTraceHelper ascii;
     log_simtime = ascii.CreateFileStream(simtime, std::ios_base::app);
+
     log_rx_data = ascii.CreateFileStream(rx_data);
     log_tx_data = ascii.CreateFileStream(tx_data);
     log_connections = ascii.CreateFileStream(connections);
     log_positions = ascii.CreateFileStream(positions);
     log_buffer_status = ascii.CreateFileStream(buffer_status); 
-
     NS_LOG_INFO ("Starting network configuration..."); 
 
     // Set the UEs power in dBm
@@ -387,19 +396,13 @@ main (int argc, char *argv[])
     //Config::SetDefault ("ns3::LteUeMac::EnableExcludeSubframe", BooleanValue(excludeSubframe)); 
 
     ConfigStore inputConfig; 
-    inputConfig.ConfigureDefaults(); 
-  /*Ptr<NetworkSetting> NetSet = CreateObject<NetworkSetting>();
-  NetSet->IncludeConfig(NetworkConfig);
-  std::string HelloV2XGym;
-  V2XGym_RegisterParameters(HelloV2XGym, string, NetSet);
-  NS_LOG_UNCOND("HelloV2XGym (set from config files): "<<HelloV2XGym);
-  RngSeedManager::SetSeed (1);
-  RngSeedManager::SetRun (simSeed);*/
+    V2XGym_RegisterMethod_noarg(inputConfig, ConfigureDefaults, NetSet);
+
 
 
   // Create Nodes
   NodeContainer ueAllNodes;
-  V2XGym_InitCVs(ueVeh); 
+  V2XGym_InitCVs(ueVeh); //ueVeh-->NodeContainer
   ueAllNodes.Add(ueVeh);
 
     NS_LOG_INFO ("Creating helpers...");
@@ -410,27 +413,28 @@ main (int argc, char *argv[])
     // LTE Helper
     Ptr<LteHelper> lteHelper = CreateObject<LteHelper>();
     lteHelper->SetEpcHelper(epcHelper);
-    lteHelper->DisableNewEnbPhy(); // Disable eNBs for out-of-coverage modelling
+
+    V2XGym_RegisterPtrMethod_noarg(lteHelper, DisableNewEnbPhy, NetSet);// Disable eNBs for out-of-coverage modelling
     
     // V2X 
     Ptr<LteV2xHelper> lteV2xHelper = CreateObject<LteV2xHelper> ();
     lteV2xHelper->SetLteHelper (lteHelper); 
 
     // Configure eNBs' antenna parameters before deploying them.
-    lteHelper->SetEnbAntennaModelType ("ns3::NistParabolic3dAntennaModel");
+    V2XGym_RegisterPtrMethod_onearg(lteHelper, SetEnbAntennaModelType ,string, NetSet);
 
     // Set pathloss model
     // FIXME: InstallEnbDevice overrides PathlossModel Frequency with values from Earfcn
     // 
-    lteHelper->SetAttribute ("UseSameUlDlPropagationCondition", BooleanValue(true));
+    V2XGym_RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, BooleanValue, NetSet);
+    V2XGym_RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, StringValue, NetSet);
     Config::SetDefault ("ns3::LteEnbNetDevice::UlEarfcn", StringValue ("54990"));
     //Config::SetDefault ("ns3::CniUrbanmicrocellPropagationLossModel::Frequency", DoubleValue(5800e6));
-    lteHelper->SetAttribute ("PathlossModel", StringValue ("ns3::CniUrbanmicrocellPropagationLossModel"));
 
     
     // Create eNB Container
     NodeContainer eNodeB;
-    eNodeB.Create(1); 
+    V2XGym_RegisterMethod_onearg(eNodeB, Create ,int, NetSet);
 
     // Topology eNodeB
     Ptr<ListPositionAllocator> pos_eNB = CreateObject<ListPositionAllocator>(); 
@@ -438,7 +442,7 @@ main (int argc, char *argv[])
 
     //  Install mobility eNodeB
     MobilityHelper mob_eNB;
-    mob_eNB.SetMobilityModel("ns3::ConstantPositionMobilityModel");
+    V2XGym_RegisterMethod_onearg(mob_eNB,SetMobilityModel ,string, NetSet);
     mob_eNB.SetPositionAllocator(pos_eNB);
     mob_eNB.Install(eNodeB);
 
@@ -452,7 +456,7 @@ main (int argc, char *argv[])
 
     // Install LTE devices to all UEs 
     NS_LOG_INFO ("Installing UE's network devices...");
-    lteHelper->SetAttribute("UseSidelink", BooleanValue (true));
+    V2XGym_RegisterPtrMethod_twoarg(lteHelper, SetAttribute, string, BooleanValue, NetSet);
     NetDeviceContainer ueRespondersDevs = lteHelper->InstallUeDevice (ueVeh);
     NetDeviceContainer ueDevs;
     ueDevs.Add (ueRespondersDevs); 
@@ -467,7 +471,6 @@ main (int argc, char *argv[])
     Ipv4InterfaceContainer ueIpIface; 
     ueIpIface = epcHelper->AssignUeIpv4Address (ueDevs);
     Ipv4StaticRoutingHelper Ipv4RoutingHelper;
-
     for(uint32_t u = 0; u < ueAllNodes.GetN(); ++u)
         {
             Ptr<Node> ueNode = ueAllNodes.Get(u);
@@ -541,13 +544,11 @@ main (int argc, char *argv[])
 
     std::ostringstream oss;
     oss.str("");*/
-
     for(gIt=txGroups.begin(); gIt != txGroups.end(); gIt++)
         {
             // Create Sidelink bearers
             // Use Tx for the group transmitter and Rx for all the receivers
             // Split Tx/Rx
-
             NetDeviceContainer txUe ((*gIt).Get(0));
             activeTxUes.Add(txUe);
             NetDeviceContainer rxUes = lteV2xHelper->RemoveNetDevice ((*gIt), txUe.Get (0));
@@ -562,10 +563,10 @@ main (int argc, char *argv[])
 
             //Individual Socket Traffic Broadcast everyone
             Ptr<Socket> host = Socket::CreateSocket(txUe.Get(0)->GetNode(),TypeId::LookupByName ("ns3::UdpSocketFactory"));
-            host->Bind();
+            V2XGym_RegisterPtrMethod_noarg(host, Bind, NetSet);
             host->Connect(InetSocketAddress(clientRespondersAddress,application_port));
-            host->SetAllowBroadcast(true);
-            host->ShutdownRecv();
+            V2XGym_RegisterPtrMethod_onearg(host, SetAllowBroadcast,bool,NetSet);
+            V2XGym_RegisterPtrMethod_noarg(host, ShutdownRecv, NetSet);
 
             //Ptr<LteUeRrc> ueRrc = DynamicCast<LteUeRrc>( txUe.Get (0)->GetObject<LteUeNetDevice> ()->GetRrc () );    
             //ueRrc->TraceConnectWithoutContext ("SidelinkV2xMonitoring", MakeBoundCallback (&SidelinkV2xMonitoringTrace, stream));
@@ -589,8 +590,8 @@ main (int argc, char *argv[])
 
         NS_LOG_INFO ("Creating Sidelink Configuration...");
         Ptr<LteUeRrcSl> ueSidelinkConfiguration = CreateObject<LteUeRrcSl>();
-        ueSidelinkConfiguration->SetSlEnabled(true);
-        ueSidelinkConfiguration->SetV2xEnabled(true);
+        V2XGym_RegisterPtrMethod_onearg(ueSidelinkConfiguration, SetSlEnabled,bool,NetSet);
+        V2XGym_RegisterPtrMethod_onearg(ueSidelinkConfiguration, SetV2xEnabled,bool,NetSet);
 
         LteRrcSap::SlV2xPreconfiguration preconfiguration;
         preconfiguration.v2xPreconfigFreqList.freq[0].v2xCommPreconfigGeneral.carrierFreq = 54890;
@@ -600,20 +601,20 @@ main (int argc, char *argv[])
         preconfiguration.v2xPreconfigFreqList.freq[0].v2xCommRxPoolList.nbPools = 1;
 
         SlV2xPreconfigPoolFactory pFactory;
-        pFactory.SetHaveUeSelectedResourceConfig (true);
+        V2XGym_RegisterMethod_onearg(pFactory, SetHaveUeSelectedResourceConfig,bool,NetSet);
+        V2XGym_RegisterMethod_onearg(pFactory, SetStartRbPscchPool,int,NetSet);
+        V2XGym_RegisterMethod_onearg(pFactory, SetDataTxP0,int,NetSet);
+        V2XGym_RegisterMethod_onearg(pFactory, SetDataTxAlpha,double,NetSet);
+
         pFactory.SetSlSubframe (std::bitset<20> (0xFFFFF));
         pFactory.SetAdjacencyPscchPssch (adjacencyPscchPssch);
         pFactory.SetSizeSubchannel (sizeSubchannel);
         pFactory.SetNumSubchannel (numSubchannel);
         pFactory.SetStartRbSubchannel (startRbSubchannel);
-        pFactory.SetStartRbPscchPool (0);
-        pFactory.SetDataTxP0 (-4);
-        pFactory.SetDataTxAlpha (0.9);
 
         preconfiguration.v2xPreconfigFreqList.freq[0].v2xCommTxPoolList.pools[0] = pFactory.CreatePool ();
         preconfiguration.v2xPreconfigFreqList.freq[0].v2xCommRxPoolList.pools[0] = pFactory.CreatePool ();
         ueSidelinkConfiguration->SetSlV2xPreconfiguration (preconfiguration); 
-
         // Print Configuration
         *log_rx_data->GetStream() << "RxPackets;RxTime;RxId;TxId;TxTime;xPos;yPos;AveLatency" << std::endl;
         *log_tx_data->GetStream() << "TxPackets;TxTime;TxId;xPos;yPos" << std::endl;
@@ -624,7 +625,7 @@ main (int argc, char *argv[])
         lteHelper->InstallSidelinkV2xConfiguration (ueRespondersDevs, ueSidelinkConfiguration);
 
         NS_LOG_INFO ("Enabling LTE traces...");
-        lteHelper->EnableTraces();
+        V2XGym_RegisterPtrMethod_noarg(lteHelper,EnableTraces,NetSet);
 
         *log_simtime->GetStream() << "Simtime;TotalRx;TotalTx;PRR" << std::endl; 
         Simulator::Schedule(Seconds(1), &PrintStatus, 1, log_simtime);
@@ -650,8 +651,8 @@ main (int argc, char *argv[])
 
   Simulator::Run ();
   NS_LOG_UNCOND ("Simulation stop");
+  V2XGym_RegisterPtrMethod_noarg(openGym,NotifySimulationEnd,NetSet);
 
-  openGym->NotifySimulationEnd();
   Simulator::Destroy ();
 
 }
