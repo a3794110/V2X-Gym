@@ -166,10 +166,10 @@ bool MyExecuteActions(Ptr<OpenGymDataContainer> action)  // set the contention w
     {
         NetDeviceContainer txUe ((*gIt).Get(0));
         Ptr<LteUeMac> ueMac = DynamicCast<LteUeMac>( txUe.Get (0)->GetObject<LteUeNetDevice> ()->GetMac () );
-        uint16_t rsi = actionVector.at(i);
+        uint16_t rri = actionVector.at(i);
         
-        rsi = (rsi+1 )*100;
-        ueMac->SetRRI(rsi);
+        rri = (rri+1 )*100;
+        ueMac->SetRRI(rri);
 
         i++;
     }
