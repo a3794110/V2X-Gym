@@ -343,7 +343,7 @@ main (int argc, char *argv[])
 
     V2XGym_SettingConfigParameters(); // cmd.Parse (argc, argv);
   
-    NetSet->IncludeConfig("scratch/NetworkEnvSetting.xml");
+    NetSet->IncludeConfig(NetworkConfig);
     std::string HelloV2XGym;
     V2XGym_RegisterParameters(HelloV2XGym, string, NetSet);
 
