@@ -14,7 +14,7 @@ The V2X-Gym framework provides several registration methods allowing newly propo
 
 
 <p align="center">
-  <img src="V2X-Gym_Architecture.png">
+  <img src="V2X-Gym_architecture.png">
 </p>
 
 
