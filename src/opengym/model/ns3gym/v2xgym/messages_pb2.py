@@ -8,7 +8,6 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
-from google.protobuf import descriptor_pb2
 # @@protoc_insertion_point(imports)
 
 _sym_db = _symbol_database.Default()
@@ -21,10 +20,10 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='messages.proto',
   package='ns3opengym',
   syntax='proto3',
+  serialized_options=None,
   serialized_pb=_b('\n\x0emessages.proto\x12\nns3opengym\x1a\x19google/protobuf/any.proto\"j\n\x10SpaceDescription\x12#\n\x04type\x18\x01 \x01(\x0e\x32\x15.ns3opengym.SpaceType\x12#\n\x05space\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0c\n\x04name\x18\x03 \x01(\t\"\x1a\n\rDiscreteSpace\x12\t\n\x01n\x18\x01 \x01(\x05\"V\n\x08\x42oxSpace\x12\x0b\n\x03low\x18\x01 \x01(\x02\x12\x0c\n\x04high\x18\x02 \x01(\x02\x12 \n\x05\x64type\x18\x03 \x01(\x0e\x32\x11.ns3opengym.Dtype\x12\r\n\x05shape\x18\x04 \x03(\r\";\n\nTupleSpace\x12-\n\x07\x65lement\x18\x01 \x03(\x0b\x32\x1c.ns3opengym.SpaceDescription\":\n\tDictSpace\x12-\n\x07\x65lement\x18\x01 \x03(\x0b\x32\x1c.ns3opengym.SpaceDescription\"f\n\rDataContainer\x12#\n\x04type\x18\x01 \x01(\x0e\x32\x15.ns3opengym.SpaceType\x12\"\n\x04\x64\x61ta\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0c\n\x04name\x18\x03 \x01(\t\"%\n\x15\x44iscreteDataContainer\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x05\"\x8d\x01\n\x10\x42oxDataContainer\x12 \n\x05\x64type\x18\x01 \x01(\x0e\x32\x11.ns3opengym.Dtype\x12\r\n\x05shape\x18\x02 \x03(\r\x12\x0f\n\x07intData\x18\x03 \x03(\x05\x12\x10\n\x08uintData\x18\x04 \x03(\r\x12\x11\n\tfloatData\x18\x05 \x03(\x02\x12\x12\n\ndoubleData\x18\x06 \x03(\x01\"@\n\x12TupleDataContainer\x12*\n\x07\x65lement\x18\x01 \x03(\x0b\x32\x19.ns3opengym.DataContainer\"?\n\x11\x44ictDataContainer\x12*\n\x07\x65lement\x18\x01 \x03(\x0b\x32\x19.ns3opengym.DataContainer\"\x9d\x01\n\nSimInitMsg\x12\x14\n\x0csimProcessId\x18\x01 \x01(\x04\x12\x19\n\x11wafShellProcessId\x18\x02 \x01(\x04\x12.\n\x08obsSpace\x18\x03 \x01(\x0b\x32\x1c.ns3opengym.SpaceDescription\x12.\n\x08\x61\x63tSpace\x18\x04 \x01(\x0b\x32\x1c.ns3opengym.SpaceDescription\".\n\nSimInitAck\x12\x0c\n\x04\x64one\x18\x01 \x01(\x08\x12\x12\n\nstopSimReq\x18\x02 \x01(\x08\"\xc6\x01\n\x0b\x45nvStateMsg\x12*\n\x07obsData\x18\x01 \x01(\x0b\x32\x19.ns3opengym.DataContainer\x12\x0e\n\x06reward\x18\x02 \x01(\x02\x12\x12\n\nisGameOver\x18\x03 \x01(\x08\x12.\n\x06reason\x18\x04 \x01(\x0e\x32\x1e.ns3opengym.EnvStateMsg.Reason\x12\x0c\n\x04info\x18\x05 \x01(\t\")\n\x06Reason\x12\x11\n\rSimulationEnd\x10\x00\x12\x0c\n\x08GameOver\x10\x01\"K\n\tEnvActMsg\x12*\n\x07\x61\x63tData\x18\x01 \x01(\x0b\x32\x19.ns3opengym.DataContainer\x12\x12\n\nstopSimReq\x18\x02 \x01(\x08*\x9c\x01\n\x07MsgType\x12\x0b\n\x07Unknown\x10\x00\x12\x08\n\x04Init\x10\x01\x12\x0f\n\x0b\x41\x63tionSpace\x10\x02\x12\x14\n\x10ObservationSpace\x10\x03\x12\x0e\n\nIsGameOver\x10\x04\x12\x0f\n\x0bObservation\x10\x05\x12\n\n\x06Reward\x10\x06\x12\r\n\tExtraInfo\x10\x07\x12\n\n\x06\x41\x63tion\x10\x08\x12\x0b\n\x07StopEnv\x10\t*H\n\tSpaceType\x12\x0f\n\x0bNoSpaceType\x10\x00\x12\x0c\n\x08\x44iscrete\x10\x01\x12\x07\n\x03\x42ox\x10\x02\x12\t\n\x05Tuple\x10\x03\x12\x08\n\x04\x44ict\x10\x04*>\n\x05\x44type\x12\x0b\n\x07NoDType\x10\x00\x12\x07\n\x03INT\x10\x01\x12\x08\n\x04UINT\x10\x02\x12\t\n\x05\x46LOAT\x10\x03\x12\n\n\x06\x44OUBLE\x10\x04\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _MSGTYPE = _descriptor.EnumDescriptor(
   name='MsgType',
@@ -34,47 +33,47 @@ _MSGTYPE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='Unknown', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Init', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ActionSpace', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ObservationSpace', index=3, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='IsGameOver', index=4, number=4,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Observation', index=5, number=5,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Reward', index=6, number=6,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='ExtraInfo', index=7, number=7,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Action', index=8, number=8,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='StopEnv', index=9, number=9,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=1307,
   serialized_end=1463,
 )
@@ -89,27 +88,27 @@ _SPACETYPE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='NoSpaceType', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Discrete', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Box', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Tuple', index=3, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='Dict', index=4, number=4,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=1465,
   serialized_end=1537,
 )
@@ -124,27 +123,27 @@ _DTYPE = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='NoDType', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='INT', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='UINT', index=2, number=2,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='FLOAT', index=3, number=3,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='DOUBLE', index=4, number=4,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=1539,
   serialized_end=1601,
 )
@@ -181,15 +180,15 @@ _ENVSTATEMSG_REASON = _descriptor.EnumDescriptor(
   values=[
     _descriptor.EnumValueDescriptor(
       name='SimulationEnd', index=0, number=0,
-      options=None,
+      serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
       name='GameOver', index=1, number=1,
-      options=None,
+      serialized_options=None,
       type=None),
   ],
   containing_type=None,
-  options=None,
+  serialized_options=None,
   serialized_start=1186,
   serialized_end=1227,
 )
@@ -209,28 +208,28 @@ _SPACEDESCRIPTION = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='space', full_name='ns3opengym.SpaceDescription.space', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='ns3opengym.SpaceDescription.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -254,14 +253,14 @@ _DISCRETESPACE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -285,35 +284,35 @@ _BOXSPACE = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='high', full_name='ns3opengym.BoxSpace.high', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='dtype', full_name='ns3opengym.BoxSpace.dtype', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='shape', full_name='ns3opengym.BoxSpace.shape', index=3,
       number=4, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -337,14 +336,14 @@ _TUPLESPACE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -368,14 +367,14 @@ _DICTSPACE = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -399,28 +398,28 @@ _DATACONTAINER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='data', full_name='ns3opengym.DataContainer.data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='name', full_name='ns3opengym.DataContainer.name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -444,14 +443,14 @@ _DISCRETEDATACONTAINER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -475,49 +474,49 @@ _BOXDATACONTAINER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='shape', full_name='ns3opengym.BoxDataContainer.shape', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='intData', full_name='ns3opengym.BoxDataContainer.intData', index=2,
       number=3, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='uintData', full_name='ns3opengym.BoxDataContainer.uintData', index=3,
       number=4, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='floatData', full_name='ns3opengym.BoxDataContainer.floatData', index=4,
       number=5, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='doubleData', full_name='ns3opengym.BoxDataContainer.doubleData', index=5,
       number=6, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -541,14 +540,14 @@ _TUPLEDATACONTAINER = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -572,14 +571,14 @@ _DICTDATACONTAINER = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -603,35 +602,35 @@ _SIMINITMSG = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='wafShellProcessId', full_name='ns3opengym.SimInitMsg.wafShellProcessId', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='obsSpace', full_name='ns3opengym.SimInitMsg.obsSpace', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='actSpace', full_name='ns3opengym.SimInitMsg.actSpace', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -655,21 +654,21 @@ _SIMINITACK = _descriptor.Descriptor(
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='stopSimReq', full_name='ns3opengym.SimInitAck.stopSimReq', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -693,35 +692,35 @@ _ENVSTATEMSG = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='reward', full_name='ns3opengym.EnvStateMsg.reward', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='isGameOver', full_name='ns3opengym.EnvStateMsg.isGameOver', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='reason', full_name='ns3opengym.EnvStateMsg.reason', index=3,
       number=4, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='info', full_name='ns3opengym.EnvStateMsg.info', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -729,7 +728,7 @@ _ENVSTATEMSG = _descriptor.Descriptor(
   enum_types=[
     _ENVSTATEMSG_REASON,
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -753,21 +752,21 @@ _ENVACTMSG = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='stopSimReq', full_name='ns3opengym.EnvActMsg.stopSimReq', index=1,
       number=2, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
   nested_types=[],
   enum_types=[
   ],
-  options=None,
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
@@ -810,6 +809,7 @@ DESCRIPTOR.message_types_by_name['EnvActMsg'] = _ENVACTMSG
 DESCRIPTOR.enum_types_by_name['MsgType'] = _MSGTYPE
 DESCRIPTOR.enum_types_by_name['SpaceType'] = _SPACETYPE
 DESCRIPTOR.enum_types_by_name['Dtype'] = _DTYPE
+_sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 SpaceDescription = _reflection.GeneratedProtocolMessageType('SpaceDescription', (_message.Message,), dict(
   DESCRIPTOR = _SPACEDESCRIPTION,

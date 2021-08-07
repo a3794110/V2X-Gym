@@ -26,7 +26,7 @@ startSim = bool(args.start)
 iterationNum = int(args.iterations)
 
 nodeNum = 250
-port = 5555
+port = 5551
 simTime = 10 # seconds
 stepTime = 0.001  # seconds
 seed = 0

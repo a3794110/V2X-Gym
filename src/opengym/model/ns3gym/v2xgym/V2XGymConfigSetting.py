@@ -1,4 +1,6 @@
 import distutils
+from distutils import util
+
 try:
     import xml.etree.cElementTree as ET
 except ImportError:
