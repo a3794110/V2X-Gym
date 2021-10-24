@@ -320,8 +320,8 @@ main (int argc, char *argv[])
     uint16_t slBandwidth;                   // Sidelink bandwidth
 
     Ptr<NetworkSetting> NetSet = CreateObject<NetworkSetting>();
-    InitialCmd();
-    ConfigCmd();
+    //InitialCmd();
+    //ConfigCmd();
     //V2XGym_RegisterCmdParameters(adjacencyPscchPssch, bool, NetSet," Scheme for subchannelization");
 
     cmd.AddValue ("adjacencyPscchPssch", "Scheme for subchannelization", adjacencyPscchPssch); 
